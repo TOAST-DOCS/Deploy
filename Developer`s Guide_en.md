@@ -203,19 +203,19 @@ Require versions after **Jenkins 1580.1**.
 
 Upload **tcdeploy-upload-jenkins.hpi** file in Jenkins Management ▷ Plugin Management ▷ Advanced Tap ▷ Upload Plugin menu. (tcdeploy-upload-jenkins.hpi download link)
 
-<img src="media/image1.png" width="532" height="184" />
+<img src="http://images.toast.co.kr/toast/deploy/guide/11.png" />
 
 \[Figure 1\] Upload plugin
 
 Once it is installed, the user can check installation history in the "Installed plugin list" tab as shown in \[Figure 2\] below.
 
-<img src="media/image2.png" width="560" height="41" />
+<img src="http://images.toast.co.kr/toast/deploy/guide/12_0_0_3.png" />
 
 \[Figure 2\] Installed plugin list
 
 Click on ‘Add an action after build’ in the applicable build settings to add a server or client type application upload task.
 
-<img src="media/image3.png" width="425" height="290" />
+<img src="http://images.toast.co.kr/toast/deploy/guide/15_0_0_3.png" />
 
 \[Figure 3\] Installed plugin list
 
@@ -223,7 +223,7 @@ Click on ‘Add an action after build’ in the applicable build settings to add
 
 Server type application upload task uploads successfully built output to TCD server after compressing to ZIP.
 
-<img src="media/image4.png" width="560" height="531" />
+<img src="http://images.toast.co.kr/toast/deploy/guide/13_0_0_3.png" />
 
 \[Figure 4\] Server application upload task setting
 
@@ -296,7 +296,7 @@ User’s input information such as artifact id, app key will be printed, and pri
 
 Client type application upload task uploads a certain binary which the user selected among successfully built output to TCD server.
 
-<img src="media/image5.png" width="560" height="465" />
+<img src="http://images.toast.co.kr/toast/deploy/guide/16_0_0_3.png" />
 
 \[Figure 5\] Client application upload task setting
 
@@ -363,7 +363,7 @@ Add -Dhudson.diyChunking=false option to JENKINS\_JAVA\_OPTIONS in /etc/sysconfi
 
 #### Profile settings
 
-<img src="media/image6.png" width="560" height="264" />
+<img src="http://images.hangame.co.kr/toast/deploy/guide/14.png" />
 
 \[Figure 6\] Jenkins-cli Build Profile setting
 
