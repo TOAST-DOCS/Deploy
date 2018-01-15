@@ -4,8 +4,8 @@
 
 * 상품 활성화
 * Appkey와 URL 확인
-* For Client Application
-* For Server Application
+* Client Application
+* Server Application
 
 (본 예제에서 다루지 않은 기능은 [Reference](Reference.md)에서 확인하실 수 있습니다.)
 
@@ -38,7 +38,7 @@ Console에 접속하여 Deploy를 활성화합니다.
 ![[그림 2] URL & Appkey](http://static.toastoven.net/prod_tcdeploy/getstarted/02.png)
 <center>[그림 2] URL & Appkey</center>
 
-## For Client Application
+## Client Application
 
 클라이언트 어플리케이션을 위한 설정은 크게 아티팩트 설정과 바이너리 업로드 단계를 거칩니다.
 
@@ -91,7 +91,7 @@ Console에 접속하여 Deploy를 활성화합니다.
         * SMS / E-mail로 일부 또는 모두 지정 가능
 3. 지정한 전송 유형으로 수신자에게 다운로드 페이지가 전달 됩니다.
 
-## For Server Application
+## Server Application
 
 서버 어플리케이션의 배포는 설정(아티팩트, 서버 그룹, 시나리오), 바이너리 업로드, 배포의 단계를 거칩니다.
 
