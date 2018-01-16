@@ -113,22 +113,22 @@ Toast Cloud Deploy(이하 TCD) Jenkins 업로드 플러그인은 Jenkins의 빌�
 1.Jenkins 관리 ▷ 플러그인 관리 ▷ 고급 탭 ▷ 플러그인 올리기 메뉴에서 **tcdeploy-upload-jenkins.hpi** 파일을 올립니다.
 ([tcdeploy-upload-jenkins.hpi](http://images.hangame.co.kr/tcdeploy/plugins/upload/jenkins/tcdeploy-upload-jenkins.hpi) 다운로드 링크)
 ![[그림 1] 플러그인 올리기 ](http://static.toastoven.net/prod_tcdeploy/devguide/01.png)
-[그림 1] 플러그인 올리기
+<center>[그림 1] 플러그인 올리기</center>
 
 2.설치가 완료되면 "설치된 플러그인 목록" 탭 메뉴에서 아래 [그림 2]와 같이 설치된 내역을 확인할 수 있습니다.
 ![[그림 2] 설치된 플러그인 목록](http://static.toastoven.net/prod_tcdeploy/devguide/02.png)
-[그림 2] 설치된 플러그인 목록
+<center>[그림 2] 설치된 플러그인 목록</center>
 
 3.해당 빌드 설정의 "빌드 후 조치 추가" 버튼을 눌러 서버 또는 클라이언트 타입 어플리케이션 업로드 테스크를 추가할 수 있습니다.
 ![[그림 3] 설치된 플러그인 목록](http://static.toastoven.net/prod_tcdeploy/devguide/03.png)
-[그림 3] 설치된 플러그인 목록
+<center>[그림 3] 설치된 플러그인 목록</center>
 
 #### 서버(server) 타입 어플리케이션 업로드 테스크 설정
 
 서버 타입 어플리케이션 업로드 테스크는 성공적으로 빌드된 결과물을 ZIP으로 압축해서 TCD 서버로 업로드 해줍니다.
 
 ![[그림 4] 서버 어플리케이션 업로드 테스크 설정](http://static.toastoven.net/prod_tcdeploy/devguide/04.png)
-[그림 4] 서버 어플리케이션 업로드 테스크 설정
+<center>[그림 4] 서버 어플리케이션 업로드 테스크 설정</center>
 
 1.enable upload
     * 플러그인의 동작의 활성화/비활성화 여부를 결정하는 옵션 입니다.
@@ -202,7 +202,7 @@ artifact id, app key 등 사용자 입력정보가 출력되고, 압축파일에
 클라이언트 타입 어플리케이션 업로드 테스크는 성공적으로 빌드된 결과물 중 사용자가 지정한 특정 바이너리를 TCD 서버로 업로드 해줍니다.
 
 ![[그림 5] 클라이언트 어플리케이션 업로드 테스크 설정](http://static.toastoven.net/prod_tcdeploy/devguide/05.png)
-[그림 5] 클라이언트 어플리케이션 업로드 테스크 설정
+<center>[그림 5] 클라이언트 어플리케이션 업로드 테스크 설정</center>
 
 1.enable upload
     * 플러그인의 동작의 활성화/비활성화 여부를 결정하는 옵션 입니다.
@@ -274,7 +274,7 @@ Jenkins를 수행하는 JVM옵션에 -Dhudson.diyChunking=false 옵션 추가.
 #### Profile 설정
 
 ![[그림 6] Jenkins-cli Build Profile 설정](http://static.toastoven.net/prod_tcdeploy/devguide/06.png)
-[그림 6] Jenkins-cli Build Profile 설정
+<center>[그림 6] Jenkins-cli Build Profile 설정</center>
 
 **[ 사용자 입력 내용 ]**
 
