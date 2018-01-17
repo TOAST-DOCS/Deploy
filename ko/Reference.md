@@ -121,10 +121,10 @@
 ![[그림 9] 서버 그룹 생성 팝업](http://static.toastoven.net/prod_tcdeploy/reference/09.png)
 <center>[그림 9] 서버 그룹 생성 팝업</center>
 
-1. <img class="img-inline" alt="servergroupcreate-g.png" src="http://static.toastoven.net/prod_tcdeploy/btn/servergroupcreate-g.png"> 클릭
-2. 이름(필수), 설명(선택) 입력
-3. OS 선택 후 Shell Type 지정 (항목 선택 또는 직접 입력)
-4. <img class="img-inline" alt="create-b.png" src="http://static.toastoven.net/prod_tcdeploy/btn/create-b.png"> 클릭
+1.<img class="img-inline" alt="servergroupcreate-g.png" src="http://static.toastoven.net/prod_tcdeploy/btn/servergroupcreate-g.png"> 클릭
+2.이름(필수), 설명(선택) 입력
+3.OS 선택 후 Shell Type 지정 (항목 선택 또는 직접 입력)
+4.<img class="img-inline" alt="create-b.png" src="http://static.toastoven.net/prod_tcdeploy/btn/create-b.png"> 클릭
 
 #### 서버 정보 추가
 
@@ -133,23 +133,23 @@
 ##### 1. 추가
 
 * 개별 추가
-    1. ![[그림 10] 서버 정보 개별 입력](http://static.toastoven.net/prod_tcdeploy/reference/10.png)
+    * ![[그림 10] 서버 정보 개별 입력](http://static.toastoven.net/prod_tcdeploy/reference/10.png)
        <center>[그림 10] 서버 정보 개별 입력</center>
         * 호스트 이름(필수), IP 주소(필수), OS(선택) 입력 후 <img class="img-inline" alt="add-b.png" src="http://static.toastoven.net/prod_tcdeploy/btn/add-b.png"> 클릭
         * ![[그림 11] 서버 정보 개별 입력 확인](http://static.toastoven.net/prod_tcdeploy/reference/11.png)
         <center>[그림 11] 서버 정보 개별 입력 확인</center>
             * 하단 서버 리스트에 추가된 내용 확인 (왼쪽 체크 박스에 체크된 서버만 등록됨)
-    2. 서버 그룹 생성/수정 팝업의 <img class="img-inline" alt="create-b.png" src="http://static.toastoven.net/prod_tcdeploy/btn/create-b.png">/<img class="img-inline" alt="edit-b.png" src="http://static.toastoven.net/prod_tcdeploy/btn/edit-b.png"> 클릭
+    * 서버 그룹 생성/수정 팝업의 <img class="img-inline" alt="create-b.png" src="http://static.toastoven.net/prod_tcdeploy/btn/create-b.png">/<img class="img-inline" alt="edit-b.png" src="http://static.toastoven.net/prod_tcdeploy/btn/edit-b.png"> 클릭
 * 대량 추가
-    1. <img class="img-inline" alt="mtpinput.png" src="http://static.toastoven.net/prod_tcdeploy/btn/mtpinput.png">와 같이 체크
-    2. 아래 형태로 입력 
+    * <img class="img-inline" alt="mtpinput.png" src="http://static.toastoven.net/prod_tcdeploy/btn/mtpinput.png">와 같이 체크
+    * 아래 형태로 입력 
         * ![[그림 12] 서버 정보 대량 입력](http://static.toastoven.net/prod_tcdeploy/reference/12.png)
          <center>[그림 12] 서버 정보 대량 입력</center>
-    3. <img class="img-inline" alt="add-b.png" src="http://static.toastoven.net/prod_tcdeploy/btn/add-b.png"> 클릭
-    4. ![[그림 13] 서버 정보 대량 입력 확인](http://static.toastoven.net/prod_tcdeploy/reference/13.png)
+    * <img class="img-inline" alt="add-b.png" src="http://static.toastoven.net/prod_tcdeploy/btn/add-b.png"> 클릭
+    * ![[그림 13] 서버 정보 대량 입력 확인](http://static.toastoven.net/prod_tcdeploy/reference/13.png)
     <center>[그림 13] 서버 정보 대량 입력 확인</center>
         * 2개의 서버 정보가 추가된 내용 확인 (왼쪽 체크 박스에 체크된 서버만 등록됨)
-    5. 서버 그룹 생성/수정 팝업의 <img class="img-inline" alt="create-b.png" src="http://static.toastoven.net/prod_tcdeploy/btn/create-b.png">/<img class="img-inline" alt="edit-b.png" src="http://static.toastoven.net/prod_tcdeploy/btn/edit-b.png"> 클릭
+    * 서버 그룹 생성/수정 팝업의 <img class="img-inline" alt="create-b.png" src="http://static.toastoven.net/prod_tcdeploy/btn/create-b.png">/<img class="img-inline" alt="edit-b.png" src="http://static.toastoven.net/prod_tcdeploy/btn/edit-b.png"> 클릭
 
 #### 2. 삭제
 
@@ -198,10 +198,10 @@
 ![[그림 16] 바이너리 업로드 팝업](http://static.toastoven.net/prod_tcdeploy/reference/16.png)
 <center>[그림 16] 바이너리 업로드 팝업</center>
 
-1. <img class="img-inline" alt="upload-g.png" src="http://static.toastoven.net/prod_tcdeploy/btn/upload-g.png"> 클릭
-2. <img class="img-inline" alt="fileselect-b.png" src="http://static.toastoven.net/prod_tcdeploy/btn/fileselect-b.png"> 클릭 후 바이너리 파일 선택
-3. 버전(선택), 설명(선택) 정보 입력
-4. <img class="img-inline" alt="upload-b.png" src="http://static.toastoven.net/prod_tcdeploy/btn/upload-b.png"> 클릭
+1.<img class="img-inline" alt="upload-g.png" src="http://static.toastoven.net/prod_tcdeploy/btn/upload-g.png"> 클릭
+2.<img class="img-inline" alt="fileselect-b.png" src="http://static.toastoven.net/prod_tcdeploy/btn/fileselect-b.png"> 클릭 후 바이너리 파일 선택
+3.버전(선택), 설명(선택) 정보 입력
+4.<img class="img-inline" alt="upload-b.png" src="http://static.toastoven.net/prod_tcdeploy/btn/upload-b.png"> 클릭
 
 #### 다운로드
 
@@ -212,12 +212,11 @@
 
 OS별 1개씩 버전 픽스를 할 수 있습니다.
 
-상태 구분
-
-* fixed <img class="img-inline" alt="fixed.png" src="http://static.toastoven.net/prod_tcdeploy/btn/fixed.png">
-    * 클릭 시 해당 버전을 unfixed 합니다.
-* unfixed <img class="img-inline" alt="unfixed.png" src="http://static.toastoven.net/prod_tcdeploy/btn/unfixed.png">
-    * 클릭 시 해당 버전을 fixed 합니다.
+* 상태 구분
+    * fixed <img class="img-inline" alt="fixed.png" src="http://static.toastoven.net/prod_tcdeploy/btn/fixed.png">
+        * 클릭 시 해당 버전을 unfixed 합니다.
+    * unfixed <img class="img-inline" alt="unfixed.png" src="http://static.toastoven.net/prod_tcdeploy/btn/unfixed.png">
+        * 클릭 시 해당 버전을 fixed 합니다.
 
 #### 배포
 
@@ -256,14 +255,14 @@ all / fixed / recent 버전을 원하는 방식으로 배포할 수 있습니다
 [Deploy] > 하단 탭 중 [바이너리 그룹] > 바이너리 파일 선택 > [전송] > 다운로드 전송 타입 및 수신자 선택 > [전송] 클릭
 ```
 
-1. ![[그림 19] 바이너리 선택 배포](http://static.toastoven.net/prod_tcdeploy/reference/19.png)
+* ![[그림 19] 바이너리 선택 배포](http://static.toastoven.net/prod_tcdeploy/reference/19.png)
    <center>[그림 19] 바이너리 선택 배포</center>
     * 전송할 버전을 선택하고 <img class="img-inline" alt="send-w.png" src="http://static.toastoven.net/prod_tcdeploy/btn/send-w.png"> 클릭
-2. ![[그림 20] 바이너리 선택 배포 - 다운로드 경로 전송](http://static.toastoven.net/prod_tcdeploy/reference/20.png)
+* ![[그림 20] 바이너리 선택 배포 - 다운로드 경로 전송](http://static.toastoven.net/prod_tcdeploy/reference/20.png)
       <center>[그림 20] 바이너리 선택 배포 - 다운로드 경로 전송</center>
     * 다운로드 링크 전송 팝업에서 전송 유형과 수신자를 선택하고 <img class="img-inline" alt="send-b.png" src="http://static.toastoven.net/prod_tcdeploy/btn/send-b.png"> 클릭
         * SMS / E-mail로 일부 또는 모두 지정 가능
-3. 지정한 전송 유형으로 수신자에게 바이너리 설치를 위한 내용이 전달됩니다.
+* 지정한 전송 유형으로 수신자에게 바이너리 설치를 위한 내용이 전달됩니다.
 
 ### 태스크
 
@@ -310,27 +309,24 @@ all / fixed / recent 버전을 원하는 방식으로 배포할 수 있습니다
 
 **[ 사용자 입력 내용 ]**
 
-1. OS 선택
-2. RunAs 입력
+* OS 선택
+* RunAs 입력
     * 실행 계정을 입력 합니다.
-3. JenkinsServer
+* JenkinsServer
     * 도메인 또는 IP를 입력 합니다.
-4. Server Charset
-    * jenkins cli를 수행시킬 서버의 문자집합을 입력합니다.
-    아무값도 입력하지 않을 경우 기본값 utf-8
-5. Jenkins Url
+* Server Charset
+    * jenkins cli를 수행시킬 서버의 문자집합을 입력합니다. (아무값도 입력하지 않을 경우 기본값 utf-8)
+* Jenkins Url
     * 빌드명령을 수행하고자 하는 Jenkins 서버의 주소를 입력합니다.
-6. Jenkins Charset
-    * jenkins 서버의 문자집합을 입력합니다.
-    아무값도 입력하지 않을 경우 기본값 utf-8
-7. Java Home
+* Jenkins Charset
+    * jenkins 서버의 문자집합을 입력합니다. (아무값도 입력하지 않을 경우 기본값 utf-8)
+* Java Home
     * jenkins-cli를 수행하기 위한 JDK 또는 JRE의 Home 경로를 입력합니다.
-8. Job Name
+* Job Name
     * 수행시킬 빌드 Job의 이름을 입력합니다.
-9. Private Key Path
-    * SSH Public Key가 설정되어있는 Jenkins 유저로 인증을 위한 SSH Private Key 파일의 경로를 입력합니다.
-    (SSH Private Key 파일이 저장된 경로로 자세한 내용은 Develper's Guide에서 확인하실 수 있습니다.)
-10. Build Parameter (선택)
+* Private Key Path
+    * SSH Public Key가 설정되어있는 Jenkins 유저로 인증을 위한 SSH Private Key 파일의 저장 경로를 입력합니다.
+* Build Parameter (선택)
     * 빌드에 필요한 파라미터를 입력 합니다.
     
 ##### User Command
@@ -345,14 +341,14 @@ all / fixed / recent 버전을 원하는 방식으로 배포할 수 있습니다
 
 **[ 사용자 입력 내용 ]**
 
-1. OS 선택
-2. RunAs 입력
+* OS 선택
+* RunAs 입력
     * 실행 계정을 입력 합니다.
-3. Target Server
+* Target Server
     * 타켓 서버 정보를 입력 합니다. 서버 그룹에 포함되거나 포함되지 않은 서버 정보도 입력 가능합니다.
-4. Timeout(min)
+* Timeout(min)
     * 해당 태스크가 실행 완료 대기 시간으로 인식할 시간 값을 지정합니다. (최소 1분, 최대 30분)
-5. Command
+* Command
     * 실행할 Command를 입력 합니다.
     * 예약어를 사용할 수 있습니다. 아래 Available Variables 메뉴를 참고하세요.
 
@@ -369,11 +365,11 @@ all / fixed / recent 버전을 원하는 방식으로 배포할 수 있습니다
 
 **[ 사용자 입력 내용 ]**
 
-1. Timeout(min)
-\* 해당 태스크가 실행 완료 대기 시간으로 인식할 시간 값을 지정합니다\. \(최소 1분\, 최대 30분\)
-2. RunAs 입력
+* Timeout(min)
+    * 해당 태스크가 실행 완료 대기 시간으로 인식할 시간 값을 지정합니다. (최소 1분, 최대 30분)
+* RunAs 입력
     * 실행 계정을 입력 합니다.
-3. 바이너리
+* 바이너리
     * 배포할 바이너리 파일을 세가지 타입으로 선택할 수 있습니다.
         * 최신 버전 사용
             * ![[그림 25] Binary Deploy - 최신 버전 사용](http://static.toastoven.net/prod_tcdeploy/reference/25.png)
@@ -381,28 +377,28 @@ all / fixed / recent 버전을 원하는 방식으로 배포할 수 있습니다
                 * 최신 버전 사용에 체크하면 최신 버전이 자동 선택 됩니다. (최신 버전 파일이 있을 경우)
                 * 바이너리 그룹을 선택할 수 있습니다. (선택된 그룹의 최신 버전이 사용됨)
         * 선택 버전 사용
-            1. <img class="img-inline" alt="binaryselect-g.png" src="http://static.toastoven.net/prod_tcdeploy/btn/binaryselect-g.png"> 클릭
-            2. ![[그림 26] Binary Deploy - 선택 팝업](http://static.toastoven.net/prod_tcdeploy/reference/26.png)
+            * <img class="img-inline" alt="binaryselect-g.png" src="http://static.toastoven.net/prod_tcdeploy/btn/binaryselect-g.png"> 클릭
+            * ![[그림 26] Binary Deploy - 선택 팝업](http://static.toastoven.net/prod_tcdeploy/reference/26.png)
                 <center>[그림 26] Binary Deploy - 선택 팝업</center>
                 * 사용할 바이너리에 체크한 후 <img class="img-inline" alt="select-b.png" src="http://static.toastoven.net/prod_tcdeploy/btn/select-b.png"> 클릭
-            3. ![[그림 27] Binary Deploy - 선택 확인](http://static.toastoven.net/prod_tcdeploy/reference/27.png)
+            * ![[그림 27] Binary Deploy - 선택 확인](http://static.toastoven.net/prod_tcdeploy/reference/27.png)
                 <center>[그림 27] Binary Deploy - 선택 확인</center>
                 * 바이너리가 선택 됨.
         * 업로드 후 사용
-            1. <img class="img-inline" alt="upload-g.png" src="http://static.toastoven.net/prod_tcdeploy/btn/upload-g.png"> 클릭
-            2. ![[그림 28] Binary Deploy - 업로드 팝업](http://static.toastoven.net/prod_tcdeploy/reference/28.png)
+            * <img class="img-inline" alt="upload-g.png" src="http://static.toastoven.net/prod_tcdeploy/btn/upload-g.png"> 클릭
+            * ![[그림 28] Binary Deploy - 업로드 팝업](http://static.toastoven.net/prod_tcdeploy/reference/28.png)
                <center>[그림 28] Binary Deploy - 업로드 팝업</center>
                 * <img class="img-inline" alt="fileselect-b.png" src="http://static.toastoven.net/prod_tcdeploy/btn/fileselect-b.png"> 클릭 후 Binary 파일 선택
                 * <img class="img-inline" alt="upload-b.png" src="http://static.toastoven.net/prod_tcdeploy/btn/upload-b.png"> 클릭
-            3. ![[그림 29] Binary Deploy - 업로드 완료 팝업](http://static.toastoven.net/prod_tcdeploy/reference/29.png)
+            * ![[그림 29] Binary Deploy - 업로드 완료 팝업](http://static.toastoven.net/prod_tcdeploy/reference/29.png)
                <center>[그림 29] Binary Deploy - 업로드 팝업</center>
                 * <img class="img-inline" alt="confirm-b.png" src="http://static.toastoven.net/prod_tcdeploy/btn/confirm-b.png"> 클릭
-            4. ![[그림 30] Binary Deploy - 선택된 바이너리 확인](http://static.toastoven.net/prod_tcdeploy/reference/30.png)
+            * ![[그림 30] Binary Deploy - 선택된 바이너리 확인](http://static.toastoven.net/prod_tcdeploy/reference/30.png)
                <center>[그림 30] Binary Deploy - 선택된 바이너리 확인</center>
                 * 바이너리가 선택 됨.
-4. Variable As
+* Variable As
     * 해당 바이너리의 Variable명을 지정합니다. Command에서 Available Variables를 사용할 수 있습니다.
-5. 타겟 디렉토리
+* 타겟 디렉토리
     * 바이너리를 배포할 디렉토리를 지정합니다.
 
 ##### File Deploy
@@ -414,20 +410,20 @@ all / fixed / recent 버전을 원하는 방식으로 배포할 수 있습니다
 
 **[ 사용자 입력 내용 ]**
 
-1. Timeout(min)
+* Timeout(min)
     * 해당 태스크가 실행 완료 대기 시간으로 인식할 시간 값을 지정합니다. (최소 1분, 최대 30분)
-2. RunAs 입력
+* RunAs 입력
     * 실행 계정을 입력 합니다.
-3. 파일
+*  파일
     * 배포할 파일을 선택 합니다.
-        1. <img class="img-inline" alt="fileselect-g.png" src="http://static.toastoven.net/prod_tcdeploy/btn/fileselect-g.png"> 클릭
-        2. ![[그림 32] File Deploy - 배포 파일 선택 팝업](http://static.toastoven.net/prod_tcdeploy/reference/32.png)
+        * <img class="img-inline" alt="fileselect-g.png" src="http://static.toastoven.net/prod_tcdeploy/btn/fileselect-g.png"> 클릭
+        *  ![[그림 32] File Deploy - 배포 파일 선택 팝업](http://static.toastoven.net/prod_tcdeploy/reference/32.png)
            <center>[그림 32] File Deploy - 배포 파일 선택 팝업</center>
             * 사용할 파일에 체크한 후 <img class="img-inline" alt="select-b.png" src="http://static.toastoven.net/prod_tcdeploy/btn/select-b.png"> 클릭
-        3. ![[그림 33] File Deploy - 선택된 배포 파일 확인](http://static.toastoven.net/prod_tcdeploy/reference/33.png)
+        *  ![[그림 33] File Deploy - 선택된 배포 파일 확인](http://static.toastoven.net/prod_tcdeploy/reference/33.png)
            <center>[그림 33] File Deploy - 선택된 배포 파일 확인</center>
             * 파일이 선택 됨
-4. 타겟 디렉토리
+* 타겟 디렉토리
     * 파일을 배포할 디렉토리를 지정합니다.
 
 ##### User Command
@@ -442,11 +438,11 @@ all / fixed / recent 버전을 원하는 방식으로 배포할 수 있습니다
 
 **[ 사용자 입력 내용 ]**
 
-1. Timeout(min)
+* Timeout(min)
     * 해당 태스크가 실행 완료 대기 시간으로 인식할 시간 값을 지정합니다. (최소 1분, 최대 30분)
-2. RunAs 입력
+* RunAs 입력
     * 실행 계정을 입력 합니다.
-3. 실행할 Command를 입력 합니다.
+* 실행할 Command를 입력 합니다.
     * Available Variables을 사용할 수 있습니다.
         * `$${binary.지정한 Variables As 입력.binaryGroupName}` : 바이너리에 설정한 변수 이름으로 선택된 바이너리의 그룹 이름
 
@@ -497,40 +493,40 @@ $${binary.binary variable as value.binaryGroupName} : 바이너리에 설정한 
 ![[그림 35] 파일 그룹 생성](http://static.toastoven.net/prod_tcdeploy/reference/35.png)
 <center>[그림 35] 파일 그룹 생성</center>
 
-1. <img class="img-inline" alt="newfilegroup.png" src="http://static.toastoven.net/prod_tcdeploy/btn/newfilegroup.png"> 클릭
-2. 이름(필수), 설명(선택) 정보 입력
-3. <img class="img-inline" alt="upload-b.png" src="http://static.toastoven.net/prod_tcdeploy/btn/upload-b.png"> 클릭
+1.<img class="img-inline" alt="newfilegroup.png" src="http://static.toastoven.net/prod_tcdeploy/btn/newfilegroup.png"> 클릭
+2.이름(필수), 설명(선택) 정보 입력
+3.<img class="img-inline" alt="upload-b.png" src="http://static.toastoven.net/prod_tcdeploy/btn/upload-b.png"> 클릭
 
 #### 파일 추가
 
 ![[그림 36] 파일 추가](http://static.toastoven.net/prod_tcdeploy/reference/36.png)
 <center>[그림 36] 파일 추가</center>
 
-1. <img class="img-inline" alt="fileadd-w.png" src="http://static.toastoven.net/prod_tcdeploy/btn/fileadd-w.png"> 클릭
-2. 파일 그룹(필수) 지정에 따라 아래 두 가지 방법으로 파일을 추가할 수 있습니다.
-    * 파일 업로드
-    * 파일 생성
+1.<img class="img-inline" alt="fileadd-w.png" src="http://static.toastoven.net/prod_tcdeploy/btn/fileadd-w.png"> 클릭
+2.파일 그룹(필수) 지정에 따라 아래 두 가지 방법으로 파일을 추가할 수 있습니다.
+* 파일 업로드
+* 파일 생성
 
 ##### 파일 업로드
 
-1. 생성 방식(필수) : 파일 업로드 선택
-2. <img class="img-inline" alt="fileselect-b.png" src="http://static.toastoven.net/prod_tcdeploy/btn/fileselect-b.png">(필수) 클릭 후 업로드할 파일 선택
-    * 파일 그룹 내 파일명 중복 시 업로드가 제한됩니다
-3. 인코딩(선택), Description(선택), Comment(선택) 입력
-4. <img class="img-inline" alt="upload-b.png" src="http://static.toastoven.net/prod_tcdeploy/btn/upload-b.png"> 클릭
+1.생성 방식(필수) : 파일 업로드 선택
+2.<img class="img-inline" alt="fileselect-b.png" src="http://static.toastoven.net/prod_tcdeploy/btn/fileselect-b.png">(필수) 클릭 후 업로드할 파일 선택
+* 파일 그룹 내 파일명 중복 시 업로드가 제한됩니다
+3.인코딩(선택), Description(선택), Comment(선택) 입력
+4.<img class="img-inline" alt="upload-b.png" src="http://static.toastoven.net/prod_tcdeploy/btn/upload-b.png"> 클릭
 
 ##### 신규 생성
 
-1. 생성 방식(선택) : 신규 생성 선택
-2. <img class="img-inline" alt="confirm-b.png" src="http://static.toastoven.net/prod_tcdeploy/btn/confirm-b.png"> 클릭
-3. ![[그림 37] 파일 신규 생성](http://static.toastoven.net/prod_tcdeploy/reference/37.png)
+1.생성 방식(선택) : 신규 생성 선택
+2.<img class="img-inline" alt="confirm-b.png" src="http://static.toastoven.net/prod_tcdeploy/btn/confirm-b.png"> 클릭
+3.![[그림 37] 파일 신규 생성](http://static.toastoven.net/prod_tcdeploy/reference/37.png)
    <center>[그림 37] 파일 신규 생성</center>
-4. 파일 이름(필수) 입력
-5. 파일 설명(선택), Comment(선택) 입력
-6. 파일 내용(선택) 입력
-7. 파일 에디터 view mode 선택 (파일 확장자에 따른 뷰모드 자동선택 / 단순 뷰 변경)
-8. <img class="img-inline" alt="save-g.png" src="http://static.toastoven.net/prod_tcdeploy/btn/save-g.png"> 클릭
-9. ![[그림 38] 생성된 신규 파일 확인](http://static.toastoven.net/prod_tcdeploy/reference/38.png)
+4.파일 이름(필수) 입력
+5.파일 설명(선택), Comment(선택) 입력
+6.파일 내용(선택) 입력
+7.파일 에디터 view mode 선택 (파일 확장자에 따른 뷰모드 자동선택 / 단순 뷰 변경)
+8.<img class="img-inline" alt="save-g.png" src="http://static.toastoven.net/prod_tcdeploy/btn/save-g.png"> 클릭
+9.![[그림 38] 생성된 신규 파일 확인](http://static.toastoven.net/prod_tcdeploy/reference/38.png)
    <center>[그림 38] 생성된 신규 파일 확인</center>
 
 #### 파일 수정
@@ -547,29 +543,29 @@ $${binary.binary variable as value.binaryGroupName} : 바이너리에 설정한 
 ![[그림 39] 파일 설명 수정](http://static.toastoven.net/prod_tcdeploy/reference/39.png)
 <center>[그림 39] 파일 설명 수정</center>
 
-1. 파일 클릭
-2. 파일 설명 수정
-3. <img class="img-inline" alt="descedit-g.png" src="http://static.toastoven.net/prod_tcdeploy/btn/descedit-g.png"> 클릭
+1.파일 클릭
+2.파일 설명 수정
+3.<img class="img-inline" alt="descedit-g.png" src="http://static.toastoven.net/prod_tcdeploy/btn/descedit-g.png"> 클릭
 
 ##### 파일 내용 수정
 
-1. 파일 클릭
-2. 파일 내용 수정
-    * ![[그림 40] 파일 내용 수정](http://static.toastoven.net/prod_tcdeploy/reference/40.png)
+1.파일 클릭
+2.파일 내용 수정
+* ![[그림 40] 파일 내용 수정](http://static.toastoven.net/prod_tcdeploy/reference/40.png)
       <center>[그림 40] 파일 내용 수정</center>
-3. <img class="img-inline" alt="save-g.png" src="http://static.toastoven.net/prod_tcdeploy/btn/save-g.png"> 클릭
+3.<img class="img-inline" alt="save-g.png" src="http://static.toastoven.net/prod_tcdeploy/btn/save-g.png"> 클릭
 
 ##### 파일 History
 
 파일 생성/수정 History를 확인할 수 있습니다.
 
-1. <img class="img-inline" alt="filehistory.png" src="http://static.toastoven.net/prod_tcdeploy/btn/filehistory.png"> 클릭 
-2. ![[그림 41] 파일 History 목록](http://static.toastoven.net/prod_tcdeploy/reference/41.png)
+1.<img class="img-inline" alt="filehistory.png" src="http://static.toastoven.net/prod_tcdeploy/btn/filehistory.png"> 클릭 
+2.![[그림 41] 파일 History 목록](http://static.toastoven.net/prod_tcdeploy/reference/41.png)
    <center>[그림 41] 파일 History 목록</center>
     * 목록 확인
         * 첫번째 내역 : 현재 버전을 의미
         * 이후 내역 : 이전 버전으로, 클릭 시 상세 팝업으로 내용 표시
-3. ![[그림 42] 파일 History 상세 내역](http://static.toastoven.net/prod_tcdeploy/reference/42.png)
+3.![[그림 42] 파일 History 상세 내역](http://static.toastoven.net/prod_tcdeploy/reference/42.png)
    <center>[그림 42] 파일 History 상세 내역</center>
     * 내역 클릭 시 해당 버전의 상세 내용 확인 가능
 
