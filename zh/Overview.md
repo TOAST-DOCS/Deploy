@@ -1,4 +1,4 @@
-## Dev Tool > Deploy > 개요
+## Upcoming Products > Deploy > Overview
 
 배포 및 설치 편의를 제공하기 위한 서비스 입니다.
 원클릭으로 쉽고 빠르게 소프트웨어를 배포할 수 있습니다.
