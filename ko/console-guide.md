@@ -7,7 +7,7 @@
 * Client Application
 * Server Application
 
-(본 예제에서 다루지 않은 기능은 [Reference](Reference.md)에서 확인하실 수 있습니다.)
+(본 예제에서 다루지 않은 기능은 [기능 상세 가이드](/Dev%20Tool/Deploy/ko/reference/)에서 확인하실 수 있습니다.)
 
 [참고사항]
 ![[그림 1] 참고 사항 - 입력 값](http://static.toastoven.net/prod_tcdeploy/getstarted/01.png)
@@ -120,7 +120,7 @@ Console에 접속하여 Deploy를 활성화합니다.
 2.이름(필수), 설명(선택) 입력
 3.OS 선택 후 Shell Type 지정 (항목 선택 또는 직접 입력)
 4.서버 추가
-* 서버 추가에는 아래 두가지 방법이 있으며 자세한 내용은 [Reference](Reference.md)에서 확인하실 수 있습니다.
+* 서버 추가에는 아래 두가지 방법이 있으며 자세한 내용은 [기능 상세 가이드](/Dev%20Tool/Deploy/ko/reference/)에서 확인하실 수 있습니다.
     * 대량 추가
     * 개별 추가
         * ![[그림 9] Server - 서버 개별 추가](http://static.toastoven.net/prod_tcdeploy/getstarted/09.png)
@@ -153,7 +153,7 @@ Console에 접속하여 Deploy를 활성화합니다.
 * Normal Task : 배포 시 실행 기능
 
 필요에 따라 선택적으로 사용할 수 있으며, 본 문서에서는 기본적인 배포 시 필요한 태스크를 다룹니다.
-더 많은 태스크는 [Reference](Reference.md)에서 확인하실 수 있습니다.
+더 많은 태스크는 [기능 상세 가이드](/Dev%20Tool/Deploy/ko/reference/)에서 확인하실 수 있습니다.
 
 ```
 [Deploy] > 하단 탭 중 [배포] > 시나리오 영역에서 [Task 추가] 클릭
@@ -165,7 +165,7 @@ Console에 접속하여 Deploy를 활성화합니다.
 
 * 배포 시 실행되는 사용자 정의 Command 태스크
 * Available Variables를 사용할 수 있음
-    * Available Variables : 예약어. 자세한 내용은 [Reference](Reference.md)에서 확인하실 수 있습니다.
+    * Available Variables : 예약어. 자세한 내용은 [기능 상세 가이드](/Dev%20Tool/Deploy/ko/reference/)에서 확인하실 수 있습니다.
 
 ![[그림 12] Server - User Command 추가](http://static.toastoven.net/prod_tcdeploy/getstarted/12.png)
 <center>[rmfla 12] Server - User Command 추가</center>
@@ -247,4 +247,4 @@ Console에 접속하여 Deploy를 활성화합니다.
 - - -
 
 서버에 파일 배포를 성공하였습니다!
-Toast Cloud Deploy는 더 많은 기능을 지원하며, 자세한 사항은 [Reference](Reference.md)에서 확인하실 수 있습니다!
+Toast Cloud Deploy는 더 많은 기능을 지원하며, 자세한 사항은 [기능 상세 가이드](/Dev%20Tool/Deploy/ko/reference/)에서 확인하실 수 있습니다!
