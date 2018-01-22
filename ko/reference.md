@@ -60,6 +60,7 @@
 
 * 0 : 동시 실행
 * 1 : 한대씩 배포
+* N : 동시 배포 수 지정
 
 ##### 시나리오 실행 실패 시
 
@@ -115,7 +116,8 @@
 #### 서버 그룹 추가
 
 ```
-[Deploy] > 하단 탭 중 [배포] > [서버 그룹 생성] 클릭
+[Deploy] > 하단 탭 중 [배포] > [서버 그룹 생성] 클릭 또는,
+[Deploy] > 하단 탭 중 [서버 그룹] > [새로 만들기] 클릭
 ```
 
 ![[그림 9] 서버 그룹 생성 팝업](http://static.toastoven.net/prod_tcdeploy/reference/09.png)
@@ -126,7 +128,7 @@
 3.OS 선택 후 Shell Type 지정 (항목 선택 또는 직접 입력)
 4.<img class="img-inline" alt="create-b.png" src="http://static.toastoven.net/prod_tcdeploy/btn/create-b.png"> 클릭
 
-#### 서버 정보 추가
+#### 서버 정보 추가/삭제
 
 서버 그룹 생성/수정 팝업에서 서버 정보를 추가/삭제할 수 있습니다.
 
@@ -157,16 +159,14 @@
 <center>[그림 14] 서버 정보 삭제</center>
 
 * 삭제할 서버 정보
-    * 왼쪽 체크 박스 해제
-        * 서버 그룹 생성/수정 팝업의 <img class="img-inline" alt="create-b.png" src="http://static.toastoven.net/prod_tcdeploy/btn/create-b.png">/<img class="img-inline" alt="edit-b.png" src="http://static.toastoven.net/prod_tcdeploy/btn/edit-b.png"> 클릭 후 삭제
-    * 오른쪽 <img class="img-inline" alt="delete-w.png" src="http://static.toastoven.net/prod_tcdeploy/btn/delete-w.png"> 클릭
-        * 즉시 삭제
+    * 왼쪽 체크 박스 해제 또는 오른쪽 <img class="img-inline" alt="delete-w.png" src="http://static.toastoven.net/prod_tcdeploy/btn/delete-w.png"> 클릭
+    * 서버 그룹 생성/수정 팝업의 <img class="img-inline" alt="create-b.png" src="http://static.toastoven.net/prod_tcdeploy/btn/create-b.png">/<img class="img-inline" alt="edit-b.png" src="http://static.toastoven.net/prod_tcdeploy/btn/edit-b.png"> 클릭 후 삭제
 
 ### 리소스
 
 <img class="img-inline" alt="server.png" src="http://static.toastoven.net/prod_tcdeploy/btn/server.png">
 
-리소스를 관리할 수 있는 페이지로 파일 생성 및 업로드, 다운로드, 수정을 할 수 있으며 변경이력 및 배포이력을 확인할 수 있습니다.
+리소스를 관리할 수 있는 페이지로 파일 생성 및 업로드, 다운로드, 수정을 할 수 있으며 변경이력을 확인할 수 있습니다.
 
 ![[그림 15] 탭 메뉴 - 리소스](http://static.toastoven.net/prod_tcdeploy/reference/15.png)
 <center>[그림 15] 탭 메뉴 - 리소스</center>
@@ -210,7 +210,7 @@
 
 #### 버전 픽스
 
-OS별 1개씩 버전 픽스를 할 수 있습니다.
+Client OS별 1개씩 버전 픽스를 할 수 있습니다.
 
 * 상태 구분
     * fixed <img class="img-inline" alt="fixed.png" src="http://static.toastoven.net/prod_tcdeploy/btn/fixed.png">
@@ -222,7 +222,7 @@ OS별 1개씩 버전 픽스를 할 수 있습니다.
 
 ##### 버전별 배포
 
-all / fixed / recent 버전을 원하는 방식으로 배포할 수 있습니다.
+Client 바이너리의 all / fixed / recent 버전을 원하는 방식으로 배포할 수 있습니다.
 
 * 바이너리 다운로드 링크 제공
 * 다운로드 링크 알림 기능 제공
@@ -242,7 +242,7 @@ all / fixed / recent 버전을 원하는 방식으로 배포할 수 있습니다
         * iOS / Android / etc
             * fixed 버전 다운로드 페이지 제공 (fixed 버전이 있을 때)
     * Recent Version
-        * Android / etc / iOS
+        * iOS / Android / etc
             * 최신 버전 다운로드 페이지 제공
 * 제공 방법
     * SMS/ E-Mail
