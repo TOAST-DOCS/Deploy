@@ -188,7 +188,7 @@
 바이너리 업로드를 위한 두 가지 방법을 제공합니다.
 
 * API 업로드
-    * API 업로드에 대한 상세 내역은 Developer's Guide > API 에서 확인하실 수 있습니다.
+    * API 업로드에 대한 상세 내역은 [API 가이드의 Binary Upload API](/Dev%20Tool/Deploy/ko/api-guide/#binary-upload-api) 에서 확인하실 수 있습니다.
 * UI 업로드
 
 ```
@@ -302,7 +302,7 @@ all / fixed / recent 버전을 원하는 방식으로 배포할 수 있습니다
 ##### Jenkins-Cli Build
 
 * ver. 2.46 이전 / ver. 2.46 이후 버전으로 구분
-* Jenkins 빌드 설정에 대한 상세 내역은 Developer's Guide > Jenkins Plugin Guide에서 확인하실 수 있습니다.
+* Jenkins 빌드 설정에 대한 상세 내역은 [API 가이드의 Jenkins Plugin Guide](/Dev%20Tool/Deploy/ko/api-guide/#jenkins-plugin-guide)에서 확인하실 수 있습니다.
 
 ![[그림 22] Jenkins-Cli Build](http://static.toastoven.net/prod_tcdeploy/reference/22.png)
 <center>[그림 22] Jenkins-Cli Build</center>
