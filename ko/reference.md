@@ -291,7 +291,7 @@ all / fixed / recent 버전을 원하는 방식으로 배포할 수 있습니다
 * 태스크 제어
     * 순서 제어 및 삭제
     * <img class="img-inline" alt="task.png" src="http://static.toastoven.net/prod_tcdeploy/btn/task.png">
-    각 태스크 우측 상단에 위치한 '∧' (위로 이동) '∨' (아래로 이동) 'X' (Task 제거) 버튼 사용
+        * 각 태스크 우측 상단에 위치한 '∧' (위로 이동) '∨' (아래로 이동) 'X' (Task 제거) 버튼 사용
 * 예약어 사용
     * 자세한 내용은 하단 Available Variables에서 확인하실 수 있습니다.
 
@@ -333,7 +333,7 @@ all / fixed / recent 버전을 원하는 방식으로 배포할 수 있습니다
 
 * 사용자 정의 Command 태스크
 * Available Variables(예약어) 사용
-* script 오류 발생 감지 및 오류 발생 시 배포 중지
+* 오류 발생 감지 및 오류 발생 시 배포 중지
     * 탭 메뉴 중 [배포] > 시나리오 실행 실패 시 [실행 중단] 설정이 되어있을 때
 
 ![[그림 23] pre-run Task - User Command](http://static.toastoven.net/prod_tcdeploy/reference/23.png)
@@ -444,7 +444,7 @@ all / fixed / recent 버전을 원하는 방식으로 배포할 수 있습니다
     * 실행 계정을 입력 합니다.
 * 실행할 Command를 입력 합니다.
     * Available Variables을 사용할 수 있습니다.
-        * `$${binary.지정한 Variables As 입력.binaryGroupName}` : 바이너리에 설정한 변수 이름으로 선택된 바이너리의 그룹 이름
+        * `$${binary.지정한 Variables As 입력.binaryGroupName} : 바이너리에 설정한 변수 이름으로 선택된 바이너리의 그룹 이름`
 
 #### Available Variables
 
@@ -474,9 +474,9 @@ $${binary.binary variable as value.binaryGroupName} : 바이너리에 설정한 
 
 * 사용 예시
     * 기본 타입
-        * `$${timestamp}` : 1514987008
+        * `$${timestamp} : 1514987008`
     * Binary Deploy의 Variables As을 사용할 수 있는 타입
-        * `$${binary.지정한 Variables As 입력.binaryGroupName}` : 해당 바이너리의 그룹 이름
+        * `$${binary.지정한 Variables As 입력.binaryGroupName} : 해당 바이너리의 그룹 이름`
 
 ### 리소스
 
