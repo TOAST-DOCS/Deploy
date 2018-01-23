@@ -6,7 +6,7 @@ Toast Cloud Deploy(이하 TCD) Jenkins 업로드 플러그인은 Jenkins의 빌�
 
 ## Jenkins 설치
 
-설치 파일 및 안내는 [https://jenkins.io/](https://jenkins.io/)에서 확인하실 수 있습니다.
+Jenkins 설치 및 자세한 사항은 [https://jenkins.io/](https://jenkins.io/)에서 확인하실 수 있습니다.
 
 #### Jenkins 최소 요구사항 버전
 
