@@ -302,7 +302,7 @@ Client 바이너리의 all / fixed / recent 버전을 원하는 방식으로 배
 ##### Jenkins-Cli Build
 
 * ver. 2.46 이전 / ver. 2.46 이후 버전으로 구분
-* Jenkins 빌드 설정에 대한 상세 내역은 [API 가이드의 Jenkins Plugin Guide](/Dev%20Tool/Deploy/ko/api-guide/#jenkins-plugin-guide)에서 확인하실 수 있습니다.
+* Jenkins 빌드 설정에 대한 상세 내역은 [플러그인 사용 가이드](/Dev%20Tool/Deploy/ko/plugin-guide/)에서 확인하실 수 있습니다.
 
 ![[그림 22] Jenkins-Cli Build](http://static.toastoven.net/prod_tcdeploy/reference/22.png)
 <center>[그림 22] Jenkins-Cli Build</center>
