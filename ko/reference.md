@@ -4,7 +4,7 @@
 
 * [메뉴 설명](/Dev%20Tool/Deploy/ko/reference/#_1)
 * [기능 별 설명](/Dev%20Tool/Deploy/ko/reference/#_15)
-* [OS 별 요구사항]()
+* [OS 별 요구사항](/Dev%20Tool/Deploy/ko/reference/#os)
 
 아래 이미지로 Client / Server에서 사용하는 메뉴를 구분하실 수 있습니다.
 

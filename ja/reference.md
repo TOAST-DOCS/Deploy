@@ -2,8 +2,9 @@
 
 이 문서에서는 다음과 같은 내용을 다룹니다.
 
-* 메뉴 설명
-* 기능 별 설명
+* [메뉴 설명](/Dev%20Tool/Deploy/ko/reference/#_1)
+* [기능 별 설명](/Dev%20Tool/Deploy/ko/reference/#_15)
+* [OS 별 요구사항](/Dev%20Tool/Deploy/ko/reference/#os)
 
 아래 이미지로 Client / Server에서 사용하는 메뉴를 구분하실 수 있습니다.
 
@@ -174,10 +175,6 @@
 ## 기능 별 설명
 
 이 영역에서는 Getting Started에서 다루지 않은 기능의 상세 설명 및 추가 설정을 제공합니다.
-
-* 바이너리
-* 태스크
-* 리소스
 
 ### 바이너리
 
@@ -576,3 +573,14 @@ $${binary.binary variable as value.binaryGroupName} : 바이너리에 설정한 
 * 최신 버전으로 저장
     * <img class="img-inline" alt="savecurrent-g.png" src="http://static.toastoven.net/prod_tcdeploy/btn/savecurrent-g.png">
         * 해당 버전이 '최신 버전으로 저장' 됨
+
+## OS 별 요구사항
+
+### Linux
+
+* curl 7.19.7-43 버전 이상
+
+### Window
+
+* SSH 설치 필요
+    * SSH Shell : PowerShell 지정
