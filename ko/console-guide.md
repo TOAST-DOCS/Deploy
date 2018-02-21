@@ -218,7 +218,7 @@ Console에 접속하여 Deploy를 활성화합니다.
             
             * <img class="img-inline" alt="fileselect-b.png" src="http://static.toastoven.net/prod_tcdeploy/btn/fileselect-b.png"> 클릭 후 바이너리 파일 선택
             * 버전(선택), 설명(선택) 입력
-        * <img class="img-inline" alt="upload-b.png" src="http://static.toastoven.net/prod_tcdeploy/btn/upload-b.png"> 클릭
+            * <img class="img-inline" alt="upload-b.png" src="http://static.toastoven.net/prod_tcdeploy/btn/upload-b.png"> 클릭
         
             ![[그림 15] Server - Binary 업로드 팝업](http://static.toastoven.net/prod_tcdeploy/getstarted/15.png)
             <center>[그림 15] Server - Binary 업로드 팝업</center>
@@ -227,7 +227,9 @@ Console에 접속하여 Deploy를 활성화합니다.
         
             ![[그림 16] Server - 선택된 Binary](http://static.toastoven.net/prod_tcdeploy/getstarted/16.png)
             <center>[그림 16] Server - 선택된 Binary</center>
+            
             * 바이너리가 선택 됨.
+            
 * Variable As
     * 해당 바이너리의 Variable명을 지정해 User Command에서 바이너리 정보를 사용할 수 있으며 자세한 내용은 [기능 상세 가이드](/Dev%20Tool/Deploy/ko/reference/)의 태스크 메뉴 하단에서 확인하실 수 있습니다.
 * 타겟 디렉토리
@@ -245,8 +247,8 @@ Console에 접속하여 Deploy를 활성화합니다.
 
 1. <img class="img-inline" alt="deploy-b.png" src="http://static.toastoven.net/prod_tcdeploy/btn/deploy-b.png"> 클릭으로 배포 요청
 
-![[그림 18] 배포 내용 확인 팝업](http://static.toastoven.net/prod_tcdeploy/getstarted/18.png)
-<center>[그림 18] 배포 내용 확인 팝업</center>
+    ![[그림 18] 배포 내용 확인 팝업](http://static.toastoven.net/prod_tcdeploy/getstarted/18.png)
+    <center>[그림 18] 배포 내용 확인 팝업</center>
 
 2. 인증 방법 선택 및 인증 값(파일) 입력 (필수)
     * Password 선택 후 비밀번호 입력 또는 pemFile 선택 후 파일 업로드
@@ -254,19 +256,21 @@ Console에 접속하여 Deploy를 활성화합니다.
 
 3. 배포 진행 상황 확인
 
-![[그림 19] Server - 배포 진행상황 확인](http://static.toastoven.net/prod_tcdeploy/getstarted/19.png)
-<center>[그림 19] Server - 배포 진행상황 확인</center>
+    ![[그림 19] Server - 배포 진행상황 확인](http://static.toastoven.net/prod_tcdeploy/getstarted/19.png)
+    <center>[그림 19] Server - 배포 진행상황 확인</center>
 
 4. 배포 완료 확인
 
-![[그림 20] Server - 배포 완료 확인](http://static.toastoven.net/prod_tcdeploy/getstarted/20.png)
-<center>[그림 20] Server - 배포 완료 확인</center>
-* 각 Task 정상 실행 여부는 exit code로 판별됩니다.
+    ![[그림 20] Server - 배포 완료 확인](http://static.toastoven.net/prod_tcdeploy/getstarted/20.png)
+    <center>[그림 20] Server - 배포 완료 확인</center>
+
+    * 각 Task 정상 실행 여부는 exit code로 판별됩니다.
 
 5. 배포 결과 확인
     * '결과 보기' 클릭 시 각 태스크 실행에 대한 상세 내용 (리턴 값, exit code, 오류 내용 등) 확인 가능
-![[그림 21] Server - 배포 결과 보기 팝업](http://static.toastoven.net/prod_tcdeploy/getstarted/21.png)
-<center>[그림 21] Server - 배포 결과 보기 팝업</center>
+
+    ![[그림 21] Server - 배포 결과 보기 팝업](http://static.toastoven.net/prod_tcdeploy/getstarted/21.png)
+    <center>[그림 21] Server - 배포 결과 보기 팝업</center>
 
 - - -
 
