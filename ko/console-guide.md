@@ -91,7 +91,7 @@ Console에 접속하여 Deploy를 활성화합니다.
     ![[그림 6] Client - 다운로드 경로 전송](http://static.toastoven.net/prod_tcdeploy/getstarted/06.png)
     <center>[그림 6] Client - 다운로드 경로 전송</center>
 
-2. 다운로드 링크 전송 팝업에서 전송 유형과 수신자를 선택하고 <img class="img-inline" alt="send-b.png" src="http://static.toastoven.net/prod_tcdeploy/btn/send-b.png"> 클릭
+2. 다운로드 경로 전송 팝업에서 전송 유형과 수신자를 선택하고 <img class="img-inline" alt="send-b.png" src="http://static.toastoven.net/prod_tcdeploy/btn/send-b.png"> 클릭
     * SMS / E-mail로 일부 또는 모두 지정 가능
 3. 지정한 전송 유형으로 수신자에게 다운로드 페이지가 전달 됩니다.
 
