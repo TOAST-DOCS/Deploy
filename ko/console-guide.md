@@ -36,7 +36,7 @@ Console에 접속하여 Deploy를 활성화합니다.
 [Deploy] > [URL * AppKey] 클릭
 ```
 
-![[그림 2] URL & Appkey](http://static.toastoven.net/prod_tcdeploy/getstarted/02.png)
+![[그림 2] URL & Appkey](http://static.toastoven.net/prod_tcdeploy/getstarted/02-1.png)
 <center>[그림 2] URL & Appkey</center>
 
 ## Client Application
