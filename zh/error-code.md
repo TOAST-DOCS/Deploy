@@ -1,4 +1,4 @@
-# Dev Tool > Deploy > Error Code
+## Dev Tool > Deploy > Error Code
 
 | isSuccess | resultKey |
 | --------- | --------- |
