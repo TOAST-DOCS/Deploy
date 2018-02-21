@@ -216,7 +216,7 @@ Console에 접속하여 Deploy를 활성화합니다.
             <center>[그림 16] Server - 선택된 Binary</center>
                 * 바이너리가 선택 됨.
 * Variable As
-    * 해당 바이너리의 Variable명을 지정해 User Command에서 바이너리 정보를 사용할 수 있으며 자세한 내용은 Document에서 확인하실 수 있습니다.
+    * 해당 바이너리의 Variable명을 지정해 User Command에서 바이너리 정보를 사용할 수 있으며 자세한 내용은 [기능 상세 가이드](/Dev%20Tool/Deploy/ko/reference/)의 태스크 메뉴 하단에서 확인하실 수 있습니다.
 * 타겟 디렉토리
     * 바이너리를 배포할 디렉토리를 지정합니다.
 * <img class="img-inline" alt="apply-g.png" src="http://static.toastoven.net/prod_tcdeploy/btn/apply-g.png"> 클릭
