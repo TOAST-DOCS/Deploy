@@ -2,7 +2,7 @@
 
 ## Jenkins Plugin Guide
 
-Toast Cloud Deploy(이하 TCD) Jenkins 업로드 플러그인은 Jenkins의 빌드 결과물을 TCD 서버로 업로드 할 수 있게 해줍니다.
+Toast Cloud Deploy Jenkins 업로드 플러그인은 Jenkins의 빌드 결과물을 Deploy 서버로 업로드 할 수 있게 해줍니다.
 
 ## Jenkins 설치
 
@@ -154,17 +154,21 @@ artifact id, app key 등 사용자 입력정보가 출력되고, 업로드할 �
 #### 준비사항
 
 1. SSH Pubilc/Private Key Pair 생성
-ssh-keygen 또는 PuTTY Key Generator등으로 SSH Pubilc/Private Key Pair를 생성하고, Jenkins의 빌드 수행 계정에 SSH Public Key를 저장, SSH Private Key 파일은 Task 수행서버에 저장.
+
+* ssh-keygen 또는 PuTTY Key Generator등으로 SSH Pubilc/Private Key Pair를 생성하고, Jenkins의 빌드 수행 계정에 SSH Public Key를 저장, SSH Private Key 파일은 Task 수행서버에 저장.
+
 [주의] 암호문(passphrase)이 설정되지 않은 SSH Private Key만 지원합니다.
+
 * 예) http://[JENKINS_URL]/user/[사용자명]/configure 페이지에 접근하여 SSH Public Keys 항목에 생성한 SSH Public Key의 내용을 저장하고, 생성한 SSH Private Key 파일은 Task를 수행하는 서버의 사용자 지정 경로에 저장.
 
 2. http keep alive timeout 조정
-Jenkins 서버의 http keep alive timeout 값 확인 후, 값 조정.
+
+* Jenkins 서버의 http keep alive timeout 값 확인 후, 값 조정.
 * 예) jenkins를 RPM으로 설치했을 경우,
     * /etc/sysconfig/jenkins 의 JENKINS_ARGS에 httpKeepAliveTimeout=[적당한 밀리초값] 옵션 추가.
 
 3. Stream 예외 발생 관련
-빌드 콘솔 출력중 java.io.StreamCorruptedException이 발생할 경우 Jenkins를 수행하는 JVM옵션에 -Dhudson.diyChunking=false 옵션 추가.
+* 빌드 콘솔 출력중 java.io.StreamCorruptedException이 발생할 경우 Jenkins를 수행하는 JVM옵션에 -Dhudson.diyChunking=false 옵션 추가.
 * 예) jenkins를 RPM으로 설치했을 경우.
     * /etc/sysconfig/jenkins의 JENKINS\_JAVA\_OPTIONS에 -Dhudson.diyChunking=false 옵션 추가.
 
