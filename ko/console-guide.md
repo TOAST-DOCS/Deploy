@@ -30,7 +30,7 @@ Console에 접속하여 Deploy를 활성화합니다.
 
 ## Appkey와 URL 확인
 
-상품을 활성화한 후, Console 페이지 상단의 []URL & Appkey] 를 클릭하여 발급된 Appkey를 확인합니다.
+상품을 활성화한 후, Console 페이지 상단의 [URL & Appkey] 를 클릭하여 발급된 Appkey를 확인합니다.
 
 ```
 [Deploy] > [URL * AppKey] 클릭
@@ -48,10 +48,10 @@ Console에 접속하여 Deploy를 활성화합니다.
 ![[그림 3] Client - 아티팩트 설정](http://static.toastoven.net/prod_tcdeploy/getstarted/03.png)
 <center>[그림 3] Client - 아티팩트 설정</center>
 
-1.리스트 상단의 <img class="img-inline" alt="create-b.png" src="http://static.toastoven.net/prod_tcdeploy/btn/create-b.png"> 클릭
-2.유형을 "Client Application"으로 선택
-3.이름(필수), 설명(선택) 입력
-4.<img class="img-inline" alt="create-b.png" src="http://static.toastoven.net/prod_tcdeploy/btn/create-b.png"> 클릭
+1. 리스트 상단의 <img class="img-inline" alt="create-b.png" src="http://static.toastoven.net/prod_tcdeploy/btn/create-b.png"> 클릭
+2. 유형을 "Client Application"으로 선택
+3. 이름(필수), 설명(선택) 입력
+4. <img class="img-inline" alt="create-b.png" src="http://static.toastoven.net/prod_tcdeploy/btn/create-b.png"> 클릭
 
 ### 바이너리 설정
 
@@ -85,7 +85,7 @@ Console에 접속하여 Deploy를 활성화합니다.
 
 1.![[그림 5] Client - 바이너리 배포](http://static.toastoven.net/prod_tcdeploy/getstarted/05.png)
     <center>[그림 5] Client - 바이너리 배포</center>
-    - 전송할 버전을 선택하고 <img class="img-inline" alt="send-w.png" src="http://static.toastoven.net/prod_tcdeploy/btn/send-w.png"> 클릭
+    - 전송할 버전을 선택하고 <img class="img-inline" alt="send-w.png" src="http://static.toastoven.net/prod_tcdeploy/btn/send-w.png"> 클릭<br>
 2.![[그림 6] Client - 다운로드 경로 전송](http://static.toastoven.net/prod_tcdeploy/getstarted/06.png)
     <center>[그림 6] Client - 다운로드 경로 전송</center>
     - 다운로드 링크 전송 팝업에서 전송 유형과 수신자를 선택하고 <img class="img-inline" alt="send-b.png" src="http://static.toastoven.net/prod_tcdeploy/btn/send-b.png"> 클릭
@@ -101,10 +101,10 @@ Console에 접속하여 Deploy를 활성화합니다.
 ![[그림 7] Server - 아티팩트 설정](http://static.toastoven.net/prod_tcdeploy/getstarted/07.png)
 <center>[그림 7] Server - 아티팩트 설정</center>
 
-1.리스트 상단의 <img class="img-inline" alt="create-b.png" src="http://static.toastoven.net/prod_tcdeploy/btn/create-b.png"> 클릭
-2.유형을 "Server Application"으로 선택
-3.이름(필수), 설명(선택) 입력
-4.<img class="img-inline" alt="create-b.png" src="http://static.toastoven.net/prod_tcdeploy/btn/create-b.png"> 클릭
+1. 리스트 상단의 <img class="img-inline" alt="create-b.png" src="http://static.toastoven.net/prod_tcdeploy/btn/create-b.png"> 클릭
+2. 유형을 "Server Application"으로 선택
+3. 이름(필수), 설명(선택) 입력
+4. <img class="img-inline" alt="create-b.png" src="http://static.toastoven.net/prod_tcdeploy/btn/create-b.png"> 클릭
 
 ### 서버 그룹 설정
 
@@ -117,10 +117,10 @@ Console에 접속하여 Deploy를 활성화합니다.
 ![[그림 8] Server - 서버 그룹 생성 팝업](http://static.toastoven.net/prod_tcdeploy/getstarted/08.png)
 <center>[그림 8] Server - 서버 그룹 생성 팝업</center>
 
-1.<img class="img-inline" alt="servergroupcreate-g.png" src="http://static.toastoven.net/prod_tcdeploy/btn/servergroupcreate-g.png"> 클릭
-2.이름(필수), 설명(선택) 입력
-3.OS 선택 후 Shell Type 지정 (항목 선택 또는 직접 입력)
-4.서버 추가
+1. <img class="img-inline" alt="servergroupcreate-g.png" src="http://static.toastoven.net/prod_tcdeploy/btn/servergroupcreate-g.png"> 클릭
+2. 이름(필수), 설명(선택) 입력
+3. OS 선택 후 Shell Type 지정 (항목 선택 또는 직접 입력)
+4. 서버 추가
 - 서버 추가에는 아래 두가지 방법이 있으며 자세한 내용은 [기능 상세 가이드의 서버 그룹 메뉴](/Dev%20Tool/Deploy/ko/reference/#_11)에서 확인하실 수 있습니다.
     - 대량 추가
     - 개별 추가
@@ -130,7 +130,7 @@ Console에 접속하여 Deploy를 활성화합니다.
         - ![[그림 10] Server - 추가된 서버 확인](http://static.toastoven.net/prod_tcdeploy/getstarted/10.png)
             <center>[그림 10]Server - 추가된 서버 확인</center>
             - 하단 서버 리스트에 추가된 내용 확인 (왼쪽 체크 박스에 체크된 서버만 등록됨)
-5.<img class="img-inline" alt="create-b.png" src="http://static.toastoven.net/prod_tcdeploy/btn/create-b.png"> 클릭
+5. <img class="img-inline" alt="create-b.png" src="http://static.toastoven.net/prod_tcdeploy/btn/create-b.png"> 클릭
 
 ### 시나리오 생성
 
@@ -141,9 +141,9 @@ Console에 접속하여 Deploy를 활성화합니다.
 ![[그림 11] Server - 시나리오 생성](http://static.toastoven.net/prod_tcdeploy/getstarted/11.png)
 <center>[그림 11] Server - 시나리오 생성</center>
 
-1.<img class="img-inline" alt="newcreate-g.png" src="http://static.toastoven.net/prod_tcdeploy/btn/newcreate-g.png"> 클릭
-2.하단에 추가된 시나리오 영역에 시나리오명(선택) 입력
-3.<img class="img-inline" alt="create-g.png" src="http://static.toastoven.net/prod_tcdeploy/btn/create-g.png"> 클릭
+1. <img class="img-inline" alt="newcreate-g.png" src="http://static.toastoven.net/prod_tcdeploy/btn/newcreate-g.png"> 클릭
+2. 하단에 추가된 시나리오 영역에 시나리오명(선택) 입력
+3. <img class="img-inline" alt="create-g.png" src="http://static.toastoven.net/prod_tcdeploy/btn/create-g.png"> 클릭
 
 ### 태스크 추가
 
@@ -169,7 +169,7 @@ Console에 접속하여 Deploy를 활성화합니다.
     * Available Variables : 예약어. 자세한 내용은 [기능 상세 가이드의 태스크 메뉴 최하단](/Dev%20Tool/Deploy/ko/reference/#_23)에서 확인하실 수 있습니다.
 
 ![[그림 12] Server - User Command 추가](http://static.toastoven.net/prod_tcdeploy/getstarted/12.png)
-<center>[rmfla 12] Server - User Command 추가</center>
+<center>[그림 12] Server - User Command 추가</center>
 
 1.<img class="img-inline" alt="taskadd-g.png" src="http://static.toastoven.net/prod_tcdeploy/btn/taskadd-g.png"> 클릭
 2.Normal Task > User Command 클릭
@@ -230,18 +230,18 @@ Console에 접속하여 Deploy를 활성화합니다.
 
 ### 실행
 
-1.<img class="img-inline" alt="deploy-b.png" src="http://static.toastoven.net/prod_tcdeploy/btn/deploy-b.png"> 클릭으로 배포 요청
-2.![[그림 18] Server - 배포 내용 확인 팝업](http://static.toastoven.net/prod_tcdeploy/getstarted/18.png)
+1. <img class="img-inline" alt="deploy-b.png" src="http://static.toastoven.net/prod_tcdeploy/btn/deploy-b.png"> 클릭으로 배포 요청
+2. ![[그림 18] Server - 배포 내용 확인 팝업](http://static.toastoven.net/prod_tcdeploy/getstarted/18.png)
    <center>[그림 18]배포 내용 확인 팝업</center>
 - 인증 방법 (필수)
     - Password 선택 후 비밀번호 입력 또는 pemFile 선택 후 파일 업로드
     - ![confirm-b.png](http://static.toastoven.net/prod_tcdeploy/btn/confirm-b.png) 클릭
-3.![[그림 19] Server - 배포 진행상황 확인](http://static.toastoven.net/prod_tcdeploy/getstarted/19.png)
+3. ![[그림 19] Server - 배포 진행상황 확인](http://static.toastoven.net/prod_tcdeploy/getstarted/19.png)
    <center>[그림 19] Server - 배포 진행상황 확인</center>
-4.![[그림 20] Server - 배포 완료 확인](http://static.toastoven.net/prod_tcdeploy/getstarted/20.png)
+4. ![[그림 20] Server - 배포 완료 확인](http://static.toastoven.net/prod_tcdeploy/getstarted/20.png)
    <center>[그림 20] Server - 배포 완료 확인</center>
     - 각 Task 정상 실행 여부는 exit code로 판별됩니다.
-5.![[그림 21] Server - 배포 결과 보기 팝업](http://static.toastoven.net/prod_tcdeploy/getstarted/21.png)
+5. ![[그림 21] Server - 배포 결과 보기 팝업](http://static.toastoven.net/prod_tcdeploy/getstarted/21.png)
    <center>[그림 21] Server - 배포 결과 보기 팝업</center>
     - '결과 보기' 클릭 시 각 태스크 실행에 대한 상세 내용 (리턴 값, exit code, 오류 내용 등) 확인 가능
 
