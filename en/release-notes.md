@@ -1,4 +1,4 @@
-# Dev Tool > Deploy > Release Notes
+## Dev Tool > Deploy > Release Notes
 
 ### 2017.02.22
 #### 신규 상품 출시
