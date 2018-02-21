@@ -14,18 +14,21 @@ Jenkins 설치 및 자세한 사항은 [https://jenkins.io/](https://jenkins.io/
 
 #### 플러그인 설치
 
-1.Jenkins 관리 ▷ 플러그인 관리 ▷ 고급 탭 ▷ 플러그인 올리기 메뉴에서 **tcdeploy-upload-jenkins.hpi** 파일을 올립니다.
+1. Jenkins 관리 ▷ 플러그인 관리 ▷ 고급 탭 ▷ 플러그인 올리기 메뉴에서 **tcdeploy-upload-jenkins.hpi** 파일을 올립니다.
 ([tcdeploy-upload-jenkins.hpi](http://images.hangame.co.kr/tcdeploy/plugins/upload/jenkins/tcdeploy-upload-jenkins-ext.hpi) 다운로드 링크)
-![[그림 1] 플러그인 올리기 ](http://static.toastoven.net/prod_tcdeploy/devguide/01.png)
-<center>[그림 1] 플러그인 올리기</center>
+    
+    ![[그림 1] 플러그인 올리기 ](http://static.toastoven.net/prod_tcdeploy/devguide/01.png)
+    <center>[그림 1] 플러그인 올리기</center>
 
-2.설치가 완료되면 "설치된 플러그인 목록" 탭 메뉴에서 아래 [그림 2]와 같이 설치된 내역을 확인할 수 있습니다.
-![[그림 2] 설치된 플러그인 목록](http://static.toastoven.net/prod_tcdeploy/devguide/02.png)
-<center>[그림 2] 설치된 플러그인 목록</center>
+2. 설치가 완료되면 "설치된 플러그인 목록" 탭 메뉴에서 아래 [그림 2]와 같이 설치된 내역을 확인할 수 있습니다.
+    
+    ![[그림 2] 설치된 플러그인 목록](http://static.toastoven.net/prod_tcdeploy/devguide/02.png)
+    <center>[그림 2] 설치된 플러그인 목록</center>
 
-3.해당 빌드 설정의 "빌드 후 조치 추가" 버튼을 눌러 서버 또는 클라이언트 타입 어플리케이션 업로드 테스크를 추가할 수 있습니다.
-![[그림 3] 설치된 플러그인 목록](http://static.toastoven.net/prod_tcdeploy/devguide/03.png)
-<center>[그림 3] 설치된 플러그인 목록</center>
+3. 해당 빌드 설정의 "빌드 후 조치 추가" 버튼을 눌러 서버 또는 클라이언트 타입 어플리케이션 업로드 테스크를 추가할 수 있습니다.
+    
+    ![[그림 3] 설치된 플러그인 목록](http://static.toastoven.net/prod_tcdeploy/devguide/03.png)
+    <center>[그림 3] 설치된 플러그인 목록</center>
 
 #### 서버(server) 타입 어플리케이션 업로드 플러그인 설정
 
@@ -198,7 +201,7 @@ Jenkins 서버의 http keep alive timeout 값 확인 후, 값 조정.
 Jenkins build -> Deploy로 바이너리 업로드(by plugin) ->배포 시나리오 실행(배포/종료/재시작/기타 사전작업 및 후처리)
 이를 위해 다음의 순서를 통해 배포환경을 구축해야 합니다.
 
-1.tcDeploy에 Artifact를 생성
-2.jenkins build job 설정
-3.서버그룹 생성
-4.배포 시나리오 작성
+1. Deploy에 Artifact를 생성
+2. jenkins build job 설정
+3. 서버그룹 생성
+4. 배포 시나리오 작성
