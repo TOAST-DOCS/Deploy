@@ -36,7 +36,7 @@ Console에 접속하여 Deploy를 활성화합니다.
 [Deploy] > [URL * AppKey] 클릭
 ```
 
-![[그림 2] URL & Appkey](http://static.toastoven.net/prod_tcdeploy/getstarted/02.png)
+![[그림 2] URL & Appkey](http://static.toastoven.net/prod_tcdeploy/getstarted/02-1.png)
 <center>[그림 2] URL & Appkey</center>
 
 ## Client Application
@@ -88,10 +88,10 @@ Console에 접속하여 Deploy를 활성화합니다.
 
 1. 전송할 버전을 선택하고 <img class="img-inline" alt="send-w.png" src="http://static.toastoven.net/prod_tcdeploy/btn/send-w.png"> 클릭
 
-![[그림 6] Client - 다운로드 경로 전송](http://static.toastoven.net/prod_tcdeploy/getstarted/06.png)
-<center>[그림 6] Client - 다운로드 경로 전송</center>
+    ![[그림 6] Client - 다운로드 경로 전송](http://static.toastoven.net/prod_tcdeploy/getstarted/06.png)
+    <center>[그림 6] Client - 다운로드 경로 전송</center>
 
-2. 다운로드 링크 전송 팝업에서 전송 유형과 수신자를 선택하고 <img class="img-inline" alt="send-b.png" src="http://static.toastoven.net/prod_tcdeploy/btn/send-b.png"> 클릭
+2. 다운로드 경로 전송 팝업에서 전송 유형과 수신자를 선택하고 <img class="img-inline" alt="send-b.png" src="http://static.toastoven.net/prod_tcdeploy/btn/send-b.png"> 클릭
     * SMS / E-mail로 일부 또는 모두 지정 가능
 3. 지정한 전송 유형으로 수신자에게 다운로드 페이지가 전달 됩니다.
 
@@ -162,7 +162,7 @@ Console에 접속하여 Deploy를 활성화합니다.
 * Normal Task : 배포 시 실행 기능
 
 필요에 따라 선택적으로 사용할 수 있으며, 본 문서에서는 기본적인 배포 시 필요한 태스크를 다룹니다.
-더 많은 태스크는 [기능 상세 가이드의 태스크 메뉴](/Dev%20Tool/Deploy/ko/reference/#_23)에서 확인하실 수 있습니다.
+더 많은 태스크는 [기능 상세 가이드의 태스크 메뉴](/Dev%20Tool/Deploy/ko/reference/#_25)에서 확인하실 수 있습니다.
 
 ```
 [Deploy] > 하단 탭 중 [배포] > 시나리오 영역에서 [Task 추가] 클릭
@@ -174,7 +174,7 @@ Console에 접속하여 Deploy를 활성화합니다.
 
 * 배포 시 실행되는 사용자 정의 Command 태스크
 * Available Variables를 사용할 수 있음
-    * Available Variables : 예약어. 자세한 내용은 [기능 상세 가이드의 태스크 메뉴](/Dev%20Tool/Deploy/ko/reference/#_23) 하단에서 확인하실 수 있습니다.
+    * Available Variables : 예약어. 자세한 내용은 [기능 상세 가이드의 태스크 메뉴](/Dev%20Tool/Deploy/ko/reference/#_25) 하단에서 확인하실 수 있습니다.
 
 ![[그림 12] Server - User Command 추가](http://static.toastoven.net/prod_tcdeploy/getstarted/12.png)
 <center>[그림 12] Server - User Command 추가</center>
