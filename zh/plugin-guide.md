@@ -197,7 +197,7 @@ artifact id, app key 등 사용자 입력정보가 출력되고, 업로드할 �
     * Public Key가 설정된 Id를 입력합니다.
         * 참고 사항
             * 2.46 이전 버전
-                * Public Key가 설정된 경우 Jenkins에서 자동 인증 진행
+    	        * Public Key가 설정된 경우 Jenkins에서 자동 인증 진행
             * 2.46 이상 버전
                 * User(Jenkins admin Id)가 추가 되었으며, 해당 Id에 Public Key가 설정된 경우만 인증 통과
 * Build Parameter (선택)
