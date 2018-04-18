@@ -14,9 +14,10 @@
 
 | Name | Type | Description | Value | Required |
 | ---- | ---- | ----------- | ----- | -------- |
-| appKey | String | 토스트 클라우드 APPKEY, Deploy 상품 페이지에서 확인가능 | - | true |
-| applicationType | String | Artifact의 Type | client 또는 server | true |
-| version | String | 업로드하는 바이너리의 버전, 미입력시 timestamp로 대체 | - | false |
+| appKey | String | 토스트 클라우드 앱키, 디플로이 상품 페이지에서 확인가능 | - | true |
+| applicationType | String | 아티팩트의 타입 | client 또는 server | true |
+| binaryGroupKey | long | 바이너리의 그룹 키 | 미입력 시 기본 그룹으로 지정 | false |
+| version | String | 업로드하는 바이너리의 버전, 미입력 시 timestamp로 대체 | - | false |
 | description | String | 바이너리의 설명 | - | false |
 | osType | String | applicationType이 client인 경우 바이너리 파일의 os 정보 | iOS 또는 Android 또는 etc | false |
 | binaryFile | File | 바이너리 파일 객체 | - | true |
