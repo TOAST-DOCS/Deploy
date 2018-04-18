@@ -34,7 +34,6 @@ String artifactId = "1";
 String binaryName = "ojdbc14.jar";
 String filePath = "/xxx/xxxx" + binaryName;
 FileBody binaryFile = new FileBody(new File(filePath));
-long binaryGroupKey = 123;
 
 StringBody appKey = new StringBody("xxxxxxxxx", ContentType.TEXT_PLAIN);
 StringBody applicationType = new StringBody("server", ContentType.TEXT_PLAIN);
@@ -48,7 +47,6 @@ HttpEntity reqEntity = MultipartEntityBuilder.create()
 		.addPart("binaryFile", binaryFile)
 		.addPart("appKey", appKey)
 		.addPart("applicationType", applicationType)
-		.addPart("binaryGroupKey", binaryGroupKey)
 		.addPart("description", description)
         .build();
 
