@@ -1,4 +1,4 @@
-## Dev Tool > Deploy > 릴리스 노트
+## Dev Tool > Deploy > Release Notes
 
 ### 2018.04.24
 #### 기능추가
