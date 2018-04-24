@@ -99,6 +99,7 @@
 * 그룹을 생성/수정하고, 바이너리 파일을 업로드/다운로드할 수 있습니다.
 
 <img class="img-inline" alt="binaryGroupPassword.png" src="http://static.toastoven.net/prod_tcdeploy/reference/06-1.png">
+
 * Client 타입의 경우 바이너리 그룹의 비밀번호를 설정할수 있으며, 공유된 클라이언트 다운로드 페이지 접근제어를 할 수 있습니다.
     * 바이너리 그룹 생성시 [바이너리 그룹 비밀번호 사용] 체크를 하면 [비밀번호]를 입력 할 수 있습니다.
     * 해당 그룹 다운로드 페이지는 토스트 클라우드 로그인 없이 설정된 비밀번호만으로 접근이 가능합니다.
