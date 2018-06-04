@@ -98,6 +98,12 @@
 <center>[그림 6] 탭 메뉴 - 바이너리 그룹</center>
 
 * 그룹을 생성/수정하고, 바이너리 파일을 업로드/다운로드할 수 있습니다.
+
+<img alt="binaryGroupPassword.png" src="http://static.toastoven.net/prod_tcdeploy/reference/06-1.png">
+
+* Client 타입의 경우 바이너리 그룹의 비밀번호를 설정할수 있으며, 공유된 클라이언트 다운로드 페이지 접근제어를 할 수 있습니다.
+    * 바이너리 그룹 생성시 [바이너리 그룹 비밀번호 사용] 체크를 하면 [비밀번호]를 입력 할 수 있습니다.
+    * 해당 그룹 다운로드 페이지는 토스트 클라우드 로그인 없이 설정된 비밀번호만으로 접근이 가능합니다.
 * <img class="img-inline" alt="autoremove-w.png" src="http://static.toastoven.net/prod_tcdeploy/btn/autoremove-w.png">를 클릭하여 해당 바이너리 그룹의 자동 삭제 정책을 설정할 수 있습니다.
     * ![[그림 7] 자동 삭제 설정 팝업](http://static.toastoven.net/prod_tcdeploy/reference/07.png)
       <center>[그림 7] 자동 삭제 설정 팝업</center>
@@ -137,31 +143,31 @@
 ##### 서버 정보 추가
 
 1. 개별 추가
-    
+
     ![[그림 10] 서버 정보 개별 입력](http://static.toastoven.net/prod_tcdeploy/reference/10.png)
     <center>[그림 10] 서버 정보 개별 입력</center>
 
     * 호스트 이름(필수), IP 주소(필수), OS(선택) 입력 후 <img class="img-inline" alt="add-b.png" src="http://static.toastoven.net/prod_tcdeploy/btn/add-b.png"> 클릭
-    
+
     ![[그림 11] 서버 정보 개별 입력 확인](http://static.toastoven.net/prod_tcdeploy/reference/11.png)
     <center>[그림 11] 서버 정보 개별 입력 확인</center>
-    
+
     * 하단 서버 리스트에 추가된 내용 확인 (왼쪽 체크 박스에 체크된 서버만 등록됨)
-    
+
     * 서버 그룹 생성/수정 팝업의 <img class="img-inline" alt="create-b.png" src="http://static.toastoven.net/prod_tcdeploy/btn/create-b.png">/<img class="img-inline" alt="edit-b.png" src="http://static.toastoven.net/prod_tcdeploy/btn/edit-b.png"> 클릭
 
 2. 대량 추가
     * <img class="img-inline" alt="mtpinput.png" src="http://static.toastoven.net/prod_tcdeploy/btn/mtpinput.png">과 같이 체크
-    * 아래 형태로 입력 
-    
+    * 아래 형태로 입력
+
     ![[그림 12] 서버 정보 대량 입력](http://static.toastoven.net/prod_tcdeploy/reference/12.png)
     <center>[그림 12] 서버 정보 대량 입력</center>
-    
+
     * <img class="img-inline" alt="add-b.png" src="http://static.toastoven.net/prod_tcdeploy/btn/add-b.png"> 클릭
-    
+
     ![[그림 13] 서버 정보 대량 입력 확인](http://static.toastoven.net/prod_tcdeploy/reference/13.png)
     <center>[그림 13] 서버 정보 대량 입력 확인</center>
-    
+
     * 2개의 서버 정보가 추가된 내용 확인 (왼쪽 체크 박스에 체크된 서버만 등록됨)
     * 서버 그룹 생성/수정 팝업의 <img class="img-inline" alt="create-b.png" src="http://static.toastoven.net/prod_tcdeploy/btn/create-b.png">/<img class="img-inline" alt="edit-b.png" src="http://static.toastoven.net/prod_tcdeploy/btn/edit-b.png"> 클릭
 
@@ -287,7 +293,7 @@ Client 바이너리의 all / fixed / recent 버전을 원하는 방식으로 배
         * 타겟 서버를 지정한 일회성 처리 가능
 * Normal Task : 배포 과정 중 실행되는 태스크
     * 대상 : 서버 그룹 또는 서버 그룹 내 지정 서버
-    
+
 ##### 태스크 이용 가이드
 
 * 태스크 타입 구분
@@ -337,14 +343,15 @@ Client 바이너리의 all / fixed / recent 버전을 원하는 방식으로 배
 * Private Key Path
     * SSH Public Key가 설정되어있는 Jenkins 유저로 인증을 위한 SSH Private Key 파일의 저장 경로를 입력합니다.
 * User (ver. 2.46 이상 버전 필수 값)
-    * 참고 사항
-        * 2.46 이전 버전
-    	    * Public Key가 설정된 경우 Jenkins에서 자동 인증 진행
-        * 2.46 이상 버전
-            * User(Jenkins admin Id)가 추가 되었으며, 해당 Id에 Public Key가 설정된 경우만 인증 통과
+	* Public Key가 설정된 Id를 입력합니다.
+		* 참고 사항
+			* 2.46 이전 버전
+				* Public Key가 설정된 경우 Jenkins에서 자동 인증 진행
+			* 2.46 이상 버전
+				* User(Jenkins admin Id)가 추가 되었으며, 해당 Id에 Public Key가 설정된 경우만 인증 통과
 * Build Parameter (선택)
     * 빌드에 필요한 파라미터를 입력 합니다.
-    
+
 ##### User Command
 
 * 사용자 정의 Command 태스크
@@ -387,47 +394,47 @@ Client 바이너리의 all / fixed / recent 버전을 원하는 방식으로 배
     * 실행 계정을 입력 합니다.
 * 바이너리
     * 배포할 바이너리 파일을 세가지 타입으로 선택할 수 있습니다.
-        
+
         * 최신 버전 사용
-        
+
             ![[그림 25] Binary Deploy - 최신 버전 사용](http://static.toastoven.net/prod_tcdeploy/reference/25.png)
             <center>[그림 25] Binary Deploy - 최신 버전 사용</center>
-        
+
             * 최신 버전 사용에 체크하면 최신 버전이 자동 선택 됩니다. (최신 버전 파일이 있을 경우)
             * 바이너리 그룹을 선택할 수 있습니다. (선택된 그룹의 최신 버전이 사용됨)
-        
+
         * 선택 버전 사용
             * <img class="img-inline" alt="binaryselect-g.png" src="http://static.toastoven.net/prod_tcdeploy/btn/binaryselect-g.png"> 클릭
-                
+
                 ![[그림 26] Binary Deploy - 선택 팝업](http://static.toastoven.net/prod_tcdeploy/reference/26.png)
                 <center>[그림 26] Binary Deploy - 선택 팝업</center>
-                
+
                 * 사용할 바이너리에 체크한 후 <img class="img-inline" alt="select-b.png" src="http://static.toastoven.net/prod_tcdeploy/btn/select-b.png"> 클릭
-            
+
             ![[그림 27] Binary Deploy - 선택 확인](http://static.toastoven.net/prod_tcdeploy/reference/27.png)
             <center>[그림 27] Binary Deploy - 선택 확인</center>
-            
+
             * 바이너리가 선택 됨.
-            
+
         * 업로드 후 사용
             * <img class="img-inline" alt="upload-g.png" src="http://static.toastoven.net/prod_tcdeploy/btn/upload-g.png"> 클릭
-                
+
                 ![[그림 28] Binary Deploy - 업로드 팝업](http://static.toastoven.net/prod_tcdeploy/reference/28.png)
                 <center>[그림 28] Binary Deploy - 업로드 팝업</center>
-                
+
                 * <img class="img-inline" alt="fileselect-b.png" src="http://static.toastoven.net/prod_tcdeploy/btn/fileselect-b.png"> 클릭 후 Binary 파일 선택
                 * <img class="img-inline" alt="upload-b.png" src="http://static.toastoven.net/prod_tcdeploy/btn/upload-b.png"> 클릭
-            
+
                 ![[그림 29] Binary Deploy - 업로드 완료 팝업](http://static.toastoven.net/prod_tcdeploy/reference/29.png)
                 <center>[그림 29] Binary Deploy - 업로드 팝업</center>
-                
+
                 * <img class="img-inline" alt="confirm-b.png" src="http://static.toastoven.net/prod_tcdeploy/btn/confirm-b.png"> 클릭
-            
+
                 ![[그림 30] Binary Deploy - 선택된 바이너리 확인](http://static.toastoven.net/prod_tcdeploy/reference/30.png)
                 <center>[그림 30] Binary Deploy - 선택된 바이너리 확인</center>
-                
+
                 * 바이너리가 선택 됨.
-                
+
 * Variable As
     * 해당 바이너리의 Variable명을 지정합니다. Command에서 Available Variables를 사용할 수 있습니다.
 * 타겟 디렉토리
@@ -449,15 +456,15 @@ Client 바이너리의 all / fixed / recent 버전을 원하는 방식으로 배
 *  파일
     * 배포할 파일을 선택 합니다.
         * <img class="img-inline" alt="fileselect-g.png" src="http://static.toastoven.net/prod_tcdeploy/btn/fileselect-g.png"> 클릭
-            
+
             ![[그림 32] File Deploy - 배포 파일 선택 팝업](http://static.toastoven.net/prod_tcdeploy/reference/32.png)
             <center>[그림 32] File Deploy - 배포 파일 선택 팝업</center>
-            
+
             * 사용할 파일에 체크한 후 <img class="img-inline" alt="select-b.png" src="http://static.toastoven.net/prod_tcdeploy/btn/select-b.png"> 클릭
-            
+
             ![[그림 33] File Deploy - 선택된 배포 파일 확인](http://static.toastoven.net/prod_tcdeploy/reference/33.png)
             <center>[그림 33] File Deploy - 선택된 배포 파일 확인</center>
-            
+
             * 파일이 선택 됨
 * 타겟 디렉토리
     * 파일을 배포할 디렉토리를 지정합니다.
@@ -555,10 +562,10 @@ $${binary.binary variable as value.binaryGroupName} : 바이너리에 설정한 
 
 1. 생성 방식(선택) : 신규 생성 선택
 2. <img class="img-inline" alt="confirm-b.png" src="http://static.toastoven.net/prod_tcdeploy/btn/confirm-b.png"> 클릭
-  
+
     ![[그림 37] 파일 신규 생성](http://static.toastoven.net/prod_tcdeploy/reference/37.png)
     <center>[그림 37] 파일 신규 생성</center>
-    
+
 3. 파일 이름(필수) 입력
 4. 파일 설명(선택), Comment(선택) 입력
 5. 파일 내용(선택) 입력
@@ -599,17 +606,17 @@ $${binary.binary variable as value.binaryGroupName} : 바이너리에 설정한 
 
 파일 생성/수정 History를 확인할 수 있습니다.
 
-1. <img class="img-inline" alt="filehistory.png" src="http://static.toastoven.net/prod_tcdeploy/btn/filehistory.png"> 클릭 
+1. <img class="img-inline" alt="filehistory.png" src="http://static.toastoven.net/prod_tcdeploy/btn/filehistory.png"> 클릭
 
     ![[그림 41] 파일 History 목록](http://static.toastoven.net/prod_tcdeploy/reference/41.png)
     <center>[그림 41] 파일 History 목록</center>
-    
+
     * 목록 확인
         * 첫번째 내역 : 현재 버전을 의미
         * 이후 내역 : 이전 버전으로, 클릭 시 상세 팝업으로 내용 표시
     ![[그림 42] 파일 History 상세 내역](http://static.toastoven.net/prod_tcdeploy/reference/42.png)
     <center>[그림 42] 파일 History 상세 내역</center>
-    
+
     * 내역 클릭 시 해당 버전의 상세 내용 확인 가능
 
 ##### 파일 이력 관리
