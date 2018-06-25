@@ -250,7 +250,7 @@ Console에 접속하여 Deploy를 활성화합니다.
     ![[그림 18] 배포 내용 확인 팝업](http://static.toastoven.net/prod_tcdeploy/getstarted/18.png)
     <center>[그림 18] 배포 내용 확인 팝업</center>
 
-2. 인증 방법 선택 및 인증 값(파일) 입력 (필수)
+2. 배포 노트(선택) 및 인증 방법 지정 후 인증 값 또는 파일(필수) 입력
     * Password 선택 후 비밀번호 입력 또는 pemFile 선택 후 파일 업로드
     * <img class="img-inline" alt="confirm-b.png" src="http://static.toastoven.net/prod_tcdeploy/btn/confirm-b.png"> 클릭
 
