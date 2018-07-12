@@ -6,16 +6,10 @@
 * [기능 별 설명](/Dev%20Tool/Deploy/ko/reference/#_15)
 * [OS 별 요구사항](/Dev%20Tool/Deploy/ko/reference/#os)
 
-아래 이미지로 Client / Server에서 사용하는 메뉴를 구분하실 수 있습니다.
-
-* <img class="img-inline" alt="client.png" src="http://static.toastoven.net/prod_tcdeploy/btn/client.png"> : Client에서 사용하는 메뉴
-* <img class="img-inline" alt="server.png" src="http://static.toastoven.net/prod_tcdeploy/btn/server.png"> : Server에서 사용하는 메뉴
-
 ## 메뉴 설명
 
 ### 아티팩트
 
-<img class="img-inline" alt="client.png" src="http://static.toastoven.net/prod_tcdeploy/btn/client.png"> <img class="img-inline" alt="server.png" src="http://static.toastoven.net/prod_tcdeploy/btn/server.png">
 배포를 관리하는 Deploy 구성의 기본 단위 입니다.
 생성된 아티팩트는 화면 상단에 리스트 형태로 노출됩니다.
 
@@ -35,6 +29,11 @@
 <center>[그림 2] 탭 메뉴 - 배포</center>
 
 * 배포 시나리오 관리
+    * 복사
+    * 설정
+    * 새로 만들기
+    * 올리기/ 내려받기
+        * 시나리오 단위의 Import/Export
 * 서버 그룹과 시나리오를 선택하여 배포
 * 서버 그룹 내 서버 동시/개별 배포
 * 배포 노트에 배포에 대한 상세 내용 입력 시, 배포 이력 탭의 배포 별 결과보기 팝업에서 확인 가능 
@@ -73,8 +72,6 @@
 
 ### 배포 이력
 
-<img class="img-inline" alt="server.png" src="http://static.toastoven.net/prod_tcdeploy/btn/server.png">
-
 배포 이력 및 배포 설정, 배포 노트에 대한 상세 내용을 확인할 수 있습니다.
 
 ![[그림 4] 탭 메뉴 - 배포 이력](http://static.toastoven.net/prod_tcdeploy/reference/04.png)
@@ -89,10 +86,8 @@
 
 ### 바이너리 그룹
 
-<img class="img-inline" alt="client.png" src="http://static.toastoven.net/prod_tcdeploy/btn/client.png"> <img class="img-inline" alt="server.png" src="http://static.toastoven.net/prod_tcdeploy/btn/server.png">
-
 바이너리를 그룹으로 관리할 수 있습니다.
-(alpha, beta, release 등의 서버군에 배포되는 바이너리를 구분하기 위해서 활용할 수 있습니다.)
+(Develop, Staging, Product 등의 서버 장비에 배포되는 바이너리를 구분하기 위해서 활용할 수 있습니다.)
 
 ![[그림 6] 탭 메뉴 - 바이너리 그룹](http://static.toastoven.net/prod_tcdeploy/reference/06.png)
 <center>[그림 6] 탭 메뉴 - 바이너리 그룹</center>
@@ -110,10 +105,8 @@
 
 ### 서버 그룹
 
-<img class="img-inline" alt="server.png" src="http://static.toastoven.net/prod_tcdeploy/btn/server.png">
-
 배포 대상 서버를 그룹으로 관리할 수 있습니다.
-(alpha, beta, release 등의 서버군을 구분하기 위해서 활용할 수 있습니다.)
+(Phase 속성으로 Develop, Staging, Product 등의 서버 장비를 구분하여 활용할 수 있습니다.)
 
 ![[그림 8] 탭 메뉴 - 서버 그룹](http://static.toastoven.net/prod_tcdeploy/reference/08.png)
 <center>[그림 8] 탭 메뉴 - 서버 그룹</center>
@@ -134,7 +127,8 @@
 1. <img class="img-inline" alt="servergroupcreate-g.png" src="http://static.toastoven.net/prod_tcdeploy/btn/servergroupcreate-g.png"> 클릭
 2. 이름(필수), 설명(선택) 입력
 3. OS 선택 후 Shell Type 지정 (항목 선택 또는 직접 입력)
-4. <img class="img-inline" alt="create-b.png" src="http://static.toastoven.net/prod_tcdeploy/btn/create-b.png"> 클릭
+4. Phase 선택 (서버 장비 구분. 지정하지 않을 경우 NONE 선택)
+5. <img class="img-inline" alt="create-b.png" src="http://static.toastoven.net/prod_tcdeploy/btn/create-b.png"> 클릭
 
 #### 서버 정보 추가/삭제
 
@@ -181,8 +175,6 @@
     * 서버 그룹 생성/수정 팝업의 <img class="img-inline" alt="create-b.png" src="http://static.toastoven.net/prod_tcdeploy/btn/create-b.png">/<img class="img-inline" alt="edit-b.png" src="http://static.toastoven.net/prod_tcdeploy/btn/edit-b.png"> 클릭 후 삭제
 
 ### 리소스
-
-<img class="img-inline" alt="server.png" src="http://static.toastoven.net/prod_tcdeploy/btn/server.png">
 
 리소스를 관리할 수 있는 페이지로 파일 생성 및 업로드, 다운로드, 수정을 할 수 있으며 변경이력을 확인할 수 있습니다.
 
