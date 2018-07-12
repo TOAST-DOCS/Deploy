@@ -22,6 +22,7 @@
 | osType | String | applicationType이 client인 경우 바이너리 파일의 os 정보 | iOS 또는 Android 또는 etc | false |
 | binaryFile | File | 바이너리 파일 객체 | - | true |
 | metaFile | File | iOS인 경우 plist 파일 객체 | - | false |
+| fix | Boolean | applicationType이 Client인 경우 Fix 여부 정보 | true/false | false |
 
 <center>[표 2] Binary Upload Request Parameter</center>
 

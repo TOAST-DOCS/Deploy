@@ -2,12 +2,12 @@
 
 이 문서에서는 예제로서 다음과 같은 내용을 다룹니다.
 
-* [상품 활성화](/Dev%20Tool/Deploy/ko/console-guide/#_1)
-* [Appkey와 URL 확인](/Dev%20Tool/Deploy/ko/console-guide/#appkey-url)
-* [Client Application](/Dev%20Tool/Deploy/ko/console-guide/#client-application)
-* [Server Application](/Dev%20Tool/Deploy/ko/console-guide/#server-application)
+* [상품 활성화](/Dev%20Tool/Deploy/ja/console-guide/#_1)
+* [Appkey와 URL 확인](/Dev%20Tool/Deploy/ja/console-guide/#appkey-url)
+* [Client Application](/Dev%20Tool/Deploy/ja/console-guide/#client-application)
+* [Server Application](/Dev%20Tool/Deploy/ja/console-guide/#server-application)
 
-(본 예제에서 다루지 않은 기능은 [기능 상세 가이드](/Dev%20Tool/Deploy/ko/reference/)에서 확인하실 수 있습니다.)
+(본 예제에서 다루지 않은 기능은 [기능 상세 가이드](/Dev%20Tool/Deploy/ja/reference/)에서 확인하실 수 있습니다.)
 
 [참고사항]
 ![[그림 1] 참고 사항 - 입력 값](http://static.toastoven.net/prod_tcdeploy/getstarted/01.png)
@@ -45,12 +45,12 @@ Console에 접속하여 Deploy를 활성화합니다.
 
 ### 아티팩트 설정
 
-![[그림 3] Client - 아티팩트 설정](http://static.toastoven.net/prod_tcdeploy/getstarted/03.png)
+![[그림 3] Client - 아티팩트 설정](http://static.toastoven.net/prod_tcdeploy/getstarted/getstarted_client_artifact.png)
 <center>[그림 3] Client - 아티팩트 설정</center>
 
 1. 리스트 상단의 <img class="img-inline" alt="create-b.png" src="http://static.toastoven.net/prod_tcdeploy/btn/create-b.png"> 클릭
 2. 유형을 "Client Application"으로 선택
-3. 이름(필수), 설명(선택) 입력
+3. 이름(필수), 설명(선택), port(필수) 입력
 4. <img class="img-inline" alt="create-b.png" src="http://static.toastoven.net/prod_tcdeploy/btn/create-b.png"> 클릭
 
 ### 바이너리 설정
@@ -106,7 +106,7 @@ Console에 접속하여 Deploy를 활성화합니다.
 
 1. 리스트 상단의 <img class="img-inline" alt="create-b.png" src="http://static.toastoven.net/prod_tcdeploy/btn/create-b.png"> 클릭
 2. 유형을 "Server Application"으로 선택
-3. 이름(필수), 설명(선택) 입력
+3. 이름(필수), 설명(선택), port(필수) 입력
 4. <img class="img-inline" alt="create-b.png" src="http://static.toastoven.net/prod_tcdeploy/btn/create-b.png"> 클릭
 
 ### 서버 그룹 설정
@@ -117,14 +117,15 @@ Console에 접속하여 Deploy를 활성화합니다.
 [Deploy] > 하단 탭 중 [배포] > [서버 그룹 생성] 클릭
 ```
 
-![[그림 8] Server - 서버 그룹 생성 팝업](http://static.toastoven.net/prod_tcdeploy/getstarted/08.png)
+![[그림 8] Server - 서버 그룹 생성 팝업](http://static.toastoven.net/prod_tcdeploy/getstarted/getstarted_servergroup_create.png)
 <center>[그림 8] Server - 서버 그룹 생성 팝업</center>
 
 1. <img class="img-inline" alt="servergroupcreate-g.png" src="http://static.toastoven.net/prod_tcdeploy/btn/servergroupcreate-g.png"> 클릭
 2. 이름(필수), 설명(선택) 입력
 3. OS 선택 후 Shell Type 지정 (항목 선택 또는 직접 입력)
-4. 서버 추가
-    * 서버 추가에는 아래 두가지 방법이 있으며 자세한 내용은 [기능 상세 가이드의 서버 그룹 메뉴](/Dev%20Tool/Deploy/ko/reference/#_11)에서 확인하실 수 있습니다.
+4. Phase 선택 (서버 장비 구분. 지정하지 않을 경우 NONE 선택)
+5. 서버 추가
+    * 서버 추가에는 아래 두가지 방법이 있으며 자세한 내용은 [기능 상세 가이드의 서버 그룹 메뉴](/Dev%20Tool/Deploy/ja/reference/#_11)에서 확인하실 수 있습니다.
         * 대량 추가
         * 개별 추가
             
@@ -138,7 +139,7 @@ Console에 접속하여 Deploy를 활성화합니다.
             
             * 하단 서버 리스트에 추가된 내용 확인 (왼쪽 체크 박스에 체크된 서버만 등록됨)
             
-5. <img class="img-inline" alt="create-b.png" src="http://static.toastoven.net/prod_tcdeploy/btn/create-b.png"> 클릭
+6. <img class="img-inline" alt="create-b.png" src="http://static.toastoven.net/prod_tcdeploy/btn/create-b.png"> 클릭
 
 ### 시나리오 생성
 
@@ -162,7 +163,7 @@ Console에 접속하여 Deploy를 활성화합니다.
 * Normal Task : 배포 시 실행 기능
 
 필요에 따라 선택적으로 사용할 수 있으며, 본 문서에서는 기본적인 배포 시 필요한 태스크를 다룹니다.
-더 많은 태스크는 [기능 상세 가이드의 태스크 메뉴](/Dev%20Tool/Deploy/ko/reference/#_25)에서 확인하실 수 있습니다.
+더 많은 태스크는 [기능 상세 가이드의 태스크 메뉴](/Dev%20Tool/Deploy/ja/reference/#_25)에서 확인하실 수 있습니다.
 
 ```
 [Deploy] > 하단 탭 중 [배포] > 시나리오 영역에서 [Task 추가] 클릭
@@ -174,7 +175,7 @@ Console에 접속하여 Deploy를 활성화합니다.
 
 * 배포 시 실행되는 사용자 정의 Command 태스크
 * Available Variables를 사용할 수 있음
-    * Available Variables : 예약어. 자세한 내용은 [기능 상세 가이드의 태스크 메뉴](/Dev%20Tool/Deploy/ko/reference/#_25) 하단에서 확인하실 수 있습니다.
+    * Available Variables : 예약어. 자세한 내용은 [기능 상세 가이드의 태스크 메뉴](/Dev%20Tool/Deploy/ja/reference/#_25) 하단에서 확인하실 수 있습니다.
 
 ![[그림 12] Server - User Command 추가](http://static.toastoven.net/prod_tcdeploy/getstarted/12.png)
 <center>[그림 12] Server - User Command 추가</center>
@@ -231,7 +232,7 @@ Console에 접속하여 Deploy를 활성화합니다.
             * 바이너리가 선택 됨.
             
 * Variable As
-    * 해당 바이너리의 Variable명을 지정해 User Command에서 바이너리 정보를 사용할 수 있으며 자세한 내용은 [기능 상세 가이드](/Dev%20Tool/Deploy/ko/reference/)의 태스크 메뉴 하단에서 확인하실 수 있습니다.
+    * 해당 바이너리의 Variable명을 지정해 User Command에서 바이너리 정보를 사용할 수 있으며 자세한 내용은 [기능 상세 가이드](/Dev%20Tool/Deploy/ja/reference/)의 태스크 메뉴 하단에서 확인하실 수 있습니다.
 * 타겟 디렉토리
     * 바이너리를 배포할 디렉토리를 지정합니다.
 * <img class="img-inline" alt="apply-g.png" src="http://static.toastoven.net/prod_tcdeploy/btn/apply-g.png"> 클릭
@@ -275,4 +276,4 @@ Console에 접속하여 Deploy를 활성화합니다.
 - - -
 
 서버에 파일 배포를 성공하였습니다!
-Toast Cloud Deploy는 더 많은 기능을 지원하며, 자세한 사항은 [기능 상세 가이드](/Dev%20Tool/Deploy/ko/reference/)에서 확인하실 수 있습니다!
+Toast Cloud Deploy는 더 많은 기능을 지원하며, 자세한 사항은 [기능 상세 가이드](/Dev%20Tool/Deploy/ja/reference/)에서 확인하실 수 있습니다!
