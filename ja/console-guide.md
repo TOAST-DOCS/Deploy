@@ -117,7 +117,7 @@ Console에 접속하여 Deploy를 활성화합니다.
 [Deploy] > 하단 탭 중 [배포] > [서버 그룹 생성] 클릭
 ```
 
-![[그림 8] Server - 서버 그룹 생성 팝업](http://static.toastoven.net/prod_tcdeploy/getstarted/getstarted_servergroup_create.png.png)
+![[그림 8] Server - 서버 그룹 생성 팝업](http://static.toastoven.net/prod_tcdeploy/getstarted/getstarted_servergroup_create.png)
 <center>[그림 8] Server - 서버 그룹 생성 팝업</center>
 
 1. <img class="img-inline" alt="servergroupcreate-g.png" src="http://static.toastoven.net/prod_tcdeploy/btn/servergroupcreate-g.png"> 클릭
