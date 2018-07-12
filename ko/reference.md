@@ -40,7 +40,7 @@
 
 #### 배포 옵션
 
-![[그림 3] 배포 옵션](http://static.toastoven.net/prod_tcdeploy/reference/03.png)
+![[그림 3] 배포 옵션](http://static.toastoven.net/prod_tcdeploy/reference/reference_deploy_option.png)
 <center>[그림 3] 배포 옵션</center>
 
 ##### 서버 그룹 지정
@@ -108,7 +108,7 @@
 배포 대상 서버를 그룹으로 관리할 수 있습니다.
 (Phase 속성으로 Develop, Staging, Product 등의 서버 장비를 구분하여 활용할 수 있습니다.)
 
-![[그림 8] 탭 메뉴 - 서버 그룹](http://static.toastoven.net/prod_tcdeploy/reference/08.png)
+![[그림 8] 탭 메뉴 - 서버 그룹](http://static.toastoven.net/prod_tcdeploy/reference/reference_servergroup_tab.png)
 <center>[그림 8] 탭 메뉴 - 서버 그룹</center>
 
 * 그룹/서버 정보를 수정할 수 있습니다.
@@ -121,7 +121,7 @@
 [Deploy] > 하단 탭 중 [서버 그룹] > [새로 만들기] 클릭
 ```
 
-![[그림 9] 서버 그룹 생성 팝업](http://static.toastoven.net/prod_tcdeploy/reference/09.png)
+![[그림 9] 서버 그룹 생성 팝업](http://static.toastoven.net/prod_tcdeploy/reference/reference_servergroup_create.png)
 <center>[그림 9] 서버 그룹 생성 팝업</center>
 
 1. <img class="img-inline" alt="servergroupcreate-g.png" src="http://static.toastoven.net/prod_tcdeploy/btn/servergroupcreate-g.png"> 클릭

@@ -45,7 +45,7 @@ Console에 접속하여 Deploy를 활성화합니다.
 
 ### 아티팩트 설정
 
-![[그림 3] Client - 아티팩트 설정](http://static.toastoven.net/prod_tcdeploy/getstarted/03.png)
+![[그림 3] Client - 아티팩트 설정](http://static.toastoven.net/prod_tcdeploy/getstarted/getstarted_client_artifact.png)
 <center>[그림 3] Client - 아티팩트 설정</center>
 
 1. 리스트 상단의 <img class="img-inline" alt="create-b.png" src="http://static.toastoven.net/prod_tcdeploy/btn/create-b.png"> 클릭
