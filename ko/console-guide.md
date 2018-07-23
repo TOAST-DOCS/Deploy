@@ -45,12 +45,12 @@ Console에 접속하여 Deploy를 활성화합니다.
 
 ### 아티팩트 설정
 
-![[그림 3] Client - 아티팩트 설정](http://static.toastoven.net/prod_tcdeploy/getstarted/03.png)
+![[그림 3] Client - 아티팩트 설정](http://static.toastoven.net/prod_tcdeploy/getstarted/getstarted_client_artifact.png)
 <center>[그림 3] Client - 아티팩트 설정</center>
 
 1. 리스트 상단의 <img class="img-inline" alt="create-b.png" src="http://static.toastoven.net/prod_tcdeploy/btn/create-b.png"> 클릭
 2. 유형을 "Client Application"으로 선택
-3. 이름(필수), 설명(선택) 입력
+3. 이름(필수), 설명(선택), port(필수) 입력
 4. <img class="img-inline" alt="create-b.png" src="http://static.toastoven.net/prod_tcdeploy/btn/create-b.png"> 클릭
 
 ### 바이너리 설정
@@ -106,7 +106,7 @@ Console에 접속하여 Deploy를 활성화합니다.
 
 1. 리스트 상단의 <img class="img-inline" alt="create-b.png" src="http://static.toastoven.net/prod_tcdeploy/btn/create-b.png"> 클릭
 2. 유형을 "Server Application"으로 선택
-3. 이름(필수), 설명(선택) 입력
+3. 이름(필수), 설명(선택), port(필수) 입력
 4. <img class="img-inline" alt="create-b.png" src="http://static.toastoven.net/prod_tcdeploy/btn/create-b.png"> 클릭
 
 ### 서버 그룹 설정
@@ -117,13 +117,14 @@ Console에 접속하여 Deploy를 활성화합니다.
 [Deploy] > 하단 탭 중 [배포] > [서버 그룹 생성] 클릭
 ```
 
-![[그림 8] Server - 서버 그룹 생성 팝업](http://static.toastoven.net/prod_tcdeploy/getstarted/08.png)
+![[그림 8] Server - 서버 그룹 생성 팝업](http://static.toastoven.net/prod_tcdeploy/getstarted/getstarted_servergroup_create.png)
 <center>[그림 8] Server - 서버 그룹 생성 팝업</center>
 
 1. <img class="img-inline" alt="servergroupcreate-g.png" src="http://static.toastoven.net/prod_tcdeploy/btn/servergroupcreate-g.png"> 클릭
 2. 이름(필수), 설명(선택) 입력
 3. OS 선택 후 Shell Type 지정 (항목 선택 또는 직접 입력)
-4. 서버 추가
+4. Phase 선택 (서버 장비 구분. 지정하지 않을 경우 NONE 선택)
+5. 서버 추가
     * 서버 추가에는 아래 두가지 방법이 있으며 자세한 내용은 [기능 상세 가이드의 서버 그룹 메뉴](/Dev%20Tool/Deploy/ko/reference/#_11)에서 확인하실 수 있습니다.
         * 대량 추가
         * 개별 추가
@@ -138,7 +139,7 @@ Console에 접속하여 Deploy를 활성화합니다.
             
             * 하단 서버 리스트에 추가된 내용 확인 (왼쪽 체크 박스에 체크된 서버만 등록됨)
             
-5. <img class="img-inline" alt="create-b.png" src="http://static.toastoven.net/prod_tcdeploy/btn/create-b.png"> 클릭
+6. <img class="img-inline" alt="create-b.png" src="http://static.toastoven.net/prod_tcdeploy/btn/create-b.png"> 클릭
 
 ### 시나리오 생성
 
