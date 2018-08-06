@@ -2,7 +2,7 @@
 
 ## Jenkins Plugin Guide
 
-Toast Cloud Deploy Jenkins 업로드 플러그인은 Jenkins의 빌드 결과물을 Deploy 서버로 업로드 할 수 있게 해줍니다.
+TOAST Deploy Jenkins 업로드 플러그인은 Jenkins의 빌드 결과물을 TOAST Deploy 서버로 업로드 할 수 있게 해줍니다.
 
 ## Jenkins 설치
 
