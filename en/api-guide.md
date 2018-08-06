@@ -6,7 +6,7 @@
 
 | Http Method | POST |
 | ----------- | ---- |
-| Request URL | /api/v1.0/projects/{appkey}/artifacts/{artifactId}/binary-group/{binaryGroupKey} |
+| Request URL | https://api-tcd.cloud.toast.com/api/v1.0/projects/{appkey}/artifacts/{artifactId}/binary-group/{binaryGroupKey} |
 
 <center>[표 1] Binary Upload Request URL</center>
 
