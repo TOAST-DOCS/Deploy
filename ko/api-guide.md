@@ -41,7 +41,7 @@ FileBody binaryFile = new FileBody(new File(filePath));
 StringBody applicationType = new StringBody("server", ContentType.TEXT_PLAIN);
 StringBody description = new StringBody("A binary file of some kind", ContentType.TEXT_PLAIN);
 
-String requestUri = "https://api-deploy.cloud.toast.com/api/v1.0/projects/" + appKey + "/artifacts/" + artifactId + "/binary-group/" + binaryGroupKey;
+String requestUri = "https://api-tcd.cloud.toast.com/api/v1.0/projects/" + appKey + "/artifacts/" + artifactId + "/binary-group/" + binaryGroupKey;
 
 HttpPost method = new HttpPost(requestUri);
 
@@ -103,7 +103,7 @@ Result: {
 		"resultMessage": "success"
 	},
 	"body": {
-		"downloadUrl": "https://alpha-api-deploy.cloud.toast.com/api/v1.0/projects/{appkey}/artifacts/{artifactId}/binary-group/{binaryGroupKey}/binaries/{uploadedBinaryKey}",
+		"downloadUrl": "https://api-tcd.cloud.toast.com/api/v1.0/projects/{appkey}/artifacts/{artifactId}/binary-group/{binaryGroupKey}/binaries/{uploadedBinaryKey}",
 		"binaryKey": "{uploadedBinaryKey}"
 	}
 }
