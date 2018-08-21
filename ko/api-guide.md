@@ -1,10 +1,8 @@
 ## Dev Tool > Deploy > API 가이드
 
-## Binary Upload API
-
 사용자가 HTTP Request를 직접 구성하여 바이너리를 업로드 할 수 있는 API를 제공합니다.
 
-### Ver 1.0
+## Ver 1.0
 
 * 주요 개선 사항
     * REST 형태의 API
@@ -16,7 +14,7 @@
 
 <center>[표 1] Binary Upload Request URL</center>
 
-#### Parameter
+### Parameter
 
 | Name | Type | Description | Value | Required |
 | ---- | ---- | ----------- | ----- | -------- |
@@ -30,7 +28,7 @@
 
 <center>[표 2] Binary Upload Request Parameter</center>
 
-#### Sample Request Code For JAVA
+### Sample Request Code For JAVA
 
 아래 코드는 HttpClient 라이브러리(httpclient 4.3.6)를 사용하여 API를 통해 바이너리를 업로드하는 코드의 예시입니다.
 
@@ -87,7 +85,7 @@ try {
 }
 ```
 
-#### Response(json)
+### Response(json)
 
 | Name | Type | Description | Value |
 | ---- | ---- | ----------- | ----- |
@@ -98,7 +96,7 @@ try {
 
 <center>[표 3] Binary Upload Response(json)</center>
 
-#### Response Sample
+### Response Sample
 
 ``` json
 Result: {
@@ -115,7 +113,7 @@ Result: {
 }
 ```
 
-### 이전 버전
+## 이전 버전
 
 | Http Method | POST |
 | ----------- | ---- |
@@ -123,7 +121,7 @@ Result: {
 
 <center>[표 1] Binary Upload Request URL</center>
 
-#### Parameter
+### Parameter
 
 | Name | Type | Description | Value | Required |
 | ---- | ---- | ----------- | ----- | -------- |
@@ -137,7 +135,7 @@ Result: {
 
 <center>[표 2] Binary Upload Request Parameter</center>
 
-#### Sample Request Code For JAVA
+### Sample Request Code For JAVA
 
 아래 코드는 HttpClient 라이브러리(httpclient 4.3.6)를 사용하여 API를 통해 바이너리를 업로드하는 코드의 예시입니다.
 
@@ -194,7 +192,7 @@ try {
 }
 ```
 
-#### Response(json)
+### Response(json)
 
 | Name | Type | Description | Value |
 | ---- | ---- | ----------- | ----- |
@@ -205,7 +203,7 @@ try {
 
 <center>[표 3] Binary Upload Response(json)</center>
 
-#### Response Sample
+### Response Sample
 
 ``` json
 Result: {
