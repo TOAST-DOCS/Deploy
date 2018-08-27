@@ -148,7 +148,7 @@ Result: {
 
 <center>[표 2] Binary Upload Request Parameter</center>
 
-### Sample Request Code For JAVA
+### Sample Request For JAVA
 
 아래 코드는 HttpClient 라이브러리(httpclient 4.3.6)를 사용하여 API를 통해 바이너리를 업로드하는 코드의 예시입니다.
 
