@@ -30,7 +30,7 @@
 
 ### Sample Request For cUrl
 
-```java
+``` java
 curl -X POST \
   https://api-tcd.cloud.toast.com/api/v1.0/projects/{appKey}/artifacts/{artifactId}/binary-group/{binaryGroupKey} \
   -H 'content-type: multipart/form-data' \
