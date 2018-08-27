@@ -35,7 +35,7 @@ curl -X POST \
   https://api-tcd.cloud.toast.com/api/v1.0/projects/{appKey}/artifacts/{artifactId}/binary-group/{binaryGroupKey} \
   -H 'content-type: multipart/form-data' \
   -F 'binaryFile=@ojdbc14.jar' \
-  -F applicationType=server \
+  -F 'applicationType=server' \
   -F 'description=A binary file of some kind'
 ```
 
