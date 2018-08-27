@@ -276,4 +276,4 @@ Console에 접속하여 Deploy를 활성화합니다.
 - - -
 
 서버에 파일 배포를 성공하였습니다!
-Toast Cloud Deploy는 더 많은 기능을 지원하며, 자세한 사항은 [기능 상세 가이드](/Dev%20Tool/Deploy/en/reference/)에서 확인하실 수 있습니다!
+TOAST Deploy는 더 많은 기능을 지원하며, 자세한 사항은 [기능 상세 가이드](/Dev%20Tool/Deploy/en/reference/)에서 확인하실 수 있습니다!
