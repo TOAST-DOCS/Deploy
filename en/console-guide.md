@@ -23,10 +23,9 @@
 ![SSH연결필수](http://static.toastoven.net/prod_tcdeploy/getstarted/console_ssh_required.png)
 
 
->> TOAST Deploy 는 SSH 연결을 통해 서버의 배포 명령을 전달합니다. 
->> 배포전 배포대상 서버의 SSH 연결이 요구되므로
->> 대상서버의 IP/포트/방화벽예외처리와 같은 SSH 연결을 위한 준비가 필요합니다.
-
+> TOAST Deploy 는 SSH 연결을 통해 서버의 배포 명령을 전달합니다. 
+> 배포전 배포대상 서버의 SSH 연결이 요구되므로
+> 대상서버의 IP/포트/방화벽예외처리와 같은 SSH 연결을 위한 준비가 필요합니다.
 
 ### OS 별 요구사항
 #### Linux
