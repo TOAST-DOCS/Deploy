@@ -54,7 +54,7 @@
 3. Rule 추가 
     * Rule: SSH 선택 
     * CIDR에 IP 입력
-    * `4개 IP 모두 등록`
+    * 4개 IP 모두 등록
 
 [추가결과 예시]
 ![[그림 2] 보안그룹 추가 예시](http://static.toastoven.net/prod_tcdeploy/getstarted/security_group_tcd.png)
@@ -65,7 +65,7 @@
 
 #### 방화벽 및 Network ACL 설정
 * 외부에서 접근 가능하도록 아래 IP에 대해  Nework와 방화벽 예외설정을 추가해 주세요
- ```
+```
 106.249.21.212/0
 106.249.21.213/0
 106.249.21.214/0
