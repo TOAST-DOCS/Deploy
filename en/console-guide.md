@@ -3,7 +3,7 @@
 이 문서에서는 예제로서 다음과 같은 내용을 다룹니다.
 
 * [상품사용 요구사항](/Dev%20Tool/Deploy/ko/console-guide/#_1)
-* [상품 활성화](/Dev%20Tool/Deploy/ko/console-guide/#_1)
+* [상품 활성화](/Dev%20Tool/Deploy/ko/console-guide/#_4)
 * [Appkey와 URL 확인](/Dev%20Tool/Deploy/ko/console-guide/#appkey-url)
 * [Client Application](/Dev%20Tool/Deploy/ko/console-guide/#client-application)
 * [Server Application](/Dev%20Tool/Deploy/ko/console-guide/#server-application)
@@ -18,7 +18,16 @@
 - 필드 색상 : 옅은 파란색
 - 입력 값 설명 : 설명 + (필수 또는 선택 값 여부)
 
-## 상품사용 요구사항
+## 상품사용 전 필수사항
+
+![SSH연결필수](http://static.toastoven.net/prod_tcdeploy/getstarted/console_ssh_required.png)
+
+
+>> TOAST Deploy 는 SSH 연결을 통해 서버의 배포 명령을 전달합니다. 
+>> 배포전 배포대상 서버의 SSH 연결이 요구되므로
+>> 대상서버의 IP/포트/방화벽예외처리와 같은 SSH 연결을 위한 준비가 필요합니다.
+
+
 ### OS 별 요구사항
 #### Linux
 * curl 7.19.7-43 버전 이상
@@ -32,16 +41,36 @@
 * TOAST Cloud의 VM 인스탄스에 배포하기 위해 VM 인스턴스 [플로팅 IP](https://docs.toast.com/ko/Compute/Instance/ko/console-guide/#ip_1)를 생성하여 공인 아이피 부여가 필요합니다.
 
 #### 보안예외 추가
-* 배포하고자 하는 VM 인스턴스의 [보안그룹](https://docs.toast.com/ko/Compute/Instance/ko/console-guide/#_13)에 Deploy상품 IP(아래)를 추가해주시기 바랍니다.
+* 배포하고자 하는 VM 인스턴스의 [보안그룹](https://docs.toast.com/ko/Compute/Instance/ko/console-guide/#_13)에 Deploy상품 IP(아래)를 SSH Rule로 추가해주시기 바랍니다.
 ```
 106.249.21.212/0
 106.249.21.213/0
 106.249.21.214/0
 106.249.21.215/0
 ```
+##### 참고) 보안예외 추가방법
+1. TOAST CLOUD 콘솔의  'COMPUTE' 상품 중 'Instance' 상품 선택
+2. 현재 VM에 설정된 보안그룹선택 또는 신규 보안그룹(Security Group) 생성
+3. Rule 추가 
+    * Rule: SSH 선택 
+    * CIDR에 IP 입력
+    * `4개 IP 모두 등록`
+
+[추가결과 예시]
 ![[그림 2] 보안그룹 추가 예시](http://static.toastoven.net/prod_tcdeploy/getstarted/security_group_tcd.png)
 
+### TOAST Cloud VM 이외 서버 배포 요구사항
+#### 공인아이피 부여
+* SSH 연결을 위해 공인아이피가 부여되어야 합니다.
 
+#### 방화벽 및 Network ACL 설정
+* 외부에서 접근 가능하도록 아래 IP에 대해  Nework와 방화벽 예외설정을 추가해 주세요
+ ```
+106.249.21.212/0
+106.249.21.213/0
+106.249.21.214/0
+106.249.21.215/0
+```
 
 
 ## 상품 활성화
