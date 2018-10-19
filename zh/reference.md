@@ -629,14 +629,3 @@ $${binary.binary variable as value.binaryGroupName} : 바이너리에 설정한 
 * 최신 버전으로 저장
     * <img class="img-inline" alt="savecurrent-g.png" src="http://static.toastoven.net/prod_tcdeploy/btn/savecurrent-g.png">
         * 해당 버전이 '최신 버전으로 저장' 됨
-
-## OS 별 요구사항
-
-### Linux
-
-* curl 7.19.7-43 버전 이상
-
-### Window
-
-* SSH 설치 필요
-    * SSH Shell : PowerShell 지정
