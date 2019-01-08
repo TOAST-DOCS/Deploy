@@ -2,21 +2,12 @@
 
 이 문서에서는 예제로서 다음과 같은 내용을 다룹니다.
 
-* [상품사용 요구사항](/Dev%20Tool/Deploy/ko/console-guide/#_1)
-* [상품 활성화](/Dev%20Tool/Deploy/ko/console-guide/#_4)
-* [Appkey와 URL 확인](/Dev%20Tool/Deploy/ko/console-guide/#appkey-url)
+* [상품사용 전 필수사항](/Dev%20Tool/Deploy/ko/console-guide/#_1)
+* [Deploy 콘솔화면](/Dev%20Tool/Deploy/ko/console-guide/#_4)
 * [Client Application](/Dev%20Tool/Deploy/ko/console-guide/#client-application)
 * [Server Application](/Dev%20Tool/Deploy/ko/console-guide/#server-application)
 
 (본 예제에서 다루지 않은 기능은 [기능 상세 가이드](/Dev%20Tool/Deploy/ko/reference/)에서 확인하실 수 있습니다.)
-
-[참고사항]
-![[그림 1] 참고 사항 - 입력 값](http://static.toastoven.net/prod_tcdeploy/getstarted/01.png)
-<center>[그림 1] 참고 사항 - 입력 값</center>
-
-입력 값에 대한 설명은 아래와 같은 형태로 이미지에 표시됩니다.
-- 필드 색상 : 옅은 파란색
-- 입력 값 설명 : 설명 + (필수 또는 선택 값 여부)
 
 ## 상품사용 전 필수사항
 
@@ -47,15 +38,15 @@
 133.186.188.208/28
 ```
 ##### 참고) 보안예외 추가방법
-1. TOAST CLOUD 콘솔의  'COMPUTE' 상품 중 'Instance' 상품 선택
-2. 현재 VM에 설정된 보안그룹선택 또는 신규 보안그룹(Security Group) 생성
-3. Rule 추가 
-    * Rule: SSH 선택 
-    * CIDR에 IP 입력
-    * 대역인 경우 대역으로 입력가능 (ex: 133.186.188.208/28)
 
-[추가결과 예시]
-![[그림 2] 보안그룹 추가 예시](http://static.toastoven.net/prod_tcdeploy/getstarted/security_group_tcd.png)
+![deploy_01_201812](https://static.toastoven.net/prod_tcdeploy/deploy_01_201812.png)
+
+1. TOAST Cloud 콘솔의  'Compute' 상품 중 'Instance' 상품을 선택합니다.
+2. 현재 VM에 설정된 보안그룹선택 또는 신규 보안그룹(Security Group)을 생성합니다.
+3. **+ Rule 추가** 버튼을 클릭합니다. 
+    * Rule: SSH 로 선택합니다.
+    * CIDR에 IP를 입력합니다.
+    * 대역인 경우 대역으로 입력가능합니다. (ex: 133.186.188.208/28)
 
 ### TOAST Cloud VM 이외 서버 배포 요구사항
 #### 공인아이피 부여
@@ -68,27 +59,11 @@
 133.186.188.208/28
 ```
 
-## 상품 활성화
+## Deploy 콘솔 화면
 
-Console에 접속하여 Deploy를 활성화합니다.
+![deploy_02_201812](https://static.toastoven.net/prod_tcdeploy/deploy_02_201812.png)
 
-```
-[서비스 선택] > [Deploy] > 서비스 활성화 팝업에서 [확인] 클릭
-```
-
-> [주의] 
-> 서비스 비활성화 문의 팝업에서 확인을 누를 경우 서비스 이용이 종료되며, 발급된 Appkey는 복구되지 않으니 주의해주시기 바랍니다.
-
-## Appkey와 URL 확인
-
-상품을 활성화한 후, Console 페이지 상단의 [URL & Appkey] 를 클릭하여 발급된 Appkey를 확인합니다.
-
-```
-[Deploy] > [URL * AppKey] 클릭
-```
-
-![[그림 3] URL & Appkey](http://static.toastoven.net/prod_tcdeploy/getstarted/02-1.png)
-<center>[그림 2] URL & Appkey</center>
+Deploy 상품 콘솔 화면입니다.
 
 ## Client Application
 
@@ -96,13 +71,12 @@ Console에 접속하여 Deploy를 활성화합니다.
 
 ### 아티팩트 설정
 
-![[그림 4] Client - 아티팩트 설정](http://static.toastoven.net/prod_tcdeploy/getstarted/getstarted_client_artifact.png)
-<center>[그림 3] Client - 아티팩트 설정</center>
+![deploy_03_201812](https://static.toastoven.net/prod_tcdeploy/deploy_03_201812.png)
 
-1. 리스트 상단의 <img class="img-inline" alt="create-b.png" src="http://static.toastoven.net/prod_tcdeploy/btn/create-b.png"> 클릭
-2. 유형을 "Client Application"으로 선택
-3. 이름(필수), 설명(선택), port(필수) 입력
-4. <img class="img-inline" alt="create-b.png" src="http://static.toastoven.net/prod_tcdeploy/btn/create-b.png"> 클릭
+1. 리스트 상단의 **생성** 버튼을 클릭합니다.
+2. 아티팩트 유형을 "Client Application"으로 선택합니다.
+    - 이름(필수), 설명(선택), port(필수) 항목들을 입력합니다.
+3. 모달 창 **생성** 버튼을 클릭합니다.
 
 ### 바이너리 설정
 
@@ -111,39 +85,27 @@ Console에 접속하여 Deploy를 활성화합니다.
 * iOS는 ipa, plist 파일을, Android는 apk 파일을 각각 업로드합니다.
 * etc의 경우는 Windows 등의 기타 OS의 설치 어플리케이션 용도로 사용합니다.
 
-```
-[Deploy] > 하단 탭 중 [바이너리 그룹] > [업로드] 클릭
-```
+![deploy_04_201812](https://static.toastoven.net/prod_tcdeploy/deploy_04_201812.png)
 
-![[그림 5] Client - 바이너리 업로드](http://static.toastoven.net/prod_tcdeploy/getstarted/04.png)
-<center>[그림 4] Client - 바이너리 업로드</center>
-
-1. <img class="img-inline" alt="upload-g.png" src="http://static.toastoven.net/prod_tcdeploy/btn/upload-g.png"> 클릭
-2. <img class="img-inline" alt="fileselect-b.png" src="http://static.toastoven.net/prod_tcdeploy/btn/fileselect-b.png"> 클릭 후 바이너리 파일 선택
-    * iOS : ipa 파일(필수), plist 파일(필수) 선택
-        * plist : 다운로드 페이지에서 설치를 위해 사용. 파일 내의 다운로드 URL은 선택 입력
-    * Android : apk 파일(필수) 선택
-3. 버전(선택), 설명(선택) 정보 입력
-4. <img class="img-inline" alt="upload-b.png" src="http://static.toastoven.net/prod_tcdeploy/btn/upload-b.png"> 클릭
+1. 하단 탭 중 [바이너리 그룹] > **Default** 클릭 합니다.
+    - **새로 만들기**  버튼을 클릭하면 새로운 바이너리 그룹 생성이 가능합니다.
+2. 우측 **업로드** 버튼을 클릭합니다.
+3. 모달창, **파일선택** 버튼 클릭 후 바이너리 파일을 선택합니다.
+    * iOS : ipa 파일(필수), plist 파일(필수)
+        * plist : 다운로드 페이지에서 설치를 위해 사용합니다. 파일 내의 다운로드 URL은 선택 입력입니다.
+    * Android : apk 파일(필수)
+    * 버전(선택), 설명(선택) 정보 입력
+4. 입력 완료 후 **업로드** 버튼을 클릭합니다.
 
 #### 배포
 
-특정 바이너리를 SMS / E-mail로 배포할 수 있습니다.
+특정 바이너리 다운로드 페이지를 SMS / E-mail로 전달할 수 있습니다.
 
-```
-[Deploy] > 하단 탭 중 [바이너리 그룹] > 바이너리 파일 선택 > [전송] > 다운로드 전송 타입 및 수신자 선택 > [전송] 클릭
-```
+![deploy_05_201812](https://static.toastoven.net/prod_tcdeploy/deploy_05_201812.png)
 
-![[그림 6] Client - 바이너리 배포](http://static.toastoven.net/prod_tcdeploy/getstarted/05.png)
-<center>[그림 5] Client - 바이너리 배포</center>
-
-1. 전송할 버전을 선택하고 <img class="img-inline" alt="send-w.png" src="http://static.toastoven.net/prod_tcdeploy/btn/send-w.png"> 클릭
-
-    ![[그림 7] Client - 다운로드 경로 전송](http://static.toastoven.net/prod_tcdeploy/getstarted/06.png)
-    <center>[그림 6] Client - 다운로드 경로 전송</center>
-
-2. 다운로드 경로 전송 팝업에서 전송 유형과 수신자를 선택하고 <img class="img-inline" alt="send-b.png" src="http://static.toastoven.net/prod_tcdeploy/btn/send-b.png"> 클릭
-    * SMS / E-mail로 일부 또는 모두 지정 가능
+1. 우측 **전송** 버튼을 클릭합니다.
+2. 다운로드 경로 전송 팝업에서 전송 유형과 수신자를 선택하고 **전송** 버튼을 클릭합니다.
+    * SMS / E-mail로 일부 또는 모두 둘 다 지정 가능합니다.
 3. 지정한 전송 유형으로 수신자에게 다운로드 페이지가 전달 됩니다.
 
 ## Server Application
@@ -152,58 +114,40 @@ Console에 접속하여 Deploy를 활성화합니다.
 
 ### 아티팩트 설정
 
-![[그림 8] Server - 아티팩트 설정](http://static.toastoven.net/prod_tcdeploy/getstarted/07.png)
-<center>[그림 7] Server - 아티팩트 설정</center>
+![deploy_06_201812](https://static.toastoven.net/prod_tcdeploy/deploy_06_201812.png)
 
-1. 리스트 상단의 <img class="img-inline" alt="create-b.png" src="http://static.toastoven.net/prod_tcdeploy/btn/create-b.png"> 클릭
-2. 유형을 "Server Application"으로 선택
-3. 이름(필수), 설명(선택), port(필수) 입력
-4. <img class="img-inline" alt="create-b.png" src="http://static.toastoven.net/prod_tcdeploy/btn/create-b.png"> 클릭
+1. 리스트 상단의 **생성** 버튼을 클릭합니다.
+2. 아티팩트 유형을 "Server Application"으로 선택합니다.
+    - 이름(필수), 설명(선택), port(필수) 항목들을 입력합니다.
+3. 모달 창 **생성** 버튼을 클릭합니다.
 
 ### 서버 그룹 설정
 
 배포할 서버를 관리할 수 있는 기능입니다.
 
-```
-[Deploy] > 하단 탭 중 [배포] > [서버 그룹 생성] 클릭
-```
+![deploy_07_201812](https://static.toastoven.net/prod_tcdeploy/deploy_07_201812.png)
 
-![[그림 9] Server - 서버 그룹 생성 팝업](http://static.toastoven.net/prod_tcdeploy/getstarted/getstarted_servergroup_create.png)
-<center>[그림 8] Server - 서버 그룹 생성 팝업</center>
-
-1. <img class="img-inline" alt="servergroupcreate-g.png" src="http://static.toastoven.net/prod_tcdeploy/btn/servergroupcreate-g.png"> 클릭
-2. 이름(필수), 설명(선택) 입력
-3. OS 선택 후 Shell Type 지정 (항목 선택 또는 직접 입력)
-4. Phase 선택 (서버 장비 구분. 지정하지 않을 경우 NONE 선택)
-5. 서버 추가
-    * 서버 추가에는 아래 두가지 방법이 있으며 자세한 내용은 [기능 상세 가이드의 서버 그룹 메뉴](/Dev%20Tool/Deploy/ko/reference/#_11)에서 확인하실 수 있습니다.
-        * 대량 추가
-        * 개별 추가
-            
-            ![[그림 10] Server - 서버 개별 추가](http://static.toastoven.net/prod_tcdeploy/getstarted/09.png)
-            <center>[그림 9] Server - 서버 개별 추가</center>
-            
-            * 호스트 이름(필수), IP 주소(필수), OS(선택) 입력 후 <img class="img-inline" alt="add-b.png" src="http://static.toastoven.net/prod_tcdeploy/btn/add-b.png"> 클릭
-            
-            ![[그림 11] Server - 추가된 서버 확인](http://static.toastoven.net/prod_tcdeploy/getstarted/10.png)
-            <center> [그림 10]Server - 추가된 서버 확인 </center>
-            
-            * 하단 서버 리스트에 추가된 내용 확인 (왼쪽 체크 박스에 체크된 서버만 등록됨)
-            
-6. <img class="img-inline" alt="create-b.png" src="http://static.toastoven.net/prod_tcdeploy/btn/create-b.png"> 클릭
+1. 하단 탭 중 [서버 그룹] > **새로 만들기** 버튼을 클릭합니다.
+2. 새로 만들 서버 그룹을 설정합니다.
+    * 이름(필수), 설명(선택)
+    * OS 선택 후 Shell Type를 지정합니다. (항목 선택 또는 직접 입력)
+    * Phase 선택 (서버 장비 구분. 지정하지 않을 경우 NONE을 선택합니다.)
+    * 서버 추가
+        * 서버 추가에는 아래 두가지 방법이 있으며 자세한 내용은 [기능 상세 가이드의 서버 그룹 메뉴](/Dev%20Tool/Deploy/ko/reference/#_11)에서 확인하실 수 있습니다.
+            * 대량 추가
+            * 개별 추가
+         * 호스트 이름(필수), IP 주소(필수), OS(선택) 입력 후 **추가** 버튼을 클릭합니다.
+         * 하단 서버 리스트에 추가된 내용 확인 (왼쪽 체크 박스에 체크된 서버만 등록됨)
+    
+3. 입력 완료 후 **생성** 버튼을 클릭합니다.
 
 ### 시나리오 생성
 
-```
-[Deploy] > 하단 탭 중 [배포] > 서버 그룹 영역에서 [새로 만들기] 클릭
-```
+![deploy_08_201812](https://static.toastoven.net/prod_tcdeploy/deploy_08_201812.png)
 
-![[그림 12] Server - 시나리오 생성](http://static.toastoven.net/prod_tcdeploy/getstarted/11.png)
-<center>[그림 11] Server - 시나리오 생성</center>
-
-1. <img class="img-inline" alt="newcreate-g.png" src="http://static.toastoven.net/prod_tcdeploy/btn/newcreate-g.png"> 클릭
-2. 하단에 추가된 시나리오 영역에 시나리오명(선택) 입력
-3. <img class="img-inline" alt="create-g.png" src="http://static.toastoven.net/prod_tcdeploy/btn/create-g.png"> 클릭
+1. 하단 탭 중 [배포] > 서버 그룹 영역에서 **새로만들기** 버튼을 클릭합니다.
+2. 하단에 추가된 시나리오 영역에 시나리오명(선택)을 입력합니다.
+3. 입력 완료 후 **생성** 버튼을 클릭합니다.
 
 ### 태스크 추가
 
@@ -216,113 +160,87 @@ Console에 접속하여 Deploy를 활성화합니다.
 필요에 따라 선택적으로 사용할 수 있으며, 본 문서에서는 기본적인 배포 시 필요한 태스크를 다룹니다.
 더 많은 태스크는 [기능 상세 가이드의 태스크 메뉴](/Dev%20Tool/Deploy/ko/reference/#_25)에서 확인하실 수 있습니다.
 
-```
-[Deploy] > 하단 탭 중 [배포] > 시나리오 영역에서 [Task 추가] 클릭
-```
-
 배포를 위해 아래 세 개의 태스크를 추가합니다.
 
 #### 1. User Command 추가
 
-* 배포 시 실행되는 사용자 정의 Command 태스크
-* Available Variables를 사용할 수 있음
+* 배포 시 실행되는 사용자 정의 Command 태스크입니다.
+* Available Variables를 사용할 수 있습니다.
     * Available Variables : 예약어. 자세한 내용은 [기능 상세 가이드의 태스크 메뉴](/Dev%20Tool/Deploy/ko/reference/#_25) 하단에서 확인하실 수 있습니다.
 
-![[그림 13] Server - User Command 추가](http://static.toastoven.net/prod_tcdeploy/getstarted/12.png)
-<center>[그림 12] Server - User Command 추가</center>
+![deploy_09_201812](https://static.toastoven.net/prod_tcdeploy/deploy_09_201812.png)
 
-1. <img class="img-inline" alt="taskadd-g.png" src="http://static.toastoven.net/prod_tcdeploy/btn/taskadd-g.png"> 클릭
-2. Normal Task > User Command 클릭
+1. 하단 탭 중 [배포] > 시나리오 영역 우측 **Task 추가** 버튼을 클릭합니다.
+2. Normal Task 하위에 있는 **User Command**를 클릭합니다.
+3. 새로운 태스크 내용을 입력합니다.
+    * Timeout (min)
+        * 해당 태스크가 실행 완료 대기 시간으로 인식할 시간 값을 지정합니다. (최소 1분, 최대 30분)
+    * Run As
+        * 실행 계정을 입력합니다.
+    * Command
+        * 실행할 명령문을 입력합니다.
 
-**[ 사용자 입력 내용 ]**
-
-* Timeout(min)
-    * 해당 태스크가 실행 완료 대기 시간으로 인식할 시간 값을 지정합니다. (최소 1분, 최대 30분)
-* RunAs 입력
-    * 실행 계정을 입력합니다.
-* 실행할 Command 입력
-* <img class="img-inline" alt="apply-g.png" src="http://static.toastoven.net/prod_tcdeploy/btn/apply-g.png"> 클릭
+4. 입력/변경 완료 후 **적용** 버튼을 클릭합니다. 
 
 #### 2. Binary Deploy 추가
 
-* 업로드한 바이너리 파일의 배포 내용을 설정할 수 있는 태스크
+* 업로드한 바이너리 파일의 배포 내용을 설정할 수 있는 태스크입니다.
 
-![[그림 14] Server - Binary Deploy 추가](http://static.toastoven.net/prod_tcdeploy/getstarted/13.png)
-<center>[그림 13] Server - Binary Deploy 추가</center>
+![deploy_10_201812](https://static.toastoven.net/prod_tcdeploy/deploy_10_201812.png)
 
-1. <img class="img-inline" alt="taskadd-g.png" src="http://static.toastoven.net/prod_tcdeploy/btn/taskadd-g.png"> 클릭
-2. Normal Task > Binary Deploy 클릭
-
-**[ 사용자 입력 내용 ]**
-
-* Timeout(min)
-    * 해당 태스크가 실행 완료 대기 시간으로 인식할 시간 값을 지정합니다. (최소 1분, 최대 30분)
-* RunAs 입력
-    * 실행 계정을 입력 합니다.
-* 바이너리
-    * 업로드 후 사용할 수 있습니다.
-        * 업로드 할 테스트 파일을 준비합니다.
-            * deploy.zip
-        * <img class="img-inline" alt="upload-g.png" src="http://static.toastoven.net/prod_tcdeploy/btn/upload-g.png"> 클릭
-        
-            ![[그림 15] Server - Binary 업로드 팝업](http://static.toastoven.net/prod_tcdeploy/getstarted/14.png)
-            <center>[그림 14] Server - Binary 업로드 팝업</center>
-            
-            * <img class="img-inline" alt="fileselect-b.png" src="http://static.toastoven.net/prod_tcdeploy/btn/fileselect-b.png"> 클릭 후 바이너리 파일 선택
-            * 버전(선택), 설명(선택) 입력
-            * <img class="img-inline" alt="upload-b.png" src="http://static.toastoven.net/prod_tcdeploy/btn/upload-b.png"> 클릭
-        
-            ![[그림 16] Server - Binary 업로드 팝업](http://static.toastoven.net/prod_tcdeploy/getstarted/15.png)
-            <center>[그림 15] Server - Binary 업로드 팝업</center>
-        
-            * <img class="img-inline" alt="confirm-b.png" src="http://static.toastoven.net/prod_tcdeploy/btn/confirm-b.png"> 클릭
-        
-            ![[그림 17] Server - 선택된 Binary](http://static.toastoven.net/prod_tcdeploy/getstarted/16.png)
-            <center>[그림 16] Server - 선택된 Binary</center>
-            
-            * 바이너리가 선택 됨.
-            
-* Variable As
-    * 해당 바이너리의 Variable명을 지정해 User Command에서 바이너리 정보를 사용할 수 있으며 자세한 내용은 [기능 상세 가이드](/Dev%20Tool/Deploy/ko/reference/)의 태스크 메뉴 하단에서 확인하실 수 있습니다.
-* 타겟 디렉토리
-    * 바이너리를 배포할 디렉토리를 지정합니다.
-* <img class="img-inline" alt="apply-g.png" src="http://static.toastoven.net/prod_tcdeploy/btn/apply-g.png"> 클릭
+1. **Task 추가** 버튼을 클릭하여 Normal Task 하위에 있는 **Binary Deploy**를 클릭합니다.
+2. 새로운 태스크 내용을 입력합니다.
+    * Timeout (min)
+        * 해당 태스크가 실행 완료 대기 시간으로 인식할 시간 값을 지정합니다. (최소 1분, 최대 30분)
+    * Run As
+        * 실행 계정을 입력 합니다.
+3. 바이너리 파일을 업로드 하기 위해서 우측 **업로드** 버튼을 클릭합니다.
+4. 바이너리 파일 정보를 입력합니다.
+    * **파일 선택** 버튼을 클릭하여 바이너리 파일을 선택합니다.
+    * 버전 (선택), 설명 (선택) 항목을 입력합니다.
+5. 바이너리 업로드 모달창 **업로드** 버튼을 클릭합니다. 
+6. 업로드 완료 후 **바이너리 선택** 버튼을 클릭합니다.
+7. 원하는 바이너리 버전을 선택합니다.
+    * 다수의 버전 존재 시 검색 기능을 활용하실 수 있습니다.
+8. **선택** 버튼을 클릭합니다.
+<br/>
+    * Variable As
+        * 해당 바이너리의 Variable명을 지정해 User Command에서 바이너리 정보를 사용할 수 있으며 자세한 내용은 [기능 상세 가이드](/Dev%20Tool/Deploy/ko/reference/)의 태스크 메뉴 하단에서 확인하실 수 있습니다.
+    * 타겟 디렉토리
+        * 바이너리를 배포할 디렉토리를 지정합니다.
 
 #### 3. User Command 추가
 
-![[그림 18] Server - User Command 추가 2](http://static.toastoven.net/prod_tcdeploy/getstarted/17.png)
-<center>[그림 17] Server - User Command 추가 2</center>
-       
-* 필요 값 입력 후 <img class="img-inline" alt="apply-g.png" src="http://static.toastoven.net/prod_tcdeploy/btn/apply-g.png"> 클릭
+![deploy_11_201812](https://static.toastoven.net/prod_tcdeploy/deploy_11_201812.png)
+
+1. **Task 추가** 버튼을 클릭하여 Normal Task 하위에 있는 **User Command**를 클릭합니다.
+2. 새로운 태스크 내용을 입력합니다.
+    * Timeout (min)
+        * 해당 태스크가 실행 완료 대기 시간으로 인식할 시간 값을 지정합니다. (최소 1분, 최대 30분)
+    * Run As
+        * 실행 계정을 입력합니다.
+    * Command
+        * 실행할 명령문을 입력합니다.
+3. 입력/변경 완료 후 **적용** 버튼을 클릭합니다. 
 
 ### 실행
 
-1. <img class="img-inline" alt="deploy-b.png" src="http://static.toastoven.net/prod_tcdeploy/btn/deploy-b.png"> 클릭으로 배포 요청
+![deploy_12_201812](https://static.toastoven.net/prod_tcdeploy/deploy_12_201812.png)
 
-    ![[그림 19] 배포 내용 확인 팝업](http://static.toastoven.net/prod_tcdeploy/getstarted/18.png)
-    <center>[그림 18] 배포 내용 확인 팝업</center>
+1. 우측 **실행** 버튼을 클릭하여 배포 요청을 합니다.
+2. 배포 실행 정보를 입력합니다.
+    * 배포 노트(선택) 및 인증 방법을 지정합니다.
+    * Password 선택 시 비밀번호를 입력하거나 또는 .pem 파일을 선택 후 업로드합니다.
+3. 입력 완료 후 **확인** 버튼을 클릭합니다.
 
-2. 배포 노트(선택) 및 인증 방법 지정 후 인증 값 또는 파일(필수) 입력
-    * Password 선택 후 비밀번호 입력 또는 pemFile 선택 후 파일 업로드
-    * <img class="img-inline" alt="confirm-b.png" src="http://static.toastoven.net/prod_tcdeploy/btn/confirm-b.png"> 클릭
+![deploy_13_201812](https://static.toastoven.net/prod_tcdeploy/deploy_13_201812.png)
 
-3. 배포 진행 상황 확인
-
-    ![[그림 20] Server - 배포 진행상황 확인](http://static.toastoven.net/prod_tcdeploy/getstarted/19.png)
-    <center>[그림 19] Server - 배포 진행상황 확인</center>
-
-4. 배포 완료 확인
-
-    ![[그림 21] Server - 배포 완료 확인](http://static.toastoven.net/prod_tcdeploy/getstarted/20.png)
-    <center>[그림 20] Server - 배포 완료 확인</center>
-
+1. 배포 진행 상황을 확인 할 수 있습니다.
+2. 배포 완료를 확인합니다.
     * 각 Task 정상 실행 여부는 exit code로 판별됩니다.
-
-5. 배포 결과 확인
-    * '결과 보기' 클릭 시 각 태스크 실행에 대한 상세 내용 (리턴 값, exit code, 오류 내용 등) 확인 가능
-
-    ![[그림 22] Server - 배포 결과 보기 팝업](http://static.toastoven.net/prod_tcdeploy/getstarted/21.png)
-    <center>[그림 21] Server - 배포 결과 보기 팝업</center>
+3. **결과보기** 버튼을 클릭하여 상세결과를 확인합니다.
+4. 배포 상세결과를 확인합니다.
+    * 각 태스크 실행에 대한 상세 내용을 (리턴 값, exit code, 오류 내용 등) 확인 가능합니다.
 
 - - -
 
