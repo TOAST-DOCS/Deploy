@@ -4,7 +4,6 @@
 
 * [메뉴 설명](/Dev%20Tool/Deploy/ko/reference/#_1)
 * [기능 별 설명](/Dev%20Tool/Deploy/ko/reference/#_15)
-* [OS 별 요구사항](/Dev%20Tool/Deploy/ko/reference/#os)
 
 ## 메뉴 설명
 

@@ -2,9 +2,8 @@
 
 이 문서에서는 예제로서 다음과 같은 내용을 다룹니다.
 
-* [상품사용 요구사항](/Dev%20Tool/Deploy/ko/console-guide/#_1)
-* [상품 활성화](/Dev%20Tool/Deploy/ko/console-guide/#_4)
-* [Appkey와 URL 확인](/Dev%20Tool/Deploy/ko/console-guide/#appkey-url)
+* [상품사용 전 필수사항](/Dev%20Tool/Deploy/ko/console-guide/#_1)
+* [Deploy 콘솔화면](/Dev%20Tool/Deploy/ko/console-guide/#_4)
 * [Client Application](/Dev%20Tool/Deploy/ko/console-guide/#client-application)
 * [Server Application](/Dev%20Tool/Deploy/ko/console-guide/#server-application)
 
