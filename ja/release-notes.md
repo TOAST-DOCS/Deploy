@@ -1,4 +1,7 @@
 ## Dev Tool > Deploy > Release Notes
+### 2019.01.15
+#### 기능 개선/변경
+* User Console Org 인증 추가
 
 ### 2018.10.23
 #### 기능 추가
