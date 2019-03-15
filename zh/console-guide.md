@@ -1,248 +1,251 @@
-## Dev Tool > Deploy > Console Guide
+## Dev Tool > Deploy > Console User Guide 
 
-이 문서에서는 예제로서 다음과 같은 내용을 다룹니다.
+This document contains the following: 
 
-* [상품사용 전 필수사항](/Dev%20Tool/Deploy/ko/console-guide/#_1)
-* [Deploy 콘솔화면](/Dev%20Tool/Deploy/ko/console-guide/#_4)
-* [Client Application](/Dev%20Tool/Deploy/ko/console-guide/#client-application)
-* [Server Application](/Dev%20Tool/Deploy/ko/console-guide/#server-application)
+* [Service Pre-requisites](/Dev%20Tool/Deploy/zh/console-guide/#_1)
+* [Deploy Console Page](/Dev%20Tool/Deploy/zh/console-guide/#_4)
+* [Client Application](/Dev%20Tool/Deploy/zh/console-guide/#client-application)
+* [Server Application](/Dev%20Tool/Deploy/zh/console-guide/#server-application)
 
-(본 예제에서 다루지 않은 기능은 [기능 상세 가이드](/Dev%20Tool/Deploy/ko/reference/)에서 확인하실 수 있습니다.)
+(Any other functions are available in [Detail Functional Guide](/Dev%20Tool/Deploy/zh/reference/).)
 
-## 상품사용 전 필수사항
+## Service Pre-requisites 
 
-![SSH연결필수](http://static.toastoven.net/prod_tcdeploy/getstarted/console_ssh_required.png)
-
-
-> TOAST Deploy 는 SSH 연결을 통해 서버의 배포 명령을 전달합니다. 
-> 배포전 배포대상 서버의 SSH 연결이 요구되므로
-> 대상서버의 IP/포트/방화벽예외처리와 같은 SSH 연결을 위한 준비가 필요합니다.
+![Requires SSH Connection](http://static.toastoven.net/prod_tcdeploy/getstarted/console_ssh_required.png)
 
 
-### OS 별 요구사항
-#### Linux
-* curl 7.19.7-43 버전 이상
+> TOAST Deploy delivers deployment commands via SSH connection. 
+> Before deployment, it must be connected with a target server via SSH, so preparation is required, such as target server IP, port, and exceptions for firewall.  
+>
+
+
+### Requirements for Each OS 
+#### Linux 
+* curl 7.19.7-43 or higher versions  
 
 #### Window
-* SSH 설치 필요
-    * SSH Shell : PowerShell 지정
+* Requires SSH Installation 
+    * SSH Shell: PowerShell specified  
 
-### TOAST Cloud VM배포 요구사항
-#### 공인아이피 부여
-* TOAST Cloud의 VM 인스탄스에 배포하기 위해 VM 인스턴스 [플로팅 IP](https://docs.toast.com/ko/Compute/Instance/ko/console-guide/#ip_1)를 생성하여 공인 아이피 부여가 필요합니다.
+### Requirements for TOAST VM Deployment 
+#### Assign Public IP  
+* For the deployment of TOAST VM instances, create a [Floating IP](https://docs.toast.com/zh/Compute/Instance/zh/console-guide/#ip_1) for VM instance and assign public IP. 
 
-#### 보안예외 추가
-* 배포하고자 하는 VM 인스턴스의 [보안그룹](https://docs.toast.com/ko/Compute/Instance/ko/console-guide/#_13)에 Deploy상품 IP(아래)를 SSH Rule로 추가해주시기 바랍니다.
+#### Add Security Exceptions 
+* Add IP for Deploy (as below) to [Security Group](https://docs.toast.com/zh/Compute/Instance/zh/console-guide/#_13) of a VM instance to deploy, as part of the SSH rule. 
 ```
 133.186.185.112/28
 133.186.188.208/28
 ```
-##### 참고) 보안예외 추가방법
+##### Note) Adding Exceptions for Security  
 
 ![deploy_01_201812](https://static.toastoven.net/prod_tcdeploy/deploy_01_201812.png)
 
-1. TOAST Cloud 콘솔의  'Compute' 상품 중 'Instance' 상품을 선택합니다.
-2. 현재 VM에 설정된 보안그룹선택 또는 신규 보안그룹(Security Group)을 생성합니다.
-3. **+ Rule 추가** 버튼을 클릭합니다. 
-    * Rule: SSH 로 선택합니다.
-    * CIDR에 IP를 입력합니다.
-    * 대역인 경우 대역으로 입력가능합니다. (ex: 133.186.188.208/28)
+1. Select **Instance** from **Compute** on the TOAST console.
+2. Select the security group set for VM, or click **+ Create Security Group** to create a new security group. 
+3. Click **+ Add Rules**. 
+    * Rule: Choose SSH.
+    * Enter IP at CIDR.
+    * Bandwidth may be required. (e.g. 133.186.188.208/28).
 
-### TOAST Cloud VM 이외 서버 배포 요구사항
-#### 공인아이피 부여
-* SSH 연결을 위해 공인아이피가 부여되어야 합니다.
+### Requirements for Server Deployment Other than TOAST VM 
+#### Assign Public IP 
+* To connect SSH, public IP must be assigned. 
 
-#### 방화벽 및 Network ACL 설정
-* 외부에서 접근 가능하도록 아래 IP에 대해  Nework와 방화벽 예외설정을 추가해 주세요
+#### Configure Firewalls and Network ACL 
+* Add exceptions on network and firewall, for the following IPs, so as to allow external access. 
 ```
 133.186.185.112/28
 133.186.188.208/28
 ```
 
-## Deploy 콘솔 화면
+## Deploy Console Page  
+
+Below is the console page for the Deploy service. 
 
 ![deploy_02_201812](https://static.toastoven.net/prod_tcdeploy/deploy_02_201812.png)
 
-Deploy 상품 콘솔 화면입니다.
-
 ## Client Application
 
-클라이언트 어플리케이션을 위한 설정은 크게 아티팩트 설정과 바이너리 업로드 단계를 거칩니다.
+Client application deployment requires setting artifacts and uploading binaries.  
 
-### 아티팩트 설정
+### Setting Artifacts  
 
 ![deploy_03_201812](https://static.toastoven.net/prod_tcdeploy/deploy_03_201812.png)
 
-1. 리스트 상단의 **생성** 버튼을 클릭합니다.
-2. 아티팩트 유형을 "Client Application"으로 선택합니다.
-    - 이름(필수), 설명(선택), port(필수) 항목들을 입력합니다.
-3. 모달 창 **생성** 버튼을 클릭합니다.
+1. Click **Create** on the top left of the **Deploy** page.   
+2. Choose **Client Application** for the type of an artifact. 
+    - Enter name (required), description (optional), and port (required).
+3. Click **Create**.
 
-### 바이너리 설정
+### Setting Binaries
 
-#### 업로드
+#### Upload 
 
-* iOS는 ipa, plist 파일을, Android는 apk 파일을 각각 업로드합니다.
-* etc의 경우는 Windows 등의 기타 OS의 설치 어플리케이션 용도로 사용합니다.
+* Upload .ipa and .plist files for iOS, and .apk files for Android. 
+* etc. is applied as an installation application for other OS, like Windows. 
 
 ![deploy_04_201812](https://static.toastoven.net/prod_tcdeploy/deploy_04_201812.png)
 
-1. 하단 탭 중 [바이너리 그룹] > **Default** 클릭 합니다.
-    - **새로 만들기**  버튼을 클릭하면 새로운 바이너리 그룹 생성이 가능합니다.
-2. 우측 **업로드** 버튼을 클릭합니다.
-3. 모달창, **파일선택** 버튼 클릭 후 바이너리 파일을 선택합니다.
-    * iOS : ipa 파일(필수), plist 파일(필수)
-        * plist : 다운로드 페이지에서 설치를 위해 사용합니다. 파일 내의 다운로드 URL은 선택 입력입니다.
-    * Android : apk 파일(필수)
-    * 버전(선택), 설명(선택) 정보 입력
-4. 입력 완료 후 **업로드** 버튼을 클릭합니다.
+1. Go to **Binary Group > Default** on the tab below the **Deploy** page. 
+    Click **Create** to create a new binary group. 
+2. Click **Upload** on the right. 
+3. Choose **Select Files** from **Upload Binaries**, and select a binary file.
+    * iOS: .ipa file (required), .plist file (required)
+        * .plist: Applied to install on the download page. Download URL in the file is optional.
+    * Android: .apk file (required)
+    * Enter version (optional) and description (optional).
+4. When it is completed, click **Upload**. 
 
-#### 배포
+#### Deploy
 
-특정 바이너리 다운로드 페이지를 SMS / E-mail로 전달할 수 있습니다.
+Download pages can be selectively delivered via SMS or email. 
 
 ![deploy_05_201812](https://static.toastoven.net/prod_tcdeploy/deploy_05_201812.png)
 
-1. 우측 **전송** 버튼을 클릭합니다.
-2. 다운로드 경로 전송 팝업에서 전송 유형과 수신자를 선택하고 **전송** 버튼을 클릭합니다.
-    * SMS / E-mail로 일부 또는 모두 둘 다 지정 가능합니다.
-3. 지정한 전송 유형으로 수신자에게 다운로드 페이지가 전달 됩니다.
+1. Click **Send** on the right. 
+2. On the **Send Download Path** window, select Type and Recipient, and click **Send**.  
+    * You may choose either SMS or email, or both. 
+
+Then, the binary download page is delivered to the recipient in the specified type of delivery. 
 
 ## Server Application
 
-서버 어플리케이션의 배포는 설정(아티팩트, 서버 그룹, 시나리오), 바이너리 업로드, 배포의 단계를 거칩니다.
+Server application requires setting deployment (artifact, server, server group, and scenario), uploading binaries, and deployment. 
 
-### 아티팩트 설정
+### Setting Artifacts 
 
 ![deploy_06_201812](https://static.toastoven.net/prod_tcdeploy/deploy_06_201812.png)
 
-1. 리스트 상단의 **생성** 버튼을 클릭합니다.
-2. 아티팩트 유형을 "Server Application"으로 선택합니다.
-    - 이름(필수), 설명(선택), port(필수) 항목들을 입력합니다.
-3. 모달 창 **생성** 버튼을 클릭합니다.
+1. Click **Create** on the list. 
+2. Select **Server Application** for the type of an artifact. 
+    - Enter name (required), description (optional), and port (required). 
+3. Click **Create** from the **Create Artifacts** window.  
 
-### 서버 그룹 설정
+### Setting Server Groups 
 
-배포할 서버를 관리할 수 있는 기능입니다.
+Deployment servers are managed by this setting. 
 
 ![deploy_07_201812](https://static.toastoven.net/prod_tcdeploy/deploy_07_201812.png)
 
-1. 하단 탭 중 [서버 그룹] > **새로 만들기** 버튼을 클릭합니다.
-2. 새로 만들 서버 그룹을 설정합니다.
-    * 이름(필수), 설명(선택)
-    * OS 선택 후 Shell Type를 지정합니다. (항목 선택 또는 직접 입력)
-    * Phase 선택 (서버 장비 구분. 지정하지 않을 경우 NONE을 선택합니다.)
-    * 서버 추가
-        * 서버 추가에는 아래 두가지 방법이 있으며 자세한 내용은 [기능 상세 가이드의 서버 그룹 메뉴](/Dev%20Tool/Deploy/ko/reference/#_11)에서 확인하실 수 있습니다.
-            * 대량 추가
-            * 개별 추가
-         * 호스트 이름(필수), IP 주소(필수), OS(선택) 입력 후 **추가** 버튼을 클릭합니다.
-         * 하단 서버 리스트에 추가된 내용 확인 (왼쪽 체크 박스에 체크된 서버만 등록됨)
-    
-3. 입력 완료 후 **생성** 버튼을 클릭합니다.
+1. Go to **Deploy** and click **Server Group > Create** at the bottom of the page.
+2. Set a server group to create on the **Create Server Group** window.  
+    * Enter name (required) and description (optional).
+    * Select OS and specify the **Shell Type**: enter one or select from the list. 
+    * Select Phase: Choose a server tool. Otherwise, select NONE. 
+    * Add Servers 
+        * Servers can be added in the following two methods, and find more details from [Detail Funtional Guide on Server Groups](/Dev%20Tool/Deploy/zh/reference/#_11).
+            * Add in Mass
+            * Add Individually 
+         * Enter host name (required), IP address (required), and OS (optional), and click **Add**. 
+         * See what is added on the server list: only the servers checked on the left box can be registered. 
 
-### 시나리오 생성
+3.  When it is completed, click **Create**. 
+
+### Create Scenarios 
 
 ![deploy_08_201812](https://static.toastoven.net/prod_tcdeploy/deploy_08_201812.png)
 
-1. 하단 탭 중 [배포] > 서버 그룹 영역에서 **새로만들기** 버튼을 클릭합니다.
-2. 하단에 추가된 시나리오 영역에 시나리오명(선택)을 입력합니다.
-3. 입력 완료 후 **생성** 버튼을 클릭합니다.
+1. Go to **Deploy** and click **Deploy > Create**.
+2. Enter scenario name (optional) in Scenario which is added below. 
+3. Click **Create**.  
 
-### 태스크 추가
+### Add Tasks 
 
-태스크는 개별 기능 수행 및 순서 제어가 가능한 시나리오 구성 요소 입니다.
-아래와 같이 두 가지 종류가 있습니다.
+A task is an element of a scenario which can execute individual functions and control order, and it is categorized into two as below: 
 
-* pre-run Task : 배포 전 실행 기능
-* Normal Task : 배포 시 실행 기능
+* pre-run Task: Execute before deployment 
+* Normal Task: Execute while deployed 
 
-필요에 따라 선택적으로 사용할 수 있으며, 본 문서에서는 기본적인 배포 시 필요한 태스크를 다룹니다.
-더 많은 태스크는 [기능 상세 가이드의 태스크 메뉴](/Dev%20Tool/Deploy/ko/reference/#_25)에서 확인하실 수 있습니다.
+Choose one as you need. This document describes tasks that are basically required for deployment. 
+Find more tasks on [Detail Functional Guide on Tasks](/Dev%20Tool/Deploy/zh/reference/#_25).
 
-배포를 위해 아래 세 개의 태스크를 추가합니다.
+To test deployment, the following three tasks are added: 
 
-#### 1. User Command 추가
+#### 1. Add User Commands 
 
-* 배포 시 실행되는 사용자 정의 Command 태스크입니다.
-* Available Variables를 사용할 수 있습니다.
-    * Available Variables : 예약어. 자세한 내용은 [기능 상세 가이드의 태스크 메뉴](/Dev%20Tool/Deploy/ko/reference/#_25) 하단에서 확인하실 수 있습니다.
+* It is a user-defined command task which is executed for deployment. 
+* You may use Available Variables.
+    * Available Variables: Reserved words. Find more details on [Detail Functional Guide on Tasks](/Dev%20Tool/Deploy/zh/reference/#_25).
 
 ![deploy_09_201812](https://static.toastoven.net/prod_tcdeploy/deploy_09_201812.png)
 
-1. 하단 탭 중 [배포] > 시나리오 영역 우측 **Task 추가** 버튼을 클릭합니다.
-2. Normal Task 하위에 있는 **User Command**를 클릭합니다.
-3. 새로운 태스크 내용을 입력합니다.
+1. Click **Add Tasks** on the right of Scenario from the **Deploy** tab.
+2. Click **User Command** below **Normal Task**.  
+3. Fill out information for the new task. 
     * Timeout (min)
-        * 해당 태스크가 실행 완료 대기 시간으로 인식할 시간 값을 지정합니다. (최소 1분, 최대 120분)
+        * Specify timeout to complete task execution: min 1, and max 30 minutes. 
     * Run As
-        * 실행 계정을 입력합니다.
+        * Enter execution account. 
     * Command
-        * 실행할 명령문을 입력합니다.
+        * Enter commands to run. 
 
-4. 입력/변경 완료 후 **적용** 버튼을 클릭합니다. 
+4. When it is completed, click **Apply**. 
 
-#### 2. Binary Deploy 추가
+#### 2. Add Binary Deploy 
 
-* 업로드한 바이너리 파일의 배포 내용을 설정할 수 있는 태스크입니다.
+*(*원문의 Binary Deploy를 Deploy Binary, 또는 Binary Deployment로 바꾸어야 할 것 같습니다. 아래 모든 내용에 일괄 적용. )*
+
+Deployment for uploaded binary files can be set. 
 
 ![deploy_10_201812](https://static.toastoven.net/prod_tcdeploy/deploy_10_201812.png)
 
-1. **Task 추가** 버튼을 클릭하여 Normal Task 하위에 있는 **Binary Deploy**를 클릭합니다.
-2. 새로운 태스크 내용을 입력합니다.
+1. Click **Add Tasks** and **Binary Deploy** below **Normal Task**.
+2. Fill out information for the new task. 
     * Timeout (min)
-        * 해당 태스크가 실행 완료 대기 시간으로 인식할 시간 값을 지정합니다. (최소 1분, 최대 120분)
+        * Specify timeout to complete task execution: min 1, and max 30 minutes.
     * Run As
-        * 실행 계정을 입력 합니다.
-3. 바이너리 파일을 업로드 하기 위해서 우측 **업로드** 버튼을 클릭합니다.
-4. 바이너리 파일 정보를 입력합니다.
-    * **파일 선택** 버튼을 클릭하여 바이너리 파일을 선택합니다.
-    * 버전 (선택), 설명 (선택) 항목을 입력합니다.
-5. 바이너리 업로드 모달창 **업로드** 버튼을 클릭합니다. 
-6. 업로드 완료 후 **바이너리 선택** 버튼을 클릭합니다.
-7. 원하는 바이너리 버전을 선택합니다.
-    * 다수의 버전 존재 시 검색 기능을 활용하실 수 있습니다.
-8. **선택** 버튼을 클릭합니다.
-<br/>
-    * Variable As
-        * 해당 바이너리의 Variable명을 지정해 User Command에서 바이너리 정보를 사용할 수 있으며 자세한 내용은 [기능 상세 가이드](/Dev%20Tool/Deploy/ko/reference/)의 태스크 메뉴 하단에서 확인하실 수 있습니다.
-    * 타겟 디렉토리
-        * 바이너리를 배포할 디렉토리를 지정합니다.
+        * Enter execution account. 
+3. To upload binary files, click **Upload** on the right. 
+4. Enter binary file information. 
+    * Click **Select Files** to choose a binary file. 
+    * Enter Version (optional) and Description (optional).
+5. Click **Upload**. 
+6. After it is uploaded, click **Select Binaries**. 
+7. Select a binary version you need. 
+    * Use Search to choose from many versions. 
+8. Click **Select**.  
+    <br/>
+   * Variable As
+       * You can specify the name of variables of binary and use binary information at User Command. Find moe details at the bottom of the task menu of [Detail Functional Guide](/Dev%20Tool/Deploy/zh/reference/).
+   * Target Directory
+       * Specify a target directory to deploy binaries. 
 
-#### 3. User Command 추가
+#### 3. Add User Commands
 
 ![deploy_11_201812](https://static.toastoven.net/prod_tcdeploy/deploy_11_201812.png)
 
-1. **Task 추가** 버튼을 클릭하여 Normal Task 하위에 있는 **User Command**를 클릭합니다.
-2. 새로운 태스크 내용을 입력합니다.
+1. Click **Add Tasks** and select **User Command** below **Normal Tasks**.
+2. Fill in information for the new task. 
     * Timeout (min)
-        * 해당 태스크가 실행 완료 대기 시간으로 인식할 시간 값을 지정합니다. (최소 1분, 최대 120분)
+        * Specify timeout to complete task execution: min 1, and max 30 minutes. 
     * Run As
-        * 실행 계정을 입력합니다.
+        * Enter account for execution. 
     * Command
-        * 실행할 명령문을 입력합니다.
-3. 입력/변경 완료 후 **적용** 버튼을 클릭합니다. 
+        * Enter commands to execute. 
+3. When it is completed, click **Apply**.  
 
-### 실행
+### Execute 
 
 ![deploy_12_201812](https://static.toastoven.net/prod_tcdeploy/deploy_12_201812.png)
 
-1. 우측 **실행** 버튼을 클릭하여 배포 요청을 합니다.
-2. 배포 실행 정보를 입력합니다.
-    * 배포 노트(선택) 및 인증 방법을 지정합니다.
-    * Password 선택 시 비밀번호를 입력하거나 또는 .pem 파일을 선택 후 업로드합니다.
-3. 입력 완료 후 **확인** 버튼을 클릭합니다.
+1. Click **Execute** on the right to request for deployment. 
+2. Fill in execution information for deployment. 
+    * Specify deployment note (optional) and an authentication method. 
+    * Enter password for **Password**, or select and upload .pem file.  
+3. When it is completed, click **Confirm**. 
 
 ![deploy_13_201812](https://static.toastoven.net/prod_tcdeploy/deploy_13_201812.png)
 
-1. 배포 진행 상황을 확인 할 수 있습니다.
-2. 배포 완료를 확인합니다.
-    * 각 Task 정상 실행 여부는 exit code로 판별됩니다.
-3. **결과보기** 버튼을 클릭하여 상세결과를 확인합니다.
-4. 배포 상세결과를 확인합니다.
-    * 각 태스크 실행에 대한 상세 내용을 (리턴 값, exit code, 오류 내용 등) 확인 가능합니다.
+1. You can find the progress of deployment. 
+2. Check deployment is completed. 
+    * Use exit code to see if each task is normally executed. 
+3. To find detail results, click **See Results**. 
+4. Check deployment result on the window of **See Results**.
+    * You can find details on the execution of each task (return value, exit code, error, and etc.). 
 
 - - -
 
-서버에 파일 배포를 성공하였습니다!
-TOAST Deploy는 더 많은 기능을 지원하며, 자세한 사항은 [기능 상세 가이드](/Dev%20Tool/Deploy/ko/reference/)에서 확인하실 수 있습니다!
+File has been deployed to the server. 
+TOAST Deploy supports more functions, and find more details in [Detail Functional Guide](/Dev%20Tool/Deploy/zh/reference/).
+

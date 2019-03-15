@@ -1,32 +1,28 @@
-## Dev Tool > Deploy > API Guide
+## Dev Tool > Deploy > APIガイド
 
-사용자가 HTTP Request를 직접 구성하여 바이너리를 업로드 할 수 있는 API를 제공합니다.
+ユーザーがHTTP Requestを直接構成してバイナリをアップロードできるAPIを提供します。
 
 ## Ver 1.0
 
-* 주요 개선 사항
-    * REST 형태의 API
-    * resultCode 세분화
+* 主な改善事項
+    * REST形式のAPI
+    * resultCodeの細分化
 
 | Http Method | POST |
 | ----------- | ---- |
 | Request URL | https://api-tcd.cloud.toast.com/api/v1.0/projects/{appkey}/artifacts/{artifactId}/binary-group/{binaryGroupKey} |
 
-<center>[표 1] Binary Upload Request URL</center>
-
 ### Parameter
 
 | Name | Type | Description | Value | Required |
 | ---- | ---- | ----------- | ----- | -------- |
-| applicationType | String | 아티팩트의 타입 | client 또는 server | true |
-| version | String | 업로드하는 바이너리의 버전, 미입력 시 timestamp로 대체 | - | false |
-| description | String | 바이너리의 설명 | - | false |
-| osType | String | applicationType이 client인 경우 바이너리 파일의 os 정보 | iOS 또는 Android 또는 etc | false |
-| binaryFile | File | 바이너리 파일 객체 | - | true |
-| metaFile | File | iOS인 경우 plist 파일 객체 | - | false |
-| fix | Boolean | applicationType이 Client인 경우 Fix 여부 정보 | true/false | false |
-
-<center>[표 2] Binary Upload Request Parameter</center>
+| applicationType | String | アーティファクトのタイプ | clientまたはserver | true |
+| version | String | アップロードするバイナリのバージョン、未入力の時はtimestampで代替 | - | false |
+| description | String | バイナリの説明 | - | false |
+| osType | String | applicationTypeがclientの場合、バイナリファイルのOS情報 | iOS、Androidまたはetc | false |
+| binaryFile | File | バイナリファイルオブジェクト | - | true |
+| metaFile | File | iOSの場合、plistファイルオブジェクト | - | false |
+| fix | Boolean | applicationTypeがClientの場合、Fixするかの情報 | true/false | false |
 
 ### Sample Request For cUrl
 
@@ -41,7 +37,7 @@ curl -X POST \
 
 ### Sample Request For JAVA
 
-아래 코드는 HttpClient 라이브러리(httpclient 4.3.6)를 사용하여 API를 통해 바이너리를 업로드하는 코드의 예시입니다.
+下記コードは、HttpClientライブラリ(httpclient 4.3.6)を使用して、APIを通してバイナリをアップロードするコードの例です。
 
 ``` java
 
@@ -100,12 +96,10 @@ try {
 
 | Name | Type | Description | Value |
 | ---- | ---- | ----------- | ----- |
-| isSuccessful | boolean | 업로드 결과 | true 또는 false |
-| resultCode | String | 업로드 결과 메세지 | [오류 코드](/Dev%20Tool/Deploy/ja/error-code/) 참고 |
-| downloadUrl | String | 업로드 바이너리의 다운로드 경로 | 해당 경로로 다운로드 가능 |
-| binaryKey | String | 업로드한 바이너리의 키 | - |
-
-<center>[표 3] Binary Upload Response(json)</center>
+| isSuccessful | boolean | アップロード結果 | trueまたはfalse |
+| resultCode | String | アップロード結果メッセージ | [エラーコード](/Dev%20Tool/Deploy/ja/error-code/)参照 |
+| downloadUrl | String | アップロードバイナリのダウンロードパス | 該当パスでダウンロード可能 |
+| binaryKey | String | アップロードしたバイナリのキー | - |
 
 ### Response Sample
 
@@ -124,33 +118,29 @@ Result: {
 }
 ```
 
-## 이전 버전
+## 以前のバージョン
 
 | Http Method | POST |
 | ----------- | ---- |
 | Request URL | https://api-tcd.cloud.toast.com/api/binary/upload/artifact/{artifactId} |
 
-<center>[표 1] Binary Upload Request URL</center>
-
 ### Parameter
 
 | Name | Type | Description | Value | Required |
 | ---- | ---- | ----------- | ----- | -------- |
-| appKey | String | 토스트 클라우드 앱키, 디플로이 상품 페이지에서 확인가능 | - | true |
-| applicationType | String | 아티팩트의 타입 | client 또는 server | true |
-| binaryGroupKey | long | 바이너리의 그룹 키 | 미입력 시 기본 그룹으로 지정 | false |
-| version | String | 업로드하는 바이너리의 버전, 미입력 시 timestamp로 대체 | - | false |
-| description | String | 바이너리의 설명 | - | false |
-| osType | String | applicationType이 client인 경우 바이너리 파일의 os 정보 | iOS 또는 Android 또는 etc | false |
-| binaryFile | File | 바이너리 파일 객체 | - | true |
-| metaFile | File | iOS인 경우 plist 파일 객체 | - | false |
-| fix | Boolean | applicationType이 Client인 경우 Fix 여부 정보 | true/false | false |
-
-<center>[표 2] Binary Upload Request Parameter</center>
+| appKey | String | TOASTクラウドアプリキー、Deployサービスページで確認可能 | - | true |
+| applicationType | String | アーティファクトのタイプ | clientまたはserver | true |
+| binaryGroupKey | long | バイナリのグループキー | 未入力の時、基本グループに指定 | false |
+| version | String | アップロードするバイナリのバージョン、未入力の時、timestampで代替 | - | false |
+| description | String | バイナリの説明 | - | false |
+| osType | String | applicationTypeがclientの場合、バイナリファイルのOS情報 | iOS、Androidまたはetc | false |
+| binaryFile | File | バイナリファイルオブジェクト | - | true |
+| metaFile | File | iOSの場合、plistファイルオブジェクト | - | false |
+| fix | Boolean | applicationTypeがClientの場合、Fixするかどうかの情報 | true/false | false |
 
 ### Sample Request For JAVA
 
-아래 코드는 HttpClient 라이브러리(httpclient 4.3.6)를 사용하여 API를 통해 바이너리를 업로드하는 코드의 예시입니다.
+下記コードは、HttpClientライブラリ(httpclient 4.3.6)を使用して、APIを通してバイナリをアップロードするコードの例です。
 
 ``` java
 String artifactId = "1";
@@ -207,10 +197,8 @@ try {
 
 | Name | Type | Description | Value |
 | ---- | ---- | ----------- | ----- |
-| isSuccess | boolean | 업로드 결과 | true 또는 false |
-| result | String | 업로드 결과 메세지 | isSuccess : true<br>\- 업로드된 바이너리의 키정보<br>isSuccess : false<br>\- INAVLID\_INFORMATION : 잘못된 파라미터 정보<br>\- BINARY\_UPLOAD\_ERROR : 바이너리 업로드 중 오류 발생<br>\- ALREADY\_UPLOADED\_VERSION : 바이너리 버전충돌 |
-
-<center>[표 3] Binary Upload Response(json)</center>
+| isSuccess | boolean | アップロード結果 | trueまたはfalse |
+| result | String | アップロード結果メッセージ | isSuccess：true<br>\- アップロードされたバイナリのキー情報<br>isSuccess ： false<br>\- INAVLID\_INFORMATION：無効なパラメータ情報<br>\- BINARY\_UPLOAD\_ERROR：バイナリアップロード中にエラー発生<br>\- ALREADY\_UPLOADED\_VERSION：バイナリバージョン衝突 |
 
 ### Response Sample
 
