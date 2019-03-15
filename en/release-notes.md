@@ -5,7 +5,7 @@
 * Resource file upload capacity limit (1GB)
 
 ### 2017.02.26
-##### Function Improvement / Change
+#### Function Improvement / Change
 * Editable resource size and content limit
 * Existing: Unlimited size, all editable files
 * Change: 1MB size limit, only unicode editable format is editable
@@ -13,37 +13,37 @@
 * Existing: Up to 30 minutes
 * Change: Up to 2 hours
 
-##### Error Correction
+#### Error Correction
 * Select whole server group when changing server group Check box malfunction symptom correction
 
 ### 2010.01.15
-##### Function Improvement / Change
+#### Function Improvement / Change
 * Add User Console Org Authentication
 
 ### 2018.10.23
-##### Add Features
+#### Add Features
 * Enable distribution termination function after distribution reentry (Distributor only)
 
-##### Error Correction
+#### Error Correction
 * Resources tab > Add File > Correct the phenomenon that the file is generated even without the content of the file
 
 ### 2012.08.28
-##### Add Features
+#### Add Features
 * Distribution re-entry function
 * Add a layer to guide page loading
 * Binary upload API Ver1.0 update
 * Simultaneous operation with previous versions
 
-##### Error Correction
+#### Error Correction
 * Correct the operation error of the item of authentication method at distribution
 * Add pem file required value check
 * The problem that the input type does not switch by clicking the password / pem switch radio button
 
-##### Document Change
+#### Document Change
 * Binary upload API Ver1.0 update
 
 ### 2012.07.24
-##### Add Features
+#### Add Features
 
 * Add scenario Import / Export function
 * Release restrictions on Client Type menu (all menus available)
@@ -51,7 +51,7 @@
 * Added confirmation step when deploying server with Phase Type of Product
 
 ### 2012.04.24
-##### Add Features
+#### Add Features
 
 * Add binary install page access control function of client application through password input
 
