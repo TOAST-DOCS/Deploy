@@ -1,57 +1,62 @@
 ## Dev Tool > Deploy > Release Notes
-### 2019.02.26
-#### 기능 개선/변경
-* 편집 가능한 리소스 크기 및 내용제한 
-    * 기존 : 크기 무제한, 모든 편집가능 형식 파일
-    * 변경 : 크기 1MB 제한, unicode로 편집 가능한 형식만 편집 가능
-* 태스크 Timeout 제한 시간 증가
-    * 기존 : 최대 30분
-    * 변경 : 최대 2시간
 
-#### 오류 수정
-* 서버그룹 수정시 서버그룹 전체 선택 체크박스 오작동 현상 수정
+### 2010.03.26
+#### Function change
+* Resource file upload capacity limit (1GB)
 
-### 2019.01.15 
-#### 기능 개선/변경
-* User Console Org 인증 추가
+### 2017.02.26
+#### Function Improvement / Change
+* Editable resource size and content limit
+* Existing: Unlimited size, all editable files
+* Change: 1MB size limit, only unicode editable format is editable
+* Increase task timeout time limit
+* Existing: Up to 30 minutes
+* Change: Up to 2 hours
+
+#### Error Correction
+* Select whole server group when changing server group Check box malfunction symptom correction
+
+### 2010.01.15
+#### Function Improvement / Change
+* Add User Console Org Authentication
 
 ### 2018.10.23
-#### 기능 추가
-* 배포 재 진입 이후 배포 종료 기능 활성화(배포자 한정)
+#### Add Features
+* Enable distribution termination function after distribution reentry (Distributor only)
 
-#### 오류 수정
-* 리소스 탭 > 파일 추가 > 파일 내용이 없어도 파일이 생성되는 현상 수정
+#### Error Correction
+* Resources tab > Add File > Correct the phenomenon that the file is generated even without the content of the file
 
-### 2018.08.28
-#### 기능 추가
-* 배포 재 진입 기능
-* 페이지 로딩을 안내하는 레이어 추가
-* 바이너리 업로드 API Ver1.0 업데이트
-    * 이전 버전과 동시 운영
+### 2012.08.28
+#### Add Features
+* Distribution re-entry function
+* Add a layer to guide page loading
+* Binary upload API Ver1.0 update
+* Simultaneous operation with previous versions
 
-#### 오류 수정
-* 배포 시 인증 방법 항목 동작 오류 수정
-    * pem 파일 필수값 체크 추가
-    * 패스워드/pem 전환 라디오 버튼 클릭 시 input 타입이 전환되지 않는 문제
+#### Error Correction
+* Correct the operation error of the item of authentication method at distribution
+* Add pem file required value check
+* The problem that the input type does not switch by clicking the password / pem switch radio button
 
-#### 문서 변경
-* 바이너리 업로드 API Ver1.0 업데이트
+#### Document Change
+* Binary upload API Ver1.0 update
 
-### 2018.07.24
-#### 기능 추가
+### 2012.07.24
+#### Add Features
 
-* 시나리오 Import/Export 기능 추가
-* Client Type의 메뉴 사용 제한 해제 (모든 메뉴 사용 가능)
-* 서버 그룹 장비 구분을 위한 Phase 속성 추가
-    * Phase Type이 Product인 서버의 배포 시 확인 단계 추가
+* Add scenario Import / Export function
+* Release restrictions on Client Type menu (all menus available)
+* Add Phase property for server group equipment separator
+* Added confirmation step when deploying server with Phase Type of Product
 
-### 2018.04.24
-#### 기능 추가
+### 2012.04.24
+#### Add Features
 
-* 비밀번호 입력을 통한 클라이언트 어플리케이션의 바이너리 설치 페이지 접근 제어 기능 추가
+* Add binary install page access control function of client application through password input
 
-### 2018.02.22
-#### 신규 상품 출시
+### 2011.02.22
+#### New product release
 
-* 배포 및 설치 편의를 제공하기 위한 서비스 입니다.
-* 원클릭으로 쉽고 빠르게 소프트웨어를 배포할 수 있습니다.
+* It is a service to provide distribution and installation convenience.
+* You can distribute software easily and quickly with one click.
