@@ -25,7 +25,7 @@
 * Enable distribution termination function after distribution reentry (Distributor only)
 
 ##### Error Correction
-* Resources tab> [Add File> Correct the phenomenon that the file is generated even without the content of the file
+* Resources tab > Add File > Correct the phenomenon that the file is generated even without the content of the file
 
 ### 2012.08.28
 ##### Add Features
