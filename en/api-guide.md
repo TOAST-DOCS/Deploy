@@ -1,32 +1,28 @@
 ## Dev Tool > Deploy > API Guide
 
-사용자가 HTTP Request를 직접 구성하여 바이너리를 업로드 할 수 있는 API를 제공합니다.
+The API allows user-configured HTTP Request to upload binaries. 
 
 ## Ver 1.0
 
-* 주요 개선 사항
-    * REST 형태의 API
-    * resultCode 세분화
+* Major Improvements 
+    * API of the REST-format 
+    * Diversified resultCode 
 
 | Http Method | POST |
 | ----------- | ---- |
 | Request URL | https://api-tcd.cloud.toast.com/api/v1.0/projects/{appkey}/artifacts/{artifactId}/binary-group/{binaryGroupKey} |
 
-<center>[표 1] Binary Upload Request URL</center>
-
 ### Parameter
 
 | Name | Type | Description | Value | Required |
 | ---- | ---- | ----------- | ----- | -------- |
-| applicationType | String | 아티팩트의 타입 | client 또는 server | true |
-| version | String | 업로드하는 바이너리의 버전, 미입력 시 timestamp로 대체 | - | false |
-| description | String | 바이너리의 설명 | - | false |
-| osType | String | applicationType이 client인 경우 바이너리 파일의 os 정보 | iOS 또는 Android 또는 etc | false |
-| binaryFile | File | 바이너리 파일 객체 | - | true |
-| metaFile | File | iOS인 경우 plist 파일 객체 | - | false |
-| fix | Boolean | applicationType이 Client인 경우 Fix 여부 정보 | true/false | false |
-
-<center>[표 2] Binary Upload Request Parameter</center>
+| applicationType | String | Type of an artifact | client or server | true |
+| version | String | Version of uploaded binary; replaced with timestamp, if left empty | - | false |
+| description | String | Description of a binary | - | false |
+| osType | String | OS information of a binary file if the applicationType is client | iOS, Android, or others | false |
+| binaryFile | File | Binary file object | - | true |
+| metaFile | File | plist file object for iOS | - | false |
+| fix | Boolean | Fix or not information, if the applicationType is client | true/false | false |
 
 ### Sample Request For cUrl
 
@@ -41,7 +37,7 @@ curl -X POST \
 
 ### Sample Request For JAVA
 
-아래 코드는 HttpClient 라이브러리(httpclient 4.3.6)를 사용하여 API를 통해 바이너리를 업로드하는 코드의 예시입니다.
+Below is an example of uploading binaries via API by using HttpClient library (httpclient 4.3.6). 
 
 ``` java
 
@@ -96,16 +92,14 @@ try {
 }
 ```
 
-### Response(json)
+### Response (json)
 
 | Name | Type | Description | Value |
 | ---- | ---- | ----------- | ----- |
-| isSuccessful | boolean | 업로드 결과 | true 또는 false |
-| resultCode | String | 업로드 결과 메세지 | [오류 코드](/Dev%20Tool/Deploy/en/error-code/) 참고 |
-| downloadUrl | String | 업로드 바이너리의 다운로드 경로 | 해당 경로로 다운로드 가능 |
-| binaryKey | String | 업로드한 바이너리의 키 | - |
-
-<center>[표 3] Binary Upload Response(json)</center>
+| isSuccessful | boolean | Uploading result | True or false |
+| resultCode | String | Message for uploading result | See [Error Codes](/Dev%20Tool/Deploy/en/error-code/) |
+| downloadUrl | String | Downloading path for uploaded binaries | Download is available in the path |
+| binaryKey | String | Key of the uploaded binary | - |
 
 ### Response Sample
 
@@ -124,33 +118,29 @@ Result: {
 }
 ```
 
-## 이전 버전
+## Previous Version 
 
 | Http Method | POST |
 | ----------- | ---- |
 | Request URL | https://api-tcd.cloud.toast.com/api/binary/upload/artifact/{artifactId} |
 
-<center>[표 1] Binary Upload Request URL</center>
-
 ### Parameter
 
 | Name | Type | Description | Value | Required |
 | ---- | ---- | ----------- | ----- | -------- |
-| appKey | String | 토스트 클라우드 앱키, 디플로이 상품 페이지에서 확인가능 | - | true |
-| applicationType | String | 아티팩트의 타입 | client 또는 server | true |
-| binaryGroupKey | long | 바이너리의 그룹 키 | 미입력 시 기본 그룹으로 지정 | false |
-| version | String | 업로드하는 바이너리의 버전, 미입력 시 timestamp로 대체 | - | false |
-| description | String | 바이너리의 설명 | - | false |
-| osType | String | applicationType이 client인 경우 바이너리 파일의 os 정보 | iOS 또는 Android 또는 etc | false |
-| binaryFile | File | 바이너리 파일 객체 | - | true |
-| metaFile | File | iOS인 경우 plist 파일 객체 | - | false |
-| fix | Boolean | applicationType이 Client인 경우 Fix 여부 정보 | true/false | false |
-
-<center>[표 2] Binary Upload Request Parameter</center>
+| appKey | String | Appkey of TOAST Cloud; available on the Deploy page | - | True |
+| applicationType | String | Type of an artifcat | Client or server | True |
+| binaryGroupKey | long | Group key of a binary | Specified as default group, if left empty | False |
+| version | String | Version of uploaded binary; replaced with timestamp, if left empty | - | False |
+| description | String | Description of a binary | - | False |
+| osType | String | OS information of a binary file, if the applicationType is client | iOS, Android, or others | False |
+| binaryFile | File | Binary file object | - | True |
+| metaFile | File | plist file object for iOS | - | False |
+| fix | Boolean | Fix or not information, if the applicationType is client | true/false | False |
 
 ### Sample Request For JAVA
 
-아래 코드는 HttpClient 라이브러리(httpclient 4.3.6)를 사용하여 API를 통해 바이너리를 업로드하는 코드의 예시입니다.
+Below is an example of uploading binaries via API by using HttpClient library (httpclient 4.3.6). 
 
 ``` java
 String artifactId = "1";
@@ -203,14 +193,12 @@ try {
 }
 ```
 
-### Response(json)
+### Response (json)
 
 | Name | Type | Description | Value |
 | ---- | ---- | ----------- | ----- |
-| isSuccess | boolean | 업로드 결과 | true 또는 false |
-| result | String | 업로드 결과 메세지 | isSuccess : true<br>\- 업로드된 바이너리의 키정보<br>isSuccess : false<br>\- INAVLID\_INFORMATION : 잘못된 파라미터 정보<br>\- BINARY\_UPLOAD\_ERROR : 바이너리 업로드 중 오류 발생<br>\- ALREADY\_UPLOADED\_VERSION : 바이너리 버전충돌 |
-
-<center>[표 3] Binary Upload Response(json)</center>
+| isSuccess | boolean | Uploading result | True or false |
+| result | String | Message for uploading result | isSuccess : True<br>\- Key information of uploaded binaries<br>isSuccess : False<br>\- INAVLID\_INFORMATION: Invalid parameter information <br>\- BINARY\_UPLOAD\_ERROR: Error occurred during uploading binaries <br>\- ALREADY\_UPLOADED\_VERSION: Conflicts between binary versions |
 
 ### Response Sample
 

@@ -1,78 +1,84 @@
-## Dev Tool > Deploy > Plugin Guide
+## Dev Tool > Deploy > プラグイン使用ガイド
 
 ## Jenkins Plugin Guide
 
-TOAST Deploy Jenkins 업로드 플러그인은 Jenkins의 빌드 결과물을 TOAST Deploy 서버로 업로드 할 수 있게 해줍니다.
+TOAST Deploy Jenkinsアップロードプラグインを使用すると、Jenkinsのビルド結果物をTOAST Deployサーバーにアップロードできます。
 
-## Jenkins 설치
+## Deploy <-> Jenkins連携方法
 
-Jenkins 설치 및 자세한 사항은 [https://jenkins.io/](https://jenkins.io/)에서 확인하실 수 있습니다.
+Jenkins build -> Deployにバイナリをアップロード(by plugin) -> 配布シナリオ実行(配布/終了/再起動/その他の事前作業および後処理)
+これを行うために、次の順序で配布環境を構築する必要があります。
 
-#### Jenkins 최소 요구사항 버전
+1. Deployにアーティファクトを作成
+2. Jenkins build jobを設定
+3. サーバーグループを作成
+4. 配布シナリオを作成
 
-**Jenkins 1580.1** 이후 버전을 요구합니다.
+## Jenkinsインストール
 
-#### 플러그인 설치
+Jenkinsのインストールおよび詳細は、[https://jenkins.io/](https://jenkins.io/)で確認できます。
 
-1. Jenkins 관리 ▷ 플러그인 관리 ▷ 고급 탭 ▷ 플러그인 올리기 메뉴에서 **tcdeploy-upload-jenkins.hpi** 파일을 올립니다.
-([tcdeploy-upload-jenkins.hpi](http://images.hangame.co.kr/tcdeploy/plugins/upload/jenkins/tcdeploy-upload-jenkins-ext.hpi) 다운로드 링크)
-    
-    ![[그림 1] 플러그인 올리기 ](http://static.toastoven.net/prod_tcdeploy/devguide/01.png)
-    <center>[그림 1] 플러그인 올리기</center>
+#### Jenkinsの最小要件
 
-2. 설치가 완료되면 "설치된 플러그인 목록" 탭 메뉴에서 아래 [그림 2]와 같이 설치된 내역을 확인할 수 있습니다.
-    
-    ![[그림 2] 설치된 플러그인 목록](http://static.toastoven.net/prod_tcdeploy/devguide/02.png)
-    <center>[그림 2] 설치된 플러그인 목록</center>
+**Jenkins 1580.1**以降のバージョンが必要です。
 
-3. 해당 빌드 설정의 "빌드 후 조치 추가" 버튼을 눌러 서버 또는 클라이언트 타입 어플리케이션 업로드 테스크를 추가할 수 있습니다.
-    
-    ![[그림 3] 설치된 플러그인 목록](http://static.toastoven.net/prod_tcdeploy/devguide/03.png)
-    <center>[그림 3] 설치된 플러그인 목록</center>
+#### プラグインインストール
 
-#### 서버(server) 타입 어플리케이션 업로드 플러그인 설정
+1. **Jenkins管理 > プラグイン管理 > 詳細設定 > プラグインアップロード**メニューで、**tcdeploy-upload-jenkins.hpi**ファイルをアップロードします。
+  ([tcdeploy-upload-jenkins.hpi](http://images.hangame.co.kr/tcdeploy/plugins/upload/jenkins/tcdeploy-upload-jenkins-ext.hpi)ダウンロードリンク)
 
-서버 타입 어플리케이션 업로드 플러그인은 성공적으로 빌드된 결과물을 ZIP으로 압축해서 TCD 서버로 업로드 해줍니다.
+    ![[図1]プラグインアップロード](http://static.toastoven.net/prod_tcdeploy/devguide/01.png)
 
-![[그림 4] 서버 어플리케이션 업로드 플러그인 설정](http://static.toastoven.net/prod_tcdeploy/devguide/04.png)
-<center>[그림 4] 서버 어플리케이션 업로드 플러그인 설정</center>
+2. インストールが完了したら、**インストールされたプラグインリスト**タブメニューで下記の図のようにインストールされた内容を確認できます。
+
+    ![[図2]インストールされたプラグインリスト](http://static.toastoven.net/prod_tcdeploy/devguide/02.png)
+
+3. 該当ビルド設定の**ビルド後の措置を追加**ボタンをクリックして、サーバーまたはクライアントタイプアプリケーションアップロードタスクを追加できます。
+
+    ![[図3]インストールされたプラグインリスト](http://static.toastoven.net/prod_tcdeploy/devguide/03.png)
+
+#### サーバー(server)タイプアプリケーションアップロードプラグイン設定
+
+サーバータイプアプリケーションアップロードプラグインで、ビルド結果物をZIP形式に圧縮してTOAST Cloud Deploy(TCD)サーバーにアップロードできます。
+
+![[図4]サーバーアプリケーションアップロードプラグイン設定](http://static.toastoven.net/prod_tcdeploy/devguide/04.png)
 
 * enable upload
-    * 플러그인의 동작의 활성화/비활성화 여부를 결정하는 옵션 입니다. 플러그인 설정이 저장된 상태를 유지하면서 플러그인의 동작은 비활성화하고 싶을때 유용합니다.
+    * プラグイン動作の有効化/無効化を決定するオプションです。プラグイン設定が保存された状態でプラグインの動作を無効化したい時に役立ちます。
 * publish path
-    * 빌드가 완료된 워크스페이스 상에서 배포대상이 될 상대경로 입니다. 예제에서는 /로 입력되어있는데 이 경우\, JENKINS\_HOME/jobs/프로젝트명/workspace 이하의 내용들이 업로드 대상 경로가 되고\, target이라고 입력한다면 JENKINS\_HOME/jobs/프로젝트명/workspace/target 이하의 내용들이 업로드 대상 경로가 됩니다\.
+    * ビルドが完了したワークスペースで配布対象になる相対パスです。例では/を入力していますが、この場合、 JENKINS\_HOME/jobs/プロジェクト名/workspace以下の内容がアップロード対象パスになり、targetと入力するとJENKINS\_HOME/jobs/プロジェクト名/workspace/target以下の内容がアップロード対象パスになります。
 * artifact id
-    * 아티펙트 ID입니다. 숫자만 입력될 수 있습니다.
+    * アーティファクトIDです。数字のみ入力できます。
 * app key
-    * 인증을 위한 application key 입니다.
+    * 認証のためのapplication keyです。
 * archive file name
-    * 생성될 zip파일의 이름입니다. 이름을 지정하지 않으면 기본 이름으로 자동등록됩니다.
-        * 예) 기본 파일명 tcdeploy-artifactid-[artifactId]-[yyyyMMddHHmmss].zip
+    * 作成される .zipファイルの名前です。名前を指定しない場合、デフォルト名で自動登録されます。
+        * 例)デフォルトファイル名tcdeploy-artifactid-[artifactId]-[yyyyMMddHHmmss].zip
 * artifact version
-    * 아티펙트의 버전입니다. Jenkins의 빌드번호, 빌드 시작일시등의 표현식을 지정할 수 있습니다. 버전을 지정하지 않으면 기본 버전으로 자동등록됩니다.
-        * 표현식사용 버전형식 예\): TCD\_SVR\_$\{BUILD\_NUMBER\}**$\{JENKINS\_PROJECT\_NAME\}**$\{BUILD\_START\_DATE\}
-        * 표현식사용 버전결과 예\): TCD\_SVR\_95\_\_Maven\_Project\_Test\_\_2015\-09\-14\_16\-46\-38
-        * 주의) 버전에는 금칙문자가 지정되어있어, 공백은 밑줄문자(_)로 치환되고 ( ) - _ ~ . , 외의 ASCII특수문자들은 제거됩니다.
+    * アーティファクトバージョンです。Jenkinsのビルド番号、ビルド開始日時などの表現式を指定できます。バージョンを指定しない場合、デフォルトバージョンで自動登録されます。
+        * 表現式使用バージョン形式の例\) TCD\_SVR\_$\{BUILD\_NUMBER\}**$\{JENKINS\_PROJECT\_NAME\}**$\{BUILD\_START\_DATE\}
+        * 表現式使用バージョン結果の例\) TCD\_SVR\_95\_\_Maven\_Project\_Test\_\_2015\-09\-14\_16\-46\-38
+        * 注意)バージョンには禁止文字が指定されていて、スペースはアンダーバー(_)に置換され( ) - _ ~ . ,以外のASCII特殊文字は除去されます。
 * description
-    * 현재 업로드에 대한 간단한 설명을 첨부합니다.
+    * アップロードに対する説明を追加します。
 * include filter
-    * ant-style glob 패턴을 사용해서 포함규칙을 정의할 수 있습니다.
-        * 예) **/*.java,**/*.xml - 모든 하위 디렉토리의 java, xml 파일을 포함합니다.
+    * ant-style globパターンを使用して、インクルードルールを定義できます。
+        * 例) **/*.java,**/*.xml - すべての下層ディレクトリのjava、xmlファイルをインクルードします。
 * exclude filter
-    * ant-style glob 패턴을 사용해서 제외규칙을 정의할 수 있습니다.
-        * 예) **/.svn/** \- 모든 하위 디렉토리의 경로 이름 중\, \.svn이 들어간 파일 및 디렉토리를 제외합니다\.
+    * ant-style globパターンを使用して、除外ルールを定義できます。
+        * 例) **/.svn/** \- すべての下層ディレクトリのパス名のうち、\.svnを含むファイルおよびディレクトリを除外します。
 * compression level
-    * 압축 수준을 3단계로 설정 할 수 있습니다.
-        * Store: 무압축 / Normal: 보통압축 / Maximum: 최대압축
+    * 圧縮レベルを3段階で設定できます。
+        * Store：無圧縮、Normal：通常圧縮、Maximum：最大圧縮
 
-**[ 서버타입 어플리케이션 업로드 빌드 콘솔출력 내용 예시 ]**
+**[サーバータイプアプリケーションアップロードビルドコンソール表示内容の例]**
 
 ```
-[TCDeploy] Artifact id: [artifact id 값 출력 부분]
-[TCDeploy] App key: [application key 값 출력 부분]
-[TCDeploy] Application type: server
-[TCDeploy] Description: 테스트 배포
-[TCDeploy] Upload address: [업로드 주소 출력 부분]
+[TCDeploy] Artifact id： [artifact id値表示部分]
+[TCDeploy] App key： [application key値表示部分]
+[TCDeploy] Application type： server
+[TCDeploy] Description：テスト配布
+[TCDeploy] Upload address： [アップロードアドレス表示部分]
 [TCDeploy] Artifact version: TCD_SVR_95__Maven_Project_Test__2015-09-14_16-46-38
 [TCDeploy] Deploy relative path: /
 [TCDeploy] Ant include pattern: **/*.java,**/*.xml
@@ -100,115 +106,103 @@ Jenkins 설치 및 자세한 사항은 [https://jenkins.io/](https://jenkins.io/
 Finished: SUCCESS
 ```
 
-artifact id, app key 등 사용자 입력정보가 출력되고, 압축파일에 포함된 파일 내용을 출력합니다.
+artifact id、app keyなどのユーザー入力情報が表示され、圧縮ファイルに含まれたファイル内容を表示します。
 
-#### 클라이언트(client) 타입 어플리케이션 업로드 플러그인 설정
+#### クライアント(client)タイプアプリケーションアップロードプラグイン設定
 
-클라이언트 타입 어플리케이션 업로드 플러그인은 성공적으로 빌드된 결과물 중 사용자가 지정한 특정 바이너리를 TCD 서버로 업로드 해줍니다.
+クライアントタイプアプリケーションアップロードプラグインで、ビルドが成功した結果物のうち、ユーザーが指定した特定バイナリをTCDサーバーにアップロードできます。
 
-![[그림 5] 클라이언트 어플리케이션 업로드 플러그인 설정](http://static.toastoven.net/prod_tcdeploy/devguide/05.png)
-<center>[그림 5] 클라이언트 어플리케이션 업로드 플러그인 설정</center>
+![[図5]クライアントアプリケーションアップロードプラグイン設定](http://static.toastoven.net/prod_tcdeploy/devguide/05.png)
 
 * enable upload
-    * 플러그인의 동작의 활성화/비활성화 여부를 결정하는 옵션 입니다. 플러그인 설정이 저장된 상태를 유지하면서 플러그인의 동작은 비활성화하고 싶을때 유용합니다.
+    * プラグイン動作の有効化/無効化を決定するオプションです。プラグイン設定が保存された状態を維持しながら、プラグインの動作は無効化したい時に役立ちます。
 * artifact id
-    * 아티펙트 ID입니다. 숫자만 입력될 수 있습니다.
+    * アーティファクトIDです。数字のみ入力できます。
 * app key
-    * 인증을 위한 application key 입니다.
+    * 認証のためのapplication keyです。
 * binary kind
-    * 업로드할 바이너리가 안드로이드(Android) 바이너리인지 아이폰(iOS) 바이너리인지, 기타(etc) 바이너리인지 구분합니다.
+    * アップロードするバイナリがAndroidバイナリなのか、iOSバイナリなのか、その他(etc)のバイナリなのかを区分します。
 * artifact version
-    * 아티펙트의 버전입니다. 서버 어플리케이션의 버전 폼과 동일하게 처리됩니다.
+    * アーティファクトバージョンです。サーバーアプリケーションのバージョンフォームと同じように処理されます。
 * (ipa/apk/etc/plist) file path
-    * 업로드할 바이너리 파일의 경로를 포함한 파일명입니다.
-        * 기타(etc)바이너리는 확장자 제한이 없지만, Android, iOS는 확장자제한이 있습니다.
-        * iOS일 때는 ipa바이너리 파일 및, plist 메타파일을 같이 업로드 해야합니다.
-        * 서버타입 업로드 테스크와는 다르게 빌드 워크스페이스 외부의 파일 경로도 입력가능합니다.
-        * 워크스페이스로 바로 접근하는 경로 표현식으로 ${WORKSPACE}/target/a.ipa와 같이 사용할 수 있습니다.
+    * アップロードするバイナリファイルのパスを含んだファイル名です。
+        * その他(etc)バイナリは拡張子制限がありませんが、Android、iOSは拡張子制限があります。
+        * iOSの時は .ipaバイナリファイルおよび .plistメタファイルを一緒にアップロードする必要があります。
+        * サーバータイプアップロードタスクとは異なり、ビルドワークスペース外部のファイルパスも入力できます。
+        * ワークスペースにすぐにアクセスするパス表現式です。次のように記述します。${WORKSPACE}/target/a.ipa
 * description
-    * 현재 업로드에 대한 간단한 설명을 첨부합니다.
+    * アップロードの説明を追加します。
 
-**[ iOS 클라이언트 타입 어플리케이션 업로드 빌드 콘솔출력 내용 예시 ]**
+**[ iOSクライアントタイプアプリケーションアップロードビルドコンソール表示内容の例]**
 
 ```
-[TCDeploy] Artifact id: [artifact id 값 출력 부분]
-[TCDeploy] App key: [application key 값 출력 부분]
-[TCDeploy] Application type: client
-[TCDeploy] Description: 클라이언트 프로그램 테스트 업로드
-[TCDeploy] Upload address: [업로드 주소 출력 부분]
-[TCDeploy] Binary type: iOS
-[TCDeploy] Binary version: IOS_59__build_iOS_Project_Test__2015-09-16_11-13-12
-[TCDeploy] iOS binary file path: /tcdUploadTest/a.ipa
-[TCDeploy] iOS meta file path: /tcdUploadTest/a.plist
+[TCDeploy] Artifact id： [artifact id値表示部分]
+[TCDeploy] App key： [application key値表示部分]
+[TCDeploy] Application type： client
+[TCDeploy] Description：クライアントプログラムテストアップロード
+[TCDeploy] Upload address： [アップロードアドレス表示部分]
+[TCDeploy] Binary type： iOS
+[TCDeploy] Binary version： IOS_59__build_iOS_Project_Test__2015-09-16_11-13-12
+[TCDeploy] iOS binary file path： /tcdUploadTest/a.ipa
+[TCDeploy] iOS meta file path： /tcdUploadTest/a.plist
 [TCDeploy] ------------------------------- Upload Start -------------------------------
 [TCDeploy] -------------------------------- Upload End --------------------------------
 Finished: SUCCESS
 ```
 
-artifact id, app key 등 사용자 입력정보가 출력되고, 업로드할 바이너리 및 메타파일이 출력됩니다.
+artifact id、app keyなど、ユーザー入力情報や、アップロードするバイナリおよびメタファイルが表示されます。
 
-## Jenkins-cli Build Profile
+## Jenkins-CLI Build Profile
 
-사용자가 jenkins-cli를 사용하여 빌드 명령 수행에 도움을 주는 사전에 정의된 Profile입니다.
+ユーザーがJenkins-CLIを使用してビルドコマンド実行に役立つ、事前に定義されたProfileです。
 
-#### 준비사항
+#### 準備事項
 
-1. SSH Pubilc/Private Key Pair 생성
-    * ssh-keygen 또는 PuTTY Key Generator등으로 SSH Pubilc/Private Key Pair를 생성하고, Jenkins의 빌드 수행 계정에 SSH Public Key를 저장, SSH Private Key 파일은 Task 수행서버에 저장.
-        * 암호문(passphrase)이 설정되지 않은 SSH Private Key만 지원합니다.
-    * 예) http://[JENKINS_URL]/user/[사용자명]/configure 페이지에 접근하여 SSH Public Keys 항목에 생성한 SSH Public Key의 내용을 저장하고, 생성한 SSH Private Key 파일은 Task를 수행하는 서버의 사용자 지정 경로에 저장.
+1. SSH Pubilc/Private Key Pairの作成
+    * ssh-keygenまたはPuTTY Key GeneratorなどでSSH Pubilc/Private Key Pairを作成し、Jenkinsのビルド実行アカウントにSSH Public Keyを保存、 SSH Private Keyファイルはタスク実行サーバーに保存。
+        * 暗号文(passphrase)が設定されていないSSH Private Keyのみサポートします。
+    * 例) http://[JENKINS_URL]/user/[ユーザー名]/configureページにアクセスし、SSH Public Keys項目に作成したSSH Public Keyの内容を保存して、作成したSSH Private Keyファイルは、タスク実行サーバーのユーザー指定パスに保存。
 
-2. http keep alive timeout 조정
-    * Jenkins 서버의 http keep alive timeout 값 확인 후, 값 조정.
-    * 예) jenkins를 RPM으로 설치했을 경우,
-        * /etc/sysconfig/jenkins 의 JENKINS_ARGS에 httpKeepAliveTimeout=[적당한 밀리초값] 옵션 추가.
+2. http keep alive timeoutの調整
+    * Jenkinsサーバーのhttp keep alive timeout値を確認後、値を調整。
+    * 例) JenkinsをRPMでインストールした場合、
+        * /etc/sysconfig/jenkinsのJENKINS_ARGSにhttpKeepAliveTimeout=[適当なミリ秒値]オプション追加。
 
-3. Stream 예외 발생 관련
-    * 빌드 콘솔 출력중 java.io.StreamCorruptedException이 발생할 경우 Jenkins를 수행하는 JVM옵션에 -Dhudson.diyChunking=false 옵션 추가.
-    * 예) jenkins를 RPM으로 설치했을 경우.
-        * /etc/sysconfig/jenkins의 JENKINS\_JAVA\_OPTIONS에 -Dhudson.diyChunking=false 옵션 추가.
+3. Stream例外発生関連
+    * ビルドコンソール表示中にjava.io.StreamCorruptedExceptionが発生した場合、Jenkinsを実行するJVMオプションに-Dhudson.diyChunking=falseオプションを追加。
+    * 例) JenkinsをRPMでインストールした場合。
+        * /etc/sysconfig/jenkinsのJENKINS\_JAVA\_OPTIONSに -Dhudson.diyChunking=falseオプション追加。
 
-#### Profile 설정
+#### Profile設定
 
-![[그림 6] Jenkins-cli Build Profile 설정](http://static.toastoven.net/prod_tcdeploy/devguide/06.png)
-<center>[그림 6] Jenkins-cli Build Profile 설정</center>
+![[図6] Jenkins-CLI Build Profile設定](http://static.toastoven.net/prod_tcdeploy/devguide/06.png)
 
-**[ 사용자 입력 내용 ]**
+**[ユーザー入力内容]**
 
-* OS 선택
-* RunAs 입력
-    * 실행 계정을 입력 합니다.
+* OS選択
+* RunAs入力
+    * 実行アカウントを入力します。
 * JenkinsServer
-    * 도메인 또는 IP를 입력 합니다.
+    * ドメインまたはIPを入力します。
 * Server Charset
-    * jenkins cli를 수행시킬 서버의 문자집합을 입력합니다.
-    아무값도 입력하지 않을 경우 기본값 utf-8
+    * Jenkins-CLIを実行するサーバーの文字コードを入力します。
+   何も値を入力しない場合はデフォルト値のUTF-8
 * Jenkins Url
-    * 빌드명령을 수행하고자 하는 Jenkins 서버의 주소를 입력합니다.
+    * ビルドコマンドを実行するJenkinsサーバーアドレスを入力します。
 * Jenkins Charset
-    * jenkins 서버의 문자집합을 입력합니다. (아무값도 입력하지 않을 경우 기본값 utf-8)
+    * Jenkinsサーバーの文字コードを入力します。何も値を入力しない場合は、デフォルト値のUTF-8です。
 * Java Home
-    * jenkins-cli를 수행하기 위한 JDK 또는 JRE의 Home 경로를 입력합니다.
+    * Jenkins-CLIを実行するためのJDKまたはJREのHomeパスを入力します。
 * Job Name
-    * 수행시킬 빌드 Job의 이름을 입력합니다.
+    * 実行するビルドJobの名前を入力します。
 * Private Key Path
-    * SSH Public Key가 설정되어있는 Jenkins 유저로 인증을 위한 SSH Private Key 파일의 저장 경로를 입력합니다.
-* User (ver. 2.46 이상 버전 필수 값)
-	* Public Key가 설정된 Id를 입력합니다.
-		* 참고 사항
-			* 2.46 이전 버전
-				* Public Key가 설정된 경우 Jenkins에서 자동 인증 진행
-			* 2.46 이상 버전
-				* User(Jenkins admin Id)가 추가 되었으며, 해당 Id에 Public Key가 설정된 경우만 인증 통과
-* Build Parameter (선택)
-    * 빌드에 필요한 파라미터를 입력 합니다.
-
-#### 연동 예시
-
-Jenkins build -> Deploy로 바이너리 업로드(by plugin) ->배포 시나리오 실행(배포/종료/재시작/기타 사전작업 및 후처리)
-이를 위해 다음의 순서를 통해 배포환경을 구축해야 합니다.
-
-1. Deploy에 Artifact를 생성
-2. jenkins build job 설정
-3. 서버그룹 생성
-4. 배포 시나리오 작성
+    * SSH Public Keyが設定されているJenkinsユーザーで認証するためのSSH Private Keyファイルの保存パスを入力します。
+* User(ver. 2.46以上のバージョン必須)
+	* Public Keyが設定されているIDを入力します。
+		* 参考事項
+			* 2.46以前のバージョン
+				* Public Keyが設定されている場合、Jenkinsで自動認証を進行
+			* 2.46以上のバージョン
+				* User(Jenkins admin ID)が追加され、該当IDにPublic Keyが設定されている場合のみ認証通過
+* Build Parameter(任意)
+    * ビルドに必要なパラメータを入力します。
