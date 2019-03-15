@@ -56,7 +56,7 @@
 * Add binary install page access control function of client application through password input
 
 ### 2011.02.22
-# # # # New product release
+#### New product release
 
 * It is a service to provide distribution and installation convenience.
 * You can distribute software easily and quickly with one click.
