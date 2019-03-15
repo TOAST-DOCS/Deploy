@@ -2,8 +2,8 @@
 
 이 문서에서는 다음과 같은 내용을 다룹니다.
 
-* [서비스 사용 전 필수사항](/Dev%20Tool/Deploy/ko/console-guide/#service-pre-requisites)
-* [Deploy 콘솔 화면](/Dev%20Tool/Deploy/ko/console-guide/#deploy-console-page)
+* [서비스 사용 전 필수사항](/Dev%20Tool/Deploy/ko/console-guide/#1)
+* [Deploy 콘솔 화면](/Dev%20Tool/Deploy/ko/console-guide/#deploy)
 * [Client Application](/Dev%20Tool/Deploy/ko/console-guide/#client-application)
 * [Server Application](/Dev%20Tool/Deploy/ko/console-guide/#server-application)
 
