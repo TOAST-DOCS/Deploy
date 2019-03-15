@@ -3,7 +3,7 @@
 この文書では、次のような内容を扱います。
 
 * [メニュー説明](/Dev%20Tool/Deploy/ja/reference/#_1)
-* [機能別説明](/Dev%20Tool/Deploy/ja/reference/#_15)
+* [機能別説明](/Dev%20Tool/Deploy/ja/reference/#_16)
 
 ## メニュー説明
 

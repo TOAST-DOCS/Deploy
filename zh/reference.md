@@ -3,7 +3,7 @@
 This document contains the following: 
 
 * [Menu Description](/Dev%20Tool/Deploy/zh/reference/#_1)
-* [Functional Description](/Dev%20Tool/Deploy/zh/reference/#_15)
+* [Functional Description](/Dev%20Tool/Deploy/zh/reference/#_16)
 
 ## Menu Description 
 

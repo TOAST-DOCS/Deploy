@@ -2,8 +2,8 @@
 
 This document contains the following: 
 
-* [Service Pre-requisites](/Dev%20Tool/Deploy/en/console-guide/#_1)
-* [Deploy Console Page](/Dev%20Tool/Deploy/en/console-guide/#_4)
+* [Service Pre-requisites](/Dev%20Tool/Deploy/en/console-guide/#service-pre-requisites)
+* [Deploy Console Page](/Dev%20Tool/Deploy/en/console-guide/#deploy-console-page)
 * [Client Application](/Dev%20Tool/Deploy/en/console-guide/#client-application)
 * [Server Application](/Dev%20Tool/Deploy/en/console-guide/#server-application)
 
@@ -183,8 +183,6 @@ To test deployment, the following three tasks are added:
 4. When it is completed, click **Apply**. 
 
 #### 2. Add Binary Deploy 
-
-*(*원문의 Binary Deploy를 Deploy Binary, 또는 Binary Deployment로 바꾸어야 할 것 같습니다. 아래 모든 내용에 일괄 적용. )*
 
 Deployment for uploaded binary files can be set. 
 
