@@ -2,8 +2,8 @@
 
 This document contains the following: 
 
-* [Menu Description](/Dev%20Tool/Deploy/zh/reference/#_1)
-* [Functional Description](/Dev%20Tool/Deploy/zh/reference/#_16)
+* [Menu Description](/Dev%20Tool/Deploy/zh/reference/#menu-description)
+* [Functional Description](/Dev%20Tool/Deploy/zh/reference/#functional-description)
 
 ## Menu Description 
 
