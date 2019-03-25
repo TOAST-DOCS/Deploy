@@ -16,7 +16,7 @@
 | INVALID_FILE_EXTENSION | The filename extension is not matched with os |
 | GENERAL_EXCEPTION | An unspecified error has occurred |
 
-## 이전 버전
+## Previous version
 
 | isSuccess | resultKey |
 | --------- | --------- |

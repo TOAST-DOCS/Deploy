@@ -1,78 +1,83 @@
-## Dev Tool > Deploy > Plugin Guide
+## Dev Tool > Deploy > User Guide for Plugin 
 
 ## Jenkins Plugin Guide
 
-TOAST Deploy Jenkins 업로드 플러그인은 Jenkins의 빌드 결과물을 TOAST Deploy 서버로 업로드 할 수 있게 해줍니다.
+With TOAST Deploy Jenkins Plugin, build results of Jenkins can be uploaded to TOAST Deploy servers.  
 
-## Jenkins 설치
+## Integrating Deploy <-> Jenkins 
 
-Jenkins 설치 및 자세한 사항은 [https://jenkins.io/](https://jenkins.io/)에서 확인하실 수 있습니다.
+Build Jenkins -> Upload Binary with Deploy (by plugin) -> Execute Deployment Scenario (Deploy/Close/Re-start/Prerequisites and follow-ups) 
+To this end, the deployment environment must be built in the following order: 
 
-#### Jenkins 최소 요구사항 버전
+1. Create artifacts at Deploy
+2. Set Jenkins build job 
+3. Create a server group
+4. Write deployment scenario 
 
-**Jenkins 1580.1** 이후 버전을 요구합니다.
+## Installing Jenkins  
 
-#### 플러그인 설치
+Find out how to install Jenkins and details on [https://jenkins.io/](https://jenkins.io/).
 
-1. Jenkins 관리 ▷ 플러그인 관리 ▷ 고급 탭 ▷ 플러그인 올리기 메뉴에서 **tcdeploy-upload-jenkins.hpi** 파일을 올립니다.
-([tcdeploy-upload-jenkins.hpi](http://images.hangame.co.kr/tcdeploy/plugins/upload/jenkins/tcdeploy-upload-jenkins-ext.hpi) 다운로드 링크)
-    
-    ![[그림 1] 플러그인 올리기 ](http://static.toastoven.net/prod_tcdeploy/devguide/01.png)
-    <center>[그림 1] 플러그인 올리기</center>
+#### Minimum Version Requirements for Jenkins 
 
-2. 설치가 완료되면 "설치된 플러그인 목록" 탭 메뉴에서 아래 [그림 2]와 같이 설치된 내역을 확인할 수 있습니다.
-    
-    ![[그림 2] 설치된 플러그인 목록](http://static.toastoven.net/prod_tcdeploy/devguide/02.png)
-    <center>[그림 2] 설치된 플러그인 목록</center>
+Requires **Jenkins 1580.1** or later versions.  
 
-3. 해당 빌드 설정의 "빌드 후 조치 추가" 버튼을 눌러 서버 또는 클라이언트 타입 어플리케이션 업로드 테스크를 추가할 수 있습니다.
-    
-    ![[그림 3] 설치된 플러그인 목록](http://static.toastoven.net/prod_tcdeploy/devguide/03.png)
-    <center>[그림 3] 설치된 플러그인 목록</center>
+1. Go to **Manage Jenkins > Manage Plugin > Advanced > Upload Plugin** and upload **tcdeploy-upload-jenkins.hpi**. 
+     (Download from [tcdeploy-upload-jenkins.hpi](http://images.hangame.co.kr/tcdeploy/plugins/upload/jenkins/tcdeploy-upload-jenkins-ext.hpi))
 
-#### 서버(server) 타입 어플리케이션 업로드 플러그인 설정
+     ![[Figure 1] Upload Plugin ](http://static.toastoven.net/prod_tcdeploy/devguide/01.png)
 
-서버 타입 어플리케이션 업로드 플러그인은 성공적으로 빌드된 결과물을 ZIP으로 압축해서 TCD 서버로 업로드 해줍니다.
+2. When installation is completed, find it from the **List of Plugin Installation** as below. ![[Figure 2] List of Installed Plugins](http://static.toastoven.net/prod_tcdeploy/devguide/02.png)
 
-![[그림 4] 서버 어플리케이션 업로드 플러그인 설정](http://static.toastoven.net/prod_tcdeploy/devguide/04.png)
-<center>[그림 4] 서버 어플리케이션 업로드 플러그인 설정</center>
+3. Click *Build and Add Measures** of the **Build Setting** to add tasks to upload server or client type applications.  
+
+    ![[Figure 3] List of Installed Plugins](http://static.toastoven.net/prod_tcdeploy/devguide/03.png)
+
+#### Plugin Setting for Server Type Application Uploads 
+
+With server-type application upload plugin, build results can be compressed in zip and uploaded to a TOAST Cloud Deploy (TCD) server. 
+
+![[Figure 4] Plugin Setting for Server Application Uploads](http://static.toastoven.net/prod_tcdeploy/devguide/04.png)
 
 * enable upload
-    * 플러그인의 동작의 활성화/비활성화 여부를 결정하는 옵션 입니다. 플러그인 설정이 저장된 상태를 유지하면서 플러그인의 동작은 비활성화하고 싶을때 유용합니다.
+    * Decide whether to enable/disable plugin operations. It is useful to disable plugin operations, while plugin setting is saved. 
 * publish path
-    * 빌드가 완료된 워크스페이스 상에서 배포대상이 될 상대경로 입니다. 예제에서는 /로 입력되어있는데 이 경우\, JENKINS\_HOME/jobs/프로젝트명/workspace 이하의 내용들이 업로드 대상 경로가 되고\, target이라고 입력한다면 JENKINS\_HOME/jobs/프로젝트명/workspace/target 이하의 내용들이 업로드 대상 경로가 됩니다\.
+    * It is the path to be deployed to, from the workspace where build is completed. The example shows /, and in this case, what follows  JENKINS\_HOME/jobs/projectname/workspace becomes the path to upload, and if you enter target, then what follows JENKINS\_HOME/jobs/projectname/workspace/target becomes the path. 
 * artifact id
-    * 아티펙트 ID입니다. 숫자만 입력될 수 있습니다.
-* app key
-    * 인증을 위한 application key 입니다.
+    * Artifact ID: only numbers are allowed.
+* appkey
+    * Application key for authentication. 
 * archive file name
-    * 생성될 zip파일의 이름입니다. 이름을 지정하지 않으면 기본 이름으로 자동등록됩니다.
-        * 예) 기본 파일명 tcdeploy-artifactid-[artifactId]-[yyyyMMddHHmmss].zip
+    * Name of a .zip file to create: automatically registered in default name, if it is not specified.
+        * e.g) Basic file name
+           tcdeploy-artifactid-[artifactId]-[yyyyMMddHHmmss].zip
 * artifact version
-    * 아티펙트의 버전입니다. Jenkins의 빌드번호, 빌드 시작일시등의 표현식을 지정할 수 있습니다. 버전을 지정하지 않으면 기본 버전으로 자동등록됩니다.
-        * 표현식사용 버전형식 예\): TCD\_SVR\_$\{BUILD\_NUMBER\}**$\{JENKINS\_PROJECT\_NAME\}**$\{BUILD\_START\_DATE\}
-        * 표현식사용 버전결과 예\): TCD\_SVR\_95\_\_Maven\_Project\_Test\_\_2015\-09\-14\_16\-46\-38
-        * 주의) 버전에는 금칙문자가 지정되어있어, 공백은 밑줄문자(_)로 치환되고 ( ) - _ ~ . , 외의 ASCII특수문자들은 제거됩니다.
+    * Artifact version. Expressions, including Jenkins build number, or start date of build, can be specified. If a version is not specified, default version is automatically registered.  
+        * Format of Expression Version Use
+          e.g.) TCD\_SVR\_$\{BUILD\_NUMBER\}**$\{JENKINS\_PROJECT\_NAME\}**$\{BUILD\_START\_DATE\}
+        * Result of Expression Version Use 
+          e.g.\) TCD\_SVR\_95\_\_Maven\_Project\_Test\_\_2015\-09\-14\_16\-46\-38
+        * Caution) Prohibited characters are specified for a version: space is replaced by underscore (_ ), and ASCII special characters, except () - _ ~ . and , are deleted.
 * description
-    * 현재 업로드에 대한 간단한 설명을 첨부합니다.
+    * Add description on uploads.
 * include filter
-    * ant-style glob 패턴을 사용해서 포함규칙을 정의할 수 있습니다.
-        * 예) **/*.java,**/*.xml - 모든 하위 디렉토리의 java, xml 파일을 포함합니다.
+    * Define include filter, by using ant-style glob pattern.
+        * e.g.) **/*.java,**/*.xml - includes java, xml files of all lower directories.  
 * exclude filter
-    * ant-style glob 패턴을 사용해서 제외규칙을 정의할 수 있습니다.
-        * 예) **/.svn/** \- 모든 하위 디렉토리의 경로 이름 중\, \.svn이 들어간 파일 및 디렉토리를 제외합니다\.
+    * Define exclue filter, by using ant-style glob pattern. 
+        * e.g.) **/.svn/** \- excludes files and directories with  \, \.svn, of all path names in lower directories. 
 * compression level
-    * 압축 수준을 3단계로 설정 할 수 있습니다.
-        * Store: 무압축 / Normal: 보통압축 / Maximum: 최대압축
+    * Set the compression level in three stages: 
+        * Store: Non-compression, Normal: Normal Compression, Maximum: Maximum Compression 
 
-**[ 서버타입 어플리케이션 업로드 빌드 콘솔출력 내용 예시 ]**
+**[ Example of Server Type Application Upload Build Output on Console ]**
 
 ```
-[TCDeploy] Artifact id: [artifact id 값 출력 부분]
-[TCDeploy] App key: [application key 값 출력 부분]
+[TCDeploy] Artifact id: [artifact id output]
+[TCDeploy] App key: [application key output]
 [TCDeploy] Application type: server
-[TCDeploy] Description: 테스트 배포
-[TCDeploy] Upload address: [업로드 주소 출력 부분]
+[TCDeploy] Description: Test deployment
+[TCDeploy] Upload address: [Upload address output]
 [TCDeploy] Artifact version: TCD_SVR_95__Maven_Project_Test__2015-09-14_16-46-38
 [TCDeploy] Deploy relative path: /
 [TCDeploy] Ant include pattern: **/*.java,**/*.xml
@@ -100,42 +105,41 @@ Jenkins 설치 및 자세한 사항은 [https://jenkins.io/](https://jenkins.io/
 Finished: SUCCESS
 ```
 
-artifact id, app key 등 사용자 입력정보가 출력되고, 압축파일에 포함된 파일 내용을 출력합니다.
+Result in user input information, such as artifact ID and appkey, as well as files included in compressed files. 
 
-#### 클라이언트(client) 타입 어플리케이션 업로드 플러그인 설정
+#### Plugin Setting for Client Type Application Uploads 
 
-클라이언트 타입 어플리케이션 업로드 플러그인은 성공적으로 빌드된 결과물 중 사용자가 지정한 특정 바이너리를 TCD 서버로 업로드 해줍니다.
+User-specified binaries of successful build results from client-type application upload plugin can be uploaded to TCD server. 
 
-![[그림 5] 클라이언트 어플리케이션 업로드 플러그인 설정](http://static.toastoven.net/prod_tcdeploy/devguide/05.png)
-<center>[그림 5] 클라이언트 어플리케이션 업로드 플러그인 설정</center>
+![05.png](http://static.toastoven.net/prod_tcdeploy/devguide/05.png)
 
 * enable upload
-    * 플러그인의 동작의 활성화/비활성화 여부를 결정하는 옵션 입니다. 플러그인 설정이 저장된 상태를 유지하면서 플러그인의 동작은 비활성화하고 싶을때 유용합니다.
+    * Decide whether to enable/disable plugin operations. It is useful to disable plugin operations, while plugin setting is saved
 * artifact id
-    * 아티펙트 ID입니다. 숫자만 입력될 수 있습니다.
-* app key
-    * 인증을 위한 application key 입니다.
+    * Artifact ID: only numbers are allowed. 
+* appkey
+    * Application key for authentication.
 * binary kind
-    * 업로드할 바이너리가 안드로이드(Android) 바이너리인지 아이폰(iOS) 바이너리인지, 기타(etc) 바이너리인지 구분합니다.
+    * Categories upload binaries into Android, iOS, and others (etc).
 * artifact version
-    * 아티펙트의 버전입니다. 서버 어플리케이션의 버전 폼과 동일하게 처리됩니다.
+    * Artifact version: processed the same as server application version. 
 * (ipa/apk/etc/plist) file path
-    * 업로드할 바이너리 파일의 경로를 포함한 파일명입니다.
-        * 기타(etc)바이너리는 확장자 제한이 없지만, Android, iOS는 확장자제한이 있습니다.
-        * iOS일 때는 ipa바이너리 파일 및, plist 메타파일을 같이 업로드 해야합니다.
-        * 서버타입 업로드 테스크와는 다르게 빌드 워크스페이스 외부의 파일 경로도 입력가능합니다.
-        * 워크스페이스로 바로 접근하는 경로 표현식으로 ${WORKSPACE}/target/a.ipa와 같이 사용할 수 있습니다.
+    * File name including path of the binary file to upload. 
+        * Unlike Android and iOS, other (etc) binaries have restrictions on extension. 
+        * For iOS, .ipa binary files and .plist metafiles must be uploaded altogether. 
+        * Allows file paths outside of the build workspace as well, unlike server-type upload tasks.
+        * An expression like ${WORKSPACE}/target/a.ipa is available, as direct access path expression to workspace.
 * description
-    * 현재 업로드에 대한 간단한 설명을 첨부합니다.
+    * Add description for upload. 
 
-**[ iOS 클라이언트 타입 어플리케이션 업로드 빌드 콘솔출력 내용 예시 ]**
+**[ Example of iOS Client Type Application Upload Build Output on Console]**
 
 ```
-[TCDeploy] Artifact id: [artifact id 값 출력 부분]
-[TCDeploy] App key: [application key 값 출력 부분]
+[TCDeploy] Artifact id: [artifact id output]
+[TCDeploy] App key: [application key output]
 [TCDeploy] Application type: client
-[TCDeploy] Description: 클라이언트 프로그램 테스트 업로드
-[TCDeploy] Upload address: [업로드 주소 출력 부분]
+[TCDeploy] Description: Upload of client program test 
+[TCDeploy] Upload address: [Upload address output]
 [TCDeploy] Binary type: iOS
 [TCDeploy] Binary version: IOS_59__build_iOS_Project_Test__2015-09-16_11-13-12
 [TCDeploy] iOS binary file path: /tcdUploadTest/a.ipa
@@ -145,70 +149,58 @@ artifact id, app key 등 사용자 입력정보가 출력되고, 압축파일에
 Finished: SUCCESS
 ```
 
-artifact id, app key 등 사용자 입력정보가 출력되고, 업로드할 바이너리 및 메타파일이 출력됩니다.
+Result in user input information, such as artifact ID and appkey, as well as binaries and metafiles to upload. 
 
-## Jenkins-cli Build Profile
+## Jenkins-CLI Build Profile
 
-사용자가 jenkins-cli를 사용하여 빌드 명령 수행에 도움을 주는 사전에 정의된 Profile입니다.
+It is the pre-defined profile supporting users to execute build commands by using Jenkins-CLI. 
 
-#### 준비사항
+#### Preparations 
 
-1. SSH Pubilc/Private Key Pair 생성
-    * ssh-keygen 또는 PuTTY Key Generator등으로 SSH Pubilc/Private Key Pair를 생성하고, Jenkins의 빌드 수행 계정에 SSH Public Key를 저장, SSH Private Key 파일은 Task 수행서버에 저장.
-        * 암호문(passphrase)이 설정되지 않은 SSH Private Key만 지원합니다.
-    * 예) http://[JENKINS_URL]/user/[사용자명]/configure 페이지에 접근하여 SSH Public Keys 항목에 생성한 SSH Public Key의 내용을 저장하고, 생성한 SSH Private Key 파일은 Task를 수행하는 서버의 사용자 지정 경로에 저장.
+1. Create SSH Pubilc/Private Key Pair 
+    * Create SSH public/private key pair with ssh-keygen or PuTTY Key Generator, and save SSH public key in the Jenkins build execution account,   and SSH private key on the task execution server. 
+        * Only the SSH private keys which are not configured with passphrases are supported.  
+    * e.g.) Access http://[JENKINS_URL]/user/[user name]/configure, and save SSH public key created on SSH Public Keys, and save SSH private key files that are created on a user-defined path on the task execution server.  
 
-2. http keep alive timeout 조정
-    * Jenkins 서버의 http keep alive timeout 값 확인 후, 값 조정.
-    * 예) jenkins를 RPM으로 설치했을 경우,
-        * /etc/sysconfig/jenkins 의 JENKINS_ARGS에 httpKeepAliveTimeout=[적당한 밀리초값] 옵션 추가.
+2. Adjust http keep alive timeout 
+    * Check http keep alive timeout at a Jenkins server, and adjust the value.
+    * e.g) If Jenkins is installed on RPM,
+        * Add httpKeepAliveTimeout=[appropriate milliseconds] option to JENKINS_ARGS of /etc/sysconfig/jenkins.
 
-3. Stream 예외 발생 관련
-    * 빌드 콘솔 출력중 java.io.StreamCorruptedException이 발생할 경우 Jenkins를 수행하는 JVM옵션에 -Dhudson.diyChunking=false 옵션 추가.
-    * 예) jenkins를 RPM으로 설치했을 경우.
-        * /etc/sysconfig/jenkins의 JENKINS\_JAVA\_OPTIONS에 -Dhudson.diyChunking=false 옵션 추가.
+3. Regarding Stream Exceptions 
+    * In case java.io.StreamCorruptedException occurs during build output is displayed on console, add -Dhudson.diyChunking=false option to JVM option which is for Jenkins.   
+    * e.g.) If Jenkins is installed on RPM,
+        * Add Dhudson.diyChunking=false to JENKINS\_JAVA\_OPTIONS of /etc/sysconfig/jenkins.
 
-#### Profile 설정
+#### Setting Profile 
 
-![[그림 6] Jenkins-cli Build Profile 설정](http://static.toastoven.net/prod_tcdeploy/devguide/06.png)
-<center>[그림 6] Jenkins-cli Build Profile 설정</center>
+![06.png](http://static.toastoven.net/prod_tcdeploy/devguide/06.png)
 
-**[ 사용자 입력 내용 ]**
+**[ User Inputs ]**
 
-* OS 선택
-* RunAs 입력
-    * 실행 계정을 입력 합니다.
+* Select OS 
+* RunAs 
+    * Enter execution account.
 * JenkinsServer
-    * 도메인 또는 IP를 입력 합니다.
+    * Enter domain or IP. 
 * Server Charset
-    * jenkins cli를 수행시킬 서버의 문자집합을 입력합니다.
-    아무값도 입력하지 않을 경우 기본값 utf-8
+    * Enter collection of characters of a server to run Jenkins-CLI: default is UTF-8, if it is left empty.  
 * Jenkins Url
-    * 빌드명령을 수행하고자 하는 Jenkins 서버의 주소를 입력합니다.
+    * Enter Jenkin server address to run build commands. 
 * Jenkins Charset
-    * jenkins 서버의 문자집합을 입력합니다. (아무값도 입력하지 않을 경우 기본값 utf-8)
+    * Enter collection of characters of a Jenkins server: default is UTF-8, if it is left empty.  
 * Java Home
-    * jenkins-cli를 수행하기 위한 JDK 또는 JRE의 Home 경로를 입력합니다.
+    * Enter home path of JDK or JRE to perform Jenkins-CLI.  
 * Job Name
-    * 수행시킬 빌드 Job의 이름을 입력합니다.
+    * Enter name of a build job to perform.  
 * Private Key Path
-    * SSH Public Key가 설정되어있는 Jenkins 유저로 인증을 위한 SSH Private Key 파일의 저장 경로를 입력합니다.
-* User (ver. 2.46 이상 버전 필수 값)
-	* Public Key가 설정된 Id를 입력합니다.
-		* 참고 사항
-			* 2.46 이전 버전
-				* Public Key가 설정된 경우 Jenkins에서 자동 인증 진행
-			* 2.46 이상 버전
-				* User(Jenkins admin Id)가 추가 되었으며, 해당 Id에 Public Key가 설정된 경우만 인증 통과
-* Build Parameter (선택)
-    * 빌드에 필요한 파라미터를 입력 합니다.
-
-#### 연동 예시
-
-Jenkins build -> Deploy로 바이너리 업로드(by plugin) ->배포 시나리오 실행(배포/종료/재시작/기타 사전작업 및 후처리)
-이를 위해 다음의 순서를 통해 배포환경을 구축해야 합니다.
-
-1. Deploy에 Artifact를 생성
-2. jenkins build job 설정
-3. 서버그룹 생성
-4. 배포 시나리오 작성
+    * Enter saving path of the SSH private key file to authenticate Jenkins user with SSH public key setting.
+* User (required value for 2.46 or higher versions)
+  * Enter ID with public key setting.
+  	* Reference
+  		* 2.46 or Earlier Versions
+  			* Automatically authenticated at Jenkin on the public key setting. 
+  		* 2.46 or Later Versions
+  			* Added with User (Jenkins admin ID), and authenticated only when public key is set for the ID. 
+* Build Parameter (optional)
+    * Enter parameters required for a build.
