@@ -25,7 +25,7 @@ Jenkinsのインストールおよび詳細は、[https://jenkins.io/](https://j
 #### プラグインインストール
 
 1. **Jenkins管理 > プラグイン管理 > 詳細設定 > プラグインアップロード**メニューで、**tcdeploy-upload-jenkins.hpi**ファイルをアップロードします。
-  ([tcdeploy-upload-jenkins.hpi](http://images.hangame.co.kr/tcdeploy/plugins/upload/jenkins/tcdeploy-upload-jenkins-ext.hpi)ダウンロードリンク)
+  ([tcdeploy-upload-jenkins.hpi](http://static.toastoven.net/prod_tcdeploy/plugins/tcdeploy-upload-jenkins-ext.hpi)ダウンロードリンク)
 
     ![[図1]プラグインアップロード](http://static.toastoven.net/prod_tcdeploy/devguide/01.png)
 
