@@ -25,7 +25,7 @@ Jenkins 설치 및 자세한 사항은 [https://jenkins.io/](https://jenkins.io/
 #### 플러그인 설치
 
 1. **Jenkins 관리 > 플러그인 관리 > 고급 탭 > 플러그인 올리기** 메뉴에서 **tcdeploy-upload-jenkins.hpi** 파일을 업로드합니다.
-  ([tcdeploy-upload-jenkins.hpi](http://images.hangame.co.kr/tcdeploy/plugins/upload/jenkins/tcdeploy-upload-jenkins-ext.hpi) 다운로드 링크)
+  ([tcdeploy-upload-jenkins.hpi](http://static.toastoven.net/prod_tcdeploy/plugins/tcdeploy-upload-jenkins-ext.hpi) 다운로드 링크)
 
     ![01.png](http://static.toastoven.net/prod_tcdeploy/devguide/01.png)
 

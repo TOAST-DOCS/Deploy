@@ -1,5 +1,12 @@
 ## Dev Tool > Deploy > Release Notes
 
+### 2019.04.23
+#### Function Improvement
+* Deployment History tab > View Result popup > Update progress of distribution in real time
+
+#### Error Correction
+* Fixed an error that the task progress is not shown when deploying
+
 ### 2010.03.26
 #### Function change
 * Resource file upload capacity limit (1GB)
