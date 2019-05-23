@@ -1,5 +1,13 @@
 ## Dev Tool > Deploy > Release Notes
 
+### 2019. 05. 28.
+#### 기능 개선
+* 아티팩트 검색 기능 추가
+
+#### 오류 수정
+* 서버 그룹 수정 > tips 서버 그룹 선택 > 선택한 서버 그룹이 추가되지 않던 오류 수정
+* 배포 이력 > 결과 보기 창 > user command에 스크립트가 포함되어 있을 경우 발생하는 페이지 오류 수정
+
 ### 2019.04.23
 #### Function Improvement
 * Deployment History tab > View Result popup > Update progress of distribution in real time
