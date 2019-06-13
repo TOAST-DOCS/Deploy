@@ -1,6 +1,11 @@
 ## Dev Tool > Deploy > Release Notes
 
-### May 28, 2019 
+### June 25, 2019
+#### Error Fixes
+* Fixed error in deployment when file name exceeds 100 characters along with binary uploads
+* Fixed error in the access to download link for deleted binary, on the download page of binaries
+
+### May 28, 2019
 #### Service Improvement 
 * Search of artifacts has been added.  
 
