@@ -1,12 +1,16 @@
 ## Dev Tool > Deploy > Release Notes
 
-### 2019. 05. 28.
-#### 기능 개선
-* 아티팩트 검색 기능 추가
+### June 25, 2019
+#### Error Fixes
+* Fixed error in deployment when file name exceeds 100 characters along with binary uploads
+* Fixed error in the access to download link for deleted binary, on the download page of binaries
 
-#### 오류 수정
-* 서버 그룹 수정 > tips 서버 그룹 선택 > 선택한 서버 그룹이 추가되지 않던 오류 수정
-* 배포 이력 > 결과 보기 창 > user command에 스크립트가 포함되어 있을 경우 발생하는 페이지 오류 수정
+### May 28, 2019
+#### Service Improvement 
+* Search of artifacts has been added.  
+
+#### Error Fixed 
+* Fixed page error which occurs when Deployment History > Window for Results > User Command includes a script
 
 ### 2019.04.23
 #### Function Improvement
