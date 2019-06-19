@@ -17,7 +17,7 @@
 | Name | Type | Description | Value | Required |
 | ---- | ---- | ----------- | ----- | -------- |
 | applicationType | String | 아티팩트의 타입 | client 또는 server | true |
-| version | String | 업로드하는 바이너리의 버전, 미입력 시 timestamp로 대체 | - | false |
+| version | String | 업로드하는 바이너리의 버전, 미입력 시 timestamp로 대체 (최대 100자) | - | false |
 | description | String | 바이너리의 설명 | - | false |
 | osType | String | applicationType이 client인 경우 바이너리 파일의 OS 정보 | iOS, Android 또는 etc | false |
 | binaryFile | File | 바이너리 파일 객체 | - | true |
