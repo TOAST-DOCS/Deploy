@@ -59,7 +59,7 @@ Jenkins 설치 및 자세한 사항은 [https://jenkins.io/](https://jenkins.io/
         * 표현식 사용 버전 형식 예\) TCD\_SVR\_$\{BUILD\_NUMBER\}**$\{JENKINS\_PROJECT\_NAME\}**$\{BUILD\_START\_DATE\}
         * 표현식 사용 버전 결과 예\) TCD\_SVR\_95\_\_Maven\_Project\_Test\_\_2015\-09\-14\_16\-46\-38
         * 주의) 버전에는 금칙문자가 지정되어 있어, 공백은 밑줄(_)로 치환되고 ( ) - _ ~ . , 외의 ASCII 특수문자들은 제거됩니다.
-        * 주의) 버전의 최대 허용 문자열 길이는 100자 입니다.
+        * 주의) 버전의 최대 허용 문자열 길이는 100자입니다.
 * description
     * 업로드에 대한 설명을 추가합니다.
 * include filter
