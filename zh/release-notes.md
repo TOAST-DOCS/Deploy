@@ -2,7 +2,7 @@
 
 ### June 25, 2019
 #### Error Fixes
-* Fixed error in deployment when file name exceeds 100 characters along with binary uploads
+* Fixed error in deployment when binary version exceeds 100 characters along with binary uploads
 * Fixed error in the access to download link for deleted binary, on the download page of binaries
 
 ### May 28, 2019

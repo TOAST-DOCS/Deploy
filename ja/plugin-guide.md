@@ -59,6 +59,7 @@ Jenkinsのインストールおよび詳細は、[https://jenkins.io/](https://j
         * 表現式使用バージョン形式の例\) TCD\_SVR\_$\{BUILD\_NUMBER\}**$\{JENKINS\_PROJECT\_NAME\}**$\{BUILD\_START\_DATE\}
         * 表現式使用バージョン結果の例\) TCD\_SVR\_95\_\_Maven\_Project\_Test\_\_2015\-09\-14\_16\-46\-38
         * 注意)バージョンには禁止文字が指定されていて、スペースはアンダーバー(_)に置換され( ) - _ ~ . ,以外のASCII特殊文字は除去されます。
+        * 注意)バージョンの最大文字数は、100文字です。
 * description
     * アップロードに対する説明を追加します。
 * include filter
