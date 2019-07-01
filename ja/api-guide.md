@@ -17,7 +17,7 @@
 | Name | Type | Description | Value | Required |
 | ---- | ---- | ----------- | ----- | -------- |
 | applicationType | String | アーティファクトのタイプ | clientまたはserver | true |
-| version | String | アップロードするバイナリのバージョン、未入力の時はtimestampで代替 | - | false |
+| version | String | アップロードするバイナリのバージョンが未入力の時は、timestampで代替(最大100文字) | - | false |
 | description | String | バイナリの説明 | - | false |
 | osType | String | applicationTypeがclientの場合、バイナリファイルのOS情報 | iOS、Androidまたはetc | false |
 | binaryFile | File | バイナリファイルオブジェクト | - | true |
