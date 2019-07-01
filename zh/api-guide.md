@@ -27,7 +27,7 @@ The API allows user-configured HTTP Request to upload binaries.
 ### Sample Request For cUrl
 
 ``` java
-curl -X POST \
+curl --tlsv1.2 -X POST \
   https://api-tcd.cloud.toast.com/api/v1.0/projects/{appKey}/artifacts/{artifactId}/binary-group/{binaryGroupKey} \
   -H 'content-type: multipart/form-data' \
   -F 'binaryFile=@ojdbc14.jar' \
