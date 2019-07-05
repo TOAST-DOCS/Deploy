@@ -41,16 +41,18 @@ Jenkins 설치 및 자세한 사항은 [https://jenkins.io/](https://jenkins.io/
 
 서버 타입 애플리케이션 업로드 플러그인으로 빌드 결과물을 ZIP 형식으로 압축해서 TOAST Cloud Deploy(TCD) 서버로 업로드할 수 있습니다.
 
-![04.png](http://static.toastoven.net/prod_tcdeploy/devguide/04.png)
+![04.png](http://static.toastoven.net/prod_tcdeploy/devguide/04_1.png)
 
 * enable upload
     * 플러그인 동작의 활성화/비활성화 여부를 결정하는 옵션입니다. 플러그인 설정이 저장된 상태에서 플러그인의 동작은 비활성화하고 싶을 때 유용합니다.
 * publish path
     * 빌드가 완료된 워크스페이스에서 배포 대상이 될 상대 경로입니다. 예제에서는 /로 입력되어 있는데 이 경우, JENKINS\_HOME/jobs/프로젝트명/workspace 이하의 내용이 업로드 대상 경로가 되고, target이라고 입력하면 JENKINS\_HOME/jobs/프로젝트명/workspace/target 이하의 내용이 업로드 대상 경로가 됩니다.
-* artifact id
-    * 아티팩트 ID입니다. 숫자만 입력할 수 있습니다.
 * app key
     * 인증을 위한 application key입니다.
+* artifact id
+    * 아티팩트 ID입니다. 숫자만 입력할 수 있습니다.
+* binary group key
+    * 업로드할 바이너리 그룹의 KEY 입니다. 숫자만 입력할 수 있습니다.
 * archive file name
     * 생성될 .zip 파일의 이름입니다. 이름을 지정하지 않으면 기본 이름으로 자동 등록됩니다.
         * 예) 기본 파일 이름 tcdeploy-artifactid-[artifactId]-[yyyyMMddHHmmss].zip
@@ -113,24 +115,28 @@ artifact id, app key 등 사용자 입력 정보가 출력되고, 압축 파일�
 
 클라이언트 타입 애플리케이션 업로드 플러그인으로 성공적으로 빌드된 결과물 중 사용자가 지정한 특정 바이너리를 TCD 서버로 업로드할 수 있습니다.
 
-![05.png](http://static.toastoven.net/prod_tcdeploy/devguide/05.png)
+![05.png](http://static.toastoven.net/prod_tcdeploy/devguide/05_1.png)
 
 * enable upload
     * 플러그인 동작의 활성화/비활성화 여부를 결정하는 옵션입니다. 플러그인 설정이 저장된 상태를 유지하면서 플러그인의 동작은 비활성화하고 싶을때 유용합니다.
-* artifact id
-    * 아티팩트 ID입니다. 숫자만 입력할 수 있습니다.
 * app key
     * 인증을 위한 application key입니다.
+* artifact id
+    * 아티팩트 ID입니다. 숫자만 입력할 수 있습니다.
+* binary group key
+    * 업로드할 바이너리 그룹의 KEY 입니다. 숫자만 입력할 수 있습니다.
+* publish path
+    * 빌드가 완료된 워크스페이스에서 배포 대상이 될 상대 경로입니다. 예제에서는 /로 입력되어 있는데 이 경우, JENKINS\_HOME/jobs/프로젝트명/workspace 이하의 내용이 업로드 대상 경로가 되고, target이라고 입력하면 JENKINS\_HOME/jobs/프로젝트명/workspace/target 이하의 내용이 업로드 대상 경로가 됩니다.
 * binary kind
     * 업로드할 바이너리가 Android 바이너리인지 iOS 바이너리인지, 기타(etc) 바이너리인지 구분합니다.
-* artifact version
-    * 아티팩트 버전입니다. 서버 애플리케이션의 버전 폼과 동일하게 처리됩니다.
 * (ipa/apk/etc/plist) file path
     * 업로드할 바이너리 파일의 경로를 포함한 파일 이름입니다.
         * 기타(etc) 바이너리는 확장자 제한이 없지만, Android, iOS는 확장자 제한이 있습니다.
         * iOS일 때는 .ipa 바이너리 파일 및 .plist 메타파일을 같이 업로드해야 합니다.
         * 서버 타입 업로드 태스크와는 다르게 빌드 워크스페이스 외부의 파일 경로도 입력할 수 있습니다.
         * 워크스페이스로 바로 접근하는 경로 표현식으로 ${WORKSPACE}/target/a.ipa와 같이 사용할 수 있습니다.
+* binary version
+    * 바이너리 버전입니다. 서버 애플리케이션의 버전 폼과 동일하게 처리됩니다.
 * description
     * 업로드의 설명을 추가합니다.
 
