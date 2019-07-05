@@ -56,8 +56,8 @@ Jenkins 설치 및 자세한 사항은 [https://jenkins.io/](https://jenkins.io/
 * archive file name
     * 생성될 .zip 파일의 이름입니다. 이름을 지정하지 않으면 기본 이름으로 자동 등록됩니다.
         * 예) 기본 파일 이름 tcdeploy-artifactid-[artifactId]-[yyyyMMddHHmmss].zip
-* artifact version
-    * 아티팩트 버전입니다. Jenkins의 빌드 번호, 빌드 시작 일시 등의 표현식을 지정할 수 있습니다. 버전을 지정하지 않으면 기본 버전으로 자동 등록됩니다.
+* binary version
+    * 바이너리 버전입니다. Jenkins의 빌드 번호, 빌드 시작 일시 등의 표현식을 지정할 수 있습니다. 버전을 지정하지 않으면 기본 버전으로 자동 등록됩니다.
         * 표현식 사용 버전 형식 예\) TCD\_SVR\_$\{BUILD\_NUMBER\}**$\{JENKINS\_PROJECT\_NAME\}**$\{BUILD\_START\_DATE\}
         * 표현식 사용 버전 결과 예\) TCD\_SVR\_95\_\_Maven\_Project\_Test\_\_2015\-09\-14\_16\-46\-38
         * 주의) 버전에는 금칙문자가 지정되어 있어, 공백은 밑줄(_)로 치환되고 ( ) - _ ~ . , 외의 ASCII 특수문자들은 제거됩니다.
