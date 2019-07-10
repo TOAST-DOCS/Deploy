@@ -35,6 +35,8 @@ curl --tlsv1.2 -X POST \
   -F 'description=A binary file of some kind'
 ```
 
+> Deploy API를 curl로 호출하는 경우, --tlsv1.2 옵션을 추가해 주세요.
+
 ### Sample Request For JAVA
 
 아래 코드는 HttpClient 라이브러리(httpclient 4.3.6)를 사용하여 API를 통해 바이너리를 업로드하는 코드의 예시입니다.
