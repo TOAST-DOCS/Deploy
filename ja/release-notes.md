@@ -1,9 +1,6 @@
 ## Dev Tool > Deploy > Release Notes
 
 ### 2019. 07. 23.
-#### システム変更
-* SSL ProtocolでTLSv1.2サポート
-    * Deploy APIをcurlで呼び出す場合、--tlsv1.2オプションの追加が必要
 #### 機能改善
 * バイナリ > iOSファイルアップロード > plist解析失敗エラーに対する案内を改善
 #### 機能修正

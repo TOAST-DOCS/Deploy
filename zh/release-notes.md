@@ -1,9 +1,6 @@
 ## Dev Tool > Deploy > Release Notes
 
 ### July 23, 2019.
-#### System Changes
-* TLS v1.2 supported with SSL protocol
-    * To call Deploy API with curl, it is required to add the --tlsv1.2 option.
 #### Feature Updates
 * Guides provided on Binary > iOS File Uploads > Failure of Plist Parsing
 #### Feature Modification
