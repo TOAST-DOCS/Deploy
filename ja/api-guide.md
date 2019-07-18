@@ -35,8 +35,6 @@ curl -X POST \
   -F 'description=A binary file of some kind'
 ```
 
-> Deploy APIをcurlで呼び出す場合、--tlsv1.2オプションを追加してください。
-
 ### Sample Request For JAVA
 
 下記コードは、HttpClientライブラリ(httpclient 4.3.6)を使用して、APIを通してバイナリをアップロードするコードの例です。

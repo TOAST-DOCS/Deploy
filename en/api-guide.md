@@ -35,8 +35,6 @@ curl -X POST \
   -F 'description=A binary file of some kind'
 ```
 
-> To call Deploy API with curl, add the --tlsv1.2 option.
-
 ### Sample Request For JAVA
 
 Below is an example of uploading binaries via API by using HttpClient library (httpclient 4.3.6). 
