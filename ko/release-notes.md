@@ -1,9 +1,6 @@
 ## Dev Tool > Deploy > 릴리스 노트
 
 ### 2019. 07. 23.
-#### 시스템 변경
-* SSL Protocol로 TLSv1.2 지원
-    * Deploy API를 curl로 호출하는 경우, --tlsv1.2 옵션 추가 필요
 #### 기능 개선
 * 바이너리 > iOS 파일 업로드 > plist 파싱 실패 오류에 대한 안내 개선
 #### 기능 수정
