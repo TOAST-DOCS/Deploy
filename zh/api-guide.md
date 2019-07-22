@@ -104,7 +104,7 @@ try {
 ### Response Sample
 
 ``` json
-Result: {
+{
 	"header": {
 		"isSuccessful": true,
 		"serverTime": 1533526167415,
