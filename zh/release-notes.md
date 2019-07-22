@@ -1,5 +1,11 @@
 ## Dev Tool > Deploy > Release Notes
 
+### July 23, 2019.
+#### Feature Updates
+* Guides provided on Binary > iOS File Uploads > Failure of Plist Parsing
+#### Feature Modification
+* Adjusted that the number of characters for sms delivery does not exceed specified size.
+
 ### June 25, 2019
 #### Error Fixes
 * Fixed error in deployment when binary version exceeds 100 characters along with binary uploads
