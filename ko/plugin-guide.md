@@ -52,7 +52,7 @@ Jenkins 설치 및 자세한 사항은 [https://jenkins.io/](https://jenkins.io/
 * artifact id
     * 아티팩트 ID입니다. 숫자만 입력할 수 있습니다.
 * binary group key
-    * 업로드할 바이너리 그룹의 KEY 입니다. 숫자만 입력할 수 있습니다.
+    * 업로드할 바이너리 그룹의 키입니다. 숫자만 입력할 수 있습니다.
 * archive file name
     * 생성될 .zip 파일의 이름입니다. 이름을 지정하지 않으면 기본 이름으로 자동 등록됩니다.
         * 예) 기본 파일 이름 tcdeploy-artifactid-[artifactId]-[yyyyMMddHHmmss].zip
@@ -124,7 +124,7 @@ artifact id, app key 등 사용자 입력 정보가 출력되고, 압축 파일�
 * artifact id
     * 아티팩트 ID입니다. 숫자만 입력할 수 있습니다.
 * binary group key
-    * 업로드할 바이너리 그룹의 KEY 입니다. 숫자만 입력할 수 있습니다.
+    * 업로드할 바이너리 그룹의 키입니다. 숫자만 입력할 수 있습니다.
 * publish path
     * 빌드가 완료된 워크스페이스에서 배포 대상이 될 상대 경로입니다. 예제에서는 /로 입력되어 있는데 이 경우, JENKINS\_HOME/jobs/프로젝트명/workspace 이하의 내용이 업로드 대상 경로가 되고, target이라고 입력하면 JENKINS\_HOME/jobs/프로젝트명/workspace/target 이하의 내용이 업로드 대상 경로가 됩니다.
 * binary kind
