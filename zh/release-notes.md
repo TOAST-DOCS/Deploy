@@ -1,4 +1,7 @@
 ## Dev Tool > Deploy > Release Notes
+### Sept. 24, 2019 
+#### Feature Updates 
+* Added message that binary deployment fails due to inaccessible network 
 
 ### July 23, 2019.
 #### Feature Updates

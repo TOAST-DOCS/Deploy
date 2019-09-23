@@ -43,16 +43,18 @@ With server-type application upload plugin, build results can be compressed in z
     * Decide whether to enable/disable plugin operations. It is useful to disable plugin operations, while plugin setting is saved. 
 * publish path
     * It is the path to be deployed to, from the workspace where build is completed. The example shows /, and in this case, what follows  JENKINS\_HOME/jobs/projectname/workspace becomes the path to upload, and if you enter target, then what follows JENKINS\_HOME/jobs/projectname/workspace/target becomes the path. 
+* app key
+    * Application key for authentication. 
 * artifact id
     * Artifact ID: only numbers are allowed.
-* appkey
-    * Application key for authentication. 
+* binary group key
+    * Key for the binary group to be uploaded: only numbers are allowed. 
 * archive file name
     * Name of a .zip file to create: automatically registered in default name, if it is not specified.
         * e.g) Basic file name
            tcdeploy-artifactid-[artifactId]-[yyyyMMddHHmmss].zip
-* artifact version
-    * Artifact version. Expressions, including Jenkins build number, or start date of build, can be specified. If a version is not specified, default version is automatically registered.  
+* binary version
+    * Binary version. Expressions, including Jenkins build number, or start date of build, can be specified. If a version is not specified, default version is automatically registered.  
         * Format of Expression Version Use
           e.g.) TCD\_SVR\_$\{BUILD\_NUMBER\}**$\{JENKINS\_PROJECT\_NAME\}**$\{BUILD\_START\_DATE\}
         * Result of Expression Version Use 
@@ -115,20 +117,24 @@ User-specified binaries of successful build results from client-type application
 
 * enable upload
     * Decide whether to enable/disable plugin operations. It is useful to disable plugin operations, while plugin setting is saved
+* app key
+    * Application key for authentication.
 * artifact id
     * Artifact ID: only numbers are allowed. 
-* appkey
-    * Application key for authentication.
+* binary group key
+    * Key for the binary group to be uploaded: only numbers are allowed.
+* publish path
+    * It is the path to be deployed to, from the workspace where build is completed. The example shows /, and in this case, what follows  JENKINS\_HOME/jobs/projectname/workspace becomes the path to upload, and if you enter target, then what follows JENKINS\_HOME/jobs/projectname/workspace/target becomes the path.
 * binary kind
     * Categories upload binaries into Android, iOS, and others (etc).
-* artifact version
-    * Artifact version: processed the same as server application version. 
 * (ipa/apk/etc/plist) file path
     * File name including path of the binary file to upload. 
         * Unlike Android and iOS, other (etc) binaries have restrictions on extension. 
         * For iOS, .ipa binary files and .plist metafiles must be uploaded altogether. 
         * Allows file paths outside of the build workspace as well, unlike server-type upload tasks.
         * An expression like ${WORKSPACE}/target/a.ipa is available, as direct access path expression to workspace.
+* binary version
+    * Binary version: processed the same as server application version. 
 * description
     * Add description for upload. 
 
