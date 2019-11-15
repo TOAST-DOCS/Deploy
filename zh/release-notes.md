@@ -1,4 +1,11 @@
 ## Dev Tool > Deploy > Release Notes
+
+### 2019. 11. 26
+#### 기능 개선
+* 바이너리 그룹의 리젼 개념 추가
+    * 바이너리 생성시 지정 가능
+    * 바이너리 다운로드 및 배포시 연동되는 리젼의 스토리지에서 다운로드가 가능하게 됨
+    
 ### Sept. 24, 2019 
 #### Feature Updates 
 * Added message that binary deployment fails due to inaccessible network 
