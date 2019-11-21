@@ -1,10 +1,10 @@
 ## Dev Tool > Deploy > Release Notes
 
-### 2019. 11. 26
-#### 기능 개선
-* 바이너리 그룹의 리젼 개념 추가
-    * 바이너리 생성시 지정 가능
-    * 바이너리 다운로드 및 배포시 연동되는 리젼의 스토리지에서 다운로드가 가능하게 됨
+### Nov. 26, 2019 
+#### Feature Updates 
+* The Concept of Region for Binary Groups 
+    * Each binary can be created under a region 
+    * Can be downloaded from the storage of a region which is integrated with binaries for downloading or deployment 
     
 ### Sept. 24, 2019 
 #### Feature Updates 
