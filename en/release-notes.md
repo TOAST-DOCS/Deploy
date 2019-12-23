@@ -1,5 +1,11 @@
 ## Dev Tool > Deploy > Release Notes
 
+### Dec. 24, 2019 
+#### Feature Updates 
+* The Concept of Region for Binary Groups 
+    * Each binary can be created under a region 
+    * Can be downloaded from the storage of a region which is integrated with binaries for downloading or deployment 
+
 ### Sept. 24, 2019 
 #### Feature Updates 
 * Added message that binary deployment fails due to inaccessible network 
