@@ -1,5 +1,12 @@
 ## Dev Tool > Deploy > 릴리스 노트
 
+### 2020. 03. 24.
+#### 기능 개선
+* Health Check Task개선
+    * 개별 서버 Health Check 가능 추가
+* TOAST Cloud Trail 서비스 연동
+    * Toast Cloud Trail에서 Deploy 콘솔에서 발생한 사용자 이벤트 확인 가능
+
 ### 2020. 02. 25.
 #### 기능 개선
 * 아티팩트 생성 시 기본 바이너리 그룹 리젼 설정 기능 추가
