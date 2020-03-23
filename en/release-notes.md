@@ -1,5 +1,12 @@
 ## Dev Tool > Deploy > Release Notes
 
+### March 24, 2020
+#### Feature Updates
+* Health Check Task Updates
+    * Allows the health check feature for individual servers 
+* Service Integration with TOAST Cloud Trail 
+    * TOAST Cloud Trail can check user events that occur on Deploy console  
+    
 ### Dec. 24, 2019
 #### Feature Updates
 * Added Region for Binary Groups
