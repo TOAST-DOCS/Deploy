@@ -6,7 +6,16 @@
     * Allows the health check feature for individual servers 
 * Service Integration with TOAST Cloud Trail 
     * TOAST Cloud Trail can check user events that occur on Deploy console  
-    
+
+### Feb. 25, 2020
+#### Feature Updates
+* Added the feature of default region setting for binary groups, when an artifact is created
+    * Region (KR1/JP1) can be specified for binary groups when an artifact is created
+* Added the feature of specifying default binary group for an artifact setting
+    * Select from binary groups within artifact
+#### Bug Fixes
+* Fixed invalid binary group key setting for a binary task, when a scenario is uploaded
+
 ### Dec. 24, 2019
 #### Feature Updates
 * Added Region for Binary Groups
