@@ -1,5 +1,9 @@
 ## Dev Tool > Deploy > Release Notes
 
+### April 28, 2020
+#### Feature Updates
+* Removed reference of http resources within https page 
+
 ### March 24, 2020
 #### Feature Updates
 * Health Check Task Updates
