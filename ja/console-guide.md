@@ -9,17 +9,17 @@
 
 (ここで扱わない機能は、[機能詳細ガイド](/Dev%20Tool/Deploy/ja/reference/)で確認できます。)
 
-## サービス使用前の必須事項
+## サービスの利用にあたってのシステム要件
 
 ![SSH接続必須](http://static.toastoven.net/prod_tcdeploy/getstarted/console_ssh_required.png)
 
 
 > TOAST Deployは、SSH接続でサーバーの配布コマンドを伝達します。 
-> 配布前の配布target serverとSSHで接続する必要があるため
-> target serverのIP、ポート、ファイアウォール例外処理などのSSH接続のための準備が必要です。
+> 配布前の配布先ターゲットサーバーとSSHで接続する必要があるため
+> ターゲットサーバーのIP、ポート、ファイアウォールでのアクセス元の許可などのSSH接続のための準備が必要です。
 
 
-### OS別要求事項
+### OS別要件
 #### Linux
 * curl 7.19.7-43バージョン以上
 
@@ -27,30 +27,30 @@
 * SSHインストール必要
     * SSH Shell: PowerShell指定
 
-### TOAST VM配布要求事項
-#### 公認IP付与
-* TOASTのVMインスタンスに配布するには、VMインスタンス[Floating IP](https://docs.toast.com/ja/Compute/Instance/ja/console-guide/#ip_1)を作成して、公認IPを付与する必要があります。
+### TOASTインスタンスへ配布するのための要件
+#### グローバルIPの付与
+* TOASTのインスタンスに配布するには、インスタンスに[Floating IP](https://docs.toast.com/ja/Compute/Instance/ja/console-guide/#ip_1)接続して、グローバルIPを付与する必要があります。
 
 #### セキュリティー例外の追加
-* 配布するVMインスタンスの[セキュリティーグループ](https://docs.toast.com/ja/Compute/Instance/ja/console-guide/#_13)に、DeployサービスIP(下記)をSSH Ruleで追加します。
+* 配布するインスタンスの[セキュリティーグループ](https://docs.toast.com/ja/Compute/Instance/ja/console-guide/#_13)に、DeployサービスのIP(下記)をSSH のアクセスルール行に追加します。
 ```
 133.186.185.112/28
 133.186.188.208/28
 ```
 ##### 参考)セキュリティー例外追加方法
 
-![deploy_01_201812](https://static.toastoven.net/prod_tcdeploy/deploy_01_201812.png)
+![deploy_01_201812](https://static.toastoven.net/prod_tcdeploy/ja/deploy_01_ja_20200519.png)
 
 1. TOASTコンソールの**Compute**サービスの中から**Instance**を選択します。
-2. 現在VMに設定されているセキュリティーグループを選択するか、**+ Security Group作成**をクリックして新規セキュリティーグループ(Security Group)を作成します。
-3. **+ Rule追加**ボタンをクリックします。 
-    * Rule：SSHを選択します。
+2. 対象のインスタンスに設定されているセキュリティグループを選択するか、**+ セキュリティグループの作成**　をクリックして新規セキュリティグループを作成します。
+3. **+ セキュリティポリシー作成**　をクリックします。 
+    * IPプロトコル　SSH を選択します。
     * CIDRにIPを入力します。
     * 帯域を入力することもできます(例：133.186.188.208/28)。
 
-### TOAST VM以外のサーバー配布要求事項
-#### 公認IP付与
-* SSH接続のために公認IPを付与する必要があります。
+### TOASTインスタンス以外のサーバー配布要求事項
+#### グローバルIP付与
+* SSH接続のためにグローバルIPを付与する必要があります。
 
 #### ファイアウォールおよびNetwork ACL設定
 * 外部からアクセスできるように、下記IPに対してネットワークとファイアウォール例外設定を追加してください。
@@ -63,17 +63,17 @@
 
 次は、Deployサービスのコンソール画面です。
 
-![deploy_02_201812](https://static.toastoven.net/prod_tcdeploy/deploy_02_201812.png)
+![deploy_02_ja_20200519](https://static.toastoven.net/prod_tcdeploy/ja/deploy_02_ja_20200519.png)
 
 ## Client Application
 
-クライアントアプリケーション配布設定は、大きく分けてアーティファクト設定とバイナリアップロードの段階を経ます。
+クライアントアプリケーション配布設定は、大きく分けてアーティファクト設定、その後、バイナリアップロードの順に行います。
 
 ### アーティファクト設定
 
-![deploy_03_201812](https://static.toastoven.net/prod_tcdeploy/deploy_03_201812.png)
+![deploy_03_ja_20200519](https://static.toastoven.net/prod_tcdeploy/ja/deploy_03_ja_20200519.png)
 
-1. **Deploy**画面左上で**作成**ボタンをクリックします。
+1. **Deploy**画面右上で**作成**ボタンをクリックします。
 2. アーティファクトタイプは**Client Application**を選択します。
     - 名前(必須)、説明(任意)、port(必須)を入力します。
 3. **作成**ボタンをクリックします。
@@ -82,10 +82,10 @@
 
 #### アップロード
 
-*iOSは.ipa、.plistファイルを、Androidは.apkファイルをそれぞれアップロードします。
+* iOSは.ipa、.plistファイルを、Androidは.apkファイルをそれぞれアップロードします。
 * etcの場合は、Windowsなどのその他OSのインストールアプリケーション用途に使用します。
 
-![deploy_04_201812](https://static.toastoven.net/prod_tcdeploy/deploy_04_201812.png)
+![deploy_04_ja_20200519](https://static.toastoven.net/prod_tcdeploy/ja/deploy_04_ja_20200519.png)
 
 1. **Deploy**画面の下にあるタブで、**バイナリグループ > Default**をクリックします。
    新しいバイナリグループを作成するには、**新規作成**ボタンをクリックします。
@@ -99,23 +99,23 @@
 
 #### 配布
 
-特定バイナリダウンロードページをSMSやE-mailに伝達できます。
+特定バイナリのダウンロードページをSMSやE-mailで通知できます。
 
-![deploy_05_201812](https://static.toastoven.net/prod_tcdeploy/deploy_05_201812.png)
+![deploy_05_ja_201812](https://static.toastoven.net/prod_tcdeploy/ja/deploy_05_ja_20200519.png)
 
-1. 右にある**送信**ボタンをクリックします。
-2. **ダウンロードパス送信**ウィンドウで送信タイプと受信者を選択し、**送信**ボタンをクリックします。
+1. 右にある**転送** ボタンをクリックします。
+2. **ダウンロードパス送信**ウィンドウで送信タイプと受信者を選択し、**転送**ボタンをクリックします。
     * SMS、E-mailのどちらか1つまたは両方を選択できます。
 
-指定した送信タイプで、受信者にバイナリダウンロードページが伝達されます。
+指定した転送手段で、受信者にバイナリダウンロードページが通達されます。
 
 ## Server Application
 
-サーバーアプリケーション配布設定(アーティファクト、サーバーグループ、シナリオ)、バイナリアップロード、配布段階を経ます。
+サーバーアプリケーションの配布は、基本設定（アーティファクト、サーバーグループ、シナリオ）、バイナリアップロード、配布の順に進めます。
 
 ### アーティファクト設定
 
-![deploy_06_201812](https://static.toastoven.net/prod_tcdeploy/deploy_06_201812.png)
+![deploy_06_ja_201812](https://static.toastoven.net/prod_tcdeploy/ja/deploy_06_ja_20200519.png)
 
 1. リスト上にある**作成**ボタンをクリックします。
 2. アーティファクトタイプは**Server Application**を選択します。
@@ -126,10 +126,10 @@
 
 配布するサーバーを管理できる機能です。
 
-![deploy_07_201812](https://static.toastoven.net/prod_tcdeploy/deploy_07_201812.png)
+![deploy_07_ja_201812](https://static.toastoven.net/prod_tcdeploy/ja/deploy_07_ja_20200519.png)
 
 1. **Deploy**画面下にあるタブで、**サーバーグループ > 新規作成**をクリックします。
-2. **サーバーグループ作成**ウィンドウで、新規作成するサーバーグループを設定します。
+2. **サーバーグループ生成**ウィンドウで、新規作成するサーバーグループを設定します。
     * 名前(必須)、説明(任意)を入力します。
     * OSを選択し、Shell Typeを指定します。 Shell Typeは**Shell Type**リストから選択するか、直接入力できます。
     * Phaseを選択します。サーバー機器を区分します。指定しない場合はNONEを選択します。
@@ -140,11 +140,11 @@
          * ホスト名(必須)、IPアドレス(必須)、OS(任意)を入力し、**追加**ボタンをクリックします。
          * 下記のサーバーリストに追加された内容を確認します。左にあるチェックボックスが選択されたサーバーのみ登録されます。
 
-3. 入力完了後、**作成**ボタンをクリックします。
+3. 入力完了後、**生成**ボタンをクリックします。
 
 ### シナリオ作成
 
-![deploy_08_201812](https://static.toastoven.net/prod_tcdeploy/deploy_08_201812.png)
+![deploy_08_ja_20200519](https://static.toastoven.net/prod_tcdeploy/ja/deploy_08_ja_20200519.png)
 
 1. **Deploy**画面の下にあるタブで、**配布 > 新規作成**ボタンをクリックします。
 2. 下に追加されたシナリオ領域にシナリオ名(任意)を入力します。
@@ -169,7 +169,7 @@
 * Available Variablesを使用できます。
     * Available Variables：予約語。詳細は[機能詳細ガイドのタスクメニュー](/Dev%20Tool/Deploy/ja/reference/#_25)で確認できます。
 
-![deploy_09_201812](https://static.toastoven.net/prod_tcdeploy/deploy_09_201812.png)
+![deploy_09_ja_20200519](https://static.toastoven.net/prod_tcdeploy/ja/deploy_09_ja_20200519.png)
 
 1. **配布**タブシナリオ領域の右にある**Task追加**ボタンをクリックします。
 2. **Normal Task**の下にある**User Command**をクリックします。
@@ -187,7 +187,7 @@
 
 アップロードしたバイナリファイルの配布内容を設定できるタスクです。
 
-![deploy_10_201812](https://static.toastoven.net/prod_tcdeploy/deploy_10_201812.png)
+![deploy_10_ja_20200519](https://static.toastoven.net/prod_tcdeploy/ja/deploy_10_ja_20200519.png)
 
 1. **Task追加**ボタンをクリックして、**Normal Task**の下にある**Binary Deploy**をクリックします。
 2. 新しいタスク内容を入力します。
@@ -212,7 +212,7 @@
 
 #### 3. User Command追加
 
-![deploy_11_201812](https://static.toastoven.net/prod_tcdeploy/deploy_11_201812.png)
+![deploy_11_ja_20200519](https://static.toastoven.net/prod_tcdeploy/ja/deploy_11_ja_20200519.png)
 
 1. **Task追加**ボタンをクリックし、**Normal Task**下にある**User Command**をクリックします。
 2. 新しいタスク内容を入力します。
@@ -226,7 +226,7 @@
 
 ### 実行
 
-![deploy_12_201812](https://static.toastoven.net/prod_tcdeploy/deploy_12_201812.png)
+![deploy_12_ja_20200519](https://static.toastoven.net/prod_tcdeploy/ja/deploy_12_ja_20200519.png)
 
 1. 右にある**実行**ボタンをクリックして配布を要請します。
 2. 配布実行情報を入力します。
@@ -234,7 +234,7 @@
     * **Password**パスワードを入力するか、.pemファイルを選択してアップロードします。
 3. 入力完了後、**確認**ボタンをクリックします。
 
-![deploy_13_201812](https://static.toastoven.net/prod_tcdeploy/deploy_13_201812.png)
+![deploy_13_ja_20200519](https://static.toastoven.net/prod_tcdeploy/ja/deploy_13_ja_20200519.png)
 
 1. 配布進行状況を確認できます。
 2. 配布完了を確認します。
@@ -245,5 +245,4 @@
 
 - - -
 
-サーバーにファイルを配布しました！
-TOAST Deployは、他にも多くの機能をサポートしています。詳細は[機能詳細ガイド](/Dev%20Tool/Deploy/ja/reference/)で確認できます。
+サーバーにファイルを配布しました！ TOAST Deployは、他にも多くの機能をサポートしています。詳細は[機能詳細ガイド](/Dev%20Tool/Deploy/ja/reference/)で確認できます。
