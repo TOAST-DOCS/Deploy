@@ -7,7 +7,7 @@
 
 ## メニュー説明
 
-![deploy_ref_01_2018.png](https://static.toastoven.net/prod_tcdeploy/deploy_ref_01_2018.png)
+![deploy_ref_01_ja_20200527](https://static.toastoven.net/prod_tcdeploy/ja/deploy_ref_01_ja_20200527.png)
 
 ### 1. アーティファクトメニュー領域
 
@@ -61,7 +61,7 @@
 
 配布中のシナリオの進行状況を確認できます。
 
-![deploy_ref_02_2018.png](https://static.toastoven.net/prod_tcdeploy/deploy_ref_02_2018.png)
+![deploy_ref_02_ja_20200527.png](https://static.toastoven.net/prod_tcdeploy/ja/deploy_ref_02_ja_20200527.png)
 
 * 配布中のアーティファクトをクリックし、表示されるヘッダで確認したい配布項目をクリックします。
 * 配布履歴画面で'deploying'状態をクリックします。
@@ -70,7 +70,7 @@
 
 **配布履歴**タブでは、配布履歴と配布設定、配布ノートの詳細内容を確認できます。
 
-![deploy_ref_03_2018.png](https://static.toastoven.net/prod_tcdeploy/deploy_ref_03_2018.png)
+![deploy_ref_03_ja_20200527.png](https://static.toastoven.net/prod_tcdeploy/ja/deploy_ref_03_ja_20200527.png)
 
 * 配布履歴と履歴別の詳細内容を確認
     * 配布結果
@@ -82,32 +82,32 @@
 **バイナリグループ**タブでは、バイナリをグループで管理できます。
 Develop、Staging、Productなどのサーバー機器に配布されるバイナリを区分する時に活用できます。
 
-![deploy_ref_04_2018.png](https://static.toastoven.net/prod_tcdeploy/deploy_ref_04_2018.png)
+![deploy_ref_04_ja_20200527.png](https://static.toastoven.net/prod_tcdeploy/ja/deploy_ref_04_ja_20200527.png)
 
 * グループの作成/修正、バイナリファイルのアップロード/ダウンロードが行えます。
 
-![deploy_ref_05_2018.png](https://static.toastoven.net/prod_tcdeploy/deploy_ref_05_2018.png)
+![deploy_ref_05_ja_20200527.png](https://static.toastoven.net/prod_tcdeploy/ja/deploy_ref_05_ja_20200527.png)
 
 * Clientタイプの時は、バイナリグループのパスワードを設定でき、共有されたクライアントダウンロードページのアクセスを制御できます。
     * バイナリグループを作成する時、**バイナリグループパスワード使用**を選択すると、パスワードを入力できます。
     * 該当グループダウンロードページは、TOASTにログインしなくても、設定されたパスワードだけでアクセスできます。
 * **Auto Remove Policy**ボタンをクリックして、該当バイナリグループの自動削除ポリシーを設定できます。
 
-![deploy_ref_06_2018.png](https://static.toastoven.net/prod_tcdeploy/deploy_ref_06_2018.png)
+![deploy_ref_06_ja_20200527.png](https://static.toastoven.net/prod_tcdeploy/ja/deploy_ref_06_ja_20200527.png)
 
 ### サーバーグループ
 
 配布ターゲットサーバーをグループで管理できます。
 PhaseプロパティでDevelop、Staging、Productなどのサーバー機器を区分して活用できます。
 
-![deploy_ref_07_2018.png](https://static.toastoven.net/prod_tcdeploy/deploy_ref_07_2018.png)
+![deploy_ref_07_ja_20200527.png](https://static.toastoven.net/prod_tcdeploy/ja/deploy_ref_07_ja_20200527.png)
 
 * グループ、サーバー情報を修正できます。
 * グループで使用するシナリオを設定できます。
 
 #### サーバーグループ追加
 
-![deploy_ref_08_2018.png](https://static.toastoven.net/prod_tcdeploy/deploy_ref_08_2018.png)
+![deploy_ref_08_ja_20200527.png](https://static.toastoven.net/prod_tcdeploy/ja/deploy_ref_08_ja_20200527.png)
 
 * **Deploy**の下にあるタブから、**配布**> **サーバーグループ作成**をクリックするか、**サーバーグループ**> **新規作成**をクリックします。
     * 名前(必須)、説明(任意)項目を入力します。
@@ -123,7 +123,7 @@ PhaseプロパティでDevelop、Staging、Productなどのサーバー機器を
 
 1. 個別追加
 
-![deploy_ref_08_2018.png](https://static.toastoven.net/prod_tcdeploy/deploy_ref_08_2018.png)
+![deploy_ref_08_ja_20200527.png](https://static.toastoven.net/prod_tcdeploy/ja/deploy_ref_08_ja_20200527.png)
 
 * ホスト名(必須)、IPアドレス(必須)、OS(任意)を入力し、**追加**ボタンをクリックします。
 * 下にあるサーバーリストに追加された内容を確認します。左にあるチェックボックスを選択したサーバーのみ登録されます。
@@ -131,7 +131,7 @@ PhaseプロパティでDevelop、Staging、Productなどのサーバー機器を
 
 2. 大量追加
 
-![deploy_ref_09_2018.png](https://static.toastoven.net/prod_tcdeploy/deploy_ref_09_2018.png)
+![deploy_ref_０９_ja_20200527.png](https://static.toastoven.net/prod_tcdeploy/ja/deploy_ref_09_ja_20200527.png)
 
 * **大量入力**チェックボックスを選択します。
 * 下記のような形式でサーバー情報を入力します。
@@ -153,7 +153,7 @@ PhaseプロパティでDevelop、Staging、Productなどのサーバー機器を
 
 リソースを管理できるページで、ファイル作成、アップロード、ダウンロード、修正や変更履歴の確認ができます。
 
-![deploy_ref_10_2018.png](https://static.toastoven.net/prod_tcdeploy/deploy_ref_10_2018.png)
+![deploy_ref_10_ja_20200527.png](https://static.toastoven.net/prod_tcdeploy/ja/deploy_ref_10_ja_20200527.png)
 
 ## 機能別説明
 
@@ -171,14 +171,14 @@ PhaseプロパティでDevelop、Staging、Productなどのサーバー機器を
     * APIアップロードの詳細説明は、[APIガイドのBinary Upload API](/Dev%20Tool/Deploy/ja/api-guide/#binary-upload-api)で確認できます。
 * コンソールでアップロード
 
-![deploy_ref_11_2018.png](https://static.toastoven.net/prod_tcdeploy/deploy_ref_11_2018.png)
+![deploy_ref_11_ja_20200527.png](https://static.toastoven.net/prod_tcdeploy/ja/deploy_ref_11_ja_20200527.png)
 
 1. **Deploy**の下にあるタブの中から**バイナリグループ**をクリックし、**アップロード**ボタンをクリックします。
 2. **ファイル選択**ボタンをクリックし、バイナリファイルを選択します。
 3. バージョン(任意)、説明(任意)情報を入力します。
 4. **アップロード**ボタンをクリックします。
 
-![deploy_ref_12_2018.png](https://static.toastoven.net/prod_tcdeploy/deploy_ref_12_2018.png)
+![deploy_ref_12_ja_20200527.png](https://static.toastoven.net/prod_tcdeploy/ja/deploy_ref_12_ja_20200527.png)
 
 #### 1. ダウンロード
 
@@ -220,7 +220,7 @@ ClientバイナリのAll、Fixed、Recentバージョンを、希望する方式
 
 特定バイナリダウンロードページをSMSやE-Mailで伝達できます。
 
-![deploy_ref_13_2018.png](https://static.toastoven.net/prod_tcdeploy/deploy_ref_13_2018.png)
+![deploy_ref_13_ja_20200527.png](https://static.toastoven.net/prod_tcdeploy/ja/deploy_ref_13_ja_20200527.png)
 
 1. **Deploy**の下にある**バイナリグループ**タブで、配布するバイナリファイルを選択します。
 2. 右にある**送信**ボタンをクリックします。
@@ -243,7 +243,7 @@ ClientバイナリのAll、Fixed、Recentバージョンを、希望する方式
 
 * タスクタイプ
 
-![deploy_ref_14_2018.png](https://static.toastoven.net/prod_tcdeploy/deploy_ref_14_2018.png)
+![deploy_ref_14_ja_20200527.png](https://static.toastoven.net/prod_tcdeploy/ja/deploy_ref_14_ja_20200527.png)
 
 1\. Pre-run Task
 2\. Normal Task
@@ -267,7 +267,7 @@ ClientバイナリのAll、Fixed、Recentバージョンを、希望する方式
 * ver. 2.46以前と/ver. 2.46以降のバージョンに区分されます。
 * Jenkinsビルド設定の詳細説明は、[プラグイン使用ガイド](/Dev%20Tool/Deploy/ja/plugin-guide/)を参照してください。
 
-![deploy_ref_15_2018.png](https://static.toastoven.net/prod_tcdeploy/deploy_ref_15_2018.png)
+![deploy_ref_15_ja_20200527.png](https://static.toastoven.net/prod_tcdeploy/ja/deploy_ref_15_ja_20200527.png)
 
 **[ユーザー入力内容]**
 
@@ -305,7 +305,7 @@ ClientバイナリのAll、Fixed、Recentバージョンを、希望する方式
 * エラー発生感知およびエラー発生時は、配布が中止されます。
     * **配布**タブの**シナリオ実行失敗時**で、**実行中断**が設定されている時
 
-![deploy_ref_16_2018.png](https://static.toastoven.net/prod_tcdeploy/deploy_ref_16_2018.png)
+![deploy_ref_16_ja_20200527.png](https://static.toastoven.net/prod_tcdeploy/ja/deploy_ref_16_ja_20200527.png)
 
 **[ユーザー入力内容]**
 
@@ -328,7 +328,7 @@ ClientバイナリのAll、Fixed、Recentバージョンを、希望する方式
 
 * **バイナリグループ**タブで管理するファイルを配布できます。
 
-![deploy_ref_17_2018.png](https://static.toastoven.net/prod_tcdeploy/deploy_ref_17_2018.png)
+![deploy_ref_17_ja_20200527.png](https://static.toastoven.net/prod_tcdeploy/ja/deploy_ref_17_ja_20200527.png)
 
 **[ユーザー入力内容]**
 
@@ -344,7 +344,7 @@ ClientバイナリのAll、Fixed、Recentバージョンを、希望する方式
             * 最新バージョン使用を選択すると、最新バージョンが自動的に選択されます。(最新バージョンのファイルがある場合)
             * バイナリグループを選択できます。(選択されたグループの最新バージョンが使用される)
         * 選択バージョン使用
-            * ![deploy_ref_18_2018.png](https://static.toastoven.net/prod_tcdeploy/deploy_ref_18_2018.png)
+            * ![deploy_ref_18_ja_20200527.png](https://static.toastoven.net/prod_tcdeploy/ja/deploy_ref_18_ja_20200527.png)
                 1. **最新バージョン使用**チェックボックスを選択解除します。
                 2. **アップロード**ボタンをクリックします。
                 3. **ファイル選択**ボタンをクリックして、バイナリファイルを選択します。
@@ -363,7 +363,7 @@ ClientバイナリのAll、Fixed、Recentバージョンを、希望する方式
 
 * **Resource**タブで、管理するファイルを最新バージョンで配布できます。
 
-![deploy_ref_19_2018.png](https://static.toastoven.net/prod_tcdeploy/deploy_ref_19_2018.png)
+![deploy_ref_19_ja_20200527.png](https://static.toastoven.net/prod_tcdeploy/ja/deploy_ref_19_ja_20200527.png)
 
 **[ユーザー入力内容]**
 
@@ -386,7 +386,7 @@ ClientバイナリのAll、Fixed、Recentバージョンを、希望する方式
 * スクリプトエラー発生感知およびエラー発生時は、配布が中止されます。
     * タブメニューのうち、**配布 > シナリオ実行失敗時は実行中断**が設定されている時
 
-![deploy_ref_20_2018.png](https://static.toastoven.net/prod_tcdeploy/deploy_ref_20_2018.png)
+![deploy_ref_20_ja_20200527.png](https://static.toastoven.net/prod_tcdeploy/ja/deploy_ref_20_ja_20200527.png)
 
 **[ユーザー入力内容]**
 
@@ -442,7 +442,7 @@ $${binary.binary variable as value.binaryGroupName}：バイナリに設定し�
 
 #### ファイルグループ作成
 
-![deploy_ref_21_2018.png](https://static.toastoven.net/prod_tcdeploy/deploy_ref_21_2018.png)
+![deploy_ref_21_ja_20200527.png](https://static.toastoven.net/prod_tcdeploy/ja/deploy_ref_21_ja_20200527.png)
 
 1. **新しいファイルグループ**ボタンをクリックします。
 
@@ -453,7 +453,7 @@ $${binary.binary variable as value.binaryGroupName}：バイナリに設定し�
 
 ##### ファイルアップロード
 
-![deploy_ref_22_2018.png](https://static.toastoven.net/prod_tcdeploy/deploy_ref_22_2018.png)
+![deploy_ref_22_ja_20200527.png](https://static.toastoven.net/prod_tcdeploy/ja/deploy_ref_22_ja_20200527.png)
 
 1. **ファイル追加**ボタンをクリックします。
 2. **ファイルアップロード**作成方式を選択します。
@@ -463,7 +463,7 @@ $${binary.binary variable as value.binaryGroupName}：バイナリに設定し�
 
 ##### 新規作成
 
-![deploy_ref_23_2018.png](https://static.toastoven.net/prod_tcdeploy/deploy_ref_23_2018.png)
+![eploy_ref_23_ja_20200527.png](https://static.toastoven.net/prod_tcdeploy/ja/deploy_ref_23_ja_20200527.png)
 
 1. **ファイル追加**ボタンをクリックします。
 2. **新規作成**作成方式を選択します。
@@ -483,14 +483,14 @@ $${binary.binary variable as value.binaryGroupName}：バイナリに設定し�
 
 ファイル説明を修正できます。
 
-![deploy_ref_24_2018.png](https://static.toastoven.net/prod_tcdeploy/deploy_ref_24_2018.png)
+![deploy_ref_24_ja_20200527.png](https://static.toastoven.net/prod_tcdeploy/ja/deploy_ref_24_ja_20200527.png)
 
 1. ファイル説明欄をクリックして修正します。
 2. **説明修正**ボタンをクリックします。
 
 ##### ファイル内容の修正
 
-![deploy_ref_25_2018.png](https://static.toastoven.net/prod_tcdeploy/deploy_ref_25_2018.png)
+![deploy_ref_25_ja_20200527.png](https://static.toastoven.net/prod_tcdeploy/ja/deploy_ref_25_ja_20200527.png)
 
 1. ファイル内容を修正します。
 2. **保存**ボタンをクリックします。
@@ -499,7 +499,7 @@ $${binary.binary variable as value.binaryGroupName}：バイナリに設定し�
 
 ファイルの作成/修正、ヒストリーの確認ができます。
 
-![deploy_ref_26_2018.png](https://static.toastoven.net/prod_tcdeploy/deploy_ref_26_2018.png)
+![deploy_ref_26_ja_20200527.png](https://static.toastoven.net/prod_tcdeploy/ja/deploy_ref_26_ja_20200527.png)
 
 1. **File History**ボタンをクリックして、リストを拡張します。
     * リスト確認
