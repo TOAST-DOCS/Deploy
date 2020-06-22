@@ -8,7 +8,7 @@ Deployサービスを使用すると、'1クリック'で素早くアプリケ�
 * 実行ファイル
 * その他ユーザーが定義したさまざまなファイル 
 
-![[図1]サービス画像](http://static.toastoven.net/prod_tcdeploy/overview/01.png)
+![[図1]サービス画像](https://static.toastoven.net/prod_tcdeploy/ja/01_ja.png)
 
 ## 利点
 
@@ -21,7 +21,7 @@ Deployサービスを使用すると、'1クリック'で素早くアプリケ�
 * 配布前後のシナリオ設定
 * ウェブコンソールサポート
 
-![[図2]サービス画像](http://static.toastoven.net/prod_tcdeploy/overview/02.png)
+![[図2]サービス画像](https://static.toastoven.net/prod_tcdeploy/ja/02_ja.png)
 
 ## 提供機能
 
