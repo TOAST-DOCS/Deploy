@@ -3,7 +3,7 @@
 이 문서에서는 다음과 같은 내용을 다룹니다.
 
 * [메뉴 설명](/Dev%20Tool/Deploy/ko/reference/#_1)
-* [기능별 설명](/Dev%20Tool/Deploy/ko/reference/#_16)
+* [기능별 설명](/Dev%20Tool/Deploy/ko/reference/#_18)
 
 ## 메뉴 설명
 
@@ -97,9 +97,9 @@ Develop, Staging, Product 등의 서버 장비에 배포되는 바이너리를 �
 
 ### 서버 그룹
 
-배포 타깃 서버를 그룹으로 관리할 수 있습니다.
-Phase 속성으로 Develop, Staging, Product 등의 서버 장비를 구분하여 활용할 수 있습니다.
-
+배포 타깃 서버를 그룹으로 관리할 수 있습니다. 
+Phase 속성으로 Develop, Staging, Product 등의 서버 장비를 구분하여 활용할 수 있습니다. 
+Auto Scale 서비스의 인스턴스 확장에 따른 배포를 설정할 수 있습니다.
 ![deploy_ref_07_2018.png](https://static.toastoven.net/prod_tcdeploy/deploy_ref_07_2018.png)
 
 * 그룹, 서버 정보를 수정할 수 있습니다.
@@ -148,6 +148,27 @@ Phase 속성으로 Develop, Staging, Product 등의 서버 장비를 구분하�
 
 * 왼쪽 체크 박스를 선택 해제하거나 오른쪽 **삭제** 버튼을 클릭합니다.
 * **생성** 버튼을 클릭합니다. 수정할 때는 **수정** 버튼을 클릭합니다.
+
+#### 오토스케일 그룹 추가
+![autoscale_01.png](https://static.toastoven.net/prod_tcdeploy/reference/autoscale_01.png)
+* **Deploy** 아래의 탭 중 **배포** > **서버 그룹 생성**을 클릭하거나, **서버 그룹** > **새로 만들기**를 클릭합니다.
+    * 이름(필수), 설명(선택) 항목을 입력합니다.
+    * OS를 선택한 후 Shell Type를 지정합니다. 목록에서 항목을 선택하거나 직접 입력할 수 있습니다.
+    * Phase를 선택합니다. 서버 장비를 구분합니다. 지정하지 않으려면 NONE을 선택합니다.
+    * 그룹 타입에서 **오토스케일링 서버그룹**을 선택합니다.
+    * 스케일링 그룹에서 Auto Scale 상품에서 생성한 스케일링 그룹을 선택합니다.
+    * 스케일 아웃 시나리오에 스케일링 그룹에서 스케일 아웃시 인스턴스에 실행할 시나리오를 선택합니다.
+    * **생성** 버튼을 클릭합니다.
+
+##### 스케일 아웃 시나리오 추가
+![autoscale_02.png](https://static.toastoven.net/prod_tcdeploy/reference/autoscale_02.png)
+* 그룹 생성 팝업에서 **시나리오 추가** 버튼을 클릭합니다.
+* 실행할 시나리오가 존재하는 Artifacts를 선택합니다.
+* 실행한 시나리오를 선택합니다.
+* 여러 시나리오를 선택할 수 있습니다.
+* **확인** 버튼을 클릭합니다.
+* 추가된 시나리오의 순서 지정을 위해 실행 우선순위를 변경 합니다.(우선순위가 같은경우 무작위 순서로 실행됩니다)
+* **생성** 버튼을 클릭합니다. 
 
 ### 리소스
 
