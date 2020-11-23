@@ -1,5 +1,10 @@
 ## Dev Tool > Deploy > Release Notes
 
+### August 25, 2020
+#### Feature Updates
+* Shows time data at the start and end stamp of a log monitoring task 
+* Control is available for each TOAST service role 
+
 ### April 28, 2020
 #### Feature Updates
 * Removed reference of http resources within https page 
