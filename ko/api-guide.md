@@ -128,7 +128,7 @@ try {
 
 | Name | Type | Description | Value | Required |
 | ---- | ---- | ----------- | ----- | -------- |
-| appKey | String | TOAST 클라우드 앱 키, Deploy 서비스 페이지에서 확인 가능 | - | true |
+| appKey | String | NHN Cloud 앱 키, Deploy 서비스 페이지에서 확인 가능 | - | true |
 | applicationType | String | 아티팩트의 타입 | client 또는 server | true |
 | binaryGroupKey | long | 바이너리의 그룹 키 | 미입력 시 기본 그룹으로 지정 | false |
 | version | String | 업로드하는 바이너리의 버전, 미입력 시 timestamp로 대체 | - | false |

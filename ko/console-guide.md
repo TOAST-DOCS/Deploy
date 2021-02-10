@@ -20,7 +20,7 @@
 ![SSH연결필수](http://static.toastoven.net/prod_tcdeploy/getstarted/console_ssh_required.png)
 
 
-> TOAST Deploy는 SSH 연결로 서버의 배포 명령을 전달합니다. 
+> NHN Cloud Deploy는 SSH 연결로 서버의 배포 명령을 전달합니다. 
 > 배포 전 배포 target server 와 SSH로 연결해야 하므로
 > target server의 IP, 포트, 방화벽 예외 처리와 같은 SSH 연결을 위한 준비가 필요합니다.
 
@@ -33,9 +33,9 @@
 * SSH 설치 필요
     * SSH Shell: PowerShell 지정
 
-### TOAST VM 배포 요구 사항
+### NHN Cloud VM 배포 요구 사항
 #### 공인 IP 부여
-* TOAST의 VM 인스턴스에 배포하려면 VM 인스턴스 [플로팅 IP](https://docs.toast.com/ko/Compute/Instance/ko/console-guide/#ip_1)를 생성하여 공인 IP를 부여해야 합니다.
+* NHN Cloud의 VM 인스턴스에 배포하려면 VM 인스턴스 [플로팅 IP](https://docs.toast.com/ko/Compute/Instance/ko/console-guide/#ip_1)를 생성하여 공인 IP를 부여해야 합니다.
 
 #### 보안 예외 추가
 * 배포할 VM 인스턴스의 [보안 그룹](https://docs.toast.com/ko/Compute/Instance/ko/console-guide/#_13)에 Deploy 서비스 IP(아래)를 SSH Rule로 추가합니다.
@@ -47,14 +47,14 @@
 
 ![deploy_01_201812](https://static.toastoven.net/prod_tcdeploy/deploy_01_201812.png)
 
-1. TOAST 콘솔의 **Compute** 서비스 중 **Instance**를 선택합니다.
+1. NHN Cloud 콘솔의 **Compute** 서비스 중 **Instance**를 선택합니다.
 2. 현재 VM에 설정된 보안 그룹을 선택하거나 **+ Security Group 생성**을 클릭해 신규 보안 그룹(Security Group)을 생성합니다.
 3. **+ Rule 추가** 버튼을 클릭합니다. 
     * Rule: SSH로 선택합니다.
     * CIDR에 IP를 입력합니다.
     * 대역을 입력할 수도 있습니다(예​:​ 133.186.188.208/28).
 
-### TOAST VM 이외 서버 배포 요구 사항
+### NHN Cloud VM 이외 서버 배포 요구 사항
 #### 공인 IP 부여
 * SSH 연결을 위해 공인 IP를 부여해야 합니다.
 

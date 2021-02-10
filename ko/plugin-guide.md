@@ -2,7 +2,7 @@
 
 ## Jenkins Plugin Guide
 
-TOAST Deploy Jenkins 업로드 플러그인을 사용하면 Jenkins의 빌드 결과물을 TOAST Deploy 서버로 업로드할 수 있습니다.
+NHN Cloud Deploy Jenkins 업로드 플러그인을 사용하면 Jenkins의 빌드 결과물을 NHN Cloud Deploy 서버로 업로드할 수 있습니다.
 
 ## Deploy <-> Jenkins 연동 절차
 

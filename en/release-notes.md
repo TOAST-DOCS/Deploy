@@ -3,7 +3,7 @@
 ### August 25, 2020
 #### Feature Updates
 * Shows time data at the start and end stamp of a log monitoring task 
-* Control is available for each TOAST service role 
+* Control is available for each NHN Cloud service role 
 
 ### April 28, 2020
 #### Feature Updates
@@ -13,8 +13,8 @@
 #### Feature Updates
 * Health Check Task Updates
     * Allows the health check feature for individual servers 
-* Service Integration with TOAST Cloud Trail 
-    * TOAST Cloud Trail can check user events that occur on Deploy console  
+* Service Integration with NHN Cloud Trail 
+    * NHN Cloud Trail can check user events that occur on Deploy console  
 
 ### Feb. 25, 2020
 #### Feature Updates
