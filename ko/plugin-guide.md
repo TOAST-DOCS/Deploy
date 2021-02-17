@@ -39,7 +39,7 @@ Jenkins 설치 및 자세한 사항은 [https://jenkins.io/](https://jenkins.io/
 
 #### 서버(server) 타입 애플리케이션 업로드 플러그인 설정
 
-서버 타입 애플리케이션 업로드 플러그인으로 빌드 결과물을 ZIP 형식으로 압축해서 TOAST Cloud Deploy(TCD) 서버로 업로드할 수 있습니다.
+서버 타입 애플리케이션 업로드 플러그인으로 빌드 결과물을 ZIP 형식으로 압축해서 NHN Cloud Deploy(TCD) 서버로 업로드할 수 있습니다.
 
 ![04.png](http://static.toastoven.net/prod_tcdeploy/devguide/04_1.png)
 
