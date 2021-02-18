@@ -90,7 +90,7 @@ Applicable to categorize binaries deployed for each server tool, such as Develop
 
 * In the Client type, password can be set for a binary group, and access of shared client download page can be controlled. 
     * Select **Enable Binary Group Password** and enter password to create a binary group. 
-    * Access to download page of each group is available only by password without login to TOAST. 
+    * Access to download page of each group is available only by password without login to NHN Cloud. 
 * Click **Auto Remove Policy** and set auto removal policy for each binary group. 
 
 ![deploy_ref_06_2018.png](https://static.toastoven.net/prod_tcdeploy/deploy_ref_06_2018.png)

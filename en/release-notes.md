@@ -13,8 +13,8 @@
 #### Feature Updates
 * Health Check Task Updates
     * Allows the health check feature for individual servers 
-* Service Integration with TOAST Cloud Trail 
-    * TOAST Cloud Trail can check user events that occur on Deploy console  
+* Service Integration with TOAST Trail 
+    * TOAST Trail can check user events that occur on Deploy console  
 
 ### Feb. 25, 2020
 #### Feature Updates

@@ -14,7 +14,7 @@
 ![SSH接続必須](http://static.toastoven.net/prod_tcdeploy/getstarted/console_ssh_required.png)
 
 
-> TOAST Deployは、SSH接続でサーバーの配布コマンドを伝達します。 
+> NHN Cloud Deployは、SSH接続でサーバーの配布コマンドを伝達します。 
 > 配布前の配布先ターゲットサーバーとSSHで接続する必要があるため
 > ターゲットサーバーのIP、ポート、ファイアウォールでのアクセス元の許可などのSSH接続のための準備が必要です。
 
@@ -27,9 +27,9 @@
 * SSHインストール必要
     * SSH Shell: PowerShell指定
 
-### TOASTインスタンスへ配布するのための要件
+### NHN Cloudインスタンスへ配布するのための要件
 #### グローバルIPの付与
-* TOASTのインスタンスに配布するには、インスタンスに[Floating IP](https://docs.toast.com/ja/Compute/Instance/ja/console-guide/#ip_1)接続して、グローバルIPを付与する必要があります。
+* NHN Cloudのインスタンスに配布するには、インスタンスに[Floating IP](https://docs.toast.com/ja/Compute/Instance/ja/console-guide/#ip_1)接続して、グローバルIPを付与する必要があります。
 
 #### セキュリティー例外の追加
 * 配布するインスタンスの[セキュリティーグループ](https://docs.toast.com/ja/Compute/Instance/ja/console-guide/#_13)に、DeployサービスのIP(下記)をSSH のアクセスルール行に追加します。
@@ -41,14 +41,14 @@
 
 ![deploy_01_201812](https://static.toastoven.net/prod_tcdeploy/ja/deploy_01_ja_20200519.png)
 
-1. TOASTコンソールの**Compute**サービスの中から**Instance**を選択します。
+1. NHN Cloudコンソールの**Compute**サービスの中から**Instance**を選択します。
 2. 対象のインスタンスに設定されているセキュリティグループを選択するか、**+ セキュリティグループの作成**　をクリックして新規セキュリティグループを作成します。
 3. **+ セキュリティポリシー作成**　をクリックします。 
     * IPプロトコル　SSH を選択します。
     * CIDRにIPを入力します。
     * 帯域を入力することもできます(例：133.186.188.208/28)。
 
-### TOASTインスタンス以外のサーバー配布要求事項
+### NHN Cloudインスタンス以外のサーバー配布要求事項
 #### グローバルIP付与
 * SSH接続のためにグローバルIPを付与する必要があります。
 
@@ -245,4 +245,4 @@
 
 - - -
 
-サーバーにファイルを配布しました！ TOAST Deployは、他にも多くの機能をサポートしています。詳細は[機能詳細ガイド](/Dev%20Tool/Deploy/ja/reference/)で確認できます。
+サーバーにファイルを配布しました！ NHN Cloud Deployは、他にも多くの機能をサポートしています。詳細は[機能詳細ガイド](/Dev%20Tool/Deploy/ja/reference/)で確認できます。
