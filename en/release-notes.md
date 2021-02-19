@@ -1,5 +1,16 @@
 ## Dev Tool > Deploy > Release Notes
 
+### February 23, 2021
+#### Feature Updates
+- Added Japanese translation to autoscale related features
+
+#### Bug Fixes
+* Fixed an error where autoscale deployment intermittently fails
+
+### January 26, 2021
+#### Bug Fixes
+* Fixed 2020 data check errors of deployment records tab
+* 
 ### August 25, 2020
 #### Feature Updates
 * Shows time data at the start and end stamp of a log monitoring task 
