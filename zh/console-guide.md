@@ -14,7 +14,7 @@ This document contains the following:
 ![Requires SSH Connection](http://static.toastoven.net/prod_tcdeploy/getstarted/console_ssh_required.png)
 
 
-> TOAST Deploy delivers deployment commands via SSH connection. 
+> NHN Cloud Deploy delivers deployment commands via SSH connection. 
 > Before deployment, it must be connected with a target server via SSH, so preparation is required, such as target server IP, port, and exceptions for firewall.  
 >
 
@@ -27,9 +27,9 @@ This document contains the following:
 * Requires SSH Installation 
     * SSH Shell: PowerShell specified  
 
-### Requirements for TOAST VM Deployment 
+### Requirements for NHN Cloud VM Deployment 
 #### Assign Public IP  
-* For the deployment of TOAST VM instances, create a [Floating IP](https://docs.toast.com/zh/Compute/Instance/zh/console-guide/#ip_1) for VM instance and assign public IP. 
+* For the deployment of NHN Cloud VM instances, create a [Floating IP](https://docs.toast.com/zh/Compute/Instance/zh/console-guide/#ip_1) for VM instance and assign public IP. 
 
 #### Add Security Exceptions 
 * Add IP for Deploy (as below) to [Security Group](https://docs.toast.com/zh/Compute/Instance/zh/console-guide/#_13) of a VM instance to deploy, as part of the SSH rule. 
@@ -41,14 +41,14 @@ This document contains the following:
 
 ![deploy_01_201812](https://static.toastoven.net/prod_tcdeploy/deploy_01_201812.png)
 
-1. Select **Instance** from **Compute** on the TOAST console.
+1. Select **Instance** from **Compute** on the NHN Cloud console.
 2. Select the security group set for VM, or click **+ Create Security Group** to create a new security group. 
 3. Click **+ Add Rules**. 
     * Rule: Choose SSH.
     * Enter IP at CIDR.
     * Bandwidth may be required. (e.g. 133.186.188.208/28).
 
-### Requirements for Server Deployment Other than TOAST VM 
+### Requirements for Server Deployment Other than NHN Cloud VM 
 #### Assign Public IP 
 * To connect SSH, public IP must be assigned. 
 
@@ -245,5 +245,5 @@ Deployment for uploaded binary files can be set.
 - - -
 
 File has been deployed to the server. 
-TOAST Deploy supports more functions, and find more details in [Detail Functional Guide](/Dev%20Tool/Deploy/zh/reference/).
+NHN Cloud Deploy supports more functions, and find more details in [Detail Functional Guide](/Dev%20Tool/Deploy/zh/reference/).
 

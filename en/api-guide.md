@@ -128,7 +128,7 @@ try {
 
 | Name | Type | Description | Value | Required |
 | ---- | ---- | ----------- | ----- | -------- |
-| appKey | String | Appkey of TOAST Cloud; available on the Deploy page | - | True |
+| appKey | String | Appkey of NHN Cloud; available on the Deploy page | - | True |
 | applicationType | String | Type of an artifcat | Client or server | True |
 | binaryGroupKey | long | Group key of a binary | Specified as default group, if left empty | False |
 | version | String | Version of uploaded binary; replaced with timestamp, if left empty | - | False |

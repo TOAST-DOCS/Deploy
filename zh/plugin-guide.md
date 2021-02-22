@@ -2,7 +2,7 @@
 
 ## Jenkins Plugin Guide
 
-With TOAST Deploy Jenkins Plugin, build results of Jenkins can be uploaded to TOAST Deploy servers.  
+With NHN Cloud Deploy Jenkins Plugin, build results of Jenkins can be uploaded to NHN Cloud Deploy servers.  
 
 ## Integrating Deploy <-> Jenkins 
 
@@ -35,7 +35,7 @@ Requires **Jenkins 1580.1** or later versions.
 
 #### Plugin Setting for Server Type Application Uploads 
 
-With server-type application upload plugin, build results can be compressed in zip and uploaded to a TOAST Cloud Deploy (TCD) server. 
+With server-type application upload plugin, build results can be compressed in zip and uploaded to a NHN Cloud Cloud Deploy (TCD) server. 
 
 ![[Figure 4] Plugin Setting for Server Application Uploads](http://static.toastoven.net/prod_tcdeploy/devguide/04.png)
 

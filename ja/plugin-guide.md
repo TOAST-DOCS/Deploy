@@ -2,7 +2,7 @@
 
 ## Jenkins Plugin Guide
 
-TOAST Deploy Jenkinsアップロードプラグインを使用すると、Jenkinsのビルド結果物をTOAST Deployサーバーにアップロードできます。
+NHN Cloud Deploy Jenkinsアップロードプラグインを使用すると、Jenkinsのビルド結果物をNHN Cloud Deployサーバーにアップロードできます。
 
 ## Deploy <-> Jenkins連携方法
 
@@ -39,7 +39,7 @@ Jenkinsのインストールおよび詳細は、[https://jenkins.io/](https://j
 
 #### サーバー(server)タイプアプリケーションアップロードプラグイン設定
 
-サーバータイプアプリケーションアップロードプラグインで、ビルド結果物をZIP形式に圧縮してTOAST Cloud Deploy(TCD)サーバーにアップロードできます。
+サーバータイプアプリケーションアップロードプラグインで、ビルド結果物をZIP形式に圧縮してNHN Cloud Cloud Deploy(TCD)サーバーにアップロードできます。
 
 ![[図4]サーバーアプリケーションアップロードプラグイン設定](http://static.toastoven.net/prod_tcdeploy/devguide/04.png)
 

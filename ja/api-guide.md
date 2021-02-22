@@ -128,7 +128,7 @@ try {
 
 | Name | Type | Description | Value | Required |
 | ---- | ---- | ----------- | ----- | -------- |
-| appKey | String | TOASTクラウドアプリキー、Deployサービスページで確認可能 | - | true |
+| appKey | String | NHN Cloudクラウドアプリキー、Deployサービスページで確認可能 | - | true |
 | applicationType | String | アーティファクトのタイプ | clientまたはserver | true |
 | binaryGroupKey | long | バイナリのグループキー | 未入力の時、基本グループに指定 | false |
 | version | String | アップロードするバイナリのバージョン、未入力の時、timestampで代替 | - | false |
