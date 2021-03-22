@@ -1,5 +1,9 @@
 ## Dev Tool > Deploy > Release Notes
 
+### March 23, 2021
+#### Bug Fixes
+* Fixed an issue where every member of a project would not be exposed on the client binary transfer target list
+
 ### February 23, 2021
 #### Feature Updates
 - Added Japanese translation to autoscale related features
