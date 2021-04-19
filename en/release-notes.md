@@ -3,8 +3,8 @@
 ### April 27, 2021
 #### Feature Updates
 - Links with the instance disposal feature when Auto Scale service-integrated deployment fails
-    - Scaled-out instances are disposed when deployment fails while scaling out in the Auto Scale service
-    - The scale-out feature stops working when scale-out deployment fails three times or more
+  - Scaled-out instances are disposed when deployment fails while scaling out in the Auto Scale service
+  - The scale-out feature stops working when scale-out deployment fails three times or more
 
 ### March 23, 2021
 #### Bug Fixes
