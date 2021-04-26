@@ -1,4 +1,4 @@
-## Dev Tool > Deploy > 플러그인 사용 가이드
+## Dev Tools > Deploy > 플러그인 사용 가이드
 
 ## Jenkins Plugin Guide
 

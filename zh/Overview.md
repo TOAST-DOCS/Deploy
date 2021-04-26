@@ -1,4 +1,4 @@
-## Dev Tool > Deploy > Overview
+## Dev Tools > Deploy > Overview
 
 With Deploy, applications can be deployed fast and easy, at 'One Click'. 
 

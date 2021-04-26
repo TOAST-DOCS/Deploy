@@ -1,4 +1,4 @@
-## Dev Tool > Deploy > 오류 코드
+## Dev Tools > Deploy > 오류 코드
 
 ## Ver 1.0
 
