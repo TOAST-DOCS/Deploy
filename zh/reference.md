@@ -1,4 +1,4 @@
-## Dev Tool > Deploy > Detail Functional Guide
+## Dev Tools > Deploy > Detail Functional Guide
 
 This document contains the following: 
 

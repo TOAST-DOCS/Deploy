@@ -1,4 +1,4 @@
-## Dev Tool > Deploy > 개요
+## Dev Tools > Deploy > 개요
 
 Deploy 서비스를 사용하면 '원 클릭'으로 쉽고 빠르게 애플리케이션을 배포할 수 있습니다.
 
