@@ -1,4 +1,4 @@
-## Dev Tool > Deploy > Console User Guide 
+## Dev Tools > Deploy > Console User Guide 
 
 This document contains the following: 
 

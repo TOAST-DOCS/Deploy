@@ -1,4 +1,4 @@
-## Dev Tool > Deploy > 概要
+## Dev Tools > Deploy > 概要
 
 Deployサービスを使用すると、'1クリック'で素早くアプリケーションを配布できます。
 

@@ -1,4 +1,4 @@
-## Dev Tool > Deploy > APIガイド
+## Dev Tools > Deploy > APIガイド
 
 ユーザーがHTTP Requestを直接構成してバイナリをアップロードできるAPIを提供します。
 

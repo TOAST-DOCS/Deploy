@@ -1,4 +1,4 @@
-## Dev Tool > Deploy > 콘솔 사용 가이드
+## Dev Tools > Deploy > 콘솔 사용 가이드
 
 이 문서에서는 다음과 같은 내용을 다룹니다.
 

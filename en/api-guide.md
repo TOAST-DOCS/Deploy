@@ -1,4 +1,4 @@
-## Dev Tool > Deploy > API Guide
+## Dev Tools > Deploy > API Guide
 
 The API allows user-configured HTTP Request to upload binaries. 
 

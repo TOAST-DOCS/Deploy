@@ -1,4 +1,4 @@
-## Dev Tool > Deploy > 機能詳細ガイド
+## Dev Tools > Deploy > 機能詳細ガイド
 
 この文書では、次のような内容を扱います。
 

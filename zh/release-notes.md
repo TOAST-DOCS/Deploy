@@ -1,4 +1,4 @@
-## Dev Tool > Deploy > Release Notes
+## Dev Tools > Deploy > Release Notes
 
 ### Dec. 24, 2019
 #### Feature Updates

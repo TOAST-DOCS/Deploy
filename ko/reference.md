@@ -1,4 +1,4 @@
-## Dev Tool > Deploy > 기능 상세 가이드
+## Dev Tools > Deploy > 기능 상세 가이드
 
 이 문서에서는 다음과 같은 내용을 다룹니다.
 

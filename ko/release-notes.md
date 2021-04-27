@@ -1,4 +1,4 @@
-## Dev Tool > Deploy > 릴리스 노트
+## Dev Tools > Deploy > 릴리스 노트
 
 ### 2021. 03. 23.
 #### 버그 수정
