@@ -1,4 +1,4 @@
-## Dev Tool > Deploy > User Guide for Plugin 
+## Dev Tools > Deploy > User Guide for Plugin 
 
 ## Jenkins Plugin Guide
 

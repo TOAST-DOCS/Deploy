@@ -1,4 +1,4 @@
-## Dev Tool > Deploy > Release Notes
+## Dev Tools > Deploy > Release Notes
 
 ### March 23, 2021
 #### Bug Fixes

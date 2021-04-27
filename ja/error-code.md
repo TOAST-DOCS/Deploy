@@ -1,4 +1,4 @@
-## Dev Tool > Deploy > Error Code
+## Dev Tools > Deploy > Error Code
 
 ## Ver 1.0
 

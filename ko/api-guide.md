@@ -1,4 +1,4 @@
-## Dev Tool > Deploy > API 가이드
+## Dev Tools > Deploy > API 가이드
 
 사용자가 HTTP Request를 직접 구성하여 바이너리를 업로드할 수 있는 API를 제공합니다.
 
