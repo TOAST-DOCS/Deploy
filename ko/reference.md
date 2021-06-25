@@ -67,15 +67,31 @@
 * 배포 이력 화면에서 'deploying' 상태를 클릭합니다.
 
 ### 배포 이력
-
-**배포 이력** 탭에서는 배포 이력과 배포 설정, 배포 노트의 자세한 내용을 확인할 수 있습니다.
-
-![deploy_ref_03_2018.png](https://static.toastoven.net/prod_tcdeploy/deploy_ref_03_2018.png)
-
+배포 이력과 배포 설정, 배포 노트의 자세한 내용을 확인할 수 있습니다.
+![deploy_ref_01_2021.png](https://static.toastoven.net/prod_tcdeploy/reference/deploy_ref_01_2021.png)
+![deploy_ref_02_2021.png](https://static.toastoven.net/prod_tcdeploy/reference/deploy_ref_02_2021.png)
 * 배포 이력과 이력별 자세한 내용 확인
     * 배포 결과
     * **결과 보기**에서 이력별 시나리오 설정 내용과 태스크별 실행 결과, 배포 노트를 확인할 수 있습니다.
     * 'deploying' 상태일 때 클릭하면 배포 중인 상태 보기 화면으로 이동합니다.
+
+배포 이력을 실행일 및 서버 그룹을 기준으로 검색할 수 있습니다.
+![deploy_ref_03_2021.png](https://static.toastoven.net/prod_tcdeploy/reference/deploy_ref_03_2021.png)
+![deploy_ref_04_2021.png](https://static.toastoven.net/prod_tcdeploy/reference/deploy_ref_04_2021.png)
+* 배포 이력을 실행일 및 서버 그룹을 기준으로 검색
+    * 서버 그룹 선택 창 및 실행일 시작일~종료일로 검색할 수 있습니다.
+    * 실행일 기간이 1년을 초과하여 선택할 수 없습니다(예: 2020-06-07~2021-06-17).
+     ![deploy_ref_08_2021.png](https://static.toastoven.net/prod_tcdeploy/reference/deploy_ref_08_2021.png)
+
+검색된 배포 이력을 Excel 파일로 다운로드할 수 있습니다.
+![deploy_ref_05_2021.png](https://static.toastoven.net/prod_tcdeploy/reference/deploy_ref_05_2021.png)
+* 검색된 배포 이력을 Excel 파일로 다운로드
+    * 원하는 서버 그룹 및 실행일을 선택한 후 **다운로드** 버튼을 클릭합니다.
+    * **바이너리 파일 없는 이력 제외** 옵션을 선택하여 다운로드할 수 있습니다.
+    * **바이너리 파일 없는 이력 제외** 선택 없이 **다운로드** 클릭 시
+    ![deploy_ref_07_2021.png](https://static.toastoven.net/prod_tcdeploy/reference/deploy_ref_07_2021.png)
+    * **바이너리 파일 없는 이력 제외** 선택 후 **다운로드** 클릭 시
+    ![deploy_ref_06_2021.png](https://static.toastoven.net/prod_tcdeploy/reference/deploy_ref_06_2021.png)
     
 ### 바이너리 그룹
 

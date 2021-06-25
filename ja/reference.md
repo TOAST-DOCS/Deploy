@@ -67,15 +67,31 @@
 * 配布履歴画面で'deploying'状態をクリックします。
 
 ### 配布履歴
-
-**配布履歴**タブでは、配布履歴と配布設定、配布ノートの詳細内容を確認できます。
-
-![deploy_ref_03_ja_20200527.png](https://static.toastoven.net/prod_tcdeploy/ja/deploy_ref_03_ja_20200527.png)
-
+配布履歴と配布設定、配布ノートの詳細な内容を確認できます。
+![deploy_ref_01_2021.png](https://static.toastoven.net/prod_tcdeploy/reference/deploy_ref_01_2021.png)
+![deploy_ref_02_2021.png](https://static.toastoven.net/prod_tcdeploy/reference/deploy_ref_02_2021.png)
 * 配布履歴と履歴別の詳細内容を確認
     * 配布結果
     * **結果参照**で、履歴別シナリオ設定内容とタスク別実行結果、配布ノートを確認できます。
     * 'deploying'状態の時にクリックすると、配布中の状態表示画面に移動します。
+
+配布履歴を実行日およびサーバーグループを基準に検索できます。
+![deploy_ref_03_2021.png](https://static.toastoven.net/prod_tcdeploy/reference/deploy_ref_03_2021.png)
+![deploy_ref_04_2021.png](https://static.toastoven.net/prod_tcdeploy/reference/deploy_ref_04_2021.png)
+* 配布履歴を実行日およびサーバーグループを基準に検索
+    * サーバーグループ選択ウィンドウおよび実行日(開始日～終了日)で検索できます。
+    * 実行日期間が1年を超えているため選択できません(例：2020-06-07~2021-06-17)。
+     ![deploy_ref_08_2021.png](https://static.toastoven.net/prod_tcdeploy/reference/deploy_ref_08_2021.png)
+0
+検索された配布履歴をExcelファイルでダウンロードできます。
+![deploy_ref_05_2021.png](https://static.toastoven.net/prod_tcdeploy/reference/deploy_ref_05_2021.png)
+* 検索された配布履歴をExcelファイルでダウンロード
+    * サーバーグループおよび実行日を選択した後、**ダウンロード**ボタンをクリックします。
+    * **バイナリファイルがない履歴を除外**オプションを選択してダウンロードできます。
+    * **バイナリファイルがない履歴を除外**を選択せずに**ダウンロード**をクリックした時
+    ![deploy_ref_07_2021.png](https://static.toastoven.net/prod_tcdeploy/reference/deploy_ref_07_2021.png)
+    * **バイナリファイルがない履歴を除外**を選択して**ダウンロード**をクリックした時
+    ![deploy_ref_06_2021.png](https://static.toastoven.net/prod_tcdeploy/reference/deploy_ref_06_2021.png)
     
 ### バイナリグループ
 
