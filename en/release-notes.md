@@ -1,5 +1,13 @@
 ## Dev Tools > Deploy > Release Notes
 
+### 2021. 06. 29.
+#### Feature Updates
+* Changed the **Distribution History** tab search conditions
+    * Search distribution history by the server group and date of execution (starting date and ending date)
+    * Limited the total search duration of date of execution to 1 year
+* Added a feature to be used to download the distribution history result in an Excel file
+    * Added an option to be used to download distribution histories except the ones without binary file
+    * 
 ### March 23, 2021
 #### Bug Fixes
 * Fixed an issue where every member of a project would not be exposed on the client binary transfer target list
