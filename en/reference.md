@@ -67,15 +67,31 @@ You can check progress of scenario which is under deployment.
 * Click 'deploying' status on the deployment history page. 
 
 ### Deployment History 
-
-On the **Deployment History** tab, see details of deployment history, deployment setting, and deployment note.  
-
-![deploy_ref_03_2018.png](https://static.toastoven.net/prod_tcdeploy/deploy_ref_03_2018.png)
-
+You can see the detailed information on distribution history, settings, and notes.
+![deploy_ref_01_2021.png](https://static.toastoven.net/prod_tcdeploy/reference/deploy_ref_01_2021.png)
+![deploy_ref_02_2021.png](https://static.toastoven.net/prod_tcdeploy/reference/deploy_ref_02_2021.png)
 * Check Deployment History and Its Details   
     * Deployment Result
     * Find setting of each history scenario, task execution results, and deployment note at **View Results**.
     * Click 'deploying' status, and go to view deploying status.   
+
+You can search distribution history by date of execution and server group.
+![deploy_ref_03_2021.png](https://static.toastoven.net/prod_tcdeploy/reference/deploy_ref_03_2021.png)
+![deploy_ref_04_2021.png](https://static.toastoven.net/prod_tcdeploy/reference/deploy_ref_04_2021.png)
+* You can search distribution history by date of execution and server group
+    * You can search using the server group selection window and starting and ending dates of execution.
+    * It cannot be selected because its duration of execution exceeds 1 year. (e.g. 2020-06-07 to 2021-06-17).
+     ![deploy_ref_08_2021.png](https://static.toastoven.net/prod_tcdeploy/reference/deploy_ref_08_2021.png)
+
+The searched distribution history can be downloaded in an Excel file.
+![deploy_ref_05_2021.png](https://static.toastoven.net/prod_tcdeploy/reference/deploy_ref_05_2021.png)
+* Download searched distribution history in Excel format
+    * Select the desired server group and date of execution and click the **Download** button.
+    * You can also download the file by selecting the **Exclude Histories Without Binary File** option.
+    * When the **Download** button is clicked without selecting the **Exclude Histories Without Binary File** option
+    ![deploy_ref_07_2021.png](https://static.toastoven.net/prod_tcdeploy/reference/deploy_ref_07_2021.png)
+    * When the **Download** button is clicked while the **Exclude Histories Without Binary File** option is selected
+    ![deploy_ref_06_2021.png](https://static.toastoven.net/prod_tcdeploy/reference/deploy_ref_06_2021.png)
 
 ### Binary Group 
 
