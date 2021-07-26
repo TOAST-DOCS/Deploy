@@ -1,5 +1,16 @@
 ## Dev Tools > Deploy > Release Notes
 
+### 2021. 07. 27.
+#### Feature Improvements
+* Improved feature to extract distribution history inquiry
+    * Modified so it includes distribution history where only pre-run tasks exist
+* Links with the instance disposal feature when Auto Scale service-integrated deployment fails
+    * Scaled-out instances are disposed when deployment fails while scaling out in the Auto Scale service
+    * The scale-out feature stops working when scale-out deployment fails three times or more
+* Security Vulnerability Patch
+
+
+
 ### 2021. 06. 29.
 #### Feature Updates
 * Changed the **Distribution History** tab search conditions
