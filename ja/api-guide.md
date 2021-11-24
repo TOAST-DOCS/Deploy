@@ -97,7 +97,7 @@ try {
 | Name | Type | Description | Value |
 | ---- | ---- | ----------- | ----- |
 | isSuccessful | boolean | アップロード結果 | trueまたはfalse |
-| resultCode | String | アップロード結果メッセージ | [エラーコード](/Dev%20Tool/Deploy/ja/error-code/)参照 |
+| resultCode | String | アップロード結果メッセージ | [エラーコード](/Dev%20Tools/Deploy/ja/error-code/)参照 |
 | downloadUrl | String | アップロードバイナリのダウンロードパス | 該当パスでダウンロード可能 |
 | binaryKey | String | アップロードしたバイナリのキー | - |
 
