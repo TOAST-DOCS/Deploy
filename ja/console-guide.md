@@ -2,12 +2,12 @@
 
 この文書では、次のような内容を扱います。
 
-* [サービス使用前の必須事項](/Dev%20Tool/Deploy/ja/console-guide/#1)
-* [Deployコンソール画面](/Dev%20Tool/Deploy/ja/console-guide/#deploy)
-* [Client Application](/Dev%20Tool/Deploy/ja/console-guide/#client-application)
-* [Server Application](/Dev%20Tool/Deploy/ja/console-guide/#server-application)
+* [サービス使用前の必須事項](/Dev%20Tools/Deploy/ja/console-guide/#1)
+* [Deployコンソール画面](/Dev%20Tools/Deploy/ja/console-guide/#deploy)
+* [Client Application](/Dev%20Tools/Deploy/ja/console-guide/#client-application)
+* [Server Application](/Dev%20Tools/Deploy/ja/console-guide/#server-application)
 
-(ここで扱わない機能は、[機能詳細ガイド](/Dev%20Tool/Deploy/ja/reference/)で確認できます。)
+(ここで扱わない機能は、[機能詳細ガイド](/Dev%20Tools/Deploy/ja/reference/)で確認できます。)
 
 ## サービスの利用にあたってのシステム要件
 
@@ -134,7 +134,7 @@
     * OSを選択し、Shell Typeを指定します。 Shell Typeは**Shell Type**リストから選択するか、直接入力できます。
     * Phaseを選択します。サーバー機器を区分します。指定しない場合はNONEを選択します。
     * サーバー追加
-        * サーバーを追加する方法は、下記の2つです。詳細は[機能詳細ガイドサーバーグループメニュー](/Dev%20Tool/Deploy/ja/reference/#_11)で確認できます。
+        * サーバーを追加する方法は、下記の2つです。詳細は[機能詳細ガイドサーバーグループメニュー](/Dev%20Tools/Deploy/ja/reference/#_11)で確認できます。
             * 大量追加
             * 個別追加
          * ホスト名(必須)、IPアドレス(必須)、OS(任意)を入力し、**追加**ボタンをクリックします。
@@ -159,7 +159,7 @@
 * Normal Task：配布時の実行機能
 
 希望するタスクを選択して使用できます。ここでは配布時に必要な基本的なタスクを扱います。
-その他のタスクは[機能詳細ガイドのタスクメニュー](/Dev%20Tool/Deploy/ja/reference/#_25)で確認できます。
+その他のタスクは[機能詳細ガイドのタスクメニュー](/Dev%20Tools/Deploy/ja/reference/#_25)で確認できます。
 
 配布テストのために、下記の3つのタスクを追加します。
 
@@ -167,7 +167,7 @@
 
 * 配布時に実行されるユーザー定義Commandタスクです。
 * Available Variablesを使用できます。
-    * Available Variables：予約語。詳細は[機能詳細ガイドのタスクメニュー](/Dev%20Tool/Deploy/ja/reference/#_25)で確認できます。
+    * Available Variables：予約語。詳細は[機能詳細ガイドのタスクメニュー](/Dev%20Tools/Deploy/ja/reference/#_25)で確認できます。
 
 ![deploy_09_ja_20200519](https://static.toastoven.net/prod_tcdeploy/ja/deploy_09_ja_20200519.png)
 
@@ -206,7 +206,7 @@
 8. **選択**ボタンをクリックします。
   <br/>
    * Variable As
-       * 該当バイナリのVariable名を指定し、User Commandでバイナリ情報を使用できます。詳細は[機能詳細ガイド](/Dev%20Tool/Deploy/ja/reference/)のタスクメニュー下段で確認できます。
+       * 該当バイナリのVariable名を指定し、User Commandでバイナリ情報を使用できます。詳細は[機能詳細ガイド](/Dev%20Tools/Deploy/ja/reference/)のタスクメニュー下段で確認できます。
    * ターゲットディレクトリ
        * バイナリを配布するターゲットディレクトリを指定します。
 
@@ -245,4 +245,4 @@
 
 - - -
 
-サーバーにファイルを配布しました！ NHN Cloud Deployは、他にも多くの機能をサポートしています。詳細は[機能詳細ガイド](/Dev%20Tool/Deploy/ja/reference/)で確認できます。
+サーバーにファイルを配布しました！ NHN Cloud Deployは、他にも多くの機能をサポートしています。詳細は[機能詳細ガイド](/Dev%20Tools/Deploy/ja/reference/)で確認できます。

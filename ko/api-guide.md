@@ -97,7 +97,7 @@ try {
 | Name | Type | Description | Value |
 | ---- | ---- | ----------- | ----- |
 | isSuccessful | boolean | 업로드 결과 | true 또는 false |
-| resultCode | String | 업로드 결과 메시지 | [오류 코드](/Dev%20Tool/Deploy/ko/error-code/) 참고 |
+| resultCode | String | 업로드 결과 메시지 | [오류 코드](/Dev%20Tools/Deploy/ko/error-code/) 참고 |
 | downloadUrl | String | 업로드 바이너리의 다운로드 경로 | 해당 경로로 다운로드 가능 |
 | binaryKey | String | 업로드한 바이너리의 키 | - |
 

@@ -97,7 +97,7 @@ try {
 | Name | Type | Description | Value |
 | ---- | ---- | ----------- | ----- |
 | isSuccessful | boolean | Uploading result | True or false |
-| resultCode | String | Message for uploading result | See [Error Codes](/Dev%20Tool/Deploy/zh/error-code/) |
+| resultCode | String | Message for uploading result | See [Error Codes](/Dev%20Tools/Deploy/zh/error-code/) |
 | downloadUrl | String | Downloading path for uploaded binaries | Download is available in the path |
 | binaryKey | String | Key of the uploaded binary | - |
 
