@@ -1,5 +1,10 @@
 ## Dev Tools > Deploy > Release Notes
 
+### January 25, 2022
+#### Feature Updates
+* Integration with the CloudTrail service
+    * In CloudTrail, you can check the **Execute Autoscale Deployment** user event that occurred in the Deploy console
+
 ### December 28, 2021
 #### Bug Fixes
 * Fixed a guide link error in Task
@@ -9,7 +14,7 @@
 * Fixed a bug where non-payment users could use the service normally
 
 ### July 27, 2021
-#### Feature Improvements
+#### Feature Updates
 * Improved a feature to extract deployment history inquiry
     * Modified to include deployment history where only pre-run tasks exist
 * Link with the instance disposal feature when Auto Scale service-integrated deployment fails
