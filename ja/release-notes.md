@@ -1,5 +1,10 @@
 ## Dev Tools > Deploy > Release Notes
 
+### 2022. 01. 25.
+#### 機能改善
+* CloudTrailサービス連動
+    * CloudTrailで、Deployコンソールで発生した**オートスケール配布実行**ユーザーイベントの確認可能
+
 ### 2021. 12. 28.
 #### バグ修正
 * Task内ガイドのリンクエラーを修正
