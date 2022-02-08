@@ -23,8 +23,10 @@ This document contains the following:
 #### Linux 
 * curl 7.19.7-43 or higher versions  
 
-#### Window
-* Requires SSH Installation 
+#### Windows
+* Requires SSH installation 
+    * OpenSSH_for_Windows_8.6p1, LibreSSL 3.3.3 or higher
+         * When using Windows Server 2019, OpenSSH must be installed separately
     * SSH Shell: PowerShell specified  
 
 ### Requirements for NHN Cloud VM Deployment 
@@ -134,7 +136,7 @@ Deployment servers are managed by this setting.
     * Select OS and specify the **Shell Type**: enter one or select from the list. 
     * Select Phase: Choose a server tool. Otherwise, select NONE. 
     * Add Servers 
-        * Servers can be added in the following two methods, and find more details from [Detail Funtional Guide on Server Groups](/Dev%20Tools/Deploy/en/reference/#_11).
+        * Servers can be added in the following two methods, and find more details from [Detail Functional Guide on Server Groups](/Dev%20Tools/Deploy/en/reference/#_11).
             * Add in Mass
             * Add Individually 
          * Enter host name (required), IP address (required), and OS (optional), and click **Add**. 
