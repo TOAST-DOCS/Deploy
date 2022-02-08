@@ -29,7 +29,7 @@
 #### Linux
 * curl 7.19.7-43 버전 이상
 
-#### Window
+#### Windows
 * SSH 설치 필요
     * OpenSSH_for_Windows_8.6p1, LibreSSL 3.3.3 버전 이상
          * Windows Server 2019 사용 시 OpenSSH 별도 설치 필요
