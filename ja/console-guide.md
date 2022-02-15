@@ -23,8 +23,10 @@
 #### Linux
 * curl 7.19.7-43バージョン以上
 
-#### Window
+#### Windows
 * SSHインストール必要
+    * OpenSSH_for_Windows_8.6p1、LibreSSL 3.3.3バージョン以上
+         * Windows Server 2019使用時、OpenSSHを別途インストール必要
     * SSH Shell: PowerShell指定
 
 ### NHN Cloudインスタンスへ配布するのための要件
