@@ -184,7 +184,7 @@ Binaries are uploaded files that are to be deployed.
 Two methods are available to upload binaries: 
 
 * Upload API 
-    * Find more details on uploading API at [Guide for Upload Binary API](/Dev%20Tools/Deploy/en/api-guide/#binary-upload-api).
+    * Find more details on uploading API at [Guide for Upload Binary API](/Dev%20Tools/Deploy/en/api-guide-gov/#binary-upload-api).
 * Upload on Console 
 
 ![deploy_ref_11_2018.png](https://static.toastoven.net/prod_tcdeploy/deploy_ref_11_2018.png)

@@ -183,7 +183,7 @@ Phase 속성으로 Develop, Staging, Product 등의 서버 장비를 구분하�
 바이너리를 업로드할 수 있는 방법은 두 가지입니다.
 
 * API 업로드
-    * API 업로드에 대한 자세한 설명은 [API 가이드의 Binary Upload API](/Dev%20Tools/Deploy/ko/api-guide/#binary-upload-api)에서 확인하실 수 있습니다.
+    * API 업로드에 대한 자세한 설명은 [API 가이드의 Binary Upload API](/Dev%20Tools/Deploy/ko/api-guide-gov/#binary-upload-api)에서 확인하실 수 있습니다.
 * 콘솔에서 업로드
 
 ![deploy_ref_11_2018.png](https://static.toastoven.net/prod_tcdeploy/deploy_ref_11_2018.png)
