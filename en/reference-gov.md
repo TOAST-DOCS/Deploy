@@ -2,8 +2,8 @@
 
 This document contains the following: 
 
-* [Menu Description](/Dev%20Tools/Deploy/en/reference/#menu-description)
-* [Functional Description](/Dev%20Tools/Deploy/en/reference/#functional-description)
+* [Menu Description](/Dev%20Tools/Deploy/en/reference-gov/#menu-description)
+* [Functional Description](/Dev%20Tools/Deploy/en/reference-gov/#functional-description)
 
 ## Menu Description 
 
