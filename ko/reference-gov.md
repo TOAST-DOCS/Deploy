@@ -2,8 +2,8 @@
 
 이 문서에서는 다음과 같은 내용을 다룹니다.
 
-* [메뉴 설명](/Dev%20Tools/Deploy/ko/reference/#_1)
-* [기능별 설명](/Dev%20Tools/Deploy/ko/reference/#_18)
+* [메뉴 설명](/Dev%20Tools/Deploy/ko/reference-gov/#_1)
+* [기능별 설명](/Dev%20Tools/Deploy/ko/reference-gov/#_18)
 
 ## 메뉴 설명
 

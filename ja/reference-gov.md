@@ -2,8 +2,8 @@
 
 この文書では、次のような内容を扱います。
 
-* [メニュー説明](/Dev%20Tools/Deploy/ja/reference/#_1)
-* [機能別説明](/Dev%20Tools/Deploy/ja/reference/#_18)
+* [メニュー説明](/Dev%20Tools/Deploy/ja/reference-gov/#_1)
+* [機能別説明](/Dev%20Tools/Deploy/ja/reference-gov/#_18)
 
 ## メニュー説明
 
