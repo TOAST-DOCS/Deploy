@@ -183,7 +183,7 @@ PhaseプロパティでDevelop、Staging、Productなどのサーバー機器を
 バイナリをアップロードできる方法は2つです。
 
 * APIアップロード
-    * APIアップロードの詳細説明は、[APIガイドのBinary Upload API](/Dev%20Tools/Deploy/ja/api-guide/#binary-upload-api)で確認できます。
+    * APIアップロードの詳細説明は、[APIガイドのBinary Upload API](/Dev%20Tools/Deploy/ja/api-guide-gov/#binary-upload-api)で確認できます。
 * コンソールでアップロード
 
 ![deploy_ref_11_ja_20200527.png](https://static.toastoven.net/prod_tcdeploy/ja/deploy_ref_11_ja_20200527.png)
