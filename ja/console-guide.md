@@ -2,7 +2,7 @@
 
 この文書では、次のような内容を扱います。
 
-* [サービス使用前の必須事項](/Dev%20Tools/Deploy/ja/console-guide/#1)
+* [サービス使用前の必須事項](/Dev%20Tools/Deploy/ja/console-guide/#_3)
 * [Deployコンソール画面](/Dev%20Tools/Deploy/ja/console-guide/#deploy)
 * [Client Application](/Dev%20Tools/Deploy/ja/console-guide/#client-application)
 * [Server Application](/Dev%20Tools/Deploy/ja/console-guide/#server-application)

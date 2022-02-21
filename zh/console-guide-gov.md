@@ -2,7 +2,7 @@
 
 This document contains the following: 
 
-* [Service Pre-requisites](/Dev%20Tools/Deploy/zh/console-guide-gov/#1)
+* [Service Pre-requisites](/Dev%20Tools/Deploy/zh/console-guide-gov/#_3)
 * [Deploy Console Page](/Dev%20Tools/Deploy/zh/console-guide-gov/#deploy)
 * [Client Application](/Dev%20Tools/Deploy/zh/console-guide-gov/#client-application)
 * [Server Application](/Dev%20Tools/Deploy/zh/console-guide-gov/#server-application)

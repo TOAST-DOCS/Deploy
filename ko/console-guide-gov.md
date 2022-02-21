@@ -2,7 +2,7 @@
 
 이 문서에서는 다음과 같은 내용을 다룹니다.
 
-* [서비스 사용 전 필수사항](/Dev%20Tools/Deploy/ko/console-guide-gov/#1)
+* [서비스 사용 전 필수사항](/Dev%20Tools/Deploy/ko/console-guide-gov/#_3)
 * [Deploy 콘솔 화면](/Dev%20Tools/Deploy/ko/console-guide-gov/#deploy)
 * [Client Application](/Dev%20Tools/Deploy/ko/console-guide-gov/#client-application)
 * [Server Application](/Dev%20Tools/Deploy/ko/console-guide-gov/#server-application)
