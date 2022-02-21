@@ -2,8 +2,8 @@
 
 This document contains the following: 
 
-* [Menu Description](/Dev%20Tools/Deploy/en/reference/#menu-description)
-* [Functional Description](/Dev%20Tools/Deploy/en/reference/#functional-description)
+* [Menu Description](/Dev%20Tools/Deploy/en/reference-gov/#menu-description)
+* [Functional Description](/Dev%20Tools/Deploy/en/reference-gov/#functional-description)
 
 ## Menu Description 
 
@@ -184,7 +184,7 @@ Binaries are uploaded files that are to be deployed.
 Two methods are available to upload binaries: 
 
 * Upload API 
-    * Find more details on uploading API at [Guide for Upload Binary API](/Dev%20Tools/Deploy/en/api-guide/#binary-upload-api).
+    * Find more details on uploading API at [Guide for Upload Binary API](/Dev%20Tools/Deploy/en/api-guide-gov/#binary-upload-api).
 * Upload on Console 
 
 ![deploy_ref_11_2018.png](https://static.toastoven.net/prod_tcdeploy/deploy_ref_11_2018.png)

@@ -2,12 +2,12 @@
 
 This document contains the following: 
 
-* [Service Pre-requisites](/Dev%20Tools/Deploy/en/console-guide/#service-pre-requisites)
-* [Deploy Console Page](/Dev%20Tools/Deploy/en/console-guide/#deploy-console-page)
-* [Client Application](/Dev%20Tools/Deploy/en/console-guide/#client-application)
-* [Server Application](/Dev%20Tools/Deploy/en/console-guide/#server-application)
+* [Service Pre-requisites](/Dev%20Tools/Deploy/en/console-guide-gov/#service-pre-requisites)
+* [Deploy Console Page](/Dev%20Tools/Deploy/en/console-guide-gov/#deploy-console-page)
+* [Client Application](/Dev%20Tools/Deploy/en/console-guide-gov/#client-application)
+* [Server Application](/Dev%20Tools/Deploy/en/console-guide-gov/#server-application)
 
-(Any other functions are available in [Detail Functional Guide](/Dev%20Tools/Deploy/en/reference/).)
+(Any other functions are available in [Detail Functional Guide](/Dev%20Tools/Deploy/en/reference-gov/).)
 
 ## Service Pre-requisites 
 
@@ -31,10 +31,10 @@ This document contains the following:
 
 ### Requirements for NHN Cloud VM Deployment 
 #### Assign Public IP  
-* For the deployment of NHN Cloud VM instances, create a [Floating IP](https://docs.toast.com/en/Compute/Instance/en/console-guide/#ip_1) for VM instance and assign public IP. 
+* For the deployment of NHN Cloud VM instances, create a [Floating IP](https://gov-docs.toast.com/en/Compute/Instance/en/console-guide/#ip_1) for VM instance and assign public IP. 
 
 #### Add Security Exceptions 
-* Add IP for Deploy (as below) to [Security Group](https://docs.toast.com/en/Compute/Instance/en/console-guide/#_13) of a VM instance to deploy, as part of the SSH rule. 
+* Add IP for Deploy (as below) to [Security Group](https://gov-docs.toast.com/en/Compute/Instance/en/console-guide/#_13) of a VM instance to deploy, as part of the SSH rule. 
 ```
 133.186.185.112/28
 133.186.188.208/28
@@ -136,7 +136,7 @@ Deployment servers are managed by this setting.
     * Select OS and specify the **Shell Type**: enter one or select from the list. 
     * Select Phase: Choose a server tool. Otherwise, select NONE. 
     * Add Servers 
-        * Servers can be added in the following two methods, and find more details from [Detail Functional Guide on Server Groups](/Dev%20Tools/Deploy/en/reference/#_11).
+        * Servers can be added in the following two methods, and find more details from [Detail Functional Guide on Server Groups](/Dev%20Tools/Deploy/en/reference-gov/#_11).
             * Add in Mass
             * Add Individually 
          * Enter host name (required), IP address (required), and OS (optional), and click **Add**. 
@@ -160,7 +160,7 @@ A task is an element of a scenario which can execute individual functions and co
 * Normal Task: Execute while deployed 
 
 Choose one as you need. This document describes tasks that are basically required for deployment. 
-Find more tasks on [Detail Functional Guide on Tasks](/Dev%20Tools/Deploy/en/reference/#_25).
+Find more tasks on [Detail Functional Guide on Tasks](/Dev%20Tools/Deploy/en/reference-gov/#_25).
 
 To test deployment, the following three tasks are added: 
 
@@ -168,7 +168,7 @@ To test deployment, the following three tasks are added:
 
 * It is a user-defined command task which is executed for deployment. 
 * You may use Available Variables.
-    * Available Variables: Reserved words. Find more details on [Detail Functional Guide on Tasks](/Dev%20Tools/Deploy/en/reference/#_25).
+    * Available Variables: Reserved words. Find more details on [Detail Functional Guide on Tasks](/Dev%20Tools/Deploy/en/reference-gov/#_25).
 
 ![deploy_09_201812](https://static.toastoven.net/prod_tcdeploy/deploy_09_201812.png)
 
@@ -207,7 +207,7 @@ Deployment for uploaded binary files can be set.
 8. Click **Select**.  
     <br/>
    * Variable As
-       * You can specify the name of variables of binary and use binary information at User Command. Find moe details at the bottom of the task menu of [Detail Functional Guide](/Dev%20Tools/Deploy/en/reference/).
+       * You can specify the name of variables of binary and use binary information at User Command. Find moe details at the bottom of the task menu of [Detail Functional Guide](/Dev%20Tools/Deploy/en/reference-gov/).
    * Target Directory
        * Specify a target directory to deploy binaries. 
 
@@ -247,5 +247,5 @@ Deployment for uploaded binary files can be set.
 - - -
 
 File has been deployed to the server. 
-NHN Cloud Deploy supports more functions, and find more details in [Detail Functional Guide](/Dev%20Tools/Deploy/en/reference/).
+NHN Cloud Deploy supports more functions, and find more details in [Detail Functional Guide](/Dev%20Tools/Deploy/en/reference-gov/).
 

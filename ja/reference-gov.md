@@ -2,8 +2,8 @@
 
 この文書では、次のような内容を扱います。
 
-* [メニュー説明](/Dev%20Tools/Deploy/ja/reference/#_1)
-* [機能別説明](/Dev%20Tools/Deploy/ja/reference/#_18)
+* [メニュー説明](/Dev%20Tools/Deploy/ja/reference-gov/#_1)
+* [機能別説明](/Dev%20Tools/Deploy/ja/reference-gov/#_18)
 
 ## メニュー説明
 
@@ -183,7 +183,7 @@ PhaseプロパティでDevelop、Staging、Productなどのサーバー機器を
 バイナリをアップロードできる方法は2つです。
 
 * APIアップロード
-    * APIアップロードの詳細説明は、[APIガイドのBinary Upload API](/Dev%20Tools/Deploy/ja/api-guide/#binary-upload-api)で確認できます。
+    * APIアップロードの詳細説明は、[APIガイドのBinary Upload API](/Dev%20Tools/Deploy/ja/api-guide-gov/#binary-upload-api)で確認できます。
 * コンソールでアップロード
 
 ![deploy_ref_11_ja_20200527.png](https://static.toastoven.net/prod_tcdeploy/ja/deploy_ref_11_ja_20200527.png)
