@@ -9,12 +9,6 @@
 
 (여기에서 다루지 않는 기능은 [기능 상세 가이드](/Dev%20Tools/Deploy/ko/reference/)에서 확인하실 수 있습니다.)
 
-## 애플리케이션 배포하기
-<iframe width="560" height="315" src="https://www.youtube.com/embed/oVyGlPTOyNg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-## 리소스 관리하기
-<iframe width="560" height="315" src="https://www.youtube.com/embed/Fcc0g0E6-r0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
 ## 서비스 사용 전 필수 사항
 
 ![SSH연결필수](http://static.toastoven.net/prod_tcdeploy/getstarted/console_ssh_required.png)
