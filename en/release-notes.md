@@ -1,5 +1,9 @@
 ## Dev Tools > Deploy > Release Notes
 
+### March 29, 2022
+#### Feature Updates
+* Improved the query used when searching the artifact list
+
 ### January 25, 2022
 #### Feature Updates
 * Integration with the CloudTrail service
