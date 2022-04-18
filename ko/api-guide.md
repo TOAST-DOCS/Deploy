@@ -1,8 +1,8 @@
 ## Dev Tools > Deploy > API 가이드
 
-사용자가 HTTP Request를 직접 구성하여 바이너리를 업로드할 수 있는 API, 배포를 할 수 있는 API를 제공합니다.
+사용자가 HTTP Request를 직접 구성하여 바이너리를 업로드할 수 있는 API를 제공합니다.
 
-## 바이너리 업로드 (Ver 1.0)
+## Ver 1.0
 
 * 주요 개선 사항
     * REST 형태의 API
@@ -118,7 +118,7 @@ try {
 }
 ```
 
-## 바이너리 업로드 (이전 버전)
+## 이전 버전
 
 | Http Method | POST |
 | ----------- | ---- |
@@ -206,120 +206,5 @@ try {
 {
 	"isSuccess" : true,
 	"result" : 111
-}
-```
-
-## 배포 API (Ver 1.0)
-
-| Http Method | POST |
-| ----------- | ---- |
-| Request URL | https://api-tcd.cloud.toast.com/api/v1.0/projects/{appkey}/artifacts/{artifactId}/server-group/{serverGroupId}/scenario/{scenarioId}/deploy |
-
-### Parameter
-
-| Name | Type | Description | Value | Required | default value |
-| ---- | ---- | ----------- | ----- | -------- | -------- |
-| targetServerHostnames | String | 서버그룹내에서 선택적으로 적배포 대상이 되는 ','으로 구분 된 서버의 호스트명 | hostname1,hostname2 | false | 서버그룹에 포함된 전체 서버 |
-| concurrentNum | int | 동시 실행 수 | 0 이상의 값, 0 인경우 서버그룹 전체 동시 실행 | false | 1 |
-| nextWhenFail | boolean | 시나리오 실패시 다음 서버 실행여부 | true/false | false | false (실행 중단) |
-| deployNote | String | 배포시 작성하는 부가정보 | | false | |
-| async | boolean | true 설정 시 배포 결과를 기다리지 않고 응답을 받음 | true/false | false | false |
-
-### Header
-| Name | Description | Value |
-| ---- | ----------- | ----- |
-| X-TC-AUTHENTICATION-ID | 인증 ID | {id} |
-| X-TC-AUTHENTICATION-SECRET | 인증 Secret | {secret} |
-[회원정보] > [API 보안 설정] 에서 생성할 수 있습니다.
-
-### Sample Request For cUrl
-
-``` java
-curl -i -X POST \
-   -H "X-TC-AUTHENTICATION-ID:{id}" \
-   -H "X-TC-AUTHENTICATION-SECRET:{secret}" \
-   -H "Content-Type:application/json" \
-   -d \
-'{
-  "targetServerHostnames" : "hostname1,hostname2",
-  "concurrentNum" : 1,
-  "nextWhenFail": "false",
-  "deployNote" : "Deploy API를 통한 배포입니다.",
-  "async": "true"
-}
-  
-  ' \
- 'https://api-tcd.cloud.toast.com/api/v1.0/projects/{appkey}/artifacts/{artifactId}/server-group/{serverGroupId}/scenario/{scenarioId}/deploy'
-```
-
-### Sample Request For JAVA
-
-아래 코드는 HttpClient 라이브러리(httpclient 4.3.6)를 사용하여 API를 통해 배포하는 코드의 예시입니다.
-
-``` java
-String appkey = "xxxxxxxxx";
-String artifactId = "1";
-String serverGroupId = "2";
-String scenarioId = "3";
-
-String requestUri = "https://api-tcd.cloud.toast.com/api/v1.0/projects/" + appkey + "/artifacts/" + artifactId + "/server-group/" + serverGroupId + "/scenario/" + scenarioId + "/deploy";
-
-HttpPost method = new HttpPost(requestUri);
-
-method.setHeader("X-TC-AUTHENTICATION-ID", "{id}");
-method.setHeader("X-TC-AUTHENTICATION-SECRET", "{secret}");
-
-try {
-    CloseableHttpClient httpclient = HttpClients.createDefault();
-    ResponseHandler<String> responseHandler = new ResponseHandler<String>() {
-        public String handleResponse(final HttpResponse response) throws IOException {
-            int status = response.getStatusLine().getStatusCode();
-            if (status == HttpStatus.SC_OK) {
-                HttpEntity entity = response.getEntity();
-                return entity != null ? EntityUtils.toString(entity) : null;
-            } else {
-                throw new ClientProtocolException("Unexpected response status: " + status);
-            }
-        }
-    };
-
-    String responseBody = httpclient.execute(method, responseHandler);
-    if (responseBody == null) {
-        throw new Exception("Empty Response Data Error");
-    }
-
-    if (responseBody.contains("false")) {
-        throw new Exception("Upload Fail Result Code : " + responseBody);
-    }
-    logger.debug("Result : " + responseBody);
-} catch (Exception e) {
-    logger.error("Fail to request : " + e.getMessage(), e);
-}
-```
-
-### Response(json)
-
-| Name | Type | Description | Value |
-| ---- | ---- | ----------- | ----- |
-| isSuccessful | boolean | 배포 결과 | true 또는 false |
-| resultCode | String | 배포 결과 메시지 | [오류 코드](/Dev%20Tools/Deploy/ko/error-code/) 참고 |
-| deployStatus | String | 배포 상태를 나타내는 메시지 | success, fail, deploying 등 |
-| deployResultLocation | String | 배포 결과를 확인할 수 있는 URL | - |
-
-### Response Sample
-
-``` json
-{
-	"header": {
-	    "isSuccessful": true,
-	    "serverTime": 1533526167415,
-	    "resultCode": "SUCCESS",
-	    "resultMessage": "success"
-	},
-	"body": {
-	    "deployStatus": "deploying",
-	    "deployResult": null,
-	    "deployResultLocation": "https://console.toast.com/project/{projectId}/dev-tools/deploy"
-	}
 }
 ```
