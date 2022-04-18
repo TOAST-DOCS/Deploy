@@ -1,5 +1,12 @@
 ## Dev Tools > Deploy > 릴리스 노트
 
+### 2022. 04. 26.
+#### 기능 개선
+* Jenkins-Api Build로 Jenkins Pipeline Job 실행 시 실행완료를 기다리도록 개선
+* 시나리오 업로드 시 파일 명 제한 삭제
+#### 버그 수정
+* Windows 서버 Log Monitoring 버그 수정
+
 ### 2022. 03. 29.
 #### 기능 개선
 * 아티팩트 리스트 검색 시 사용 쿼리 개선
