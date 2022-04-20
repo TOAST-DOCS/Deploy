@@ -1,5 +1,12 @@
 ## Dev Tools > Deploy > Release Notes
 
+### April 26, 2022
+#### Feature Updates
+* Improved the service so that it waits until the execution is completed when running a Jenkins Pipeline job with Jenkins API build
+* Removed filename restrictions for uploading a scenario
+#### Bug Fixes
+* Fixed a bug in Windows Server log monitoring
+
 ### March 29, 2022
 #### Feature Updates
 * Improved the query used when searching the artifact list
@@ -137,7 +144,7 @@
 
 ### October 23, 2018
 #### Added Features
-* Enable deployment termination function after deployment re-entry (for deployer only)
+* Enabled deployment termination function after deployment re-entry (for deployer only)
 
 #### Bug Fixes
 * Fixed an issue where a file is created even if there is no file content in Resource tab > Add file
@@ -161,7 +168,7 @@
 #### Added Features
 
 * Added scenario Import / Export function
-* Release restrictions on Client Type menu (all menus available)
+* Released restrictions on Client Type menu (all menus available)
 * Added Phase property for server group equipment separator
     * Added confirmation step when deploying server with Phase Type of Product
 
