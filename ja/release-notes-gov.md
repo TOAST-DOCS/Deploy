@@ -1,5 +1,13 @@
 ## Dev Tools > Deploy > Release Notes
 
+### 2022. 04. 26.
+#### 機能改善
+* アーティファクトリスト検索時の使用クエリを改善
+* Jenkins API BuildでJenkins Pipeline Jobを実行時、実行完了を待つように改善
+* シナリオアップロード時のファイル名制限を削除
+#### バグ修正
+* WindowsサーバーLog Monitoringバグを修正
+
 ### 2022.01.25
 #### 商品発売
 * 配布とインストール利便性を提供するためのサービスです。
