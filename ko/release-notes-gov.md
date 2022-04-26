@@ -9,8 +9,6 @@
 * 아티팩트 목록 검색 시 사용 쿼리 개선
 * Jenkins API Build로 Jenkins Pipeline Job 실행 시 실행 완료를 기다리도록 개선
 * 시나리오 업로드 시 파일명 제한 삭제
-#### 버그 수정
-* Windows 서버 Log Monitoring 버그 수정
 
 ### 2022. 01. 25.
 #### 신규 상품 출시
