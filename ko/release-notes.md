@@ -1,5 +1,9 @@
 ## Dev Tools > Deploy > 릴리스 노트
 
+### 2022. 07. 26.
+#### 기능 개선
+* API 엔드포인트의 도메인이 api-tcd.cloud.toast.com에서 api-tcd.nhncloudservice.com로 변경
+
 ### 2022. 04. 26.
 #### 기능 개선
 * Jenkins API Build로 Jenkins Pipeline Job 실행 시 실행 완료를 기다리도록 개선
