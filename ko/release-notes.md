@@ -1,5 +1,8 @@
 ## Dev Tools > Deploy > 릴리스 노트
 
+### 2022. 08. 23.
+* API 엔드포인트의 도메인이 api-tcd.cloud.toast.com에서 api-tcd.nhncloudservice.com로 변경되었습니다.
+
 ### 2022. 07. 26.
 #### 기능 개선
 * 바이너리 업로드 실패 시 안내 메시지 추가
