@@ -1,7 +1,7 @@
 ## Dev Tools > Deploy > 릴리스 노트
 
 ### 2022. 08. 23.
-* API 엔드포인트의 도메인이 gov-api-tcd.cloud.toast.com에서 api-tcd.gov-nhncloudservice.com로 변경되었습니다.
+* API 엔드포인트의 도메인이 gov-api-tcd.cloud.toast.com에서 api-tcd.gov-nhncloudservice.com으로 변경되었습니다.
 
 ### 2022. 07. 26.
 #### 기능 개선
