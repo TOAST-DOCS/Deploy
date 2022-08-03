@@ -10,7 +10,7 @@ The API allows user-configured HTTP Request to upload binaries.
 
 | Http Method | POST |
 | ----------- | ---- |
-| Request URL | https://api-tcd.cloud.toast.com/api/v1.0/projects/{appkey}/artifacts/{artifactId}/binary-group/{binaryGroupKey} |
+| Request URL | https://api-tcd.nhncloudservice.com/api/v1.0/projects/{appkey}/artifacts/{artifactId}/binary-group/{binaryGroupKey} |
 
 ### Parameter
 
@@ -28,7 +28,7 @@ The API allows user-configured HTTP Request to upload binaries.
 
 ``` java
 curl -X POST \
-  https://api-tcd.cloud.toast.com/api/v1.0/projects/{appKey}/artifacts/{artifactId}/binary-group/{binaryGroupKey} \
+  https://api-tcd.nhncloudservice.com/api/v1.0/projects/{appKey}/artifacts/{artifactId}/binary-group/{binaryGroupKey} \
   -H 'content-type: multipart/form-data' \
   -F 'binaryFile=@ojdbc14.jar' \
   -F 'applicationType=server' \
@@ -52,7 +52,7 @@ FileBody binaryFile = new FileBody(new File(filePath));
 StringBody applicationType = new StringBody("server", ContentType.TEXT_PLAIN);
 StringBody description = new StringBody("A binary file of some kind", ContentType.TEXT_PLAIN);
 
-String requestUri = "https://api-tcd.cloud.toast.com/api/v1.0/projects/" + appKey + "/artifacts/" + artifactId + "/binary-group/" + binaryGroupKey;
+String requestUri = "https://api-tcd.nhncloudservice.com/api/v1.0/projects/" + appKey + "/artifacts/" + artifactId + "/binary-group/" + binaryGroupKey;
 
 HttpPost method = new HttpPost(requestUri);
 
@@ -112,7 +112,7 @@ try {
 		"resultMessage": "success"
 	},
 	"body": {
-		"downloadUrl": "https://api-tcd.cloud.toast.com/api/v1.0/projects/{appkey}/artifacts/{artifactId}/binary-group/{binaryGroupKey}/binaries/{uploadedBinaryKey}",
+		"downloadUrl": "https://api-tcd.nhncloudservice.com/api/v1.0/projects/{appkey}/artifacts/{artifactId}/binary-group/{binaryGroupKey}/binaries/{uploadedBinaryKey}",
 		"binaryKey": "{uploadedBinaryKey}"
 	}
 }
@@ -122,7 +122,7 @@ try {
 
 | Http Method | POST |
 | ----------- | ---- |
-| Request URL | https://api-tcd.cloud.toast.com/api/binary/upload/artifact/{artifactId} |
+| Request URL | https://api-tcd.nhncloudservice.com/api/binary/upload/artifact/{artifactId} |
 
 ### Parameter
 
@@ -152,7 +152,7 @@ StringBody appKey = new StringBody("xxxxxxxxx", ContentType.TEXT_PLAIN);
 StringBody applicationType = new StringBody("server", ContentType.TEXT_PLAIN);
 StringBody description = new StringBody("A binary file of some kind", ContentType.TEXT_PLAIN);
 
-String requestUri = "https://api-tcd.cloud.toast.com/api/binary/upload/artifact/" + artifactId;
+String requestUri = "https://api-tcd.nhncloudservice.com/api/binary/upload/artifact/" + artifactId;
 
 HttpPost method = new HttpPost(requestUri);
 
