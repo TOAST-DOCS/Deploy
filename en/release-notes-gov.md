@@ -1,5 +1,8 @@
 ## Dev Tools > Deploy > Release Notes
 
+### August 23, 2022
+* Changed the API endpoint's domain from gov-api-tcd.cloud.toast.com to api-tcd.gov-nhncloudservice.com.
+
 ### July 26, 2022
 #### Feature Updates
 * Added a message for binary upload failure
