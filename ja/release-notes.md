@@ -1,5 +1,8 @@
 ## Dev Tools > Deploy > Release Notes
 
+### 2022. 08. 23.
+* APIエンドポイントのドメインがapi-tcd.cloud.toast.comからapi-tcd.nhncloudservice.comに変更されました。
+
 ### 2022. 07. 26.
 #### 機能改善
 * バイナリアップロードが失敗したときの案内メッセージを追加
