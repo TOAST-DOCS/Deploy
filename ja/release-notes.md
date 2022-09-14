@@ -1,6 +1,6 @@
 ## Dev Tools > Deploy > Release Notes
 
-### 2022. 09. 27.
+### 2022. 10. 04.
 #### 機能改善
 * Deploy権限の細分化機能を追加
 * Deploy ADMIN権限ユーザーにのみ配布実行通知を提供するように修正
