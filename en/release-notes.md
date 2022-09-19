@@ -1,6 +1,6 @@
 ## Dev Tools > Deploy > Release Notes
 
-### September 27, 2022
+### October 04, 2022
 #### Feature Updates
 * Added a feature to subdivide Deploy permission
 * Modified to provide the notice of deployment execution only to users with Deploy ADMIN permission
