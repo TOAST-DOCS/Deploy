@@ -36,8 +36,8 @@ This document contains the following:
 #### Add Security Exceptions 
 * Add IP for Deploy (as below) to [Security Group](https://gov-docs.toast.com/en/Compute/Instance/en/console-guide/#_13) of a VM instance to deploy, as part of the SSH rule. 
 ```
-133.186.185.112/28
-133.186.188.208/28
+211.56.2.51/32
+211.56.2.52/32
 ```
 ##### Note) Adding Exceptions for Security  
 
@@ -48,7 +48,7 @@ This document contains the following:
 3. Click **+ Add Rules**. 
     * Rule: Choose SSH.
     * Enter IP at CIDR.
-    * Bandwidth may be required. (e.g. 133.186.188.208/28).
+    * Bandwidth may be required. (e.g. 211.56.2.51/32, 211.56.2.52/32).
 
 ### Requirements for Server Deployment Other than NHN Cloud VM 
 #### Assign Public IP 
