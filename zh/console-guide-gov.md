@@ -55,8 +55,8 @@ This document contains the following:
 #### Configure Firewalls and Network ACL 
 * Add exceptions on network and firewall, for the following IPs, so as to allow external access. 
 ```
-133.186.185.112/28
-133.186.188.208/28
+211.56.2.51/32
+211.56.2.52/32
 ```
 
 ## Deploy Console Page  
