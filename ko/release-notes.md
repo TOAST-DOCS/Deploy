@@ -1,5 +1,14 @@
 ## Dev Tools > Deploy > 릴리스 노트
 
+### 2022. 10. 04.
+#### 기능 개선
+* Deploy 권한 세분화 기능 추가
+* Deploy ADMIN 권한 사용자에게만 배포 실행 통지를 제공하도록 수정
+* 시나리오 및 Task 이름의 글자 수 제한을 30자에서 50자로 변경
+#### 버그 수정
+* Task 및 아티팩트 생성 내 가이드 링크 오류 수정
+* Deploy가 종료되지 않고 Deploying 상태가 지속되는 오류 수정
+
 ### 2022. 08. 23.
 * API 엔드포인트의 도메인이 api-tcd.cloud.toast.com에서 api-tcd.nhncloudservice.com으로 변경되었습니다.
 
