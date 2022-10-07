@@ -25,7 +25,7 @@ Jenkins 설치 및 자세한 사항은 [https://jenkins.io/](https://jenkins.io/
 #### 플러그인 설치
 
 1. **Jenkins 관리 > 플러그인 관리 > 고급 탭 > 플러그인 올리기** 메뉴에서 **tcdeploy-upload-jenkins.hpi** 파일을 업로드합니다.
-  ([tcdeploy-upload-jenkins.hpi](http://static.toastoven.net/prod_tcdeploy/plugins/tcdeploy-upload-jenkins-ext.hpi) 다운로드 링크)
+  ([tcdeploy-upload-jenkins.hpi](http://static.toastoven.net/prod_tcdeploy/plugins/tcdeploy-upload-jenkins-1.1.0.hpi) 다운로드 링크)
 
     ![01.png](http://static.toastoven.net/prod_tcdeploy/devguide/01.png)
 
@@ -41,10 +41,12 @@ Jenkins 설치 및 자세한 사항은 [https://jenkins.io/](https://jenkins.io/
 
 서버 타입 애플리케이션 업로드 플러그인으로 빌드 결과물을 ZIP 형식으로 압축해서 NHN Cloud Deploy(TCD) 서버로 업로드할 수 있습니다.
 
-![04.png](http://static.toastoven.net/prod_tcdeploy/devguide/04_1.png)
+![04.png](http://static.toastoven.net/prod_tcdeploy/devguide/04_2.png)
 
 * enable upload
     * 플러그인 동작의 활성화/비활성화 여부를 결정하는 옵션입니다. 플러그인 설정이 저장된 상태에서 플러그인의 동작은 비활성화하고 싶을 때 유용합니다.
+* end point
+    * 빌드 결과물을 업로드할 API의 엔드포인트 입니다. [API 가이드](/Dev%20Tools/Deploy/ko/plugin-guide/)를 참고하여 입력할 수 있습니다.
 * publish path
     * 빌드가 완료된 워크스페이스에서 배포 대상이 될 상대 경로입니다. 예제에서는 /로 입력되어 있는데 이 경우, JENKINS\_HOME/jobs/프로젝트명/workspace 이하의 내용이 업로드 대상 경로가 되고, target이라고 입력하면 JENKINS\_HOME/jobs/프로젝트명/workspace/target 이하의 내용이 업로드 대상 경로가 됩니다.
 * app key
