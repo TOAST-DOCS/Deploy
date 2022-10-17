@@ -1,5 +1,15 @@
 ## Dev Tools > Deploy > Release Notes
 
+### October 25, 2022
+#### Feature Updates
+* Added a feature to subdivide Deploy permission
+* Modified to provide the notice of deployment execution only to users with Deploy ADMIN permission
+* Changed the character limit for scenario and task names from 30 to 50
+* 실행가능확인 기능 개선
+#### Bug Fixes
+* Fixed a guide link error in Task and Create Artifacts
+* Fixed an error where the Deploying status persists with Deploy not terminated
+
 ### August 23, 2022
 * Changed the API endpoint's domain from gov-api-tcd.cloud.toast.com to api-tcd.gov-nhncloudservice.com.
 
