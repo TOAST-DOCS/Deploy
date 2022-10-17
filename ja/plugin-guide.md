@@ -41,7 +41,7 @@ Jenkinsのインストールおよび詳細は、[https://jenkins.io/](https://j
 
 サーバータイプアプリケーションアップロードプラグインで、ビルド結果物をZIP形式に圧縮してNHN Cloud Cloud Deploy(TCD)サーバーにアップロードできます。
 
-![[図4]サーバーアプリケーションアップロードプラグイン設定](http://static.toastoven.net/prod_tcdeploy/devguide/04.png)
+![[図4]サーバーアプリケーションアップロードプラグイン設定](http://static.toastoven.net/prod_tcdeploy/devguide/04_2.png)
 
 * enable upload
     * プラグイン動作の有効化/無効化を決定するオプションです。プラグイン設定が保存された状態でプラグインの動作を無効化したい時に役立ちます。

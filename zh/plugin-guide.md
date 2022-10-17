@@ -37,7 +37,7 @@ Requires **Jenkins 1580.1** or later versions.
 
 With server-type application upload plugin, build results can be compressed in zip and uploaded to a NHN Cloud Cloud Deploy (TCD) server. 
 
-![[Figure 4] Plugin Setting for Server Application Uploads](http://static.toastoven.net/prod_tcdeploy/devguide/04.png)
+![[Figure 4] Plugin Setting for Server Application Uploads](http://static.toastoven.net/prod_tcdeploy/devguide/04_2.png)
 
 * enable upload
     * Decide whether to enable/disable plugin operations. It is useful to disable plugin operations, while plugin setting is saved. 
