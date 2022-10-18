@@ -1,5 +1,15 @@
 ## Dev Tools > Deploy > Release Notes
 
+### 2022. 10. 25.
+#### 機能改善
+* Deploy権限の細分化機能を追加
+* Deploy ADMIN権限ユーザーにのみ配布実行通知を提供するように修正
+* シナリオおよびTask名の文字数制限を30文字から50文字に変更
+* 실행 가능 확인 기능 개선
+#### バグ修正
+* Taskおよびアーティファクト作成内のガイドリンクエラーを修正
+* Deployが終了せず、Deploying状態が持続するエラーを修正
+
 ### 2022. 08. 23.
 * APIエンドポイントのドメインがgov-api-tcd.cloud.toast.comからapi-tcd.gov-nhncloudservice.comに変更されました。
 
