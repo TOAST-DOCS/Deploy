@@ -46,7 +46,7 @@ Jenkins 설치 및 자세한 사항은 [https://jenkins.io/](https://jenkins.io/
 * enable upload
     * 플러그인 동작의 활성화/비활성화 여부를 결정하는 옵션입니다. 플러그인 설정이 저장된 상태에서 플러그인의 동작은 비활성화하고 싶을 때 유용합니다.
 * end point
-    * 빌드 결과물을 업로드할 API의 엔드포인트 입니다. [API 가이드](/Dev%20Tools/Deploy/ko/plugin-guide/)를 참고하여 입력할 수 있습니다.
+    * 빌드 결과물을 업로드할 API의 엔드포인트입니다. [API 가이드](/Dev%20Tools/Deploy/ko/plugin-guide/)를 참고하여 입력할 수 있습니다.
 * publish path
     * 빌드가 완료된 워크스페이스에서 배포 대상이 될 상대 경로입니다. 예제에서는 /로 입력되어 있는데 이 경우, JENKINS\_HOME/jobs/프로젝트명/workspace 이하의 내용이 업로드 대상 경로가 되고, target이라고 입력하면 JENKINS\_HOME/jobs/프로젝트명/workspace/target 이하의 내용이 업로드 대상 경로가 됩니다.
 * app key
