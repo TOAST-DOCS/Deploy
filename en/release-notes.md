@@ -1,5 +1,10 @@
 ## Dev Tools > Deploy > Release Notes
 
+### October 25, 2022
+#### Feature Updates
+* Improved a feature to check whether execution can be performed
+* Modified not to execute the scenarios without tasks
+
 ### October 04, 2022
 #### Feature Updates
 * Added a feature to subdivide Deploy permission
