@@ -1,4 +1,9 @@
 ## Dev Tools > Deploy > 릴리스 노트
+
+### 2022. 12. 27.
+#### 기능 개선
+* **배포 이력** 탭에서 다운로드 할 컨텐츠(Excel 파일)의 Row 수 표시
+
 ### 2022. 10. 25.
 #### 기능 개선
 * Deploy 권한 세분화 기능 추가
@@ -9,6 +14,7 @@
 #### 버그 수정
 * Task 및 아티팩트 생성 내 가이드 링크 오류 수정
 * Deploy가 종료되지 않고 Deploying 상태가 지속되는 오류 수정
+
 ### 2022. 08. 23.
 * API 엔드포인트의 도메인이 gov-api-tcd.cloud.toast.com에서 api-tcd.gov-nhncloudservice.com으로 변경되었습니다.
 
