@@ -1,5 +1,9 @@
 ## Dev Tools > Deploy > Release Notes
 
+### December 27, 2022
+#### Feature Updates
+* Displayed the number of rows of contents (Excel file) to download on the **Deployment History** tab.
+
 ### October 25, 2022
 #### Feature Updates
 * Improved a feature to check whether execution can be performed
