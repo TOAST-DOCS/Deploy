@@ -35,6 +35,8 @@ This document contains the following:
 * Add IP for Deploy (as below) to [Security Group](https://docs.toast.com/zh/Compute/Instance/zh/console-guide/#_13) of a VM instance to deploy, as part of the SSH rule. 
 ```
 133.186.185.112/28
+117.52.123.201/32
+117.52.123.202/32
 ```
 ##### Note) Adding Exceptions for Security  
 
@@ -55,6 +57,8 @@ This document contains the following:
 * Add exceptions on network and firewall, for the following IPs, so as to allow external access. 
 ```
 133.186.185.112/28
+117.52.123.201/32
+117.52.123.202/32
 ```
 
 ## Deploy Console Page  
