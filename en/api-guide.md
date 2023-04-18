@@ -2,6 +2,12 @@
 
 The API allows user-configured HTTP Request to upload binaries. 
 
+### Basic Information
+#### Endpoint
+```text
+https://api-tcd.nhncloudservice.com
+```
+
 ## Ver 1.0
 
 * Major Improvements 
