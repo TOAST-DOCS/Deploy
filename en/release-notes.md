@@ -1,5 +1,10 @@
 ## Dev Tools > Deploy > Release Notes
 
+### April 25, 2023 
+#### Bug Fixes
+* Fixed a bug where, when modifying deployment scenarios, more than 10 file lists are not loaded in the Select a file window
+* Fixed an issue where, when resource file upload fails in the console, files are not retrieved and added the **Cancel Upload** button
+
 ### December 27, 2022
 #### Feature Updates
 * Displayed the number of rows of contents (Excel file) to download on the **Deployment History** tab.
