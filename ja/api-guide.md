@@ -2,6 +2,12 @@
 
 ユーザーがHTTP Requestを直接構成してバイナリをアップロードできるAPIを提供します。
 
+### 基本情報
+#### エンドポイント
+```text
+https://api-tcd.nhncloudservice.com
+```
+
 ## Ver 1.0
 
 * 主な改善事項
