@@ -1,5 +1,10 @@
 ## Dev Tools > Deploy > Release Notes
 
+### May 30, 2023
+#### Feature Updates
+* Updated Jenkins Plugin (Version 1.1.1).
+    * Fixed an error where uploading from Jenkins Agent node to Deploy fails
+
 ### April 25, 2023 
 #### Bug Fixes
 * Fixed a bug where, when modifying deployment scenarios, more than 10 file lists are not loaded in the Select a file window
