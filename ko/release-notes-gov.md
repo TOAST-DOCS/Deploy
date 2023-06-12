@@ -1,5 +1,11 @@
 ## Dev Tools > Deploy > 릴리스 노트
 
+### 2023. 06. 27.
+#### 기능 추가
+* Cloud 서비스 Instance를 사용 할 경우 Cloud-Agent를 사용하여 배포할 수 있습니다.
+#### 버그 수정
+* Windows Server 2019 Standard에서 바이너리 배포가 안되는 오류 수정
+
 ### 2023. 05. 30.
 #### 기능 개선
 * Jenkins Plugin이 업그레이드되었습니다(버전 1.1.1).
