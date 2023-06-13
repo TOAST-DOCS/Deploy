@@ -2,7 +2,7 @@
 
 ### 2023. 06. 27.
 #### 기능 추가
-* Cloud 서비스 Instance를 사용 할 경우 Cloud-Agent를 사용하여 배포할 수 있습니다.
+* Cloud 서비스 Instance를 사용 할 경우 CLOUD_AGENT를 사용하여 배포할 수 있습니다.
 #### 버그 수정
 * Windows Server 2019 Standard에서 바이너리 배포가 안되는 오류 수정
 
