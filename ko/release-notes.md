@@ -2,7 +2,8 @@
 
 ### 2023. 06. 27.
 #### 기능 추가
-* Cloud 서비스 Instance를 사용 할 경우 CLOUD_AGENT를 사용하여 배포할 수 있습니다.
+* NHN Cloud VM Instance에 배포할 때 SSH를 통한 배포외에도 Cloud-Agent를 통한 배포기능이 추가되었습니다.
+    * VM instance에 Floating IP 를 할당하지 않아도 배포할 수 있습니다.
 #### 버그 수정
 * Windows Server 2019 Standard에서 바이너리 배포가 안되는 오류 수정
 
