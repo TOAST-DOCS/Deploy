@@ -129,13 +129,19 @@ Dismount-DiskImage -ImagePath $isoFilePath
 Remove-Item -Path $isoFilePath
 ```
 
-### 유효성 확인을 통한 Cloud-Agent 활성화 (필수)
+### 유효성 확인을 통한 Cloud-Agent 활성화
 * NHN Cloud Deploy 상품에서 생성한 인스턴스를 추가하여 서버그룹을 생성합니다.
   * 생성 전 OS 및 Shell Type 반드시 확인 부탁 드립니다.
 
+![deploy_01_201812](https://static.toastoven.net/prod_tcdeploy/deploy_01_201812.png)
+
 * 배포 탭으로 이동 후 위 과정에서 생성한 서버그룹을 선택하여 새로운 시나리오를 만들어줍니다.
 
+![deploy_01_201812](https://static.toastoven.net/prod_tcdeploy/deploy_01_201812.png)
+
 * 유효성 확인 버튼을 눌러 줍니다.
+
+![deploy_01_201812](https://static.toastoven.net/prod_tcdeploy/deploy_01_201812.png)
 
 - - -
 
