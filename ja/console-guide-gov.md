@@ -2,64 +2,11 @@
 
 この文書では、次のような内容を扱います。
 
-* [サービス使用前の必須事項](/Dev%20Tools/Deploy/ja/console-guide-gov/#_3)
 * [Deployコンソール画面](/Dev%20Tools/Deploy/ja/console-guide-gov/#deploy)
 * [Client Application](/Dev%20Tools/Deploy/ja/console-guide-gov/#client-application)
 * [Server Application](/Dev%20Tools/Deploy/ja/console-guide-gov/#server-application)
 
 (ここで扱わない機能は、[機能詳細ガイド](/Dev%20Tools/Deploy/ja/reference-gov/)で確認できます。)
-
-## サービスの利用にあたってのシステム要件
-
-![SSH接続必須](http://static.toastoven.net/prod_tcdeploy/getstarted/console_ssh_required.png)
-
-
-> NHN Cloud Deployは、SSH接続でサーバーの配布コマンドを伝達します。 
-> 配布前の配布先ターゲットサーバーとSSHで接続する必要があるため
-> ターゲットサーバーのIP、ポート、ファイアウォールでのアクセス元の許可などのSSH接続のための準備が必要です。
-
-
-### OS別要件
-#### Linux
-* curl 7.19.7-43バージョン以上
-
-#### Windows
-* SSHインストール必要
-    * OpenSSH_for_Windows_8.6p1、LibreSSL 3.3.3バージョン以上
-         * Windows Server 2019使用時、OpenSSHを別途インストール必要
-    * SSH Shell: PowerShell指定
-
-### NHN Cloudインスタンスへ配布するのための要件
-#### グローバルIPの付与
-* NHN Cloudのインスタンスに配布するには、インスタンスに[Floating IP](https://gov-docs.toast.com/ja/Compute/Instance/ja/console-guide/#ip_1)接続して、グローバルIPを付与する必要があります。
-
-#### セキュリティー例外の追加
-* 配布するインスタンスの[セキュリティーグループ](https://gov-docs.toast.com/ja/Compute/Instance/ja/console-guide/#_13)に、DeployサービスのIP(下記)をSSH のアクセスルール行に追加します。
-```
-211.56.2.51/32
-211.56.2.52/32
-```
-##### 参考)セキュリティー例外追加方法
-
-![deploy_01_201812](https://static.toastoven.net/prod_tcdeploy/ja/deploy_01_ja_20200519.png)
-
-1. NHN Cloudコンソールの**Compute**サービスの中から**Instance**を選択します。
-2. 対象のインスタンスに設定されているセキュリティグループを選択するか、**+ セキュリティグループの作成**　をクリックして新規セキュリティグループを作成します。
-3. **+ セキュリティポリシー作成**　をクリックします。 
-    * IPプロトコル　SSH を選択します。
-    * CIDRにIPを入力します。
-    * 帯域を入力することもできます(例：211.56.2.51/32, 211.56.2.52/32)。
-
-### NHN Cloudインスタンス以外のサーバー配布要求事項
-#### グローバルIP付与
-* SSH接続のためにグローバルIPを付与する必要があります。
-
-#### ファイアウォールおよびNetwork ACL設定
-* 外部からアクセスできるように、下記IPに対してネットワークとファイアウォール例外設定を追加してください。
-```
-211.56.2.51/32
-211.56.2.52/32
-```
 
 ## Deployコンソール画面
 

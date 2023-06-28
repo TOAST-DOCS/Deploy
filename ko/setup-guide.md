@@ -16,7 +16,7 @@
 
 ## SSH 연결을 위한 준비
 
-### 운영체제별 요구 사항
+### OS별 요구 사항
 #### Linux
 * curl 7.19.7-43 버전 이상
 
@@ -26,7 +26,7 @@
         * Windows Server 2019 사용 시 OpenSSH 별도 설치 필요
     * SSH Shell: PowerShell 지정
 
-### NHN Cloud VM SSH 연결 요구 사항
+### NHN Cloud VM 배포 요구 사항
 #### 공인 IP 부여
 * NHN Cloud의 VM 인스턴스에 배포하려면 VM 인스턴스 [플로팅 IP](https://docs.toast.com/ko/Compute/Instance/ko/console-guide/#ip_1)를 생성하여 공인 IP를 부여해야 합니다.
 
@@ -48,7 +48,7 @@
     * CIDR에 IP를 입력합니다.
     * 대역을 입력할 수도 있습니다(예​:​ 133.186.185.112/28).
 
-### NHN Cloud VM 이외 서버 SSH 연결 요구 사항
+### NHN Cloud VM 이외 서버 배포 요구 사항
 #### 공인 IP 부여
 * SSH 연결을 위해 공인 IP를 부여해야 합니다.
 

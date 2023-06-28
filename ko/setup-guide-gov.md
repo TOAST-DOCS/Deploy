@@ -16,7 +16,7 @@
 
 ## SSH 연결을 위한 준비
 
-### 운영체제별 요구 사항
+### OS별 요구 사항
 #### Linux
 * curl 7.19.7-43 버전 이상
 
@@ -26,16 +26,15 @@
         * Windows Server 2019 사용 시 OpenSSH 별도 설치 필요
     * SSH Shell: PowerShell 지정
 
-### NHN Cloud VM SSH 연결 요구 사항
+### NHN Cloud VM 배포 요구 사항
 #### 공인 IP 부여
-* NHN Cloud의 VM 인스턴스에 배포하려면 VM 인스턴스 [플로팅 IP](https://docs.toast.com/ko/Compute/Instance/ko/console-guide/#ip_1)를 생성하여 공인 IP를 부여해야 합니다.
+* NHN Cloud의 VM 인스턴스에 배포하려면 VM 인스턴스 [플로팅 IP](https://gov-docs.toast.com/ko/Compute/Instance/ko/console-guide/#ip_1)를 생성하여 공인 IP를 부여해야 합니다.
 
 #### 보안 예외 추가
-* 배포할 VM 인스턴스의 [보안 그룹](https://docs.toast.com/ko/Compute/Instance/ko/console-guide/#_13)에 Deploy 서비스 IP(아래)를 SSH Rule로 추가합니다.
+* 배포할 VM 인스턴스의 [보안 그룹](https://gov-docs.toast.com/ko/Compute/Instance/ko/console-guide/#_13)에 Deploy 서비스 IP(아래)를 SSH Rule로 추가합니다.
 ```
-133.186.185.112/28
-117.52.123.201/32
-117.52.123.202/32
+211.56.2.51/32
+211.56.2.52/32
 ```
 ##### 참고) 보안 예외 추가 방법
 
@@ -46,18 +45,17 @@
 3. **+ Rule 추가** 버튼을 클릭합니다.
     * Rule: SSH로 선택합니다.
     * CIDR에 IP를 입력합니다.
-    * 대역을 입력할 수도 있습니다(예​:​ 133.186.185.112/28).
+    * 대역을 입력할 수도 있습니다(예​:​ 211.56.2.51/32, 211.56.2.52/32).
 
-### NHN Cloud VM 이외 서버 SSH 연결 요구 사항
+### NHN Cloud VM 이외 서버 배포 요구 사항
 #### 공인 IP 부여
 * SSH 연결을 위해 공인 IP를 부여해야 합니다.
 
 #### 방화벽 및 Network ACL 설정
 * 외부에서 접근할 수 있게 아래 IP에 대해 네트워크와 방화벽 예외 설정을 추가해 주세요.
 ```
-133.186.185.112/28
-117.52.123.201/32
-117.52.123.202/32
+211.56.2.51/32
+211.56.2.52/32
 ```
 
 ## Cloud-Agent 연결을 위한 준비

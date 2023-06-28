@@ -2,66 +2,11 @@
 
 이 문서에서는 다음과 같은 내용을 다룹니다.
 
-* [서비스 사용 전 필수사항](/Dev%20Tools/Deploy/ko/console-guide/#_3)
 * [Deploy 콘솔 화면](/Dev%20Tools/Deploy/ko/console-guide/#deploy)
 * [Client Application](/Dev%20Tools/Deploy/ko/console-guide/#client-application)
 * [Server Application](/Dev%20Tools/Deploy/ko/console-guide/#server-application)
 
 (여기에서 다루지 않는 기능은 [기능 상세 가이드](/Dev%20Tools/Deploy/ko/reference/)에서 확인하실 수 있습니다.)
-
-## 서비스 사용 전 필수 사항
-
-![SSH연결필수](http://static.toastoven.net/prod_tcdeploy/getstarted/console_ssh_required.png)
-
-
-> NHN Cloud Deploy는 SSH 연결로 서버의 배포 명령을 전달합니다. 
-> 배포 전 배포 target server 와 SSH로 연결해야 하므로
-> target server의 IP, 포트, 방화벽 예외 처리와 같은 SSH 연결을 위한 준비가 필요합니다.
-
-
-### OS별 요구 사항
-#### Linux
-* curl 7.19.7-43 버전 이상
-
-#### Windows
-* SSH 설치 필요
-    * OpenSSH_for_Windows_8.6p1, LibreSSL 3.3.3 버전 이상
-         * Windows Server 2019 사용 시 OpenSSH 별도 설치 필요
-    * SSH Shell: PowerShell 지정
-
-### NHN Cloud VM 배포 요구 사항
-#### 공인 IP 부여
-* NHN Cloud의 VM 인스턴스에 배포하려면 VM 인스턴스 [플로팅 IP](https://docs.toast.com/ko/Compute/Instance/ko/console-guide/#ip_1)를 생성하여 공인 IP를 부여해야 합니다.
-
-#### 보안 예외 추가
-* 배포할 VM 인스턴스의 [보안 그룹](https://docs.toast.com/ko/Compute/Instance/ko/console-guide/#_13)에 Deploy 서비스 IP(아래)를 SSH Rule로 추가합니다.
-```
-133.186.185.112/28
-117.52.123.201/32
-117.52.123.202/32
-```
-##### 참고) 보안 예외 추가 방법
-
-![deploy_01_201812](https://static.toastoven.net/prod_tcdeploy/deploy_01_201812.png)
-
-1. NHN Cloud 콘솔의 **Compute** 서비스 중 **Instance**를 선택합니다.
-2. 현재 VM에 설정된 보안 그룹을 선택하거나 **+ Security Group 생성**을 클릭해 신규 보안 그룹(Security Group)을 생성합니다.
-3. **+ Rule 추가** 버튼을 클릭합니다. 
-    * Rule: SSH로 선택합니다.
-    * CIDR에 IP를 입력합니다.
-    * 대역을 입력할 수도 있습니다(예​:​ 133.186.185.112/28).
-
-### NHN Cloud VM 이외 서버 배포 요구 사항
-#### 공인 IP 부여
-* SSH 연결을 위해 공인 IP를 부여해야 합니다.
-
-#### 방화벽 및 Network ACL 설정
-* 외부에서 접근할 수 있게 아래 IP에 대해 네트워크와 방화벽 예외 설정을 추가해 주세요.
-```
-133.186.185.112/28
-117.52.123.201/32
-117.52.123.202/32
-```
 
 ## Deploy 콘솔 화면
 
