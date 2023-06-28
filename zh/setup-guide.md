@@ -128,20 +128,23 @@ Remove-Item -Path $isoFilePath
 ```
 
 ### 유효성 확인을 통한 Cloud-Agent 활성화
-* NHN Cloud Deploy 상품에서 생성한 인스턴스를 추가하여 서버그룹을 생성합니다.
-    * 생성 전 OS 및 Shell Type 반드시 확인 부탁 드립니다.
+* NHN Cloud Deploy 상품에서 생성한 인스턴스를 추가하여 서버 그룹을 생성합니다.
+    * 생성 전 OS 및 Shell Type 반드시 확인해 주세요.
 
-![deploy_01_201812](https://static.toastoven.net/prod_tcdeploy/deploy_01_201812.png)
+![deploy_14_202307](https://kr1-api-object-storage.nhncloudservice.com/v1/AUTH_2acdfabf4efe4efc8a04c00b348110c9/cdn_origin/prod_tcdeploy/deploy_14_202307.png)
+![deploy_15_202307](https://kr1-api-object-storage.nhncloudservice.com/v1/AUTH_2acdfabf4efe4efc8a04c00b348110c9/cdn_origin/prod_tcdeploy/deploy_15_202307.png)
 
-* 배포 탭으로 이동 후 위 과정에서 생성한 서버그룹을 선택하여 새로운 시나리오를 만들어줍니다.
 
-![deploy_01_201812](https://static.toastoven.net/prod_tcdeploy/deploy_01_201812.png)
+* 배포 탭으로 이동 후 위 과정에서 생성한 서버 그룹을 선택하여 새로운 시나리오를 만들어줍니다.
+
+![deploy_16_202307](https://kr1-api-object-storage.nhncloudservice.com/v1/AUTH_2acdfabf4efe4efc8a04c00b348110c9/cdn_origin/prod_tcdeploy/deploy_16_202307.png)
 
 * 유효성 확인 버튼을 눌러 줍니다.
 
-![deploy_01_201812](https://static.toastoven.net/prod_tcdeploy/deploy_01_201812.png)
+![deploy_17_202307](https://kr1-api-object-storage.nhncloudservice.com/v1/AUTH_2acdfabf4efe4efc8a04c00b348110c9/cdn_origin/prod_tcdeploy/deploy_17_202307.png)
 
+![deploy_18_202307](https://kr1-api-object-storage.nhncloudservice.com/v1/AUTH_2acdfabf4efe4efc8a04c00b348110c9/cdn_origin/prod_tcdeploy/deploy_18_202307.png)
 - - -
 
 QGA 서비스 설치 및 유효성 확인이 성공 하였습니다!
-유효성 확인이 성공 하였을 경우 Deploy 서비스를 사용하여 배포가 가능합니다. 자세한 사항은 Deploy > 콘솔 사용 가이드에서 확인하실 수 있습니다.
+유효성 확인이 성공 하였을 경우 Deploy 서비스를 사용하여 배포가 가능합니다. 자세한 사항은 [Deploy > 콘솔 사용 가이드](/Dev%20Tools/Deploy/en/console-guide/)에서 확인할 수 있습니다.
