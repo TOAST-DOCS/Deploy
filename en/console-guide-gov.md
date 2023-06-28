@@ -2,64 +2,11 @@
 
 This document contains the following: 
 
-* [Service Pre-requisites](/Dev%20Tools/Deploy/en/console-guide-gov/#service-pre-requisites)
 * [Deploy Console Page](/Dev%20Tools/Deploy/en/console-guide-gov/#deploy-console-page)
 * [Client Application](/Dev%20Tools/Deploy/en/console-guide-gov/#client-application)
 * [Server Application](/Dev%20Tools/Deploy/en/console-guide-gov/#server-application)
 
 (Any other functions are available in [Detail Functional Guide](/Dev%20Tools/Deploy/en/reference-gov/).)
-
-## Service Pre-requisites 
-
-![Requires SSH Connection](http://static.toastoven.net/prod_tcdeploy/getstarted/console_ssh_required.png)
-
-
-> NHN Cloud Deploy delivers deployment commands via SSH connection. 
-> Before deployment, it must be connected with a target server via SSH, so preparation is required, such as target server IP, port, and exceptions for firewall.  
->
-
-
-### Requirements for Each OS 
-#### Linux 
-* curl 7.19.7-43 or higher versions  
-
-#### Windows
-* Requires SSH installation 
-    * OpenSSH_for_Windows_8.6p1, LibreSSL 3.3.3 or higher
-         * When using Windows Server 2019, OpenSSH must be installed separately
-    * SSH Shell: PowerShell specified  
-
-### Requirements for NHN Cloud VM Deployment 
-#### Assign Public IP  
-* For the deployment of NHN Cloud VM instances, create a [Floating IP](https://gov-docs.toast.com/en/Compute/Instance/en/console-guide/#ip_1) for VM instance and assign public IP. 
-
-#### Add Security Exceptions 
-* Add IP for Deploy (as below) to [Security Group](https://gov-docs.toast.com/en/Compute/Instance/en/console-guide/#_13) of a VM instance to deploy, as part of the SSH rule. 
-```
-211.56.2.51/32
-211.56.2.52/32
-```
-##### Note) Adding Exceptions for Security  
-
-![deploy_01_201812](https://static.toastoven.net/prod_tcdeploy/deploy_01_201812.png)
-
-1. Select **Instance** from **Compute** on the NHN Cloud console.
-2. Select the security group set for VM, or click **+ Create Security Group** to create a new security group. 
-3. Click **+ Add Rules**. 
-    * Rule: Choose SSH.
-    * Enter IP at CIDR.
-    * Bandwidth may be required. (e.g. 211.56.2.51/32, 211.56.2.52/32).
-
-### Requirements for Server Deployment Other than NHN Cloud VM 
-#### Assign Public IP 
-* To connect SSH, public IP must be assigned. 
-
-#### Configure Firewalls and Network ACL 
-* Add exceptions on network and firewall, for the following IPs, so as to allow external access. 
-```
-211.56.2.51/32
-211.56.2.52/32
-```
 
 ## Deploy Console Page  
 
