@@ -36,10 +36,10 @@
 
 ### NHN Cloud VM 배포 요구 사항
 #### 공인 IP 부여
-* NHN Cloud의 VM 인스턴스에 배포하려면 VM 인스턴스 [플로팅 IP](https://docs.toast.com/ko/Compute/Instance/ko/console-guide/#ip_1)를 생성하여 공인 IP를 부여해야 합니다.
+* NHN Cloud의 VM 인스턴스에 배포하려면 VM 인스턴스 [플로팅 IP](https://docs.nhncloud.com/ko/Compute/Instance/ko/console-guide/#ip_1)를 생성하여 공인 IP를 부여해야 합니다.
 
 #### 보안 예외 추가
-* 배포할 VM 인스턴스의 [보안 그룹](https://docs.toast.com/ko/Compute/Instance/ko/console-guide/#_13)에 Deploy 서비스 IP(아래)를 SSH Rule로 추가합니다.
+* 배포할 VM 인스턴스의 [보안 그룹](https://docs.nhncloud.com/ko/Compute/Instance/ko/console-guide/#_13)에 Deploy 서비스 IP(아래)를 SSH Rule로 추가합니다.
 ```
 133.186.185.112/28
 117.52.123.201/32
