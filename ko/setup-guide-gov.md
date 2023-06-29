@@ -2,9 +2,9 @@
 
 이 문서에서는 다음과 같은 내용을 다룹니다.
 
-* [서비스 사용 전 필수 사항](/Dev%20Tools/Deploy/ko/setup-guide/#_1)
-* [SSH 연결을 위한 준비](/Dev%20Tools/Deploy/ko/setup-guide/#ssh)
-* [Cloud-Agent 사용을 위한 준비](/Dev%20Tools/Deploy/ko/setup-guide/#cloud-agent)
+* [서비스 사용 전 필수 사항](/Dev%20Tools/Deploy/ko/setup-guide-gov/#_1)
+* [SSH 연결을 위한 준비](/Dev%20Tools/Deploy/ko/setup-guide-gov/#ssh)
+* [Cloud-Agent 사용을 위한 준비](/Dev%20Tools/Deploy/ko/setup-guide-gov/#cloud-agent)
 
 ## 서비스 사용 전 필수 사항
 
@@ -36,10 +36,10 @@
 
 ### NHN Cloud VM 배포 요구 사항
 #### 공인 IP 부여
-* NHN Cloud의 VM 인스턴스에 배포하려면 VM 인스턴스 [플로팅 IP](https://gov-docs.toast.com/ko/Compute/Instance/ko/console-guide/#ip_1)를 생성하여 공인 IP를 부여해야 합니다.
+* NHN Cloud의 VM 인스턴스에 배포하려면 VM 인스턴스 [플로팅 IP](https://docs.gov-nhncloud.com/ko/Compute/Instance/ko/console-guide-gov/#ip_1)를 생성하여 공인 IP를 부여해야 합니다.
 
 #### 보안 예외 추가
-* 배포할 VM 인스턴스의 [보안 그룹](https://gov-docs.toast.com/ko/Compute/Instance/ko/console-guide/#_13)에 Deploy 서비스 IP(아래)를 SSH Rule로 추가합니다.
+* 배포할 VM 인스턴스의 [보안 그룹](https://docs.gov-nhncloud.com/ko/Compute/Instance/ko/console-guide-gov/#_13)에 Deploy 서비스 IP(아래)를 SSH Rule로 추가합니다.
 ```
 211.56.2.51/32
 211.56.2.52/32
@@ -160,4 +160,4 @@ Remove-Item -Path $isoFilePath
 - - -
 
 QGA 서비스 설치 및 유효성 확인이 성공 하였습니다!
-유효성 확인이 성공 하였을 경우 Deploy 서비스를 사용하여 배포가 가능합니다. 자세한 사항은 [Deploy > 콘솔 사용 가이드](/Dev%20Tools/Deploy/ko/console-guide/)에서 확인할 수 있습니다.
+유효성 확인이 성공 하였을 경우 Deploy 서비스를 사용하여 배포가 가능합니다. 자세한 사항은 [Deploy > 콘솔 사용 가이드](/Dev%20Tools/Deploy/ko/console-guide-gov)에서 확인할 수 있습니다.
