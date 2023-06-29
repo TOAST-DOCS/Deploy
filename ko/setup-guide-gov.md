@@ -2,9 +2,9 @@
 
 이 문서에서는 다음과 같은 내용을 다룹니다.
 
-* [서비스 사용 전 필수 사항](/Dev%20Tools/Deploy/ko/setup-guide/#_1)
-* [SSH 연결을 위한 준비](/Dev%20Tools/Deploy/ko/setup-guide/#ssh)
-* [Cloud-Agent 사용을 위한 준비](/Dev%20Tools/Deploy/ko/setup-guide/#cloud-agent)
+* [서비스 사용 전 필수 사항](/Dev%20Tools/Deploy/ko/setup-guide-gov/#_1)
+* [SSH 연결을 위한 준비](/Dev%20Tools/Deploy/ko/setup-guide-gov/#ssh)
+* [Cloud-Agent 사용을 위한 준비](/Dev%20Tools/Deploy/ko/setup-guide-gov/#cloud-agent)
 
 ## 서비스 사용 전 필수 사항
 
@@ -36,10 +36,10 @@
 
 ### NHN Cloud VM 배포 요구 사항
 #### 공인 IP 부여
-* NHN Cloud의 VM 인스턴스에 배포하려면 VM 인스턴스 [플로팅 IP](https://gov-docs.toast.com/ko/Compute/Instance/ko/console-guide/#ip_1)를 생성하여 공인 IP를 부여해야 합니다.
+* NHN Cloud의 VM 인스턴스에 배포하려면 VM 인스턴스 [플로팅 IP](https://docs.gov-nhncloud.com/ko/Compute/Instance/ko/console-guide-gov/#ip_1)를 생성하여 공인 IP를 부여해야 합니다.
 
 #### 보안 예외 추가
-* 배포할 VM 인스턴스의 [보안 그룹](https://gov-docs.toast.com/ko/Compute/Instance/ko/console-guide/#_13)에 Deploy 서비스 IP(아래)를 SSH Rule로 추가합니다.
+* 배포할 VM 인스턴스의 [보안 그룹](https://docs.gov-nhncloud.com/ko/Compute/Instance/ko/console-guide-gov/#_13)에 Deploy 서비스 IP(아래)를 SSH Rule로 추가합니다.
 ```
 211.56.2.51/32
 211.56.2.52/32
@@ -73,70 +73,70 @@
 
 * Cloud-Agent 설치 및 설정 파일 수정을 위해 NHN Cloud Instance 상품에서 인스턴스를 생성 시 추가 설정 > 사용자 스크립트에 아래의 내용을 추가합니다.
 
-  ![사용자 스크립트](https://kr1-api-object-storage.nhncloudservice.com/v1/AUTH_2acdfabf4efe4efc8a04c00b348110c9/cdn_origin/prod_tcdeploy/deploy_21_202307.png)
-  ```
-  #!/bin/bash
-  
-  function download_qga_config() {
-      sudo wget http://static.toastoven.net/prod_tcdeploy/qemu/qemu-ga -O /etc/sysconfig/qemu-ga
-  }
-  
-  function create_qga_directory() {
-      if [ ! -d "/var/log/qemu-ga" ]; then
-          sudo mkdir /var/log/qemu-ga
-      fi
-  }
-  
-  function write_qga_rotate_file() {
-      sudo sh -c 'echo "/var/log/qemu-ga {
-      daily
-      rotate 50
-      missingok
-      notifempty
-      nocompress
-  }" >> /etc/logrotate.d/qemu_ga'
-  }
-  
-  ### Main ###
-  download_qga_config
-  create_qga_directory
-  write_qga_rotate_file
-  ```
+![사용자 스크립트](https://kr1-api-object-storage.nhncloudservice.com/v1/AUTH_2acdfabf4efe4efc8a04c00b348110c9/cdn_origin/prod_tcdeploy/deploy_21_202307.png)
+```
+#!/bin/bash
+
+function download_qga_config() {
+  sudo wget http://static.toastoven.net/prod_tcdeploy/qemu/qemu-ga -O /etc/sysconfig/qemu-ga
+}
+
+function create_qga_directory() {
+  if [ ! -d "/var/log/qemu-ga" ]; then
+      sudo mkdir /var/log/qemu-ga
+  fi
+}
+
+function write_qga_rotate_file() {
+  sudo sh -c 'echo "/var/log/qemu-ga {
+  daily
+  rotate 50
+  missingok
+  notifempty
+  nocompress
+}" >> /etc/logrotate.d/qemu_ga'
+}
+
+### Main ###
+download_qga_config
+create_qga_directory
+write_qga_rotate_file
+```
 
 * 만약 사용자 스크립트를 사용할 수 없는 경우나 이미 생성한 상태라면 아래의 스크립트를 인스턴스에 접속하여 실행해줍니다.
 
 #### Windows
 * NHN Cloud Instance 상품에서 인스턴스를 생성 시 추가 설정 > 사용자 스크립트에 아래의 내용을 추가합니다.
-  ![사용자 스크립트](https://kr1-api-object-storage.nhncloudservice.com/v1/AUTH_2acdfabf4efe4efc8a04c00b348110c9/cdn_origin/prod_tcdeploy/deploy_21_202307.png)
-  ```
-  #ps1_sysnative
-  
-  if (!(Test-Path -Path C:\temp\qemu-ga)){
-      New-Item -ItemType directory -Path C:\temp\qemu-ga | out-null;
-  }
-  
-  if (!(Test-Path -Path C:\.qemu-download)){
-      New-Item -ItemType directory -Path C:\.qemu-download | out-null;
-  }
-  
-  $isoFilePath = 'C:\.qemu-download\virtio-win-0.1.229.iso';
-  
-  if ( -NOT (Test-Path isoFilePath) ) {
-      $wc = New-Object System.Net.WebClient;
-      $wc.DownloadFile('http://static.toastoven.net/prod_tcdeploy/qemu/virtio-win-0.1.229.iso', $isoFilePath);
-  }
-  
-  
-  Mount-DiskImage -ImagePath $isoFilePath
-  
-  $msiPath = 'D:\guest-agent\qemu-ga-x86_64.msi';
-  
-  Start-Process -FilePath msiexec.exe -ArgumentList "/i $msiPath /qn" -Wait
-  
-  Dismount-DiskImage -ImagePath $isoFilePath
-  
-  Remove-Item -Path $isoFilePath
-  ```
+![사용자 스크립트](https://kr1-api-object-storage.nhncloudservice.com/v1/AUTH_2acdfabf4efe4efc8a04c00b348110c9/cdn_origin/prod_tcdeploy/deploy_21_202307.png)
+```
+#ps1_sysnative
+
+if (!(Test-Path -Path C:\temp\qemu-ga)){
+  New-Item -ItemType directory -Path C:\temp\qemu-ga | out-null;
+}
+
+if (!(Test-Path -Path C:\.qemu-download)){
+  New-Item -ItemType directory -Path C:\.qemu-download | out-null;
+}
+
+$isoFilePath = 'C:\.qemu-download\virtio-win-0.1.229.iso';
+
+if ( -NOT (Test-Path isoFilePath) ) {
+  $wc = New-Object System.Net.WebClient;
+  $wc.DownloadFile('http://static.toastoven.net/prod_tcdeploy/qemu/virtio-win-0.1.229.iso', $isoFilePath);
+}
+
+
+Mount-DiskImage -ImagePath $isoFilePath
+
+$msiPath = 'D:\guest-agent\qemu-ga-x86_64.msi';
+
+Start-Process -FilePath msiexec.exe -ArgumentList "/i $msiPath /qn" -Wait
+
+Dismount-DiskImage -ImagePath $isoFilePath
+
+Remove-Item -Path $isoFilePath
+```
 * 만약 사용자 스크립트를 사용할 수 없는 경우나 이미 생성한 상태라면 아래의 스크립트를 인스턴스에 접속하여 실행해줍니다.
 
 
@@ -160,4 +160,4 @@
 - - -
 
 QGA 서비스 설치 및 유효성 확인이 성공 하였습니다!
-유효성 확인이 성공 하였을 경우 Deploy 서비스를 사용하여 배포가 가능합니다. 자세한 사항은 [Deploy > 콘솔 사용 가이드](/Dev%20Tools/Deploy/ko/console-guide/)에서 확인할 수 있습니다.
+유효성 확인이 성공 하였을 경우 Deploy 서비스를 사용하여 배포가 가능합니다. 자세한 사항은 [Deploy > 콘솔 사용 가이드](/Dev%20Tools/Deploy/ko/console-guide-gov)에서 확인할 수 있습니다.
