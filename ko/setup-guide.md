@@ -74,71 +74,70 @@
 #### Linux
 
 * Cloud-Agent 설치 및 설정 파일 수정을 위해 NHN Cloud Instance 상품에서 인스턴스를 생성 시 추가 설정 > 사용자 스크립트에 아래의 내용을 추가합니다.
+![사용자 스크립트](https://kr1-api-object-storage.nhncloudservice.com/v1/AUTH_2acdfabf4efe4efc8a04c00b348110c9/cdn_origin/prod_tcdeploy/deploy_21_202307.png)
+```
+#!/bin/bash
 
-  ![사용자 스크립트](https://kr1-api-object-storage.nhncloudservice.com/v1/AUTH_2acdfabf4efe4efc8a04c00b348110c9/cdn_origin/prod_tcdeploy/deploy_21_202307.png)
-  ```
-  #!/bin/bash
-  
-  function download_qga_config() {
-      sudo wget http://static.toastoven.net/prod_tcdeploy/qemu/qemu-ga -O /etc/sysconfig/qemu-ga
-  }
-  
-  function create_qga_directory() {
-      if [ ! -d "/var/log/qemu-ga" ]; then
-          sudo mkdir /var/log/qemu-ga
-      fi
-  }
-  
-  function write_qga_rotate_file() {
-      sudo sh -c 'echo "/var/log/qemu-ga {
-      daily
-      rotate 50
-      missingok
-      notifempty
-      nocompress
-  }" >> /etc/logrotate.d/qemu_ga'
-  }
-  
-  ### Main ###
-  download_qga_config
-  create_qga_directory
-  write_qga_rotate_file
+function download_qga_config() {
+  sudo wget http://static.toastoven.net/prod_tcdeploy/qemu/qemu-ga -O /etc/sysconfig/qemu-ga
+}
+
+function create_qga_directory() {
+  if [ ! -d "/var/log/qemu-ga" ]; then
+      sudo mkdir /var/log/qemu-ga
+  fi
+}
+
+function write_qga_rotate_file() {
+  sudo sh -c 'echo "/var/log/qemu-ga {
+  daily
+  rotate 50
+  missingok
+  notifempty
+  nocompress
+}" >> /etc/logrotate.d/qemu_ga'
+}
+
+### Main ###
+download_qga_config
+create_qga_directory
+write_qga_rotate_file
   ```
 
 * 만약 사용자 스크립트를 사용할 수 없는 경우나 이미 생성한 상태라면 아래의 스크립트를 인스턴스에 접속하여 실행해줍니다.
 
 #### Windows
 * NHN Cloud Instance 상품에서 인스턴스를 생성 시 추가 설정 > 사용자 스크립트에 아래의 내용을 추가합니다.
-  ![사용자 스크립트](https://kr1-api-object-storage.nhncloudservice.com/v1/AUTH_2acdfabf4efe4efc8a04c00b348110c9/cdn_origin/prod_tcdeploy/deploy_21_202307.png)
-  ```
-  #ps1_sysnative
-  
-  if (!(Test-Path -Path C:\temp\qemu-ga)){
-      New-Item -ItemType directory -Path C:\temp\qemu-ga | out-null;
-  }
-  
-  if (!(Test-Path -Path C:\.qemu-download)){
-      New-Item -ItemType directory -Path C:\.qemu-download | out-null;
-  }
-  
-  $isoFilePath = 'C:\.qemu-download\virtio-win-0.1.229.iso';
-  
-  if ( -NOT (Test-Path isoFilePath) ) {
-      $wc = New-Object System.Net.WebClient;
-      $wc.DownloadFile('http://static.toastoven.net/prod_tcdeploy/qemu/virtio-win-0.1.229.iso', $isoFilePath);
-  }
-  
-  
-  Mount-DiskImage -ImagePath $isoFilePath
-  
-  $msiPath = 'D:\guest-agent\qemu-ga-x86_64.msi';
-  
-  Start-Process -FilePath msiexec.exe -ArgumentList "/i $msiPath /qn" -Wait
-  
-  Dismount-DiskImage -ImagePath $isoFilePath
-  
-  Remove-Item -Path $isoFilePath
-  ```
+![사용자 스크립트](https://kr1-api-object-storage.nhncloudservice.com/v1/AUTH_2acdfabf4efe4efc8a04c00b348110c9/cdn_origin/prod_tcdeploy/deploy_21_202307.png)
+```
+#ps1_sysnative
+
+if (!(Test-Path -Path C:\temp\qemu-ga)){
+  New-Item -ItemType directory -Path C:\temp\qemu-ga | out-null;
+}
+
+if (!(Test-Path -Path C:\.qemu-download)){
+  New-Item -ItemType directory -Path C:\.qemu-download | out-null;
+}
+
+$isoFilePath = 'C:\.qemu-download\virtio-win-0.1.229.iso';
+
+if ( -NOT (Test-Path isoFilePath) ) {
+  $wc = New-Object System.Net.WebClient;
+  $wc.DownloadFile('http://static.toastoven.net/prod_tcdeploy/qemu/virtio-win-0.1.229.iso', $isoFilePath);
+}
+
+
+Mount-DiskImage -ImagePath $isoFilePath
+
+$msiPath = 'D:\guest-agent\qemu-ga-x86_64.msi';
+
+Start-Process -FilePath msiexec.exe -ArgumentList "/i $msiPath /qn" -Wait
+
+Dismount-DiskImage -ImagePath $isoFilePath
+
+Remove-Item -Path $isoFilePath
+```
 * 만약 사용자 스크립트를 사용할 수 없는 경우나 이미 생성한 상태라면 아래의 스크립트를 인스턴스에 접속하여 실행해줍니다.
 
 ### 유효성 확인을 통한 Cloud-Agent 활성화
