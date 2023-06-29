@@ -77,27 +77,43 @@
 ```
 #!/bin/bash
 
+function install_qga_using_apt() {
+    sudo apt update
+    sudo apt install -y qemu-guest-agent
+}
+
+function install_qga_using_yum() {
+    sudo yum install -y qemu-guest-agent
+}
+
 function download_qga_config() {
-  sudo wget http://static.toastoven.net/prod_tcdeploy/qemu/qemu-ga -O /etc/sysconfig/qemu-ga
+    sudo mkdir -p /etc/sysconfig/
+    sudo wget http://static.toastoven.net/prod_tcdeploy/qemu/qemu-ga -O /etc/sysconfig/qemu-ga
 }
 
 function create_qga_directory() {
-  if [ ! -d "/var/log/qemu-ga" ]; then
-      sudo mkdir /var/log/qemu-ga
-  fi
+    if [ ! -d "/var/log/qemu-ga" ]; then
+        sudo mkdir /var/log/qemu-ga
+    fi
 }
 
 function write_qga_rotate_file() {
-  sudo sh -c 'echo "/var/log/qemu-ga {
-  daily
-  rotate 50
-  missingok
-  notifempty
-  nocompress
+    sudo sh -c 'echo "/var/log/qemu-ga {
+    daily
+    rotate 50
+    missingok
+    notifempty
+    nocompress
 }" >> /etc/logrotate.d/qemu_ga'
 }
 
 ### Main ###
+if command -v apt >/dev/null; then
+    install_qga_using_apt
+elif command -v yum >/dev/null; then
+    install_qga_using_yum
+fi
+
 download_qga_config
 create_qga_directory
 write_qga_rotate_file
