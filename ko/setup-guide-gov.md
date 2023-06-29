@@ -1,3 +1,11 @@
+## Dev Tools > Deploy > 사용 전 설정 가이드
+
+이 문서에서는 다음과 같은 내용을 다룹니다.
+
+* [서비스 사용 전 필수 사항](/Dev%20Tools/Deploy/ko/setup-guide/#_1)
+* [SSH 연결을 위한 준비](/Dev%20Tools/Deploy/ko/setup-guide/#ssh)
+* [Cloud-Agent 연결을 위한 준비](/Dev%20Tools/Deploy/ko/setup-guide/#cloud-agent)
+
 ## 서비스 사용 전 필수 사항
 
 ### NHN Cloud VM 이외 서버
@@ -10,9 +18,9 @@
 ### NHN Cloud VM 서버
 ![SSH연결필수](http://static.toastoven.net/prod_tcdeploy/getstarted/console_ssh_required.png)
 
-> NHN Cloud VM 서버의 경우 SSH 연결 혹은 Cloud-Agent로 서버의 배포 명령을 전달합니다.
-> SSH 연결의 경우 위와 동일하게 SSH 연결을 위한 준비가 필요합니다.
-> Cloud-Agent 연결의 경우 Cloud-Agent 연결을 위한 준비가 필요합니다.
+> NHN Cloud VM 서버의 경우 SSH 연결 혹은 Cloud-Agent 호출로 서버의 배포 명령을 전달합니다.
+> SSH 연결의 경우 target server의 IP, 포트, 방화벽 예외 처리와 같은 SSH 연결을 위한 준비가 필요합니다.
+> Cloud-Agent 호출의 경우 Cloud-Agent 설치, 유효성 확인과 같은 연결을 위한 준비가 필요합니다.
 
 ## SSH 연결을 위한 준비
 
