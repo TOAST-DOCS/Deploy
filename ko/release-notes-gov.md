@@ -1,5 +1,10 @@
 ## Dev Tools > Deploy > 릴리스 노트
 
+### 2023. 07. 25.
+#### 기능 추가
+* NHN Cloud VM Instance에 배포할 때 SSH를 통한 배포외에도 Cloud-Agent를 통한 배포기능이 추가되었습니다.
+    * VM instance에 Floating IP 를 할당하지 않아도 배포할 수 있습니다.
+
 ### 2023. 05. 30.
 #### 기능 개선
 * Jenkins Plugin이 업그레이드되었습니다(버전 1.1.1).
