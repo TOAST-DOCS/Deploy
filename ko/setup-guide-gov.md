@@ -158,7 +158,7 @@ Remove-Item -Path $isoFilePath
 
 ### 유효성 확인을 통한 Cloud-Agent 활성화
 * NHN Cloud Deploy 상품에서 생성한 인스턴스를 추가하여 서버 그룹을 생성합니다.
-  * 생성 전 OS 및 Shell Type 반드시 확인해 주세요. Shell Type의 기본값은 /bin/bash(LINUX), powershell(WINDOWS) 입니다.
+  * 생성 전 OS 및 Shell Type 반드시 확인해 주세요. Shell Type의 기본값은 /bin/bash(Linux), powershell(Windows) 입니다.
 
 ![deploy_14_202307](https://kr1-api-object-storage.nhncloudservice.com/v1/AUTH_2acdfabf4efe4efc8a04c00b348110c9/cdn_origin/prod_tcdeploy/deploy_14_202307.png)
 ![deploy_15_202307](https://kr1-api-object-storage.nhncloudservice.com/v1/AUTH_2acdfabf4efe4efc8a04c00b348110c9/cdn_origin/prod_tcdeploy/deploy_15_202307.png)
