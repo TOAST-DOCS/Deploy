@@ -129,7 +129,7 @@ Dismount-DiskImage -ImagePath $isoFilePath
 Remove-Item -Path $isoFilePath
 ```
 
-### 유효성 확인을 통한 Cloud-Agent 활성화
+### Cloud-Agent 설치 확인
 * NHN Cloud Deploy 상품에서 생성한 인스턴스를 추가하여 서버 그룹을 생성합니다.
     * 생성 전 OS 및 Shell Type 반드시 확인해 주세요.
 
@@ -148,5 +148,5 @@ Remove-Item -Path $isoFilePath
 ![deploy_18_202307](https://kr1-api-object-storage.nhncloudservice.com/v1/AUTH_2acdfabf4efe4efc8a04c00b348110c9/cdn_origin/prod_tcdeploy/deploy_18_202307.png)
 - - -
 
-QGA 서비스 설치 및 유효성 확인이 성공 하였습니다!
+Cloud-Agent 서비스 설치 및 유효성 확인이 성공 하였습니다!
 유효성 확인이 성공 하였을 경우 Deploy 서비스를 사용하여 배포가 가능합니다. 자세한 사항은 [Deploy > 콘솔 사용 가이드](/Dev%20Tools/Deploy/en/console-guide/)에서 확인할 수 있습니다.
