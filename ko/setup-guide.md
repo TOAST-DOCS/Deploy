@@ -151,14 +151,15 @@ Cloud-Agent 서비스 설치 및 유효성 확인이 성공 하였습니다!
 ```
 ##### 참고) 보안 예외 추가 방법
 
-![deploy_01_201812](https://static.toastoven.net/prod_tcdeploy/deploy_01_201812.png)
+![deploy_01_202307](https://kr1-api-object-storage.nhncloudservice.com/v1/AUTH_2acdfabf4efe4efc8a04c00b348110c9/cdn_origin/prod_tcdeploy/deploy_01_202307.png)
 
-1. NHN Cloud 콘솔의 **Compute** 서비스 중 **Instance**를 선택합니다.
-2. 현재 VM에 설정된 보안 그룹을 선택하거나 **+ Security Group 생성**을 클릭해 신규 보안 그룹(Security Group)을 생성합니다.
-3. **+ Rule 추가** 버튼을 클릭합니다.
-    * Rule: SSH로 선택합니다.
-    * CIDR에 IP를 입력합니다.
-    * 대역을 입력할 수도 있습니다(예​:​ 133.186.185.112/28).
+1. NHN Cloud 콘솔의 **Network** 서비스 중 **Security Groups**를 선택합니다.
+2. 현재 VM에 설정된 보안 그룹을 선택하거나 **+ 보안 그룹 생성**을 클릭해 신규 보안 그룹을 생성합니다.
+3. **+** 버튼을 클릭합니다.
+    * 방향: 수신을 선택합니다.
+    * IP 프로토콜: 사용자 정의 TCP를 선택합니다.
+    * 포트: 22를 입력합니다. (SSH Port)
+    * 원격: CIDR에 IP를 입력합니다. 대역을 입력할 수도 있습니다. (예: 133.186.185.112/28)
 
 ### NHN Cloud VM 이외 서버 배포 요구 사항
 #### 공인 IP 부여

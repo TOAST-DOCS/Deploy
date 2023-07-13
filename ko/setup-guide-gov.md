@@ -150,7 +150,7 @@ Cloud-Agent 서비스 설치 및 유효성 확인이 성공 하였습니다!
 ```
 ##### 참고) 보안 예외 추가 방법
 
-![deploy_01_201812](https://static.toastoven.net/prod_tcdeploy/deploy_01_201812.png)
+![deploy_01_202307](https://kr1-api-object-storage.nhncloudservice.com/v1/AUTH_2acdfabf4efe4efc8a04c00b348110c9/cdn_origin/prod_tcdeploy/deploy_01_202307.png)
 
 1. NHN Cloud 콘솔의 **Compute** 서비스 중 **Instance**를 선택합니다.
 2. 현재 VM에 설정된 보안 그룹을 선택하거나 **+ Security Group 생성**을 클릭해 신규 보안 그룹(Security Group)을 생성합니다.

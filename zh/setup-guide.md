@@ -37,7 +37,7 @@
 ```
 ##### Note) Adding Exceptions for Security
 
-![deploy_01_201812](https://static.toastoven.net/prod_tcdeploy/deploy_01_201812.png)
+![deploy_01_202307](https://kr1-api-object-storage.nhncloudservice.com/v1/AUTH_2acdfabf4efe4efc8a04c00b348110c9/cdn_origin/prod_tcdeploy/deploy_01_202307.png)
 
 1. Select **Instance** from **Compute** on the NHN Cloud console.
 2. Select the security group set for VM, or click **+ Create Security Group** to create a new security group.
