@@ -164,7 +164,7 @@ Phase 속성으로 Develop, Staging, Product 등의 서버 장비를 구분하�
 * 왼쪽 체크 박스를 선택 해제하거나 오른쪽 **삭제** 버튼을 클릭합니다.
 * **생성** 버튼을 클릭합니다. 수정할 때는 **수정** 버튼을 클릭합니다.
 
-#### Cloud-Agent 사용 시 서버 그룹 추가
+#### Cloud Agent 사용 시 서버 그룹 추가
 ![cloudAgent_01.png](https://static.toastoven.net/prod_tcdeploy/reference/cloudAgent_01.png)
 * 이름(필수), 설명(선택) 항목을 입력합니다.
 * OS를 선택한 후 Shell Type를 지정합니다. 목록에서 항목을 선택하거나 직접 입력할 수 있습니다.
@@ -256,7 +256,7 @@ Client 바이너리의 All, Fixed, Recent 버전을 원하는 방식으로 배�
 ### 태스크
 
 태스크는 개별 기능 수행 및 순서 제어가 가능한 시나리오 구성 요소 입니다.
-Cloud-Agent를 사용하고 있는 경우 도메인 또는 IP가 아닌 Instance ID를 입력하여 사용하면 됩니다.
+Cloud Agent를 사용하고 있는 경우 도메인 또는 IP가 아닌 Instance ID를 입력하여 사용하면 됩니다.
 
 * Pre-run Task : 배포 전 처리 작업이 가능한 태스크
     * 대상: 서버 그룹에 저장하지 않은 별도의 서버 지정 가능

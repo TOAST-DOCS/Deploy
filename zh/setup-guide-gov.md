@@ -10,9 +10,9 @@
 ### NHN Cloud VM 서버
 ![SSH연결필수](http://static.toastoven.net/prod_tcdeploy/getstarted/console_ssh_required.png)
 
-> NHN Cloud VM 서버의 경우 SSH 연결 혹은 Cloud-Agent로 서버의 배포 명령을 전달합니다.
+> NHN Cloud VM 서버의 경우 SSH 연결 혹은 Cloud Agent로 서버의 배포 명령을 전달합니다.
 > SSH 연결의 경우 위와 동일하게 SSH 연결을 위한 준비가 필요합니다.
-> Cloud-Agent 연결의 경우 Cloud-Agent 연결을 위한 준비가 필요합니다.
+> Cloud Agent 연결의 경우 Cloud Agent 연결을 위한 준비가 필요합니다.
 
 ## SSH 연결을 위한 준비
 
@@ -56,12 +56,12 @@
 211.56.2.52/32
 ```
 
-## Cloud-Agent 연결을 위한 준비
+## Cloud Agent 연결을 위한 준비
 
-### 운영체제별 Cloud-Agent 설치
+### 운영체제별 Cloud Agent 설치
 #### Linux(CentOS)
 
-* Cloud-Agent 작업 디렉토리 생성 및 설정 파일 수정을 위해 NHN Cloud Instance 상품에서 인스턴스를 생성 시 사용자스크립트에 아래의 내용을 추가합니다.
+* Cloud Agent 작업 디렉토리 생성 및 설정 파일 수정을 위해 NHN Cloud Instance 상품에서 인스턴스를 생성 시 사용자스크립트에 아래의 내용을 추가합니다.
     * 이미 생성한 상태라면 아래의 스크립트를 인스턴스에 접속하여 실행해줍니다.
 ```
 #!/bin/bash
@@ -125,7 +125,7 @@ Dismount-DiskImage -ImagePath $isoFilePath
 Remove-Item -Path $isoFilePath
 ```
 
-### Cloud-Agent 설치 확인
+### Cloud Agent 설치 확인
 * NHN Cloud Deploy 상품에서 생성한 인스턴스를 추가하여 서버 그룹을 생성합니다.
     * 생성 전 OS 및 Shell Type 반드시 확인해 주세요.
 
@@ -144,5 +144,5 @@ Remove-Item -Path $isoFilePath
 ![deploy_18_202307](https://kr1-api-object-storage.nhncloudservice.com/v1/AUTH_2acdfabf4efe4efc8a04c00b348110c9/cdn_origin/prod_tcdeploy/deploy_18_202307.png)
 - - -
 
-Cloud-Agent 서비스 설치 및 유효성 확인이 성공 하였습니다!
+Cloud Agent 서비스 설치 및 유효성 확인이 성공 하였습니다!
 유효성 확인이 성공 하였을 경우 Deploy 서비스를 사용하여 배포가 가능합니다. 자세한 사항은 [Deploy > 콘솔 사용 가이드](/Dev%20Tools/Deploy/en/console-guide/)에서 확인할 수 있습니다.

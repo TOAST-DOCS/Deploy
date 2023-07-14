@@ -3,7 +3,7 @@
 이 문서에서는 다음과 같은 내용을 다룹니다.
 
 * [서비스 사용 전 필수 사항](/Dev%20Tools/Deploy/ko/setup-guide-gov/#_1)
-* [Cloud-Agent 사용을 위한 준비](/Dev%20Tools/Deploy/ko/setup-guide-gov/#cloud-agent)
+* [Cloud Agent 사용을 위한 준비](/Dev%20Tools/Deploy/ko/setup-guide-gov/#cloud-agent)
 * [SSH 연결을 위한 준비](/Dev%20Tools/Deploy/ko/setup-guide-gov/#ssh)
 
 ## 서비스 사용 전 필수 사항
@@ -11,9 +11,9 @@
 ### NHN Cloud VM 서버
 ![SSH연결필수](https://kr1-api-object-storage.nhncloudservice.com/v1/AUTH_2acdfabf4efe4efc8a04c00b348110c9/cdn_origin/prod_tcdeploy/deploy_19_202307.png)
 
-> NHN Cloud VM 서버의 경우 SSH 연결 혹은 Cloud-Agent로 서버의 배포 명령을 전달합니다.
+> NHN Cloud VM 서버의 경우 SSH 연결 혹은 Cloud Agent로 서버의 배포 명령을 전달합니다.
 > SSH 연결의 경우 target server의 IP, 포트, 방화벽 예외 처리와 같은 [SSH 연결을 위한 준비](/Dev%20Tools/Deploy/ko/setup-guide-gov/#cloud-agent)가 필요합니다.
-> Cloud-Agent의 경우 Cloud-Agent 설치, 유효성 확인과 같은 [Cloud-Agent 사용을 위한 준비](/Dev%20Tools/Deploy/ko/setup-guide-gov/#_1)가 필요합니다.
+> Cloud Agent의 경우 Cloud Agent 설치, 유효성 확인과 같은 [Cloud Agent 사용을 위한 준비](/Dev%20Tools/Deploy/ko/setup-guide-gov/#_1)가 필요합니다.
 
 ### NHN Cloud VM 이외 서버
 ![SSH연결필수](https://kr1-api-object-storage.nhncloudservice.com/v1/AUTH_2acdfabf4efe4efc8a04c00b348110c9/cdn_origin/prod_tcdeploy/deploy_20_202307.png)
@@ -22,10 +22,10 @@
 > 배포 전 배포 target server 와 SSH로 연결해야 하므로
 > target server의 IP, 포트, 방화벽 예외 처리와 같은 [SSH 연결을 위한 준비](/Dev%20Tools/Deploy/ko/setup-guide-gov/#cloud-agent)가 필요합니다.
 
-## Cloud-Agent 사용을 위한 준비
+## Cloud Agent 사용을 위한 준비
 
-### 운영체제별 Cloud-Agent 설치
-* Cloud-Agent 설치 및 설정 파일 수정을 위해 NHN Cloud Instance 상품에서 인스턴스를 생성 시 추가 설정 > 사용자 스크립트에 Linux, Windows 운영체제에 맞는 스크립트 내용을 추가합니다.
+### 운영체제별 Cloud Agent 설치
+* Cloud Agent 설치 및 설정 파일 수정을 위해 NHN Cloud Instance 상품에서 인스턴스를 생성 시 추가 설정 > 사용자 스크립트에 Linux, Windows 운영체제에 맞는 스크립트 내용을 추가합니다.
   ![사용자 스크립트](https://kr1-api-object-storage.nhncloudservice.com/v1/AUTH_2acdfabf4efe4efc8a04c00b348110c9/cdn_origin/prod_tcdeploy/deploy_21_202307.png)
 * 만약 사용자 스크립트를 사용할 수 없는 경우나 이미 생성한 상태라면 아래의 스크립트를 인스턴스에 접속하여 실행해줍니다.
 
@@ -106,7 +106,7 @@ Dismount-DiskImage -ImagePath $isoFilePath
 Remove-Item -Path $isoFilePath
 ```
 
-### Cloud-Agent 설치 확인
+### Cloud Agent 설치 확인
 * NHN Cloud Deploy 상품에서 생성한 인스턴스를 추가하여 서버 그룹을 생성합니다.
     * 생성 전 OS 및 Shell Type 반드시 확인해 주세요. Shell Type의 기본값은 /bin/bash(Linux), powershell(Windows) 입니다.
 
@@ -124,7 +124,7 @@ Remove-Item -Path $isoFilePath
 
 ![deploy_18_202307](https://kr1-api-object-storage.nhncloudservice.com/v1/AUTH_2acdfabf4efe4efc8a04c00b348110c9/cdn_origin/prod_tcdeploy/deploy_18_202307.png)
 
-Cloud-Agent 서비스 설치 및 유효성 확인이 성공 하였습니다!
+Cloud Agent 서비스 설치 및 유효성 확인이 성공 하였습니다!
 
 ## SSH 연결을 위한 준비
 
@@ -172,5 +172,5 @@ Cloud-Agent 서비스 설치 및 유효성 확인이 성공 하였습니다!
 
 - - -
 
-SSH 연결 준비 혹은 Cloud-Agent 서비스 설치 및 유효성 확인이 완료 되었을 경우 Deploy 서비스를 사용하여 배포가 가능합니다.
+SSH 연결 준비 혹은 Cloud Agent 서비스 설치 및 유효성 확인이 완료 되었을 경우 Deploy 서비스를 사용하여 배포가 가능합니다.
 자세한 사항은 [Deploy > 콘솔 사용 가이드](/Dev%20Tools/Deploy/ko/console-guide/)에서 확인할 수 있습니다.
