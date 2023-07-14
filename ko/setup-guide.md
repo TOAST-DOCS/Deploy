@@ -32,78 +32,13 @@
 #### Linux 설치 스크립트
 ```
 #!/bin/bash
-
-function install_qga_using_apt() {
-    sudo apt update
-    sudo apt install -y qemu-guest-agent
-}
-
-function install_qga_using_yum() {
-    sudo yum install -y qemu-guest-agent
-}
-
-function download_qga_config() {
-    sudo mkdir -p /etc/sysconfig/
-    sudo wget http://static.toastoven.net/prod_tcdeploy/qemu/qemu-ga -O /etc/sysconfig/qemu-ga
-}
-
-function create_qga_directory() {
-    if [ ! -d "/var/log/qemu-ga" ]; then
-        sudo mkdir /var/log/qemu-ga
-    fi
-}
-
-function write_qga_rotate_file() {
-    sudo sh -c 'echo "/var/log/qemu-ga {
-    daily
-    rotate 50
-    missingok
-    notifempty
-    nocompress
-}" >> /etc/logrotate.d/qemu_ga'
-}
-
-### Main ###
-if command -v apt >/dev/null; then
-    install_qga_using_apt
-elif command -v yum >/dev/null; then
-    install_qga_using_yum
-fi
-
-download_qga_config
-create_qga_directory
-write_qga_rotate_file
+curl 'https://kr1-api-object-storage.nhncloudservice.com/v1/AUTH_2acdfabf4efe4efc8a04c00b348110c9/cdn_origin/prod_tcdeploy/qemu/cloud_agent_install_linux_1.0.0.sh' | sudo bash
 ```
 
 #### Windows 설치 스크립트
 ```
 #ps1_sysnative
-
-if (!(Test-Path -Path C:\temp\qemu-ga)){
-  New-Item -ItemType directory -Path C:\temp\qemu-ga | out-null;
-}
-
-if (!(Test-Path -Path C:\.qemu-download)){
-  New-Item -ItemType directory -Path C:\.qemu-download | out-null;
-}
-
-$isoFilePath = 'C:\.qemu-download\virtio-win-0.1.229.iso';
-
-if ( -NOT (Test-Path isoFilePath) ) {
-  $wc = New-Object System.Net.WebClient;
-  $wc.DownloadFile('http://static.toastoven.net/prod_tcdeploy/qemu/virtio-win-0.1.229.iso', $isoFilePath);
-}
-
-
-Mount-DiskImage -ImagePath $isoFilePath
-
-$msiPath = 'D:\guest-agent\qemu-ga-x86_64.msi';
-
-Start-Process -FilePath msiexec.exe -ArgumentList "/i $msiPath /qn" -Wait
-
-Dismount-DiskImage -ImagePath $isoFilePath
-
-Remove-Item -Path $isoFilePath
+Invoke-WebRequest -UseBasicParsing 'https://kr1-api-object-storage.nhncloudservice.com/v1/AUTH_2acdfabf4efe4efc8a04c00b348110c9/cdn_origin/prod_tcdeploy/qemu/cloud_agent_install_windows_1.0.0.ps1' | Invoke-Expression
 ```
 
 ### Cloud Agent 설치 확인
