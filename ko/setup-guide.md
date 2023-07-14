@@ -118,6 +118,14 @@ Remove-Item -Path $isoFilePath
 
 ![deploy_16_202307](https://kr1-api-object-storage.nhncloudservice.com/v1/AUTH_2acdfabf4efe4efc8a04c00b348110c9/cdn_origin/prod_tcdeploy/deploy_16_202307.png)
 
+* 좌측에 시나리오 명을 입력하고, 우측의 [Task 추가] 버튼을 눌러서 Normal Task의 User Command를 선택합니다.
+
+![deploy_22_202307](https://kr1-api-object-storage.nhncloudservice.com/v1/AUTH_2acdfabf4efe4efc8a04c00b348110c9/cdn_origin/prod_tcdeploy/deploy_22_202307.png)
+
+* Command에 pwd와 같이 아무런 영향을 주지 않는 명령어 등을 입력하고 [생성] 버튼을 눌러 줍니다.
+
+![deploy_23_202307](https://kr1-api-object-storage.nhncloudservice.com/v1/AUTH_2acdfabf4efe4efc8a04c00b348110c9/cdn_origin/prod_tcdeploy/deploy_23_202307.png)
+
 * 유효성 확인 버튼을 눌러 줍니다.
 
 ![deploy_17_202307](https://kr1-api-object-storage.nhncloudservice.com/v1/AUTH_2acdfabf4efe4efc8a04c00b348110c9/cdn_origin/prod_tcdeploy/deploy_17_202307.png)
