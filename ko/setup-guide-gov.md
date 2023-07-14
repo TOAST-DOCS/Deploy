@@ -32,78 +32,13 @@
 #### Linux 설치 스크립트
 ```
 #!/bin/bash
-
-function install_qga_using_apt() {
-    sudo apt update
-    sudo apt install -y qemu-guest-agent
-}
-
-function install_qga_using_yum() {
-    sudo yum install -y qemu-guest-agent
-}
-
-function download_qga_config() {
-    sudo mkdir -p /etc/sysconfig/
-    sudo wget http://static.toastoven.net/prod_tcdeploy/qemu/qemu-ga -O /etc/sysconfig/qemu-ga
-}
-
-function create_qga_directory() {
-    if [ ! -d "/var/log/qemu-ga" ]; then
-        sudo mkdir /var/log/qemu-ga
-    fi
-}
-
-function write_qga_rotate_file() {
-    sudo sh -c 'echo "/var/log/qemu-ga {
-    daily
-    rotate 50
-    missingok
-    notifempty
-    nocompress
-}" >> /etc/logrotate.d/qemu_ga'
-}
-
-### Main ###
-if command -v apt >/dev/null; then
-    install_qga_using_apt
-elif command -v yum >/dev/null; then
-    install_qga_using_yum
-fi
-
-download_qga_config
-create_qga_directory
-write_qga_rotate_file
+curl 'https://kr1-api-object-storage.nhncloudservice.com/v1/AUTH_2acdfabf4efe4efc8a04c00b348110c9/cdn_origin/prod_tcdeploy/qemu/cloud_agent_install_linux_1.0.0.sh' | sudo bash
 ```
 
 #### Windows 설치 스크립트
 ```
 #ps1_sysnative
-
-if (!(Test-Path -Path C:\temp\qemu-ga)){
-  New-Item -ItemType directory -Path C:\temp\qemu-ga | out-null;
-}
-
-if (!(Test-Path -Path C:\.qemu-download)){
-  New-Item -ItemType directory -Path C:\.qemu-download | out-null;
-}
-
-$isoFilePath = 'C:\.qemu-download\virtio-win-0.1.229.iso';
-
-if ( -NOT (Test-Path isoFilePath) ) {
-  $wc = New-Object System.Net.WebClient;
-  $wc.DownloadFile('http://static.toastoven.net/prod_tcdeploy/qemu/virtio-win-0.1.229.iso', $isoFilePath);
-}
-
-
-Mount-DiskImage -ImagePath $isoFilePath
-
-$msiPath = 'D:\guest-agent\qemu-ga-x86_64.msi';
-
-Start-Process -FilePath msiexec.exe -ArgumentList "/i $msiPath /qn" -Wait
-
-Dismount-DiskImage -ImagePath $isoFilePath
-
-Remove-Item -Path $isoFilePath
+Invoke-WebRequest -UseBasicParsing 'https://kr1-api-object-storage.nhncloudservice.com/v1/AUTH_2acdfabf4efe4efc8a04c00b348110c9/cdn_origin/prod_tcdeploy/qemu/cloud_agent_install_windows_1.0.0.ps1' | Invoke-Expression
 ```
 
 ### Cloud Agent 설치 확인
@@ -117,6 +52,14 @@ Remove-Item -Path $isoFilePath
 * 배포 탭으로 이동 후 위 과정에서 생성한 서버 그룹을 선택하여 새로운 시나리오를 만들어줍니다.
 
 ![deploy_16_202307](https://kr1-api-object-storage.nhncloudservice.com/v1/AUTH_2acdfabf4efe4efc8a04c00b348110c9/cdn_origin/prod_tcdeploy/deploy_16_202307.png)
+
+* 좌측에 시나리오 명을 입력하고, 우측의 [Task 추가] 버튼을 눌러서 Normal Task의 User Command를 선택합니다.
+
+![deploy_22_202307](https://kr1-api-object-storage.nhncloudservice.com/v1/AUTH_2acdfabf4efe4efc8a04c00b348110c9/cdn_origin/prod_tcdeploy/deploy_22_202307.png)
+
+* Command에 pwd와 같이 아무런 영향을 주지 않는 명령어 등을 입력하고 [생성] 버튼을 눌러 줍니다.
+
+![deploy_23_202307](https://kr1-api-object-storage.nhncloudservice.com/v1/AUTH_2acdfabf4efe4efc8a04c00b348110c9/cdn_origin/prod_tcdeploy/deploy_23_202307.png)
 
 * 유효성 확인 버튼을 눌러 줍니다.
 
@@ -152,12 +95,13 @@ Cloud Agent 서비스 설치 및 유효성 확인이 성공 하였습니다!
 
 ![deploy_01_202307](https://kr1-api-object-storage.nhncloudservice.com/v1/AUTH_2acdfabf4efe4efc8a04c00b348110c9/cdn_origin/prod_tcdeploy/deploy_01_202307.png)
 
-1. NHN Cloud 콘솔의 **Compute** 서비스 중 **Instance**를 선택합니다.
-2. 현재 VM에 설정된 보안 그룹을 선택하거나 **+ Security Group 생성**을 클릭해 신규 보안 그룹(Security Group)을 생성합니다.
-3. **+ Rule 추가** 버튼을 클릭합니다.
-    * Rule: SSH로 선택합니다.
-    * CIDR에 IP를 입력합니다.
-    * 대역을 입력할 수도 있습니다(예​:​ 133.186.185.112/28).
+1. NHN Cloud 콘솔의 **Network** 서비스 중 **Security Groups**를 선택합니다.
+2. 현재 VM에 설정된 보안 그룹을 선택하거나 **+ 보안 그룹 생성**을 클릭해 신규 보안 그룹을 생성합니다.
+3. **+** 버튼을 클릭합니다.
+    * 방향: 수신을 선택합니다.
+    * IP 프로토콜: 사용자 정의 TCP를 선택합니다.
+    * 포트: 22를 입력합니다. (SSH Port)
+    * 원격: CIDR에 IP를 입력합니다. 대역을 입력할 수도 있습니다. (예: 133.186.185.112/28)
 
 ### NHN Cloud VM 이외 서버 배포 요구 사항
 #### 공인 IP 부여
@@ -173,4 +117,4 @@ Cloud Agent 서비스 설치 및 유효성 확인이 성공 하였습니다!
 - - -
 
 SSH 연결 준비 혹은 Cloud Agent 서비스 설치 및 유효성 확인이 완료 되었을 경우 Deploy 서비스를 사용하여 배포가 가능합니다.
-자세한 사항은 [Deploy > 콘솔 사용 가이드](/Dev%20Tools/Deploy/ko/console-guide/)에서 확인할 수 있습니다.
+자세한 사항은 [Deploy > 콘솔 사용 가이드](/Dev%20Tools/Deploy/ko/console-guide-gov/)에서 확인할 수 있습니다.
