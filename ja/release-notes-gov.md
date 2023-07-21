@@ -1,5 +1,9 @@
 ## Dev Tools > Deploy > Release Notes
 
+### 2023. 06. 27.
+#### バグ修正
+* Windows Server 2019 Standardでバイナリが配布されないエラーを修正
+
 ### 2023. 05. 30.
 #### 機能改善
 * Jenkins Pluginがアップグレードしました(バージョン1.1.1)。
