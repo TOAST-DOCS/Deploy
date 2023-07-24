@@ -1,5 +1,9 @@
 ## Dev Tools > Deploy > Release Notes
 
+### June 27, 2023
+#### Bug Fixes
+* Fixed a bug where binary deployment fails in Windows Server 2019 Standard
+
 ### May 30, 2023
 #### Feature Updates
 * Updated Jenkins Plugin (Version 1.1.1).
