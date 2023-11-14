@@ -1,5 +1,9 @@
 ## Dev Tools > Deploy > 릴리스 노트
 
+### 2023. 11. 28.
+* Jenkins Plugin이 업그레이드되었습니다(버전 1.1.2).
+  * Windows 환경에 설치된 Jenkins에서 Deploy로 업로드 안되는 오류 수정
+
 ### 2023. 06. 27.
 #### 버그 수정
 * Windows Server 2019 Standard에서 바이너리가 배포되지 않는 오류 수정
