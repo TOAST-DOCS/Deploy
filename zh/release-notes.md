@@ -1,5 +1,17 @@
 ## Dev Tools > Deploy > Release Notes
 
+### November 28, 2023
+#### Feature Updates
+* Updated the version of the Jenkins Plugin (version 1.1.2).
+  * Fixed an error that prevented Jenkins installed on a Windows environment from uploading to Deploy
+* Changed the size limit for uploading binaries to APIs from 1 GB to 2 GB
+#### Bug Fixes 
+* Fixed an error where resource file time information does not appear
+
+### June 27, 2023
+#### Bug Fixes
+* Fixed a bug where binary deployment fails in Windows Server 2019 Standard
+
 ### May 30, 2023
 #### Feature Updates
 * Updated Jenkins Plugin (Version 1.1.1).
