@@ -102,14 +102,12 @@ Applicable to categorize binaries deployed for each server tool, such as Develop
 
 * Groups can be created or modified, while binary files are uploaded or downloaded. 
 
-![deploy_ref_05_2018.png](https://static.toastoven.net/prod_tcdeploy/deploy_ref_05_2018.png)
-
+![deploy_24_202401.png](https://static.toastoven.net/prod_tcdeploy/deploy_24_202401.png)
 * In the Client type, password can be set for a binary group, and access of shared client download page can be controlled. 
     * Select **Enable Binary Group Password** and enter password to create a binary group. 
-    * Access to download page of each group is available only by password without login to NHN Cloud. 
-* Click **Auto Remove Policy** and set auto removal policy for each binary group. 
-
-![deploy_ref_06_2018.png](https://static.toastoven.net/prod_tcdeploy/deploy_ref_06_2018.png)
+    * Access to download page of each group is available only by password without login to NHN Cloud.
+* You can set the auto delete policy for the binary group from the auto delete settings.
+    * If you leave each item in the auto delete setting empty and create a binary group, the auto delete setting will not be applied.
 
 ### Server Group 
 
