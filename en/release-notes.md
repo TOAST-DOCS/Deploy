@@ -1,5 +1,17 @@
 ## Dev Tools > Deploy > Release Notes
 
+### January 23, 2024
+#### Feature Updates
+* Modified to set up the auto delete policy when creating or modifying binary groups
+
+### November 28, 2023
+#### Feature Updates
+* Updated Jenkins Plugin (Version 1.1.2).
+  * Fixed an issue where uploading from Jenkins installed in Windows to Deploy fails 
+* Modified the size limit from 1 GB to 2 GB when uploading binaries via APIs
+#### Bug Fixes
+* Fixed an issue where the resource file time information is not displayed
+
 ### June 27, 2023
 #### Bug Fixes
 * Fixed a bug where binary deployment fails in Windows Server 2019 Standard
