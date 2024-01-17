@@ -1,5 +1,9 @@
 ## Dev Tools > Deploy > Release Notes
 
+### January 23, 2024
+#### Feature Updates
+* Modified to set up the auto delete policy when creating or modifying binary groups
+
 ### November 28, 2023
 #### Feature Updates
 * Updated the version of the Jenkins Plugin (version 1.1.2).
