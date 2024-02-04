@@ -102,7 +102,7 @@ Applicable to categorize binaries deployed for each server tool, such as Develop
 
 * Groups can be created or modified, while binary files are uploaded or downloaded. 
 
-![deploy_ref_05_2018.png](https://static.toastoven.net/prod_tcdeploy/deploy_ref_05_2018.png)
+![deploy_24_202402.png](https://static.toastoven.net/prod_tcdeploy/deploy_24_202402.png)
 
 * In the Client type, password can be set for a binary group, and access of shared client download page can be controlled. 
     * Select **Enable Binary Group Password** and enter password to create a binary group. 

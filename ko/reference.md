@@ -102,7 +102,7 @@ Develop, Staging, Product 등의 서버 장비에 배포되는 바이너리를 �
 
 * 그룹을 생성, 수정하고, 바이너리 파일을 업로드, 다운로드할 수 있습니다.
 
-![deploy_24_202401.png](https://static.toastoven.net/prod_tcdeploy/deploy_24_202401.png)
+![deploy_24_202402.png](https://static.toastoven.net/prod_tcdeploy/deploy_24_202402.png)
 * Client 타입일 때는 바이너리 그룹의 비밀번호를 설정할 수 있으며, 공유된 클라이언트 다운로드 페이지의 접근을 제어할 수 있습니다.
     * 바이너리 그룹을 생성할 때 **바이너리 그룹 비밀번호 사용**을 선택하면 비밀번호를 입력할 수 있습니다.
     * 해당 그룹 다운로드 페이지는 NHN Cloud에 로그인하지 않고도 설정된 비밀번호로만 접근할 수 있습니다.
