@@ -1,12 +1,18 @@
 ## Dev Tools > Deploy > API Guide
 
-The API allows user-configured HTTP Request to upload binaries. 
+The API allows user-configured HTTP Request to upload binaries.
+
+### Basic Information
+#### Endpoint
+```text
+https://api-tcd.nhncloudservice.com
+```
 
 ## Ver 1.0
 
-* Major Improvements 
-    * API of the REST-format 
-    * Diversified resultCode 
+* Major Improvements
+  * API of the REST-format
+  * Diversified resultCode
 
 | Http Method | POST |
 | ----------- | ---- |
@@ -37,7 +43,7 @@ curl -X POST \
 
 ### Sample Request For JAVA
 
-Below is an example of uploading binaries via API by using HttpClient library (httpclient 4.3.6). 
+Below is an example of uploading binaries via API by using HttpClient library (httpclient 4.3.6).
 
 ``` java
 
@@ -94,12 +100,12 @@ try {
 
 ### Response (json)
 
-| Name | Type | Description | Value |
-| ---- | ---- | ----------- | ----- |
-| isSuccessful | boolean | Uploading result | True or false |
+| Name | Type | Description | Value                                                |
+| ---- | ---- | ----------- |------------------------------------------------------|
+| isSuccessful | boolean | Uploading result | True or false                                        |
 | resultCode | String | Message for uploading result | See [Error Codes](/Dev%20Tools/Deploy/zh/error-code/) |
-| downloadUrl | String | Downloading path for uploaded binaries | Download is available in the path |
-| binaryKey | String | Key of the uploaded binary | - |
+| downloadUrl | String | Downloading path for uploaded binaries | Download is available in the path                    |
+| binaryKey | String | Key of the uploaded binary | -                                                    |
 
 ### Response Sample
 
@@ -118,7 +124,7 @@ try {
 }
 ```
 
-## Previous Version 
+## Previous Version
 
 | Http Method | POST |
 | ----------- | ---- |
@@ -140,7 +146,7 @@ try {
 
 ### Sample Request For JAVA
 
-Below is an example of uploading binaries via API by using HttpClient library (httpclient 4.3.6). 
+Below is an example of uploading binaries via API by using HttpClient library (httpclient 4.3.6).
 
 ``` java
 String artifactId = "1";
