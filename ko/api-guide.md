@@ -318,7 +318,7 @@ curl --location 'https://api-tcd.nhncloudservice.com/api/v1.0/projects/{appKey}/
                 "hostname": "{호스트명}",
                 "status": "{배포 결과}",
                 "taskResult": [
-					...
+					"..."
                 ]
             }
         ],
