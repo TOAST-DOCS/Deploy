@@ -266,7 +266,7 @@ try {
 | X-TC-AUTHENTICATION-SECRET | API 보안 설정 메뉴의 Secret Access Key | {key} |
 
 ##### Parameter (Body)
-| Name | Type | Description | Value | Required | default value |
+| Name | Type | Description | Value | Required | Default Value |
 | --- | --- | --- | --- | --- | --- |
 | targetServerHostnames | String | 서버그룹내에서 선택적으로 적배포 대상이 되는 ','으로 구분 된 서버의 호스트명(서버그룹 전체인 경우 모두 입력) | hostname1,hostname2,hostname3(없을시 서버그룹내 서버 전체 배포) | false | 서버그룹에 포함된 전체 서버 |
 | concurrentNum | Number | 병렬로 실행할 배포 수 | 0 이상의 값, 0 인경우 서버그룹 전체 동시 실행 | false | 0 |
@@ -292,8 +292,11 @@ curl --location 'https://api-tcd.nhncloudservice.com/api/v1.0/projects/{appKey}/
 ##### Response(json)
 | Name | Type | Description | Value |
 | ---- | ---- | ----------- | ----- |
+| isSuccessful | Boolean | 배포 실행 성공 여부 | true 또는 false |
+| resultCode | String | 배포 실행 결과 메시지 | [오류 코드](/Dev%20Tools/Deploy/ko/error-code/) 참고 |
 | deployStatus | String | 배포 상태 | success, fail 또는 deploying(async 옵션 true 시) |
 | deployResult | List | 서버별 배포 결과 | - hostname: 배포대상 호스트 명(인스턴스 ID)<br>- status: 배포 결과<br>- taskResult: 배포 시나리오 내 각 테스크 별 정보 |
+| deployResultLocation | String | 배포 실행된 Deploy 서비스 프로젝트 링크 | 해당 링크로 Deploy 서비스 프로젝트 콘솔 접속 가능 |
 
 ##### Response Sample
 ``` json
@@ -313,21 +316,11 @@ curl --location 'https://api-tcd.nhncloudservice.com/api/v1.0/projects/{appKey}/
                 "hostname": "{호스트명}",
                 "status": "{배포 결과}",
                 "taskResult": [
-                    {
-                        "deployKey": 52876,
-                        "hostname": "{호스트명}",
-                        "orderNo": 1,
-                        "taskName": "auth check",
-                        "result": "authorization check failed : [irteam]",
-                        "stdErrResult": null,
-                        "status": null,
-                        "saltJid": null,
-                        "stdoutCompleteStatus": null
-                    }
+					...
                 ]
             }
         ],
-        "deployResultLocation": "{배포 프로젝트의 Deploy 서비스 콘솔 링크}"
+        "deployResultLocation": "{배포 실행된 Deploy 서비스 프로젝트 링크}"
     }
 }
 ```
