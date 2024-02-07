@@ -290,6 +290,8 @@ curl --location 'https://api-tcd.nhncloudservice.com/api/v1.0/projects/{appKey}/
 ```
 
 ##### Response(json)
+* isSuccessful 항목은 배포 실행 호출에 성공했는지 유무를 확인하는 필드값이며 deployStatus 항목을 통해 배포 결과(성공, 실패)를 확인해야 합니다.
+
 | Name | Type | Description | Value |
 | ---- | ---- | ----------- | ----- |
 | isSuccessful | Boolean | 배포 실행 성공 여부 | true 또는 false |
