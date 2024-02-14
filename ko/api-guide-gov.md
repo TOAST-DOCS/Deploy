@@ -16,10 +16,10 @@ https://api-tcd.gov-nhncloudservice.com
 #### API 요청 경로 변수
 | 값 | 타입 | 설명 |
 | --- | --- | --- |
-| appKey | String | 사용할 Deploy서비스의 앱 키 |
+| appKey | String | 사용할 Deploy 서비스의 앱키 |
 | artifactId | Number | 사용할 아티팩트의 아이디 |
-| binaryGroupKey | Number | 바이너리를 업로드 할 바이너리 그룹 키 |
-| serverGroupId | Number | 배포 대상이 되는 서버그룹 아이디 |
+| binaryGroupKey | Number | 바이너리를 업로드할 바이너리 그룹 키 |
+| serverGroupId | Number | 배포 대상이 되는 서버 그룹 아이디 |
 | scenarioId | Number | 배포할 시나리오의 아이디 |
 
 ##### 변수별 값 확인 방법
@@ -31,7 +31,7 @@ https://api-tcd.gov-nhncloudservice.com
 </details>
 <details> 
 <summary>artifactId 확인 방법</summary>
-* 아티팩트 리스트에서 아이디 칼럼에서 확인 가능합니다.
+* 아티팩트 리스트의 아이디 칼럼에서 확인 가능합니다.
 
 ![deploy_api_02_202402.png](https://static.toastoven.net/prod_tcdeploy/deploy_api_02_202402.png)
 </details>
@@ -171,7 +171,7 @@ try {
 ##### Parameter
 | Name | Type | Description | Value | Required |
 | ---- | ---- | ----------- | ----- | -------- |
-| appKey | String | NHN Cloud 앱 키, Deploy 서비스 페이지에서 확인 가능 | - | true |
+| appKey | String | NHN Cloud 앱키, Deploy 서비스 페이지에서 확인 가능 | - | true |
 | applicationType | String | 아티팩트의 타입 | client 또는 server | true |
 | binaryGroupKey | long | 바이너리의 그룹 키 | 미입력 시 기본 그룹으로 지정 | false |
 | version | String | 업로드하는 바이너리의 버전, 미입력 시 timestamp로 대체 | - | false |
@@ -268,10 +268,10 @@ try {
 ##### Parameter (Body)
 | Name | Type | Description | Value | Required | Default Value |
 | --- | --- | --- | --- | --- | --- |
-| targetServerHostnames | String | 서버그룹내에서 선택적으로 적배포 대상이 되는 ','으로 구분 된 서버의 호스트명(서버그룹 전체인 경우 모두 입력) | hostname1,hostname2,hostname3(없을시 서버그룹내 서버 전체 배포) | false | 서버그룹에 포함된 전체 서버 |
-| concurrentNum | Number | 병렬로 실행할 배포 수 | 0 이상의 값, 0 인경우 서버그룹 전체 동시 실행 | false | 0 |
-| nextWhenFail | Boolean | 시나리오 실패시 다음 서버 실행여부 | true/false | false | false (실행 중단) |
-| deployNote | String | 배포시 작성하는 부가정보 |  | false |  |
+| targetServerHostnames | String | 서버 그룹 내에서 선택적으로 배포 대상이 되는 ','으로 구분된 서버의 호스트명(서버 그룹 전체인 경우 모두 입력) | hostname1, hostname2, hostname3(없을 시 서버 그룹 내 서버 전체 배포) | false | 서버 그룹에 포함된 전체 서버 |
+| concurrentNum | Number | 병렬로 실행할 배포 수 | 0 이상의 값, 0인 경우 서버 그룹 전체 동시 실행 | false | 0 |
+| nextWhenFail | Boolean | 시나리오 실패 시 다음 서버 실행 여부 | true/false | false | false (실행 중단) |
+| deployNote | String | 배포 시 작성하는 부가 정보 |  | false |  |
 | async | Boolean | 배포 결과를 기다리지 않고 응답을 받음 | true/false | false | false |
 
 ##### Sample Request For cURL
@@ -297,7 +297,7 @@ curl --location 'https://api-tcd.gov-nhncloudservice.com/api/v1.0/projects/{appK
 | isSuccessful | Boolean | 배포 실행 호출 성공 여부 | true 또는 false |
 | resultCode | String | 배포 실행 결과 메시지 | [오류 코드](/Dev%20Tools/Deploy/ko/error-code/) 참고 |
 | deployStatus | String | 배포 상태 | success, fail 또는 deploying(async 옵션 true 시) |
-| deployResult | List | 서버별 배포 결과 | - hostname: 배포대상 호스트 명(인스턴스 ID)<br>- status: 배포 결과<br>- taskResult: 배포 시나리오 내 각 테스크 별 정보 |
+| deployResult | List | 서버별 배포 결과 | - hostname: 배포 대상 호스트명(인스턴스 ID)<br>- status: 배포 결과<br>- taskResult: 배포 시나리오 내 각 태스크별 정보 |
 | deployResultLocation | String | 배포 실행된 Deploy 서비스 프로젝트 링크 | 해당 링크로 Deploy 서비스 프로젝트 콘솔 접속 가능 |
 
 ##### Response Sample
