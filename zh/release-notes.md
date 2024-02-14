@@ -1,11 +1,15 @@
 ## Dev Tools > Deploy > Release Notes
 
+### January 23, 2024
+#### Feature Updates
+* Modified to set up the auto delete policy when creating or modifying binary groups
+
 ### November 28, 2023
 #### Feature Updates
 * Updated the version of the Jenkins Plugin (version 1.1.2).
   * Fixed an error that prevented Jenkins installed on a Windows environment from uploading to Deploy
 * Changed the size limit for uploading binaries to APIs from 1 GB to 2 GB
-#### Bug Fixes 
+#### Bug Fixes
 * Fixed an error where resource file time information does not appear
 
 ### June 27, 2023
@@ -15,9 +19,9 @@
 ### May 30, 2023
 #### Feature Updates
 * Updated Jenkins Plugin (Version 1.1.1).
-    * Fixed an error where uploading from Jenkins Agent node to Deploy fails
+  * Fixed an error where uploading from Jenkins Agent node to Deploy fails
 
-### April 25, 2023 
+### April 25, 2023
 #### Bug Fixes
 * Fixed a bug where, when modifying deployment scenarios, more than 10 file lists are not loaded in the Select a file window
 * Fixed an issue where, when resource file upload fails in the console, files are not retrieved and added the **Cancel Upload** button

@@ -102,7 +102,7 @@ Develop、Staging、Productなどのサーバー機器に配布されるバイ�
 
 * グループの作成/修正、バイナリファイルのアップロード/ダウンロードが行えます。
 
-![deploy_24_202401.png](https://static.toastoven.net/prod_tcdeploy/deploy_24_202401.png)
+![deploy_24_202402.png](https://static.toastoven.net/prod_tcdeploy/deploy_24_202402.png)
 * Clientタイプの時は、バイナリグループのパスワードを設定でき、共有されたクライアントダウンロードページのアクセスを制御できます。
     * バイナリグループを作成する時、**バイナリグループパスワード使用**を選択すると、パスワードを入力できます。
     * 該当グループダウンロードページは、NHN Cloudにログインしなくても、設定されたパスワードだけでアクセスできます。
