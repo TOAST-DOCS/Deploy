@@ -1,19 +1,69 @@
 ## Dev Tools > Deploy > API Guide
+Deploy provides an API for uploading binaries, running deployments, and configuring HTTP requests directly by the user.
 
-The API allows user-configured HTTP Request to upload binaries. 
+### Basic Information
+#### Endpoint
+```text
+https://api-tcd.nhncloudservice.com
+```
 
-## Ver 1.0
+#### Types of Provided APIs
+| Method | URI | Descriptions |
+| ------ | --- | --- |
+| POST | /api/v1.0/projects/{appkey}/artifacts/{artifactId}/binary-group/{binaryGroupKey} | Binary upload API |
+| POST | /api/v1.0/projects/{appKey}/artifacts/{artifactId}/server-group/{serverGroupId}/scenario/{scenarioId}/deploy | Deployment execution API |
 
-* Major Improvements 
-    * API of the REST-format 
-    * Diversified resultCode 
+#### API request path variables
+| Value | Type | Description |
+| --- | --- | --- |
+| appKey | String | The app key for the Deploy service to use |
+| artifactId | Number | The ID of the artifact to use |
+| binaryGroupKey | Number | The binary group key to upload the binary to |
+| serverGroupId | Number | Server group ID for the deployment target |
+| scenarioId | Number | The scenario ID to deploy |
 
+##### How to check values by variable
+<details> 
+<summary>How to check appKey</summary>
+* You can check the appKey by pressing the `URL &amp; Appkey` button.
+
+![deploy_api_01_202402.png](https://static.toastoven.net/prod_tcdeploy/deploy_api_01_202402.png)
+</details>
+<details> 
+<summary>To check the artifactId</summary>
+* You can find it in the ID column of the artifact list.
+
+![deploy_api_02_202402.png](https://static.toastoven.net/prod_tcdeploy/deploy_api_02_202402.png)
+</details>
+<details> 
+<summary>To check binaryGroupKey</summary>
+* You can check the Key value by selecting and entering the binary group.
+
+![deploy_api_03_202402.png](https://static.toastoven.net/prod_tcdeploy/deploy_api_03_202402.png)
+* You can also check by hovering over the binary group. (Parenthetical numbers)
+
+![deploy_api_04_202402.png](https://static.toastoven.net/prod_tcdeploy/deploy_api_04_202402.png)
+</details>
+<details> 
+<summary>To determine the serverGroupId</summary>
+* Can also be found by hovering over the server group (parenthesis number)
+
+![deploy_api_05_202402.png](https://static.toastoven.net/prod_tcdeploy/deploy_api_05_202402.png)
+</details>
+<details> 
+<summary>How to check scenarioId</summary>
+* You can see the scenario ID when you select a scenario.
+
+![deploy_api_06_202402.png](https://static.toastoven.net/prod_tcdeploy/deploy_api_06_202402.png)
+</details>
+
+### Binary Upload
+#### Version 1.0
 | Http Method | POST |
 | ----------- | ---- |
 | Request URL | https://api-tcd.nhncloudservice.com/api/v1.0/projects/{appkey}/artifacts/{artifactId}/binary-group/{binaryGroupKey} |
 
-### Parameter
-
+#### Parameter
 | Name | Type | Description | Value | Required |
 | ---- | ---- | ----------- | ----- | -------- |
 | applicationType | String | Type of an artifact | client or server | true |
@@ -24,8 +74,7 @@ The API allows user-configured HTTP Request to upload binaries.
 | metaFile | File | plist file object for iOS | - | false |
 | fix | Boolean | Fix or not information, if the applicationType is client | true/false | false |
 
-### Sample Request For cUrl
-
+##### Sample Request For cURL
 ``` java
 curl -X POST \
   https://api-tcd.nhncloudservice.com/api/v1.0/projects/{appKey}/artifacts/{artifactId}/binary-group/{binaryGroupKey} \
@@ -35,12 +84,10 @@ curl -X POST \
   -F 'description=A binary file of some kind'
 ```
 
-### Sample Request For JAVA
-
+#### Sample Request For JAVA
 Below is an example of uploading binaries via API by using HttpClient library (httpclient 4.3.6). 
 
 ``` java
-
 String appKey = "xxxxxxxxx";
 String artifactId = "1";
 
@@ -92,8 +139,7 @@ try {
 }
 ```
 
-### Response (json)
-
+##### Response(json)
 | Name | Type | Description | Value |
 | ---- | ---- | ----------- | ----- |
 | isSuccessful | boolean | Uploading result | True or false |
@@ -101,8 +147,7 @@ try {
 | downloadUrl | String | Downloading path for uploaded binaries | Download is available in the path |
 | binaryKey | String | Key of the uploaded binary | - |
 
-### Response Sample
-
+##### Response Sample
 ``` json
 {
 	"header": {
@@ -118,14 +163,12 @@ try {
 }
 ```
 
-## Previous Version 
-
+#### Previous Version 
 | Http Method | POST |
 | ----------- | ---- |
 | Request URL | https://api-tcd.nhncloudservice.com/api/binary/upload/artifact/{artifactId} |
 
-### Parameter
-
+##### Parameter
 | Name | Type | Description | Value | Required |
 | ---- | ---- | ----------- | ----- | -------- |
 | appKey | String | Appkey of NHN Cloud; available on the Deploy page | - | True |
@@ -138,8 +181,7 @@ try {
 | metaFile | File | plist file object for iOS | - | False |
 | fix | Boolean | Fix or not information, if the applicationType is client | true/false | False |
 
-### Sample Request For JAVA
-
+##### Sample Request For JAVA
 Below is an example of uploading binaries via API by using HttpClient library (httpclient 4.3.6). 
 
 ``` java
@@ -193,18 +235,94 @@ try {
 }
 ```
 
-### Response (json)
-
+##### Response(json)
 | Name | Type | Description | Value |
 | ---- | ---- | ----------- | ----- |
 | isSuccess | boolean | Uploading result | True or false |
 | result | String | Message for uploading result | isSuccess : True<br>\- Key information of uploaded binaries<br>isSuccess : False<br>\- INAVLID\_INFORMATION: Invalid parameter information <br>\- BINARY\_UPLOAD\_ERROR: Error occurred during uploading binaries <br>\- ALREADY\_UPLOADED\_VERSION: Conflicts between binary versions |
 
-### Response Sample
-
+##### Response Sample
 ``` json
 {
 	"isSuccess" : true,
 	"result" : 111
+}
+```
+
+### Run Deployment
+* API for running deployments.
+* The artifact `Command Type`provides a deployment execution API only for Cloud Agent (not for SSH).
+
+#### Version 1.0
+| Http Method | POST |
+| ----------- | ---- |
+| Request URL | https://api-tcd.nhncloudservice.com/api/v1.0/projects/{appKey}/artifacts/{artifactId}/server-group/{serverGroupId}/scenario/{scenarioId}/deploy |
+
+##### Header
+| Name | Description | Value |
+| --- | --- | --- |
+| Content-Type | ConentType | application/json |
+| X-TC-AUTHENTICATION-ID | User Access Key ID in API Security Settings menu | {id} |
+| X-TC-AUTHENTICATION-SECRET | Secret Access Key in API Security Settings menu | {key} |
+
+##### Parameter (Body)
+| Name | Type | Description | Value | Required | Default Value |
+| --- | --- | --- | --- | --- | --- |
+| targetServerHostnames | String | Hostnames of servers within the server group that are optionally targeted for deployment, separated by ',' (enter all if server group-wide) | hostname1, hostname2, hostname3 (if none, deploy all servers in the server group) | false | All servers included in a server group |
+| concurrentNum | Number | Number of deployments to run in parallel | A value greater than or equal to 0, otherwise the entire server group runs concurrently | false | 0 |
+| nextWhenFail | Boolean | Whether to run the following servers if the scenario fails | true/false | false | false (stop execution) |
+| deployNote | String | Additional information to fill out at deployment time |  | false |  |
+| async | Boolean | Get a response without waiting for deployment results | true/false | false | false |
+
+##### Sample Request For cURL
+``` java
+curl --location 'https://api-tcd.nhncloudservice.com/api/v1.0/projects/{appKey}/artifacts/{artifactId}/server-group/{serverGroupId}/scenario/{scenarioId}/deploy' \
+--header 'X-TC-AUTHENTICATION-ID: {ID}' \
+--header 'X-TC-AUTHENTICATION-SECRET: {Key}' \
+--header 'Content-Type: application/json' \
+--data '{
+	"targetServerHostnames" : "{ex. server1,server2}",
+	"concurrentNum" : 1,
+	"nextWhenFail" : false,
+	"deployNote" : "{Note content}",
+	"async" : false
+}'
+```
+
+##### Response (json)
+* The isSuccessful item is a field value that determines whether the deployment execution call was successful or not, and you should check the deployment result (successful, failed) via the deployStatus item.
+
+| Name | Type | Description | Value |
+| ---- | ---- | ----------- | ----- |
+| isSuccessful | Boolean | Deployment run successful or not | True or false |
+| resultCode | String | Deployment run result messages | See [Error Codes](/Dev%20Tools/Deploy/zh/error-code/) |
+| deployStatus | String | Deployment status | success, fail, or deploying (with async option true) |
+| deployResult | List | Deployment results per server | - hostname: Deployment target hostname (instance ID)<br>- status: Deployment results<br>- taskResult: Information for each task in the deployment scenario |
+| deployResultLocation | String | Link for Deploy service project that was executed | Follow this link to access the Deploy Service project console |
+
+##### Response Sample
+``` json
+{
+    "header": {
+        "isSuccessful": true,
+        "serverTime": 1707278725614,
+        "resultCode": "SUCCESS",
+        "resultMessage": "success"
+    },
+    "body": {
+        "deployKey": 52876,
+        "deployStatus": "{Deployment status}",
+        "deployResult": [
+            {
+                "deployKey": 52876,
+                "hostname": "{Hostname}",
+                "status": "{Deployment result}",
+                "taskResult": [
+					"..."
+                ]
+            }
+        ],
+        "deployResultLocation": "{Link to the Deploy service project where the deployment ran}"
+    }
 }
 ```
