@@ -1,5 +1,10 @@
 ## Dev Tools > Deploy > Release Notes
 
+### February 27, 2024
+#### Feature Updates
+* Improved the UI to modify server groups
+* Added the run deployment API
+
 ### January 23, 2024
 #### Feature Updates
 * Modified to set up the auto delete policy when creating or modifying binary groups
