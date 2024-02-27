@@ -146,6 +146,23 @@ Deployment servers are managed by this setting.
 
 3.  When it is completed, click **Create**. 
 
+### Setting Binary Groups
+
+The feature to manage binaries to be deployed.
+
+![deploy_25_202402](https://static.toastoven.net/prod_tcdeploy/deploy_25_202402.png)
+![deploy_26_202402](https://static.toastoven.net/prod_tcdeploy/deploy_26_202402.png)
+
+1. On the tab below the **Deploy** screen, click **Binary Group > New**.
+    * The Default binary group is automatically created when you create an artifact.
+2. In the **Create Binary Group** window, set the binary group you want to create.
+    * Enter a name, description, and region.
+        * Network latency can be longer if the **region**is different from the region of the server being deployed.
+    * Enter the auto-delete settings.
+        * The feature to periodically delete binaries based on conditions such as duration, size, count, etc. 
+        * The maximum number and minimum number to keep are required values and can be set to a maximum of 10.
+3. When it is completed, click **Create**.
+
 ### Create Scenarios 
 
 ![deploy_08_201812](https://static.toastoven.net/prod_tcdeploy/deploy_08_201812.png)

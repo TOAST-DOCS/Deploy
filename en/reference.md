@@ -102,7 +102,7 @@ Applicable to categorize binaries deployed for each server tool, such as Develop
 
 * Groups can be created or modified, while binary files are uploaded or downloaded. 
 
-![deploy_24_202401.png](https://static.toastoven.net/prod_tcdeploy/deploy_24_202401.png)
+![deploy_24_202402.png](https://static.toastoven.net/prod_tcdeploy/deploy_24_202402.png)
 * In the Client type, password can be set for a binary group, and access of shared client download page can be controlled. 
     * Select **Enable Binary Group Password** and enter password to create a binary group. 
     * Access to download page of each group is available only by password without login to NHN Cloud.
@@ -121,7 +121,7 @@ Based on the phase attribute, it is applicable to categorize server tool, such a
 
 #### Adding Server Group 
 
-![deploy_ref_08_2018.png](https://static.toastoven.net/prod_tcdeploy/deploy_ref_08_2018.png)
+![deploy_ref_08_202402.png](https://static.toastoven.net/prod_tcdeploy/deploy_ref_08_202402.png)
 
 * Click **Deploy > Create Server Group**, or click **Server Group > Create**.  
     * Enter name (required), and description (optional). 
@@ -137,30 +137,30 @@ Server information can be added or deleted from **Create (Modify) Server Group**
 
 1. Add Individually 
 
-![deploy_ref_08_2018.png](https://static.toastoven.net/prod_tcdeploy/deploy_ref_08_2018.png)
+![deploy_ref_08_202402.png](https://static.toastoven.net/prod_tcdeploy/deploy_ref_08_202402.png)
 
 * Enter host name (required), IP address (required), and OS (optional), and click **Add**. 
-* Find what is added on the server list below. Only the servers checked on the left box can be registered. 
+* Find what is added on the server list below. Only the servers left in the list are registered. 
 * Click **Create**: to modify, click **Modify**. 
 
 2. Add in Mass 
 
-![deploy_ref_09_2018.png](https://static.toastoven.net/prod_tcdeploy/deploy_ref_09_2018.png)
+![deploy_ref_09_202402.png](https://static.toastoven.net/prod_tcdeploy/deploy_ref_09_202402.png)
 
 * Check **Enter in Mass**. 
 * Enter server information in the following format: 
     ```
-    test.host.name1;1.1.1.1;CentOS6.8;
-    test.host.name2;2.2.2.2;;
+   test.host.name1;1.1.1.1;CentOS7.9;
+    test.host.name2;2.2.2.2;
     ```
 
 * Click **Add**.
-* Find two more servers that are added. Only the servers checked on the left box can be registered. 
+* Find two more servers that are added.
 * Click **Create**: to modify, click **Modify**. 
 
 ##### Delete Server Information
 
-* Uncheck the left box, or click **Delete** on the right. 
+* Click the server to delete and click the **Delete Selected** on the left top.
 * Click **Create**: to modify, click **Modify**. 
 
 ### Resources 

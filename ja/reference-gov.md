@@ -102,7 +102,7 @@ Develop、Staging、Productなどのサーバー機器に配布されるバイ�
 
 * グループの作成/修正、バイナリファイルのアップロード/ダウンロードが行えます。
 
-![deploy_24_202401.png](https://static.toastoven.net/prod_tcdeploy/deploy_24_202401.png)
+![deploy_24_202402.png](https://static.toastoven.net/prod_tcdeploy/deploy_24_202402.png)
 * Clientタイプの時は、バイナリグループのパスワードを設定でき、共有されたクライアントダウンロードページのアクセスを制御できます。
     * バイナリグループを作成する時、**バイナリグループパスワード使用**を選択すると、パスワードを入力できます。
     * 該当グループダウンロードページは、NHN Cloudにログインしなくても、設定されたパスワードだけでアクセスできます。
@@ -144,17 +144,17 @@ PhaseプロパティでDevelop、Staging、Productなどのサーバー機器を
 
 2. 大量追加
 
-![deploy_ref_０９_ja_20200527.png](https://static.toastoven.net/prod_tcdeploy/ja/deploy_ref_09_ja_20200527.png)
+![deploy_ref_09_ja_20200527.png](https://static.toastoven.net/prod_tcdeploy/ja/deploy_ref_09_ja_20200527.png)
 
 * **大量入力**チェックボックスを選択します。
 * 下記のような形式でサーバー情報を入力します。
     ```
-    test.host.name1;1.1.1.1;CentOS6.8;
-    test.host.name2;2.2.2.2;;
+    test.host.name1;1.1.1.1;CentOS7.9;
+    test.host.name2;2.2.2.2;
     ```
 
 * **追加**ボタンをクリックします。
-* サーバー情報が2個追加されたことを確認します。左にあるチェックボックスを選択したサーバーのみ登録されます。
+* サーバー情報が2個追加されたことを確認します
 * **作成**ボタンをクリックします。修正する時は**修正**ボタンをクリックします。
 
 ##### サーバー情報の削除

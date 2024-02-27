@@ -2,8 +2,8 @@
 
 This document contains the following: 
 
-* [Service Pre-requisites](/Dev%20Tools/Deploy/zh/console-guide/#_3)
-* [Deploy Console Page](/Dev%20Tools/Deploy/zh/console-guide/#deploy)
+* [Service Pre-requisites](/Dev%20Tools/Deploy/zh/console-guide/#service-pre-requisites)
+* [Deploy Console Page](/Dev%20Tools/Deploy/zh/console-guide/#deploy-console-page)
 * [Client Application](/Dev%20Tools/Deploy/zh/console-guide/#client-application)
 * [Server Application](/Dev%20Tools/Deploy/zh/console-guide/#server-application)
 
@@ -23,8 +23,10 @@ This document contains the following:
 #### Linux 
 * curl 7.19.7-43 or higher versions  
 
-#### Window
-* Requires SSH Installation 
+#### Windows
+* Requires SSH installation 
+    * OpenSSH_for_Windows_8.6p1, LibreSSL 3.3.3 or higher
+         * When using Windows Server 2019, OpenSSH must be installed separately
     * SSH Shell: PowerShell specified  
 
 ### Requirements for NHN Cloud VM Deployment 
@@ -136,13 +138,30 @@ Deployment servers are managed by this setting.
     * Select OS and specify the **Shell Type**: enter one or select from the list. 
     * Select Phase: Choose a server tool. Otherwise, select NONE. 
     * Add Servers 
-        * Servers can be added in the following two methods, and find more details from [Detail Funtional Guide on Server Groups](/Dev%20Tools/Deploy/zh/reference/#_11).
+        * Servers can be added in the following two methods, and find more details from [Detail Functional Guide on Server Groups](/Dev%20Tools/Deploy/zh/reference/#_11).
             * Add in Mass
             * Add Individually 
          * Enter host name (required), IP address (required), and OS (optional), and click **Add**. 
          * See what is added on the server list: only the servers checked on the left box can be registered. 
 
 3.  When it is completed, click **Create**. 
+
+### Setting Binary Groups
+
+The feature to manage binaries to be deployed.
+
+![deploy_25_202402](https://static.toastoven.net/prod_tcdeploy/deploy_25_202402.png)
+![deploy_26_202402](https://static.toastoven.net/prod_tcdeploy/deploy_26_202402.png)
+
+1. On the tab below the **Deploy** screen, click **Binary Group > New**.
+    * The Default binary group is automatically created when you create an artifact.
+2. In the **Create Binary Group** window, set the binary group you want to create.
+    * Enter a name, description, and region.
+        * Network latency can be longer if the **region**is different from the region of the server being deployed.
+    * Enter the auto-delete settings.
+        * The feature to periodically delete binaries based on conditions such as duration, size, count, etc. 
+        * The maximum number and minimum number to keep are required values and can be set to a maximum of 10.
+3. When it is completed, click **Create**.
 
 ### Create Scenarios 
 

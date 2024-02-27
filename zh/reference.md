@@ -67,15 +67,31 @@ You can check progress of scenario which is under deployment.
 * Click 'deploying' status on the deployment history page. 
 
 ### Deployment History 
-
-On the **Deployment History** tab, see details of deployment history, deployment setting, and deployment note.  
-
-![deploy_ref_03_2018.png](https://static.toastoven.net/prod_tcdeploy/deploy_ref_03_2018.png)
-
+You can see the detailed information on distribution history, settings, and notes.
+![deploy_ref_01_2021.png](https://static.toastoven.net/prod_tcdeploy/reference/deploy_ref_01_2021.png)
+![deploy_ref_02_2021.png](https://static.toastoven.net/prod_tcdeploy/reference/deploy_ref_02_2021.png)
 * Check Deployment History and Its Details   
     * Deployment Result
     * Find setting of each history scenario, task execution results, and deployment note at **View Results**.
     * Click 'deploying' status, and go to view deploying status.   
+
+You can search distribution history by date of execution and server group.
+![deploy_ref_03_2021.png](https://static.toastoven.net/prod_tcdeploy/reference/deploy_ref_03_2021.png)
+![deploy_ref_04_2021.png](https://static.toastoven.net/prod_tcdeploy/reference/deploy_ref_04_2021.png)
+* You can search distribution history by date of execution and server group
+    * You can search using the server group selection window and starting and ending dates of execution.
+    * It cannot be selected because its duration of execution exceeds 1 year. (e.g. 2020-06-07 to 2021-06-17).
+     ![deploy_ref_08_2021.png](https://static.toastoven.net/prod_tcdeploy/reference/deploy_ref_08_2021.png)
+
+The searched distribution history can be downloaded in an Excel file.
+![deploy_ref_05_2021.png](https://static.toastoven.net/prod_tcdeploy/reference/deploy_ref_05_2021.png)
+* Download searched distribution history in Excel format
+    * Select the desired server group and date of execution and click the **Download** button.
+    * You can also download the file by selecting the **Exclude Histories Without Binary File** option.
+    * When the **Download** button is clicked without selecting the **Exclude Histories Without Binary File** option
+    ![deploy_ref_07_2021.png](https://static.toastoven.net/prod_tcdeploy/reference/deploy_ref_07_2021.png)
+    * When the **Download** button is clicked while the **Exclude Histories Without Binary File** option is selected
+    ![deploy_ref_06_2021.png](https://static.toastoven.net/prod_tcdeploy/reference/deploy_ref_06_2021.png)
 
 ### Binary Group 
 
@@ -86,14 +102,12 @@ Applicable to categorize binaries deployed for each server tool, such as Develop
 
 * Groups can be created or modified, while binary files are uploaded or downloaded. 
 
-![deploy_ref_05_2018.png](https://static.toastoven.net/prod_tcdeploy/deploy_ref_05_2018.png)
-
+![deploy_24_202402.png](https://static.toastoven.net/prod_tcdeploy/deploy_24_202402.png)
 * In the Client type, password can be set for a binary group, and access of shared client download page can be controlled. 
     * Select **Enable Binary Group Password** and enter password to create a binary group. 
-    * Access to download page of each group is available only by password without login to NHN Cloud. 
-* Click **Auto Remove Policy** and set auto removal policy for each binary group. 
-
-![deploy_ref_06_2018.png](https://static.toastoven.net/prod_tcdeploy/deploy_ref_06_2018.png)
+    * Access to download page of each group is available only by password without login to NHN Cloud.
+* You can set the auto delete policy for the binary group from the auto delete settings.
+    * If you leave each item in the auto delete setting empty and create a binary group, the auto delete setting will not be applied.
 
 ### Server Group 
 
@@ -107,7 +121,7 @@ Based on the phase attribute, it is applicable to categorize server tool, such a
 
 #### Adding Server Group 
 
-![deploy_ref_08_2018.png](https://static.toastoven.net/prod_tcdeploy/deploy_ref_08_2018.png)
+![deploy_ref_08_202402.png](https://static.toastoven.net/prod_tcdeploy/deploy_ref_08_202402.png)
 
 * Click **Deploy > Create Server Group**, or click **Server Group > Create**.  
     * Enter name (required), and description (optional). 
@@ -123,30 +137,30 @@ Server information can be added or deleted from **Create (Modify) Server Group**
 
 1. Add Individually 
 
-![deploy_ref_08_2018.png](https://static.toastoven.net/prod_tcdeploy/deploy_ref_08_2018.png)
+![deploy_ref_08_202402.png](https://static.toastoven.net/prod_tcdeploy/deploy_ref_08_202402.png)
 
 * Enter host name (required), IP address (required), and OS (optional), and click **Add**. 
-* Find what is added on the server list below. Only the servers checked on the left box can be registered. 
+* Find what is added on the server list below. Only the servers left in the list are registered. 
 * Click **Create**: to modify, click **Modify**. 
 
 2. Add in Mass 
 
-![deploy_ref_09_2018.png](https://static.toastoven.net/prod_tcdeploy/deploy_ref_09_2018.png)
+![deploy_ref_09_202402.png](https://static.toastoven.net/prod_tcdeploy/deploy_ref_09_202402.png)
 
 * Check **Enter in Mass**. 
 * Enter server information in the following format: 
     ```
-    test.host.name1;1.1.1.1;CentOS6.8;
-    test.host.name2;2.2.2.2;;
+   test.host.name1;1.1.1.1;CentOS7.9;
+    test.host.name2;2.2.2.2;
     ```
 
 * Click **Add**.
-* Find two more servers that are added. Only the servers checked on the left box can be registered. 
+* Find two more servers that are added.
 * Click **Create**: to modify, click **Modify**. 
 
 ##### Delete Server Information
 
-* Uncheck the left box, or click **Delete** on the right. 
+* Click the server to delete and click the **Delete Selected** on the left top.
 * Click **Create**: to modify, click **Modify**. 
 
 ### Resources 
