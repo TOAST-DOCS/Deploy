@@ -13,22 +13,22 @@
 ![SSH연결필수](https://kr1-api-object-storage.nhncloudservice.com/v1/AUTH_2acdfabf4efe4efc8a04c00b348110c9/cdn_origin/prod_tcdeploy/deploy_19_202307.png)
 
 > NHN Cloud VM 서버의 경우 SSH 연결 혹은 NHN Cloud Agent로 서버의 배포 명령을 전달합니다.
-> SSH 연결의 경우 target server의 IP, 포트, 방화벽 예외 처리와 같은 [SSH 연결을 위한 준비](/Dev%20Tools/Deploy/ko/setup-guide/#ssh)가 필요합니다.
+> SSH 연결의 경우 타깃 서버의 IP, 포트, 방화벽 예외 처리와 같은 [SSH 연결을 위한 준비](/Dev%20Tools/Deploy/ko/setup-guide/#ssh)가 필요합니다.
 > NHN Cloud Agent의 경우 NHN Cloud Agent 설치, 유효성 확인과 같은 [NHN Cloud Agent 사용을 위한 준비](/Dev%20Tools/Deploy/ko/setup-guide/#cloud-agent)가 필요합니다.
 
 ### NHN Cloud VM 이외 서버
 ![SSH연결필수](https://kr1-api-object-storage.nhncloudservice.com/v1/AUTH_2acdfabf4efe4efc8a04c00b348110c9/cdn_origin/prod_tcdeploy/deploy_20_202307.png)
 
 > NHN Cloud VM 이외 서버의 경우 SSH 연결로만 서버의 배포 명령을 전달할 수 있습니다.
-> 배포 전 배포 target server 와 SSH로 연결해야 하므로
-> target server의 IP, 포트, 방화벽 예외 처리와 같은 [SSH 연결을 위한 준비](/Dev%20Tools/Deploy/ko/setup-guide/#ssh)가 필요합니다.
+> 배포 전 배포 타깃 서버와 SSH로 연결해야 하므로
+> 타깃 서버의 IP, 포트, 방화벽 예외 처리와 같은 [SSH 연결을 위한 준비](/Dev%20Tools/Deploy/ko/setup-guide/#ssh)가 필요합니다.
 
 ## NHN Cloud Agent 사용을 위한 준비
 
 ### 운영체제별 NHN Cloud Agent 설치
-* NHN Cloud Agent 설치 및 설정 파일 수정을 위해 NHN Cloud Instance 상품에서 인스턴스를 생성 시 추가 설정 > 사용자 스크립트에 Linux, Windows 운영체제에 맞는 스크립트 내용을 추가합니다.
+* NHN Cloud Agent 설치 및 설정 파일 수정을 위해 NHN Cloud Instance 서비스에서 인스턴스를 생성 시 **추가 설정 > 사용자 스크립트**에 Linux, Windows 운영체제에 맞는 스크립트 내용을 추가합니다.
   ![사용자 스크립트](https://kr1-api-object-storage.nhncloudservice.com/v1/AUTH_2acdfabf4efe4efc8a04c00b348110c9/cdn_origin/prod_tcdeploy/deploy_21_202307.png)
-* 만약 사용자 스크립트를 사용할 수 없는 경우나 이미 생성한 상태라면 아래의 스크립트를 인스턴스에 접속하여 실행해줍니다.
+* 만약 사용자 스크립트를 사용할 수 없는 경우나 이미 생성한 상태라면 아래의 스크립트를 인스턴스에 접속하여 실행합니다.
 
 #### Linux 설치 스크립트
 ```
@@ -43,32 +43,32 @@ Invoke-WebRequest -UseBasicParsing 'https://kr1-api-object-storage.nhncloudservi
 ```
 
 ### NHN Cloud Agent 설치 확인
-* NHN Cloud Deploy 상품에서 생성한 인스턴스를 추가하여 서버 그룹을 생성합니다.
-    * 서버 그룹 생성 시 [OS] 및 [Shell Type]을 반드시 확인해 주세요. [Shell Type]의 기본값은 /bin/bash(Linux), powershell(Windows) 입니다.
+* NHN Cloud Deploy 서비스에서 생성한 인스턴스를 추가하여 서버 그룹을 생성합니다.
+    * 서버 그룹 생성 시 **OS** 및 **Shell Type**을 반드시 확인하십시오. **Shell Type**의 기본값은 /bin/bash(Linux), powershell(Windows)입니다.
 
 ![deploy_14_202307](https://kr1-api-object-storage.nhncloudservice.com/v1/AUTH_2acdfabf4efe4efc8a04c00b348110c9/cdn_origin/prod_tcdeploy/deploy_14_202307.png)
 ![deploy_15_202307](https://kr1-api-object-storage.nhncloudservice.com/v1/AUTH_2acdfabf4efe4efc8a04c00b348110c9/cdn_origin/prod_tcdeploy/deploy_15_202307.png)
 
 
-* 배포 탭으로 이동 후 위 과정에서 생성한 서버 그룹을 선택하여 새로운 시나리오를 만들어줍니다.
+* **배포** 탭으로 이동한 뒤 위 과정에서 생성한 서버 그룹을 선택하고 **시나리오** 항목에서 **새로 만들기**를 클릭합니다.
 
 ![deploy_16_202307](https://kr1-api-object-storage.nhncloudservice.com/v1/AUTH_2acdfabf4efe4efc8a04c00b348110c9/cdn_origin/prod_tcdeploy/deploy_16_202307.png)
 
-* 좌측에 시나리오 명을 입력하고, 우측의 [Task 추가] 버튼을 눌러서 Normal Task의 User Command를 선택합니다.
+* 왼쪽의 입력창에 시나리오명을 입력하고, **Task 추가**를 클릭해 **Normal Task**의 **User Command**를 선택합니다.
 
 ![deploy_22_202307](https://kr1-api-object-storage.nhncloudservice.com/v1/AUTH_2acdfabf4efe4efc8a04c00b348110c9/cdn_origin/prod_tcdeploy/deploy_22_202307.png)
 
-* Command에 pwd와 같이 아무런 영향을 주지 않는 명령어 등을 입력하고 [생성] 버튼을 눌러 줍니다.
+* **Command**에 `pwd`와 같이 아무런 영향을 주지 않는 명령어를 입력하고 **생성**을 클릭합니다.
 
 ![deploy_23_202307](https://kr1-api-object-storage.nhncloudservice.com/v1/AUTH_2acdfabf4efe4efc8a04c00b348110c9/cdn_origin/prod_tcdeploy/deploy_23_202307.png)
 
-* 유효성 확인 버튼을 눌러 줍니다.
+* **유효성 확인**을 클릭합니다.
 
 ![deploy_17_202307](https://kr1-api-object-storage.nhncloudservice.com/v1/AUTH_2acdfabf4efe4efc8a04c00b348110c9/cdn_origin/prod_tcdeploy/deploy_17_202307.png)
 
 ![deploy_18_202307](https://kr1-api-object-storage.nhncloudservice.com/v1/AUTH_2acdfabf4efe4efc8a04c00b348110c9/cdn_origin/prod_tcdeploy/deploy_18_202307.png)
 
-NHN Cloud Agent 서비스 설치 및 유효성 확인이 성공 하였습니다!
+NHN Cloud Agent 서비스 설치 및 유효성 확인에 성공했습니다.
 
 ## SSH 연결을 위한 준비
 
@@ -110,7 +110,7 @@ NHN Cloud Agent 서비스 설치 및 유효성 확인이 성공 하였습니다!
 * SSH 연결을 위해 공인 IP를 부여해야 합니다.
 
 #### 방화벽 및 Network ACL 설정
-* 외부에서 접근할 수 있게 아래 IP에 대해 네트워크와 방화벽 예외 설정을 추가해 주세요.
+* 외부에서 접근할 수 있게 아래 IP에 대해 네트워크와 방화벽 예외 설정을 추가하십시오.
 ```
 133.186.185.112/28
 117.52.123.201/32
@@ -119,5 +119,5 @@ NHN Cloud Agent 서비스 설치 및 유효성 확인이 성공 하였습니다!
 
 - - -
 
-SSH 연결 준비 혹은 NHN Cloud Agent 서비스 설치 및 유효성 확인이 완료 되었을 경우 Deploy 서비스를 사용하여 배포가 가능합니다. 
+SSH 연결 준비 또는 NHN Cloud Agent 서비스 설치 및 유효성 확인이 완료된 경우 Deploy 서비스를 사용하여 배포할 수 있습니다.
 자세한 사항은 [Deploy > 콘솔 사용 가이드](/Dev%20Tools/Deploy/ko/console-guide/)에서 확인할 수 있습니다.

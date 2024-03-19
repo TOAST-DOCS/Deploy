@@ -2,8 +2,8 @@
 
 ### 2024. 03. 26.
 #### 기능 개선
-* NHN Cloud VM Instance에 배포할 때 SSH를 통한 배포외에도 NHN Cloud Agent를 통한 배포기능이 추가되었습니다.
-    * VM instance에 Floating IP 를 할당하지 않아도 배포할 수 있습니다.
+* NHN Cloud VM Instance 배포 시 SSH를 통한 배포 외 NHN Cloud Agent를 통한 배포 기능 추가
+    * VM Instance에 Floating IP를 할당하지 않아도 배포 가능
 
 ### 2024. 02. 27.
 #### 기능 개선
