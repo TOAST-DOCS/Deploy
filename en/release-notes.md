@@ -4,6 +4,8 @@
 #### Feature Updates
 * Improved the UI to modify server groups
 * Added the run deployment API
+* Added notification mail recipient settings
+    * Added the feature to set email recipient address in Organization/Project Dashboard > Manage Notifications.
 
 ### January 23, 2024
 #### Feature Updates
