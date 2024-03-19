@@ -1,5 +1,10 @@
 ## Dev Tools > Deploy > 릴리스 노트
 
+### 2024. 03. 26.
+#### 기능 개선
+* NHN Cloud VM Instance 배포 시 SSH를 통한 배포 외 NHN Cloud Agent를 통한 배포 기능 추가
+    * VM Instance에 Floating IP를 할당하지 않아도 배포 가능
+
 ### 2024. 02. 27.
 #### 기능 개선
 * 서버 그룹 수정 UI 개선
