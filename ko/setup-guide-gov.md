@@ -26,9 +26,10 @@
 ## NHN Cloud Agent 사용을 위한 준비
 
 ### 운영체제별 NHN Cloud Agent 설치
-* NHN Cloud Agent 설치 및 설정 파일 수정을 위해 NHN Cloud Instance 서비스에서 인스턴스를 생성 시 **추가 설정 > 사용자 스크립트**에 Linux, Windows 운영체제에 맞는 스크립트 내용을 추가합니다.
+* NHN Cloud Agent로 배포 명령을 전달하기 위해서는 NHN Cloud Agent 설치가 필요합니다.
+* NHN Cloud Instance 서비스에서 인스턴스를 생성 시 **추가 설정 > 사용자 스크립트**에 아래의 Linux, Windows 운영체제에 맞는 설치 스크립트 내용을 추가하여 설치 가능합니다.
   ![사용자 스크립트](https://kr1-api-object-storage.nhncloudservice.com/v1/AUTH_2acdfabf4efe4efc8a04c00b348110c9/cdn_origin/prod_tcdeploy/deploy_21_202307.png)
-* 만약 사용자 스크립트를 사용할 수 없는 경우나 이미 생성한 상태라면 아래의 스크립트를 인스턴스에 접속하여 실행합니다.
+* **추가 설정 > 사용자 스크립트**를 사용할 수 없는 경우에는 직접 인스턴스에 접속하여 설치 스크립트를 실행합니다.
 
 #### Linux 설치 스크립트
 ```
