@@ -1,4 +1,3 @@
-@@ -0,0 +1,122 @@
 ## Dev Tools > Deploy > Setup Guide Before Use
 
 This document contains the following.
