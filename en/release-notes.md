@@ -1,9 +1,16 @@
 ## Dev Tools > Deploy > Release Notes
 
+### March 26, 2024
+#### Feature Updates
+* Added the feature to deploy via NHN Cloud Agent in addition to deployment via SSH when deploying NHN Cloud VM Instances
+    * Deployment is available without assigning floating IPs to VM instances
+
 ### February 27, 2024
 #### Feature Updates
 * Improved the UI to modify server groups
 * Added the run deployment API
+* Added notification mail recipient settings
+    * Added the feature to set email recipient address in Organization/Project Dashboard > Manage Notifications.
 
 ### January 23, 2024
 #### Feature Updates
