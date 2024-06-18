@@ -1,5 +1,9 @@
 ## Dev Tools > Deploy > Release Notes
 
+### June 11, 2024
+#### Bug Fixes
+* Fixed an issue where autoscale server groups cannot be fixed
+
 ### March 26, 2024
 #### Feature Updates
 * Added the feature to deploy via NHN Cloud Agent in addition to deployment via SSH when deploying NHN Cloud VM Instances
