@@ -1,5 +1,9 @@
 ## Dev Tools > Deploy > 릴리스 노트
 
+### 2024. 06. 11.
+#### 버그 수정
+* 오토스케일 서버 그룹을 수정할 수 없는 오류 개선
+
 ### 2024. 03. 26.
 #### 기능 개선
 * NHN Cloud VM Instance 배포 시 SSH를 통한 배포 외 NHN Cloud Agent를 통한 배포 기능 추가
