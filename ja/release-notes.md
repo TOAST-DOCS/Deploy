@@ -1,6 +1,10 @@
 ## Dev Tools > Deploy > Release Notes
 
 
+### 2024. 06. 11.
+#### バグ修正
+* オートスケールサーバーグループを修正できないエラーを修正
+
 ### 2024. 03. 26.
 #### 機能改善
 * NHN Cloud VM Instanceを配布する際、SSHによる配布のほか、NHN Cloud Agentによる配布機能を追加
