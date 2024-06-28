@@ -50,11 +50,15 @@
 
 특정 바이너리 다운로드 페이지를 SMS나 E-mail로 전달할 수 있습니다.
 
-![deploy_05_201812](https://static.toastoven.net/prod_tcdeploy/deploy_05_201812.png)
+![deploy_27_202407](https://static.toastoven.net/prod_tcdeploy/deploy_27_202407.png)
+![deploy_28_202407](https://static.toastoven.net/prod_tcdeploy/deploy_28_202407.png)
+![deploy_29_202407](https://static.toastoven.net/prod_tcdeploy/deploy_29_202407.png)
 
 1. 오른쪽 **전송** 버튼을 클릭합니다.
-2. **다운로드 경로 전송** 창에서 전송 유형과 수신자를 선택하고 **전송** 버튼을 클릭합니다.
-    * SMS 또는 E-mail 중 하나를 선택할 수도 있고 모두 선택할 수도 있습니다.
+2. **다운로드 경로 전송** 창에서 **전송 유형**과 **수신자**를 설정하고 **전송** 버튼을 클릭합니다.
+    * 전송 유형은 **SMS** 또는 **E-mail** 중 하나를 선택하거나 모두 선택할 수도 있습니다.
+    * **개별 선택**에서 수신자를 개별적으로 선택할 수 있으며, **그룹 선택**에서 알림 수신 그룹을 선택할 수 있습니다.
+    * **그룹 선택** 탭을 선택한 뒤 **상세** 열의 보기 버튼을 클릭하면 프로젝트 알림 수신 그룹 관리 창이 열립니다.
 
 지정한 전송 유형으로 수신자에게 바이너리 다운로드 페이지가 전달됩니다.
 
