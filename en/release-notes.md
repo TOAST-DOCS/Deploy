@@ -1,5 +1,12 @@
 ## Dev Tools > Deploy > Release Notes
 
+### July 9, 2024
+#### Feature Updates
+* Added sorting functionality within the **Binary Group** tab
+* Improved the client binary deployment UI
+    * You can send the download path to notification recipient groups
+* Added the feature to check out the name by clicking **Executed By** on the **Deployment History** tab
+
 ### June 11, 2024
 #### Bug Fixes
 * Fixed an issue where autoscale server groups cannot be fixed
