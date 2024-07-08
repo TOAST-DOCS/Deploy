@@ -50,11 +50,16 @@ Client application deployment requires setting artifacts and uploading binaries.
 
 Download pages can be selectively delivered via SMS or email. 
 
-![deploy_05_201812](https://static.toastoven.net/prod_tcdeploy/deploy_05_201812.png)
+![deploy_27_202407](https://static.toastoven.net/prod_tcdeploy/deploy_27_202407.png)
+![deploy_28_202407](https://static.toastoven.net/prod_tcdeploy/deploy_28_202407.png)
+![deploy_29_202407](https://static.toastoven.net/prod_tcdeploy/deploy_29_202407.png)
 
 1. Click **Send** on the right. 
-2. On the **Send Download Path** window, select Type and Recipient, and click **Send**.  
-    * You may choose either SMS or email, or both. 
+2. On the **Send Download Path** window, select **Send Type** and **Recipient**, and click **Send**.  
+    * You may choose either SMS or email, or both for **Send Type**.
+    * You can select individual recipient on **Select Individual**, and can select a notification receiver group on **Select Group**.
+    * Select **Select Group** and click **View** in the **Deatils** column to open the manage notification receiver groups in project screen.
+
 
 Then, the binary download page is delivered to the recipient in the specified type of delivery. 
 
