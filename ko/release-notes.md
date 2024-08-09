@@ -1,6 +1,6 @@
 ## Dev Tools > Deploy > 릴리스 노트
 
-### 2024. 08. 27.
+### 2024. 09. 10.
 #### 기능 개선
 * 미국 리전의 NHN Cloud Instance에 NHN Cloud Agent를 통한 배포 기능 지원
 
