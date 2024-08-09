@@ -13,8 +13,8 @@
 
 ### 2024. 03. 26.
 #### 機能改善
-* NHN Cloud VM Instanceを配布する際、SSHによる配布のほか、NHN Cloud Agentによる配布機能を追加
-    * VM InstanceにFloating IPを割り当てなくても配布可能
+* NHN Cloud Instanceを配布する際、SSHによる配布のほか、NHN Cloud Agentによる配布機能を追加
+    * InstanceにFloating IPを割り当てなくても配布可能
 
 ### 2024. 02. 27.
 #### 機能改善

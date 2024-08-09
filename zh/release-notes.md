@@ -1,9 +1,27 @@
 ## Dev Tools > Deploy > Release Notes
 
+### July 9, 2024
+#### Feature Updates
+* Added sorting functionality within the **Binary Group** tab
+* Improved the client binary deployment UI
+  * You can send the download path to notification recipient groups
+* Added the feature to check out the name by clicking **Executed By** on the **Deployment History** tab
+
+### June 11, 2024
+#### Bug Fixes
+* Fixed an issue where autoscale server groups cannot be fixed
+
+### March 26, 2024
+#### Feature Updates
+* Added the feature to deploy via NHN Cloud Agent in addition to deployment via SSH when deploying NHN Cloud Instances
+  * Deployment is available without assigning floating IPs to instances
+
 ### February 27, 2024
 #### Feature Updates
 * Improved the UI to modify server groups
 * Added the run deployment API
+* Added notification mail recipient settings
+  * Added the feature to set email recipient address in Organization/Project Dashboard > Manage Notifications.
 
 ### January 23, 2024
 #### Feature Updates
