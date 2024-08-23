@@ -1,5 +1,11 @@
 ## Dev Tools > Deploy > 릴리스 노트
 
+### 2024. 09. 10.
+#### 기능 개선
+* Jenkins Plugin의 버전이 업데이트되었습니다(버전 1.1.3).
+  * 바이너리 그룹 키가 빈 값인 경우 Default 바이너리 그룹에 업로드 되도록 수정
+  * 엔드포인트의 기본 값이 https://api-tcd.cloud.toast.com에서 https://api-tcd.nhncloudservice.com으로 변경
+
 ### 2024. 07. 09.
 #### 기능 개선
 * **바이너리 그룹** 탭 내 정렬 기능 추가
