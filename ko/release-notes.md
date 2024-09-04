@@ -1,5 +1,12 @@
 ## Dev Tools > Deploy > 릴리스 노트
 
+### 2024. 09. 10.
+#### 기능 개선
+* 미국(캘리포니아) 리전의 NHN Cloud Instance에 NHN Cloud Agent를 통한 배포 기능 지원
+* Jenkins Plugin의 버전이 업데이트되었습니다(버전 1.1.3).
+  * 바이너리 그룹 키가 빈 값인 경우 Default 바이너리 그룹에 업로드되도록 수정
+  * 엔드포인트의 기본 값이 https://api-tcd.cloud.toast.com에서 https://api-tcd.nhncloudservice.com으로 변경
+
 ### 2024. 07. 09.
 #### 기능 개선
 * **바이너리 그룹** 탭 내 정렬 기능 추가
@@ -13,8 +20,8 @@
 
 ### 2024. 03. 26.
 #### 기능 개선
-* NHN Cloud VM Instance 배포 시 SSH를 통한 배포 외 NHN Cloud Agent를 통한 배포 기능 추가
-    * VM Instance에 Floating IP를 할당하지 않아도 배포 가능
+* NHN Cloud Instance 배포 시 SSH를 통한 배포 외 NHN Cloud Agent를 통한 배포 기능 추가
+    * Instance에 Floating IP를 할당하지 않아도 배포 가능
 
 ### 2024. 02. 27.
 #### 기능 개선

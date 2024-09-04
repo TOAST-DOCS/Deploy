@@ -13,8 +13,8 @@
 
 ### March 26, 2024
 #### Feature Updates
-* Added the feature to deploy via NHN Cloud Agent in addition to deployment via SSH when deploying NHN Cloud VM Instances
-    * Deployment is available without assigning floating IPs to VM instances
+* Added the feature to deploy via NHN Cloud Agent in addition to deployment via SSH when deploying NHN Cloud Instances
+    * Deployment is available without assigning floating IPs to instances
 
 ### February 27, 2024
 #### Feature Updates
