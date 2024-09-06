@@ -4,8 +4,8 @@
 #### 기능 개선
 * 미국(캘리포니아) 리전의 NHN Cloud Instance에 NHN Cloud Agent를 통한 배포 기능 지원
 * Jenkins Plugin의 버전이 업데이트되었습니다(버전 1.1.3).
-  * 바이너리 그룹 키가 빈 값인 경우 Default 바이너리 그룹에 업로드되도록 수정
-  * 엔드포인트의 기본 값이 https://api-tcd.cloud.toast.com에서 https://api-tcd.nhncloudservice.com으로 변경
+    * 바이너리 그룹 키가 빈 값인 경우 Default 바이너리 그룹에 업로드되도록 수정
+    * 엔드포인트의 기본 값이 https://api-tcd.cloud.toast.com에서 https://api-tcd.nhncloudservice.com으로 변경
 
 ### 2024. 07. 09.
 #### 기능 개선
