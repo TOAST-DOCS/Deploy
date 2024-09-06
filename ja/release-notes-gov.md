@@ -1,5 +1,11 @@
 ## Dev Tools > Deploy > Release Notes
 
+### 2024. 09. 10.
+#### 機能改善
+* Jenkins Pluginのバージョンが更新されました(バージョン1.1.3)。
+    * バイナリグループキーが空の値の場合、Defaultバイナリグループにアップロードされるように修正
+    * エンドポイントのデフォルト値がhttps://api-tcd.cloud.toast.comからhttps://api-tcd.nhncloudservice.comに変更
+
 ### 2024. 03. 26.
 #### 機能改善
 * NHN Cloud Instanceを配布する際、SSHによる配布のほか、NHN Cloud Agentによる配布機能を追加
