@@ -1,10 +1,17 @@
 ## Dev Tools > Deploy > Release Notes
 
+### September 10, 2024
+#### Feature Updates
+* Added support for deployment via NHN Cloud Agent to NHN Cloud Instance in the US (California) region
+* Updated the version of the Jenkins plugin (version 1.1.3).
+    * Made modifications so that, when binary group key is an empty value, the key is uploaded to the default binary group 
+    * Changed the endpoint's default value from https://api-tcd.cloud.toast.com to https://api-tcd.nhncloudservice.com
+
 ### July 9, 2024
 #### Feature Updates
 * Added sorting functionality within the **Binary Group** tab
 * Improved the client binary deployment UI
-  * You can send the download path to notification recipient groups
+    * You can send the download path to notification recipient groups
 * Added the feature to check out the name by clicking **Executed By** on the **Deployment History** tab
 
 ### June 11, 2024
@@ -14,14 +21,14 @@
 ### March 26, 2024
 #### Feature Updates
 * Added the feature to deploy via NHN Cloud Agent in addition to deployment via SSH when deploying NHN Cloud Instances
-  * Deployment is available without assigning floating IPs to instances
+    * Deployment is available without assigning floating IPs to instances
 
 ### February 27, 2024
 #### Feature Updates
 * Improved the UI to modify server groups
 * Added the run deployment API
 * Added notification mail recipient settings
-  * Added the feature to set email recipient address in Organization/Project Dashboard > Manage Notifications.
+    * Added the feature to set email recipient address in Organization/Project Dashboard > Manage Notifications.
 
 ### January 23, 2024
 #### Feature Updates
@@ -32,7 +39,7 @@
 * Updated the version of the Jenkins Plugin (version 1.1.2).
   * Fixed an error that prevented Jenkins installed on a Windows environment from uploading to Deploy
 * Changed the size limit for uploading binaries to APIs from 1 GB to 2 GB
-#### Bug Fixes
+#### Bug Fixes 
 * Fixed an error where resource file time information does not appear
 
 ### June 27, 2023
@@ -42,9 +49,9 @@
 ### May 30, 2023
 #### Feature Updates
 * Updated Jenkins Plugin (Version 1.1.1).
-  * Fixed an error where uploading from Jenkins Agent node to Deploy fails
+    * Fixed an error where uploading from Jenkins Agent node to Deploy fails
 
-### April 25, 2023
+### April 25, 2023 
 #### Bug Fixes
 * Fixed a bug where, when modifying deployment scenarios, more than 10 file lists are not loaded in the Select a file window
 * Fixed an issue where, when resource file upload fails in the console, files are not retrieved and added the **Cancel Upload** button
@@ -72,7 +79,7 @@
 
 ### July 26, 2022
 #### Feature Updates
-* Added a message for binary upload failure
+* Added a message for binary upload failure 
 #### Bug Fixes
 * Modified not to upload to the deleted binary groups
 
@@ -90,7 +97,7 @@
 ### January 25, 2022
 #### Feature Updates
 * Integration with the CloudTrail service
-  * In CloudTrail, you can check the **Execute Autoscale Deployment** user event that occurred in the Deploy console
+    * In CloudTrail, you can check the **Execute Autoscale Deployment** user event that occurred in the Deploy console
 
 ### December 28, 2021
 #### Bug Fixes
@@ -103,19 +110,19 @@
 ### July 27, 2021
 #### Feature Updates
 * Improved a feature to extract deployment history inquiry
-  * Modified to include deployment history where only pre-run tasks exist
+    * Modified to include deployment history where only pre-run tasks exist
 * Link with the instance disposal feature when Auto Scale service-integrated deployment fails
-  * Scaled-out instances are disposed when deployment fails while scaling out in the Auto Scale service
-  * The scale-out feature stops working when scale-out deployment fails three times or more
+    * Scaled-out instances are disposed when deployment fails while scaling out in the Auto Scale service
+    * The scale-out feature stops working when scale-out deployment fails three times or more
 * Applied a security vulnerability patch
 
 ### June 29, 2021
 #### Feature Updates
 * Changed the **Deployment History** tab search conditions
-  * Search deployment history by the server group and date of execution (starting date and ending date)
-  * Limited the total search duration of date of execution to 1 year
+    * Search deployment history by the server group and date of execution (starting date and ending date)
+    * Limited the total search duration of date of execution to 1 year
 * Added a feature to be used to download the deployment history result in an Excel file
-  * Added an option to be used to download deployment histories except the ones without binary file
+    * Added an option to be used to download deployment histories except the ones without binary file
 
 ### March 23, 2021
 #### Bug Fixes
@@ -134,10 +141,10 @@
 ### November 24, 2020
 #### Feature Updates
 * Added features for Auto Scale service-integrated deployment (excluding US region)
-  * A feature to create Auto Scale type server groups and map the groups with scenarios
-  * Custom deployment feature for Auto Scale group
+    * A feature to create Auto Scale type server groups and map the groups with scenarios
+    * Custom deployment feature for Auto Scale group
 * Added a feature to check deployment execution status
-  * A feature to check whether the deployment is running before executing the deployment
+    * A feature to check whether the deployment is running before executing the deployment
 
 ### August 25, 2020
 #### Feature Updates
@@ -151,22 +158,22 @@
 ### March 24, 2020
 #### Feature Updates
 * Added integration with TOAST Trail service
-  * Enables users to check user events that occur on Deploy console through TOAST Trail
+    * Enables users to check user events that occur on Deploy console through TOAST Trail
 
 ### February 25, 2020
 #### Feature Updates
 * Added the feature of default region setting for binary groups, when an artifact is created
-  * Region (KR1/JP1) can be specified for binary groups when an artifact is created
+    * Region (KR1/JP1) can be specified for binary groups when an artifact is created
 * Added the feature of specifying default binary group for an artifact setting
-  * Select from binary groups within artifact
+    * Select from binary groups within artifact
 #### Bug Fixes
 * Fixed invalid binary group key setting for a binary task, when a scenario is uploaded
 
 ### December 24, 2019
 #### Feature Updates
 * Added Region for Binary Groups
-  * To be specified when a binary is created
-  * Download from the storage of an integrated region when downloading and deploying a binary
+    * To be specified when a binary is created
+    * Download from the storage of an integrated region when downloading and deploying a binary
 * Applied expiration time for client download pages
 
 ### September 24, 2019
@@ -205,11 +212,11 @@
 ### February 26, 2019
 #### Feature Updates
 * Applied restrictions on editable resource size and content
-  * Before: Unlimited size, all editable format files
-  * After: 1MB size limit, only the formats that can be edited in Unicode are editable
+    * Before: Unlimited size, all editable format files
+    * After: 1MB size limit, only the formats that can be edited in Unicode are editable
 * Increased task timeout time limit
-  * Before: Up to 30 minutes
-  * After: Up to 2 hours
+    * Before: Up to 30 minutes
+    * After: Up to 2 hours
 
 #### Bug Fixes
 * Fixed a malfunction of the Select All Server Groups checkbox when modifying a server group
@@ -230,12 +237,12 @@
 * Added deployment re-entry function
 * Added a layer to guide page loading
 * Binary upload API Ver 1.0 update
-  * Operating simultaneously with previous versions
+    * Operating simultaneously with previous versions
 
 #### Bug Fixes
 * Fixed the operation error of the item of authentication method at deployment
-  * Added pem file required value check
-  * Fixed an issue where the input type is not switched by clicking the password/pem switch radio button
+    * Added pem file required value check
+    * Fixed an issue where the input type is not switched by clicking the password/pem switch radio button
 
 #### Document Change
 * Binary upload API Ver 1.0 update
@@ -246,7 +253,7 @@
 * Added scenario Import / Export function
 * Released restrictions on Client Type menu (all menus available)
 * Added Phase property for server group equipment separator
-  * Added confirmation step when deploying server with Phase Type of Product
+    * Added confirmation step when deploying server with Phase Type of Product
 
 ### April 24, 2018
 #### Added Features
