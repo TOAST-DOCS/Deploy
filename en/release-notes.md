@@ -1,5 +1,12 @@
 ## Dev Tools > Deploy > Release Notes
 
+### September 10, 2024
+#### Feature Updates
+* Added support for deployment via NHN Cloud Agent to NHN Cloud Instance in the US (California) region
+* Updated the version of the Jenkins plugin (version 1.1.3).
+    * Made modifications so that, when binary group key is an empty value, the key is uploaded to the default binary group 
+    * Changed the endpoint's default value from https://api-tcd.cloud.toast.com to https://api-tcd.nhncloudservice.com
+
 ### July 9, 2024
 #### Feature Updates
 * Added sorting functionality within the **Binary Group** tab
@@ -13,8 +20,8 @@
 
 ### March 26, 2024
 #### Feature Updates
-* Added the feature to deploy via NHN Cloud Agent in addition to deployment via SSH when deploying NHN Cloud VM Instances
-    * Deployment is available without assigning floating IPs to VM instances
+* Added the feature to deploy via NHN Cloud Agent in addition to deployment via SSH when deploying NHN Cloud Instances
+    * Deployment is available without assigning floating IPs to instances
 
 ### February 27, 2024
 #### Feature Updates

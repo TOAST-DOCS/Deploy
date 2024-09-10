@@ -1,9 +1,22 @@
 ## Dev Tools > Deploy > Release Notes
 
+### 2024. 09. 10.
+#### 機能改善
+* Jenkins Pluginのバージョンが更新されました(バージョン1.1.3)。
+    * バイナリグループキーが空の値の場合、Defaultバイナリグループにアップロードされるように修正
+    * エンドポイントのデフォルト値がhttps://api-tcd.cloud.toast.comからhttps://api-tcd.nhncloudservice.comに変更
+
+### 2024. 07. 09.
+#### 機能改善
+* **バイナリグループ**タブ内ソート機能を追加
+* クライアントバイナリ配布UI改善
+    * 通知受信グループにもダウンロードパスを送信可能
+* **配布履歴**タブで**実行者**をクリックして名前を確認できる機能を追加
+
 ### 2024. 03. 26.
 #### 機能改善
-* NHN Cloud VM Instanceを配布する際、SSHによる配布のほか、NHN Cloud Agentによる配布機能を追加
-    * VM InstanceにFloating IPを割り当てなくても配布可能
+* NHN Cloud Instanceを配布する際、SSHによる配布のほか、NHN Cloud Agentによる配布機能を追加
+    * InstanceにFloating IPを割り当てなくても配布可能
 
 ### 2024. 02. 27.
 #### 機能改善
