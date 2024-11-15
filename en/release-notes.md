@@ -1,5 +1,9 @@
 ## Dev Tools > Deploy > Release Notes
 
+### November 26, 2024
+#### Feature Updates
+* Changed deployment history to only be viewable for the last 5 years
+  
 ### September 10, 2024
 #### Feature Updates
 * Added support for deployment via NHN Cloud Agent to NHN Cloud Instance in the US (California) region
