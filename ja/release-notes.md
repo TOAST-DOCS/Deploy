@@ -1,5 +1,9 @@
 ## Dev Tools > Deploy > Release Notes
 
+### 2024. 11. 26.
+#### 機能改善
+* 過去5年間の配布履歴のみ照会できるように変更
+
 ### 2024. 09. 10.
 #### 機能改善
 * 米国(カリフォルニア)リージョンのNHN Cloud InstanceにNHN Cloud Agentを通じた配布機能をサポート
