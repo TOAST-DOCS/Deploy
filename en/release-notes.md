@@ -1,5 +1,10 @@
 ## Dev Tools > Deploy > Release Notes
 
+### January 21, 2025
+#### Bug Fixes
+* Fixed an error of moving to the error page when the scenario content is incorrect
+* Fixed to enter ID rather than email as an executor when calling Run Deployment API with IAM account
+
 ### November 26, 2024
 #### Feature Updates
 * Changed deployment history to only be viewable for the last 5 years
