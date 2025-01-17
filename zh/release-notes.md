@@ -1,5 +1,10 @@
 ## Dev Tools > Deploy > Release Notes
 
+### January 21, 2025
+#### Bug Fixes
+* Fixed an error of moving to the error page when the scenario content is incorrect
+* Fixed to enter ID rather than email as an executor when calling Run Deployment API with IAM account
+
 ### September 10, 2024
 #### Feature Updates
 * Added support for deployment via NHN Cloud Agent to NHN Cloud Instance in the US (California) region
