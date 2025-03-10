@@ -1,5 +1,9 @@
 ## Dev Tools > Deploy > Release Notes
 
+### March 25, 2025
+#### Feature Updates
+* Changed to sort by name when exposing binary groups
+
 ### January 21, 2025
 #### Bug Fixes
 * Fixed an error of moving to the error page when the scenario content is incorrect
