@@ -22,7 +22,7 @@ https://api-tcd.gov-nhncloudservice.com
 
 ### 배포 실행
 * 배포 실행을 위한 API입니다.
-* 아티팩트 `Command Type`이 Cloud Agent의 경우만 배포 실행 API를 제공합니다(SSH의 경우 제공되지 않습니다.)
+* 아티팩트 `Command Type`이 Cloud Agent의 경우만 배포 실행 API를 제공합니다.(SSH의 경우 제공되지 않습니다.)
 * v2.0에서는 Autoscale 서버 그룹도 배포 실행 가능합니다.
 
 #### Version 2.0
@@ -71,7 +71,7 @@ curl --location 'https://api-tcd.gov-nhncloudservice.com/api/v2.0/projects/{appK
 | ---- | ---- | ----------- | ----- |
 | isSuccessful | Boolean | 배포 실행 성공 여부 | true 또는 false |
 | resultCode | String | 배포 실행 결과 메시지 | [오류 코드](/Dev%20Tools/Deploy/ko/error-code/) 참고 |
-| deployStatus | String | 배포 상태 | success, fail 또는 deploying(async 옵션 true 시) |
+| deployStatus | String | 배포 상태 | success, fail 또는 deploying(async 옵션 true일 경우) |
 | deployResult | List | 서버별 배포 결과 | - hostname: 배포 대상 호스트명(인스턴스 ID)<br>- status: 배포 결과<br>- taskResult: 배포 시나리오 내 각 태스크별 정보 |
 | deployResultLocation | String | 배포 실행된 Deploy 서비스 프로젝트 링크 | 해당 링크로 Deploy 서비스 프로젝트 콘솔 접속 가능 |
 

@@ -1,12 +1,12 @@
 ## Dev Tools > Deploy > 릴리스 노트
 
 ### 2025. 04. 29.
-#### 기능 추가
+#### 기능 추가
 * 배포 실행 API Version 2.0 추가
-    * Autoscale 서버그룹도 배포 실행 가능
+    * Auto Scale 서버 그룹도 배포 실행 가능
 
 #### 기능 개선
-* Cloud Agent 아티팩트 Command Type에서도 Autoscale 서버그룹 생성 가능하도록 변경
+* Cloud Agent 아티팩트 Command Type에서도 Auto Scale 서버 그룹 생성 가능하도록 변경
 * API로 바이너리 업로드 시 용량 제한을 2GB에서 4GB로 변경
 
 ### 2025. 03. 25.
