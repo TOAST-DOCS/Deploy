@@ -2,8 +2,8 @@
 
 ### 2025. 04. 29.
 #### 기능 추가
-* 배포 실행 API Version 2.0 추가
-    * Auto Scale 서버 그룹도 배포 실행 가능
+* 배포 실행 API Version 2.0 추가
+    * Auto Scale 서버 그룹도 배포 실행 가능
 
 #### 기능 개선
 * Cloud Agent 아티팩트 Command Type에서도 Auto Scale 서버 그룹 생성 가능하도록 변경
