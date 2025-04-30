@@ -1,5 +1,5 @@
 ## Dev Tools > Deploy > API v1.0ガイド
-Deployでは、ユーザーがHTTP Requestを直接構成してバイナリアップロード、配布を実行するためのAPIを提供します。
+Deployでは、ユーザーがHTTP Requestを直接構成してバイナリアップロード、デプロイを実行するためのAPIを提供します。
 
 ### 基本情報
 #### エンドポイント
@@ -11,7 +11,7 @@ https://api-tcd.nhncloudservice.com
 | Method | URI | 説明 |
 | ------ | --- | --- |
 | POST | /api/v1.0/projects/{appkey}/artifacts/{artifactId}/binary-group/{binaryGroupKey} | バイナリアップロードAPI |
-| POST | /api/v1.0/projects/{appKey}/artifacts/{artifactId}/server-group/{serverGroupId}/scenario/{scenarioId}/deploy | 配布実行API |
+| POST | /api/v1.0/projects/{appKey}/artifacts/{artifactId}/server-group/{serverGroupId}/scenario/{scenarioId}/deploy | デプロイ実行API |
 
 #### APIリクエストパス変数
 | 値 | タイプ | 説明 |
@@ -19,8 +19,8 @@ https://api-tcd.nhncloudservice.com
 | appKey | String | 使用するDeployサービスのアプリケーションキー |
 | artifactId | Number | 使用するアーティファクトのID |
 | binaryGroupKey | Number | バイナリをアップロードするバイナリグループキー |
-| serverGroupId | Number | 配布対象となるサーバーグループID |
-| scenarioId | Number | 配布するシナリオのID |
+| serverGroupId | Number | デプロイ対象となるサーバーグループID |
+| scenarioId | Number | デプロイするシナリオのID |
 
 ### バイナリアップロード
 #### Version 1.0
@@ -214,9 +214,9 @@ try {
 }
 ```
 
-### 配布実行
-* 配布を実行するためのAPIです。
-* アーティファクト `Command Type`がCloud Agentの場合のみ配布実行APIを提供します(SSHの場合は提供されません)。
+### デプロイ実行
+* デプロイを実行するためのAPIです。
+* アーティファクト `Command Type`がCloud Agentの場合のみデプロイ実行APIを提供します(SSHの場合は提供されません)。
 
 #### Version 1.0
 | Http Method | POST |
@@ -233,11 +233,11 @@ try {
 ##### Parameter (Body)
 | Name | Type | Description | Value | Required | Default Value |
 | --- | --- | --- | --- | --- | --- |
-| targetServerHostnames | String | サーバーグループ内で選択的に配布対象となる ',' で区切られたサーバーのホスト名(サーバーグループ全体の場合、すべて入力) | hostname1, hostname2, hostname3(ない場合、サーバーグループ内のサーバー全体を配布) | false | サーバーグループに含まれる全てのサーバー |
-| concurrentNum | Number | 並列で実行する配布数 | 0以上の値、0の場合、サーバーグループ全体を同時実行 | false | 0 |
+| targetServerHostnames | String | サーバーグループ内で選択的にデプロイ対象となる ',' で区切られたサーバーのホスト名(サーバーグループ全体の場合、すべて入力) | hostname1, hostname2, hostname3(ない場合、サーバーグループ内のサーバー全体をデプロイ) | false | サーバーグループに含まれる全てのサーバー |
+| concurrentNum | Number | 並列で実行するデプロイ数 | 0以上の値、0の場合、サーバーグループ全体を同時実行 | false | 0 |
 | nextWhenFail | Boolean | シナリオが失敗した場合、次のサーバーを実行するかどうか | true/false | false | false (実行中断) |
-| deployNote | String | 配布に作成する追加情報 |  | false |  |
-| async | Boolean | 配布結果を待たずにレスポンスを受け取る | true/false | false | false |
+| deployNote | String | デプロイ時に作成する追加情報 |  | false |  |
+| async | Boolean | デプロイ結果を待たずにレスポンスを受け取る | true/false | false | false |
 
 ##### Sample Request For cURL
 ``` java
@@ -255,15 +255,15 @@ curl --location 'https://api-tcd.nhncloudservice.com/api/v1.0/projects/{appKey}/
 ```
 
 ##### Response(json)
-* isSuccessful項目は配布実行呼び出しが成功したかどうかを確認するフィールド値で、deployStatus項目で配布結果(成功、失敗)を確認する必要があります。
+* isSuccessful項目はデプロイ実行呼び出しが成功したかどうかを確認するフィールド値で、deployStatus項目でデプロイ結果(成功、失敗)を確認する必要があります。
 
 | Name | Type | Description | Value |
 | ---- | ---- | ----------- | ----- |
-| isSuccessful | Boolean | 配布実行成否 | trueまたはfalse |
-| resultCode | String | 配布実行結果メッセージ | [エラーコード](/Dev%20Tools/Deploy/ko/error-code/)参考 |
-| deployStatus | String | 配布状態 | success, failまたはdeploying(asyncオプションがtrueの場合)
-| deployResult | List | サーバー別の配布結果 | - hostname:配布対象ホスト名(インスタンスID)<br>- status:配布結果<br>- taskResult:配布シナリオ内の各タスクの情報 |
-| deployResultLocation | String | 配布が実行されたDeployサービスプロジェクトリンク | 該当リンクでDeployサービスプロジェクトのコンソールに接続可能 |
+| isSuccessful | Boolean | デプロイ実行成否 | trueまたはfalse |
+| resultCode | String | デプロイ実行結果メッセージ | [エラーコード](/Dev%20Tools/Deploy/ko/error-code/)参考 |
+| deployStatus | String | デプロイ状態 | success, failまたはdeploying(asyncオプションがtrueの場合)
+| deployResult | List | サーバー別のデプロイ結果 | - hostname:デプロイ対象ホスト名(インスタンスID)<br>- status:デプロイ結果<br>- taskResult:デプロイシナリオ内の各タスクの情報 |
+| deployResultLocation | String | デプロイが実行されたDeployサービスプロジェクトリンク | 該当リンクでDeployサービスプロジェクトのコンソールに接続可能 |
 
 ##### Response Sample
 ``` json
@@ -276,18 +276,18 @@ curl --location 'https://api-tcd.nhncloudservice.com/api/v1.0/projects/{appKey}/
     },
     "body": {
         "deployKey": 52876,
-        "deployStatus": "{配布状態}",
+        "deployStatus": "{デプロイ状態}",
         "deployResult": [
             {
                 "deployKey": 52876,
                 "hostname": "{ホスト名}",
-                "status": "{配布結果}",
+                "status": "{デプロイ結果}",
                 "taskResult": [
 					"..."
                 ]
             }
         ],
-        "deployResultLocation": "{配布が実行されたDeployサービスプロジェクトリンク}"
+        "deployResultLocation": "{デプロイが実行されたDeployサービスプロジェクトリンク}"
     }
 }
 ```
