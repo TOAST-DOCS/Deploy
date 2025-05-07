@@ -3,8 +3,8 @@
 Deploy provides an API for uploading binaries, running deployments, and configuring HTTP requests directly by the user.
 This documentation is organized by API version. Please refer to the links below to access the documentation for the desired version.
 
-- [Version 1.0 API Guide](/Dev%20Tools/Deploy/en/api-guide-v1.0-gov.md)
-- [Version 2.0 API Guide](/Dev%20Tools/Deploy/en/api-guide-v2.0-gov.md)
+- [Version 1.0 API Guide](/Dev%20Tools/Deploy/en/api-guide-v1.0/)
+- [Version 2.0 API Guide](/Dev%20Tools/Deploy/en/api-guide-v2.0/)
 
 ### Common Information
 #### How to check values by variable
