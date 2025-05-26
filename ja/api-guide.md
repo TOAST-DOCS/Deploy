@@ -3,8 +3,8 @@
 Deployでは、ユーザーがHTTP Requestを直接構成してバイナリアップロード、配布を実行するためのAPIを提供します。
 本ドキュメントはAPIバージョンごとに分割されています。ご希望のバージョンのドキュメントは、以下のリンクからご確認ください。
 
-- [Version 1.0 API ガイド](/Dev%20Tools/Deploy/ja/api-guide-v1.0-gov.md)
-- [Version 2.0 API ガイド](/Dev%20Tools/Deploy/ja/api-guide-v2.0-gov.md)
+- [Version 1.0 API ガイド](/Dev%20Tools/Deploy/ja/api-guide-v1.0/)
+- [Version 2.0 API ガイド](/Dev%20Tools/Deploy/ja/api-guide-v2.0/)
 
 ### 共通情報
 #### 変数別の値確認方法
