@@ -1,6 +1,6 @@
 ## Dev Tools > Deploy > APIガイド
 
-Deployでは、ユーザーがHTTP Requestを直接構成してバイナリアップロード、配布を実行するためのAPIを提供します。
+Deployでは、ユーザーがHTTP Requestを直接構成してバイナリアップロード、デプロイを実行するためのAPIを提供します。
 本ドキュメントはAPIバージョンごとに分割されています。ご希望のバージョンのドキュメントは、以下のリンクからご確認ください。
 
 - [Version 1.0 API ガイド](/Dev%20Tools/Deploy/ja/api-guide-v1.0/)

@@ -1,29 +1,29 @@
-## Dev Tools > Deploy > API v2.0 가이드
-Deploy에서는 사용자가 HTTP Request를 직접 구성하여 배포 실행을 위한 API를 제공합니다.
+## Dev Tools > Deploy > API v2.0ガイド
+Deployでは、ユーザーがHTTPリクエストを直接構成してデプロイを実行するためのAPIを提供します。
 
-### 기본 정보
-#### 엔드포인트
+### 基本情報
+#### エンドポイント
 ```text
 https://api-tcd.nhncloudservice.com
 ```
 
-#### 제공하는 API 종류
-| Method | URI | 설명 |
+#### 提供するAPIの種類
+| Method | URI | 説明 |
 | ------ | --- | --- |
-| POST | /api/v2.0/projects/{appKey}/artifacts/{artifactId}/server-group/{serverGroupId}/deploy | 배포 실행 API |
+| POST | /api/v2.0/projects/{appKey}/artifacts/{artifactId}/server-group/{serverGroupId}/deploy | デプロイ実行API |
 
-#### API 요청 경로 변수
-| 값 | 타입 | 설명 |
+#### APIリクエストパス変数
+| 値 | タイプ | 説明 |
 | --- | --- | --- |
-| appKey | String | 사용할 Deploy 서비스의 앱키 |
-| artifactId | Number | 사용할 아티팩트의 아이디 |
-| binaryGroupKey | Number | 바이너리를 업로드할 바이너리 그룹 키 |
-| serverGroupId | Number | 배포 대상이 되는 서버 그룹 아이디 |
+| appKey | String | 使用するDeployサービスのアプリケーションキー |
+| artifactId | Number | 使用するアーティファクトのID |
+| binaryGroupKey | Number | バイナリをアップロードするバイナリグループキー |
+| serverGroupId | Number | デプロイ対象となるサーバーグループID |
 
-### 배포 실행
-* 배포 실행을 위한 API입니다.
-* 아티팩트 `Command Type`이 Cloud Agent의 경우만 배포 실행 API를 제공합니다.(SSH의 경우 제공되지 않습니다.)
-* v2.0에서는 Autoscale 서버 그룹도 배포 실행 가능합니다.
+### デプロイ実行
+* デプロイを実行するためのAPIです。
+* アーティファクト `Command Type`がCloud Agentの場合のみデプロイ実行APIを提供します(SSHの場合は提供されません)。
+* v2.0では、Autoscaleサーバーグループにもデプロイを実行できます。
 
 #### Version 2.0
 | Http Method | POST |
@@ -34,18 +34,18 @@ https://api-tcd.nhncloudservice.com
 | Name | Description | Value |
 | --- | --- | --- |
 | Content-Type | ConentType | application/json |
-| X-TC-AUTHENTICATION-ID | API 보안 설정 메뉴의 User Access Key ID | {id} |
-| X-TC-AUTHENTICATION-SECRET | API 보안 설정 메뉴의 Secret Access Key | {key} |
+| X-TC-AUTHENTICATION-ID | APIセキュリティ設定メニューのUser Access Key ID | {id} |
+| X-TC-AUTHENTICATION-SECRET | APIセキュリティ設定メニューのSecret Access Key | {key} |
 
 ##### Parameter (Body)
 | Name | Type | Description | Value | Required | Default Value |
 | --- | --- | --- | --- | --- | --- |
-| targetServerHostnames | String | 서버 그룹 내에서 선택적으로 배포 대상이 되는 ','으로 구분된 서버의 호스트명(서버 그룹 전체인 경우 모두 입력) | hostname1, hostname2, hostname3(없을 시 서버 그룹 내 서버 전체 배포) | false | 서버 그룹에 포함된 전체 서버 |
-| concurrentNum | Number | 병렬로 실행할 배포 수 | 0 이상의 값, 0인 경우 서버 그룹 전체 동시 실행 | false | 0 |
-| nextWhenFail | Boolean | 시나리오 실패 시 다음 서버 실행 여부 | true/false | false | false (실행 중단) |
-| deployNote | String | 배포 시 작성하는 부가 정보 |  | false |  |
-| async | Boolean | 배포 결과를 기다리지 않고 응답을 받음 | true/false | false | false |
-| scenarioIds | String | 실행할 시나리오 scenarioId | 서버 그룹 내에서 ','으로 구분된 시나리오 ID(없을 시 매핑되어 있는 ScenarioID 전체) | false(단, 일반 Deploy 시 true - 1개만) | 없을 시 매핑되어 있는 ScenarioID 전체 |
+| targetServerHostnames | String | サーバーグループ内で選択的にデプロイ対象となる ',' で区切られたサーバーのホスト名(サーバーグループ全体の場合、すべて入力) | hostname1, hostname2, hostname3(ない場合、サーバーグループ内のサーバー全体をデプロイ) | false | サーバーグループに含まれる全てのサーバー |
+| concurrentNum | Number | 並列で実行するデプロイ数 | 0以上の値、0の場合、サーバーグループ全体を同時実行 | false | 0 |
+| nextWhenFail | Boolean | シナリオが失敗した場合、次のサーバーを実行するかどうか | true/false | false | false (実行中断) |
+| deployNote | String | デプロイ時に作成する追加情報 |  | false |  |
+| async | Boolean | デプロイ結果を待たずにレスポンスを受け取る | true/false | false | false |
+| scenarioIds | String | 実行するシナリオscenarioId | サーバーグループ内で(,)で区切られたシナリオID(ない場合、マッピングされている全てのScenarioID) | false(ただし、通常のDeploy時はtrue - 1件のみ) |ない場合はマッピングされている全てのScenarioID |
 
 ##### Sample Request For cURL
 ``` java
@@ -57,23 +57,23 @@ curl --location 'https://api-tcd.nhncloudservice.com/api/v2.0/projects/{appKey}/
 	"targetServerHostnames" : "{ex. server1,server2}",
 	"concurrentNum" : 1,
 	"nextWhenFail" : false,
-	"deployNote" : "{Note 내용}",
+	"deployNote" : "{Note内容}",
 	"async" : false,
 	"scenarioIds" : "{ex. 1,2}"
 }'
 ```
 
 ##### Response(json)
-* isSuccessful 항목은 배포 실행 호출에 성공했는지 유무를 확인하는 필드값이며 deployStatus 항목을 통해 배포 결과(성공, 실패)를 확인해야 합니다.
-* Autoscale 서버 그룹을 배포 했을 경우 body 값이 List 형태로 존재합니다.
+* isSuccessful項目はデプロイ実行呼び出しが成功したかどうかを確認するフィールド値で、deployStatus項目でデプロイ結果(成功、失敗)を確認する必要があります。
+* Autoscaleサーバーグループにデプロイを実行した場合、body値がList形式で返されます。
 
 | Name | Type | Description | Value |
 | ---- | ---- | ----------- | ----- |
-| isSuccessful | Boolean | 배포 실행 성공 여부 | true 또는 false |
-| resultCode | String | 배포 실행 결과 메시지 | [오류 코드](/Dev%20Tools/Deploy/ko/error-code/) 참고 |
-| deployStatus | String | 배포 상태 | success, fail 또는 deploying(async 옵션 true일 경우) |
-| deployResult | List | 서버별 배포 결과 | - hostname: 배포 대상 호스트명(인스턴스 ID)<br>- status: 배포 결과<br>- taskResult: 배포 시나리오 내 각 태스크별 정보 |
-| deployResultLocation | String | 배포 실행된 Deploy 서비스 프로젝트 링크 | 해당 링크로 Deploy 서비스 프로젝트 콘솔 접속 가능 |
+| isSuccessful | Boolean | デプロイ実行成否 | trueまたはfalse |
+| resultCode | String | デプロイ実行結果メッセージ | [エラーコード](/Dev%20Tools/Deploy/ko/error-code/)参考 |
+| deployStatus | String | デプロイ状態 | success, failまたはdeploying(asyncオプションがtrueの場合)
+| deployResult | List | サーバー別のデプロイ結果 | - hostname:デプロイ対象ホスト名(インスタンスID)<br>- status:デプロイ結果<br>- taskResult:デプロイシナリオ内の各タスクの情報 |
+| deployResultLocation | String | デプロイが実行されたDeployサービスプロジェクトリンク | 該当リンクでDeployサービスプロジェクトのコンソールに接続可能 |
 
 ##### Response Sample
 ``` json
@@ -87,18 +87,18 @@ curl --location 'https://api-tcd.nhncloudservice.com/api/v2.0/projects/{appKey}/
     "body": [
 		{
 			"deployKey": 192349,
-			"deployStatus": "{배포 상태}",
+			"deployStatus": "{デプロイ状態}",
 			"deployResult": [
 				{
 					"deployKey": 192349,
-					"hostname": "{호스트명}",
-					"status": "{배포 결과}",
+					"hostname": "{ホスト名}",
+					"status": "{デプロイ結果}",
 					"taskResult": [
 						"..."
 					]
 				}
 			],
-			"deployResultLocation": "{배포 실행된 Deploy 서비스 프로젝트 링크}"
+			"deployResultLocation": "{デプロイされたDeployサービスプロジェクトリンク}"
 		}
 	]
 }
