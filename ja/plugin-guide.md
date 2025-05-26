@@ -6,13 +6,13 @@ NHN Cloud Deploy Jenkinsアップロードプラグインを使用すると、Je
 
 ## Deploy <-> Jenkins連携方法
 
-Jenkins build -> Deployにバイナリをアップロード(by plugin) -> 配布シナリオ実行(配布/終了/再起動/その他の事前作業および後処理)
-これを行うために、次の順序で配布環境を構築する必要があります。
+Jenkins build -> Deployにバイナリをアップロード(by plugin) -> デプロイシナリオ実行(デプロイ/終了/再起動/その他の事前作業および後処理)
+これを行うために、次の順序でデプロイ環境を構築する必要があります。
 
 1. Deployにアーティファクトを作成
 2. Jenkins build jobを設定
 3. サーバーグループを作成
-4. 配布シナリオを作成
+4. デプロイシナリオを作成
 
 ## Jenkinsインストール
 
@@ -46,7 +46,7 @@ Jenkinsのインストールおよび詳細は、[https://jenkins.io/](https://j
 * enable upload
     * プラグイン動作の有効化/無効化を決定するオプションです。プラグイン設定が保存された状態でプラグインの動作を無効化したい時に役立ちます。
 * publish path
-    * ビルドが完了したワークスペースで配布対象になる相対パスです。例では/を入力していますが、この場合、 JENKINS\_HOME/jobs/プロジェクト名/workspace以下の内容がアップロード対象パスになり、targetと入力するとJENKINS\_HOME/jobs/プロジェクト名/workspace/target以下の内容がアップロード対象パスになります。
+    * ビルドが完了したワークスペースでデプロイ対象になる相対パスです。例では/を入力していますが、この場合、 JENKINS\_HOME/jobs/プロジェクト名/workspace以下の内容がアップロード対象パスになり、targetと入力するとJENKINS\_HOME/jobs/プロジェクト名/workspace/target以下の内容がアップロード対象パスになります。
 * app key
     * 認証のためのapplication keyです。
 * artifact id
@@ -80,7 +80,7 @@ Jenkinsのインストールおよび詳細は、[https://jenkins.io/](https://j
 [TCDeploy] Artifact id： [artifact id値表示部分]
 [TCDeploy] App key： [application key値表示部分]
 [TCDeploy] Application type： server
-[TCDeploy] Description：テスト配布
+[TCDeploy] Description：テストデプロイ
 [TCDeploy] Upload address： [アップロードアドレス表示部分]
 [TCDeploy] Artifact version: TCD_SVR_95__Maven_Project_Test__2015-09-14_16-46-38
 [TCDeploy] Deploy relative path: /
@@ -126,7 +126,7 @@ artifact id、app keyなどのユーザー入力情報が表示され、圧縮�
 * binary group key
     * アップロードするバイナリグループのキーです。数字のみ入力できます。
 * publish path
-    * ビルドが完了したワークスペースで配布対象になる相対パスです。例では/を入力していますが、この場合、 JENKINS\_HOME/jobs/プロジェクト名/workspace以下の内容がアップロード対象パスになり、targetと入力するとJENKINS\_HOME/jobs/プロジェクト名/workspace/target以下の内容がアップロード対象パスになります。
+    * ビルドが完了したワークスペースでデプロイ対象になる相対パスです。例では/を入力していますが、この場合、 JENKINS\_HOME/jobs/プロジェクト名/workspace以下の内容がアップロード対象パスになり、targetと入力するとJENKINS\_HOME/jobs/プロジェクト名/workspace/target以下の内容がアップロード対象パスになります。
 * binary kind
     * アップロードするバイナリがAndroidバイナリなのか、iOSバイナリなのか、その他(etc)のバイナリなのかを区分します。
 * (ipa/apk/etc/plist) file path
