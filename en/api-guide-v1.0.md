@@ -7,13 +7,13 @@ Deploy provides an API for uploading binaries, running deployments, and configur
 https://api-tcd.nhncloudservice.com
 ```
 
-#### Types of Provided APIs
+#### Provided APIs Types
 | Method | URI | Descriptions |
 | ------ | --- | --- |
 | POST | /api/v1.0/projects/{appkey}/artifacts/{artifactId}/binary-group/{binaryGroupKey} | Binary upload API |
 | POST | /api/v1.0/projects/{appKey}/artifacts/{artifactId}/server-group/{serverGroupId}/scenario/{scenarioId}/deploy | Deployment execution API |
 
-#### API request path variables
+#### API Request Path Variables
 | Value | Type | Description |
 | --- | --- | --- |
 | appKey | String | The app key for the Deploy service to use |

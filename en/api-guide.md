@@ -27,7 +27,7 @@ This documentation is organized by API version. Please refer to the links below 
 
 ![deploy_api_04_202402.png](https://static.toastoven.net/prod_tcdeploy/deploy_api_04_202402.png)
 
-##### To determine the serverGroupId
+##### To check the serverGroupId
 * Can also be found by hovering over the server group (parenthesis number)
 
 ![deploy_api_05_202402.png](https://static.toastoven.net/prod_tcdeploy/deploy_api_05_202402.png)

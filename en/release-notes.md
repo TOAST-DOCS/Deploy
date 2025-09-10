@@ -1,5 +1,14 @@
 ## Dev Tools > Deploy > Release Notes
 
+### 2025. 04. 29.
+#### Added Features
+* Added deployment execution API Version 2.0
+    * Auto Scale server groups is also deployable
+
+#### Feature Updates
+* Changed the Cloud Agent artifact Command Type to allow creation of Auto Scale server groups
+* Changed the capacity limit for binary uploads via API from 2GB to 4GB
+
 ### March 25, 2025
 #### Feature Updates
 * Changed to sort by name when exposing binary groups
