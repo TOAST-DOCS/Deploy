@@ -1,5 +1,5 @@
-## Dev Tools > Deploy > API v2.0 Guide
-Deploy provides APIs for deployment execution and information retrieval. You can configure and send HTTP requests directly.
+## Dev Tools > Deploy > API v2.1 Guide
+Deploy provides APIs for binary upload, binary download, deployment execution, and information retrieval. You can configure and send HTTP requests directly.
 
 ### Basic Information
 #### Endpoint
@@ -7,15 +7,30 @@ Deploy provides APIs for deployment execution and information retrieval. You can
 https://api-tcd.nhncloudservice.com
 ```
 
+#### API Request HTTP Header
+```
+X-NHN-AUTHORIZATION: Bearer {issued token}
+```
+
+#### Authentication and Authorization
+Deploy uses User Access Key tokens for authentication and authorization when calling the API.
+A User Access Key token is a temporary, Bearer-type access token issued from a User Access Key.
+For more information on issuing and using User Access Key tokens, see [User Access Key Token](/nhncloud/ko/public-api/user-access-key-token).
+
+Deploy APIs use role-based access control (RBAC).<br>
+Users must have the **Deploy ADMIN role** or **Deploy VIEWER role** to use the APIs.
+
 #### Available APIs
 | Method | URI | Description |
 | ------ | --- | --- |
-| POST | /api/v2.0/projects/{appKey}/artifacts/{artifactId}/server-group/{serverGroupId}/deploy | Deployment execution API |
-| GET | /api/v2.0/projects/{appKey}/artifacts | Artifact list retrieval API |
-| GET | /api/v2.0/projects/{appKey}/artifacts/{artifactId}/server-groups | Server group list retrieval API |
-| GET | /api/v2.0/projects/{appKey}/artifacts/{artifactId}/binary-groups | Binary group list retrieval API |
-| GET | /api/v2.0/projects/{appKey}/artifacts/{artifactId}/deploy-histories | Deployment history retrieval API |
-| GET | /api/v2.0/projects/{appKey}/artifacts/{artifactId}/binary-groups/{binaryGroupKey}/binaries | Binary list retrieval API |
+| POST | /api/v2.1/projects/{appKey}/artifacts/{artifactId}/binary-group/{binaryGroupKey} | Binary upload API |
+| GET | /api/v2.1/projects/{appKey}/artifacts/{artifactId}/binary-group/{binaryGroupKey}/binaries/{binaryKey} | Binary download API |
+| POST | /api/v2.1/projects/{appKey}/artifacts/{artifactId}/server-group/{serverGroupId}/deploy | Deployment execution API |
+| GET | /api/v2.1/projects/{appKey}/artifacts | Artifact list retrieval API |
+| GET | /api/v2.1/projects/{appKey}/artifacts/{artifactId}/server-groups | Server group list retrieval API |
+| GET | /api/v2.1/projects/{appKey}/artifacts/{artifactId}/binary-groups | Binary group list retrieval API |
+| GET | /api/v2.1/projects/{appKey}/artifacts/{artifactId}/deploy-histories | Deployment history retrieval API |
+| GET | /api/v2.1/projects/{appKey}/artifacts/{artifactId}/binary-groups/{binaryGroupKey}/binaries | Binary list retrieval API |
 
 #### API Request Path Variables
 | Value | Type | Description |
@@ -23,25 +38,89 @@ https://api-tcd.nhncloudservice.com
 | appKey | String | Appkey of the Deploy service to use |
 | artifactId | Number | ID of the artifact to use |
 | binaryGroupKey | Number | Key of the binary group to upload the binary to |
+| binaryKey | Number | Binary key, issued upon upload |
 | serverGroupId | Number | ID of the server group to deploy to |
+
+### Upload Binary
+#### Version 2.1
+| Http Method | POST |
+| ----------- | ---- |
+| Request URL | https://api-tcd.nhncloudservice.com/api/v2.1/projects/{appKey}/artifacts/{artifactId}/binary-group/{binaryGroupKey} |
+
+##### Parameter
+| Name | Type | Description | Value | Required |
+| ---- | ---- | ----------- | ----- | -------- |
+| applicationType | String | Type of the artifact | client or server | true |
+| version | String | Version of the binary to upload; replaced with a timestamp if not entered (max 100 characters) | - | false |
+| description | String | Description of the binary | - | false |
+| osType | String | OS information of the binary file when applicationType is client | iOS, Android, or etc | false |
+| binaryFile | File | Binary file object | - | true |
+| metaFile | File | plist file object for iOS | - | false |
+| fix | Boolean | Whether the binary is fixed when applicationType is client | true/false | false |
+
+##### Sample Request For cURL
+``` java
+curl -X POST \
+  https://api-tcd.nhncloudservice.com/api/v2.1/projects/{appKey}/artifacts/{artifactId}/binary-group/{binaryGroupKey} \
+  -H 'content-type: multipart/form-data' \
+  -F 'binaryFile=@ojdbc14.jar' \
+  -F 'applicationType=server' \
+  -F 'description=A binary file of some kind'
+```
+
+##### Response (JSON)
+| Name | Type | Description | Value |
+| ---- | ---- | ----------- | ----- |
+| isSuccessful | boolean | Upload result | true or false |
+| resultCode | String | Upload result message | See [Error Codes](/Dev%20Tools/Deploy/ko/error-code/) |
+| downloadUrl | String | Download path of the uploaded binary | The binary can be downloaded via this path |
+| binaryKey | String | Key of the uploaded binary | - |
+
+##### Response Sample
+``` json
+{
+	"header": {
+		"isSuccessful": true,
+		"serverTime": 1533526167415,
+		"resultCode": "SUCCESS",
+		"resultMessage": "success"
+	},
+	"body": {
+		"downloadUrl": "https://api-tcd.nhncloudservice.com/api/v2.1/projects/{appKey}/artifacts/{artifactId}/binary-group/{binaryGroupKey}/binaries/{uploadedBinaryKey}",
+		"binaryKey": "{uploadedBinaryKey}"
+	}
+}
+```
+
+### Download Binary
+You can download a binary file using the download path received in the response from the binary upload API.
+
+#### Version 2.1
+| Http Method | GET |
+| ----------- | ---- |
+| Request URL | https://api-tcd.nhncloudservice.com/api/v2.1/projects/{appKey}/artifacts/{artifactId}/binary-group/{binaryGroupKey}/binaries/{binaryKey} |
+
+##### Sample Request For cURL
+``` java
+curl -X GET \
+  https://api-tcd.nhncloudservice.com/api/v2.1/projects/{appKey}/artifacts/{artifactId}/binary-group/{binaryGroupKey}/binaries/{binaryKey} \
+  -H 'X-NHN-AUTHORIZATION: Bearer {token}' \
+  -o {file name to save}
+```
+
+##### Response
+* Downloads the binary file.
+* Content-Type: `application/octet-stream`
 
 ### Execute Deployment
 * This API is used for deployment execution.
 * The deployment execution API is only available when the artifact `Command Type` is Cloud Agent. (Not available for SSH.)
-* In v2.0, deployment execution is also supported for Autoscale server groups.
-* The deployment execution API uses role-based access control (RBAC). Only users with the **Deploy ADMIN** role can use the deployment execution API.
+* In v2.1, deployment execution is also supported for Autoscale server groups.
 
-#### Version 2.0
+#### Version 2.1
 | Http Method | POST |
 | ----------- | ---- |
-| Request URL | https://api-tcd.nhncloudservice.com/api/v2.0/projects/{appKey}/artifacts/{artifactId}/server-group/{serverGroupId}/deploy |
-
-##### Header
-| Name | Description | Value |
-| --- | --- | --- |
-| Content-Type | Content type | application/json |
-| X-TC-AUTHENTICATION-ID | User Access Key ID in the API security settings menu | {id} |
-| X-TC-AUTHENTICATION-SECRET | Secret Access Key in the API security settings menu | {key} |
+| Request URL | https://api-tcd.nhncloudservice.com/api/v2.1/projects/{appKey}/artifacts/{artifactId}/server-group/{serverGroupId}/deploy |
 
 ##### Parameter (Body)
 | Name | Type | Description | Value | Required | Default Value |
@@ -55,15 +134,14 @@ https://api-tcd.nhncloudservice.com
 
 ##### Sample Request For cURL
 ``` java
-curl --location 'https://api-tcd.nhncloudservice.com/api/v2.0/projects/{appKey}/artifacts/{artifactId}/server-group/{serverGroupId}/deploy' \
---header 'X-TC-AUTHENTICATION-ID: {ID}' \
---header 'X-TC-AUTHENTICATION-SECRET: {Key}' \
+curl --location 'https://api-tcd.nhncloudservice.com/api/v2.1/projects/{appKey}/artifacts/{artifactId}/server-group/{serverGroupId}/deploy' \
+--header 'X-NHN-AUTHORIZATION: Bearer {token}' \
 --header 'Content-Type: application/json' \
 --data '{
 	"targetServerHostnames" : "{ex. server1,server2}",
 	"concurrentNum" : 1,
 	"nextWhenFail" : false,
-	"deployNote" : "{content for Note}",
+	"deployNote" : "{Note content}",
 	"async" : false,
 	"scenarioIds" : "{ex. 1,2}"
 }'
@@ -113,16 +191,10 @@ curl --location 'https://api-tcd.nhncloudservice.com/api/v2.0/projects/{appKey}/
 ### List Artifacts
 * This API retrieves a list of artifacts in a project.
 
-#### Version 2.0
+#### Version 2.1
 | Http Method | GET |
 | ----------- | ---- |
-| Request URL | https://api-tcd.nhncloudservice.com/api/v2.0/projects/{appKey}/artifacts |
-
-##### Header
-| Name | Description | Value |
-| --- | --- | --- |
-| X-TC-AUTHENTICATION-ID | User Access Key ID in the API security settings menu | {id} |
-| X-TC-AUTHENTICATION-SECRET | Secret Access Key in the API security settings menu | {key} |
+| Request URL | https://api-tcd.nhncloudservice.com/api/v2.1/projects/{appKey}/artifacts |
 
 ##### Parameter (Query String)
 | Name | Type | Description | Value | Required | Default Value |
@@ -132,9 +204,8 @@ curl --location 'https://api-tcd.nhncloudservice.com/api/v2.0/projects/{appKey}/
 ##### Sample Request For cURL
 ``` java
 curl -X GET \
-  'https://api-tcd.nhncloudservice.com/api/v2.0/projects/{appKey}/artifacts?artifactName={artifactName}' \
-  -H 'X-TC-AUTHENTICATION-ID: {ID}' \
-  -H 'X-TC-AUTHENTICATION-SECRET: {Key}'
+  'https://api-tcd.nhncloudservice.com/api/v2.1/projects/{appKey}/artifacts?artifactName={artifactName}' \
+  -H 'X-NHN-AUTHORIZATION: Bearer {token}'
 ```
 
 ##### Response (JSON)
@@ -182,23 +253,16 @@ curl -X GET \
 ### List Server Groups
 * This API retrieves a list of server groups belonging to an artifact.
 
-#### Version 2.0
+#### Version 2.1
 | Http Method | GET |
 | ----------- | ---- |
-| Request URL | https://api-tcd.nhncloudservice.com/api/v2.0/projects/{appKey}/artifacts/{artifactId}/server-groups |
-
-##### Header
-| Name | Description | Value |
-| --- | --- | --- |
-| X-TC-AUTHENTICATION-ID | User Access Key ID in the API security settings menu | {id} |
-| X-TC-AUTHENTICATION-SECRET | Secret Access Key in the API security settings menu | {key} |
+| Request URL | https://api-tcd.nhncloudservice.com/api/v2.1/projects/{appKey}/artifacts/{artifactId}/server-groups |
 
 ##### Sample Request For cURL
 ``` java
 curl -X GET \
-  'https://api-tcd.nhncloudservice.com/api/v2.0/projects/{appKey}/artifacts/{artifactId}/server-groups' \
-  -H 'X-TC-AUTHENTICATION-ID: {ID}' \
-  -H 'X-TC-AUTHENTICATION-SECRET: {Key}'
+  'https://api-tcd.nhncloudservice.com/api/v2.1/projects/{appKey}/artifacts/{artifactId}/server-groups' \
+  -H 'X-NHN-AUTHORIZATION: Bearer {token}'
 ```
 
 ##### Response (JSON)
@@ -244,23 +308,16 @@ curl -X GET \
 ### List Binary Groups
 * This API retrieves a list of binary groups belonging to an artifact.
 
-#### Version 2.0
+#### Version 2.1
 | Http Method | GET |
 | ----------- | ---- |
-| Request URL | https://api-tcd.nhncloudservice.com/api/v2.0/projects/{appKey}/artifacts/{artifactId}/binary-groups |
-
-##### Header
-| Name | Description | Value |
-| --- | --- | --- |
-| X-TC-AUTHENTICATION-ID | User Access Key ID in the API security settings menu | {id} |
-| X-TC-AUTHENTICATION-SECRET | Secret Access Key in the API security settings menu | {key} |
+| Request URL | https://api-tcd.nhncloudservice.com/api/v2.1/projects/{appKey}/artifacts/{artifactId}/binary-groups |
 
 ##### Sample Request For cURL
 ``` java
 curl -X GET \
-  'https://api-tcd.nhncloudservice.com/api/v2.0/projects/{appKey}/artifacts/{artifactId}/binary-groups' \
-  -H 'X-TC-AUTHENTICATION-ID: {ID}' \
-  -H 'X-TC-AUTHENTICATION-SECRET: {Key}'
+  'https://api-tcd.nhncloudservice.com/api/v2.1/projects/{appKey}/artifacts/{artifactId}/binary-groups' \
+  -H 'X-NHN-AUTHORIZATION: Bearer {token}'
 ```
 
 ##### Response (JSON)
@@ -307,16 +364,10 @@ curl -X GET \
 * This API retrieves the deployment history of an artifact.
 * The query period cannot exceed 1 year.
 
-#### Version 2.0
+#### Version 2.1
 | Http Method | GET |
 | ----------- | ---- |
-| Request URL | https://api-tcd.nhncloudservice.com/api/v2.0/projects/{appKey}/artifacts/{artifactId}/deploy-histories |
-
-##### Header
-| Name | Description | Value |
-| --- | --- | --- |
-| X-TC-AUTHENTICATION-ID | User Access Key ID in the API security settings menu | {id} |
-| X-TC-AUTHENTICATION-SECRET | Secret Access Key in the API security settings menu | {key} |
+| Request URL | https://api-tcd.nhncloudservice.com/api/v2.1/projects/{appKey}/artifacts/{artifactId}/deploy-histories |
 
 ##### Parameter (Query String)
 | Name | Type | Description | Value | Required | Default Value |
@@ -330,9 +381,8 @@ curl -X GET \
 ##### Sample Request For cURL
 ``` java
 curl -X GET \
-  'https://api-tcd.nhncloudservice.com/api/v2.0/projects/{appKey}/artifacts/{artifactId}/deploy-histories?serverGroupId=0&deploymentYearFrom=2025-01-01&deploymentYearTo=2025-03-01&pageNum=1&pageSize=20' \
-  -H 'X-TC-AUTHENTICATION-ID: {ID}' \
-  -H 'X-TC-AUTHENTICATION-SECRET: {Key}'
+  'https://api-tcd.nhncloudservice.com/api/v2.1/projects/{appKey}/artifacts/{artifactId}/deploy-histories?serverGroupId=0&deploymentYearFrom=2025-01-01&deploymentYearTo=2025-03-01&pageNum=1&pageSize=20' \
+  -H 'X-NHN-AUTHORIZATION: Bearer {token}'
 ```
 
 ##### Response (JSON)
@@ -386,16 +436,10 @@ curl -X GET \
 ### List Binaries
 * This API retrieves a list of binaries belonging to a binary group.
 
-#### Version 2.0
+#### Version 2.1
 | Http Method | GET |
 | ----------- | ---- |
-| Request URL | https://api-tcd.nhncloudservice.com/api/v2.0/projects/{appKey}/artifacts/{artifactId}/binary-groups/{binaryGroupKey}/binaries |
-
-##### Header
-| Name | Description | Value |
-| --- | --- | --- |
-| X-TC-AUTHENTICATION-ID | User Access Key ID in the API security settings menu | {id} |
-| X-TC-AUTHENTICATION-SECRET | Secret Access Key in the API security settings menu | {key} |
+| Request URL | https://api-tcd.nhncloudservice.com/api/v2.1/projects/{appKey}/artifacts/{artifactId}/binary-groups/{binaryGroupKey}/binaries |
 
 ##### Parameter (Query String)
 | Name | Type | Description | Value | Required | Default Value |
@@ -409,9 +453,8 @@ curl -X GET \
 ##### Sample Request For cURL
 ``` java
 curl -X GET \
-  'https://api-tcd.nhncloudservice.com/api/v2.0/projects/{appKey}/artifacts/{artifactId}/binary-groups/{binaryGroupKey}/binaries?pageNum=1&pageSize=20&sortKey=UPLOAD_DATE&sortDirection=DESC' \
-  -H 'X-TC-AUTHENTICATION-ID: {ID}' \
-  -H 'X-TC-AUTHENTICATION-SECRET: {Key}'
+  'https://api-tcd.nhncloudservice.com/api/v2.1/projects/{appKey}/artifacts/{artifactId}/binary-groups/{binaryGroupKey}/binaries?pageNum=1&pageSize=20&sortKey=UPLOAD_DATE&sortDirection=DESC' \
+  -H 'X-NHN-AUTHORIZATION: Bearer {token}'
 ```
 
 ##### Response (JSON)
