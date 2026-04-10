@@ -5,6 +5,7 @@ Deployでは、ユーザーがHTTP Requestを直接構成してバイナリア�
 
 - [Version 1.0 API ガイド](/Dev%20Tools/Deploy/ja/api-guide-v1.0/)
 - [Version 2.0 API ガイド](/Dev%20Tools/Deploy/ja/api-guide-v2.0/)
+- [Version 2.0 API ガイド](/Dev%20Tools/Deploy/ja/api-guide-v2.1/)
 
 ### 共通情報
 #### 変数別の値確認方法
