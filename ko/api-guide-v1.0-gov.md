@@ -1,5 +1,5 @@
 ## Dev Tools > Deploy > API v1.0 가이드
-Deploy에서는 사용자가 HTTP Request를 직접 구성하여 바이너리 업로드, 배포 실행을 위한 API를 제공합니다.
+Deploy에서는 바이너리 업로드, 배포 실행을 위한 API를 제공합니다. 사용자가 HTTP 요청을 직접 구성하여 사용할 수 있습니다.
 
 ### 기본 정보
 #### 엔드포인트
@@ -10,7 +10,7 @@ https://api-tcd.gov-nhncloudservice.com
 #### 제공하는 API 종류
 | Method | URI | 설명 |
 | ------ | --- | --- |
-| POST | /api/v1.0/projects/{appkey}/artifacts/{artifactId}/binary-group/{binaryGroupKey} | 바이너리 업로드 API |
+| POST | /api/v1.0/projects/{appKey}/artifacts/{artifactId}/binary-group/{binaryGroupKey} | 바이너리 업로드 API |
 | POST | /api/v1.0/projects/{appKey}/artifacts/{artifactId}/server-group/{serverGroupId}/scenario/{scenarioId}/deploy | 배포 실행 API |
 
 #### API 요청 경로 변수
@@ -26,7 +26,7 @@ https://api-tcd.gov-nhncloudservice.com
 #### Version 1.0
 | Http Method | POST |
 | ----------- | ---- |
-| Request URL | https://api-tcd.gov-nhncloudservice.com/api/v1.0/projects/{appkey}/artifacts/{artifactId}/binary-group/{binaryGroupKey} |
+| Request URL | https://api-tcd.gov-nhncloudservice.com/api/v1.0/projects/{appKey}/artifacts/{artifactId}/binary-group/{binaryGroupKey} |
 
 ##### Parameter
 | Name | Type | Description | Value | Required |
@@ -37,7 +37,7 @@ https://api-tcd.gov-nhncloudservice.com
 | osType | String | applicationType이 client인 경우 바이너리 파일의 OS 정보 | iOS, Android 또는 etc | false |
 | binaryFile | File | 바이너리 파일 객체 | - | true |
 | metaFile | File | iOS인 경우 plist 파일 객체 | - | false |
-| fix | Boolean | applicationType이 Client인 경우 Fix 여부 정보 | true/false | false |
+| fix | Boolean | applicationType이 client인 경우 Fix 여부 정보 | true/false | false |
 
 ##### Sample Request For cURL
 ``` java
@@ -50,7 +50,7 @@ curl -X POST \
 ```
 
 ##### Sample Request For JAVA
-아래 코드는 HttpClient 라이브러리(httpclient 4.3.6)를 사용하여 API를 통해 바이너리를 업로드하는 코드의 예시입니다.
+아래 코드는 HttpClient 라이브러리(httpclient 4.3.6)를 사용하여 API로 바이너리를 업로드하는 코드의 예시입니다.
 
 ``` java
 String appKey = "xxxxxxxxx";
@@ -122,7 +122,7 @@ try {
 		"resultMessage": "success"
 	},
 	"body": {
-		"downloadUrl": "https://api-tcd.gov-nhncloudservice.com/api/v1.0/projects/{appkey}/artifacts/{artifactId}/binary-group/{binaryGroupKey}/binaries/{uploadedBinaryKey}",
+		"downloadUrl": "https://api-tcd.gov-nhncloudservice.com/api/v1.0/projects/{appKey}/artifacts/{artifactId}/binary-group/{binaryGroupKey}/binaries/{uploadedBinaryKey}",
 		"binaryKey": "{uploadedBinaryKey}"
 	}
 }
@@ -144,10 +144,10 @@ try {
 | osType | String | applicationType이 client인 경우 바이너리 파일의 OS 정보 | iOS, Android 또는 etc | false |
 | binaryFile | File | 바이너리 파일 객체 | - | true |
 | metaFile | File | iOS인 경우 plist 파일 객체 | - | false |
-| fix | Boolean | applicationType이 Client인 경우 Fix 여부 정보 | true/false | false |
+| fix | Boolean | applicationType이 client인 경우 Fix 여부 정보 | true/false | false |
 
 ##### Sample Request For JAVA
-아래 코드는 HttpClient 라이브러리(httpclient 4.3.6)를 사용하여 API를 통해 바이너리를 업로드하는 코드의 예시입니다.
+아래 코드는 HttpClient 라이브러리(httpclient 4.3.6)를 사용하여 API로 바이너리를 업로드하는 코드의 예시입니다.
 
 ``` java
 String artifactId = "1";
@@ -204,7 +204,7 @@ try {
 | Name | Type | Description | Value |
 | ---- | ---- | ----------- | ----- |
 | isSuccess | boolean | 업로드 결과 | true 또는 false |
-| result | String | 업로드 결과 메시지 | isSuccess : true<br>\- 업로드된 바이너리의 키 정보<br>isSuccess : false<br>\- INAVLID\_INFORMATION: 잘못된 파라미터 정보<br>\- BINARY\_UPLOAD\_ERROR: 바이너리 업로드 중 오류 발생<br>\- ALREADY\_UPLOADED\_VERSION: 바이너리 버전 충돌 |
+| result | String | 업로드 결과 메시지 | isSuccess : true<br>\- 업로드된 바이너리의 키 정보<br>isSuccess : false<br>\- INVALID\_INFORMATION: 잘못된 파라미터 정보<br>\- BINARY\_UPLOAD\_ERROR: 바이너리 업로드 중 오류 발생<br>\- ALREADY\_UPLOADED\_VERSION: 바이너리 버전 충돌 |
 
 ##### Response Sample
 ``` json
@@ -217,6 +217,7 @@ try {
 ### 배포 실행
 * 배포 실행을 위한 API입니다.
 * 아티팩트 `Command Type`이 Cloud Agent의 경우만 배포 실행 API를 제공합니다.(SSH의 경우 제공되지 않습니다.)
+* 배포 실행 API는 역할 기반 접근 제어(RBAC)를 사용합니다. **Deploy ADMIN** 역할을 보유한 사용자만 배포 실행 API를 사용할 수 있습니다.
 
 #### Version 1.0
 | Http Method | POST |
@@ -226,14 +227,14 @@ try {
 ##### Header
 | Name | Description | Value |
 | --- | --- | --- |
-| Content-Type | ConentType | application/json |
+| Content-Type | ContentType | application/json |
 | X-TC-AUTHENTICATION-ID | API 보안 설정 메뉴의 User Access Key ID | {id} |
 | X-TC-AUTHENTICATION-SECRET | API 보안 설정 메뉴의 Secret Access Key | {key} |
 
 ##### Parameter (Body)
 | Name | Type | Description | Value | Required | Default Value |
 | --- | --- | --- | --- | --- | --- |
-| targetServerHostnames | String | 서버 그룹 내에서 선택적으로 배포 대상이 되는 ','으로 구분된 서버의 호스트명(서버 그룹 전체인 경우 모두 입력) | hostname1, hostname2, hostname3(없을 시 서버 그룹 내 서버 전체 배포) | false | 서버 그룹에 포함된 전체 서버 |
+| targetServerHostnames | String | 서버 그룹 내에서 선택적으로 배포 대상이 되는 쉼표(,)로 구분된 서버의 호스트명(서버 그룹 전체인 경우 모두 입력) | hostname1, hostname2, hostname3(없을 시 서버 그룹 내 서버 전체 배포) | false | 서버 그룹에 포함된 전체 서버 |
 | concurrentNum | Number | 병렬로 실행할 배포 수 | 0 이상의 값, 0인 경우 서버 그룹 전체 동시 실행 | false | 0 |
 | nextWhenFail | Boolean | 시나리오 실패 시 다음 서버 실행 여부 | true/false | false | false (실행 중단) |
 | deployNote | String | 배포 시 작성하는 부가 정보 |  | false |  |
@@ -255,7 +256,7 @@ curl --location 'https://api-tcd.gov-nhncloudservice.com/api/v1.0/projects/{appK
 ```
 
 ##### Response(json)
-* isSuccessful 항목은 배포 실행 호출에 성공했는지 유무를 확인하는 필드값이며 deployStatus 항목을 통해 배포 결과(성공, 실패)를 확인해야 합니다.
+* isSuccessful 항목은 배포 실행 호출에 성공 여부를 확인하는 필드값이며 deployStatus 항목을 통해 배포 결과(성공, 실패)를 확인해야 합니다.
 
 | Name | Type | Description | Value |
 | ---- | ---- | ----------- | ----- |

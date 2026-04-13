@@ -204,7 +204,7 @@ try {
 | Name | Type | Description | Value |
 | ---- | ---- | ----------- | ----- |
 | isSuccess | boolean | アップロード結果 | trueまたはfalse |
-| result | String | アップロード結果メッセージ | isSuccess：true<br>\- アップロードされたバイナリのキー情報<br>isSuccess ： false<br>\- INAVLID\_INFORMATION：無効なパラメータ情報<br>\- BINARY\_UPLOAD\_ERROR：バイナリアップロード中にエラー発生<br>\- ALREADY\_UPLOADED\_VERSION：バイナリバージョン衝突 |
+| result | String | アップロード結果メッセージ | isSuccess：true<br>\- アップロードされたバイナリのキー情報<br>isSuccess ： false<br>\- INVALID\_INFORMATION：無効なパラメータ情報<br>\- BINARY\_UPLOAD\_ERROR：バイナリアップロード中にエラー発生<br>\- ALREADY\_UPLOADED\_VERSION：バイナリバージョン衝突 |
 
 ##### Response Sample
 ``` json
@@ -217,6 +217,7 @@ try {
 ### デプロイ実行
 * デプロイを実行するためのAPIです。
 * アーティファクト `Command Type`がCloud Agentの場合のみデプロイ実行APIを提供します(SSHの場合は提供されません)。
+* デプロイ実行APIはロールベースのアクセス制御(RBAC)を使用します。**Deploy ADMIN**ロールを保有するユーザーのみがデプロイ実行APIを使用できます。
 
 #### Version 1.0
 | Http Method | POST |
@@ -226,14 +227,14 @@ try {
 ##### Header
 | Name | Description | Value |
 | --- | --- | --- |
-| Content-Type | ConentType | application/json |
+| Content-Type | ContentType | application/json |
 | X-TC-AUTHENTICATION-ID | APIセキュリティ設定メニューのUser Access Key ID | {id} |
 | X-TC-AUTHENTICATION-SECRET | APIセキュリティ設定メニューのSecret Access Key | {key} |
 
 ##### Parameter (Body)
 | Name | Type | Description | Value | Required | Default Value |
 | --- | --- | --- | --- | --- | --- |
-| targetServerHostnames | String | サーバーグループ内で選択的にデプロイ対象となる ',' で区切られたサーバーのホスト名(サーバーグループ全体の場合、すべて入力) | hostname1, hostname2, hostname3(ない場合、サーバーグループ内のサーバー全体をデプロイ) | false | サーバーグループに含まれる全てのサーバー |
+| targetServerHostnames | String | サーバーグループ内で選択的にデプロイ対象とするサーバーのホスト名をカンマ(,)で区切って指定(サーバーグループ全体の場合は、全て入力) | hostname1, hostname2, hostname3(指定しない場合、サーバーグループ内の全てのサーバーにデプロイ) | false | サーバーグループに含まれる全てのサーバー |
 | concurrentNum | Number | 並列で実行するデプロイ数 | 0以上の値、0の場合、サーバーグループ全体を同時実行 | false | 0 |
 | nextWhenFail | Boolean | シナリオが失敗した場合、次のサーバーを実行するかどうか | true/false | false | false (実行中断) |
 | deployNote | String | デプロイ時に作成する追加情報 |  | false |  |
@@ -255,7 +256,7 @@ curl --location 'https://api-tcd.nhncloudservice.com/api/v1.0/projects/{appKey}/
 ```
 
 ##### Response(json)
-* isSuccessful項目はデプロイ実行呼び出しが成功したかどうかを確認するフィールド値で、deployStatus項目でデプロイ結果(成功、失敗)を確認する必要があります。
+* isSuccessful項目は、デプロイ実行の呼び出しの成否を確認するフィールド値です。デプロイ結果(成功、失敗)はdeployStatus項目で確認する必要があります。
 
 | Name | Type | Description | Value |
 | ---- | ---- | ----------- | ----- |

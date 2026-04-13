@@ -1,5 +1,5 @@
 ## Dev Tools > Deploy > API v1.0 Guide
-Deploy provides an API for uploading binaries, running deployments, and configuring HTTP requests directly by the user.
+Deploy provides APIs for binary upload and deployment execution. You can configure and send HTTP requests directly.
 
 ### Basic Information
 #### Endpoint
@@ -10,7 +10,7 @@ https://api-tcd.nhncloudservice.com
 #### Types of Provided APIs
 | Method | URI | Descriptions |
 | ------ | --- | --- |
-| POST | /api/v1.0/projects/{appkey}/artifacts/{artifactId}/binary-group/{binaryGroupKey} | Binary upload API |
+| POST | /api/v1.0/projects/{appKey}/artifacts/{artifactId}/binary-group/{binaryGroupKey} | Binary upload API |
 | POST | /api/v1.0/projects/{appKey}/artifacts/{artifactId}/server-group/{serverGroupId}/scenario/{scenarioId}/deploy | Deployment execution API |
 
 #### API request path variables
@@ -26,7 +26,7 @@ https://api-tcd.nhncloudservice.com
 #### Version 1.0
 | Http Method | POST |
 | ----------- | ---- |
-| Request URL | https://api-tcd.nhncloudservice.com/api/v1.0/projects/{appkey}/artifacts/{artifactId}/binary-group/{binaryGroupKey} |
+| Request URL | https://api-tcd.nhncloudservice.com/api/v1.0/projects/{appKey}/artifacts/{artifactId}/binary-group/{binaryGroupKey} |
 
 #### Parameter
 | Name | Type | Description | Value | Required |
@@ -50,7 +50,7 @@ curl -X POST \
 ```
 
 #### Sample Request For JAVA
-Below is an example of uploading binaries via API by using HttpClient library (httpclient 4.3.6). 
+Below is an example of uploading binaries with API by using HttpClient library (httpclient 4.3.6). 
 
 ``` java
 String appKey = "xxxxxxxxx";
@@ -122,7 +122,7 @@ try {
 		"resultMessage": "success"
 	},
 	"body": {
-		"downloadUrl": "https://api-tcd.nhncloudservice.com/api/v1.0/projects/{appkey}/artifacts/{artifactId}/binary-group/{binaryGroupKey}/binaries/{uploadedBinaryKey}",
+		"downloadUrl": "https://api-tcd.nhncloudservice.com/api/v1.0/projects/{appKey}/artifacts/{artifactId}/binary-group/{binaryGroupKey}/binaries/{uploadedBinaryKey}",
 		"binaryKey": "{uploadedBinaryKey}"
 	}
 }
@@ -147,7 +147,7 @@ try {
 | fix | Boolean | Fix or not information, if the applicationType is client | true/false | False |
 
 ##### Sample Request For JAVA
-Below is an example of uploading binaries via API by using HttpClient library (httpclient 4.3.6). 
+Below is an example of uploading binaries with API by using HttpClient library (httpclient 4.3.6). 
 
 ``` java
 String artifactId = "1";
@@ -204,7 +204,7 @@ try {
 | Name | Type | Description | Value |
 | ---- | ---- | ----------- | ----- |
 | isSuccess | boolean | Uploading result | True or false |
-| result | String | Message for uploading result | isSuccess : True<br>\- Key information of uploaded binaries<br>isSuccess : False<br>\- INAVLID\_INFORMATION: Invalid parameter information <br>\- BINARY\_UPLOAD\_ERROR: Error occurred during uploading binaries <br>\- ALREADY\_UPLOADED\_VERSION: Conflicts between binary versions |
+| result | String | Message for uploading result | isSuccess : True<br>\- Key information of uploaded binaries<br>isSuccess : False<br>\- INVALID\_INFORMATION: Invalid parameter information <br>\- BINARY\_UPLOAD\_ERROR: Error occurred during uploading binaries <br>\- ALREADY\_UPLOADED\_VERSION: Conflicts between binary versions |
 
 ##### Response Sample
 ``` json
@@ -217,6 +217,7 @@ try {
 ### Run Deployment
 * API for running deployments.
 * The artifact `Command Type`provides a deployment execution API only for Cloud Agent (not for SSH).
+* The deployment execution API uses role-based access control (RBAC). Only users with the Deploy ADMIN role can use the deployment execution API.
 
 #### Version 1.0
 | Http Method | POST |
@@ -226,7 +227,7 @@ try {
 ##### Header
 | Name | Description | Value |
 | --- | --- | --- |
-| Content-Type | ConentType | application/json |
+| Content-Type | ContentType | application/json |
 | X-TC-AUTHENTICATION-ID | User Access Key ID in API Security Settings menu | {id} |
 | X-TC-AUTHENTICATION-SECRET | Secret Access Key in API Security Settings menu | {key} |
 
