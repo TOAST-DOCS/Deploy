@@ -15,7 +15,7 @@ X-NHN-AUTHORIZATION: Bearer {issued token}
 #### Authentication and Authorization
 Deploy uses User Access Key tokens for authentication and authorization when calling the API.
 A User Access Key token is a temporary, Bearer-type access token issued from a User Access Key.
-For more information on issuing and using User Access Key tokens, see [User Access Key Token](/nhncloud/ko/public-api/user-access-key-token).
+For more information on issuing and using User Access Key tokens, see [User Access Key Token](/nhncloud/en/public-api/user-access-key-token).
 
 Deploy APIs use role-based access control (RBAC).<br>
 Users must have the **Deploy ADMIN role** or **Deploy VIEWER role** to use the APIs.
