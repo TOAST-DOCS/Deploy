@@ -205,7 +205,7 @@ curl -X GET \
 | Name | Type | Description | Value |
 | ---- | ---- | ----------- | ----- |
 | isSuccessful | Boolean | Whether the request was successful | true or false |
-| resultCode | String | Request result message | See [Error Codes](/Dev%20Tools/Deploy/ko/error-code/) |
+| resultCode | String | Request result message | See [Error Codes](/Dev%20Tools/Deploy/en/error-code/) |
 | serverGroups | List | Server group list | See below |
 
 **serverGroups**

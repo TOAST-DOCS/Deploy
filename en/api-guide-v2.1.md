@@ -324,7 +324,7 @@ curl -X GET \
 | Name | Type | Description | Value |
 | ---- | ---- | ----------- | ----- |
 | isSuccessful | Boolean | Whether the request was successful | true or false |
-| resultCode | String | Request result message | See [Error Codes](/Dev%20Tools/Deploy/ko/error-code/) |
+| resultCode | String | Request result message | See [Error Codes](/Dev%20Tools/Deploy/en/error-code/) |
 | binaryGroups | List | Binary group list | See below |
 
 **binaryGroups**
