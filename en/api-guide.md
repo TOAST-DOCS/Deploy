@@ -7,7 +7,11 @@ This documentation is organized by API version. Please refer to the links below 
 - [Version 2.0 API Guide](/Dev%20Tools/Deploy/en/api-guide-v2.0/)
 - [Version 2.1 API Guide](/Dev%20Tools/Deploy/en/api-guide-v2.1/)
 
+<a id="common-information"></a>
+
 ### Common Information
+<a id="how-to-check-values-by-variable"></a>
+
 #### How to check values by variable
 
 ##### How to check appKey
