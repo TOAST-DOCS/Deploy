@@ -1,11 +1,17 @@
 ## Dev Tools > Deploy > API v2.0 가이드
 Deploy에서는 배포 실행, 정보 조회를 위한 API를 제공합니다. 사용자가 HTTP 요청을 직접 구성하여 사용할 수 있습니다.
 
+<a id="basic-information"></a>
+
 ### 기본 정보
+<a id="endpoint"></a>
+
 #### 엔드포인트
 ```text
 https://api-tcd.nhncloudservice.com
 ```
+
+<a id="available-apis"></a>
 
 #### 제공하는 API 종류
 | Method | URI | 설명 |
@@ -17,6 +23,8 @@ https://api-tcd.nhncloudservice.com
 | GET | /api/v2.0/projects/{appKey}/artifacts/{artifactId}/deploy-histories | 배포 이력 조회 API |
 | GET | /api/v2.0/projects/{appKey}/artifacts/{artifactId}/binary-groups/{binaryGroupKey}/binaries | 바이너리 목록 조회 API |
 
+<a id="api-request-path-variables"></a>
+
 #### API 요청 경로 변수
 | 값 | 타입 | 설명 |
 | --- | --- | --- |
@@ -25,11 +33,15 @@ https://api-tcd.nhncloudservice.com
 | binaryGroupKey | Number | 바이너리를 업로드할 바이너리 그룹 키 |
 | serverGroupId | Number | 배포 대상이 되는 서버 그룹 아이디 |
 
+<a id="execute-deployment"></a>
+
 ### 배포 실행
 * 배포 실행을 위한 API입니다.
 * 아티팩트 `Command Type`이 Cloud Agent의 경우만 배포 실행 API를 제공합니다.(SSH의 경우 제공되지 않습니다.)
 * v2.0에서는 Autoscale 서버 그룹도 배포 실행 가능합니다.
 * 배포 실행 API는 역할 기반 접근 제어(RBAC)를 사용합니다. **Deploy ADMIN** 역할을 보유한 사용자만 배포 실행 API를 사용할 수 있습니다.
+
+<a id="version-20"></a>
 
 #### Version 2.0
 | Http Method | POST |
@@ -110,8 +122,12 @@ curl --location 'https://api-tcd.nhncloudservice.com/api/v2.0/projects/{appKey}/
 }
 ```
 
+<a id="list-artifacts"></a>
+
 ### 아티팩트 목록 조회
 * 프로젝트의 아티팩트 목록을 조회하는 API입니다.
+
+<a id="version-20-2"></a>
 
 #### Version 2.0
 | Http Method | GET |
@@ -179,8 +195,12 @@ curl -X GET \
 }
 ```
 
+<a id="list-server-groups"></a>
+
 ### 서버 그룹 목록 조회
 * 아티팩트에 속한 서버 그룹 목록을 조회하는 API입니다.
+
+<a id="version-20-3"></a>
 
 #### Version 2.0
 | Http Method | GET |
@@ -241,8 +261,12 @@ curl -X GET \
 }
 ```
 
+<a id="list-binary-groups"></a>
+
 ### 바이너리 그룹 목록 조회
 * 아티팩트에 속한 바이너리 그룹 목록을 조회하는 API입니다.
+
+<a id="version-20-4"></a>
 
 #### Version 2.0
 | Http Method | GET |
@@ -303,9 +327,13 @@ curl -X GET \
 }
 ```
 
+<a id="list-deployment-history"></a>
+
 ### 배포 이력 조회
 * 아티팩트의 배포 이력을 조회하는 API입니다.
 * 조회 기간은 최대 1년을 초과할 수 없습니다.
+
+<a id="version-20-5"></a>
 
 #### Version 2.0
 | Http Method | GET |
@@ -383,8 +411,12 @@ curl -X GET \
 }
 ```
 
+<a id="list-binaries"></a>
+
 ### 바이너리 목록 조회
 * 바이너리 그룹에 속한 바이너리 목록을 조회하는 API입니다.
+
+<a id="version-20-6"></a>
 
 #### Version 2.0
 | Http Method | GET |
