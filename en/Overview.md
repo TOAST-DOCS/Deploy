@@ -10,6 +10,8 @@ With Deploy, applications can be deployed fast and easy, at 'One Click'.
 
 ![01.png](http://static.toastoven.net/prod_tcdeploy/overview/01.png)
 
+<a id="benefits"></a>
+
 ## Benefits 
 
 * Easy and convenient binary management 
@@ -23,7 +25,11 @@ With Deploy, applications can be deployed fast and easy, at 'One Click'.
 
 ![02.png](http://static.toastoven.net/prod_tcdeploy/overview/02.png)
 
+<a id="features"></a>
+
 ## Features 
+
+<a id="upload"></a>
 
 ### Upload 
 Files are easily uploaded with the help of various uploading methods. 
@@ -32,20 +38,32 @@ Files are easily uploaded with the help of various uploading methods.
     * Jenkins Plugin 
     * REST API
 
+<a id="download"></a>
+
 ### Download 
 Notification for downloading links makes it easy to install and update apps. 
+
+<a id="query-binaries"></a>
 
 ### Query Binaries 
 Binary data of the past remain to enable fast roll-backs.
 
+<a id="manage-deployment-projects"></a>
+
 ### Manage Deployment Projects 
 Infrastructure information of a project is integrated for an easy setting. 
+
+<a id="manage-execute-deployment-scenario"></a>
 
 ### Manage (Execute) Deployment Scenario 
 User-defined commands are used to check server status after deployment. 
 
+<a id="manage-deployment-history"></a>
+
 ### Manage Deployment History 
 Deployment and previous binaries are managed by deployment history so as to secure stability. 
+
+<a id="glossary"></a>
 
 ## Glossary
 
