@@ -5,14 +5,20 @@ This document contains the following:
 * [Menu Description](/Dev%20Tools/Deploy/en/reference/#menu-description)
 * [Functional Description](/Dev%20Tools/Deploy/en/reference/#functional-description)
 
+<a id="menu-description"></a>
+
 ## Menu Description 
 
 ![deploy_ref_01_2018.png](https://static.toastoven.net/prod_tcdeploy/deploy_ref_01_2018.png)
+
+<a id="artifact-menu"></a>
 
 ### 1. Artifact Menu
 
 It is the basic configuration unit of Deploy, to manage deployment. 
 Created artifacts are displayed on the list, on top of the page. 
+
+<a id="deployment-menu"></a>
 
 ### 2. Deployment Menu 
 
@@ -28,6 +34,8 @@ A scenario is composed of Jenkins-CLI template, binary deployment, and file depl
 * Select Server Group and Scenario for Deployment 
 * Concurrent/Individual Server Deployment within Server Group 
 * Detail deployment information, described on the deployment note, is available on View Result of the **Deployment History** tab. 
+
+<a id="deployment-option"></a>
 
 #### Deployment Option 
 
@@ -57,6 +65,8 @@ Deploy concurrently or individually to servers within a specified server group.
 * **Non-Suspension**
     * Scenario execution continues, regardless of errors.
 
+<a id="view-current-deployment-status"></a>
+
 #### View Current Deployment Status 
 
 You can check progress of scenario which is under deployment. 
@@ -65,6 +75,8 @@ You can check progress of scenario which is under deployment.
 
 * Click a deployment item at the header which shows by clicking an an artifact under deployment.
 * Click 'deploying' status on the deployment history page. 
+
+<a id="deployment-history"></a>
 
 ### Deployment History 
 You can see the detailed information on distribution history, settings, and notes.
@@ -93,6 +105,8 @@ The searched distribution history can be downloaded in an Excel file.
     * When the **Download** button is clicked while the **Exclude Histories Without Binary File** option is selected
     ![deploy_ref_06_2021.png](https://static.toastoven.net/prod_tcdeploy/reference/deploy_ref_06_2021.png)
 
+<a id="binary-group"></a>
+
 ### Binary Group 
 
 On the **Binary Group** tab, binaries are managed by group.  
@@ -109,6 +123,8 @@ Applicable to categorize binaries deployed for each server tool, such as Develop
 * You can set the auto delete policy for the binary group from the auto delete settings.
     * If you leave each item in the auto delete setting empty and create a binary group, the auto delete setting will not be applied.
 
+<a id="server-group"></a>
+
 ### Server Group 
 
 Deployment target servers can be managed by group. 
@@ -119,6 +135,8 @@ Based on the phase attribute, it is applicable to categorize server tool, such a
 * Group or server information can be modified. 
 * Scenario for each group can be configured. 
 
+<a id="adding-server-group"></a>
+
 #### Adding Server Group 
 
 ![deploy_ref_08_202402.png](https://static.toastoven.net/prod_tcdeploy/deploy_ref_08_202402.png)
@@ -128,6 +146,8 @@ Based on the phase attribute, it is applicable to categorize server tool, such a
     * Select OS and specify Shell Type: select from the list or enter one, directly. 
     * Select a server tool for Phase: choose NONE, if you don't need to specify. 
     * Click **Create**. 
+
+<a id="addingdeleting-server-information"></a>
 
 #### Adding/Deleting Server Information 
 
@@ -163,19 +183,37 @@ Server information can be added or deleted from **Create (Modify) Server Group**
 * Click the server to delete and click the **Delete Selected** on the left top.
 * Click **Create**: to modify, click **Modify**. 
 
+<a id="adding-auto-scale-group"></a>
+
+#### Adding Auto Scale Group
+
+<!-- TODO: translate body -->
+
+##### Adding Scale-out Scenario
+
+<!-- TODO: translate body -->
+
+<a id="resources"></a>
+
 ### Resources 
 
 Resources can be managed on the page, by creating, uploading, or modifying files; change history can also be found. 
 
 ![deploy_ref_10_2018.png](https://static.toastoven.net/prod_tcdeploy/deploy_ref_10_2018.png)
 
+<a id="functional-description"></a>
+
 ## Functional Description 
 
 Here, more fundtions that are not described in Getting Started, are described in details, along with additional settings. 
 
+<a id="binary"></a>
+
 ### Binary
 
 Binaries are uploaded files that are to be deployed.
+
+<a id="uploading"></a>
 
 #### Uploading 
 
@@ -194,9 +232,13 @@ Two methods are available to upload binaries:
 
 ![deploy_ref_12_2018.png](https://static.toastoven.net/prod_tcdeploy/deploy_ref_12_2018.png)
 
+<a id="download"></a>
+
 #### 1. Download 
 
 Click Download on the right of the list. 
+
+<a id="fix-versions"></a>
 
 #### 2. Fix Versions 
 
@@ -207,6 +249,8 @@ Each client OS allows one version to be fixed.
         * Click to unfix the version. 
     * <span style="color:gray">FIXED</span>(off)
         * Click to fix the version. 
+
+<a id="deploy"></a>
 
 #### 3. Deploy 
 
@@ -244,6 +288,8 @@ Download page for particular binaries can be sent via SMS or email.
 
 Binary download page is sent to recipients in a specified type of delivery. 
 
+<a id="tasks"></a>
+
 ### Tasks 
 
 A task is a scenario configuration element which executes individual tasks and controls the order. 
@@ -271,6 +317,8 @@ A task is a scenario configuration element which executes individual tasks and c
 * Tasks can be controlled with ∧** (Upwards), **∨** (Downwards), or **X** (RemoveTask) buttons located on the right of each task. 
 * Reserved Words 
     * Find more details on Available Variables, as below.
+
+<a id="pre-run-tasks"></a>
 
 #### Pre-run Tasks
 
@@ -333,6 +381,8 @@ A task is a scenario configuration element which executes individual tasks and c
 * Command
     * Enter commands to run. 
     * Reserved words are available. See Available Variables, as below.  
+
+<a id="normal-tasks"></a>
 
 #### Normal Tasks
 
@@ -412,6 +462,8 @@ A task is a scenario configuration element which executes individual tasks and c
     * You may use Available Variables.
         * `$${binary.Enter specified Variables As.binaryGroupName}: Name of binary group selected as variable name set for a binary`
 
+<a id="available-variables"></a>
+
 #### Available Variables
 
 Reserved words as below are available for tasks: 
@@ -444,6 +496,8 @@ $${binary.binary variable as value.binaryGroupName}: Binary group name selected 
     * Types for Variable As of Binary Deploy
         * `$${binary.Enter specified Variables As.binaryGroupName}: Name of binary group`
 
+<a id="resources-2"></a>
+
 ### Resources 
 
 Resources refer to optional file management functions.  
@@ -454,6 +508,8 @@ Resources refer to optional file management functions.
 * File History
 * Manage File History 
 
+<a id="creating-file-groups"></a>
+
 #### Creating File Groups 
 
 ![deploy_ref_21_2018.png](https://static.toastoven.net/prod_tcdeploy/deploy_ref_21_2018.png)
@@ -462,6 +518,8 @@ Resources refer to optional file management functions.
 
 2. Enter name (required) and description (optional). 
 3. Click **Confirm**.
+
+<a id="adding-files"></a>
 
 #### Adding Files 
 
@@ -485,6 +543,8 @@ If a file name is redundant in a file group, it cannot be properly uploaded.
 4. Fill in information for a new file. 
 5. When it is completed, click **Save**. 
 6. It is newly created. 
+
+<a id="modifying-files"></a>
 
 #### Modifying Files 
 
