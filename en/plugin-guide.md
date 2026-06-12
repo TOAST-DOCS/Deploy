@@ -1,8 +1,12 @@
 ## Dev Tools > Deploy > User Guide for Plugin 
 
+<a id="jenkins-plugin-guide"></a>
+
 ## Jenkins Plugin Guide
 
 With NHN Cloud Deploy Jenkins Plugin, build results of Jenkins can be uploaded to NHN Cloud Deploy servers.  
+
+<a id="integrating-deploy---jenkins"></a>
 
 ## Integrating Deploy <-> Jenkins 
 
@@ -14,9 +18,13 @@ To this end, the deployment environment must be built in the following order:
 3. Create a server group
 4. Write deployment scenario 
 
+<a id="installing-jenkins"></a>
+
 ## Installing Jenkins  
 
 Find out how to install Jenkins and details on [https://jenkins.io/](https://jenkins.io/).
+
+<a id="minimum-version-requirements-for-jenkins"></a>
 
 #### Minimum Version Requirements for Jenkins 
 
@@ -32,6 +40,14 @@ Requires **Jenkins 1580.1** or later versions.
 3. Click *Build and Add Measures** of the **Build Setting** to add tasks to upload server or client type applications.  
 
     ![[Figure 3] List of Installed Plugins](http://static.toastoven.net/prod_tcdeploy/devguide/03.png)
+
+<a id="installing-plugin"></a>
+
+#### Installing Plugin
+
+<!-- TODO: translate body -->
+
+<a id="plugin-setting-for-server-type-application-uploads"></a>
 
 #### Plugin Setting for Server Type Application Uploads 
 
@@ -109,6 +125,8 @@ Finished: SUCCESS
 
 Result in user input information, such as artifact ID and appkey, as well as files included in compressed files. 
 
+<a id="plugin-setting-for-client-type-application-uploads"></a>
+
 #### Plugin Setting for Client Type Application Uploads 
 
 User-specified binaries of successful build results from client-type application upload plugin can be uploaded to TCD server. 
@@ -157,9 +175,13 @@ Finished: SUCCESS
 
 Result in user input information, such as artifact ID and appkey, as well as binaries and metafiles to upload. 
 
+<a id="jenkins-cli-build-profile"></a>
+
 ## Jenkins-CLI Build Profile
 
 It is the pre-defined profile supporting users to execute build commands by using Jenkins-CLI. 
+
+<a id="preparations"></a>
 
 #### Preparations 
 
@@ -177,6 +199,8 @@ It is the pre-defined profile supporting users to execute build commands by usin
     * In case java.io.StreamCorruptedException occurs during build output is displayed on console, add -Dhudson.diyChunking=false option to JVM option which is for Jenkins.   
     * e.g.) If Jenkins is installed on RPM,
         * Add Dhudson.diyChunking=false to JENKINS\_JAVA\_OPTIONS of /etc/sysconfig/jenkins.
+
+<a id="setting-profile"></a>
 
 #### Setting Profile 
 
