@@ -1,11 +1,17 @@
 ## Dev Tools > Deploy > API v2.0 Guide
 Deploy provides APIs for deployment execution and information retrieval. You can configure and send HTTP requests directly.
 
+<a id="basic-information"></a>
+
 ### Basic Information
+<a id="endpoint"></a>
+
 #### Endpoint
 ```text
 https://api-tcd.nhncloudservice.com
 ```
+
+<a id="available-apis"></a>
 
 #### Available APIs
 | Method | URI | Description |
@@ -17,6 +23,8 @@ https://api-tcd.nhncloudservice.com
 | GET | /api/v2.0/projects/{appKey}/artifacts/{artifactId}/deploy-histories | Deployment history retrieval API |
 | GET | /api/v2.0/projects/{appKey}/artifacts/{artifactId}/binary-groups/{binaryGroupKey}/binaries | Binary list retrieval API |
 
+<a id="api-request-path-variables"></a>
+
 #### API Request Path Variables
 | Value | Type | Description |
 | --- | --- | --- |
@@ -25,11 +33,15 @@ https://api-tcd.nhncloudservice.com
 | binaryGroupKey | Number | Key of the binary group to upload the binary to |
 | serverGroupId | Number | ID of the server group to deploy to |
 
+<a id="execute-deployment"></a>
+
 ### Execute Deployment
 * This API is used for deployment execution.
 * The deployment execution API is only available when the artifact `Command Type` is Cloud Agent. (Not available for SSH.)
 * In v2.0, deployment execution is also supported for Autoscale server groups.
 * The deployment execution API uses role-based access control (RBAC). Only users with the **Deploy ADMIN** role can use the deployment execution API.
+
+<a id="version-20"></a>
 
 #### Version 2.0
 | Http Method | POST |
@@ -110,8 +122,12 @@ curl --location 'https://api-tcd.nhncloudservice.com/api/v2.0/projects/{appKey}/
 }
 ```
 
+<a id="list-artifacts"></a>
+
 ### List Artifacts
 * This API retrieves a list of artifacts in a project.
+
+<a id="version-20-2"></a>
 
 #### Version 2.0
 | Http Method | GET |
@@ -179,8 +195,12 @@ curl -X GET \
 }
 ```
 
+<a id="list-server-groups"></a>
+
 ### List Server Groups
 * This API retrieves a list of server groups belonging to an artifact.
+
+<a id="version-20-3"></a>
 
 #### Version 2.0
 | Http Method | GET |
@@ -241,8 +261,12 @@ curl -X GET \
 }
 ```
 
+<a id="list-binary-groups"></a>
+
 ### List Binary Groups
 * This API retrieves a list of binary groups belonging to an artifact.
+
+<a id="version-20-4"></a>
 
 #### Version 2.0
 | Http Method | GET |
@@ -303,9 +327,13 @@ curl -X GET \
 }
 ```
 
+<a id="list-deployment-history"></a>
+
 ### List Deployment History
 * This API retrieves the deployment history of an artifact.
 * The query period cannot exceed 1 year.
+
+<a id="version-20-5"></a>
 
 #### Version 2.0
 | Http Method | GET |
@@ -383,8 +411,12 @@ curl -X GET \
 }
 ```
 
+<a id="list-binaries"></a>
+
 ### List Binaries
 * This API retrieves a list of binaries belonging to a binary group.
+
+<a id="version-20-6"></a>
 
 #### Version 2.0
 | Http Method | GET |
