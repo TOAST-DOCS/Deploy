@@ -1,17 +1,25 @@
 ## Dev Tools > Deploy > API v1.0ガイド
 Deployでは、ユーザーがHTTP Requestを直接構成してバイナリアップロード、デプロイを実行するためのAPIを提供します。
 
+<a id="basic-information"></a>
+
 ### 基本情報
+<a id="endpoint"></a>
+
 #### エンドポイント
 ```text
 https://api-tcd.nhncloudservice.com
 ```
+
+<a id="types-of-provided-apis"></a>
 
 #### 提供するAPIの種類
 | Method | URI | 説明 |
 | ------ | --- | --- |
 | POST | /api/v1.0/projects/{appkey}/artifacts/{artifactId}/binary-group/{binaryGroupKey} | バイナリアップロードAPI |
 | POST | /api/v1.0/projects/{appKey}/artifacts/{artifactId}/server-group/{serverGroupId}/scenario/{scenarioId}/deploy | デプロイ実行API |
+
+<a id="api-request-path-variables"></a>
 
 #### APIリクエストパス変数
 | 値 | タイプ | 説明 |
@@ -22,7 +30,11 @@ https://api-tcd.nhncloudservice.com
 | serverGroupId | Number | デプロイ対象となるサーバーグループID |
 | scenarioId | Number | デプロイするシナリオのID |
 
+<a id="binary-upload"></a>
+
 ### バイナリアップロード
+<a id="version-10"></a>
+
 #### Version 1.0
 | Http Method | POST |
 | ----------- | ---- |
@@ -128,6 +140,8 @@ try {
 }
 ```
 
+<a id="previous-version"></a>
+
 #### 以前のバージョン
 | Http Method | POST |
 | ----------- | ---- |
@@ -214,10 +228,14 @@ try {
 }
 ```
 
+<a id="run-deployment"></a>
+
 ### デプロイ実行
 * デプロイを実行するためのAPIです。
 * アーティファクト `Command Type`がCloud Agentの場合のみデプロイ実行APIを提供します(SSHの場合は提供されません)。
 * デプロイ実行APIはロールベースのアクセス制御(RBAC)を使用します。**Deploy ADMIN**ロールを保有するユーザーのみがデプロイ実行APIを使用できます。
+
+<a id="version-10-2"></a>
 
 #### Version 1.0
 | Http Method | POST |
