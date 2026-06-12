@@ -6,6 +6,8 @@
 Deploy 상품의 이용은 아래와 같은 과정을 거칩니다.
 아래 Client Application과 Server Application의 설정과정을 참고하여 배포를 진행할 수 있습니다.
 
+<a id="section-1"></a>
+
 ## 서비스 활성화
 
 Console에 [Upcoming Products] > [Deploy]를 선택한 후 [상품이용]버튼을 클릭하여 서비스를 활성화합니다.
@@ -13,9 +15,13 @@ Console에 [Upcoming Products] > [Deploy]를 선택한 후 [상품이용]버튼�
 ![[그림 1] 서비스 활성화](http://images.toast.co.kr/toast/deploy/guide/01.png)
 <center>[그림 1] 서비스 활성화</center>
 
+<a id="for-client-application"></a>
+
 ## For Client Application
 
 클라이언트 어플리케이션을 위한 설정은 크게 Artifact 설정과 Binary Upload 단계를 거칩니다.
+
+<a id="artifact-deploy-artifacts"></a>
 
 ### Artifact 설정 Deploy > Artifacts
 
@@ -30,6 +36,8 @@ Artifact는 Deploy 상품에서 배포의 기본 단위입니다.
 2. Artifact Type을 "**Client Application**"으로 선택
 3. Name(required), Description(optional) 입력
 4. create 버튼 클릭
+
+<a id="binary-uploaddeploy-artifacts"></a>
 
 ### Binary UploadDeploy > Artifacts
 
@@ -46,13 +54,19 @@ Binary를 업로드합니다.
 3. Version(optional), Description(optional) 정보 입력
 4. upload 버튼 클릭
 
+<a id="for-server-application"></a>
+
 ## For Server Application
 
 서버 어플리케이션의 배포는 설정(Artifact, Server Group, Scenario), Binary Upload, Deploy의 단계를 거칩니다.
 
+<a id="for-server-application-1"></a>
+
 ### 설정
 
 서버 어플리케이션의 배포를 위해서는 Artifact, Server Group, Scenario 설정이 필요합니다.
+
+<a id="artifact-deploy-artifacts-2"></a>
 
 #### Artifact 설정Deploy > Artifacts
 
@@ -73,6 +87,8 @@ Artifact를 생성합니다.
 5. 서버 접근 계정 입력 (대상서버로 Command를 실행하기 위한 Linux 계정)
 6. create 버튼 클릭
 
+<a id="server-group-deploy-artifacts"></a>
+
 #### Server Group 설정Deploy > Artifacts
 
 Server Group을 생성합니다.
@@ -88,6 +104,8 @@ Server Group을 생성합니다.
 3. host name(required), ip(required), os(optional) 정보 입력
 4. 서버 추가 버튼 클릭
 5. create 버튼 클릭
+
+<a id="scenario-deploy-deploy"></a>
 
 #### Scenario 설정Deploy > Deploy
 
@@ -113,6 +131,8 @@ Scenario를 생성합니다.
 	- **User Command** : 배포 과정에서 실행되어야 하는 커맨드를 위한 Task (서버 재시작, 압축해제, 기존소스 삭제 등에 활용)
 3. Task 작성 및 Task 실행 순서 설정
 4. save 버튼 클릭
+
+<a id="binary-upload"></a>
 
 ### Binary Upload
 
@@ -154,6 +174,8 @@ Deploy의 과정은 위 "2.1 설정" - "Scenario 설정"에서 진행했던 시�
 4. 동시실행수 입력
 5. 시나리오 선택
 6. deploy 버튼 클릭
+
+<a id="salt-stack-master"></a>
 
 #### [ 참고 ] Salt Stack Master 설치 가이드
 
@@ -212,6 +234,8 @@ Rejected Keys:
 
 * 정상적으로 Master와 연결된 Minion의 ID가 Accepted Keys에 출력됩니다.
 * master는 4505,4506포트를 통해 minion과 통신합니다. 해당 포트로 외부에서의 접근이 가능하도록 방화벽 설정을 변경해야 합니다.
+
+<a id="salt-stack-minion"></a>
 
 #### [ 참고 ] Salt Stack Minion 설치 가이드
 
