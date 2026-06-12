@@ -7,9 +7,13 @@
 
 > 아래 플러그인들은 서버, 클라이언트 어플리케이션 타입 모두 지원하고 있습니다.
 
+<a id="ant-plugin-guide"></a>
+
 ## Ant Plugin Guide
 
 Ant 빌드 프로젝트 내에서 플러그인을 통해 배포시스템으로 업로드를 할 수 있습니다.
+
+<a id="ant-plugin-guide-1"></a>
 
 #### 사용 방법
 
@@ -17,6 +21,8 @@ Ant 빌드 프로젝트 내에서 플러그인을 통해 배포시스템으로 �
 2. tcd-lib 폴더 생성 및 module_tcd-0.0.2.jar 추가
 3. build.xml에 tcdeploy 타겟 추가
 4. tcdeploy 타겟 실행
+
+<a id="server-tcdeploy"></a>
 
 #### 서버(server) 타입 어플리케이션을 위한 tcdeploy 타겟 설정
 
@@ -57,6 +63,8 @@ build.xml
 ⑧ : 업로드 설명 (optional)  
 ⑨ : 타임스탬프 (optional) : 버전을 타임스탬프로 관리시, property명을 입력 후 ⑦의 prefix 혹은 postfix로 사용  
 
+<a id="client-tcdeploy"></a>
+
 #### 클라이언트(client) 타입 어플리케이션을 위한 tcdeploy 타겟 설정
 
 build.xml
@@ -96,9 +104,13 @@ build.xml
 ⑨ : 바이너리 타입 (required) : 안드로이드(Android), 아이폰(iOS), 기타(etc) 중 선택  
 ⑩ : 메타 파일명 : 경로를 포함한 메타파일명, 메타파일이 있는 바이너리 타입의 경우 필수속성, 예) iOS타입 바이너리.  
 
+<a id="maven-plugin-guide"></a>
+
 ## Maven Plugin Guide
 
 Maven Plugin을 통해 배포시스템으로 업로드 할 수 있습니다.
+
+<a id="maven-repository"></a>
 
 #### 1. Maven Repository 추가
 
@@ -116,6 +128,8 @@ pom.xml
 
 ...
 ```
+
+<a id="plugin"></a>
 
 #### 2. Plugin 설정 추가
 
@@ -193,19 +207,27 @@ pom.xml
 ⑦ : 바이너리 타입 (required) : 안드로이드(Android), 아이폰(iOS), 기타(etc) 중 선택. 클라이언트 타입 어플리케이션의 경우 필수 속성  
 ⑧ : 메타 파일명 : 경로를 포함한 메타파일명, 메타파일이 있는 바이너리 타입의 경우 필수속성, 예) iOS타입 바이너리.  
 
+<a id="maven"></a>
+
 #### 3. Maven 실행
 
 ```
 mvn module_tcd_mvn:binaryUpload
 ```
 
+<a id="jenkins-plugin-guide"></a>
+
 ## Jenkins Plugin Guide
 
 Toast Cloud Deploy(이하 TCD) Jenkins 업로드 플러그인은 Jenkins의 빌드 결과물을 TCD 서버로 업로드 할 수 있게 해줍니다.
 
+<a id="jenkins"></a>
+
 #### Jenkins 최소 요구사항 버전
 
 **Jenkins 1580.1** 이후 버전을 요구합니다.
+
+<a id="jenkins-plugin-guide-1"></a>
 
 #### 플러그인 설치
 
@@ -225,6 +247,8 @@ Jenkins 관리 ▷ 플러그인 관리 ▷ 고급 탭 ▷ 플러그인 올리기
 
 ![[그림 3] 설치된 플러그인 목록](http://images.toast.co.kr/toast/deploy/guide/15_0_0_3.png)
 <center>[그림 3] 설치된 플러그인 목록</center>
+
+<a id="server"></a>
 
 #### 서버(server) 타입 어플리케이션 업로드 테스크 설정
 
@@ -300,6 +324,8 @@ Finished: SUCCESS
 
 artifact id, app key 등 사용자 입력정보가 출력되고, 압축파일에 포함된 파일 내용을 출력합니다.
 
+<a id="client"></a>
+
 #### 클라이언트(client) 타입 어플리케이션 플러그인 설정
 
 클라이언트 타입 어플리케이션 업로드 테스크는 성공적으로 빌드된 결과물 중 사용자가 지정한 특정 바이너리를 TCD 서버로 업로드 해줍니다.
@@ -346,9 +372,13 @@ Finished: SUCCESS
 
 artifact id, app key 등 사용자 입력정보가 출력되고, 업로드할 바이너리 및 메타파일이 출력됩니다.
 
+<a id="jenkins-cli-build-profile"></a>
+
 ## Jenkins-cli Build Profile
 
 사용자가 jenkins-cli를 사용하여 빌드 명령 수행에 도움을 주는 사전에 정의된 Profile입니다.
+
+<a id="jenkins-cli-build-profile-1"></a>
 
 #### 준비사항
 
@@ -370,6 +400,8 @@ artifact id, app key 등 사용자 입력정보가 출력되고, 업로드할 �
     예) jenkins를 RPM으로 설치했을 경우.  
     /etc/sysconfig/jenkins의 JENKINS_JAVA_OPTIONS에  
     -Dhudson.diyChunking=false 옵션 추가.  
+
+<a id="profile"></a>
 
 #### Profile 설정
 
@@ -394,15 +426,21 @@ artifact id, app key 등 사용자 입력정보가 출력되고, 업로드할 �
     jenkins 서버의 문자집합을 입력합니다.  
     아무값도 입력하지 않을 경우 기본값 utf-8  
 
+<a id="binary-upload-api"></a>
+
 ## Binary Upload API
 
 사용자가 HTTP Request를 직접 구성하여 바이너리를 업로드 할 수 있는 API를 제공합니다.
+
+<a id="binary-upload-api-1"></a>
 
 #### 준비사항.
 
 |Http Method|	POST|
 |---|---|
 |Request URL| https://api-deploy.cloud.toast.com/api/binary/upload/artifact/{artifactId}|
+
+<a id="parameter"></a>
 
 #### Parameter
 
@@ -416,6 +454,8 @@ artifact id, app key 등 사용자 입력정보가 출력되고, 업로드할 �
 |osType|	String|	applicationType이 client인 경우 바이너리 파일의 os 정보|	iOS 또는 Android 또는 etc|	false|
 |binaryFile|	File|	바이너리 파일 객체|-|		true|
 |metaFile|	File|	iOS인 경우 plist 파일 객체|-|		false|
+
+<a id="sample-request-code-for-java"></a>
 
 #### Sample Request Code For JAVA
 
@@ -472,12 +512,16 @@ try {
 }
 ```
 
+<a id="responsejson"></a>
+
 #### Response(json)
 
 |Name|	Type|	Description|	Value|
 |---|---|---|---|
 |isSuccess|	boolean|	업로드 결과|	true 또는 false|
 |result|	String|	업로드 결과 메세지|	isSuccess : true <br/> - 업로드된 바이너리의 키정보 <br/> isSuccess : false <br/> - INAVLID_INFORMATION : 잘못된 파라미터 정보 <br/> - BINARY_UPLOAD_ERROR : 바이너리 업로드 중 오류 발생  <br/> - ALREADY_UPLOADED_VERSION : 바이너리 버전충돌 <br/>|
+
+<a id="response-sample"></a>
 
 #### Response Sample
 
