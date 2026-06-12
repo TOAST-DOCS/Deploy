@@ -6,7 +6,11 @@
 * [NHN Cloud Agent使用のための準備](/Dev%20Tools/Deploy/ja/setup-guide/#nhn-cloud-agent)
 * [SSH接続のための準備](/Dev%20Tools/Deploy/ja/setup-guide/#ssh)
 
+<a id="pre-requisites-before-using-the-service"></a>
+
 ## サービス使用前の必須事項
+
+<a id="nhn-cloud-vm-server"></a>
 
 ### NHN Cloud VMサーバー
 ![SSH接続必須](https://kr1-api-object-storage.nhncloudservice.com/v1/AUTH_2acdfabf4efe4efc8a04c00b348110c9/cdn_origin/prod_tcdeploy/deploy_19_202307.png)
@@ -15,6 +19,8 @@
 > SSH接続の場合ターゲットサーバーのIP、ポート、ファイアウォール例外処理などの[SSH接続のための準備](/Dev%20Tools/Deploy/ja/setup-guide/#ssh)が必要です。
 > NHN Cloud Agentの場合NHN Cloud Agentインストール、有効性確認などの[NHN Cloud Agentを使用するための準備](/Dev%20Tools/Deploy/ja/setup-guide/#nhn-cloud-agent)が必要です。
 
+<a id="servers-other-than-nhn-cloud-vm"></a>
+
 ### NHN Cloud VM以外のサーバー
 ![SSH接続必須](https://kr1-api-object-storage.nhncloudservice.com/v1/AUTH_2acdfabf4efe4efc8a04c00b348110c9/cdn_origin/prod_tcdeploy/deploy_20_202307.png)
 
@@ -22,7 +28,11 @@
 > デプロイ前にデプロイターゲットサーバーとSSHで接続する必要があるため、
 > ターゲットサーバーのIP、ポート、ファイアウォール例外処理などの[SSH接続のための準備](/Dev%20Tools/Deploy/ja/setup-guide/#ssh)が必要です。
 
+<a id="prepare-to-use-nhn-cloud-agent"></a>
+
 ## NHN Cloud Agentを使用するための準備
+
+<a id="install-nhn-cloud-agent-by-operating-system"></a>
 
 ### OS別NHN Cloud Agentのインストール
 * NHN Cloud Agentでデプロイコマンドを伝達するにはNHN Cloud Agentをインストールする必要があります。
@@ -30,17 +40,23 @@
   ![ユーザースクリプト](https://kr1-api-object-storage.nhncloudservice.com/v1/AUTH_2acdfabf4efe4efc8a04c00b348110c9/cdn_origin/prod_tcdeploy/deploy_21_202307.png)
 * **追加設定** > **ユーザースクリプト**が使用できない場合は、直接インスタンスに接続してインストールスクリプトを実行します。
 
+<a id="linux-installation-script"></a>
+
 #### Linuxインストールスクリプト
 ```
 #!/bin/bash
 curl 'https://kr1-api-object-storage.nhncloudservice.com/v1/AUTH_2acdfabf4efe4efc8a04c00b348110c9/cdn_origin/prod_tcdeploy/qemu/cloud_agent_install_linux_1.0.0.sh' | sudo bash
 ```
 
+<a id="windows-installation-scripts"></a>
+
 #### Windowsインストールスクリプト
 ```
 #ps1_sysnative
 Invoke-WebRequest -UseBasicParsing 'https://kr1-api-object-storage.nhncloudservice.com/v1/AUTH_2acdfabf4efe4efc8a04c00b348110c9/cdn_origin/prod_tcdeploy/qemu/cloud_agent_install_windows_1.0.0.ps1' | Invoke-Expression
 ```
+
+<a id="check-the-installation-of-nhn-cloud-agent"></a>
 
 ### NHN Cloud Agentのインストール確認
 * NHN Cloud Deployサービスで作成したインスタンスを追加してサーバーグループを作成します。
@@ -70,11 +86,19 @@ Invoke-WebRequest -UseBasicParsing 'https://kr1-api-object-storage.nhncloudservi
 
 NHN Cloud Agentサービスのインストール及び有効性確認に成功しました。
 
+<a id="prepare-for-an-ssh-connection"></a>
+
 ## SSH接続のための準備
 
+<a id="requirements-for-each-os"></a>
+
 ### OS別要件
+<a id="linux"></a>
+
 #### Linux
 * curl 7.19.7-43バージョン以上
+
+<a id="windows"></a>
 
 #### Windows
 * SSHインストール必要
@@ -82,9 +106,15 @@ NHN Cloud Agentサービスのインストール及び有効性確認に成功�
         * Windows Server 2019を使用する場合、OpenSSHを別途インストールする必要があります
     * SSH Shell: PowerShellを指定
 
+<a id="requirements-for-nhn-cloud-vm-deployment"></a>
+
 ### NHN Cloud VMデプロイ要件
+<a id="assign-public-ip"></a>
+
 #### グローバルIPの付与
 * NHN CloudのVMインスタンスにデプロイするにはVMインスタンス[Floating IP](https://docs.nhncloud.com/ja/Compute/Instance/ja/console-guide/#ip_1)を作成してグローバルIPを付与する必要があります。
+
+<a id="add-security-exceptions"></a>
 
 #### セキュリティ例外追加
 * デプロイするVMインスタンスの[セキュリティグループ](https://docs.nhncloud.com/ja/Compute/Instance/ja/console-guide/#_13)にDeployサービスIP(下記)をSSH Ruleに追加します。
@@ -105,9 +135,15 @@ NHN Cloud Agentサービスのインストール及び有効性確認に成功�
     * ポート: 22を入力します。(SSH Port)
     * 遠隔: CIDRにIPを入力します。帯域を入力することもできます。(例：133.186.185.112/28)
 
+<a id="requirements-for-server-deployment-other-than-nhn-cloud-vm"></a>
+
 ### NHN Cloud VM以外のサーバーのデプロイ要件
+<a id="assign-public-ip-2"></a>
+
 #### グローバルIPの付与
 * SSH接続のためにグローバルIPを付与する必要があります。
+
+<a id="configure-firewalls-and-network-acl"></a>
 
 #### ファイアウォール及びNetwork ACL設定
 * 外部からアクセスできるように、以下のIPに対してネットワークとファイアウォールの例外設定を追加してください。
