@@ -203,7 +203,7 @@ Auto Scaleサービスのインスタンス拡張に応じてデプロイ設定�
 バイナリをアップロードできる方法は2つです。
 
 * APIアップロード
-    * APIアップロードの詳細説明は、[APIガイドのBinary Upload API](/Dev%20Tools/Deploy/ja/api-guide/#binary-upload-api)で確認できます。
+    * APIアップロードの詳細説明は、[APIガイドのBinary Upload API](/Dev%20Tools/Deploy/ja/api-guide-v2.1/#_4)で確認できます。
 * コンソールでアップロード
 
 ![deploy_ref_11_ja_20200527.png](https://static.toastoven.net/prod_tcdeploy/ja/deploy_ref_11_ja_20200527.png)
