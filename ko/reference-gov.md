@@ -300,7 +300,7 @@ Client 바이너리의 All, Fixed, Recent 버전을 원하는 방식으로 배�
 ##### Jenkins-CLI Build
 
 * ver. 2.46 이전/ver. 2.46 이후 버전으로 구분됩니다.
-* Jenkins 빌드 설정에 대한 자세한 설명은 [플러그인 사용 가이드](/Dev%20Tools/Deploy/ko/plugin-guide/)를 참고하시기 바랍니다.
+* Jenkins 빌드 설정에 대한 자세한 설명은 [플러그인 사용 가이드](/Dev%20Tools/Deploy/ko/plugin-guide-gov/)를 참고하시기 바랍니다.
 
 ![deploy_ref_15_2018.png](https://static.toastoven.net/prod_tcdeploy/deploy_ref_15_2018.png)
 

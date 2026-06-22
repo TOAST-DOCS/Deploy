@@ -76,7 +76,7 @@ curl --location 'https://api-tcd.nhncloudservice.com/api/v2.0/projects/{appKey}/
 | Name | Type | Description | Value |
 | ---- | ---- | ----------- | ----- |
 | isSuccessful | Boolean | Whether the deployment execution was successful | true or false |
-| resultCode | String | Deployment execution result message | See [Error Codes](/Dev%20Tools/Deploy/ko/error-code/) |
+| resultCode | String | Deployment execution result message | See [Error Codes](/Dev%20Tools/Deploy/en/error-code/) |
 | deployStatus | String | Deployment status | success, fail, or deploying (when async option is true) |
 | deployResult | List | Deployment result per server | - hostname: Hostname of the deployment target (instance ID)<br>- status: Deployment result<br>- taskResult: Information for each task in the deployment scenario |
 | deployResultLocation | String | Link to the Deploy service project where the deployment was executed | Access the Deploy service project console via this link |
@@ -141,7 +141,7 @@ curl -X GET \
 | Name | Type | Description | Value |
 | ---- | ---- | ----------- | ----- |
 | isSuccessful | Boolean | Whether the request was successful | true or false |
-| resultCode | String | Request result message | See [Error Codes](/Dev%20Tools/Deploy/ko/error-code/) |
+| resultCode | String | Request result message | See [Error Codes](/Dev%20Tools/Deploy/en/error-code/) |
 | artifacts | List | Artifact list | See below |
 
 **artifacts**
@@ -267,7 +267,7 @@ curl -X GET \
 | Name | Type | Description | Value |
 | ---- | ---- | ----------- | ----- |
 | isSuccessful | Boolean | Whether the request was successful | true or false |
-| resultCode | String | Request result message | See [Error Codes](/Dev%20Tools/Deploy/ko/error-code/) |
+| resultCode | String | Request result message | See [Error Codes](/Dev%20Tools/Deploy/en/error-code/) |
 | binaryGroups | List | Binary group list | See below |
 
 **binaryGroups**
@@ -339,7 +339,7 @@ curl -X GET \
 | Name | Type | Description | Value |
 | ---- | ---- | ----------- | ----- |
 | isSuccessful | Boolean | Whether the request was successful | true or false |
-| resultCode | String | Request result message | See [Error Codes](/Dev%20Tools/Deploy/ko/error-code/) |
+| resultCode | String | Request result message | See [Error Codes](/Dev%20Tools/Deploy/en/error-code/) |
 | totalCount | Number | Total count | - |
 | deployHistories | List | Deployment history list | See below |
 
@@ -418,7 +418,7 @@ curl -X GET \
 | Name | Type | Description | Value |
 | ---- | ---- | ----------- | ----- |
 | isSuccessful | Boolean | Whether the request was successful | true or false |
-| resultCode | String | Request result message | See [Error Codes](/Dev%20Tools/Deploy/ko/error-code/) |
+| resultCode | String | Request result message | See [Error Codes](/Dev%20Tools/Deploy/en/error-code/) |
 | totalCount | Number | Total count | - |
 | binaries | List | Binary list | See below |
 
