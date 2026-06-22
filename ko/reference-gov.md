@@ -203,7 +203,7 @@ Auto Scale 서비스의 인스턴스 확장에 따른 배포를 설정할 수 �
 바이너리를 업로드할 수 있는 방법은 두 가지입니다.
 
 * API 업로드
-    * API 업로드에 대한 자세한 설명은 [API 가이드의 Binary Upload API](/Dev%20Tools/Deploy/ko/api-guide-gov/#binary-upload-api)에서 확인하실 수 있습니다.
+    * API 업로드에 대한 자세한 설명은 [API 가이드의 Binary Upload API](/Dev%20Tools/Deploy/ko/api-guide-v2.1-gov/#_4)에서 확인하실 수 있습니다.
 * 콘솔에서 업로드
 
 ![deploy_ref_11_2018.png](https://static.toastoven.net/prod_tcdeploy/deploy_ref_11_2018.png)
@@ -300,7 +300,7 @@ Client 바이너리의 All, Fixed, Recent 버전을 원하는 방식으로 배�
 ##### Jenkins-CLI Build
 
 * ver. 2.46 이전/ver. 2.46 이후 버전으로 구분됩니다.
-* Jenkins 빌드 설정에 대한 자세한 설명은 [플러그인 사용 가이드](/Dev%20Tools/Deploy/ko/plugin-guide/)를 참고하시기 바랍니다.
+* Jenkins 빌드 설정에 대한 자세한 설명은 [플러그인 사용 가이드](/Dev%20Tools/Deploy/ko/plugin-guide-gov/)를 참고하시기 바랍니다.
 
 ![deploy_ref_15_2018.png](https://static.toastoven.net/prod_tcdeploy/deploy_ref_15_2018.png)
 
