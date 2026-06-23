@@ -1,3 +1,5 @@
+<!-- pre-align:aligned sig=e39d02bc3d88 -->
+
 ## Dev Tools > Deploy > 콘솔 사용 가이드
 
 이 문서에서는 다음과 같은 내용을 다룹니다.
@@ -8,15 +10,21 @@
 
 (여기에서 다루지 않는 기능은 [기능 상세 가이드](/Dev%20Tools/Deploy/ko/reference/)에서 확인하실 수 있습니다.)
 
+<a id="deploy-console-page"></a>
+
 ## Deploy 콘솔 화면
 
 다음은 Deploy 서비스 콘솔 화면입니다.
 
 ![deploy_02_201812](https://static.toastoven.net/prod_tcdeploy/deploy_02_201812.png)
 
+<a id="client-application"></a>
+
 ## Client Application
 
 클라이언트 애플리케이션 배포 설정은 크게 아티팩트 설정과 바이너리 업로드 단계를 거칩니다.
+
+<a id="setting-artifacts"></a>
 
 ### 아티팩트 설정
 
@@ -27,7 +35,11 @@
     - 이름(필수), 설명(선택), port(필수)를 입력합니다.
 3. **생성** 버튼을 클릭합니다.
 
+<a id="setting-binaries"></a>
+
 ### 바이너리 설정
+
+<a id="upload"></a>
 
 #### 업로드
 
@@ -46,6 +58,8 @@
     * 버전(선택), 설명(선택) 정보 입력
 4. 입력을 완료하고 **업로드** 버튼을 클릭합니다.
 
+<a id="deploy"></a>
+
 #### 배포
 
 특정 바이너리 다운로드 페이지를 SMS나 E-mail로 전달할 수 있습니다.
@@ -62,9 +76,13 @@
 
 지정한 전송 유형으로 수신자에게 바이너리 다운로드 페이지가 전달됩니다.
 
+<a id="server-application"></a>
+
 ## Server Application
 
 서버 애플리케이션 배포 설정(아티팩트, 서버 그룹, 시나리오), 바이너리 업로드, 배포 단계를 거칩니다.
+
+<a id="setting-artifacts-2"></a>
 
 ### 아티팩트 설정
 
@@ -74,6 +92,8 @@
 2. 아티팩트 유형을 **Server Application**으로 선택합니다.
     - 이름(필수), 설명(선택), port(필수) 항목을 입력합니다.
 3. **아티팩트 생성** 창에서 **생성** 버튼을 클릭합니다.
+
+<a id="setting-server-groups"></a>
 
 ### 서버 그룹 설정
 
@@ -95,6 +115,8 @@
 
 3. 입력을 완료하고 **생성** 버튼을 클릭합니다.
 
+<a id="setting-binary-groups"></a>
+
 ### 바이너리 그룹 설정
 
 배포할 바이너리를 관리할 수 있는 기능입니다.
@@ -112,6 +134,8 @@
         * 최대 개수와 최소 유지 개수는 필수 값이고, 최대 10개까지 설정 가능합니다.
 3. 입력을 완료하고 **생성** 버튼을 클릭합니다.
 
+<a id="create-scenarios"></a>
+
 ### 시나리오 생성
 
 ![deploy_08_201812](https://static.toastoven.net/prod_tcdeploy/deploy_08_201812.png)
@@ -119,6 +143,8 @@
 1. **Deploy** 화면 아래 탭에서 **배포 > 새로 만들기** 버튼을 클릭합니다.
 2. 아래 추가된 시나리오 영역에 시나리오 이름(선택)을 입력합니다.
 3. **생성** 버튼을 클릭합니다.
+
+<a id="add-tasks"></a>
 
 ### 태스크 추가
 
@@ -132,6 +158,8 @@
 더 많은 태스크는 [기능 상세 가이드의 태스크 메뉴](/Dev%20Tools/Deploy/ko/reference/#_25)에서 확인할 수 있습니다.
 
 배포 테스트를 위해 아래 세 개의 태스크를 추가합니다.
+
+<a id="add-user-commands"></a>
 
 #### 1. User Command 추가
 
@@ -152,6 +180,8 @@
         * 실행할 명령문을 입력합니다.
 
 4. 입력이나 변경을 완료한 후 **적용** 버튼을 클릭합니다. 
+
+<a id="add-binary-deploy"></a>
 
 #### 2. Binary Deploy 추가
 
@@ -180,6 +210,8 @@
    * 타겟 디렉토리
        * 바이너리를 배포할 타겟 디렉토리를 지정합니다.
 
+<a id="add-user-commands-2"></a>
+
 #### 3. User Command 추가
 
 ![deploy_11_201812](https://static.toastoven.net/prod_tcdeploy/deploy_11_201812.png)
@@ -193,6 +225,8 @@
     * Command
         * 실행할 명령문을 입력합니다.
 3. 입력이나 변경을 완료한 후 **적용** 버튼을 클릭합니다. 
+
+<a id="execute"></a>
 
 ### 실행
 
