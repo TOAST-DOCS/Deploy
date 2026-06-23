@@ -1,11 +1,19 @@
+<!-- pre-align:aligned sig=886f2d97cf68 -->
+
 ## Dev Tools > Deploy > API v2.0ガイド
 Deployでは、デプロイの実行や情報照会のためのAPIを提供しています。ユーザーがHTTPリクエストを独自に構成して使用できます。
 
+<a id="basic-information"></a>
+
 ### 基本情報
+<a id="endpoint"></a>
+
 #### エンドポイント
 ```text
 https://api-tcd.nhncloudservice.com
 ```
+
+<a id="available-apis"></a>
 
 #### 提供するAPIの種類
 | Method | URI | 説明 |
@@ -17,6 +25,8 @@ https://api-tcd.nhncloudservice.com
 | GET | /api/v2.0/projects/{appKey}/artifacts/{artifactId}/deploy-histories | デプロイ履歴照会API |
 | GET | /api/v2.0/projects/{appKey}/artifacts/{artifactId}/binary-groups/{binaryGroupKey}/binaries | バイナリ一覧照会API |
 
+<a id="api-request-path-variables"></a>
+
 #### APIリクエストパス変数
 | 値 | タイプ | 説明 |
 | --- | --- | --- |
@@ -25,11 +35,15 @@ https://api-tcd.nhncloudservice.com
 | binaryGroupKey | Number | バイナリをアップロードするバイナリグループキー |
 | serverGroupId | Number | デプロイ対象となるサーバーグループID |
 
+<a id="execute-deployment"></a>
+
 ### デプロイ実行
 * デプロイを実行するためのAPIです。
 * アーティファクト `Command Type`がCloud Agentの場合のみデプロイ実行APIを提供します(SSHの場合は提供されません)。
 * v2.0では、Autoscaleサーバーグループにもデプロイを実行できます。
 * デプロイ実行APIはロールベースのアクセス制御(RBAC)を使用します。**Deploy ADMIN**ロールを保有するユーザーのみがデプロイ実行APIを使用できます。
+
+<a id="version-20"></a>
 
 #### Version 2.0
 | Http Method | POST |
@@ -110,8 +124,12 @@ curl --location 'https://api-tcd.nhncloudservice.com/api/v2.0/projects/{appKey}/
 }
 ```
 
+<a id="list-artifacts"></a>
+
 ### アーティファクト一覧の照会
 * プロジェクトのアーティファクト一覧を照会するAPIです。
+
+<a id="version-20-2"></a>
 
 #### Version 2.0
 | Http Method | GET |
@@ -179,8 +197,12 @@ curl -X GET \
 }
 ```
 
+<a id="list-server-groups"></a>
+
 ### サーバーグループ一覧の照会
 * アーティファクトに属するサーバーグループ一覧を照会するAPIです。
+
+<a id="version-20-3"></a>
 
 #### Version 2.0
 | Http Method | GET |
@@ -241,8 +263,12 @@ curl -X GET \
 }
 ```
 
+<a id="list-binary-groups"></a>
+
 ### バイナリグループ一覧の照会
 * アーティファクトに属するバイナリグループ一覧を照会するAPIです。
+
+<a id="version-20-4"></a>
 
 #### Version 2.0
 | Http Method | GET |
@@ -303,9 +329,13 @@ curl -X GET \
 }
 ```
 
+<a id="list-deployment-history"></a>
+
 ### デプロイ履歴の照会
 * アーティファクトのデプロイ履歴を照会するAPIです。
 * 照会期間は最大1年まで指定できます。
+
+<a id="version-20-5"></a>
 
 #### Version 2.0
 | Http Method | GET |
@@ -383,8 +413,12 @@ curl -X GET \
 }
 ```
 
+<a id="list-binaries"></a>
+
 ### バイナリ一覧の照会
 * バイナリグループに属するバイナリ一覧を照会するAPIです。
+
+<a id="version-20-6"></a>
 
 #### Version 2.0
 | Http Method | GET |
