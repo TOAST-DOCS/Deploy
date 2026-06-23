@@ -1,17 +1,27 @@
+<!-- pre-align:aligned sig=ede10b09f2e2 -->
+
 ## Dev Tools > Deploy > API v1.0 Guide
 Deploy provides APIs for binary upload and deployment execution. You can configure and send HTTP requests directly.
 
+<a id="basic-information"></a>
+
 ### Basic Information
+<a id="endpoint"></a>
+
 #### Endpoint
 ```text
 https://api-tcd.nhncloudservice.com
 ```
+
+<a id="types-of-provided-apis"></a>
 
 #### Types of Provided APIs
 | Method | URI | Descriptions |
 | ------ | --- | --- |
 | POST | /api/v1.0/projects/{appKey}/artifacts/{artifactId}/binary-group/{binaryGroupKey} | Binary upload API |
 | POST | /api/v1.0/projects/{appKey}/artifacts/{artifactId}/server-group/{serverGroupId}/scenario/{scenarioId}/deploy | Deployment execution API |
+
+<a id="api-request-path-variables"></a>
 
 #### API request path variables
 | Value | Type | Description |
@@ -22,13 +32,17 @@ https://api-tcd.nhncloudservice.com
 | serverGroupId | Number | Server group ID for the deployment target |
 | scenarioId | Number | The scenario ID to deploy |
 
+<a id="binary-upload"></a>
+
 ### Binary Upload
+<a id="version-10"></a>
+
 #### Version 1.0
 | Http Method | POST |
 | ----------- | ---- |
 | Request URL | https://api-tcd.nhncloudservice.com/api/v1.0/projects/{appKey}/artifacts/{artifactId}/binary-group/{binaryGroupKey} |
 
-#### Parameter
+##### Parameter
 | Name | Type | Description | Value | Required |
 | ---- | ---- | ----------- | ----- | -------- |
 | applicationType | String | Type of an artifact | client or server | true |
@@ -49,7 +63,7 @@ curl -X POST \
   -F 'description=A binary file of some kind'
 ```
 
-#### Sample Request For JAVA
+##### Sample Request For JAVA
 Below is an example of uploading binaries with API by using HttpClient library (httpclient 4.3.6). 
 
 ``` java
@@ -127,6 +141,8 @@ try {
 	}
 }
 ```
+
+<a id="previous-version"></a>
 
 #### Previous Version 
 | Http Method | POST |
@@ -214,10 +230,14 @@ try {
 }
 ```
 
+<a id="run-deployment"></a>
+
 ### Run Deployment
 * API for running deployments.
 * The artifact `Command Type`provides a deployment execution API only for Cloud Agent (not for SSH).
 * The deployment execution API uses role-based access control (RBAC). Only users with the Deploy ADMIN role can use the deployment execution API.
+
+<a id="version-10-2"></a>
 
 #### Version 1.0
 | Http Method | POST |
