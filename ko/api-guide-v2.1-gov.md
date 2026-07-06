@@ -31,6 +31,7 @@ Deploy API는 역할 기반 접근 제어(RBAC)를 사용합니다.<br>
 | GET | /api/v2.1/projects/{appKey}/artifacts/{artifactId}/binary-groups | 바이너리 그룹 목록 조회 API |
 | GET | /api/v2.1/projects/{appKey}/artifacts/{artifactId}/deploy-histories | 배포 이력 조회 API |
 | GET | /api/v2.1/projects/{appKey}/artifacts/{artifactId}/binary-groups/{binaryGroupKey}/binaries | 바이너리 목록 조회 API |
+| GET | /api/v2.1/projects/{appKey}/artifacts/{artifactId}/server-groups/{serverGroupId}/scenarios | 시나리오 목록 조회 API |
 
 #### API 요청 경로 변수
 | 값 | 타입 | 설명 |
@@ -497,6 +498,55 @@ curl -X GET \
                 "uploadDate": "2025-03-01T12:00:00+09:00",
                 "uploader": "user@example.com",
                 "description": "릴리즈 바이너리"
+            }
+        ]
+    }
+}
+```
+
+### 시나리오 목록 조회
+* 서버 그룹에 매핑된 시나리오 목록을 조회하는 API입니다.
+
+#### Version 2.1
+| Http Method | GET |
+| ----------- | ---- |
+| Request URL | https://api-tcd.gov-nhncloudservice.com/api/v2.1/projects/{appKey}/artifacts/{artifactId}/server-groups/{serverGroupId}/scenarios |
+
+##### Sample Request For cURL
+``` java
+curl -X GET \
+  'https://api-tcd.gov-nhncloudservice.com/api/v2.1/projects/{appKey}/artifacts/{artifactId}/server-groups/{serverGroupId}/scenarios' \
+  -H 'X-NHN-AUTHORIZATION: Bearer {token}'
+```
+
+##### Response(json)
+| Name | Type | Description | Value |
+| ---- | ---- | ----------- | ----- |
+| isSuccessful | Boolean | 요청 성공 여부 | true 또는 false |
+| resultCode | String | 요청 결과 메시지 | [오류 코드](/Dev%20Tools/Deploy/ko/error-code/) 참고 |
+| scenarios | List | 시나리오 목록 | 아래 항목 참고 |
+
+**scenarios**
+
+| Name | Type | Description |
+| ---- | ---- | ----------- |
+| scenarioId | Number | 시나리오 ID |
+| scenarioName | String | 시나리오 이름 |
+
+##### Response Sample
+``` json
+{
+    "header": {
+        "isSuccessful": true,
+        "serverTime": 1707278725614,
+        "resultCode": "SUCCESS",
+        "resultMessage": "success"
+    },
+    "body": {
+        "scenarios": [
+            {
+                "scenarioId": 1,
+                "scenarioName": "배포 시나리오"
             }
         ]
     }
