@@ -1,3 +1,5 @@
+<!-- pre-align:aligned sig=ab0387a78c99 -->
+
 ## Dev Tools > Deploy > コンソール使用ガイド
 
 この文書では、次のような内容を扱います。
@@ -9,59 +11,7 @@
 
 (ここで扱わない機能は、[機能詳細ガイド](/Dev%20Tools/Deploy/ja/reference/)で確認できます。)
 
-## サービスの利用にあたってのシステム要件
-
-![SSH接続必須](http://static.toastoven.net/prod_tcdeploy/getstarted/console_ssh_required.png)
-
-
-> NHN Cloud Deployは、SSH接続でサーバーのデプロイコマンドを伝達します。 
-> デプロイ前のデプロイ先ターゲットサーバーとSSHで接続する必要があるため
-> ターゲットサーバーのIP、ポート、ファイアウォールでのアクセス元の許可などのSSH接続のための準備が必要です。
-
-
-### OS別要件
-#### Linux
-* curl 7.19.7-43バージョン以上
-
-#### Windows
-* SSHインストール必要
-    * OpenSSH_for_Windows_8.6p1、LibreSSL 3.3.3バージョン以上
-         * Windows Server 2019使用時、OpenSSHを別途インストール必要
-    * SSH Shell: PowerShell指定
-
-### NHN Cloudインスタンスへデプロイするのための要件
-#### グローバルIPの付与
-* NHN Cloudのインスタンスにデプロイするには、インスタンスに[Floating IP](https://docs.toast.com/ja/Compute/Instance/ja/console-guide/#ip_1)接続して、グローバルIPを付与する必要があります。
-
-#### セキュリティー例外の追加
-* デプロイするインスタンスの[セキュリティーグループ](https://docs.toast.com/ja/Compute/Instance/ja/console-guide/#_13)に、DeployサービスのIP(下記)をSSH のアクセスルール行に追加します。
-```
-133.186.185.112/28
-117.52.123.201/32
-117.52.123.202/32
-```
-##### 参考)セキュリティー例外追加方法
-
-![deploy_01_201812](https://static.toastoven.net/prod_tcdeploy/ja/deploy_01_ja_20200519.png)
-
-1. NHN Cloudコンソールの**Compute**サービスの中から**Instance**を選択します。
-2. 対象のインスタンスに設定されているセキュリティグループを選択するか、**+ セキュリティグループの作成**　をクリックして新規セキュリティグループを作成します。
-3. **+ セキュリティポリシー作成**　をクリックします。 
-    * IPプロトコル　SSH を選択します。
-    * CIDRにIPを入力します。
-    * 帯域を入力することもできます(例：133.186.185.112/28)。
-
-### NHN Cloudインスタンス以外のサーバーデプロイ要求事項
-#### グローバルIP付与
-* SSH接続のためにグローバルIPを付与する必要があります。
-
-#### ファイアウォールおよびNetwork ACL設定
-* 外部からアクセスできるように、下記IPに対してネットワークとファイアウォール例外設定を追加してください。
-```
-133.186.185.112/28
-117.52.123.201/32
-117.52.123.202/32
-```
+<a id="deploy-console-page"></a>
 
 ## Deployコンソール画面
 
@@ -69,9 +19,13 @@
 
 ![deploy_02_ja_20200519](https://static.toastoven.net/prod_tcdeploy/ja/deploy_02_ja_20200519.png)
 
+<a id="client-application"></a>
+
 ## Client Application
 
 クライアントアプリケーションデプロイ設定は、大きく分けてアーティファクト設定、その後、バイナリアップロードの順に行います。
+
+<a id="setting-artifacts"></a>
 
 ### アーティファクト設定
 
@@ -82,7 +36,11 @@
     - 名前(必須)、説明(任意)、port(必須)を入力します。
 3. **作成**ボタンをクリックします。
 
+<a id="setting-binaries"></a>
+
 ### バイナリ設定
+
+<a id="upload"></a>
 
 #### アップロード
 
@@ -101,6 +59,8 @@
     * バージョン(任意)、説明(任意)情報入力
 4. 入力完了後、**アップロード**ボタンをクリックします。
 
+<a id="deploy"></a>
+
 #### デプロイ
 
 特定バイナリのダウンロードページをSMSやE-mailで通知できます。
@@ -117,9 +77,13 @@
 
 指定した転送手段で、受信者にバイナリダウンロードページが通達されます。
 
+<a id="server-application"></a>
+
 ## Server Application
 
 サーバーアプリケーションのデプロイは、基本設定（アーティファクト、サーバーグループ、シナリオ）、バイナリアップロード、デプロイの順に進めます。
+
+<a id="server-application-setting-artifacts"></a>
 
 ### アーティファクト設定
 
@@ -129,6 +93,8 @@
 2. アーティファクトタイプは**Server Application**を選択します。
     - 名前(必須)、説明(任意)、port(必須)項目を入力します。
 3. **アーティファクト作成**ウィンドウで**作成**ボタンをクリックします。
+
+<a id="setting-server-groups"></a>
 
 ### サーバーグループ設定
 
@@ -150,6 +116,8 @@
 
 3. 入力完了後、**生成**ボタンをクリックします。
 
+<a id="setting-binary-groups"></a>
+
 ### バイナリグループ設定
 
 デプロイするバイナリを管理できる機能です。
@@ -167,6 +135,8 @@
         * 最大個数と最小維持個数は必須値で、最大10個まで設定可能です。
 3. 入力を完了し、**作成**ボタンをクリックします。
 
+<a id="create-scenarios"></a>
+
 ### シナリオ作成
 
 ![deploy_08_ja_20200519](https://static.toastoven.net/prod_tcdeploy/ja/deploy_08_ja_20200519.png)
@@ -174,6 +144,8 @@
 1. **Deploy**画面の下にあるタブで、**デプロイ > 新規作成**ボタンをクリックします。
 2. 下に追加されたシナリオ領域にシナリオ名(任意)を入力します。
 3. **作成**ボタンをクリックします。
+
+<a id="add-tasks"></a>
 
 ### タスク追加
 
@@ -187,6 +159,8 @@
 その他のタスクは[機能詳細ガイドのタスクメニュー](/Dev%20Tools/Deploy/ja/reference/#_25)で確認できます。
 
 デプロイテストのために、下記の3つのタスクを追加します。
+
+<a id="add-user-commands"></a>
 
 #### 1. User Command追加
 
@@ -207,6 +181,8 @@
         * 実行するコマンド文を入力します。
 
 4. 入力/変更完了後、**適用**ボタンをクリックします。 
+
+<a id="add-binary-deploy"></a>
 
 #### 2. Binary Deploy追加
 
@@ -235,6 +211,8 @@
    * ターゲットディレクトリ
        * バイナリをデプロイするターゲットディレクトリを指定します。
 
+<a id="add-tasks-add-user-commands"></a>
+
 #### 3. User Command追加
 
 ![deploy_11_ja_20200519](https://static.toastoven.net/prod_tcdeploy/ja/deploy_11_ja_20200519.png)
@@ -248,6 +226,8 @@
     * Command
         * 実行するコマンド文を入力します。
 3. 入力/変更完了後に**適用**ボタンをクリックします。 
+
+<a id="execute"></a>
 
 ### 実行
 

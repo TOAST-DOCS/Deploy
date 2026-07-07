@@ -1,3 +1,5 @@
+<!-- pre-align:aligned sig=7ca503817bac -->
+
 ## Dev Tools > Deploy > 개요
 
 Deploy 서비스를 사용하면 '원 클릭'으로 쉽고 빠르게 애플리케이션을 배포할 수 있습니다.
@@ -9,6 +11,8 @@ Deploy 서비스를 사용하면 '원 클릭'으로 쉽고 빠르게 애플리�
 * 이외에도 사용자가 정의한 다양한 파일 
 
 ![01.png](http://static.toastoven.net/prod_tcdeploy/overview/01.png)
+
+<a id="benefits"></a>
 
 ## 장점
 
@@ -23,7 +27,11 @@ Deploy 서비스를 사용하면 '원 클릭'으로 쉽고 빠르게 애플리�
 
 ![02.png](http://static.toastoven.net/prod_tcdeploy/overview/02.png)
 
+<a id="features"></a>
+
 ## 제공 기능
+
+<a id="upload"></a>
 
 ### 업로드
 다양한 업로드 방식을 사용해 쉽게 파일을 업로드할 수 있습니다.
@@ -32,20 +40,32 @@ Deploy 서비스를 사용하면 '원 클릭'으로 쉽고 빠르게 애플리�
     * Jenkins 플러그인
     * REST API
 
+<a id="download"></a>
+
 ### 다운로드
 다운로드 링크 알림 기능을 사용해 편리하게 앱을 설치하고 업데이트할 수 있습니다.
+
+<a id="query-binaries"></a>
 
 ### 바이너리 조회
 과거 바이너리 데이터를 유지해 빠르게 롤백할 수 있습니다.
 
+<a id="manage-deployment-projects"></a>
+
 ### 배포 프로젝트 관리
 프로젝트의 인프라 정보를 연동해 손쉽게 설정할 수 있습니다.
+
+<a id="manage-execute-deployment-scenario"></a>
 
 ### 배포 시나리오(실행) 관리
 사용자 정의 명령어를 사용해 배포 이후 서버 상태를 확인할 수 있습니다.
 
+<a id="manage-deployment-history"></a>
+
 ### 배포 히스토리 관리
 배포 히스토리로 배포 내용 및 이전 바이너리를 관리하므로 대한 안정성 확보할 수 있습니다.
+
+<a id="glossary"></a>
 
 ## 용어 설명
 
