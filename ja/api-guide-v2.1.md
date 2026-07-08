@@ -1,16 +1,26 @@
+<!-- pre-align:aligned sig=28e392d2a044 -->
+
 ## Dev Tools > Deploy > API v2.1 ガイド
 Deployでは、バイナリのアップロード、バイナリのダウンロード、デプロイの実行、情報の照会を行うためのAPIを提供しています。ユーザーがHTTPリクエストを独自に構成して使用できます。
 
+<a id="basic-information"></a>
+
 ### 基本情報
+<a id="endpoint"></a>
+
 #### エンドポイント
 ```text
 https://api-tcd.nhncloudservice.com
 ```
 
+<a id="api-request-http-header"></a>
+
 #### APIリクエスト HTTPヘッダ
 ```
 X-NHN-AUTHORIZATION: Bearer {発行されたトークン}
 ```
+
+<a id="authentication-and-authorization"></a>
 
 #### 認証及び権限
 Deployは、API呼び出し時の認証・認可にUser Access Keyトークンを使用します。
@@ -19,6 +29,8 @@ User Access Keyトークンの発行及び使用方法に関する詳細は、[U
 
 Deploy APIは、ロールベースのアクセス制御(RBAC)を使用します。<br>
 ユーザーは、APIを使用するために**Deploy ADMINロール**または**Deploy VIEWERロール**を保有している必要があります。
+
+<a id="available-apis"></a>
 
 #### 提供するAPIの種類
 | メソッド | URI | 説明 |
@@ -32,6 +44,8 @@ Deploy APIは、ロールベースのアクセス制御(RBAC)を使用します�
 | GET | /api/v2.1/projects/{appKey}/artifacts/{artifactId}/deploy-histories | デプロイ履歴照会API |
 | GET | /api/v2.1/projects/{appKey}/artifacts/{artifactId}/binary-groups/{binaryGroupKey}/binaries | バイナリ一覧照会API |
 
+<a id="api-request-path-variables"></a>
+
 #### APIリクエストのパス変数
 | 値 | タイプ | 説明 |
 | --- | --- | --- |
@@ -41,7 +55,11 @@ Deploy APIは、ロールベースのアクセス制御(RBAC)を使用します�
 | binaryKey | Number | バイナリキー(アップロード時に発行) |
 | serverGroupId | Number | デプロイ対象となるサーバーグループのID |
 
+<a id="upload-binary"></a>
+
 ### バイナリのアップロード
+<a id="version-21"></a>
+
 #### Version 2.1
 | Http Method | POST |
 | ----------- | ---- |
@@ -92,8 +110,12 @@ curl -X POST \
 }
 ```
 
+<a id="download-binary"></a>
+
 ### バイナリのダウンロード
 バイナリアップロードAPIのレスポンスとして受信したダウンロードパスから、バイナリファイルをダウンロードできます。
+
+<a id="download-binary-version-21"></a>
 
 #### Version 2.1
 | Http Method | GET |
@@ -112,10 +134,14 @@ curl -X GET \
 * バイナリファイルをダウンロードします。
 * Content-Type: `application/octet-stream`
 
+<a id="execute-deployment"></a>
+
 ### デプロイの実行
 * デプロイ実行用のAPIです。
 * アーティファクトの`Command Type`がCloud Agentの場合にのみ、デプロイ実行APIが提供されます(SSHの場合は提供されません)。
 * v2.1では、Auto Scaleサーバーグループにもデプロイを実行できます。
+
+<a id="execute-deployment-version-21"></a>
 
 #### Version 2.1
 | Http Method | POST |
@@ -188,8 +214,12 @@ curl --location 'https://api-tcd.nhncloudservice.com/api/v2.1/projects/{appKey}/
 }
 ```
 
+<a id="list-artifacts"></a>
+
 ### アーティファクト一覧の照会
 * プロジェクトのアーティファクト一覧を照会するAPIです。
+
+<a id="list-artifacts-version-21"></a>
 
 #### Version 2.1
 | Http Method | GET |
@@ -250,8 +280,12 @@ curl -X GET \
 }
 ```
 
+<a id="list-server-groups"></a>
+
 ### サーバーグループ一覧の照会
 * アーティファクトに属するサーバーグループ一覧を照会するAPIです。
+
+<a id="list-server-groups-version-21"></a>
 
 #### Version 2.1
 | Http Method | GET |
@@ -305,8 +339,12 @@ curl -X GET \
 }
 ```
 
+<a id="list-binary-groups"></a>
+
 ### バイナリグループ一覧の照会
 * アーティファクトに属するバイナリグループ一覧を照会するAPIです。
+
+<a id="list-binary-groups-version-21"></a>
 
 #### Version 2.1
 | Http Method | GET |
@@ -360,9 +398,13 @@ curl -X GET \
 }
 ```
 
+<a id="list-deployment-history"></a>
+
 ### デプロイ履歴の照会
 * アーティファクトのデプロイ履歴を照会するAPIです。
 * 照会期間は最大1年まで指定できます。
+
+<a id="list-deployment-history-version-21"></a>
 
 #### Version 2.1
 | Http Method | GET |
@@ -433,8 +475,12 @@ curl -X GET \
 }
 ```
 
+<a id="list-binaries"></a>
+
 ### バイナリ一覧の照会
 * バイナリグループに属するバイナリ一覧を照会するAPIです。
+
+<a id="list-binaries-version-21"></a>
 
 #### Version 2.1
 | Http Method | GET |
