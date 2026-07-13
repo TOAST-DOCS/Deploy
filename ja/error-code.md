@@ -1,4 +1,8 @@
+<!-- pre-align:aligned sig=4796603beb3a -->
+
 ## Dev Tools > Deploy > Error Code
+
+<a id="ver-10"></a>
 
 ## Ver 1.0
 
@@ -23,6 +27,8 @@
 | PERMISSION_DENIED | Permission denied |
 | ERROR_INVALID_APP_KEY | Invalid AppKey |
 | FAIL | fail |
+
+<a id="previous-version"></a>
 
 ## 以前のバージョン
 
