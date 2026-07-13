@@ -4,7 +4,7 @@
 
 <a id="april-14-2026"></a>
 
-### April 14, 2026
+### April 14, 2026 { #april-14-2026 }
 <a id="added-features"></a>
 
 #### Added Features
@@ -15,7 +15,7 @@
 
 <a id="april-29-2025"></a>
 
-### April 29, 2025
+### April 29, 2025 { #april-29-2025 }
 <a id="april-29-2025-added-features"></a>
 
 #### Added Features
@@ -30,7 +30,7 @@
 
 <a id="march-25-2025"></a>
 
-### March 25, 2025
+### March 25, 2025 { #march-25-2025 }
 <a id="march-25-2025-feature-updates"></a>
 
 #### Feature Updates
@@ -38,7 +38,7 @@
 
 <a id="january-21-2025"></a>
 
-### January 21, 2025
+### January 21, 2025 { #january-21-2025 }
 <a id="bug-fixes"></a>
 
 #### Bug Fixes
@@ -47,7 +47,7 @@
 
 <a id="november-26-2024"></a>
 
-### November 26, 2024
+### November 26, 2024 { #november-26-2024 }
 <a id="november-26-2024-feature-updates"></a>
 
 #### Feature Updates
@@ -55,7 +55,7 @@
   
 <a id="september-10-2024"></a>
 
-### September 10, 2024
+### September 10, 2024 { #september-10-2024 }
 <a id="september-10-2024-feature-updates"></a>
 
 #### Feature Updates
@@ -66,7 +66,7 @@
 
 <a id="july-9-2024"></a>
 
-### July 9, 2024
+### July 9, 2024 { #july-9-2024 }
 <a id="july-9-2024-feature-updates"></a>
 
 #### Feature Updates
@@ -77,7 +77,7 @@
 
 <a id="june-11-2024"></a>
 
-### June 11, 2024
+### June 11, 2024 { #june-11-2024 }
 <a id="june-11-2024-bug-fixes"></a>
 
 #### Bug Fixes
@@ -85,7 +85,7 @@
 
 <a id="march-26-2024"></a>
 
-### March 26, 2024
+### March 26, 2024 { #march-26-2024 }
 <a id="march-26-2024-feature-updates"></a>
 
 #### Feature Updates
@@ -94,7 +94,7 @@
 
 <a id="february-27-2024"></a>
 
-### February 27, 2024
+### February 27, 2024 { #february-27-2024 }
 <a id="february-27-2024-feature-updates"></a>
 
 #### Feature Updates
@@ -105,7 +105,7 @@
 
 <a id="january-23-2024"></a>
 
-### January 23, 2024
+### January 23, 2024 { #january-23-2024 }
 <a id="january-23-2024-feature-updates"></a>
 
 #### Feature Updates
@@ -113,7 +113,7 @@
 
 <a id="november-28-2023"></a>
 
-### November 28, 2023
+### November 28, 2023 { #november-28-2023 }
 <a id="november-28-2023-feature-updates"></a>
 
 #### Feature Updates
@@ -127,7 +127,7 @@
 
 <a id="june-27-2023"></a>
 
-### June 27, 2023
+### June 27, 2023 { #june-27-2023 }
 <a id="june-27-2023-bug-fixes"></a>
 
 #### Bug Fixes
@@ -135,7 +135,7 @@
 
 <a id="may-30-2023"></a>
 
-### May 30, 2023
+### May 30, 2023 { #may-30-2023 }
 <a id="may-30-2023-feature-updates"></a>
 
 #### Feature Updates
@@ -144,7 +144,7 @@
 
 <a id="april-25-2023"></a>
 
-### April 25, 2023
+### April 25, 2023 { #april-25-2023 }
 <a id="april-25-2023-bug-fixes"></a>
 
 #### Bug Fixes
@@ -153,7 +153,7 @@
 
 <a id="december-27-2022"></a>
 
-### December 27, 2022
+### December 27, 2022 { #december-27-2022 }
 <a id="december-27-2022-feature-updates"></a>
 
 #### Feature Updates
@@ -161,7 +161,7 @@
 
 <a id="october-25-2022"></a>
 
-### October 25, 2022
+### October 25, 2022 { #october-25-2022 }
 <a id="october-25-2022-feature-updates"></a>
 
 #### Feature Updates
@@ -170,7 +170,7 @@
 
 <a id="october-04-2022"></a>
 
-### October 04, 2022
+### October 04, 2022 { #october-04-2022 }
 <a id="october-04-2022-feature-updates"></a>
 
 #### Feature Updates
@@ -185,12 +185,12 @@
 
 <a id="august-23-2022"></a>
 
-### August 23, 2022
+### August 23, 2022 { #august-23-2022 }
 * Changed the API endpoint's domain from api-tcd.cloud.toast.com to api-tcd.nhncloudservice.com.
 
 <a id="july-26-2022"></a>
 
-### July 26, 2022
+### July 26, 2022 { #july-26-2022 }
 <a id="july-26-2022-feature-updates"></a>
 
 #### Feature Updates
@@ -202,7 +202,7 @@
 
 <a id="april-26-2022"></a>
 
-### April 26, 2022
+### April 26, 2022 { #april-26-2022 }
 <a id="april-26-2022-feature-updates"></a>
 
 #### Feature Updates
@@ -215,7 +215,7 @@
 
 <a id="march-29-2022"></a>
 
-### March 29, 2022
+### March 29, 2022 { #march-29-2022 }
 <a id="march-29-2022-feature-updates"></a>
 
 #### Feature Updates
@@ -223,7 +223,7 @@
 
 <a id="january-25-2022"></a>
 
-### January 25, 2022
+### January 25, 2022 { #january-25-2022 }
 <a id="january-25-2022-feature-updates"></a>
 
 #### Feature Updates
@@ -232,7 +232,7 @@
 
 <a id="december-28-2021"></a>
 
-### December 28, 2021
+### December 28, 2021 { #december-28-2021 }
 <a id="december-28-2021-bug-fixes"></a>
 
 #### Bug Fixes
@@ -240,7 +240,7 @@
 
 <a id="october-26-2021"></a>
 
-### October 26, 2021
+### October 26, 2021 { #october-26-2021 }
 <a id="october-26-2021-bug-fixes"></a>
 
 #### Bug Fixes
@@ -248,7 +248,7 @@
 
 <a id="july-27-2021"></a>
 
-### July 27, 2021
+### July 27, 2021 { #july-27-2021 }
 <a id="july-27-2021-feature-updates"></a>
 
 #### Feature Updates
@@ -261,7 +261,7 @@
 
 <a id="june-29-2021"></a>
 
-### June 29, 2021
+### June 29, 2021 { #june-29-2021 }
 <a id="june-29-2021-feature-updates"></a>
 
 #### Feature Updates
@@ -273,7 +273,7 @@
 
 <a id="march-23-2021"></a>
 
-### March 23, 2021
+### March 23, 2021 { #march-23-2021 }
 <a id="march-23-2021-bug-fixes"></a>
 
 #### Bug Fixes
@@ -281,7 +281,7 @@
 
 <a id="february-23-2021"></a>
 
-### February 23, 2021
+### February 23, 2021 { #february-23-2021 }
 <a id="february-23-2021-feature-updates"></a>
 
 #### Feature Updates
@@ -293,7 +293,7 @@
 
 <a id="january-26-2021"></a>
 
-### January 26, 2021
+### January 26, 2021 { #january-26-2021 }
 <a id="january-26-2021-bug-fixes"></a>
 
 #### Bug Fixes
@@ -301,7 +301,7 @@
 
 <a id="november-24-2020"></a>
 
-### November 24, 2020
+### November 24, 2020 { #november-24-2020 }
 <a id="november-24-2020-feature-updates"></a>
 
 #### Feature Updates
@@ -313,7 +313,7 @@
 
 <a id="august-25-2020"></a>
 
-### August 25, 2020
+### August 25, 2020 { #august-25-2020 }
 <a id="august-25-2020-feature-updates"></a>
 
 #### Feature Updates
@@ -322,7 +322,7 @@
 
 <a id="april-28-2020"></a>
 
-### April 28, 2020
+### April 28, 2020 { #april-28-2020 }
 <a id="april-28-2020-feature-updates"></a>
 
 #### Feature Updates
@@ -330,7 +330,7 @@
 
 <a id="march-24-2020"></a>
 
-### March 24, 2020
+### March 24, 2020 { #march-24-2020 }
 <a id="march-24-2020-feature-updates"></a>
 
 #### Feature Updates
@@ -339,7 +339,7 @@
 
 <a id="february-25-2020"></a>
 
-### February 25, 2020
+### February 25, 2020 { #february-25-2020 }
 <a id="february-25-2020-feature-updates"></a>
 
 #### Feature Updates
@@ -354,7 +354,7 @@
 
 <a id="december-24-2019"></a>
 
-### December 24, 2019
+### December 24, 2019 { #december-24-2019 }
 <a id="december-24-2019-feature-updates"></a>
 
 #### Feature Updates
@@ -365,7 +365,7 @@
 
 <a id="september-24-2019"></a>
 
-### September 24, 2019
+### September 24, 2019 { #september-24-2019 }
 <a id="september-24-2019-feature-updates"></a>
 
 #### Feature Updates
@@ -373,7 +373,7 @@
 
 <a id="july-23-2019"></a>
 
-### July 23, 2019
+### July 23, 2019 { #july-23-2019 }
 <a id="july-23-2019-feature-updates"></a>
 
 #### Feature Updates
@@ -385,7 +385,7 @@
 
 <a id="june-25-2019"></a>
 
-### June 25, 2019
+### June 25, 2019 { #june-25-2019 }
 <a id="june-25-2019-bug-fixes"></a>
 
 #### Bug Fixes
@@ -394,7 +394,7 @@
 
 <a id="may-28-2019"></a>
 
-### May 28, 2019
+### May 28, 2019 { #may-28-2019 }
 <a id="may-28-2019-feature-updates"></a>
 
 #### Feature Updates
@@ -407,7 +407,7 @@
 
 <a id="april-23-2019"></a>
 
-### April 23, 2019
+### April 23, 2019 { #april-23-2019 }
 <a id="april-23-2019-feature-updates"></a>
 
 #### Feature Updates
@@ -420,7 +420,7 @@
 
 <a id="march-26-2019"></a>
 
-### March 26, 2019
+### March 26, 2019 { #march-26-2019 }
 <a id="features-updates"></a>
 
 #### Features Updates
@@ -428,7 +428,7 @@
 
 <a id="february-26-2019"></a>
 
-### February 26, 2019
+### February 26, 2019 { #february-26-2019 }
 <a id="february-26-2019-feature-updates"></a>
 
 #### Feature Updates
@@ -446,7 +446,7 @@
 
 <a id="january-15-2019"></a>
 
-### January 15, 2019
+### January 15, 2019 { #january-15-2019 }
 <a id="january-15-2019-feature-updates"></a>
 
 #### Feature Updates
@@ -454,7 +454,7 @@
 
 <a id="october-23-2018"></a>
 
-### October 23, 2018
+### October 23, 2018 { #october-23-2018 }
 <a id="october-23-2018-added-features"></a>
 
 #### Added Features
@@ -467,7 +467,7 @@
 
 <a id="august-28-2018"></a>
 
-### August 28, 2018
+### August 28, 2018 { #august-28-2018 }
 <a id="august-28-2018-added-features"></a>
 
 #### Added Features
@@ -490,7 +490,7 @@
 
 <a id="july-24-2018"></a>
 
-### July 24, 2018
+### July 24, 2018 { #july-24-2018 }
 <a id="july-24-2018-added-features"></a>
 
 #### Added Features
@@ -502,7 +502,7 @@
 
 <a id="april-24-2018"></a>
 
-### April 24, 2018
+### April 24, 2018 { #april-24-2018 }
 <a id="april-24-2018-added-features"></a>
 
 #### Added Features
@@ -511,7 +511,7 @@
 
 <a id="february-22-2018"></a>
 
-### February 22, 2018
+### February 22, 2018 { #february-22-2018 }
 <a id="new-product-release"></a>
 
 #### New product release

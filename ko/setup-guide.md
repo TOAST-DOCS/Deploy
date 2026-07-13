@@ -10,11 +10,11 @@
 
 <a id="pre-requisites-before-using-the-service"></a>
 
-## 서비스 사용 전 필수 사항
+## 서비스 사용 전 필수 사항 { #pre-requisites-before-using-the-service }
 
 <a id="nhn-cloud-vm-server"></a>
 
-### NHN Cloud VM 서버
+### NHN Cloud VM 서버 { #nhn-cloud-vm-server }
 ![SSH연결필수](https://kr1-api-object-storage.nhncloudservice.com/v1/AUTH_2acdfabf4efe4efc8a04c00b348110c9/cdn_origin/prod_tcdeploy/deploy_19_202307.png)
 
 > NHN Cloud VM 서버의 경우 SSH 연결 혹은 NHN Cloud Agent로 서버의 배포 명령을 전달합니다.
@@ -23,7 +23,7 @@
 
 <a id="servers-other-than-nhn-cloud-vm"></a>
 
-### NHN Cloud VM 이외 서버
+### NHN Cloud VM 이외 서버 { #servers-other-than-nhn-cloud-vm }
 ![SSH연결필수](https://kr1-api-object-storage.nhncloudservice.com/v1/AUTH_2acdfabf4efe4efc8a04c00b348110c9/cdn_origin/prod_tcdeploy/deploy_20_202307.png)
 
 > NHN Cloud VM 이외 서버의 경우 SSH 연결로만 서버의 배포 명령을 전달할 수 있습니다.
@@ -32,11 +32,11 @@
 
 <a id="prepare-to-use-nhn-cloud-agent"></a>
 
-## NHN Cloud Agent 사용을 위한 준비
+## NHN Cloud Agent 사용을 위한 준비 { #prepare-to-use-nhn-cloud-agent }
 
 <a id="install-nhn-cloud-agent-by-operating-system"></a>
 
-### 운영체제별 NHN Cloud Agent 설치
+### 운영체제별 NHN Cloud Agent 설치 { #install-nhn-cloud-agent-by-operating-system }
 * NHN Cloud Agent로 배포 명령을 전달하려면 NHN Cloud Agent를 설치해야 합니다.
 * NHN Cloud Instance 서비스에서 인스턴스 생성 시 **추가 설정** > **사용자 스크립트**에 아래의 Linux, Windows 운영체제에 맞는 설치 스크립트 내용을 추가하여 설치할 수 있습니다.
   ![사용자 스크립트](https://kr1-api-object-storage.nhncloudservice.com/v1/AUTH_2acdfabf4efe4efc8a04c00b348110c9/cdn_origin/prod_tcdeploy/deploy_21_202307.png)
@@ -60,7 +60,7 @@ Invoke-WebRequest -UseBasicParsing 'https://kr1-api-object-storage.nhncloudservi
 
 <a id="check-the-installation-of-nhn-cloud-agent"></a>
 
-### NHN Cloud Agent 설치 확인
+### NHN Cloud Agent 설치 확인 { #check-the-installation-of-nhn-cloud-agent }
 * NHN Cloud Deploy 서비스에서 생성한 인스턴스를 추가하여 서버 그룹을 생성합니다.
     * 서버 그룹 생성 시 **OS** 및 **Shell Type**을 반드시 확인하십시오. **Shell Type**의 기본값은 /bin/bash(Linux), powershell(Windows)입니다.
 
@@ -90,11 +90,11 @@ NHN Cloud Agent 서비스 설치 및 유효성 확인에 성공했습니다.
 
 <a id="prepare-for-an-ssh-connection"></a>
 
-## SSH 연결을 위한 준비
+## SSH 연결을 위한 준비 { #prepare-for-an-ssh-connection }
 
 <a id="requirements-for-each-os"></a>
 
-### OS별 요구 사항
+### OS별 요구 사항 { #requirements-for-each-os }
 <a id="linux"></a>
 
 #### Linux
@@ -110,7 +110,7 @@ NHN Cloud Agent 서비스 설치 및 유효성 확인에 성공했습니다.
 
 <a id="requirements-for-nhn-cloud-vm-deployment"></a>
 
-### NHN Cloud VM 배포 요구 사항
+### NHN Cloud VM 배포 요구 사항 { #requirements-for-nhn-cloud-vm-deployment }
 <a id="assign-public-ip"></a>
 
 #### 공인 IP 부여
@@ -139,7 +139,7 @@ NHN Cloud Agent 서비스 설치 및 유효성 확인에 성공했습니다.
 
 <a id="requirements-for-server-deployment-other-than-nhn-cloud-vm"></a>
 
-### NHN Cloud VM 이외 서버 배포 요구 사항
+### NHN Cloud VM 이외 서버 배포 요구 사항 { #requirements-for-server-deployment-other-than-nhn-cloud-vm }
 <a id="requirements-for-server-deployment-other-than-nhn-cloud-vm-assign-public-ip"></a>
 
 #### 공인 IP 부여

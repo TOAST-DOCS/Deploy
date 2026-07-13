@@ -11,7 +11,7 @@ This documentation is organized by API version. Please refer to the links below 
 
 <a id="common-information"></a>
 
-### Common Information
+### Common Information { #common-information }
 <a id="how-to-check-values-by-variable"></a>
 
 #### How to check values by variable

@@ -10,7 +10,7 @@ Deploy 상품의 이용은 아래와 같은 과정을 거칩니다.
 
 <a id="section-1"></a>
 
-## 서비스 활성화
+## 서비스 활성화 { #section-1 }
 
 Console에 [Upcoming Products] > [Deploy]를 선택한 후 [상품이용]버튼을 클릭하여 서비스를 활성화합니다.
 
@@ -19,13 +19,13 @@ Console에 [Upcoming Products] > [Deploy]를 선택한 후 [상품이용]버튼�
 
 <a id="for-client-application"></a>
 
-## For Client Application
+## For Client Application { #for-client-application }
 
 클라이언트 어플리케이션을 위한 설정은 크게 Artifact 설정과 Binary Upload 단계를 거칩니다.
 
 <a id="artifact-deploy-artifacts"></a>
 
-### Artifact 설정 Deploy > Artifacts
+### Artifact 설정 Deploy > Artifacts { #artifact-deploy-artifacts }
 
 Artifact는 Deploy 상품에서 배포의 기본 단위입니다.
 
@@ -41,7 +41,7 @@ Artifact는 Deploy 상품에서 배포의 기본 단위입니다.
 
 <a id="binary-uploaddeploy-artifacts"></a>
 
-### Binary UploadDeploy > Artifacts
+### Binary UploadDeploy > Artifacts { #binary-uploaddeploy-artifacts }
 
 Binary를 업로드합니다.
 
@@ -58,13 +58,13 @@ Binary를 업로드합니다.
 
 <a id="for-server-application"></a>
 
-## For Server Application
+## For Server Application { #for-server-application }
 
 서버 어플리케이션의 배포는 설정(Artifact, Server Group, Scenario), Binary Upload, Deploy의 단계를 거칩니다.
 
 <a id="for-server-application-1"></a>
 
-### 설정
+### 설정 { #for-server-application-1 }
 
 서버 어플리케이션의 배포를 위해서는 Artifact, Server Group, Scenario 설정이 필요합니다.
 
@@ -136,7 +136,7 @@ Scenario를 생성합니다.
 
 <a id="binary-upload"></a>
 
-### Binary Upload
+### Binary Upload { #binary-upload }
 
 대상 서버의 배포는 우선 바이너리 파일의 업로드 과정을 거쳐야 합니다.
 이후 Deploy 과정에서 업로드된 바이너리를 선택하여 진행하게 됩니다.

@@ -12,7 +12,7 @@ This document contains the following:
 
 <a id="deploy-console-page"></a>
 
-## Deploy Console Page  
+## Deploy Console Page { #deploy-console-page }
 
 Below is the console page for the Deploy service. 
 
@@ -20,13 +20,13 @@ Below is the console page for the Deploy service.
 
 <a id="client-application"></a>
 
-## Client Application
+## Client Application { #client-application }
 
 Client application deployment requires setting artifacts and uploading binaries.  
 
 <a id="setting-artifacts"></a>
 
-### Setting Artifacts  
+### Setting Artifacts { #setting-artifacts }
 
 ![deploy_03_201812](https://static.toastoven.net/prod_tcdeploy/deploy_03_201812.png)
 
@@ -37,7 +37,7 @@ Client application deployment requires setting artifacts and uploading binaries.
 
 <a id="setting-binaries"></a>
 
-### Setting Binaries
+### Setting Binaries { #setting-binaries }
 
 <a id="upload"></a>
 
@@ -79,13 +79,13 @@ Then, the binary download page is delivered to the recipient in the specified ty
 
 <a id="server-application"></a>
 
-## Server Application
+## Server Application { #server-application }
 
 Server application requires setting deployment (artifact, server, server group, and scenario), uploading binaries, and deployment. 
 
 <a id="server-application-setting-artifacts"></a>
 
-### Setting Artifacts 
+### Setting Artifacts { #server-application-setting-artifacts }
 
 ![deploy_06_201812](https://static.toastoven.net/prod_tcdeploy/deploy_06_201812.png)
 
@@ -96,7 +96,7 @@ Server application requires setting deployment (artifact, server, server group, 
 
 <a id="setting-server-groups"></a>
 
-### Setting Server Groups 
+### Setting Server Groups { #setting-server-groups }
 
 Deployment servers are managed by this setting. 
 
@@ -118,7 +118,7 @@ Deployment servers are managed by this setting.
 
 <a id="setting-binary-groups"></a>
 
-### Setting Binary Groups
+### Setting Binary Groups { #setting-binary-groups }
 
 The feature to manage binaries to be deployed.
 
@@ -137,7 +137,7 @@ The feature to manage binaries to be deployed.
 
 <a id="create-scenarios"></a>
 
-### Create Scenarios 
+### Create Scenarios { #create-scenarios }
 
 ![deploy_08_201812](https://static.toastoven.net/prod_tcdeploy/deploy_08_201812.png)
 
@@ -147,7 +147,7 @@ The feature to manage binaries to be deployed.
 
 <a id="add-tasks"></a>
 
-### Add Tasks 
+### Add Tasks { #add-tasks }
 
 A task is an element of a scenario which can execute individual functions and control order, and it is categorized into two as below: 
 
@@ -228,7 +228,7 @@ Deployment for uploaded binary files can be set.
 
 <a id="execute"></a>
 
-### Execute 
+### Execute { #execute }
 
 ![deploy_12_201812](https://static.toastoven.net/prod_tcdeploy/deploy_12_201812.png)
 

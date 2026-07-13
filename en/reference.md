@@ -9,20 +9,20 @@ This document contains the following:
 
 <a id="menu-description"></a>
 
-## Menu Description 
+## Menu Description { #menu-description }
 
 ![deploy_ref_01_2018.png](https://static.toastoven.net/prod_tcdeploy/deploy_ref_01_2018.png)
 
 <a id="artifact-menu"></a>
 
-### 1. Artifact Menu
+### 1. Artifact Menu { #artifact-menu }
 
 It is the basic configuration unit of Deploy, to manage deployment. 
 Created artifacts are displayed on the list, on top of the page. 
 
 <a id="deployment-menu"></a>
 
-### 2. Deployment Menu 
+### 2. Deployment Menu { #deployment-menu }
 
 The page executes deployment, including creating and setting scenario. 
 A scenario is composed of Jenkins-CLI template, binary deployment, and file deployment, and you may enter commands as you need to execute your own script. 
@@ -80,7 +80,7 @@ You can check progress of scenario which is under deployment.
 
 <a id="deployment-history"></a>
 
-### Deployment History 
+### Deployment History { #deployment-history }
 You can see the detailed information on distribution history, settings, and notes.
 ![deploy_ref_01_2021.png](https://static.toastoven.net/prod_tcdeploy/reference/deploy_ref_01_2021.png)
 ![deploy_ref_02_2021.png](https://static.toastoven.net/prod_tcdeploy/reference/deploy_ref_02_2021.png)
@@ -109,7 +109,7 @@ The searched distribution history can be downloaded in an Excel file.
 
 <a id="binary-group"></a>
 
-### Binary Group 
+### Binary Group { #binary-group }
 
 On the **Binary Group** tab, binaries are managed by group.  
 Applicable to categorize binaries deployed for each server tool, such as Develop, Staging, and Product. 
@@ -127,7 +127,7 @@ Applicable to categorize binaries deployed for each server tool, such as Develop
 
 <a id="server-group"></a>
 
-### Server Group 
+### Server Group { #server-group }
 
 Deployment target servers can be managed by group. 
 Based on the phase attribute, it is applicable to categorize server tool, such as Develop, Staging, and Product. 
@@ -197,7 +197,7 @@ Server information can be added or deleted from **Create (Modify) Server Group**
 
 <a id="resources"></a>
 
-### Resources 
+### Resources { #resources }
 
 Resources can be managed on the page, by creating, uploading, or modifying files; change history can also be found. 
 
@@ -205,13 +205,13 @@ Resources can be managed on the page, by creating, uploading, or modifying files
 
 <a id="functional-description"></a>
 
-## Functional Description 
+## Functional Description { #functional-description }
 
 Here, more fundtions that are not described in Getting Started, are described in details, along with additional settings. 
 
 <a id="binary"></a>
 
-### Binary
+### Binary { #binary }
 
 Binaries are uploaded files that are to be deployed.
 
@@ -292,7 +292,7 @@ Binary download page is sent to recipients in a specified type of delivery.
 
 <a id="tasks"></a>
 
-### Tasks 
+### Tasks { #tasks }
 
 A task is a scenario configuration element which executes individual tasks and controls the order. 
 
@@ -500,7 +500,7 @@ $${binary.binary variable as value.binaryGroupName}: Binary group name selected 
 
 <a id="functional-description-resources"></a>
 
-### Resources 
+### Resources { #functional-description-resources }
 
 Resources refer to optional file management functions.  
 

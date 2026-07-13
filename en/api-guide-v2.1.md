@@ -5,7 +5,7 @@ Deploy provides APIs for binary upload, binary download, deployment execution, a
 
 <a id="basic-information"></a>
 
-### Basic Information
+### Basic Information { #basic-information }
 <a id="endpoint"></a>
 
 #### Endpoint
@@ -57,7 +57,7 @@ Users must have the **Deploy ADMIN role** or **Deploy VIEWER role** to use the A
 
 <a id="upload-binary"></a>
 
-### Upload Binary
+### Upload Binary { #upload-binary }
 <a id="version-21"></a>
 
 #### Version 2.1
@@ -112,7 +112,7 @@ curl -X POST \
 
 <a id="download-binary"></a>
 
-### Download Binary
+### Download Binary { #download-binary }
 You can download a binary file using the download path received in the response from the binary upload API.
 
 <a id="download-binary-version-21"></a>
@@ -136,7 +136,7 @@ curl -X GET \
 
 <a id="execute-deployment"></a>
 
-### Execute Deployment
+### Execute Deployment { #execute-deployment }
 * This API is used for deployment execution.
 * The deployment execution API is only available when the artifact `Command Type` is Cloud Agent. (Not available for SSH.)
 * In v2.1, deployment execution is also supported for Autoscale server groups.
@@ -216,7 +216,7 @@ curl --location 'https://api-tcd.nhncloudservice.com/api/v2.1/projects/{appKey}/
 
 <a id="list-artifacts"></a>
 
-### List Artifacts
+### List Artifacts { #list-artifacts }
 * This API retrieves a list of artifacts in a project.
 
 <a id="list-artifacts-version-21"></a>
@@ -282,7 +282,7 @@ curl -X GET \
 
 <a id="list-server-groups"></a>
 
-### List Server Groups
+### List Server Groups { #list-server-groups }
 * This API retrieves a list of server groups belonging to an artifact.
 
 <a id="list-server-groups-version-21"></a>
@@ -341,7 +341,7 @@ curl -X GET \
 
 <a id="list-binary-groups"></a>
 
-### List Binary Groups
+### List Binary Groups { #list-binary-groups }
 * This API retrieves a list of binary groups belonging to an artifact.
 
 <a id="list-binary-groups-version-21"></a>
@@ -400,7 +400,7 @@ curl -X GET \
 
 <a id="list-deployment-history"></a>
 
-### List Deployment History
+### List Deployment History { #list-deployment-history }
 * This API retrieves the deployment history of an artifact.
 * The query period cannot exceed 1 year.
 
@@ -477,7 +477,7 @@ curl -X GET \
 
 <a id="list-binaries"></a>
 
-### List Binaries
+### List Binaries { #list-binaries }
 * This API retrieves a list of binaries belonging to a binary group.
 
 <a id="list-binaries-version-21"></a>
