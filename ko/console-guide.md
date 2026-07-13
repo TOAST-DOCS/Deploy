@@ -12,7 +12,7 @@
 
 <a id="deploy-console-page"></a>
 
-## Deploy 콘솔 화면
+## Deploy 콘솔 화면 { #deploy-console-page }
 
 다음은 Deploy 서비스 콘솔 화면입니다.
 
@@ -20,13 +20,13 @@
 
 <a id="client-application"></a>
 
-## Client Application
+## Client Application { #client-application }
 
 클라이언트 애플리케이션 배포 설정은 크게 아티팩트 설정과 바이너리 업로드 단계를 거칩니다.
 
 <a id="setting-artifacts"></a>
 
-### 아티팩트 설정
+### 아티팩트 설정 { #setting-artifacts }
 
 ![deploy_03_201812](https://static.toastoven.net/prod_tcdeploy/deploy_03_201812.png)
 
@@ -37,7 +37,7 @@
 
 <a id="setting-binaries"></a>
 
-### 바이너리 설정
+### 바이너리 설정 { #setting-binaries }
 
 <a id="upload"></a>
 
@@ -78,13 +78,13 @@
 
 <a id="server-application"></a>
 
-## Server Application
+## Server Application { #server-application }
 
 서버 애플리케이션 배포 설정(아티팩트, 서버 그룹, 시나리오), 바이너리 업로드, 배포 단계를 거칩니다.
 
 <a id="server-application-setting-artifacts"></a>
 
-### 아티팩트 설정
+### 아티팩트 설정 { #server-application-setting-artifacts }
 
 ![deploy_06_201812](https://static.toastoven.net/prod_tcdeploy/deploy_06_201812.png)
 
@@ -95,7 +95,7 @@
 
 <a id="setting-server-groups"></a>
 
-### 서버 그룹 설정
+### 서버 그룹 설정 { #setting-server-groups }
 
 배포할 서버를 관리할 수 있는 기능입니다.
 
@@ -117,7 +117,7 @@
 
 <a id="setting-binary-groups"></a>
 
-### 바이너리 그룹 설정
+### 바이너리 그룹 설정 { #setting-binary-groups }
 
 배포할 바이너리를 관리할 수 있는 기능입니다.
 
@@ -136,7 +136,7 @@
 
 <a id="create-scenarios"></a>
 
-### 시나리오 생성
+### 시나리오 생성 { #create-scenarios }
 
 ![deploy_08_201812](https://static.toastoven.net/prod_tcdeploy/deploy_08_201812.png)
 
@@ -146,7 +146,7 @@
 
 <a id="add-tasks"></a>
 
-### 태스크 추가
+### 태스크 추가 { #add-tasks }
 
 태스크는 개별 기능을 수행하고 순서를 제어할 수 있는 시나리오 구성 요소입니다.
 태스크 종류는 아래 두 가지입니다.
@@ -228,7 +228,7 @@
 
 <a id="execute"></a>
 
-### 실행
+### 실행 { #execute }
 
 ![deploy_12_201812](https://static.toastoven.net/prod_tcdeploy/deploy_12_201812.png)
 

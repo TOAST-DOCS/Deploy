@@ -4,7 +4,7 @@
 
 <a id="ver-10"></a>
 
-## Ver 1.0
+## Ver 1.0 { #ver-10 }
 
 | resultCode | resultMessage |
 | --------- | --------- |
@@ -30,7 +30,7 @@
 
 <a id="previous-version"></a>
 
-## Previous version
+## Previous version { #previous-version }
 
 | isSuccess | resultKey |
 | --------- | --------- |

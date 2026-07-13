@@ -10,11 +10,11 @@ This document contains the following.
 
 <a id="pre-requisites-before-using-the-service"></a>
 
-## Pre-requisites before using the service
+## Pre-requisites before using the service { #pre-requisites-before-using-the-service }
 
 <a id="nhn-cloud-vm-server"></a>
 
-### NHN Cloud VM Server
+### NHN Cloud VM Server { #nhn-cloud-vm-server }
 ![SSH connectionRequired](https://kr1-api-object-storage.nhncloudservice.com/v1/AUTH_2acdfabf4efe4efc8a04c00b348110c9/cdn_origin/prod_tcdeploy/deploy_19_202307.png)
 
 > For NHN Cloud VM servers, you can use an SSH connection or NHN Cloud Agent to deliver the server's deployment command.
@@ -23,7 +23,7 @@ For NHN Cloud Agent, you need to [prepare for using](/Dev%20Tools/Deploy/en/setu
 
 <a id="servers-other-than-nhn-cloud-vm"></a>
 
-### Servers other than NHN Cloud VM
+### Servers other than NHN Cloud VM { #servers-other-than-nhn-cloud-vm }
 ![SSH connectionRequired](https://kr1-api-object-storage.nhncloudservice.com/v1/AUTH_2acdfabf4efe4efc8a04c00b348110c9/cdn_origin/prod_tcdeploy/deploy_20_202307.png)
 
 > For servers other than NHN Cloud VMs, you can pass the server's deployment commands only through an SSH connection.
@@ -32,11 +32,11 @@ You need to [prepare for the SSH connection](/Dev%20Tools/Deploy/en/setup-guide/
 
 <a id="prepare-to-use-nhn-cloud-agent"></a>
 
-## Prepare to use NHN Cloud Agent
+## Prepare to use NHN Cloud Agent { #prepare-to-use-nhn-cloud-agent }
 
 <a id="install-nhn-cloud-agent-by-operating-system"></a>
 
-### Install NHN Cloud Agent by operating system
+### Install NHN Cloud Agent by operating system { #install-nhn-cloud-agent-by-operating-system }
 * To pass deployment commands to NHN Cloud Agent, you need to install NHN Cloud Agent.
 * When you create an instance in NHN Cloud Instance service, you can add the following installation script contents for Linux and Windows operating systems to **Additional Settings** > **User Script**to install it.
 ![User script](https://kr1-api-object-storage.nhncloudservice.com/v1/AUTH_2acdfabf4efe4efc8a04c00b348110c9/cdn_origin/prod_tcdeploy/deploy_21_202307.png)
@@ -60,7 +60,7 @@ Invoke-WebRequest -UseBasicParsing 'https://kr1-api-object-storage.nhncloudservi
 
 <a id="check-the-installation-of-nhn-cloud-agent"></a>
 
-### Check the installation of NHN Cloud Agent
+### Check the installation of NHN Cloud Agent { #check-the-installation-of-nhn-cloud-agent }
 * Create a server group by adding the instances created by the NHN Cloud Deploy service.
     * When creating a server group, be sure to confirm the **OS** and **Shell Type**. The default values for **Shell Type**are /bin/bash (Linux), powershell (Windows).
 
@@ -90,11 +90,11 @@ The installation and validation of the NHN Cloud Agent service was successful.
 
 <a id="prepare-for-an-ssh-connection"></a>
 
-## Prepare for an SSH connection
+## Prepare for an SSH connection { #prepare-for-an-ssh-connection }
 
 <a id="requirements-for-each-os"></a>
 
-### Requirements for each OS
+### Requirements for each OS { #requirements-for-each-os }
 <a id="linux"></a>
 
 #### Linux
@@ -110,7 +110,7 @@ The installation and validation of the NHN Cloud Agent service was successful.
 
 <a id="requirements-for-nhn-cloud-vm-deployment"></a>
 
-### Requirements for NHN Cloud VM Deployment
+### Requirements for NHN Cloud VM Deployment { #requirements-for-nhn-cloud-vm-deployment }
 <a id="assign-public-ip"></a>
 
 #### Assign Public IP
@@ -139,7 +139,7 @@ The installation and validation of the NHN Cloud Agent service was successful.
 
 <a id="requirements-for-server-deployment-other-than-nhn-cloud-vm"></a>
 
-### Requirements for Server Deployment Other than NHN Cloud VM
+### Requirements for Server Deployment Other than NHN Cloud VM { #requirements-for-server-deployment-other-than-nhn-cloud-vm }
 <a id="requirements-for-server-deployment-other-than-nhn-cloud-vm-assign-public-ip"></a>
 
 #### Assign Public IP

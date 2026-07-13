@@ -9,20 +9,20 @@
 
 <a id="menu-description"></a>
 
-## メニュー説明
+## メニュー説明 { #menu-description }
 
 ![deploy_ref_01_ja_20200527](https://static.toastoven.net/prod_tcdeploy/ja/deploy_ref_01_ja_20200527.png)
 
 <a id="artifact-menu"></a>
 
-### 1. アーティファクトメニュー領域
+### 1. アーティファクトメニュー領域 { #artifact-menu }
 
 デプロイを管理するDeploy構成の基本単位です。
 作成されたアーティファクトは、画面上部にリスト形式で表示されます。
 
 <a id="deployment-menu"></a>
 
-### 2. デプロイメニュー領域
+### 2. デプロイメニュー領域 { #deployment-menu }
 
 デプロイを行うページでシナリオ作成と設定ができます。
 シナリオにはJenkins-CLIテンプレート、バイナリデプロイ、ファイルデプロイがあり、ユーザーが直接コマンドを入力でき、自由にスクリプトを実行できます。
@@ -80,7 +80,7 @@
 
 <a id="deployment-history"></a>
 
-### デプロイ履歴
+### デプロイ履歴 { #deployment-history }
 デプロイ履歴とデプロイ設定、デプロイノートの詳細な内容を確認できます。
 ![deploy_ref_01_2021.png](https://static.toastoven.net/prod_tcdeploy/reference/deploy_ref_01_2021.png)
 ![deploy_ref_02_2021.png](https://static.toastoven.net/prod_tcdeploy/reference/deploy_ref_02_2021.png)
@@ -109,7 +109,7 @@
     
 <a id="binary-group"></a>
 
-### バイナリグループ
+### バイナリグループ { #binary-group }
 
 **バイナリグループ**タブでは、バイナリをグループで管理できます。
 Develop、Staging、Productなどのサーバー機器にデプロイされるバイナリを区分する時に活用できます。
@@ -127,7 +127,7 @@ Develop、Staging、Productなどのサーバー機器にデプロイされる�
 
 <a id="server-group"></a>
 
-### サーバーグループ
+### サーバーグループ { #server-group }
 
 デプロイ対象サーバーをグループで管理できます。
 PhaseプロパティでDevelop、Staging、Productなどのサーバー機器を区分して活用できます。
@@ -210,7 +210,7 @@ Auto Scaleサービスのインスタンス拡張に応じてデプロイ設定�
 
 <a id="resources"></a>
 
-### リソース
+### リソース { #resources }
 
 リソースを管理できるページで、ファイル作成、アップロード、ダウンロード、修正や変更履歴の確認ができます。
 
@@ -218,13 +218,13 @@ Auto Scaleサービスのインスタンス拡張に応じてデプロイ設定�
 
 <a id="functional-description"></a>
 
-## 機能別説明
+## 機能別説明 { #functional-description }
 
 ここでは、Getting Startedで扱わない機能と追加設定を詳しく説明します。
 
 <a id="binary"></a>
 
-### バイナリ
+### バイナリ { #binary }
 
 バイナリは、アップロードされたデプロイ対象ファイルです。
 
@@ -305,7 +305,7 @@ ClientバイナリのAll、Fixed、Recentバージョンを、希望する方式
 
 <a id="tasks"></a>
 
-### タスク
+### タスク { #tasks }
 
 タスクは、個別機能の実行および順序制御が可能なシナリオ構成要素です。
 
@@ -513,7 +513,7 @@ $${binary.binary variable as value.binaryGroupName}：バイナリに設定し�
 
 <a id="functional-description-resources"></a>
 
-### リソース
+### リソース { #functional-description-resources }
 
 リソースは任意で使用できるファイル管理機能です。
 

@@ -14,7 +14,7 @@ With Deploy, applications can be deployed fast and easy, at 'One Click'.
 
 <a id="benefits"></a>
 
-## Benefits 
+## Benefits { #benefits }
 
 * Easy and convenient binary management 
 * Simple delivery of client binaries 
@@ -29,11 +29,11 @@ With Deploy, applications can be deployed fast and easy, at 'One Click'.
 
 <a id="features"></a>
 
-## Features 
+## Features { #features }
 
 <a id="upload"></a>
 
-### Upload 
+### Upload { #upload }
 Files are easily uploaded with the help of various uploading methods. 
 * Uploading Interfaces 
     * Web Console 
@@ -42,32 +42,32 @@ Files are easily uploaded with the help of various uploading methods.
 
 <a id="download"></a>
 
-### Download 
+### Download { #download }
 Notification for downloading links makes it easy to install and update apps. 
 
 <a id="query-binaries"></a>
 
-### Query Binaries 
+### Query Binaries { #query-binaries }
 Binary data of the past remain to enable fast roll-backs.
 
 <a id="manage-deployment-projects"></a>
 
-### Manage Deployment Projects 
+### Manage Deployment Projects { #manage-deployment-projects }
 Infrastructure information of a project is integrated for an easy setting. 
 
 <a id="manage-execute-deployment-scenario"></a>
 
-### Manage (Execute) Deployment Scenario 
+### Manage (Execute) Deployment Scenario { #manage-execute-deployment-scenario }
 User-defined commands are used to check server status after deployment. 
 
 <a id="manage-deployment-history"></a>
 
-### Manage Deployment History 
+### Manage Deployment History { #manage-deployment-history }
 Deployment and previous binaries are managed by deployment history so as to secure stability. 
 
 <a id="glossary"></a>
 
-## Glossary
+## Glossary { #glossary }
 
 | Terms | Description |
 | --- | --- |

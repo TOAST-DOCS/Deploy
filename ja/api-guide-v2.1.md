@@ -5,7 +5,7 @@ Deployでは、バイナリのアップロード、バイナリのダウンロ�
 
 <a id="basic-information"></a>
 
-### 基本情報
+### 基本情報 { #basic-information }
 <a id="endpoint"></a>
 
 #### エンドポイント
@@ -57,7 +57,7 @@ Deploy APIは、ロールベースのアクセス制御(RBAC)を使用します�
 
 <a id="upload-binary"></a>
 
-### バイナリのアップロード
+### バイナリのアップロード { #upload-binary }
 <a id="version-21"></a>
 
 #### Version 2.1
@@ -112,7 +112,7 @@ curl -X POST \
 
 <a id="download-binary"></a>
 
-### バイナリのダウンロード
+### バイナリのダウンロード { #download-binary }
 バイナリアップロードAPIのレスポンスとして受信したダウンロードパスから、バイナリファイルをダウンロードできます。
 
 <a id="download-binary-version-21"></a>
@@ -136,7 +136,7 @@ curl -X GET \
 
 <a id="execute-deployment"></a>
 
-### デプロイの実行
+### デプロイの実行 { #execute-deployment }
 * デプロイ実行用のAPIです。
 * アーティファクトの`Command Type`がCloud Agentの場合にのみ、デプロイ実行APIが提供されます(SSHの場合は提供されません)。
 * v2.1では、Auto Scaleサーバーグループにもデプロイを実行できます。
@@ -216,7 +216,7 @@ curl --location 'https://api-tcd.nhncloudservice.com/api/v2.1/projects/{appKey}/
 
 <a id="list-artifacts"></a>
 
-### アーティファクト一覧の照会
+### アーティファクト一覧の照会 { #list-artifacts }
 * プロジェクトのアーティファクト一覧を照会するAPIです。
 
 <a id="list-artifacts-version-21"></a>
@@ -282,7 +282,7 @@ curl -X GET \
 
 <a id="list-server-groups"></a>
 
-### サーバーグループ一覧の照会
+### サーバーグループ一覧の照会 { #list-server-groups }
 * アーティファクトに属するサーバーグループ一覧を照会するAPIです。
 
 <a id="list-server-groups-version-21"></a>
@@ -341,7 +341,7 @@ curl -X GET \
 
 <a id="list-binary-groups"></a>
 
-### バイナリグループ一覧の照会
+### バイナリグループ一覧の照会 { #list-binary-groups }
 * アーティファクトに属するバイナリグループ一覧を照会するAPIです。
 
 <a id="list-binary-groups-version-21"></a>
@@ -400,7 +400,7 @@ curl -X GET \
 
 <a id="list-deployment-history"></a>
 
-### デプロイ履歴の照会
+### デプロイ履歴の照会 { #list-deployment-history }
 * アーティファクトのデプロイ履歴を照会するAPIです。
 * 照会期間は最大1年まで指定できます。
 
@@ -477,7 +477,7 @@ curl -X GET \
 
 <a id="list-binaries"></a>
 
-### バイナリ一覧の照会
+### バイナリ一覧の照会 { #list-binaries }
 * バイナリグループに属するバイナリ一覧を照会するAPIです。
 
 <a id="list-binaries-version-21"></a>

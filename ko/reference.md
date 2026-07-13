@@ -9,20 +9,20 @@
 
 <a id="menu-description"></a>
 
-## 메뉴 설명
+## 메뉴 설명 { #menu-description }
 
 ![deploy_ref_01_2018.png](https://static.toastoven.net/prod_tcdeploy/deploy_ref_01_2018.png)
 
 <a id="artifact-menu"></a>
 
-### 1. 아티팩트 메뉴 영역
+### 1. 아티팩트 메뉴 영역 { #artifact-menu }
 
 배포를 관리하는 Deploy 구성의 기본 단위입니다.
 생성된 아티팩트는 화면 위쪽에 목록 형태로 표시됩니다.
 
 <a id="deployment-menu"></a>
 
-### 2. 배포 메뉴 영역
+### 2. 배포 메뉴 영역 { #deployment-menu }
 
 배포를 진행하는 페이지로 시나리오 생성과 설정을 할 수 있습니다.
 시나리오에는 Jenkins-CLI 템플릿, 바이너리 배포, 파일 배포가 있으며, 사용자가 원하는 스크립트를 실행할 수 있도록 직접 명령어를 입력할 수 있습니다.
@@ -80,7 +80,7 @@
 
 <a id="deployment-history"></a>
 
-### 배포 이력
+### 배포 이력 { #deployment-history }
 배포 이력과 배포 설정, 배포 노트의 자세한 내용을 확인할 수 있습니다.
 ![deploy_ref_01_2021.png](https://static.toastoven.net/prod_tcdeploy/reference/deploy_ref_01_2021.png)
 ![deploy_ref_02_2021.png](https://static.toastoven.net/prod_tcdeploy/reference/deploy_ref_02_2021.png)
@@ -109,7 +109,7 @@
     
 <a id="binary-group"></a>
 
-### 바이너리 그룹
+### 바이너리 그룹 { #binary-group }
 
 **바이너리 그룹** 탭에서는 바이너리를 그룹으로 관리할 수 있습니다.
 Develop, Staging, Product 등의 서버 장비에 배포되는 바이너리를 구분할 때 활용할 수 있습니다.
@@ -127,7 +127,7 @@ Develop, Staging, Product 등의 서버 장비에 배포되는 바이너리를 �
 
 <a id="server-group"></a>
 
-### 서버 그룹
+### 서버 그룹 { #server-group }
 
 배포 대상 서버를 그룹으로 관리할 수 있습니다.
 Phase 속성으로 Develop, Staging, Product 등의 서버 장비를 구분하여 활용할 수 있습니다. 
@@ -210,7 +210,7 @@ Auto Scale 서비스의 인스턴스 확장에 따른 배포를 설정할 수 �
 
 <a id="resources"></a>
 
-### 리소스
+### 리소스 { #resources }
 
 리소스를 관리할 수 있는 페이지로, 파일 생성, 업로드, 다운로드, 수정을 할 수 있으며 변경 이력을 확인할 수 있습니다.
 
@@ -218,13 +218,13 @@ Auto Scale 서비스의 인스턴스 확장에 따른 배포를 설정할 수 �
 
 <a id="functional-description"></a>
 
-## 기능별 설명
+## 기능별 설명 { #functional-description }
 
 여기에서는 Getting Started에서 다루지 않은 기능과 추가 설정을 자세히 설명합니다.
 
 <a id="binary"></a>
 
-### 바이너리
+### 바이너리 { #binary }
 
 바이너리는 업로드된 배포 대상 파일입니다.
 
@@ -305,7 +305,7 @@ Client 바이너리의 All, Fixed, Recent 버전을 원하는 방식으로 배�
 
 <a id="tasks"></a>
 
-### 태스크
+### 태스크 { #tasks }
 
 태스크는 개별 기능 수행 및 순서 제어가 가능한 시나리오 구성 요소 입니다.
 
@@ -513,7 +513,7 @@ $${binary.binary variable as value.binaryGroupName} : 바이너리에 설정한 
 
 <a id="functional-description-resources"></a>
 
-### 리소스
+### 리소스 { #functional-description-resources }
 
 리소스는 선택적으로 사용할 수 있는 파일 관리 기능입니다.
 

@@ -13,7 +13,7 @@
 
 <a id="deploy-console-page"></a>
 
-## Deployコンソール画面
+## Deployコンソール画面 { #deploy-console-page }
 
 次は、Deployサービスのコンソール画面です。
 
@@ -21,13 +21,13 @@
 
 <a id="client-application"></a>
 
-## Client Application
+## Client Application { #client-application }
 
 クライアントアプリケーションデプロイ設定は、大きく分けてアーティファクト設定、その後、バイナリアップロードの順に行います。
 
 <a id="setting-artifacts"></a>
 
-### アーティファクト設定
+### アーティファクト設定 { #setting-artifacts }
 
 ![deploy_03_ja_20200519](https://static.toastoven.net/prod_tcdeploy/ja/deploy_03_ja_20200519.png)
 
@@ -38,7 +38,7 @@
 
 <a id="setting-binaries"></a>
 
-### バイナリ設定
+### バイナリ設定 { #setting-binaries }
 
 <a id="upload"></a>
 
@@ -79,13 +79,13 @@
 
 <a id="server-application"></a>
 
-## Server Application
+## Server Application { #server-application }
 
 サーバーアプリケーションのデプロイは、基本設定（アーティファクト、サーバーグループ、シナリオ）、バイナリアップロード、デプロイの順に進めます。
 
 <a id="server-application-setting-artifacts"></a>
 
-### アーティファクト設定
+### アーティファクト設定 { #server-application-setting-artifacts }
 
 ![deploy_06_ja_201812](https://static.toastoven.net/prod_tcdeploy/ja/deploy_06_ja_20200519.png)
 
@@ -96,7 +96,7 @@
 
 <a id="setting-server-groups"></a>
 
-### サーバーグループ設定
+### サーバーグループ設定 { #setting-server-groups }
 
 デプロイするサーバーを管理できる機能です。
 
@@ -118,7 +118,7 @@
 
 <a id="setting-binary-groups"></a>
 
-### バイナリグループ設定
+### バイナリグループ設定 { #setting-binary-groups }
 
 デプロイするバイナリを管理できる機能です。
 
@@ -137,7 +137,7 @@
 
 <a id="create-scenarios"></a>
 
-### シナリオ作成
+### シナリオ作成 { #create-scenarios }
 
 ![deploy_08_ja_20200519](https://static.toastoven.net/prod_tcdeploy/ja/deploy_08_ja_20200519.png)
 
@@ -147,7 +147,7 @@
 
 <a id="add-tasks"></a>
 
-### タスク追加
+### タスク追加 { #add-tasks }
 
 タスクは、個別機能を実行して順序を制御できるシナリオ構成要素です。
 タスクの種類は、下記の2つです。
@@ -229,7 +229,7 @@
 
 <a id="execute"></a>
 
-### 実行
+### 実行 { #execute }
 
 ![deploy_12_ja_20200519](https://static.toastoven.net/prod_tcdeploy/ja/deploy_12_ja_20200519.png)
 
