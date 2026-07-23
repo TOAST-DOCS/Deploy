@@ -62,20 +62,20 @@ Deploy API는 역할 기반 접근 제어(RBAC)를 사용합니다.<br>
 <a id="version-21"></a>
 
 #### Version 2.1
-| HTTP Method | POST |
-|-------------| ---- |
+| Http Method | POST |
+| ----------- | ---- |
 | Request URL | https://api-tcd.nhncloudservice.com/api/v2.1/projects/{appKey}/artifacts/{artifactId}/binary-group/{binaryGroupKey} |
 
 ##### Parameter
 | Name | Type | Description | Value | Required |
-| ---- | ---- | ----------- | ----- |---------|
-| applicationType | String | 아티팩트의 타입 | client 또는 server | true    |
-| version | String | 업로드하는 바이너리의 버전, 미입력 시 timestamp로 대체(최대 100자) | - | false   |
-| description | String | 바이너리의 설명 | - | false   |
-| osType | String | applicationType이 client인 경우 바이너리 파일의 OS 정보 | iOS, Android 또는 etc | false   |
-| binaryFile | File | 바이너리 파일 객체 | - | true    |
-| metaFile | File | iOS인 경우 plist 파일 객체 | - | false   |
-| fix | Boolean | applicationType이 client인 경우 Fix 여부 정보 | `true`/`false` | false   |
+| ---- | ---- | ----------- | ----- | -------- |
+| applicationType | String | 아티팩트의 타입 | client 또는 server | true |
+| version | String | 업로드하는 바이너리의 버전, 미입력 시 timestamp로 대체(최대 100자) | - | false |
+| description | String | 바이너리의 설명 | - | false |
+| osType | String | applicationType이 client인 경우 바이너리 파일의 OS 정보 | iOS, Android 또는 etc | false |
+| binaryFile | File | 바이너리 파일 객체 | - | true |
+| metaFile | File | iOS인 경우 plist 파일 객체 | - | false |
+| fix | Boolean | applicationType이 client인 경우 Fix 여부 정보 | true/false | false |
 
 ##### Sample Request For cURL
 ``` java
@@ -90,7 +90,7 @@ curl -X POST \
 ##### Response(json)
 | Name | Type | Description | Value |
 | ---- | ---- | ----------- | ----- |
-| isSuccessful | boolean | 업로드 결과 | `true` 또는 `false` |
+| isSuccessful | boolean | 업로드 결과 | true 또는 false |
 | resultCode | String | 업로드 결과 메시지 | [오류 코드](/Dev%20Tools/Deploy/ko/error-code/) 참고 |
 | downloadUrl | String | 업로드 바이너리의 다운로드 경로 | 해당 경로로 다운로드 가능 |
 | binaryKey | String | 업로드한 바이너리의 키 | - |
@@ -119,8 +119,8 @@ curl -X POST \
 <a id="download-binary-version-21"></a>
 
 #### Version 2.1
-| HTTP Method | GET |
-|-------------| ---- |
+| Http Method | GET |
+| ----------- | ---- |
 | Request URL | https://api-tcd.nhncloudservice.com/api/v2.1/projects/{appKey}/artifacts/{artifactId}/binary-group/{binaryGroupKey}/binaries/{binaryKey} |
 
 ##### Sample Request For cURL
@@ -145,7 +145,7 @@ curl -X GET \
 <a id="execute-deployment-version-21"></a>
 
 #### Version 2.1
-| HTTP Method | POST |
+| Http Method | POST |
 | ----------- | ---- |
 | Request URL | https://api-tcd.nhncloudservice.com/api/v2.1/projects/{appKey}/artifacts/{artifactId}/server-group/{serverGroupId}/deploy |
 
@@ -154,9 +154,9 @@ curl -X GET \
 | --- | --- | --- | --- | --- | --- |
 | targetServerHostnames | String | 서버 그룹 내에서 선택적으로 배포 대상이 되는 쉼표(,)로 구분된 서버의 호스트명(서버 그룹 전체인 경우 모두 입력) | hostname1, hostname2, hostname3(없을 시 서버 그룹 내 서버 전체 배포) | false | 서버 그룹에 포함된 전체 서버 |
 | concurrentNum | Number | 병렬로 실행할 배포 수 | 0 이상의 값, 0인 경우 서버 그룹 전체 동시 실행 | false | 0 |
-| nextWhenFail | Boolean | 시나리오 실패 시 다음 서버 실행 여부 | `true`/`false` | false | `false`(실행 중단) |
+| nextWhenFail | Boolean | 시나리오 실패 시 다음 서버 실행 여부 | true/false | false | false(실행 중단) |
 | deployNote | String | 배포 시 작성하는 부가 정보 |  | false |  |
-| async | Boolean | 배포 결과를 기다리지 않고 응답을 받음 | `true`/`false` | false | `false` |
+| async | Boolean | 배포 결과를 기다리지 않고 응답을 받음 | true/false | false | false |
 | scenarioIds | String | 실행할 시나리오 scenarioId | 서버 그룹 내에서 쉼표(,)로 구분된 시나리오 ID(없을 시 매핑되어 있는 ScenarioID 전체) | false(단, 일반 Deploy 시 true - 1개만) | 없을 시 매핑되어 있는 ScenarioID 전체 |
 
 ##### Sample Request For cURL
@@ -180,7 +180,7 @@ curl --location 'https://api-tcd.nhncloudservice.com/api/v2.1/projects/{appKey}/
 
 | Name | Type | Description | Value |
 | ---- | ---- | ----------- | ----- |
-| isSuccessful | Boolean | 배포 실행 성공 여부 | `true` 또는 `false` |
+| isSuccessful | Boolean | 배포 실행 성공 여부 | true 또는 false |
 | resultCode | String | 배포 실행 결과 메시지 | [오류 코드](/Dev%20Tools/Deploy/ko/error-code/) 참고 |
 | deployStatus | String | 배포 상태 | success, fail 또는 deploying(async 옵션 true일 경우) |
 | deployResult | List | 서버별 배포 결과 | - hostname: 배포 대상 호스트명(인스턴스 ID)<br>- status: 배포 결과<br>- taskResult: 배포 시나리오 내 각 태스크별 정보 |
@@ -223,7 +223,7 @@ curl --location 'https://api-tcd.nhncloudservice.com/api/v2.1/projects/{appKey}/
 <a id="list-artifacts-version-21"></a>
 
 #### Version 2.1
-| HTTP Method | GET |
+| Http Method | GET |
 | ----------- | ---- |
 | Request URL | https://api-tcd.nhncloudservice.com/api/v2.1/projects/{appKey}/artifacts |
 
@@ -242,7 +242,7 @@ curl -X GET \
 ##### Response(json)
 | Name | Type | Description | Value |
 | ---- | ---- | ----------- | ----- |
-| isSuccessful | Boolean | 요청 성공 여부 | `true` 또는 `false` |
+| isSuccessful | Boolean | 요청 성공 여부 | true 또는 false |
 | resultCode | String | 요청 결과 메시지 | [오류 코드](/Dev%20Tools/Deploy/ko/error-code/) 참고 |
 | artifacts | List | 아티팩트 목록 | 아래 항목 참고 |
 
@@ -289,7 +289,7 @@ curl -X GET \
 <a id="list-server-groups-version-21"></a>
 
 #### Version 2.1
-| HTTP Method | GET |
+| Http Method | GET |
 | ----------- | ---- |
 | Request URL | https://api-tcd.nhncloudservice.com/api/v2.1/projects/{appKey}/artifacts/{artifactId}/server-groups |
 
@@ -303,7 +303,7 @@ curl -X GET \
 ##### Response(json)
 | Name | Type | Description | Value |
 | ---- | ---- | ----------- | ----- |
-| isSuccessful | Boolean | 요청 성공 여부 | `true` 또는 `false` |
+| isSuccessful | Boolean | 요청 성공 여부 | true 또는 false |
 | resultCode | String | 요청 결과 메시지 | [오류 코드](/Dev%20Tools/Deploy/ko/error-code/) 참고 |
 | serverGroups | List | 서버 그룹 목록 | 아래 항목 참고 |
 
@@ -348,7 +348,7 @@ curl -X GET \
 <a id="list-binary-groups-version-21"></a>
 
 #### Version 2.1
-| HTTP Method | GET |
+| Http Method | GET |
 | ----------- | ---- |
 | Request URL | https://api-tcd.nhncloudservice.com/api/v2.1/projects/{appKey}/artifacts/{artifactId}/binary-groups |
 
@@ -362,7 +362,7 @@ curl -X GET \
 ##### Response(json)
 | Name | Type | Description | Value |
 | ---- | ---- | ----------- | ----- |
-| isSuccessful | Boolean | 요청 성공 여부 | `true` 또는 `false` |
+| isSuccessful | Boolean | 요청 성공 여부 | true 또는 false |
 | resultCode | String | 요청 결과 메시지 | [오류 코드](/Dev%20Tools/Deploy/ko/error-code/) 참고 |
 | binaryGroups | List | 바이너리 그룹 목록 | 아래 항목 참고 |
 
@@ -408,7 +408,7 @@ curl -X GET \
 <a id="list-deployment-history-version-21"></a>
 
 #### Version 2.1
-| HTTP Method | GET |
+| Http Method | GET |
 | ----------- | ---- |
 | Request URL | https://api-tcd.nhncloudservice.com/api/v2.1/projects/{appKey}/artifacts/{artifactId}/deploy-histories |
 
@@ -431,7 +431,7 @@ curl -X GET \
 ##### Response(json)
 | Name | Type | Description | Value |
 | ---- | ---- | ----------- | ----- |
-| isSuccessful | Boolean | 요청 성공 여부 | `true` 또는 `false` |
+| isSuccessful | Boolean | 요청 성공 여부 | true 또는 false |
 | resultCode | String | 요청 결과 메시지 | [오류 코드](/Dev%20Tools/Deploy/ko/error-code/) 참고 |
 | totalCount | Number | 전체 건수 | - |
 | deployHistories | List | 배포 이력 목록 | 아래 항목 참고 |
@@ -484,7 +484,7 @@ curl -X GET \
 <a id="list-binaries-version-21"></a>
 
 #### Version 2.1
-| HTTP Method | GET |
+| Http Method | GET |
 | ----------- | ---- |
 | Request URL | https://api-tcd.nhncloudservice.com/api/v2.1/projects/{appKey}/artifacts/{artifactId}/binary-groups/{binaryGroupKey}/binaries |
 
@@ -507,7 +507,7 @@ curl -X GET \
 ##### Response(json)
 | Name | Type | Description | Value |
 | ---- | ---- | ----------- | ----- |
-| isSuccessful | Boolean | 요청 성공 여부 | `true` 또는 `false` |
+| isSuccessful | Boolean | 요청 성공 여부 | true 또는 false |
 | resultCode | String | 요청 결과 메시지 | [오류 코드](/Dev%20Tools/Deploy/ko/error-code/) 참고 |
 | totalCount | Number | 전체 건수 | - |
 | binaries | List | 바이너리 목록 | 아래 항목 참고 |
@@ -554,8 +554,8 @@ curl -X GET \
 * 서버 그룹에 매핑된 시나리오 목록을 조회하는 API입니다.
 
 #### Version 2.1
-| HTTP Method | GET |
-|-------------| ---- |
+| Http Method | GET |
+| ----------- | ---- |
 | Request URL | https://api-tcd.nhncloudservice.com/api/v2.1/projects/{appKey}/artifacts/{artifactId}/server-groups/{serverGroupId}/scenarios |
 
 ##### Sample Request For cURL
@@ -568,7 +568,7 @@ curl -X GET \
 ##### Response(json)
 | Name | Type | Description | Value |
 | ---- | ---- | ----------- | ----- |
-| isSuccessful | Boolean | 요청 성공 여부 | `true` 또는 `false` |
+| isSuccessful | Boolean | 요청 성공 여부 | true 또는 false |
 | resultCode | String | 요청 결과 메시지 | [오류 코드](/Dev%20Tools/Deploy/ko/error-code/) 참고 |
 | scenarios | List | 시나리오 목록 | 아래 항목 참고 |
 
