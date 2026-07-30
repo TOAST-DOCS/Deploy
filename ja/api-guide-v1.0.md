@@ -1,4 +1,6 @@
-<!-- pre-align:aligned sig=4aca5604a494 -->
+<!-- pre-align:aligned sig=9d349a114abb -->
+
+<a id="dev-tools-deploy-api-v10-guide"></a>
 
 ## Dev Tools > Deploy > API v1.0ガイド
 Deployでは、ユーザーがHTTP Requestを直接構成してバイナリアップロード、デプロイを実行するためのAPIを提供します。
