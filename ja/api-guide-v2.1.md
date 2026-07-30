@@ -1,24 +1,27 @@
-<!-- pre-align:aligned sig=11fb4222fcbb -->
+<!-- pre-align:aligned sig=28e392d2a044 -->
 
-<a id="dev-tools-deploy-api-v21-guide"></a>
-## Dev Tools > Deploy > API v2.1 ガイド { #dev-tools-deploy-api-v21-guide }
+## Dev Tools > Deploy > API v2.1 ガイド
 Deployでは、バイナリのアップロード、バイナリのダウンロード、デプロイの実行、情報の照会を行うためのAPIを提供しています。ユーザーがHTTPリクエストを独自に構成して使用できます。
 
 <a id="basic-information"></a>
+
 ### 基本情報 { #basic-information }
 <a id="endpoint"></a>
+
 #### エンドポイント
 ```text
 https://api-tcd.nhncloudservice.com
 ```
 
 <a id="api-request-http-header"></a>
+
 #### APIリクエスト HTTPヘッダ
 ```
 X-NHN-AUTHORIZATION: Bearer {発行されたトークン}
 ```
 
 <a id="authentication-and-authorization"></a>
+
 #### 認証及び権限
 Deployは、API呼び出し時の認証・認可にUser Access Keyトークンを使用します。
 User Access Keyトークンは、User Access Keyを基に発行されるBearerタイプの一時的なアクセストークンです。
@@ -28,6 +31,7 @@ Deploy APIは、ロールベースのアクセス制御(RBAC)を使用します�
 ユーザーは、APIを使用するために**Deploy ADMINロール**または**Deploy VIEWERロール**を保有している必要があります。
 
 <a id="available-apis"></a>
+
 #### 提供するAPIの種類
 | メソッド | URI | 説明 |
 | ------ | --- | --- |
@@ -39,8 +43,10 @@ Deploy APIは、ロールベースのアクセス制御(RBAC)を使用します�
 | GET | /api/v2.1/projects/{appKey}/artifacts/{artifactId}/binary-groups | バイナリグループ一覧照会API |
 | GET | /api/v2.1/projects/{appKey}/artifacts/{artifactId}/deploy-histories | デプロイ履歴照会API |
 | GET | /api/v2.1/projects/{appKey}/artifacts/{artifactId}/binary-groups/{binaryGroupKey}/binaries | バイナリ一覧照会API |
+| GET | /api/v2.1/projects/{appKey}/artifacts/{artifactId}/server-groups/{serverGroupId}/scenarios | シナリオ一覧照会API |
 
 <a id="api-request-path-variables"></a>
+
 #### APIリクエストのパス変数
 | 値 | タイプ | 説明 |
 | --- | --- | --- |
@@ -51,10 +57,12 @@ Deploy APIは、ロールベースのアクセス制御(RBAC)を使用します�
 | serverGroupId | Number | デプロイ対象となるサーバーグループのID |
 
 <a id="upload-binary"></a>
+
 ### バイナリのアップロード { #upload-binary }
 <a id="version-21"></a>
+
 #### Version 2.1
-| Http Method | POST |
+| HTTP Method | POST |
 | ----------- | ---- |
 | Request URL | https://api-tcd.nhncloudservice.com/api/v2.1/projects/{appKey}/artifacts/{artifactId}/binary-group/{binaryGroupKey} |
 
@@ -104,12 +112,14 @@ curl -X POST \
 ```
 
 <a id="download-binary"></a>
+
 ### バイナリのダウンロード { #download-binary }
 バイナリアップロードAPIのレスポンスとして受信したダウンロードパスから、バイナリファイルをダウンロードできます。
 
 <a id="download-binary-version-21"></a>
+
 #### Version 2.1
-| Http Method | GET |
+| HTTP Method | GET |
 | ----------- | ---- |
 | Request URL | https://api-tcd.nhncloudservice.com/api/v2.1/projects/{appKey}/artifacts/{artifactId}/binary-group/{binaryGroupKey}/binaries/{binaryKey} |
 
@@ -126,14 +136,16 @@ curl -X GET \
 * Content-Type: `application/octet-stream`
 
 <a id="execute-deployment"></a>
+
 ### デプロイの実行 { #execute-deployment }
 * デプロイ実行用のAPIです。
 * アーティファクトの`Command Type`がCloud Agentの場合にのみ、デプロイ実行APIが提供されます(SSHの場合は提供されません)。
 * v2.1では、Auto Scaleサーバーグループにもデプロイを実行できます。
 
 <a id="execute-deployment-version-21"></a>
+
 #### Version 2.1
-| Http Method | POST |
+| HTTP Method | POST |
 | ----------- | ---- |
 | Request URL | https://api-tcd.nhncloudservice.com/api/v2.1/projects/{appKey}/artifacts/{artifactId}/server-group/{serverGroupId}/deploy |
 
@@ -204,12 +216,14 @@ curl --location 'https://api-tcd.nhncloudservice.com/api/v2.1/projects/{appKey}/
 ```
 
 <a id="list-artifacts"></a>
+
 ### アーティファクト一覧の照会 { #list-artifacts }
 * プロジェクトのアーティファクト一覧を照会するAPIです。
 
 <a id="list-artifacts-version-21"></a>
+
 #### Version 2.1
-| Http Method | GET |
+| HTTP Method | GET |
 | ----------- | ---- |
 | Request URL | https://api-tcd.nhncloudservice.com/api/v2.1/projects/{appKey}/artifacts |
 
@@ -228,7 +242,7 @@ curl -X GET \
 ##### Response(json)
 | Name | Type | Description | Value |
 | ---- | ---- | ----------- | ----- |
-| isSuccessful | Boolean | リクエストの成否 | true または false |
+| isSuccessful | Boolean | リクエストの成否 | `true` または `false` |
 | resultCode | String | リクエスト結果のメッセージ | [エラーコード](/Dev%20Tools/Deploy/ja/error-code/) を参照 |
 | artifacts | List | アーティファクト一覧 | 以下の項目を参照 |
 
@@ -267,13 +281,66 @@ curl -X GET \
 }
 ```
 
+<a id="list-scenario"></a>
+
+### シナリオ一覧の照会
+* サーバーグループにマッピングされたシナリオ一覧を照会するAPIです。
+
+#### Version 2.1
+| HTTP Method | GET |
+| ----------- | ---- |
+| Request URL | https://api-tcd.nhncloudservice.com/api/v2.1/projects/{appKey}/artifacts/{artifactId}/server-groups/{serverGroupId}/scenarios |
+
+##### Sample Request For cURL
+``` java
+curl -X GET \
+  'https://api-tcd.nhncloudservice.com/api/v2.1/projects/{appKey}/artifacts/{artifactId}/server-groups/{serverGroupId}/scenarios' \
+  -H 'X-NHN-AUTHORIZATION: Bearer {token}'
+```
+
+##### Response(json)
+| Name | Type | Description | Value |
+| ---- | ---- | ----------- | ----- |
+| isSuccessful | Boolean | リクエストの成否 | `true` または `false` |
+| resultCode | String | リクエスト結果のメッセージ | [エラーコード](/Dev%20Tools/Deploy/ja/error-code/) を参照 |
+| scenarios | List | シナリオ一覧 | 以下の項目を参照 |
+
+**scenarios**
+
+| Name | Type | Description |
+| ---- | ---- | ----------- |
+| scenarioId | Number | シナリオID |
+| scenarioName | String | シナリオ名 |
+
+##### Response Sample
+``` json
+{
+    "header": {
+        "isSuccessful": true,
+        "serverTime": 1707278725614,
+        "resultCode": "SUCCESS",
+        "resultMessage": "success"
+    },
+    "body": {
+        "scenarios": [
+            {
+                "scenarioId": 1,
+                "scenarioName": "デプロイシナリオ"
+            }
+        ]
+    }
+}
+```
+
 <a id="list-server-groups"></a>
+
 ### サーバーグループ一覧の照会 { #list-server-groups }
 * アーティファクトに属するサーバーグループ一覧を照会するAPIです。
 
 <a id="list-server-groups-version-21"></a>
+
 #### Version 2.1
-| Http Method | GET |
+| HTTP Method | GET |
 | ----------- | ---- |
 | Request URL | https://api-tcd.nhncloudservice.com/api/v2.1/projects/{appKey}/artifacts/{artifactId}/server-groups |
 
@@ -287,7 +354,7 @@ curl -X GET \
 ##### Response(json)
 | Name | Type | Description | Value |
 | ---- | ---- | ----------- | ----- |
-| isSuccessful | Boolean | リクエストの成否 | true または false |
+| isSuccessful | Boolean | リクエストの成否 | `true` または `false` |
 | resultCode | String | リクエスト結果のメッセージ | [エラーコード](/Dev%20Tools/Deploy/ja/error-code/) を参照 |
 | serverGroups | List | サーバーグループ一覧 | 以下の項目を参照 |
 
@@ -325,12 +392,14 @@ curl -X GET \
 ```
 
 <a id="list-binary-groups"></a>
+
 ### バイナリグループ一覧の照会 { #list-binary-groups }
 * アーティファクトに属するバイナリグループ一覧を照会するAPIです。
 
 <a id="list-binary-groups-version-21"></a>
+
 #### Version 2.1
-| Http Method | GET |
+| HTTP Method | GET |
 | ----------- | ---- |
 | Request URL | https://api-tcd.nhncloudservice.com/api/v2.1/projects/{appKey}/artifacts/{artifactId}/binary-groups |
 
@@ -344,7 +413,7 @@ curl -X GET \
 ##### Response(json)
 | Name | Type | Description | Value |
 | ---- | ---- | ----------- | ----- |
-| isSuccessful | Boolean | リクエストの成否 | true または false |
+| isSuccessful | Boolean | リクエストの成否 | `true` または `false` |
 | resultCode | String | リクエスト結果のメッセージ | [エラーコード](/Dev%20Tools/Deploy/ja/error-code/) を参照 |
 | binaryGroups | List | バイナリグループ一覧 | 以下の項目を参照 |
 
@@ -382,13 +451,15 @@ curl -X GET \
 ```
 
 <a id="list-deployment-history"></a>
+
 ### デプロイ履歴の照会 { #list-deployment-history }
 * アーティファクトのデプロイ履歴を照会するAPIです。
 * 照会期間は最大1年まで指定できます。
 
 <a id="list-deployment-history-version-21"></a>
+
 #### Version 2.1
-| Http Method | GET |
+| HTTP Method | GET |
 | ----------- | ---- |
 | Request URL | https://api-tcd.nhncloudservice.com/api/v2.1/projects/{appKey}/artifacts/{artifactId}/deploy-histories |
 
@@ -411,7 +482,7 @@ curl -X GET \
 ##### Response(json)
 | Name | Type | Description | Value |
 | ---- | ---- | ----------- | ----- |
-| isSuccessful | Boolean | リクエストの成否 | true または false |
+| isSuccessful | Boolean | リクエストの成否 | `true` または `false` |
 | resultCode | String | リクエスト結果のメッセージ | [エラーコード](/Dev%20Tools/Deploy/ja/error-code/) を参照 |
 | totalCount | Number | 総件数 | - |
 | deployHistories | List | デプロイ履歴一覧 | 以下の項目を参照 |
@@ -457,12 +528,14 @@ curl -X GET \
 ```
 
 <a id="list-binaries"></a>
+
 ### バイナリ一覧の照会 { #list-binaries }
 * バイナリグループに属するバイナリ一覧を照会するAPIです。
 
 <a id="list-binaries-version-21"></a>
+
 #### Version 2.1
-| Http Method | GET |
+| HTTP Method | GET |
 | ----------- | ---- |
 | Request URL | https://api-tcd.nhncloudservice.com/api/v2.1/projects/{appKey}/artifacts/{artifactId}/binary-groups/{binaryGroupKey}/binaries |
 
@@ -485,7 +558,7 @@ curl -X GET \
 ##### Response(json)
 | Name | Type | Description | Value |
 | ---- | ---- | ----------- | ----- |
-| isSuccessful | Boolean | リクエストの成否 | true または false |
+| isSuccessful | Boolean | リクエストの成否 | `true` または `false` |
 | resultCode | String | リクエスト結果のメッセージ | [エラーコード](/Dev%20Tools/Deploy/ja/error-code/) を参照 |
 | totalCount | Number | 総件数 | - |
 | binaries | List | バイナリ一覧 | 以下の項目を参照 |
@@ -527,25 +600,3 @@ curl -X GET \
     }
 }
 ```
-<a id="list-scenarios"></a>
-### シナリオ一覧照会 { #list-scenarios }
-
-<!-- TODO: translate body -->
-
-<a id="list-scenarios-version-21"></a>
-#### Version 2.1
-
-<!-- TODO: translate body -->
-
-##### cURL を使用したサンプルリクエスト
-
-<!-- TODO: translate body -->
-
-##### Response(json)
-
-<!-- TODO: translate body -->
-
-##### レスポンスサンプル
-
-<!-- TODO: translate body -->
-
