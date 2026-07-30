@@ -113,7 +113,7 @@ curl --location 'https://api-tcd.gov-nhncloudservice.com/api/v2.0/projects/{appK
 * 프로젝트의 아티팩트 목록을 조회하는 API입니다.
 
 #### Version 2.0
-| Http Method | GET |
+| HTTP Method | GET |
 | ----------- | ---- |
 | Request URL | https://api-tcd.gov-nhncloudservice.com/api/v2.0/projects/{appKey}/artifacts |
 
@@ -139,7 +139,7 @@ curl -X GET \
 ##### Response(json)
 | Name | Type | Description | Value |
 | ---- | ---- | ----------- | ----- |
-| isSuccessful | Boolean | 요청 성공 여부 | true 또는 false |
+| isSuccessful | Boolean | 요청 성공 여부 | `true` 또는 `false` |
 | resultCode | String | 요청 결과 메시지 | [오류 코드](/Dev%20Tools/Deploy/ko/error-code/) 참고 |
 | artifacts | List | 아티팩트 목록 | 아래 항목 참고 |
 
@@ -182,7 +182,7 @@ curl -X GET \
 * 아티팩트에 속한 서버 그룹 목록을 조회하는 API입니다.
 
 #### Version 2.0
-| Http Method | GET |
+| HTTP Method | GET |
 | ----------- | ---- |
 | Request URL | https://api-tcd.gov-nhncloudservice.com/api/v2.0/projects/{appKey}/artifacts/{artifactId}/server-groups |
 
@@ -203,7 +203,7 @@ curl -X GET \
 ##### Response(json)
 | Name | Type | Description | Value |
 | ---- | ---- | ----------- | ----- |
-| isSuccessful | Boolean | 요청 성공 여부 | true 또는 false |
+| isSuccessful | Boolean | 요청 성공 여부 | `true` 또는 `false` |
 | resultCode | String | 요청 결과 메시지 | [오류 코드](/Dev%20Tools/Deploy/ko/error-code/) 참고 |
 | serverGroups | List | 서버 그룹 목록 | 아래 항목 참고 |
 
@@ -244,7 +244,7 @@ curl -X GET \
 * 아티팩트에 속한 바이너리 그룹 목록을 조회하는 API입니다.
 
 #### Version 2.0
-| Http Method | GET |
+| HTTP Method | GET |
 | ----------- | ---- |
 | Request URL | https://api-tcd.gov-nhncloudservice.com/api/v2.0/projects/{appKey}/artifacts/{artifactId}/binary-groups |
 
@@ -265,7 +265,7 @@ curl -X GET \
 ##### Response(json)
 | Name | Type | Description | Value |
 | ---- | ---- | ----------- | ----- |
-| isSuccessful | Boolean | 요청 성공 여부 | true 또는 false |
+| isSuccessful | Boolean | 요청 성공 여부 | `true` 또는 `false` |
 | resultCode | String | 요청 결과 메시지 | [오류 코드](/Dev%20Tools/Deploy/ko/error-code/) 참고 |
 | binaryGroups | List | 바이너리 그룹 목록 | 아래 항목 참고 |
 
@@ -307,7 +307,7 @@ curl -X GET \
 * 조회 기간은 최대 1년을 초과할 수 없습니다.
 
 #### Version 2.0
-| Http Method | GET |
+| HTTP Method | GET |
 | ----------- | ---- |
 | Request URL | https://api-tcd.gov-nhncloudservice.com/api/v2.0/projects/{appKey}/artifacts/{artifactId}/deploy-histories |
 
@@ -337,7 +337,7 @@ curl -X GET \
 ##### Response(json)
 | Name | Type | Description | Value |
 | ---- | ---- | ----------- | ----- |
-| isSuccessful | Boolean | 요청 성공 여부 | true 또는 false |
+| isSuccessful | Boolean | 요청 성공 여부 | `true` 또는 `false` |
 | resultCode | String | 요청 결과 메시지 | [오류 코드](/Dev%20Tools/Deploy/ko/error-code/) 참고 |
 | totalCount | Number | 전체 건수 | - |
 | deployHistories | List | 배포 이력 목록 | 아래 항목 참고 |
@@ -386,7 +386,7 @@ curl -X GET \
 * 바이너리 그룹에 속한 바이너리 목록을 조회하는 API입니다.
 
 #### Version 2.0
-| Http Method | GET |
+| HTTP Method | GET |
 | ----------- | ---- |
 | Request URL | https://api-tcd.gov-nhncloudservice.com/api/v2.0/projects/{appKey}/artifacts/{artifactId}/binary-groups/{binaryGroupKey}/binaries |
 
@@ -416,7 +416,7 @@ curl -X GET \
 ##### Response(json)
 | Name | Type | Description | Value |
 | ---- | ---- | ----------- | ----- |
-| isSuccessful | Boolean | 요청 성공 여부 | true 또는 false |
+| isSuccessful | Boolean | 요청 성공 여부 | `true` 또는 `false` |
 | resultCode | String | 요청 결과 메시지 | [오류 코드](/Dev%20Tools/Deploy/ko/error-code/) 참고 |
 | totalCount | Number | 전체 건수 | - |
 | binaries | List | 바이너리 목록 | 아래 항목 참고 |
