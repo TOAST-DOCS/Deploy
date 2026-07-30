@@ -1,6 +1,4 @@
-<!-- pre-align:aligned sig=1700b4329367 -->
-
-<a id="dev-tools-deploy-user-guide-for-plugin"></a>
+<!-- pre-align:aligned sig=76ac679b6e63 -->
 
 ## Dev Tools > Deploy > User Guide for Plugin 
 
@@ -8,25 +6,25 @@
 
 ## Jenkins Plugin Guide { #jenkins-plugin-guide }
 
-With NHN Cloud Deploy Jenkins Plugin, build results of Jenkins can be uploaded to NHN Cloud Deploy servers.  
+The NHN Cloud Deploy Jenkins upload plugin allows you to upload Jenkins build artifacts to the NHN Cloud Deploy server.
 
 <a id="integrating-deploy---jenkins"></a>
 
-## Integrating Deploy <-> Jenkins { #integrating-deploy---jenkins }
+## Deploy <-> Jenkins Integration { #integrating-deploy---jenkins }
 
-Build Jenkins -> Upload Binary with Deploy (by plugin) -> Execute Deployment Scenario (Deploy/Close/Re-start/Prerequisites and follow-ups) 
-To this end, the deployment environment must be built in the following order: 
+Jenkins build -> Upload binary to Deploy (by plugin) -> Run deployment scenario (deploy/stop/restart/other pre- and post-processing tasks)
+To do this, you must set up the deployment environment in the following order:
 
-1. Create artifacts at Deploy
-2. Set Jenkins build job 
+1. Create an artifact in Deploy
+2. Configure the Jenkins build job
 3. Create a server group
-4. Write deployment scenario 
+4. Write a deployment scenario
 
 <a id="installing-jenkins"></a>
 
-## Installing Jenkins { #installing-jenkins }
+## Install Jenkins { #installing-jenkins }
 
-Find out how to install Jenkins and details on [https://jenkins.io/](https://jenkins.io/).
+Jenkins installation and detailed information can be found at [https://jenkins.io/](https://jenkins.io/).
 
 <a id="minimum-version-requirements-for-jenkins"></a>
 
@@ -183,7 +181,7 @@ Result in user input information, such as artifact ID and appkey, as well as bin
 
 ## Jenkins-CLI Build Profile { #jenkins-cli-build-profile }
 
-It is the pre-defined profile supporting users to execute build commands by using Jenkins-CLI. 
+A predefined profile that helps you run build commands using Jenkins-CLI.
 
 <a id="preparations"></a>
 
