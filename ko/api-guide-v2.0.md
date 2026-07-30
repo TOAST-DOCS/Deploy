@@ -1,4 +1,6 @@
-<!-- pre-align:aligned sig=bfc4bcd52718 -->
+<!-- pre-align:aligned sig=cb53ec3bd366 -->
+
+<a id="dev-tools-deploy-api-v20-guide"></a>
 
 ## Dev Tools > Deploy > API v2.0 가이드
 Deploy에서는 배포 실행, 정보 조회를 위한 API를 제공합니다. 사용자가 HTTP 요청을 직접 구성하여 사용할 수 있습니다.

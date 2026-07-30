@@ -1,4 +1,6 @@
-<!-- pre-align:aligned sig=4aca5604a494 -->
+<!-- pre-align:aligned sig=9d349a114abb -->
+
+<a id="dev-tools-deploy-api-v10-guide"></a>
 
 ## Dev Tools > Deploy > API v1.0 가이드
 Deploy에서는 바이너리 업로드, 배포 실행을 위한 API를 제공합니다. 사용자가 HTTP 요청을 직접 구성하여 사용할 수 있습니다.
