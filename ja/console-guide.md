@@ -4,8 +4,7 @@
 
 この文書では、次のような内容を扱います。
 
-* [サービス使用前の必須事項](/Dev%20Tools/Deploy/ja/console-guide/#_3)
-* [Deployコンソール画面](/Dev%20Tools/Deploy/ja/console-guide/#deploy)
+* [Deployコンソール画面](/Dev%20Tools/Deploy/ja/console-guide/#deploy-console-page)
 * [Client Application](/Dev%20Tools/Deploy/ja/console-guide/#client-application)
 * [Server Application](/Dev%20Tools/Deploy/ja/console-guide/#server-application)
 
@@ -108,7 +107,7 @@
     * OSを選択し、Shell Typeを指定します。 Shell Typeは**Shell Type**リストから選択するか、直接入力できます。
     * Phaseを選択します。サーバー機器を区分します。指定しない場合はNONEを選択します。
     * サーバー追加
-        * サーバーを追加する方法は、下記の2つです。詳細は[機能詳細ガイドサーバーグループメニュー](/Dev%20Tools/Deploy/ja/reference/#_11)で確認できます。
+        * サーバーを追加する方法は、下記の2つです。詳細は[機能詳細ガイドサーバーグループメニュー](/Dev%20Tools/Deploy/ja/reference/#server-group)で確認できます。
             * 大量追加
             * 個別追加
          * ホスト名(必須)、IPアドレス(必須)、OS(任意)を入力し、**追加**ボタンをクリックします。
@@ -156,7 +155,7 @@
 * Normal Task：デプロイ時の実行機能
 
 希望するタスクを選択して使用できます。ここではデプロイ時に必要な基本的なタスクを扱います。
-その他のタスクは[機能詳細ガイドのタスクメニュー](/Dev%20Tools/Deploy/ja/reference/#_25)で確認できます。
+その他のタスクは[機能詳細ガイドのタスクメニュー](/Dev%20Tools/Deploy/ja/reference/#tasks)で確認できます。
 
 デプロイテストのために、下記の3つのタスクを追加します。
 
@@ -166,7 +165,7 @@
 
 * デプロイ時に実行されるユーザー定義Commandタスクです。
 * Available Variablesを使用できます。
-    * Available Variables：予約語。詳細は[機能詳細ガイドのタスクメニュー](/Dev%20Tools/Deploy/ja/reference/#_25)で確認できます。
+    * Available Variables：予約語。詳細は[機能詳細ガイドのタスクメニュー](/Dev%20Tools/Deploy/ja/reference/#tasks)で確認できます。
 
 ![deploy_09_ja_20200519](https://static.toastoven.net/prod_tcdeploy/ja/deploy_09_ja_20200519.png)
 

@@ -4,8 +4,8 @@
 
 この文書では、次のような内容を扱います。
 
-* [メニュー説明](/Dev%20Tools/Deploy/ja/reference/#_1)
-* [機能別説明](/Dev%20Tools/Deploy/ja/reference/#_18)
+* [メニュー説明](/Dev%20Tools/Deploy/ja/reference/#menu-description)
+* [機能別説明](/Dev%20Tools/Deploy/ja/reference/#functional-description)
 
 <a id="menu-description"></a>
 
@@ -235,7 +235,7 @@ Auto Scaleサービスのインスタンス拡張に応じてデプロイ設定�
 バイナリをアップロードできる方法は2つです。
 
 * APIアップロード
-    * APIアップロードの詳細説明は、[APIガイドのBinary Upload API](/Dev%20Tools/Deploy/ja/api-guide-v2.1/#_4)で確認できます。
+    * APIアップロードの詳細説明は、[APIガイドのBinary Upload API](/Dev%20Tools/Deploy/ja/api-guide-v2.1/#upload-binary)で確認できます。
 * コンソールでアップロード
 
 ![deploy_ref_11_ja_20200527.png](https://static.toastoven.net/prod_tcdeploy/ja/deploy_ref_11_ja_20200527.png)

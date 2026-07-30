@@ -108,7 +108,7 @@ Deployment servers are managed by this setting.
     * Select OS and specify the **Shell Type**: enter one or select from the list. 
     * Select Phase: Choose a server tool. Otherwise, select NONE. 
     * Add Servers 
-        * Servers can be added in the following two methods, and find more details from [Detail Functional Guide on Server Groups](/Dev%20Tools/Deploy/en/reference/#_11).
+        * Servers can be added in the following two methods, and find more details from [Detail Functional Guide on Server Groups](/Dev%20Tools/Deploy/en/reference/#server-group).
             * Add in Mass
             * Add Individually 
          * Enter host name (required), IP address (required), and OS (optional), and click **Add**. 
@@ -155,7 +155,7 @@ A task is an element of a scenario which can execute individual functions and co
 * Normal Task: Execute while deployed 
 
 Choose one as you need. This document describes tasks that are basically required for deployment. 
-Find more tasks on [Detail Functional Guide on Tasks](/Dev%20Tools/Deploy/en/reference/#_25).
+Find more tasks on [Detail Functional Guide on Tasks](/Dev%20Tools/Deploy/en/reference/#tasks).
 
 To test deployment, the following three tasks are added: 
 
@@ -165,7 +165,7 @@ To test deployment, the following three tasks are added:
 
 * It is a user-defined command task which is executed for deployment. 
 * You may use Available Variables.
-    * Available Variables: Reserved words. Find more details on [Detail Functional Guide on Tasks](/Dev%20Tools/Deploy/en/reference/#_25).
+    * Available Variables: Reserved words. Find more details on [Detail Functional Guide on Tasks](/Dev%20Tools/Deploy/en/reference/#tasks).
 
 ![deploy_09_201812](https://static.toastoven.net/prod_tcdeploy/deploy_09_201812.png)
 

@@ -4,7 +4,7 @@
 
 이 문서에서는 다음과 같은 내용을 다룹니다.
 
-* [Deploy 콘솔 화면](/Dev%20Tools/Deploy/ko/console-guide/#deploy)
+* [Deploy 콘솔 화면](/Dev%20Tools/Deploy/ko/console-guide/#deploy-console-page)
 * [Client Application](/Dev%20Tools/Deploy/ko/console-guide/#client-application)
 * [Server Application](/Dev%20Tools/Deploy/ko/console-guide/#server-application)
 
@@ -107,7 +107,7 @@
     * OS를 선택하고 Shell Type을 지정합니다. Shell Type은 **Shell Type** 목록에서 선택하거나 직접 입력할 수 있습니다.
     * Phase를 선택합니다. 서버 장비를 구분합니다. 지정하지 않으려면 NONE을 선택합니다.
     * 서버 추가
-        * 서버를 추가하는 방법은 아래 두 가지이며 자세한 내용은 [기능 상세 가이드 서버 그룹 메뉴](/Dev%20Tools/Deploy/ko/reference/#_11)에서 확인할 수 있습니다.
+        * 서버를 추가하는 방법은 아래 두 가지이며 자세한 내용은 [기능 상세 가이드 서버 그룹 메뉴](/Dev%20Tools/Deploy/ko/reference/#server-group)에서 확인할 수 있습니다.
             * 대량 추가
             * 개별 추가
          * 호스트 이름(필수), IP 주소(필수), OS(선택)를 입력하고 **추가** 버튼을 클릭합니다.
@@ -155,7 +155,7 @@
 * Normal Task: 배포 시 실행 기능
 
 원하는 것을 선택해서 사용할 수 있습니다. 여기에서는 기본적인 배포 시 필요한 태스크를 다룹니다.
-더 많은 태스크는 [기능 상세 가이드의 태스크 메뉴](/Dev%20Tools/Deploy/ko/reference/#_25)에서 확인할 수 있습니다.
+더 많은 태스크는 [기능 상세 가이드의 태스크 메뉴](/Dev%20Tools/Deploy/ko/reference/#tasks)에서 확인할 수 있습니다.
 
 배포 테스트를 위해 아래 세 개의 태스크를 추가합니다.
 
@@ -165,7 +165,7 @@
 
 * 배포 시 실행되는 사용자 정의 Command 태스크입니다.
 * Available Variables를 사용할 수 있습니다.
-    * Available Variables: 예약어. 자세한 내용은 [기능 상세 가이드의 태스크 메뉴](/Dev%20Tools/Deploy/ko/reference/#_25)에서 확인하실 수 있습니다.
+    * Available Variables: 예약어. 자세한 내용은 [기능 상세 가이드의 태스크 메뉴](/Dev%20Tools/Deploy/ko/reference/#tasks)에서 확인하실 수 있습니다.
 
 ![deploy_09_201812](https://static.toastoven.net/prod_tcdeploy/deploy_09_201812.png)
 
