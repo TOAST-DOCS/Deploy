@@ -1,6 +1,4 @@
-<!-- pre-align:aligned sig=9d349a114abb -->
-
-<a id="dev-tools-deploy-api-v10-guide"></a>
+<!-- pre-align:aligned sig=4aca5604a494 -->
 
 ## Dev Tools > Deploy > API v1.0ガイド
 Deployでは、ユーザーがHTTP Requestを直接構成してバイナリアップロード、デプロイを実行するためのAPIを提供します。
@@ -36,7 +34,7 @@ https://api-tcd.nhncloudservice.com
 
 <a id="binary-upload"></a>
 
-### バイナリアップロード { #binary-upload }
+### バイナリのアップロード { #binary-upload }
 <a id="version-10"></a>
 
 #### Version 1.0
@@ -234,10 +232,10 @@ try {
 
 <a id="run-deployment"></a>
 
-### デプロイ実行 { #run-deployment }
-* デプロイを実行するためのAPIです。
-* アーティファクト `Command Type`がCloud Agentの場合のみデプロイ実行APIを提供します(SSHの場合は提供されません)。
-* デプロイ実行APIはロールベースのアクセス制御(RBAC)を使用します。**Deploy ADMIN**ロールを保有するユーザーのみがデプロイ実行APIを使用できます。
+### デプロイの実行 { #run-deployment }
+* デプロイ実行のための API です。
+* アーティファクトの `Command Type` が Cloud Agent の場合のみ、デプロイ実行 API を提供します。（SSH の場合は提供されません。）
+* デプロイ実行 API は役割ベースのアクセス制御（RBAC）を使用します。**Deploy ADMIN** 役割を保有するユーザーのみデプロイ実行 API を使用できます。
 
 <a id="run-deployment-version-10"></a>
 
