@@ -1,6 +1,4 @@
-<!-- pre-align:aligned sig=1700b4329367 -->
-
-<a id="dev-tools-deploy-user-guide-for-plugin"></a>
+<!-- pre-align:aligned sig=76ac679b6e63 -->
 
 ## Dev Tools > Deploy > プラグイン使用ガイド
 
@@ -8,25 +6,25 @@
 
 ## Jenkins Plugin Guide { #jenkins-plugin-guide }
 
-NHN Cloud Deploy Jenkinsアップロードプラグインを使用すると、Jenkinsのビルド結果物をNHN Cloud Deployサーバーにアップロードできます。
+NHN Cloud Deploy Jenkins アップロードプラグインを使用すると、Jenkins のビルド成果物を NHN Cloud Deploy サーバーにアップロードできます。
 
 <a id="integrating-deploy---jenkins"></a>
 
-## Deploy <-> Jenkins連携方法 { #integrating-deploy---jenkins }
+## Deploy <-> Jenkins 連携手順 { #integrating-deploy---jenkins }
 
-Jenkins build -> Deployにバイナリをアップロード(by plugin) -> デプロイシナリオ実行(デプロイ/終了/再起動/その他の事前作業および後処理)
-これを行うために、次の順序でデプロイ環境を構築する必要があります。
+Jenkins build -> Deploy へのバイナリアップロード（by plugin）-> デプロイシナリオの実行（デプロイ/停止/再起動/その他の事前作業および後処理）
+このために、次の順序でデプロイ環境を構築する必要があります。
 
-1. Deployにアーティファクトを作成
-2. Jenkins build jobを設定
-3. サーバーグループを作成
-4. デプロイシナリオを作成
+1. Deploy にアーティファクトを作成します
+2. Jenkins build job を設定します
+3. サーバーグループを作成します
+4. デプロイシナリオを作成します
 
 <a id="installing-jenkins"></a>
 
-## Jenkinsインストール { #installing-jenkins }
+## Jenkins のインストール { #installing-jenkins }
 
-Jenkinsのインストールおよび詳細は、[https://jenkins.io/](https://jenkins.io/)で確認できます。
+Jenkins のインストールおよび詳細については、[https://jenkins.io/](https://jenkins.io/) で確認できます。
 
 <a id="minimum-version-requirements-for-jenkins"></a>
 
@@ -181,7 +179,7 @@ artifact id、app keyなど、ユーザー入力情報や、アップロード�
 
 ## Jenkins-CLI Build Profile { #jenkins-cli-build-profile }
 
-ユーザーがJenkins-CLIを使用してビルドコマンド実行に役立つ、事前に定義されたProfileです。
+Jenkins-CLI を使用してビルドコマンドを実行する際に役立つ、事前に定義された Profile です。
 
 <a id="preparations"></a>
 
