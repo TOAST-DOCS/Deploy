@@ -1,6 +1,4 @@
-<!-- pre-align:aligned sig=9d349a114abb -->
-
-<a id="dev-tools-deploy-api-v10-guide"></a>
+<!-- pre-align:aligned sig=4aca5604a494 -->
 
 ## Dev Tools > Deploy > API v1.0 Guide
 Deploy provides APIs for binary upload and deployment execution. You can configure and send HTTP requests directly.
@@ -36,7 +34,7 @@ https://api-tcd.nhncloudservice.com
 
 <a id="binary-upload"></a>
 
-### Binary Upload { #binary-upload }
+### Upload Binary { #binary-upload }
 <a id="version-10"></a>
 
 #### Version 1.0
@@ -235,9 +233,9 @@ try {
 <a id="run-deployment"></a>
 
 ### Run Deployment { #run-deployment }
-* API for running deployments.
-* The artifact `Command Type`provides a deployment execution API only for Cloud Agent (not for SSH).
-* The deployment execution API uses role-based access control (RBAC). Only users with the Deploy ADMIN role can use the deployment execution API.
+* This API is used to run deployments.
+* The deployment run API is only available when the artifact `Command Type` is Cloud Agent. (It is not supported for SSH.)
+* The deployment run API uses role-based access control (RBAC). Only users with the **Deploy ADMIN** role can use the deployment run API.
 
 <a id="run-deployment-version-10"></a>
 
