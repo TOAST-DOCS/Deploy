@@ -1,6 +1,4 @@
-<!-- pre-align:aligned sig=cb53ec3bd366 -->
-
-<a id="dev-tools-deploy-api-v20-guide"></a>
+<!-- pre-align:aligned sig=bfc4bcd52718 -->
 
 ## Dev Tools > Deploy > API v2.0ガイド
 Deployでは、デプロイの実行や情報照会のためのAPIを提供しています。ユーザーがHTTPリクエストを独自に構成して使用できます。
@@ -40,10 +38,10 @@ https://api-tcd.nhncloudservice.com
 <a id="execute-deployment"></a>
 
 ### デプロイ実行 { #execute-deployment }
-* デプロイを実行するためのAPIです。
-* アーティファクト `Command Type`がCloud Agentの場合のみデプロイ実行APIを提供します(SSHの場合は提供されません)。
-* v2.0では、Autoscaleサーバーグループにもデプロイを実行できます。
-* デプロイ実行APIはロールベースのアクセス制御(RBAC)を使用します。**Deploy ADMIN**ロールを保有するユーザーのみがデプロイ実行APIを使用できます。
+* デプロイ実行のための API です。
+* アーティファクトの `Command Type` が Cloud Agent の場合のみ、デプロイ実行 API を提供します。（SSH の場合は提供されません。）
+* v2.0 では、Autoscale サーバーグループもデプロイ実行が可能です。
+* デプロイ実行 API はロールベースのアクセス制御 (RBAC) を使用します。**Deploy ADMIN** ロールを保有するユーザーのみがデプロイ実行 API を使用できます。
 
 <a id="version-20"></a>
 
@@ -128,8 +126,8 @@ curl --location 'https://api-tcd.nhncloudservice.com/api/v2.0/projects/{appKey}/
 
 <a id="list-artifacts"></a>
 
-### アーティファクト一覧の照会 { #list-artifacts }
-* プロジェクトのアーティファクト一覧を照会するAPIです。
+### アーティファクト一覧照会 { #list-artifacts }
+* プロジェクトのアーティファクト一覧を照会する API です。
 
 <a id="list-artifacts-version-20"></a>
 
@@ -201,8 +199,8 @@ curl -X GET \
 
 <a id="list-server-groups"></a>
 
-### サーバーグループ一覧の照会 { #list-server-groups }
-* アーティファクトに属するサーバーグループ一覧を照会するAPIです。
+### サーバーグループ一覧照会 { #list-server-groups }
+* アーティファクトに属するサーバーグループの一覧を照会する API です。
 
 <a id="list-server-groups-version-20"></a>
 
@@ -267,8 +265,8 @@ curl -X GET \
 
 <a id="list-binary-groups"></a>
 
-### バイナリグループ一覧の照会 { #list-binary-groups }
-* アーティファクトに属するバイナリグループ一覧を照会するAPIです。
+### バイナリグループ一覧照会 { #list-binary-groups }
+* アーティファクトに属するバイナリグループの一覧を照会する API です。
 
 <a id="list-binary-groups-version-20"></a>
 
@@ -334,8 +332,8 @@ curl -X GET \
 <a id="list-deployment-history"></a>
 
 ### デプロイ履歴の照会 { #list-deployment-history }
-* アーティファクトのデプロイ履歴を照会するAPIです。
-* 照会期間は最大1年まで指定できます。
+* アーティファクトのデプロイ履歴を照会する API です。
+* 照会期間は最大 1 年を超えることはできません。
 
 <a id="list-deployment-history-version-20"></a>
 
@@ -417,8 +415,8 @@ curl -X GET \
 
 <a id="list-binaries"></a>
 
-### バイナリ一覧の照会 { #list-binaries }
-* バイナリグループに属するバイナリ一覧を照会するAPIです。
+### バイナリ一覧照会 { #list-binaries }
+* バイナリグループに属するバイナリの一覧を照会する API です。
 
 <a id="list-binaries-version-20"></a>
 
