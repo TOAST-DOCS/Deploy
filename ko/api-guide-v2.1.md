@@ -62,7 +62,7 @@ Deploy API는 역할 기반 접근 제어(RBAC)를 사용합니다.<br>
 <a id="version-21"></a>
 
 #### Version 2.1
-| Http Method | POST |
+| HTTP Method | POST |
 | ----------- | ---- |
 | Request URL | https://api-tcd.nhncloudservice.com/api/v2.1/projects/{appKey}/artifacts/{artifactId}/binary-group/{binaryGroupKey} |
 
@@ -119,7 +119,7 @@ curl -X POST \
 <a id="download-binary-version-21"></a>
 
 #### Version 2.1
-| Http Method | GET |
+| HTTP Method | GET |
 | ----------- | ---- |
 | Request URL | https://api-tcd.nhncloudservice.com/api/v2.1/projects/{appKey}/artifacts/{artifactId}/binary-group/{binaryGroupKey}/binaries/{binaryKey} |
 
@@ -145,7 +145,7 @@ curl -X GET \
 <a id="execute-deployment-version-21"></a>
 
 #### Version 2.1
-| Http Method | POST |
+| HTTP Method | POST |
 | ----------- | ---- |
 | Request URL | https://api-tcd.nhncloudservice.com/api/v2.1/projects/{appKey}/artifacts/{artifactId}/server-group/{serverGroupId}/deploy |
 
@@ -223,7 +223,7 @@ curl --location 'https://api-tcd.nhncloudservice.com/api/v2.1/projects/{appKey}/
 <a id="list-artifacts-version-21"></a>
 
 #### Version 2.1
-| Http Method | GET |
+| HTTP Method | GET |
 | ----------- | ---- |
 | Request URL | https://api-tcd.nhncloudservice.com/api/v2.1/projects/{appKey}/artifacts |
 
@@ -242,7 +242,7 @@ curl -X GET \
 ##### Response(json)
 | Name | Type | Description | Value |
 | ---- | ---- | ----------- | ----- |
-| isSuccessful | Boolean | 요청 성공 여부 | true 또는 false |
+| isSuccessful | Boolean | 요청 성공 여부 | `true` 또는 `false` |
 | resultCode | String | 요청 결과 메시지 | [오류 코드](/Dev%20Tools/Deploy/ko/error-code/) 참고 |
 | artifacts | List | 아티팩트 목록 | 아래 항목 참고 |
 
@@ -289,7 +289,7 @@ curl -X GET \
 <a id="list-server-groups-version-21"></a>
 
 #### Version 2.1
-| Http Method | GET |
+| HTTP Method | GET |
 | ----------- | ---- |
 | Request URL | https://api-tcd.nhncloudservice.com/api/v2.1/projects/{appKey}/artifacts/{artifactId}/server-groups |
 
@@ -303,7 +303,7 @@ curl -X GET \
 ##### Response(json)
 | Name | Type | Description | Value |
 | ---- | ---- | ----------- | ----- |
-| isSuccessful | Boolean | 요청 성공 여부 | true 또는 false |
+| isSuccessful | Boolean | 요청 성공 여부 | `true` 또는 `false` |
 | resultCode | String | 요청 결과 메시지 | [오류 코드](/Dev%20Tools/Deploy/ko/error-code/) 참고 |
 | serverGroups | List | 서버 그룹 목록 | 아래 항목 참고 |
 
@@ -348,7 +348,7 @@ curl -X GET \
 <a id="list-binary-groups-version-21"></a>
 
 #### Version 2.1
-| Http Method | GET |
+| HTTP Method | GET |
 | ----------- | ---- |
 | Request URL | https://api-tcd.nhncloudservice.com/api/v2.1/projects/{appKey}/artifacts/{artifactId}/binary-groups |
 
@@ -362,7 +362,7 @@ curl -X GET \
 ##### Response(json)
 | Name | Type | Description | Value |
 | ---- | ---- | ----------- | ----- |
-| isSuccessful | Boolean | 요청 성공 여부 | true 또는 false |
+| isSuccessful | Boolean | 요청 성공 여부 | `true` 또는 `false` |
 | resultCode | String | 요청 결과 메시지 | [오류 코드](/Dev%20Tools/Deploy/ko/error-code/) 참고 |
 | binaryGroups | List | 바이너리 그룹 목록 | 아래 항목 참고 |
 
@@ -408,7 +408,7 @@ curl -X GET \
 <a id="list-deployment-history-version-21"></a>
 
 #### Version 2.1
-| Http Method | GET |
+| HTTP Method | GET |
 | ----------- | ---- |
 | Request URL | https://api-tcd.nhncloudservice.com/api/v2.1/projects/{appKey}/artifacts/{artifactId}/deploy-histories |
 
@@ -431,7 +431,7 @@ curl -X GET \
 ##### Response(json)
 | Name | Type | Description | Value |
 | ---- | ---- | ----------- | ----- |
-| isSuccessful | Boolean | 요청 성공 여부 | true 또는 false |
+| isSuccessful | Boolean | 요청 성공 여부 | `true` 또는 `false` |
 | resultCode | String | 요청 결과 메시지 | [오류 코드](/Dev%20Tools/Deploy/ko/error-code/) 참고 |
 | totalCount | Number | 전체 건수 | - |
 | deployHistories | List | 배포 이력 목록 | 아래 항목 참고 |
@@ -484,7 +484,7 @@ curl -X GET \
 <a id="list-binaries-version-21"></a>
 
 #### Version 2.1
-| Http Method | GET |
+| HTTP Method | GET |
 | ----------- | ---- |
 | Request URL | https://api-tcd.nhncloudservice.com/api/v2.1/projects/{appKey}/artifacts/{artifactId}/binary-groups/{binaryGroupKey}/binaries |
 
@@ -507,7 +507,7 @@ curl -X GET \
 ##### Response(json)
 | Name | Type | Description | Value |
 | ---- | ---- | ----------- | ----- |
-| isSuccessful | Boolean | 요청 성공 여부 | true 또는 false |
+| isSuccessful | Boolean | 요청 성공 여부 | `true` 또는 `false` |
 | resultCode | String | 요청 결과 메시지 | [오류 코드](/Dev%20Tools/Deploy/ko/error-code/) 참고 |
 | totalCount | Number | 전체 건수 | - |
 | binaries | List | 바이너리 목록 | 아래 항목 참고 |
@@ -554,7 +554,7 @@ curl -X GET \
 * 서버 그룹에 매핑된 시나리오 목록을 조회하는 API입니다.
 
 #### Version 2.1
-| Http Method | GET |
+| HTTP Method | GET |
 | ----------- | ---- |
 | Request URL | https://api-tcd.nhncloudservice.com/api/v2.1/projects/{appKey}/artifacts/{artifactId}/server-groups/{serverGroupId}/scenarios |
 
@@ -568,7 +568,7 @@ curl -X GET \
 ##### Response(json)
 | Name | Type | Description | Value |
 | ---- | ---- | ----------- | ----- |
-| isSuccessful | Boolean | 요청 성공 여부 | true 또는 false |
+| isSuccessful | Boolean | 요청 성공 여부 | `true` 또는 `false` |
 | resultCode | String | 요청 결과 메시지 | [오류 코드](/Dev%20Tools/Deploy/ko/error-code/) 참고 |
 | scenarios | List | 시나리오 목록 | 아래 항목 참고 |
 

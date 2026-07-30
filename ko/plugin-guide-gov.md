@@ -1,10 +1,14 @@
 ## Dev Tools > Deploy > 플러그인 사용 가이드
 
-## Jenkins Plugin Guide
+<a id="jenkins-plugin-guide"></a>
+
+## Jenkins Plugin Guide { #jenkins-plugin-guide }
 
 NHN Cloud Deploy Jenkins 업로드 플러그인을 사용하면 Jenkins의 빌드 결과물을 NHN Cloud Deploy 서버로 업로드할 수 있습니다.
 
-## Deploy <-> Jenkins 연동 절차
+<a id="integrating-deploy---jenkins"></a>
+
+## Deploy <-> Jenkins 연동 절차 { #integrating-deploy---jenkins }
 
 Jenkins build -> Deploy로 바이너리 업로드(by plugin) -> 배포 시나리오 실행(배포/종료/재시작/기타 사전 작업 및 후처리)
 이를 위해 다음 순서대로 배포 환경을 구축해야 합니다.
@@ -14,13 +18,19 @@ Jenkins build -> Deploy로 바이너리 업로드(by plugin) -> 배포 시나리
 3. 서버 그룹 생성
 4. 배포 시나리오 작성
 
-## Jenkins 설치
+<a id="installing-jenkins"></a>
+
+## Jenkins 설치 { #installing-jenkins }
 
 Jenkins 설치 및 자세한 사항은 [https://jenkins.io/](https://jenkins.io/)에서 확인할 수 있습니다.
+
+<a id="minimum-version-requirements-for-jenkins"></a>
 
 #### Jenkins 최소 요구 사항 버전
 
 **Jenkins 1580.1** 이후 버전을 요구합니다.
+
+<a id="installing-jenkins-1"></a>
 
 #### 플러그인 설치
 
@@ -36,6 +46,8 @@ Jenkins 설치 및 자세한 사항은 [https://jenkins.io/](https://jenkins.io/
 3. 해당 빌드 설정의 **빌드 후 조치 추가** 버튼을 클릭해서 서버 또는 클라이언트 타입 애플리케이션 업로드 태스크를 추가할 수 있습니다.
 
     ![03.png](http://static.toastoven.net/prod_tcdeploy/devguide/03.png)
+
+<a id="plugin-setting-for-server-type-application-uploads"></a>
 
 #### 서버(server) 타입 애플리케이션 업로드 플러그인 설정
 
@@ -113,6 +125,8 @@ Finished: SUCCESS
 
 artifact id, app key 등 사용자 입력 정보가 출력되고, 압축 파일에 포함된 파일 내용을 출력합니다.
 
+<a id="plugin-setting-for-client-type-application-uploads"></a>
+
 #### 클라이언트(client) 타입 애플리케이션 업로드 플러그인 설정
 
 클라이언트 타입 애플리케이션 업로드 플러그인으로 성공적으로 빌드된 결과물 중 사용자가 지정한 특정 바이너리를 TCD 서버로 업로드할 수 있습니다.
@@ -161,9 +175,13 @@ Finished: SUCCESS
 
 artifact id, app key 등 사용자 입력 정보가 출력되고, 업로드할 바이너리 및 메타파일이 출력됩니다.
 
-## Jenkins-CLI Build Profile
+<a id="jenkins-cli-build-profile"></a>
+
+## Jenkins-CLI Build Profile { #jenkins-cli-build-profile }
 
 사용자가 Jenkins-CLI를 사용하여 빌드 명령 수행에 도움을 주는 사전에 정의된 Profile입니다.
+
+<a id="preparations"></a>
 
 #### 준비 사항
 
@@ -181,6 +199,8 @@ artifact id, app key 등 사용자 입력 정보가 출력되고, 업로드할 �
     * 빌드 콘솔 출력 중 java.io.StreamCorruptedException이 발생할 경우 Jenkins를 수행하는 JVM옵션에 -Dhudson.diyChunking=false 옵션 추가.
     * 예) Jenkins를 RPM으로 설치했을 경우.
         * /etc/sysconfig/jenkins의 JENKINS\_JAVA\_OPTIONS에 -Dhudson.diyChunking=false 옵션 추가.
+
+<a id="setting-profile"></a>
 
 #### Profile 설정
 
