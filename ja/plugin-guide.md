@@ -1,10 +1,16 @@
+<!-- pre-align:aligned sig=76ac679b6e63 -->
+
 ## Dev Tools > Deploy > プラグイン使用ガイド
 
-## Jenkins Plugin Guide
+<a id="jenkins-plugin-guide"></a>
+
+## Jenkins Plugin Guide { #jenkins-plugin-guide }
 
 NHN Cloud Deploy Jenkinsアップロードプラグインを使用すると、Jenkinsのビルド結果物をNHN Cloud Deployサーバーにアップロードできます。
 
-## Deploy <-> Jenkins連携方法
+<a id="integrating-deploy---jenkins"></a>
+
+## Deploy <-> Jenkins連携方法 { #integrating-deploy---jenkins }
 
 Jenkins build -> Deployにバイナリをアップロード(by plugin) -> デプロイシナリオ実行(デプロイ/終了/再起動/その他の事前作業および後処理)
 これを行うために、次の順序でデプロイ環境を構築する必要があります。
@@ -14,13 +20,19 @@ Jenkins build -> Deployにバイナリをアップロード(by plugin) -> デプ
 3. サーバーグループを作成
 4. デプロイシナリオを作成
 
-## Jenkinsインストール
+<a id="installing-jenkins"></a>
+
+## Jenkinsインストール { #installing-jenkins }
 
 Jenkinsのインストールおよび詳細は、[https://jenkins.io/](https://jenkins.io/)で確認できます。
+
+<a id="minimum-version-requirements-for-jenkins"></a>
 
 #### Jenkinsの最小要件
 
 **Jenkins 1580.1**以降のバージョンが必要です。
+
+<a id="installing-jenkins-1"></a>
 
 #### プラグインインストール
 
@@ -36,6 +48,8 @@ Jenkinsのインストールおよび詳細は、[https://jenkins.io/](https://j
 3. 該当ビルド設定の**ビルド後の措置を追加**ボタンをクリックして、サーバーまたはクライアントタイプアプリケーションアップロードタスクを追加できます。
 
     ![[図3]インストールされたプラグインリスト](http://static.toastoven.net/prod_tcdeploy/devguide/03.png)
+
+<a id="plugin-setting-for-server-type-application-uploads"></a>
 
 #### サーバー(server)タイプアプリケーションアップロードプラグイン設定
 
@@ -111,6 +125,8 @@ Finished: SUCCESS
 
 artifact id、app keyなどのユーザー入力情報が表示され、圧縮ファイルに含まれたファイル内容を表示します。
 
+<a id="plugin-setting-for-client-type-application-uploads"></a>
+
 #### クライアント(client)タイプアプリケーションアップロードプラグイン設定
 
 クライアントタイプアプリケーションアップロードプラグインで、ビルドが成功した結果物のうち、ユーザーが指定した特定バイナリをTCDサーバーにアップロードできます。
@@ -159,9 +175,13 @@ Finished: SUCCESS
 
 artifact id、app keyなど、ユーザー入力情報や、アップロードするバイナリおよびメタファイルが表示されます。
 
-## Jenkins-CLI Build Profile
+<a id="jenkins-cli-build-profile"></a>
+
+## Jenkins-CLI Build Profile { #jenkins-cli-build-profile }
 
 ユーザーがJenkins-CLIを使用してビルドコマンド実行に役立つ、事前に定義されたProfileです。
+
+<a id="preparations"></a>
 
 #### 準備事項
 
@@ -179,6 +199,8 @@ artifact id、app keyなど、ユーザー入力情報や、アップロード�
     * ビルドコンソール表示中にjava.io.StreamCorruptedExceptionが発生した場合、Jenkinsを実行するJVMオプションに-Dhudson.diyChunking=falseオプションを追加。
     * 例) JenkinsをRPMでインストールした場合。
         * /etc/sysconfig/jenkinsのJENKINS\_JAVA\_OPTIONSに -Dhudson.diyChunking=falseオプション追加。
+
+<a id="setting-profile"></a>
 
 #### Profile設定
 

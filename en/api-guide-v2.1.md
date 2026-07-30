@@ -1,16 +1,26 @@
+<!-- pre-align:aligned sig=28e392d2a044 -->
+
 ## Dev Tools > Deploy > API v2.1 Guide
 Deploy provides APIs for binary upload, binary download, deployment execution, and information retrieval. You can configure and send HTTP requests directly.
 
-### Basic Information
+<a id="basic-information"></a>
+
+### Basic Information { #basic-information }
+<a id="endpoint"></a>
+
 #### Endpoint
 ```text
 https://api-tcd.nhncloudservice.com
 ```
 
+<a id="api-request-http-header"></a>
+
 #### API Request HTTP Header
 ```
 X-NHN-AUTHORIZATION: Bearer {issued token}
 ```
+
+<a id="authentication-and-authorization"></a>
 
 #### Authentication and Authorization
 Deploy uses User Access Key tokens for authentication and authorization when calling the API.
@@ -19,6 +29,8 @@ For more information on issuing and using User Access Key tokens, see [User Acce
 
 Deploy APIs use role-based access control (RBAC).<br>
 Users must have the **Deploy ADMIN role** or **Deploy VIEWER role** to use the APIs.
+
+<a id="available-apis"></a>
 
 #### Available APIs
 | Method | URI | Description |
@@ -32,6 +44,8 @@ Users must have the **Deploy ADMIN role** or **Deploy VIEWER role** to use the A
 | GET | /api/v2.1/projects/{appKey}/artifacts/{artifactId}/deploy-histories | Deployment history retrieval API |
 | GET | /api/v2.1/projects/{appKey}/artifacts/{artifactId}/binary-groups/{binaryGroupKey}/binaries | Binary list retrieval API |
 
+<a id="api-request-path-variables"></a>
+
 #### API Request Path Variables
 | Value | Type | Description |
 | --- | --- | --- |
@@ -41,7 +55,11 @@ Users must have the **Deploy ADMIN role** or **Deploy VIEWER role** to use the A
 | binaryKey | Number | Binary key, issued upon upload |
 | serverGroupId | Number | ID of the server group to deploy to |
 
-### Upload Binary
+<a id="upload-binary"></a>
+
+### Upload Binary { #upload-binary }
+<a id="version-21"></a>
+
 #### Version 2.1
 | Http Method | POST |
 | ----------- | ---- |
@@ -92,8 +110,12 @@ curl -X POST \
 }
 ```
 
-### Download Binary
+<a id="download-binary"></a>
+
+### Download Binary { #download-binary }
 You can download a binary file using the download path received in the response from the binary upload API.
+
+<a id="download-binary-version-21"></a>
 
 #### Version 2.1
 | Http Method | GET |
@@ -112,10 +134,14 @@ curl -X GET \
 * Downloads the binary file.
 * Content-Type: `application/octet-stream`
 
-### Execute Deployment
+<a id="execute-deployment"></a>
+
+### Execute Deployment { #execute-deployment }
 * This API is used for deployment execution.
 * The deployment execution API is only available when the artifact `Command Type` is Cloud Agent. (Not available for SSH.)
 * In v2.1, deployment execution is also supported for Autoscale server groups.
+
+<a id="execute-deployment-version-21"></a>
 
 #### Version 2.1
 | Http Method | POST |
@@ -188,8 +214,12 @@ curl --location 'https://api-tcd.nhncloudservice.com/api/v2.1/projects/{appKey}/
 }
 ```
 
-### List Artifacts
+<a id="list-artifacts"></a>
+
+### List Artifacts { #list-artifacts }
 * This API retrieves a list of artifacts in a project.
+
+<a id="list-artifacts-version-21"></a>
 
 #### Version 2.1
 | Http Method | GET |
@@ -250,8 +280,12 @@ curl -X GET \
 }
 ```
 
-### List Server Groups
+<a id="list-server-groups"></a>
+
+### List Server Groups { #list-server-groups }
 * This API retrieves a list of server groups belonging to an artifact.
+
+<a id="list-server-groups-version-21"></a>
 
 #### Version 2.1
 | Http Method | GET |
@@ -305,8 +339,12 @@ curl -X GET \
 }
 ```
 
-### List Binary Groups
+<a id="list-binary-groups"></a>
+
+### List Binary Groups { #list-binary-groups }
 * This API retrieves a list of binary groups belonging to an artifact.
+
+<a id="list-binary-groups-version-21"></a>
 
 #### Version 2.1
 | Http Method | GET |
@@ -360,9 +398,13 @@ curl -X GET \
 }
 ```
 
-### List Deployment History
+<a id="list-deployment-history"></a>
+
+### List Deployment History { #list-deployment-history }
 * This API retrieves the deployment history of an artifact.
 * The query period cannot exceed 1 year.
+
+<a id="list-deployment-history-version-21"></a>
 
 #### Version 2.1
 | Http Method | GET |
@@ -433,8 +475,12 @@ curl -X GET \
 }
 ```
 
-### List Binaries
+<a id="list-binaries"></a>
+
+### List Binaries { #list-binaries }
 * This API retrieves a list of binaries belonging to a binary group.
+
+<a id="list-binaries-version-21"></a>
 
 #### Version 2.1
 | Http Method | GET |

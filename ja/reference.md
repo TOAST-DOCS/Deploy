@@ -1,20 +1,28 @@
+<!-- pre-align:aligned sig=2713ccfb4584 -->
+
 ## Dev Tools > Deploy > 機能詳細ガイド
 
 この文書では、次のような内容を扱います。
 
-* [メニュー説明](/Dev%20Tools/Deploy/ja/reference/#_1)
-* [機能別説明](/Dev%20Tools/Deploy/ja/reference/#_18)
+* [メニュー説明](/Dev%20Tools/Deploy/ja/reference/#menu-description)
+* [機能別説明](/Dev%20Tools/Deploy/ja/reference/#functional-description)
 
-## メニュー説明
+<a id="menu-description"></a>
+
+## メニュー説明 { #menu-description }
 
 ![deploy_ref_01_ja_20200527](https://static.toastoven.net/prod_tcdeploy/ja/deploy_ref_01_ja_20200527.png)
 
-### 1. アーティファクトメニュー領域
+<a id="artifact-menu"></a>
+
+### 1. アーティファクトメニュー領域 { #artifact-menu }
 
 デプロイを管理するDeploy構成の基本単位です。
 作成されたアーティファクトは、画面上部にリスト形式で表示されます。
 
-### 2. デプロイメニュー領域
+<a id="deployment-menu"></a>
+
+### 2. デプロイメニュー領域 { #deployment-menu }
 
 デプロイを行うページでシナリオ作成と設定ができます。
 シナリオにはJenkins-CLIテンプレート、バイナリデプロイ、ファイルデプロイがあり、ユーザーが直接コマンドを入力でき、自由にスクリプトを実行できます。
@@ -28,6 +36,8 @@
 * サーバーグループとシナリオを選択してデプロイ
 * サーバーグループ内サーバー同時/個別デプロイ
 * デプロイノートにデプロイ詳細内容を入力すると、**デプロイ履歴**タブのデプロイ別結果参照ウィンドウで確認できます。 
+
+<a id="deployment-option"></a>
 
 #### デプロイオプション
 
@@ -57,6 +67,8 @@
 * **無中断**
     * エラーの有無に関係なく、シナリオが継続して実行されます。
 
+<a id="view-current-deployment-status"></a>
+
 #### 進行中のデプロイ状態を確認
 
 デプロイ中のシナリオの進行状況を確認できます。
@@ -66,7 +78,9 @@
 * デプロイ中のアーティファクトをクリックし、表示されるヘッダで確認したいデプロイ項目をクリックします。
 * デプロイ履歴画面で'deploying'状態をクリックします。
 
-### デプロイ履歴
+<a id="deployment-history"></a>
+
+### デプロイ履歴 { #deployment-history }
 デプロイ履歴とデプロイ設定、デプロイノートの詳細な内容を確認できます。
 ![deploy_ref_01_2021.png](https://static.toastoven.net/prod_tcdeploy/reference/deploy_ref_01_2021.png)
 ![deploy_ref_02_2021.png](https://static.toastoven.net/prod_tcdeploy/reference/deploy_ref_02_2021.png)
@@ -93,7 +107,9 @@
     * **バイナリファイルがない履歴を除外**を選択して**ダウンロード**をクリックした時
     ![deploy_ref_06_2021.png](https://static.toastoven.net/prod_tcdeploy/reference/deploy_ref_06_2021.png)
     
-### バイナリグループ
+<a id="binary-group"></a>
+
+### バイナリグループ { #binary-group }
 
 **バイナリグループ**タブでは、バイナリをグループで管理できます。
 Develop、Staging、Productなどのサーバー機器にデプロイされるバイナリを区分する時に活用できます。
@@ -109,7 +125,9 @@ Develop、Staging、Productなどのサーバー機器にデプロイされる�
 * 自動削除設定に該当バイナリグループの自動削除ポリシーを設定できます。
     * 自動削除設定の各項目を空の値にしてバイナリグループを作成した場合、自動削除設定は適用されません。
 
-### サーバーグループ
+<a id="server-group"></a>
+
+### サーバーグループ { #server-group }
 
 デプロイ対象サーバーをグループで管理できます。
 PhaseプロパティでDevelop、Staging、Productなどのサーバー機器を区分して活用できます。
@@ -118,6 +136,8 @@ Auto Scaleサービスのインスタンス拡張に応じてデプロイ設定�
 
 * グループ、サーバー情報を修正できます。
 * グループで使用するシナリオを設定できます。
+
+<a id="adding-server-group"></a>
 
 #### サーバーグループ追加
 
@@ -128,6 +148,8 @@ Auto Scaleサービスのインスタンス拡張に応じてデプロイ設定�
     * OSを選択した後、Shell Typeを指定します。リストから項目を選択するか、直接入力します。
     * Phaseを選択します。サーバー機器を区分します。指定しない時はNONEを選択します。
     * **作成**ボタンをクリックします。
+
+<a id="addingdeleting-server-information"></a>
 
 #### サーバー情報追加/削除
 
@@ -163,6 +185,8 @@ Auto Scaleサービスのインスタンス拡張に応じてデプロイ設定�
 * 左にあるチェックボックスを選択解除するか、右にある**削除**ボタンをクリックします。
 * **作成**ボタンをクリックします。修正する時は**修正**ボタンをクリックします。
 
+<a id="server-group-1"></a>
+
 #### オートスケール グループ追加
 ![autoscale_01.png](https://static.toastoven.net/prod_tcdeploy/reference/autoscale_01.png)
 * **デプロイ** > **サーバーグループ作成**をクリックするか、**サーバーグループ > 新規作成**
@@ -184,26 +208,34 @@ Auto Scaleサービスのインスタンス拡張に応じてデプロイ設定�
 * 追加されたシナリオ順序を指定するために実行優先順位を変更します。優先順位が同じ場合、ランダムな順序で実行されます。
 * **作成**ボタンをクリックします。 
 
-### リソース
+<a id="resources"></a>
+
+### リソース { #resources }
 
 リソースを管理できるページで、ファイル作成、アップロード、ダウンロード、修正や変更履歴の確認ができます。
 
 ![deploy_ref_10_ja_20200527.png](https://static.toastoven.net/prod_tcdeploy/ja/deploy_ref_10_ja_20200527.png)
 
-## 機能別説明
+<a id="functional-description"></a>
+
+## 機能別説明 { #functional-description }
 
 ここでは、Getting Startedで扱わない機能と追加設定を詳しく説明します。
 
-### バイナリ
+<a id="binary"></a>
+
+### バイナリ { #binary }
 
 バイナリは、アップロードされたデプロイ対象ファイルです。
+
+<a id="uploading"></a>
 
 #### アップロード
 
 バイナリをアップロードできる方法は2つです。
 
 * APIアップロード
-    * APIアップロードの詳細説明は、[APIガイドのBinary Upload API](/Dev%20Tools/Deploy/ja/api-guide-v2.1/#_4)で確認できます。
+    * APIアップロードの詳細説明は、[APIガイドのBinary Upload API](/Dev%20Tools/Deploy/ja/api-guide-v2.1/#upload-binary)で確認できます。
 * コンソールでアップロード
 
 ![deploy_ref_11_ja_20200527.png](https://static.toastoven.net/prod_tcdeploy/ja/deploy_ref_11_ja_20200527.png)
@@ -215,9 +247,13 @@ Auto Scaleサービスのインスタンス拡張に応じてデプロイ設定�
 
 ![deploy_ref_12_ja_20200527.png](https://static.toastoven.net/prod_tcdeploy/ja/deploy_ref_12_ja_20200527.png)
 
+<a id="download"></a>
+
 #### 1. ダウンロード
 
 バイナリリスト右にあるダウンロードボタンをクリックします。
+
+<a id="fix-versions"></a>
 
 #### 2. バージョンfix
 
@@ -228,6 +264,8 @@ Client OSごとに、1個ずつバージョンfixができます。
         * クリックすると、該当バージョンをunfixします。
     * <span style="color:gray">FIXED</span>(off)
         * クリックすると該当バージョンをfixします。
+
+<a id="deploy"></a>
 
 #### 3. デプロイ
 
@@ -265,7 +303,9 @@ ClientバイナリのAll、Fixed、Recentバージョンを、希望する方式
 
 指定した送信タイプで受信者にバイナリダウンロードページが伝達されます。
 
-### タスク
+<a id="tasks"></a>
+
+### タスク { #tasks }
 
 タスクは、個別機能の実行および順序制御が可能なシナリオ構成要素です。
 
@@ -292,6 +332,8 @@ ClientバイナリのAll、Fixed、Recentバージョンを、希望する方式
 * 各タスクの右上にある**∧**(上に移動)**∨**(下に移動)**X**(Task除去)ボタンで、タスクを制御できます。
 * 予約語の使用
     * 詳細は下記Available Variablesを参照してください。
+
+<a id="pre-run-tasks"></a>
 
 #### Pre-run Task
 
@@ -354,6 +396,8 @@ ClientバイナリのAll、Fixed、Recentバージョンを、希望する方式
 * Command
     * 実行するCommandを入力します。
     * 予約語を使用できます。下記のAvailable Variablesメニューを参照してください。
+
+<a id="normal-tasks"></a>
 
 #### Normal Task
 
@@ -433,6 +477,8 @@ ClientバイナリのAll、Fixed、Recentバージョンを、希望する方式
     * Available Variablesを使用できます。
         * `$${binary.指定したVariables As入力。binaryGroupName}：バイナリに設定した変数名。選択されたバイナリのグループ名`
 
+<a id="available-variables"></a>
+
 #### Available Variables
 
 タスクで下記のような予約語を使用できます。
@@ -465,7 +511,9 @@ $${binary.binary variable as value.binaryGroupName}：バイナリに設定し�
     * Binary DeployのVariables Asを使用できるタイプ
         * `$${binary.指定したVariables As入力.binaryGroupName}：該当バイナリのグループ名`
 
-### リソース
+<a id="functional-description-resources"></a>
+
+### リソース { #functional-description-resources }
 
 リソースは任意で使用できるファイル管理機能です。
 
@@ -475,6 +523,8 @@ $${binary.binary variable as value.binaryGroupName}：バイナリに設定し�
 * ファイルヒストリー
 * ファイル履歴管理
 
+<a id="creating-file-groups"></a>
+
 #### ファイルグループ作成
 
 ![deploy_ref_21_ja_20200527.png](https://static.toastoven.net/prod_tcdeploy/ja/deploy_ref_21_ja_20200527.png)
@@ -483,6 +533,8 @@ $${binary.binary variable as value.binaryGroupName}：バイナリに設定し�
 
 2. 名前(必須)、説明(任意)情報を入力します。
 3. **確認**ボタンをクリックします。
+
+<a id="adding-files"></a>
 
 #### ファイル追加
 
@@ -506,6 +558,8 @@ $${binary.binary variable as value.binaryGroupName}：バイナリに設定し�
 4. 新規作成ファイルの内容を入力します。
 5. 入力完了後、**保存**ボタンをクリックします。
 6. 作成が完了した画面です。
+
+<a id="modifying-files"></a>
 
 #### ファイル修正
 

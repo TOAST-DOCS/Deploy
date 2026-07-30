@@ -1,3 +1,5 @@
+<!-- pre-align:aligned sig=7ca503817bac -->
+
 ## Dev Tools > Deploy > Overview
 
 With Deploy, applications can be deployed fast and easy, at 'One Click'. 
@@ -10,7 +12,9 @@ With Deploy, applications can be deployed fast and easy, at 'One Click'.
 
 ![01.png](http://static.toastoven.net/prod_tcdeploy/overview/01.png)
 
-## Benefits 
+<a id="benefits"></a>
+
+## Benefits { #benefits }
 
 * Easy and convenient binary management 
 * Simple delivery of client binaries 
@@ -23,31 +27,47 @@ With Deploy, applications can be deployed fast and easy, at 'One Click'.
 
 ![02.png](http://static.toastoven.net/prod_tcdeploy/overview/02.png)
 
-## Features 
+<a id="features"></a>
 
-### Upload 
+## Features { #features }
+
+<a id="upload"></a>
+
+### Upload { #upload }
 Files are easily uploaded with the help of various uploading methods. 
 * Uploading Interfaces 
     * Web Console 
     * Jenkins Plugin 
     * REST API
 
-### Download 
+<a id="download"></a>
+
+### Download { #download }
 Notification for downloading links makes it easy to install and update apps. 
 
-### Query Binaries 
+<a id="query-binaries"></a>
+
+### Query Binaries { #query-binaries }
 Binary data of the past remain to enable fast roll-backs.
 
-### Manage Deployment Projects 
+<a id="manage-deployment-projects"></a>
+
+### Manage Deployment Projects { #manage-deployment-projects }
 Infrastructure information of a project is integrated for an easy setting. 
 
-### Manage (Execute) Deployment Scenario 
+<a id="manage-execute-deployment-scenario"></a>
+
+### Manage (Execute) Deployment Scenario { #manage-execute-deployment-scenario }
 User-defined commands are used to check server status after deployment. 
 
-### Manage Deployment History 
+<a id="manage-deployment-history"></a>
+
+### Manage Deployment History { #manage-deployment-history }
 Deployment and previous binaries are managed by deployment history so as to secure stability. 
 
-## Glossary
+<a id="glossary"></a>
+
+## Glossary { #glossary }
 
 | Terms | Description |
 | --- | --- |

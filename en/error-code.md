@@ -1,6 +1,10 @@
+<!-- pre-align:aligned sig=4796603beb3a -->
+
 ## Dev Tools > Deploy > Error Code
 
-## Ver 1.0
+<a id="ver-10"></a>
+
+## Ver 1.0 { #ver-10 }
 
 | resultCode | resultMessage |
 | --------- | --------- |
@@ -24,7 +28,9 @@
 | ERROR_INVALID_APP_KEY | Invalid AppKey |
 | FAIL | fail |
 
-## Previous version
+<a id="previous-version"></a>
+
+## Previous version { #previous-version }
 
 | isSuccess | resultKey |
 | --------- | --------- |
