@@ -1,4 +1,4 @@
-<!-- pre-align:aligned sig=11fb4222fcbb -->
+<!-- pre-align:aligned sig=28e392d2a044 -->
 
 <a id="dev-tools-deploy-api-v21-guide"></a>
 ## Dev Tools > Deploy > API v2.1 가이드 { #dev-tools-deploy-api-v21-guide }
@@ -529,11 +529,11 @@ curl -X GET \
 }
 ```
 
-<a id="list-scenarios"></a>
-### 시나리오 목록 조회 { #list-scenarios }
+<a id="dev-tools-deploy-api-v21-guide-1"></a>
+### 시나리오 목록 조회 { #dev-tools-deploy-api-v21-guide-1 }
 * 서버 그룹에 매핑된 시나리오 목록을 조회하는 API입니다.
 
-<a id="list-scenarios-version-21"></a>
+<a id="dev-tools-deploy-api-v21-guide-1-1"></a>
 #### Version 2.1
 | HTTP Method | GET |
 | ----------- | ---- |
