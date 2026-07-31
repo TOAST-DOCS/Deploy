@@ -1,6 +1,4 @@
-<!-- pre-align:aligned sig=cb53ec3bd366 -->
-
-<a id="dev-tools-deploy-api-v20-guide"></a>
+<!-- pre-align:aligned sig=bfc4bcd52718 -->
 
 ## Dev Tools > Deploy > API v2.0ガイド
 Deployでは、デプロイの実行や情報照会のためのAPIを提供しています。ユーザーがHTTPリクエストを独自に構成して使用できます。
