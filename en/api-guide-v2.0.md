@@ -1,6 +1,4 @@
-<!-- pre-align:aligned sig=cb53ec3bd366 -->
-
-<a id="dev-tools-deploy-api-v20-guide"></a>
+<!-- pre-align:aligned sig=bfc4bcd52718 -->
 
 ## Dev Tools > Deploy > API v2.0 Guide
 Deploy provides APIs for deployment execution and information retrieval. You can configure and send HTTP requests directly.
@@ -39,11 +37,11 @@ https://api-tcd.nhncloudservice.com
 
 <a id="execute-deployment"></a>
 
-### Execute Deployment { #execute-deployment }
-* This API is used for deployment execution.
-* The deployment execution API is only available when the artifact `Command Type` is Cloud Agent. (Not available for SSH.)
-* In v2.0, deployment execution is also supported for Autoscale server groups.
-* The deployment execution API uses role-based access control (RBAC). Only users with the **Deploy ADMIN** role can use the deployment execution API.
+### Run Deployment { #execute-deployment }
+* This is the API for running a deployment.
+* The Run Deployment API is only available when the artifact's `Command Type` is Cloud Agent. (Not supported for SSH.)
+* In v2.0, you can also run a deployment on Auto Scaling Server Groups.
+* The Run Deployment API uses role-based access control (RBAC). Only users with the **Deploy ADMIN** role can use the Run Deployment API.
 
 <a id="version-20"></a>
 
@@ -129,7 +127,7 @@ curl --location 'https://api-tcd.nhncloudservice.com/api/v2.0/projects/{appKey}/
 <a id="list-artifacts"></a>
 
 ### List Artifacts { #list-artifacts }
-* This API retrieves a list of artifacts in a project.
+* API to get a list of artifacts in a project.
 
 <a id="list-artifacts-version-20"></a>
 
@@ -202,7 +200,7 @@ curl -X GET \
 <a id="list-server-groups"></a>
 
 ### List Server Groups { #list-server-groups }
-* This API retrieves a list of server groups belonging to an artifact.
+* This API views the list of server groups that belong to an artifact.
 
 <a id="list-server-groups-version-20"></a>
 
@@ -268,7 +266,7 @@ curl -X GET \
 <a id="list-binary-groups"></a>
 
 ### List Binary Groups { #list-binary-groups }
-* This API retrieves a list of binary groups belonging to an artifact.
+* API to get a list of binary groups that belong to an artifact.
 
 <a id="list-binary-groups-version-20"></a>
 
@@ -333,9 +331,9 @@ curl -X GET \
 
 <a id="list-deployment-history"></a>
 
-### List Deployment History { #list-deployment-history }
-* This API retrieves the deployment history of an artifact.
-* The query period cannot exceed 1 year.
+### Query Deployment History { #list-deployment-history }
+* API to retrieve the deployment history of an artifact.
+* The search period cannot exceed 1 year.
 
 <a id="list-deployment-history-version-20"></a>
 
@@ -418,7 +416,7 @@ curl -X GET \
 <a id="list-binaries"></a>
 
 ### List Binaries { #list-binaries }
-* This API retrieves a list of binaries belonging to a binary group.
+* This API views the list of binaries belonging to a binary group.
 
 <a id="list-binaries-version-20"></a>
 
