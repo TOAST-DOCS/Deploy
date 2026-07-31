@@ -1,6 +1,7 @@
 <!-- pre-align:aligned sig=507f47dddd50 -->
 
-## Dev Tools > Deploy > 使用前の設定ガイド
+<a id="dev-tools-deploy-setup-guide-before-use"></a>
+## Dev Tools > Deploy > 使用前の設定ガイド { #dev-tools-deploy-setup-guide-before-use }
 
 この文書では、次のような内容を説明します。
 
@@ -9,11 +10,9 @@
 * [SSH接続のための準備](/Dev%20Tools/Deploy/ja/setup-guide/#prepare-for-an-ssh-connection)
 
 <a id="pre-requisites-before-using-the-service"></a>
-
 ## サービス使用前の必須事項 { #pre-requisites-before-using-the-service }
 
 <a id="nhn-cloud-vm-server"></a>
-
 ### NHN Cloud VM サーバー { #nhn-cloud-vm-server }
 ![SSH연결필수](https://kr1-api-object-storage.nhncloudservice.com/v1/AUTH_2acdfabf4efe4efc8a04c00b348110c9/cdn_origin/prod_tcdeploy/deploy_19_202307.png)
 
@@ -22,7 +21,6 @@
 > NHN Cloud Agent の場合は、NHN Cloud Agent のインストールや有効性確認などの [NHN Cloud Agent 使用のための準備](/Dev%20Tools/Deploy/ja/setup-guide/#prepare-to-use-nhn-cloud-agent)が必要です。
 
 <a id="servers-other-than-nhn-cloud-vm"></a>
-
 ### NHN Cloud VM 以外のサーバー { #servers-other-than-nhn-cloud-vm }
 ![SSH연결필수](https://kr1-api-object-storage.nhncloudservice.com/v1/AUTH_2acdfabf4efe4efc8a04c00b348110c9/cdn_origin/prod_tcdeploy/deploy_20_202307.png)
 
@@ -31,11 +29,9 @@
 > 対象サーバーのIP、ポート、ファイアウォール例外処理などの[SSH接続のための準備](/Dev%20Tools/Deploy/ja/setup-guide/#prepare-for-an-ssh-connection)が必要です。
 
 <a id="prepare-to-use-nhn-cloud-agent"></a>
-
 ## NHN Cloud Agentを使用するための準備 { #prepare-to-use-nhn-cloud-agent }
 
 <a id="install-nhn-cloud-agent-by-operating-system"></a>
-
 ### OS別NHN Cloud Agentのインストール { #install-nhn-cloud-agent-by-operating-system }
 * NHN Cloud Agentでデプロイコマンドを伝達するにはNHN Cloud Agentをインストールする必要があります。
 * NHN Cloud Instanceサービスでインスタンスを作成する際、**追加設定** > **ユーザースクリプト**に下記のLinux、Windows OSに合ったインストールスクリプト内容を追加してインストールできます。
@@ -43,7 +39,6 @@
 * **追加設定** > **ユーザースクリプト**が使用できない場合は、直接インスタンスに接続してインストールスクリプトを実行します。
 
 <a id="linux-installation-script"></a>
-
 #### Linuxインストールスクリプト
 ```
 #!/bin/bash
@@ -51,7 +46,6 @@ curl 'https://kr1-api-object-storage.nhncloudservice.com/v1/AUTH_2acdfabf4efe4ef
 ```
 
 <a id="windows-installation-scripts"></a>
-
 #### Windowsインストールスクリプト
 ```
 #ps1_sysnative
@@ -59,7 +53,6 @@ Invoke-WebRequest -UseBasicParsing 'https://kr1-api-object-storage.nhncloudservi
 ```
 
 <a id="check-the-installation-of-nhn-cloud-agent"></a>
-
 ### NHN Cloud Agentのインストール確認 { #check-the-installation-of-nhn-cloud-agent }
 * NHN Cloud Deployサービスで作成したインスタンスを追加してサーバーグループを作成します。
     * サーバーグループを作成する際、**OS**及び**Shell Type**を必ずご確認ください。**Shell Type**のデフォルト値は /bin/bash(Linux), powershell(Windows)です。
@@ -89,19 +82,15 @@ Invoke-WebRequest -UseBasicParsing 'https://kr1-api-object-storage.nhncloudservi
 NHN Cloud Agentサービスのインストール及び有効性確認に成功しました。
 
 <a id="prepare-for-an-ssh-connection"></a>
-
 ## SSH接続のための準備 { #prepare-for-an-ssh-connection }
 
 <a id="requirements-for-each-os"></a>
-
 ### OS別要件 { #requirements-for-each-os }
 <a id="linux"></a>
-
 #### Linux
 * curl 7.19.7-43バージョン以上
 
 <a id="windows"></a>
-
 #### Windows
 * SSHインストール必要
     * OpenSSH_for_Windows_8.6p1, LibreSSL 3.3.3バージョン以上
@@ -109,15 +98,12 @@ NHN Cloud Agentサービスのインストール及び有効性確認に成功�
     * SSH Shell: PowerShellを指定
 
 <a id="requirements-for-nhn-cloud-vm-deployment"></a>
-
 ### NHN Cloud VMデプロイ要件 { #requirements-for-nhn-cloud-vm-deployment }
 <a id="assign-public-ip"></a>
-
 #### グローバルIPの付与
 * NHN CloudのVMインスタンスにデプロイするにはVMインスタンス[Floating IP](https://docs.nhncloud.com/ja/Compute/Instance/ja/console-guide/#ip_1)を作成してグローバルIPを付与する必要があります。
 
 <a id="add-security-exceptions"></a>
-
 #### セキュリティ例外追加
 * デプロイするVMインスタンスの[セキュリティグループ](https://docs.nhncloud.com/ja/Compute/Instance/ja/console-guide/#_13)にDeployサービスIP(下記)をSSH Ruleに追加します。
 ```
@@ -138,15 +124,12 @@ NHN Cloud Agentサービスのインストール及び有効性確認に成功�
     * 遠隔: CIDRにIPを入力します。帯域を入力することもできます。(例：133.186.185.112/28)
 
 <a id="requirements-for-server-deployment-other-than-nhn-cloud-vm"></a>
-
 ### NHN Cloud VM以外のサーバーのデプロイ要件 { #requirements-for-server-deployment-other-than-nhn-cloud-vm }
 <a id="requirements-for-server-deployment-other-than-nhn-cloud-vm-assign-public-ip"></a>
-
 #### グローバルIPの付与
 * SSH接続のためにグローバルIPを付与する必要があります。
 
 <a id="configure-firewalls-and-network-acl"></a>
-
 #### ファイアウォール及びNetwork ACL設定
 * 外部からアクセスできるように、以下のIPに対してネットワークとファイアウォールの例外設定を追加してください。
 ```
