@@ -1,4 +1,4 @@
-<!-- pre-align:aligned sig=bfc4bcd52718 -->
+<!-- pre-align:aligned sig=cb53ec3bd366 -->
 
 <a id="dev-tools-deploy-api-v20-guide"></a>
 ## Dev Tools > Deploy > API v2.0ガイド { #dev-tools-deploy-api-v20-guide }
