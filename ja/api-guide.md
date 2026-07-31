@@ -1,6 +1,7 @@
 <!-- pre-align:aligned sig=3baffdac74ad -->
 
-## Dev Tools > Deploy > APIガイド
+<a id="dev-tools-deploy-api-guide"></a>
+## Dev Tools > Deploy > APIガイド { #dev-tools-deploy-api-guide }
 
 Deployでは、バイナリのアップロードやデプロイ実行のためのAPIを提供しています。ユーザー自身でHTTPリクエストを構成して利用できます。
 本ドキュメントはAPIのバージョン別に用意されています。以下のリンクから、目的のバージョンのドキュメントをご確認ください。
@@ -10,10 +11,8 @@ Deployでは、バイナリのアップロードやデプロイ実行のため�
 - [Version 2.1 API ガイド](/Dev%20Tools/Deploy/ja/api-guide-v2.1/)
 
 <a id="common-information"></a>
-
 ### 共通情報 { #common-information }
 <a id="how-to-check-values-by-variable"></a>
-
 #### 変数別の値確認方法
 
 ##### appKey確認方法
