@@ -1,6 +1,4 @@
-<!-- pre-align:aligned sig=ecae7f837f9d -->
-
-<a id="dev-tools-deploy-overview"></a>
+<!-- pre-align:aligned sig=7ca503817bac -->
 
 ## Dev Tools > Deploy > Overview
 
