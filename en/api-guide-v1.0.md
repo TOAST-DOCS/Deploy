@@ -1,20 +1,18 @@
 <!-- pre-align:aligned sig=4aca5604a494 -->
 
-## Dev Tools > Deploy > API v1.0 Guide
+<a id="dev-tools-deploy-api-v10-guide"></a>
+## Dev Tools > Deploy > API v1.0 Guide { #dev-tools-deploy-api-v10-guide }
 Deploy provides APIs for binary upload and deployment execution. You can configure and send HTTP requests directly.
 
 <a id="basic-information"></a>
-
 ### Basic Information { #basic-information }
 <a id="endpoint"></a>
-
 #### Endpoint
 ```text
 https://api-tcd.nhncloudservice.com
 ```
 
 <a id="types-of-provided-apis"></a>
-
 #### Types of Provided APIs
 | Method | URI | Descriptions |
 | ------ | --- | --- |
@@ -22,7 +20,6 @@ https://api-tcd.nhncloudservice.com
 | POST | /api/v1.0/projects/{appKey}/artifacts/{artifactId}/server-group/{serverGroupId}/scenario/{scenarioId}/deploy | Deployment execution API |
 
 <a id="api-request-path-variables"></a>
-
 #### API request path variables
 | Value | Type | Description |
 | --- | --- | --- |
@@ -33,10 +30,8 @@ https://api-tcd.nhncloudservice.com
 | scenarioId | Number | The scenario ID to deploy |
 
 <a id="binary-upload"></a>
-
 ### Binary Upload { #binary-upload }
 <a id="version-10"></a>
-
 #### Version 1.0
 | Http Method | POST |
 | ----------- | ---- |
@@ -143,7 +138,6 @@ try {
 ```
 
 <a id="previous-version"></a>
-
 #### Previous Version 
 | Http Method | POST |
 | ----------- | ---- |
@@ -231,14 +225,12 @@ try {
 ```
 
 <a id="run-deployment"></a>
-
 ### Run Deployment { #run-deployment }
 * API for running deployments.
 * The artifact `Command Type`provides a deployment execution API only for Cloud Agent (not for SSH).
 * The deployment execution API uses role-based access control (RBAC). Only users with the Deploy ADMIN role can use the deployment execution API.
 
 <a id="run-deployment-version-10"></a>
-
 #### Version 1.0
 | Http Method | POST |
 | ----------- | ---- |
