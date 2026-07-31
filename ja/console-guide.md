@@ -1,6 +1,4 @@
-<!-- pre-align:aligned sig=40aa83d794a8 -->
-
-<a id="dev-tools-deploy-console-user-guide"></a>
+<!-- pre-align:aligned sig=ab0387a78c99 -->
 
 ## Dev Tools > Deploy > コンソール使用ガイド
 
@@ -101,21 +99,21 @@
 
 デプロイするサーバーを管理できる機能です。
 
-![deploy_07_ja_201812](https://static.toastoven.net/prod_tcdeploy/ja/deploy_07_ja_20200519.png)
+![deploy_07_201812](https://static.toastoven.net/prod_tcdeploy/deploy_07_201812.png)
 
-1. **Deploy**画面下にあるタブで、**サーバーグループ > 新規作成**をクリックします。
-2. **サーバーグループ生成**ウィンドウで、新規作成するサーバーグループを設定します。
-    * 名前(必須)、説明(任意)を入力します。
-    * OSを選択し、Shell Typeを指定します。 Shell Typeは**Shell Type**リストから選択するか、直接入力できます。
-    * Phaseを選択します。サーバー機器を区分します。指定しない場合はNONEを選択します。
-    * サーバー追加
-        * サーバーを追加する方法は、下記の2つです。詳細は[機能詳細ガイドサーバーグループメニュー](/Dev%20Tools/Deploy/ja/reference/#server-group)で確認できます。
-            * 大量追加
+1. **Deploy** 画面下部のタブで **[サーバーグループ] > [新規作成]** をクリックします。
+2. **[サーバーグループ作成]** ウィンドウで、新規作成するサーバーグループを設定します。
+    * 名前（必須）、説明（任意）を入力します。
+    * OS を選択し、Shell Type を指定します。Shell Type は **[Shell Type]** リストから選択するか、直接入力できます。
+    * Phase を選択します。サーバー機器を区分します。指定しない場合は NONE を選択します。
+    * サーバーの追加
+        * サーバーを追加する方法は以下の 2 種類があります。詳細については、[機能詳細ガイド サーバーグループメニュー](/Dev%20Tools/Deploy/ja/reference/#server-group)を参照してください。
+            * 一括追加
             * 個別追加
-         * ホスト名(必須)、IPアドレス(必須)、OS(任意)を入力し、**追加**ボタンをクリックします。
-         * 下記のサーバーリストに追加された内容を確認します。左にあるチェックボックスが選択されたサーバーのみ登録されます。
+         * ホスト名（必須）、IP アドレス（必須）、OS（任意）を入力し、**[追加]** ボタンをクリックします。
+         * 下部のサーバー一覧で追加された内容を確認します。左側のチェックボックスが選択されているサーバーのみ登録されます。
 
-3. 入力完了後、**生成**ボタンをクリックします。
+3. 入力完了後、**[作成]** ボタンをクリックします。
 
 <a id="setting-binary-groups"></a>
 
@@ -150,24 +148,24 @@
 
 ### タスク追加 { #add-tasks }
 
-タスクは、個別機能を実行して順序を制御できるシナリオ構成要素です。
-タスクの種類は、下記の2つです。
+タスクは、個別の機能を実行し、順序を制御できるシナリオの構成要素です。
+タスクの種類は以下の2つです。
 
-* pre-run Task：デプロイ前の実行機能
-* Normal Task：デプロイ時の実行機能
+* pre-run Task: デプロイ前に実行する機能
+* Normal Task: デプロイ時に実行する機能
 
-希望するタスクを選択して使用できます。ここではデプロイ時に必要な基本的なタスクを扱います。
-その他のタスクは[機能詳細ガイドのタスクメニュー](/Dev%20Tools/Deploy/ja/reference/#tasks)で確認できます。
+必要なものを選択して使用できます。ここでは、基本的なデプロイ時に必要なタスクについて説明します。
+さらに多くのタスクは[機能詳細ガイドのタスクメニュー](/Dev%20Tools/Deploy/ja/reference/#tasks)で確認できます。
 
-デプロイテストのために、下記の3つのタスクを追加します。
+デプロイのテストのために、以下の3つのタスクを追加します。
 
 <a id="add-user-commands"></a>
 
 #### 1. User Command追加
 
-* デプロイ時に実行されるユーザー定義Commandタスクです。
-* Available Variablesを使用できます。
-    * Available Variables：予約語。詳細は[機能詳細ガイドのタスクメニュー](/Dev%20Tools/Deploy/ja/reference/#tasks)で確認できます。
+* デプロイ時に実行されるユーザー定義の Command タスクです。
+* Available Variables を使用できます。
+    * Available Variables: 予約語。詳細については、[機能詳細ガイドのタスクメニュー](/Dev%20Tools/Deploy/ja/reference/#tasks)を参照してください。
 
 ![deploy_09_ja_20200519](https://static.toastoven.net/prod_tcdeploy/ja/deploy_09_ja_20200519.png)
 
