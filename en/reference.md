@@ -1,6 +1,4 @@
-<!-- pre-align:aligned sig=75ae7510e77e -->
-
-<a id="dev-tools-deploy-detail-functional-guide"></a>
+<!-- pre-align:aligned sig=2713ccfb4584 -->
 
 ## Dev Tools > Deploy > Detail Functional Guide
 
@@ -223,9 +221,9 @@ Binaries are uploaded files that are to be deployed.
 
 Two methods are available to upload binaries: 
 
-* Upload API 
-    * Find more details on uploading API at [Guide for Upload Binary API](/Dev%20Tools/Deploy/en/api-guide-v2.1/#upload-binary).
-* Upload on Console 
+* API Upload
+    * For more information about API upload, see [Binary Upload API in the API Guide](/Dev%20Tools/Deploy/en/api-guide-v2.1/#upload-binary).
+* Upload from the console
 
 ![deploy_ref_11_2018.png](https://static.toastoven.net/prod_tcdeploy/deploy_ref_11_2018.png)
 
