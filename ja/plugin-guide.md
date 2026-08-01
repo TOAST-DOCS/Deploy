@@ -1,15 +1,14 @@
 <!-- pre-align:aligned sig=76ac679b6e63 -->
 
-## Dev Tools > Deploy > プラグイン使用ガイド
+<a id="dev-tools-deploy-user-guide-for-plugin"></a>
+## Dev Tools > Deploy > プラグイン使用ガイド { #dev-tools-deploy-user-guide-for-plugin }
 
 <a id="jenkins-plugin-guide"></a>
-
 ## Jenkins Plugin Guide { #jenkins-plugin-guide }
 
 NHN Cloud Deploy Jenkinsアップロードプラグインを使用すると、Jenkinsのビルド結果物をNHN Cloud Deployサーバーにアップロードできます。
 
 <a id="integrating-deploy---jenkins"></a>
-
 ## Deploy <-> Jenkins連携方法 { #integrating-deploy---jenkins }
 
 Jenkins build -> Deployにバイナリをアップロード(by plugin) -> デプロイシナリオ実行(デプロイ/終了/再起動/その他の事前作業および後処理)
@@ -21,19 +20,16 @@ Jenkins build -> Deployにバイナリをアップロード(by plugin) -> デプ
 4. デプロイシナリオを作成
 
 <a id="installing-jenkins"></a>
-
 ## Jenkinsインストール { #installing-jenkins }
 
 Jenkinsのインストールおよび詳細は、[https://jenkins.io/](https://jenkins.io/)で確認できます。
 
 <a id="minimum-version-requirements-for-jenkins"></a>
-
 #### Jenkinsの最小要件
 
 **Jenkins 1580.1**以降のバージョンが必要です。
 
 <a id="installing-jenkins-1"></a>
-
 #### プラグインインストール
 
 1. **Jenkins管理 > プラグイン管理 > 詳細設定 > プラグインアップロード**メニューで、**tcdeploy-upload-jenkins.hpi**ファイルをアップロードします。
@@ -50,7 +46,6 @@ Jenkinsのインストールおよび詳細は、[https://jenkins.io/](https://j
     ![[図3]インストールされたプラグインリスト](http://static.toastoven.net/prod_tcdeploy/devguide/03.png)
 
 <a id="plugin-setting-for-server-type-application-uploads"></a>
-
 #### サーバー(server)タイプアプリケーションアップロードプラグイン設定
 
 サーバータイプアプリケーションアップロードプラグインで、ビルド結果物をZIP形式に圧縮してNHN Cloud Cloud Deploy(TCD)サーバーにアップロードできます。
@@ -126,7 +121,6 @@ Finished: SUCCESS
 artifact id、app keyなどのユーザー入力情報が表示され、圧縮ファイルに含まれたファイル内容を表示します。
 
 <a id="plugin-setting-for-client-type-application-uploads"></a>
-
 #### クライアント(client)タイプアプリケーションアップロードプラグイン設定
 
 クライアントタイプアプリケーションアップロードプラグインで、ビルドが成功した結果物のうち、ユーザーが指定した特定バイナリをTCDサーバーにアップロードできます。
@@ -176,13 +170,11 @@ Finished: SUCCESS
 artifact id、app keyなど、ユーザー入力情報や、アップロードするバイナリおよびメタファイルが表示されます。
 
 <a id="jenkins-cli-build-profile"></a>
-
 ## Jenkins-CLI Build Profile { #jenkins-cli-build-profile }
 
 ユーザーがJenkins-CLIを使用してビルドコマンド実行に役立つ、事前に定義されたProfileです。
 
 <a id="preparations"></a>
-
 #### 準備事項
 
 1. SSH Pubilc/Private Key Pairの作成
@@ -201,7 +193,6 @@ artifact id、app keyなど、ユーザー入力情報や、アップロード�
         * /etc/sysconfig/jenkinsのJENKINS\_JAVA\_OPTIONSに -Dhudson.diyChunking=falseオプション追加。
 
 <a id="setting-profile"></a>
-
 #### Profile設定
 
 ![[図6] Jenkins-CLI Build Profile設定](http://static.toastoven.net/prod_tcdeploy/devguide/06.png)
