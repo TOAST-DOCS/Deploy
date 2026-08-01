@@ -1,6 +1,4 @@
-<!-- pre-align:aligned sig=40aa83d794a8 -->
-
-<a id="dev-tools-deploy-console-user-guide"></a>
+<!-- pre-align:aligned sig=ab0387a78c99 -->
 
 ## Dev Tools > Deploy > Console User Guide 
 
@@ -98,25 +96,25 @@ Server application requires setting deployment (artifact, server, server group, 
 
 <a id="setting-server-groups"></a>
 
-### Setting Server Groups { #setting-server-groups }
+### Server Group Settings { #setting-server-groups }
 
-Deployment servers are managed by this setting. 
+Deployment servers are managed by this setting.
 
 ![deploy_07_201812](https://static.toastoven.net/prod_tcdeploy/deploy_07_201812.png)
 
-1. Go to **Deploy** and click **Server Group > Create** at the bottom of the page.
-2. Set a server group to create on the **Create Server Group** window.  
+1. On the **Deploy** screen, click **Server Group > New** in the bottom tab.
+2. In the **Create Server Group** dialog, configure the server group to create.
     * Enter name (required) and description (optional).
-    * Select OS and specify the **Shell Type**: enter one or select from the list. 
-    * Select Phase: Choose a server tool. Otherwise, select NONE. 
-    * Add Servers 
-        * Servers can be added in the following two methods, and find more details from [Detail Functional Guide on Server Groups](/Dev%20Tools/Deploy/en/reference/#server-group).
-            * Add in Mass
-            * Add Individually 
-         * Enter host name (required), IP address (required), and OS (optional), and click **Add**. 
-         * See what is added on the server list: only the servers checked on the left box can be registered. 
+    * Select an OS and specify a Shell Type. You can select a Shell Type from the **Shell Type** list or enter it directly.
+    * Select Phase: Choose a server tool. Otherwise, select NONE.
+    * Add servers
+        * There are two methods to add a server. For more information, see [Detail Functional Guide Server Group Menu](/Dev%20Tools/Deploy/en/reference/#server-group).
+            * Bulk Add
+            * Individual Add
+         * Enter the host name (required), IP address (required), and OS (optional), and click **Add**.
+         * See what is added on the server list: only the servers checked on the left box can be registered.
 
-3.  When it is completed, click **Create**. 
+3. After entering all the information, click **Create**.
 
 <a id="setting-binary-groups"></a>
 
@@ -151,23 +149,24 @@ The feature to manage binaries to be deployed.
 
 ### Add Tasks { #add-tasks }
 
-A task is an element of a scenario which can execute individual functions and control order, and it is categorized into two as below: 
+A task is a scenario component that performs individual functions and controls the execution order.
+There are two types of tasks:
 
-* pre-run Task: Execute before deployment 
-* Normal Task: Execute while deployed 
+* pre-run Task: Execute before deployment
+* Normal Task: Execute while deployed
 
-Choose one as you need. This document describes tasks that are basically required for deployment. 
-Find more tasks on [Detail Functional Guide on Tasks](/Dev%20Tools/Deploy/en/reference/#tasks).
+You can select and use whichever type you prefer. This section covers the tasks required for basic deployment.
+For more tasks, see the [Tasks menu in the Detail Functional Guide](/Dev%20Tools/Deploy/en/reference/#tasks).
 
-To test deployment, the following three tasks are added: 
+To test deployment, the following three tasks are added:
 
 <a id="add-user-commands"></a>
 
 #### 1. Add User Commands 
 
-* It is a user-defined command task which is executed for deployment. 
-* You may use Available Variables.
-    * Available Variables: Reserved words. Find more details on [Detail Functional Guide on Tasks](/Dev%20Tools/Deploy/en/reference/#tasks).
+* It is a user-defined command task which is executed for deployment.
+* You can use Available Variables.
+    * Available Variables: Reserved words. For more information, see [Tasks menu in the Detail Functional Guide](/Dev%20Tools/Deploy/en/reference/#tasks).
 
 ![deploy_09_201812](https://static.toastoven.net/prod_tcdeploy/deploy_09_201812.png)
 
