@@ -1,13 +1,11 @@
-<!-- pre-align:aligned sig=a87ab717aea2 -->
-
-<a id="dev-tools-deploy-setup-guide-before-use"></a>
+<!-- pre-align:aligned sig=507f47dddd50 -->
 
 ## Dev Tools > Deploy > 使用前の設定ガイド
 
 この文書では、次のような内容を説明します。
 
 * [サービス使用前の必須事項](/Dev%20Tools/Deploy/ja/setup-guide/#pre-requisites-before-using-the-service)
-* [NHN Cloud Agent使用のための準備](/Dev%20Tools/Deploy/ja/setup-guide/#prepare-to-use-nhn-cloud-agent)
+* [NHN Cloud Agentを使用するための準備](/Dev%20Tools/Deploy/ja/setup-guide/#prepare-to-use-nhn-cloud-agent)
 * [SSH接続のための準備](/Dev%20Tools/Deploy/ja/setup-guide/#prepare-for-an-ssh-connection)
 
 <a id="pre-requisites-before-using-the-service"></a>
@@ -16,21 +14,21 @@
 
 <a id="nhn-cloud-vm-server"></a>
 
-### NHN Cloud VMサーバー { #nhn-cloud-vm-server }
-![SSH接続必須](https://kr1-api-object-storage.nhncloudservice.com/v1/AUTH_2acdfabf4efe4efc8a04c00b348110c9/cdn_origin/prod_tcdeploy/deploy_19_202307.png)
+### NHN Cloud VM サーバー { #nhn-cloud-vm-server }
+![SSH연결필수](https://kr1-api-object-storage.nhncloudservice.com/v1/AUTH_2acdfabf4efe4efc8a04c00b348110c9/cdn_origin/prod_tcdeploy/deploy_19_202307.png)
 
-> NHN Cloud VMサーバーの場合、SSH接続またはNHN Cloud Agentでサーバーのデプロイコマンドを伝達します。
-> SSH接続の場合ターゲットサーバーのIP、ポート、ファイアウォール例外処理などの[SSH接続のための準備](/Dev%20Tools/Deploy/ja/setup-guide/#prepare-for-an-ssh-connection)が必要です。
-> NHN Cloud Agentの場合NHN Cloud Agentインストール、有効性確認などの[NHN Cloud Agentを使用するための準備](/Dev%20Tools/Deploy/ja/setup-guide/#prepare-to-use-nhn-cloud-agent)が必要です。
+> NHN Cloud VM サーバーの場合、SSH接続またはNHN Cloud Agentを使用してサーバーへのデプロイコマンドを送信します。
+> SSH接続の場合、ターゲットサーバーのIP、ポート、ファイアウォールの例外処理などの[SSH接続の準備](/Dev%20Tools/Deploy/ja/setup-guide/#prepare-for-an-ssh-connection)が必要です。
+> NHN Cloud Agentの場合、NHN Cloud Agentのインストールや有効性確認などの[NHN Cloud Agentを使用するための準備](/Dev%20Tools/Deploy/ja/setup-guide/#prepare-to-use-nhn-cloud-agent)が必要です。
 
 <a id="servers-other-than-nhn-cloud-vm"></a>
 
-### NHN Cloud VM以外のサーバー { #servers-other-than-nhn-cloud-vm }
-![SSH接続必須](https://kr1-api-object-storage.nhncloudservice.com/v1/AUTH_2acdfabf4efe4efc8a04c00b348110c9/cdn_origin/prod_tcdeploy/deploy_20_202307.png)
+### NHN Cloud VM 以外のサーバー { #servers-other-than-nhn-cloud-vm }
+![SSH연결필수](https://kr1-api-object-storage.nhncloudservice.com/v1/AUTH_2acdfabf4efe4efc8a04c00b348110c9/cdn_origin/prod_tcdeploy/deploy_20_202307.png)
 
-> NHN Cloud VM以外のサーバーの場合、SSH接続のみでサーバーのデプロイコマンドを伝達できます。
-> デプロイ前にデプロイターゲットサーバーとSSHで接続する必要があるため、
-> ターゲットサーバーのIP、ポート、ファイアウォール例外処理などの[SSH接続のための準備](/Dev%20Tools/Deploy/ja/setup-guide/#prepare-for-an-ssh-connection)が必要です。
+> NHN Cloud VM 以外のサーバーの場合、SSH 接続でのみサーバーへのデプロイコマンドを送信できます。
+> デプロイ前にデプロイ対象サーバーと SSH で接続する必要があるため、
+> 対象サーバーの IP、ポート、ファイアウォールの例外処理などの [SSH 接続の準備](/Dev%20Tools/Deploy/ja/setup-guide/#prepare-for-an-ssh-connection) が必要です。
 
 <a id="prepare-to-use-nhn-cloud-agent"></a>
 
