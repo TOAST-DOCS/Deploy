@@ -1,6 +1,7 @@
 <!-- pre-align:aligned sig=ab0387a78c99 -->
 
-## Dev Tools > Deploy > Console User Guide 
+<a id="dev-tools-deploy-console-user-guide"></a>
+## Dev Tools > Deploy > Console User Guide { #dev-tools-deploy-console-user-guide }
 
 This document contains the following: 
 
@@ -11,7 +12,6 @@ This document contains the following:
 (Any other functions are available in [Detail Functional Guide](/Dev%20Tools/Deploy/en/reference/).)
 
 <a id="deploy-console-page"></a>
-
 ## Deploy Console Page { #deploy-console-page }
 
 Below is the console page for the Deploy service. 
@@ -19,13 +19,11 @@ Below is the console page for the Deploy service.
 ![deploy_02_201812](https://static.toastoven.net/prod_tcdeploy/deploy_02_201812.png)
 
 <a id="client-application"></a>
-
 ## Client Application { #client-application }
 
 Client application deployment requires setting artifacts and uploading binaries.  
 
 <a id="setting-artifacts"></a>
-
 ### Setting Artifacts { #setting-artifacts }
 
 ![deploy_03_201812](https://static.toastoven.net/prod_tcdeploy/deploy_03_201812.png)
@@ -36,11 +34,9 @@ Client application deployment requires setting artifacts and uploading binaries.
 3. Click **Create**.
 
 <a id="setting-binaries"></a>
-
 ### Setting Binaries { #setting-binaries }
 
 <a id="upload"></a>
-
 #### Upload 
 
 * Upload .ipa and .plist files for iOS, and .apk files for Android. 
@@ -59,7 +55,6 @@ Client application deployment requires setting artifacts and uploading binaries.
 4. When it is completed, click **Upload**. 
 
 <a id="deploy"></a>
-
 #### Deploy
 
 Download pages can be selectively delivered via SMS or email. 
@@ -78,13 +73,11 @@ Download pages can be selectively delivered via SMS or email.
 Then, the binary download page is delivered to the recipient in the specified type of delivery. 
 
 <a id="server-application"></a>
-
 ## Server Application { #server-application }
 
 Server application requires setting deployment (artifact, server, server group, and scenario), uploading binaries, and deployment. 
 
 <a id="server-application-setting-artifacts"></a>
-
 ### Setting Artifacts { #server-application-setting-artifacts }
 
 ![deploy_06_201812](https://static.toastoven.net/prod_tcdeploy/deploy_06_201812.png)
@@ -95,7 +88,6 @@ Server application requires setting deployment (artifact, server, server group, 
 3. Click **Create** from the **Create Artifacts** window.  
 
 <a id="setting-server-groups"></a>
-
 ### Server Group Settings { #setting-server-groups }
 
 Deployment servers are managed by this setting.
@@ -117,7 +109,6 @@ Deployment servers are managed by this setting.
 3. After entering all the information, click **Create**.
 
 <a id="setting-binary-groups"></a>
-
 ### Setting Binary Groups { #setting-binary-groups }
 
 The feature to manage binaries to be deployed.
@@ -136,7 +127,6 @@ The feature to manage binaries to be deployed.
 3. When it is completed, click **Create**.
 
 <a id="create-scenarios"></a>
-
 ### Create Scenarios { #create-scenarios }
 
 ![deploy_08_201812](https://static.toastoven.net/prod_tcdeploy/deploy_08_201812.png)
@@ -146,7 +136,6 @@ The feature to manage binaries to be deployed.
 3. Click **Create**.  
 
 <a id="add-tasks"></a>
-
 ### Add Tasks { #add-tasks }
 
 A task is a scenario component that performs individual functions and controls the execution order.
@@ -161,7 +150,6 @@ For more tasks, see the [Tasks menu in the Detail Functional Guide](/Dev%20Tools
 To test deployment, the following three tasks are added:
 
 <a id="add-user-commands"></a>
-
 #### 1. Add User Commands 
 
 * It is a user-defined command task which is executed for deployment.
@@ -183,7 +171,6 @@ To test deployment, the following three tasks are added:
 4. When it is completed, click **Apply**. 
 
 <a id="add-binary-deploy"></a>
-
 #### 2. Add Binary Deploy 
 
 Deployment for uploaded binary files can be set. 
@@ -212,7 +199,6 @@ Deployment for uploaded binary files can be set.
        * Specify a target directory to deploy binaries. 
 
 <a id="add-tasks-add-user-commands"></a>
-
 #### 3. Add User Commands
 
 ![deploy_11_201812](https://static.toastoven.net/prod_tcdeploy/deploy_11_201812.png)
@@ -228,7 +214,6 @@ Deployment for uploaded binary files can be set.
 3. When it is completed, click **Apply**.  
 
 <a id="execute"></a>
-
 ### Execute { #execute }
 
 ![deploy_12_201812](https://static.toastoven.net/prod_tcdeploy/deploy_12_201812.png)
