@@ -1,6 +1,7 @@
 <!-- pre-align:aligned sig=ab0387a78c99 -->
 
-## Dev Tools > Deploy > コンソール使用ガイド
+<a id="dev-tools-deploy-console-user-guide"></a>
+## Dev Tools > Deploy > コンソール使用ガイド { #dev-tools-deploy-console-user-guide }
 
 この文書では、次のような内容を扱います。
 
@@ -11,7 +12,6 @@
 (ここで扱わない機能は、[機能詳細ガイド](/Dev%20Tools/Deploy/ja/reference/)で確認できます。)
 
 <a id="deploy-console-page"></a>
-
 ## Deployコンソール画面 { #deploy-console-page }
 
 次は、Deployサービスのコンソール画面です。
@@ -19,13 +19,11 @@
 ![deploy_02_ja_20200519](https://static.toastoven.net/prod_tcdeploy/ja/deploy_02_ja_20200519.png)
 
 <a id="client-application"></a>
-
 ## Client Application { #client-application }
 
 クライアントアプリケーションデプロイ設定は、大きく分けてアーティファクト設定、その後、バイナリアップロードの順に行います。
 
 <a id="setting-artifacts"></a>
-
 ### アーティファクト設定 { #setting-artifacts }
 
 ![deploy_03_ja_20200519](https://static.toastoven.net/prod_tcdeploy/ja/deploy_03_ja_20200519.png)
@@ -36,11 +34,9 @@
 3. **作成**ボタンをクリックします。
 
 <a id="setting-binaries"></a>
-
 ### バイナリ設定 { #setting-binaries }
 
 <a id="upload"></a>
-
 #### アップロード
 
 * iOSは.ipa、.plistファイルを、Androidは.apkファイルをそれぞれアップロードします。
@@ -59,7 +55,6 @@
 4. 入力完了後、**アップロード**ボタンをクリックします。
 
 <a id="deploy"></a>
-
 #### デプロイ
 
 特定バイナリのダウンロードページをSMSやE-mailで通知できます。
@@ -77,13 +72,11 @@
 指定した転送手段で、受信者にバイナリダウンロードページが通達されます。
 
 <a id="server-application"></a>
-
 ## Server Application { #server-application }
 
 サーバーアプリケーションのデプロイは、基本設定（アーティファクト、サーバーグループ、シナリオ）、バイナリアップロード、デプロイの順に進めます。
 
 <a id="server-application-setting-artifacts"></a>
-
 ### アーティファクト設定 { #server-application-setting-artifacts }
 
 ![deploy_06_ja_201812](https://static.toastoven.net/prod_tcdeploy/ja/deploy_06_ja_20200519.png)
@@ -94,7 +87,6 @@
 3. **アーティファクト作成**ウィンドウで**作成**ボタンをクリックします。
 
 <a id="setting-server-groups"></a>
-
 ### サーバーグループ設定 { #setting-server-groups }
 
 デプロイするサーバーを管理できる機能です。
@@ -116,7 +108,6 @@
 3. 入力が完了したら、**[作成]** を選択します。
 
 <a id="setting-binary-groups"></a>
-
 ### バイナリグループ設定 { #setting-binary-groups }
 
 デプロイするバイナリを管理できる機能です。
@@ -135,7 +126,6 @@
 3. 入力を完了し、**作成**ボタンをクリックします。
 
 <a id="create-scenarios"></a>
-
 ### シナリオ作成 { #create-scenarios }
 
 ![deploy_08_ja_20200519](https://static.toastoven.net/prod_tcdeploy/ja/deploy_08_ja_20200519.png)
@@ -145,7 +135,6 @@
 3. **作成**ボタンをクリックします。
 
 <a id="add-tasks"></a>
-
 ### タスク追加 { #add-tasks }
 
 タスクは、個別の機能を実行し、順序を制御できるシナリオの構成要素です。
@@ -160,7 +149,6 @@
 デプロイテストのため、次の3つのタスクを追加します。
 
 <a id="add-user-commands"></a>
-
 #### 1. User Command追加
 
 * デプロイ時に実行されるユーザー定義の Command タスクです。
@@ -182,7 +170,6 @@
 4. 入力/変更完了後、**適用**ボタンをクリックします。 
 
 <a id="add-binary-deploy"></a>
-
 #### 2. Binary Deploy追加
 
 アップロードしたバイナリファイルのデプロイ内容を設定できるタスクです。
@@ -211,7 +198,6 @@
        * バイナリをデプロイするターゲットディレクトリを指定します。
 
 <a id="add-tasks-add-user-commands"></a>
-
 #### 3. User Command追加
 
 ![deploy_11_ja_20200519](https://static.toastoven.net/prod_tcdeploy/ja/deploy_11_ja_20200519.png)
@@ -227,7 +213,6 @@
 3. 入力/変更完了後に**適用**ボタンをクリックします。 
 
 <a id="execute"></a>
-
 ### 実行 { #execute }
 
 ![deploy_12_ja_20200519](https://static.toastoven.net/prod_tcdeploy/ja/deploy_12_ja_20200519.png)
