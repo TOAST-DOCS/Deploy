@@ -1,22 +1,18 @@
 <!-- pre-align:aligned sig=9d349a114abb -->
 
 <a id="dev-tools-deploy-api-v10-guide"></a>
-
-## Dev Tools > Deploy > API v1.0ガイド
+## Dev Tools > Deploy > API v1.0ガイド { #dev-tools-deploy-api-v10-guide }
 Deployでは、ユーザーがHTTP Requestを直接構成してバイナリアップロード、デプロイを実行するためのAPIを提供します。
 
 <a id="basic-information"></a>
-
 ### 基本情報 { #basic-information }
 <a id="endpoint"></a>
-
 #### エンドポイント
 ```text
 https://api-tcd.nhncloudservice.com
 ```
 
 <a id="types-of-provided-apis"></a>
-
 #### 提供するAPIの種類
 | Method | URI | 説明 |
 | ------ | --- | --- |
@@ -24,7 +20,6 @@ https://api-tcd.nhncloudservice.com
 | POST | /api/v1.0/projects/{appKey}/artifacts/{artifactId}/server-group/{serverGroupId}/scenario/{scenarioId}/deploy | デプロイ実行API |
 
 <a id="api-request-path-variables"></a>
-
 #### APIリクエストパス変数
 | 値 | タイプ | 説明 |
 | --- | --- | --- |
@@ -35,10 +30,8 @@ https://api-tcd.nhncloudservice.com
 | scenarioId | Number | デプロイするシナリオのID |
 
 <a id="binary-upload"></a>
-
 ### バイナリアップロード { #binary-upload }
 <a id="version-10"></a>
-
 #### Version 1.0
 | Http Method | POST |
 | ----------- | ---- |
@@ -145,7 +138,6 @@ try {
 ```
 
 <a id="previous-version"></a>
-
 #### 以前のバージョン
 | Http Method | POST |
 | ----------- | ---- |
@@ -233,14 +225,12 @@ try {
 ```
 
 <a id="run-deployment"></a>
-
 ### デプロイ実行 { #run-deployment }
 * デプロイを実行するためのAPIです。
 * アーティファクト `Command Type`がCloud Agentの場合のみデプロイ実行APIを提供します(SSHの場合は提供されません)。
 * デプロイ実行APIはロールベースのアクセス制御(RBAC)を使用します。**Deploy ADMIN**ロールを保有するユーザーのみがデプロイ実行APIを使用できます。
 
 <a id="run-deployment-version-10"></a>
-
 #### Version 1.0
 | Http Method | POST |
 | ----------- | ---- |

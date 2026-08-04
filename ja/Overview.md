@@ -1,8 +1,7 @@
 <!-- pre-align:aligned sig=ecae7f837f9d -->
 
 <a id="dev-tools-deploy-overview"></a>
-
-## Dev Tools > Deploy > 概要
+## Dev Tools > Deploy > 概要 { #dev-tools-deploy-overview }
 
 Deployサービスを使用すると、'1クリック'で素早くアプリケーションをデプロイできます。
 
@@ -15,7 +14,6 @@ Deployサービスを使用すると、'1クリック'で素早くアプリケ�
 ![[図1]サービス画像](https://static.toastoven.net/prod_tcdeploy/ja/01_ja.png)
 
 <a id="benefits"></a>
-
 ## 利点 { #benefits }
 
 * 簡単で便利なバイナリ管理
@@ -30,11 +28,9 @@ Deployサービスを使用すると、'1クリック'で素早くアプリケ�
 ![[図2]サービス画像](https://static.toastoven.net/prod_tcdeploy/ja/02_ja.png)
 
 <a id="features"></a>
-
 ## 提供機能 { #features }
 
 <a id="upload"></a>
-
 ### アップロード { #upload }
 さまざまなアップロード方式を使用して簡単にファイルをアップロードできます。
 * アップロードインターフェイス
@@ -43,32 +39,26 @@ Deployサービスを使用すると、'1クリック'で素早くアプリケ�
     * REST API
 
 <a id="download"></a>
-
 ### ダウンロード { #download }
 ダウンロードリンク通知機能を使用して、簡単にアプリのインストール/アップデートができます。
 
 <a id="query-binaries"></a>
-
 ### バイナリ照会 { #query-binaries }
 過去のバイナリデータを維持して、迅速にロールバックできます。
 
 <a id="manage-deployment-projects"></a>
-
 ### デプロイプロジェクト管理 { #manage-deployment-projects }
 プロジェクトのインフラ情報を連動して、簡単に設定できます。
 
 <a id="manage-execute-deployment-scenario"></a>
-
 ### デプロイシナリオ(実行)管理 { #manage-execute-deployment-scenario }
 ユーザー定義コマンドを使用して、デプロイ後のサーバー状態を確認できます。
 
 <a id="manage-deployment-history"></a>
-
 ### デプロイヒストリー管理 { #manage-deployment-history }
 デプロイヒストリーでデプロイ内容および以前のバイナリを管理するので、安定性を確保できます。
 
 <a id="glossary"></a>
-
 ## 用語説明 { #glossary }
 
 | 用語 | 説明 |

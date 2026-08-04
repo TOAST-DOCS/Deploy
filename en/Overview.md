@@ -1,8 +1,7 @@
 <!-- pre-align:aligned sig=ecae7f837f9d -->
 
 <a id="dev-tools-deploy-overview"></a>
-
-## Dev Tools > Deploy > Overview
+## Dev Tools > Deploy > Overview { #dev-tools-deploy-overview }
 
 With Deploy, applications can be deployed fast and easy, at 'One Click'. 
 
@@ -15,7 +14,6 @@ With Deploy, applications can be deployed fast and easy, at 'One Click'.
 ![01.png](http://static.toastoven.net/prod_tcdeploy/overview/01.png)
 
 <a id="benefits"></a>
-
 ## Benefits { #benefits }
 
 * Easy and convenient binary management 
@@ -30,11 +28,9 @@ With Deploy, applications can be deployed fast and easy, at 'One Click'.
 ![02.png](http://static.toastoven.net/prod_tcdeploy/overview/02.png)
 
 <a id="features"></a>
-
 ## Features { #features }
 
 <a id="upload"></a>
-
 ### Upload { #upload }
 Files are easily uploaded with the help of various uploading methods. 
 * Uploading Interfaces 
@@ -43,32 +39,26 @@ Files are easily uploaded with the help of various uploading methods.
     * REST API
 
 <a id="download"></a>
-
 ### Download { #download }
 Notification for downloading links makes it easy to install and update apps. 
 
 <a id="query-binaries"></a>
-
 ### Query Binaries { #query-binaries }
 Binary data of the past remain to enable fast roll-backs.
 
 <a id="manage-deployment-projects"></a>
-
 ### Manage Deployment Projects { #manage-deployment-projects }
 Infrastructure information of a project is integrated for an easy setting. 
 
 <a id="manage-execute-deployment-scenario"></a>
-
 ### Manage (Execute) Deployment Scenario { #manage-execute-deployment-scenario }
 User-defined commands are used to check server status after deployment. 
 
 <a id="manage-deployment-history"></a>
-
 ### Manage Deployment History { #manage-deployment-history }
 Deployment and previous binaries are managed by deployment history so as to secure stability. 
 
 <a id="glossary"></a>
-
 ## Glossary { #glossary }
 
 | Terms | Description |

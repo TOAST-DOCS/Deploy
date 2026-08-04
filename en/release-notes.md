@@ -5,34 +5,31 @@
 
 <a id="august-11-2026"></a>
 ### August 11, 2026 { #august-11-2026 }
-
-<!-- TODO: translate body -->
-
 <a id="august-11-2026-added-features"></a>
 #### Added Features
-
-<!-- TODO: translate body -->
+* Added the API v2.1 List Scenarios API
+    * You can retrieve the ID and name of scenarios mapped to a server group.
 
 <a id="april-14-2026"></a>
 ### April 14, 2026 { #april-14-2026 }
 <a id="added-features"></a>
 #### Added Features
-* Added new API v2.1 guide
+* Added the API v2.1 Guide
     * Applied the User Access Key token (Bearer) authentication method.
 * Added information retrieval APIs
-    * API v2.0 and v2.1 now provide APIs for retrieving artifact lists, server group lists, binary group lists, deployment history, and binary lists.
+    * API v2.0 and v2.1 provide the List Artifacts, List Server Groups, List Binary Groups, Retrieve Deployment History, and List Binaries APIs.
 
 <a id="april-29-2025"></a>
 ### April 29, 2025 { #april-29-2025 }
 <a id="april-29-2025-added-features"></a>
 #### Added Features
-* Added deployment execution API version 2.0
-    * Deployment can now be executed for Auto Scale server groups as well.
+* Added Deploy Execution API Version 2.0
+    * Auto Scale server groups can now run deployments.
 
 <a id="feature-updates"></a>
 #### Feature Updates
-* Updated to allow Auto Scale server group creation in the Cloud Agent artifact Command Type
-* Updated the binary upload size limit via API from 2 GB to 4 GB
+* Updated Cloud Agent artifact Command Type to support creating Auto Scale server groups.
+* Changed the file size limit for binary uploads via API from 2 GB to 4 GB.
 
 <a id="march-25-2025"></a>
 ### March 25, 2025 { #march-25-2025 }
@@ -369,47 +366,47 @@
 ### October 23, 2018 { #october-23-2018 }
 <a id="october-23-2018-added-features"></a>
 #### Added Features
-* Enabled deployment termination function after deployment re-entry (for deployer only)
+* Enabled the deployment termination feature after re-entry (deployers only)
 
 <a id="october-23-2018-bug-fixes"></a>
 #### Bug Fixes
-* Fixed an issue where a file is created even if there is no file content in Resource tab > Add file
+* Fixed an issue where a file was created even when the file content was empty in the Resources tab > Add File
 
 <a id="august-28-2018"></a>
 ### August 28, 2018 { #august-28-2018 }
 <a id="august-28-2018-added-features"></a>
 #### Added Features
-* Added deployment re-entry function
+* Deployment re-entry feature
 * Added a layer to guide page loading
-* Binary upload API Ver 1.0 update
-    * Operating simultaneously with previous versions.
+* Binary Upload API Ver1.0 update
+    * Operates concurrently with the previous version.
 
 <a id="august-28-2018-bug-fixes"></a>
 #### Bug Fixes
-* Fixed the operation error of the item of authentication method at deployment
-    * Added pem file required value check.
-    * Fixed an issue where the input type is not switched by clicking the password/pem switch radio button.
+* Fixed an issue with authentication method item behavior during deployment
+    * Added a required field check for pem files.
+    * Fixed an issue where the input type did not switch when clicking the password/pem toggle radio button.
 
 <a id="document-change"></a>
-#### Document Change
-* Binary upload API Ver 1.0 update
+#### Document Changes
+* Binary Upload API Ver1.0 update
 
 <a id="july-24-2018"></a>
 ### July 24, 2018 { #july-24-2018 }
 <a id="july-24-2018-added-features"></a>
 #### Added Features
 
-* Added scenario Import / Export function
-* Released restrictions on Client Type menu (all menus available)
-* Added Phase property for server group equipment separator
-    * Added confirmation step when deploying server with Phase Type of Product.
+* Added scenario Import/Export feature
+* Removed menu usage restrictions for Client Type (all menus are now available)
+* Added the Phase property for server group device classification
+    * Added a confirmation step when deploying servers whose Phase Type is Product.
 
 <a id="april-24-2018"></a>
 ### April 24, 2018 { #april-24-2018 }
 <a id="april-24-2018-added-features"></a>
 #### Added Features
 
-* Added binary install page access control function of client application through password input
+* Added access control for the client application binary installation page using a password
 
 <a id="february-22-2018"></a>
 ### February 22, 2018 { #february-22-2018 }

@@ -1,8 +1,7 @@
 <!-- pre-align:aligned sig=093e705de062 -->
 
 <a id="dev-tools-deploy-api-guide"></a>
-
-## Dev Tools > Deploy > API Guide
+## Dev Tools > Deploy > API Guide { #dev-tools-deploy-api-guide }
 
 Deploy provides APIs for binary upload and deployment execution. You can configure and send HTTP requests directly. 
 This documentation is organized by API version. Please refer to the links below to access the documentation for the desired version.
@@ -12,10 +11,8 @@ This documentation is organized by API version. Please refer to the links below 
 - [Version 2.1 API Guide](/Dev%20Tools/Deploy/en/api-guide-v2.1/)
 
 <a id="common-information"></a>
-
 ### Common Information { #common-information }
 <a id="how-to-check-values-by-variable"></a>
-
 #### How to check values by variable
 
 ##### How to check appKey

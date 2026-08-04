@@ -1,8 +1,7 @@
 <!-- pre-align:aligned sig=75ae7510e77e -->
 
 <a id="dev-tools-deploy-detail-functional-guide"></a>
-
-## Dev Tools > Deploy > 기능 상세 가이드
+## Dev Tools > Deploy > 기능 상세 가이드 { #dev-tools-deploy-detail-functional-guide }
 
 이 문서에서는 다음과 같은 내용을 다룹니다.
 
@@ -10,20 +9,17 @@
 * [기능별 설명](/Dev%20Tools/Deploy/ko/reference/#functional-description)
 
 <a id="menu-description"></a>
-
 ## 메뉴 설명 { #menu-description }
 
 ![deploy_ref_01_2018.png](https://static.toastoven.net/prod_tcdeploy/deploy_ref_01_2018.png)
 
 <a id="artifact-menu"></a>
-
 ### 1. 아티팩트 메뉴 영역 { #artifact-menu }
 
 배포를 관리하는 Deploy 구성의 기본 단위입니다.
 생성된 아티팩트는 화면 위쪽에 목록 형태로 표시됩니다.
 
 <a id="deployment-menu"></a>
-
 ### 2. 배포 메뉴 영역 { #deployment-menu }
 
 배포를 진행하는 페이지로 시나리오 생성과 설정을 할 수 있습니다.
@@ -40,7 +36,6 @@
 * 배포 노트에 배포 상세 내용을 입력하면, **배포 이력** 탭의 배포별 결과 보기 창에서 확인할 수 있습니다. 
 
 <a id="deployment-option"></a>
-
 #### 배포 옵션
 
 ##### 서버 그룹
@@ -70,7 +65,6 @@
     * 오류 여부와 관계없이 시나리오가 계속 실행됩니다.
 
 <a id="view-current-deployment-status"></a>
-
 #### 진행 중인 배포 상태 보기 
 
 배포 중인 시나리오의 진행 상황을 확인할 수 있습니다.
@@ -81,7 +75,6 @@
 * 배포 이력 화면에서 'deploying' 상태를 클릭합니다.
 
 <a id="deployment-history"></a>
-
 ### 배포 이력 { #deployment-history }
 배포 이력과 배포 설정, 배포 노트의 자세한 내용을 확인할 수 있습니다.
 ![deploy_ref_01_2021.png](https://static.toastoven.net/prod_tcdeploy/reference/deploy_ref_01_2021.png)
@@ -110,7 +103,6 @@
     ![deploy_ref_06_2021.png](https://static.toastoven.net/prod_tcdeploy/reference/deploy_ref_06_2021.png)
     
 <a id="binary-group"></a>
-
 ### 바이너리 그룹 { #binary-group }
 
 **바이너리 그룹** 탭에서는 바이너리를 그룹으로 관리할 수 있습니다.
@@ -128,7 +120,6 @@ Develop, Staging, Product 등의 서버 장비에 배포되는 바이너리를 �
     * 자동 삭제 설정의 각 항목을 빈값으로 두고 바이너리 그룹을 생성할 경우 자동 삭제 설정이 적용되지 않습니다.
 
 <a id="server-group"></a>
-
 ### 서버 그룹 { #server-group }
 
 배포 대상 서버를 그룹으로 관리할 수 있습니다.
@@ -140,7 +131,6 @@ Auto Scale 서비스의 인스턴스 확장에 따른 배포를 설정할 수 �
 * 그룹에서 사용할 시나리오를 설정할 수 있습니다.
 
 <a id="adding-server-group"></a>
-
 #### 서버 그룹 추가
 
 ![deploy_ref_08_202402.png](https://static.toastoven.net/prod_tcdeploy/deploy_ref_08_202402.png)
@@ -152,7 +142,6 @@ Auto Scale 서비스의 인스턴스 확장에 따른 배포를 설정할 수 �
     * **생성** 버튼을 클릭합니다.
 
 <a id="addingdeleting-server-information"></a>
-
 #### 서버 정보 추가/삭제
 
 **서버 그룹 생성(수정)** 창에서 서버 정보를 추가하거나 삭제할 수 있습니다.
@@ -188,7 +177,6 @@ Auto Scale 서비스의 인스턴스 확장에 따른 배포를 설정할 수 �
 * **생성** 버튼을 클릭합니다. 수정할 때는 **수정** 버튼을 클릭합니다.
 
 <a id="server-group-1"></a>
-
 #### 오토 스케일 그룹 추가
 ![autoscale_01.png](https://static.toastoven.net/prod_tcdeploy/reference/autoscale_01.png)
 * **배포** > **서버 그룹 생성**을 클릭하거나, **서버 그룹 > 새로 만들기**
@@ -211,7 +199,6 @@ Auto Scale 서비스의 인스턴스 확장에 따른 배포를 설정할 수 �
 * **생성** 버튼을 클릭합니다. 
 
 <a id="resources"></a>
-
 ### 리소스 { #resources }
 
 리소스를 관리할 수 있는 페이지로, 파일 생성, 업로드, 다운로드, 수정을 할 수 있으며 변경 이력을 확인할 수 있습니다.
@@ -219,19 +206,16 @@ Auto Scale 서비스의 인스턴스 확장에 따른 배포를 설정할 수 �
 ![deploy_ref_10_2018.png](https://static.toastoven.net/prod_tcdeploy/deploy_ref_10_2018.png)
 
 <a id="functional-description"></a>
-
 ## 기능별 설명 { #functional-description }
 
 여기에서는 Getting Started에서 다루지 않은 기능과 추가 설정을 자세히 설명합니다.
 
 <a id="binary"></a>
-
 ### 바이너리 { #binary }
 
 바이너리는 업로드된 배포 대상 파일입니다.
 
 <a id="uploading"></a>
-
 #### 업로드
 
 바이너리를 업로드할 수 있는 방법은 두 가지입니다.
@@ -250,13 +234,11 @@ Auto Scale 서비스의 인스턴스 확장에 따른 배포를 설정할 수 �
 ![deploy_ref_12_2018.png](https://static.toastoven.net/prod_tcdeploy/deploy_ref_12_2018.png)
 
 <a id="download"></a>
-
 #### 1. 다운로드
 
 바이너리 목록 오른쪽의 다운로드 버튼을 클릭합니다.
 
 <a id="fix-versions"></a>
-
 #### 2. 버전 픽스
 
 Client OS별 1개씩 버전 픽스를 할 수 있습니다.
@@ -268,7 +250,6 @@ Client OS별 1개씩 버전 픽스를 할 수 있습니다.
         * 클릭 시 해당 버전을 fix합니다.
 
 <a id="deploy"></a>
-
 #### 3. 배포
 
 ##### 버전별 배포
@@ -306,7 +287,6 @@ Client 바이너리의 All, Fixed, Recent 버전을 원하는 방식으로 배�
 지정한 전송 유형으로 수신자에게 바이너리 다운로드 페이지가 전달됩니다.
 
 <a id="tasks"></a>
-
 ### 태스크 { #tasks }
 
 태스크는 개별 기능 수행 및 순서 제어가 가능한 시나리오 구성 요소 입니다.
@@ -336,7 +316,6 @@ Client 바이너리의 All, Fixed, Recent 버전을 원하는 방식으로 배�
     * 자세한 내용은 아래 Available Variables를 참고하시기 바랍니다.
 
 <a id="pre-run-tasks"></a>
-
 #### Pre-run Task
 
 * Target Server: 별도로 Target Server를 지정한 일회성 처리가 가능합니다.
@@ -400,7 +379,6 @@ Client 바이너리의 All, Fixed, Recent 버전을 원하는 방식으로 배�
     * 예약어를 사용할 수 있습니다. 아래 Available Variables 메뉴를 참고하세요.
 
 <a id="normal-tasks"></a>
-
 #### Normal Task
 
 * Target Server: 별도로 Target Server를 입력하지 않고, 서버 그룹에서 선택된 서버 정보를 사용합니다.
@@ -480,7 +458,6 @@ Client 바이너리의 All, Fixed, Recent 버전을 원하는 방식으로 배�
         * `$${binary.지정한 Variables As 입력.binaryGroupName} : 바이너리에 설정한 변수 이름으로 선택된 바이너리의 그룹 이름`
 
 <a id="available-variables"></a>
-
 #### Available Variables
 
 태스크에서 아래와 같은 예약어를 사용할 수 있습니다.
@@ -514,7 +491,6 @@ $${binary.binary variable as value.binaryGroupName} : 바이너리에 설정한 
         * `$${binary.지정한 Variables As 입력.binaryGroupName} : 해당 바이너리의 그룹 이름`
 
 <a id="functional-description-resources"></a>
-
 ### 리소스 { #functional-description-resources }
 
 리소스는 선택적으로 사용할 수 있는 파일 관리 기능입니다.
@@ -526,7 +502,6 @@ $${binary.binary variable as value.binaryGroupName} : 바이너리에 설정한 
 * 파일 이력 관리
 
 <a id="creating-file-groups"></a>
-
 #### 파일 그룹 생성
 
 ![deploy_ref_21_2018.png](https://static.toastoven.net/prod_tcdeploy/deploy_ref_21_2018.png)
@@ -537,7 +512,6 @@ $${binary.binary variable as value.binaryGroupName} : 바이너리에 설정한 
 3. **확인** 버튼을 클릭합니다.
 
 <a id="adding-files"></a>
-
 #### 파일 추가
 
 ##### 파일 업로드
@@ -562,7 +536,6 @@ $${binary.binary variable as value.binaryGroupName} : 바이너리에 설정한 
 6. 생성이 완료된 모습입니다.
 
 <a id="modifying-files"></a>
-
 #### 파일 수정
 
 * 파일 설명 수정

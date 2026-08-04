@@ -1,17 +1,14 @@
 <!-- pre-align:aligned sig=1700b4329367 -->
 
 <a id="dev-tools-deploy-user-guide-for-plugin"></a>
-
-## Dev Tools > Deploy > 플러그인 사용 가이드
+## Dev Tools > Deploy > 플러그인 사용 가이드 { #dev-tools-deploy-user-guide-for-plugin }
 
 <a id="jenkins-plugin-guide"></a>
-
 ## Jenkins Plugin Guide { #jenkins-plugin-guide }
 
 NHN Cloud Deploy Jenkins 업로드 플러그인을 사용하면 Jenkins의 빌드 결과물을 NHN Cloud Deploy 서버로 업로드할 수 있습니다.
 
 <a id="integrating-deploy---jenkins"></a>
-
 ## Deploy <-> Jenkins 연동 절차 { #integrating-deploy---jenkins }
 
 Jenkins build -> Deploy로 바이너리 업로드(by plugin) -> 배포 시나리오 실행(배포/종료/재시작/기타 사전 작업 및 후처리)
@@ -23,19 +20,16 @@ Jenkins build -> Deploy로 바이너리 업로드(by plugin) -> 배포 시나리
 4. 배포 시나리오 작성
 
 <a id="installing-jenkins"></a>
-
 ## Jenkins 설치 { #installing-jenkins }
 
 Jenkins 설치 및 자세한 사항은 [https://jenkins.io/](https://jenkins.io/)에서 확인할 수 있습니다.
 
 <a id="minimum-version-requirements-for-jenkins"></a>
-
 #### Jenkins 최소 요구 사항 버전
 
 **Jenkins 1580.1** 이후 버전을 요구합니다.
 
 <a id="installing-jenkins-1"></a>
-
 #### 플러그인 설치
 
 1. **Jenkins 관리 > 플러그인 관리 > 고급 탭 > 플러그인 올리기** 메뉴에서 **tcdeploy-upload-jenkins.hpi** 파일을 업로드합니다.
@@ -52,7 +46,6 @@ Jenkins 설치 및 자세한 사항은 [https://jenkins.io/](https://jenkins.io/
     ![03.png](http://static.toastoven.net/prod_tcdeploy/devguide/03.png)
 
 <a id="plugin-setting-for-server-type-application-uploads"></a>
-
 #### 서버(server) 타입 애플리케이션 업로드 플러그인 설정
 
 서버 타입 애플리케이션 업로드 플러그인으로 빌드 결과물을 ZIP 형식으로 압축해서 NHN Cloud Deploy(TCD) 서버로 업로드할 수 있습니다.
@@ -130,7 +123,6 @@ Finished: SUCCESS
 artifact id, app key 등 사용자 입력 정보가 출력되고, 압축 파일에 포함된 파일 내용을 출력합니다.
 
 <a id="plugin-setting-for-client-type-application-uploads"></a>
-
 #### 클라이언트(client) 타입 애플리케이션 업로드 플러그인 설정
 
 클라이언트 타입 애플리케이션 업로드 플러그인으로 성공적으로 빌드된 결과물 중 사용자가 지정한 특정 바이너리를 TCD 서버로 업로드할 수 있습니다.
@@ -180,13 +172,11 @@ Finished: SUCCESS
 artifact id, app key 등 사용자 입력 정보가 출력되고, 업로드할 바이너리 및 메타파일이 출력됩니다.
 
 <a id="jenkins-cli-build-profile"></a>
-
 ## Jenkins-CLI Build Profile { #jenkins-cli-build-profile }
 
 사용자가 Jenkins-CLI를 사용하여 빌드 명령 수행에 도움을 주는 사전에 정의된 Profile입니다.
 
 <a id="preparations"></a>
-
 #### 준비 사항
 
 1. SSH Pubilc/Private Key Pair 생성
@@ -205,7 +195,6 @@ artifact id, app key 등 사용자 입력 정보가 출력되고, 업로드할 �
         * /etc/sysconfig/jenkins의 JENKINS\_JAVA\_OPTIONS에 -Dhudson.diyChunking=false 옵션 추가.
 
 <a id="setting-profile"></a>
-
 #### Profile 설정
 
 ![06.png](http://static.toastoven.net/prod_tcdeploy/devguide/06.png)

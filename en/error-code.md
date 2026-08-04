@@ -1,11 +1,9 @@
 <!-- pre-align:aligned sig=94982e34f40e -->
 
 <a id="dev-tools-deploy-error-code"></a>
-
-## Dev Tools > Deploy > Error Code
+## Dev Tools > Deploy > Error Code { #dev-tools-deploy-error-code }
 
 <a id="ver-10"></a>
-
 ## Ver 1.0 { #ver-10 }
 
 | resultCode | resultMessage |
@@ -31,7 +29,6 @@
 | FAIL | fail |
 
 <a id="previous-version"></a>
-
 ## Previous version { #previous-version }
 
 | isSuccess | resultKey |
