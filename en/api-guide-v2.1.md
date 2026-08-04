@@ -39,6 +39,7 @@ Users must have the **Deploy ADMIN role** or **Deploy VIEWER role** to use the A
 | GET | /api/v2.1/projects/{appKey}/artifacts/{artifactId}/binary-groups | Binary group list retrieval API |
 | GET | /api/v2.1/projects/{appKey}/artifacts/{artifactId}/deploy-histories | Deployment history retrieval API |
 | GET | /api/v2.1/projects/{appKey}/artifacts/{artifactId}/binary-groups/{binaryGroupKey}/binaries | Binary list retrieval API |
+| GET | /api/v2.1/projects/{appKey}/artifacts/{artifactId}/server-groups/{serverGroupId}/scenarios | List Scenarios API |
 
 <a id="api-request-path-variables"></a>
 #### API Request Path Variables
@@ -54,7 +55,7 @@ Users must have the **Deploy ADMIN role** or **Deploy VIEWER role** to use the A
 ### Upload Binary { #upload-binary }
 <a id="version-21"></a>
 #### Version 2.1
-| Http Method | POST |
+| HTTP Method | POST |
 | ----------- | ---- |
 | Request URL | https://api-tcd.nhncloudservice.com/api/v2.1/projects/{appKey}/artifacts/{artifactId}/binary-group/{binaryGroupKey} |
 
@@ -109,7 +110,7 @@ You can download a binary file using the download path received in the response 
 
 <a id="download-binary-version-21"></a>
 #### Version 2.1
-| Http Method | GET |
+| HTTP Method | GET |
 | ----------- | ---- |
 | Request URL | https://api-tcd.nhncloudservice.com/api/v2.1/projects/{appKey}/artifacts/{artifactId}/binary-group/{binaryGroupKey}/binaries/{binaryKey} |
 
@@ -118,11 +119,11 @@ You can download a binary file using the download path received in the response 
 curl -X GET \
   https://api-tcd.nhncloudservice.com/api/v2.1/projects/{appKey}/artifacts/{artifactId}/binary-group/{binaryGroupKey}/binaries/{binaryKey} \
   -H 'X-NHN-AUTHORIZATION: Bearer {token}' \
-  -o {file name to save}
+  -o {output filename}
 ```
 
 ##### Response
-* Downloads the binary file.
+* Downloads a binary file.
 * Content-Type: `application/octet-stream`
 
 <a id="execute-deployment"></a>
@@ -133,20 +134,19 @@ curl -X GET \
 
 <a id="execute-deployment-version-21"></a>
 #### Version 2.1
-| Http Method | POST |
+| HTTP Method | POST |
 | ----------- | ---- |
 | Request URL | https://api-tcd.nhncloudservice.com/api/v2.1/projects/{appKey}/artifacts/{artifactId}/server-group/{serverGroupId}/deploy |
+##### Parameter(Body)
 
-##### Parameter (Body)
 | Name | Type | Description | Value | Required | Default Value |
 | --- | --- | --- | --- | --- | --- |
-| targetServerHostnames | String | Hostnames of servers within the server group to selectively deploy to, separated by commas (,) (enter all if deploying to the entire server group) | hostname1, hostname2, hostname3 (if not specified, deploys to all servers in the server group) | false | All servers in the server group |
-| concurrentNum | Number | Number of deployments to run in parallel | A value of 0 or greater; if 0, all servers in the server group run simultaneously | false | 0 |
-| nextWhenFail | Boolean | Whether to proceed to the next server if a scenario fails | true/false | false | false (stops execution) |
-| deployNote | String | Additional information to include with the deployment | | false | |
+| targetServerHostnames | String | Hostnames of servers, separated by commas (,), that are selectively targeted for deployment within the server group (enter all if targeting the entire server group) | hostname1, hostname2, hostname3 (deploys to all servers in the server group if not specified) | false | All servers in the server group |
+| concurrentNum | Number | Number of deployments to run in parallel | A value of 0 or greater; if 0, full concurrency across the server group | false | 0 |
+| nextWhenFail | Boolean | Whether to run the next server when a scenario fails | true/false | false | false (execution stopped) |
+| deployNote | String | Additional information written when deploying |  | false |  |
 | async | Boolean | Receives a response without waiting for the deployment result | true/false | false | false |
-| scenarioIds | String | Scenario IDs to execute | Scenario IDs within the server group, separated by commas (,) (if not specified, all mapped scenario IDs) | false (however, true for standard deployment - only 1) | All mapped scenario IDs if not specified |
-
+| scenarioIds | String | Scenario scenarioId to run | Scenario IDs separated by comma (,) within the Server Group (if not specified, all mapped ScenarioIDs) | false (however, true for a general Deploy - only 1) | All mapped ScenarioIDs if not specified |
 ##### Sample Request For cURL
 ``` java
 curl --location 'https://api-tcd.nhncloudservice.com/api/v2.1/projects/{appKey}/artifacts/{artifactId}/server-group/{serverGroupId}/deploy' \
@@ -162,18 +162,17 @@ curl --location 'https://api-tcd.nhncloudservice.com/api/v2.1/projects/{appKey}/
 }'
 ```
 
-##### Response (JSON)
-* The `isSuccessful` field indicates whether the deployment execution call was successful. Use the `deployStatus` field to check the deployment result (success or failure).
-* If an Autoscale server group is deployed, the body value exists in List format.
+##### Response(json)
+* The `isSuccessful` field indicates whether the execute deployment call was successful, and you must check the deployment result (success or failure) through the `deployStatus` field.
+* If you deployed an Auto Scaling Server Group, the Body value exists as a List.
 
 | Name | Type | Description | Value |
 | ---- | ---- | ----------- | ----- |
-| isSuccessful | Boolean | Whether the deployment execution was successful | true or false |
-| resultCode | String | Deployment execution result message | See [Error Codes](/Dev%20Tools/Deploy/en/error-code/) |
-| deployStatus | String | Deployment status | success, fail, or deploying (when async option is true) |
-| deployResult | List | Deployment result per server | - hostname: Hostname of the deployment target (instance ID)<br>- status: Deployment result<br>- taskResult: Information for each task in the deployment scenario |
-| deployResultLocation | String | Link to the Deploy service project where the deployment was executed | Access the Deploy service project console via this link |
-
+| isSuccessful | Boolean | Whether the deployment execution was successful | "true" or "false" |
+| resultCode | String | Result message for deployment execution | See [Error Code](/Dev%20Tools/Deploy/en/error-code/) |
+| deployStatus | String | Deployment status | success, fail, or deploying (when the async option is true) |
+| deployResult | List | Deployment results by server | - hostname: Hostname of the deployment target (Instance ID)<br>- status: Deployment Result<br>- taskResult: Information on each task in the deployment scenario |
+| deployResultLocation | String | Link to the Deploy service project where deployment was run | You can access the Deploy service project console using this link. |
 ##### Response Sample
 ``` json
 {
@@ -186,18 +185,18 @@ curl --location 'https://api-tcd.nhncloudservice.com/api/v2.1/projects/{appKey}/
     "body": [
 		{
 			"deployKey": 192349,
-			"deployStatus": "{deployment status}",
+			"deployStatus": "{Deployment Status}",
 			"deployResult": [
 				{
 					"deployKey": 192349,
 					"hostname": "{hostname}",
-					"status": "{deployment result}",
+					"status": "{Deployment Result}",
 					"taskResult": [
 						"..."
 					]
 				}
 			],
-			"deployResultLocation": "{link to the Deploy service project where the deployment was executed}"
+			"deployResultLocation": "{Link to the Deploy service project where the deployment was executed}"
 		}
 	]
 }
@@ -209,15 +208,14 @@ curl --location 'https://api-tcd.nhncloudservice.com/api/v2.1/projects/{appKey}/
 
 <a id="list-artifacts-version-21"></a>
 #### Version 2.1
-| Http Method | GET |
+| HTTP Method | GET |
 | ----------- | ---- |
 | Request URL | https://api-tcd.nhncloudservice.com/api/v2.1/projects/{appKey}/artifacts |
+##### Parameter(Query String)
 
-##### Parameter (Query String)
 | Name | Type | Description | Value | Required | Default Value |
 | --- | --- | --- | --- | --- | --- |
-| artifactName | String | Search by artifact name | Name of the artifact to search for | false | - |
-
+| artifactName | String | Search Artifact Name | Artifact name to search for | false | - |
 ##### Sample Request For cURL
 ``` java
 curl -X GET \
@@ -225,13 +223,13 @@ curl -X GET \
   -H 'X-NHN-AUTHORIZATION: Bearer {token}'
 ```
 
-##### Response (JSON)
+##### Response(json)
+
 | Name | Type | Description | Value |
 | ---- | ---- | ----------- | ----- |
-| isSuccessful | Boolean | Whether the request was successful | true or false |
-| resultCode | String | Request result message | See [Error Codes](/Dev%20Tools/Deploy/en/error-code/) |
-| artifacts | List | Artifact list | See below |
-
+| isSuccessful | Boolean | Request success | `true` or `false` |
+| resultCode | String | Request result message | See [Error Code](/Dev%20Tools/Deploy/en/error-code/) |
+| artifacts | List | Artifact list | Refer to item below |
 **artifacts**
 
 | Name | Type | Description |
@@ -240,9 +238,8 @@ curl -X GET \
 | name | String | Artifact name |
 | applicationType | String | Application type (server/client) |
 | description | String | Description |
-| createDate | Date | Creation date |
+| createDate | Date | Created on |
 | lastDeployDate | Date | Last deployment date |
-
 ##### Response Sample
 ``` json
 {
@@ -273,10 +270,9 @@ curl -X GET \
 
 <a id="list-server-groups-version-21"></a>
 #### Version 2.1
-| Http Method | GET |
+| HTTP Method | GET |
 | ----------- | ---- |
 | Request URL | https://api-tcd.nhncloudservice.com/api/v2.1/projects/{appKey}/artifacts/{artifactId}/server-groups |
-
 ##### Sample Request For cURL
 ``` java
 curl -X GET \
@@ -287,20 +283,18 @@ curl -X GET \
 ##### Response (JSON)
 | Name | Type | Description | Value |
 | ---- | ---- | ----------- | ----- |
-| isSuccessful | Boolean | Whether the request was successful | true or false |
-| resultCode | String | Request result message | See [Error Codes](/Dev%20Tools/Deploy/en/error-code/) |
-| serverGroups | List | Server group list | See below |
-
+| isSuccessful | Boolean | Request success | `true` or `false` |
+| resultCode | String | Request result message | See [Error Code](/Dev%20Tools/Deploy/en/error-code/) |
+| serverGroups | List | Server Group List | See the items below |
 **serverGroups**
 
 | Name | Type | Description |
 | ---- | ---- | ----------- |
-| id | Number | Server group ID |
-| name | String | Server group name |
+| id | Number | Server Group ID |
+| name | String | Server Group Name |
 | description | String | Description |
 | osType | String | OS type (LINUX/WINDOWS) |
-| serverCount | Number | Number of servers |
-
+| serverCount | Number | Number of Servers |
 ##### Response Sample
 ``` json
 {
@@ -330,10 +324,9 @@ curl -X GET \
 
 <a id="list-binary-groups-version-21"></a>
 #### Version 2.1
-| Http Method | GET |
+| HTTP Method | GET |
 | ----------- | ---- |
 | Request URL | https://api-tcd.nhncloudservice.com/api/v2.1/projects/{appKey}/artifacts/{artifactId}/binary-groups |
-
 ##### Sample Request For cURL
 ``` java
 curl -X GET \
@@ -344,20 +337,18 @@ curl -X GET \
 ##### Response (JSON)
 | Name | Type | Description | Value |
 | ---- | ---- | ----------- | ----- |
-| isSuccessful | Boolean | Whether the request was successful | true or false |
-| resultCode | String | Request result message | See [Error Codes](/Dev%20Tools/Deploy/en/error-code/) |
-| binaryGroups | List | Binary group list | See below |
-
+| isSuccessful | Boolean | Request success | `true` or `false` |
+| resultCode | String | Request result message | See [Error Code](/Dev%20Tools/Deploy/en/error-code/) |
+| binaryGroups | List | Binary Group List | See the items below |
 **binaryGroups**
 
 | Name | Type | Description |
 | ---- | ---- | ----------- |
 | key | Number | Binary group key |
-| name | String | Binary group name |
+| name | String | Binary Group Name |
 | description | String | Description |
 | regionCode | String | Region code |
-| createDate | Date | Creation date |
-
+| createDate | Date | Created on |
 ##### Response Sample
 ``` json
 {
@@ -388,19 +379,18 @@ curl -X GET \
 
 <a id="list-deployment-history-version-21"></a>
 #### Version 2.1
-| Http Method | GET |
+| HTTP Method | GET |
 | ----------- | ---- |
 | Request URL | https://api-tcd.nhncloudservice.com/api/v2.1/projects/{appKey}/artifacts/{artifactId}/deploy-histories |
+##### Parameter(Query String)
 
-##### Parameter (Query String)
 | Name | Type | Description | Value | Required | Default Value |
 | --- | --- | --- | --- | --- | --- |
-| serverGroupId | Number | Server group ID | If 0, retrieves all artifacts | false | 0 |
+| serverGroupId | Number | Server Group ID | If 0, retrieves all artifacts. | false | 0 |
 | deploymentYearFrom | String | Query start date | yyyy-MM-dd format | false | Current date - 1 month |
 | deploymentYearTo | String | Query end date | yyyy-MM-dd format | false | Current date |
-| pageNum | Number | Page number | A value of 1 or greater | false | 1 |
-| pageSize | Number | Number of items per page | A value of 1 or greater | false | 20 |
-
+| pageNum | Number | Page No. | A value of at least 1 | false | 1 |
+| pageSize | Number | Items per page | A value of 1 or greater | false | 20 |
 ##### Sample Request For cURL
 ``` java
 curl -X GET \
@@ -411,24 +401,22 @@ curl -X GET \
 ##### Response (JSON)
 | Name | Type | Description | Value |
 | ---- | ---- | ----------- | ----- |
-| isSuccessful | Boolean | Whether the request was successful | true or false |
-| resultCode | String | Request result message | See [Error Codes](/Dev%20Tools/Deploy/en/error-code/) |
+| isSuccessful | Boolean | Request success | `true` or `false` |
+| resultCode | String | Request result message | See [Error Code](/Dev%20Tools/Deploy/en/error-code/) |
 | totalCount | Number | Total count | - |
-| deployHistories | List | Deployment history list | See below |
-
+| deployHistories | List | Deployment history list | See the items below |
 **deployHistories**
 
 | Name | Type | Description |
 | ---- | ---- | ----------- |
-| deployKey | Number | Deployment key |
-| scenarioName | String | Scenario name |
-| serverGroupName | String | Server group name |
-| serverGroupId | Number | Server group ID |
+| deployKey | Number | Deploy Key |
+| scenarioName | String | Scenario Name |
+| serverGroupName | String | Server Group Name |
+| serverGroupId | Number | Server Group ID |
 | binaryVersion | String | Binary version |
-| executeDate | Date | Execution date |
+| executeDate | Date | Executed Date |
 | executeUser | String | Executed by |
-| totalResult | String | Execution result (SUCCESS/FAIL/RUNNING) |
-
+| totalResult | String | Result (SUCCESS/FAIL/RUNNING) |
 ##### Response Sample
 ``` json
 {
@@ -443,8 +431,8 @@ curl -X GET \
         "deployHistories": [
             {
                 "deployKey": 192349,
-                "scenarioName": "Deployment scenario",
-                "serverGroupName": "Production server group",
+                "scenarioName": "Deployment Scenario",
+                "serverGroupName": "Production Server Group",
                 "serverGroupId": 1,
                 "binaryVersion": "1.0.0",
                 "executeDate": "2025-03-01T12:00:00+09:00",
@@ -462,19 +450,18 @@ curl -X GET \
 
 <a id="list-binaries-version-21"></a>
 #### Version 2.1
-| Http Method | GET |
+| HTTP Method | GET |
 | ----------- | ---- |
 | Request URL | https://api-tcd.nhncloudservice.com/api/v2.1/projects/{appKey}/artifacts/{artifactId}/binary-groups/{binaryGroupKey}/binaries |
+##### Parameter(Query String)
 
-##### Parameter (Query String)
 | Name | Type | Description | Value | Required | Default Value |
 | --- | --- | --- | --- | --- | --- |
-| pageNum | Number | Page number | A value of 1 or greater | false | 1 |
-| pageSize | Number | Number of items per page | A value of 1 or greater | false | 20 |
-| sortKey | String | Sort key | VERSION, BINARY_KEY, UPLOAD_DATE | false | UPLOAD_DATE |
-| sortDirection | String | Sort direction | ASC, DESC | false | DESC |
-| keyword | String | Binary version search keyword | Keyword to search for | false | - |
-
+| pageNum | Number | Page No. | A value of at least 1 | false | 1 |
+| pageSize | Number | Items per page | A value of 1 or greater | false | 20 |
+| sortKey | String | Sort by | VERSION, BINARY_KEY, UPLOAD_DATE | false | UPLOAD_DATE |
+| sortDirection | String | Sort order | ASC, DESC | false | DESC |
+| keyword | String | Search keyword for binary versions | Search keyword | false | - |
 ##### Sample Request For cURL
 ``` java
 curl -X GET \
@@ -485,23 +472,21 @@ curl -X GET \
 ##### Response (JSON)
 | Name | Type | Description | Value |
 | ---- | ---- | ----------- | ----- |
-| isSuccessful | Boolean | Whether the request was successful | true or false |
-| resultCode | String | Request result message | See [Error Codes](/Dev%20Tools/Deploy/en/error-code/) |
+| isSuccessful | Boolean | Request success | `true` or `false` |
+| resultCode | String | Request result message | See [Error Code](/Dev%20Tools/Deploy/en/error-code/) |
 | totalCount | Number | Total count | - |
-| binaries | List | Binary list | See below |
-
+| binaries | List | Binary list | See items below |
 **binaries**
 
 | Name | Type | Description |
 | ---- | ---- | ----------- |
-| binaryKey | Number | Binary key |
+| binaryKey | Number | Binary Key |
 | version | String | Binary version |
-| binaryName | String | Binary file name |
+| binaryName | String | Binary File Name |
 | binarySize | Number | Binary file size (bytes) |
 | uploadDate | Date | Upload date |
-| uploader | String | Uploaded by |
+| uploader | String | Uploader |
 | description | String | Description |
-
 ##### Response Sample
 ``` json
 {
@@ -527,25 +512,54 @@ curl -X GET \
     }
 }
 ```
+
 <a id="list-scenarios"></a>
 ### List Scenarios { #list-scenarios }
-
-<!-- TODO: translate body -->
+* This API views the list of scenarios mapped to a server group.
 
 <a id="list-scenarios-version-21"></a>
 #### Version 2.1
-
-<!-- TODO: translate body -->
+| HTTP Method | GET |
+| ----------- | ---- |
+| Request URL | https://api-tcd.nhncloudservice.com/api/v2.1/projects/{appKey}/artifacts/{artifactId}/server-groups/{serverGroupId}/scenarios |
 
 ##### Sample Request For cURL
-
-<!-- TODO: translate body -->
+``` java
+curl -X GET \
+  'https://api-tcd.nhncloudservice.com/api/v2.1/projects/{appKey}/artifacts/{artifactId}/server-groups/{serverGroupId}/scenarios' \
+  -H 'X-NHN-AUTHORIZATION: Bearer {token}'
+```
 
 ##### Response(json)
+| Name | Type | Description | Value |
+| ---- | ---- | ----------- | ----- |
+| isSuccessful | Boolean | Whether the request was successful | `true` or `false` |
+| resultCode | String | Request result message | See [Error Code](/Dev%20Tools/Deploy/en/error-code/) |
+| scenarios | List | List of scenarios | See below |
 
-<!-- TODO: translate body -->
+**scenarios**
+
+| Name | Type | Description |
+| ---- | ---- | ----------- |
+| scenarioId | Number | Scenario ID |
+| scenarioName | String | Scenario name |
 
 ##### Response Sample
-
-<!-- TODO: translate body -->
-
+``` json
+{
+    "header": {
+        "isSuccessful": true,
+        "serverTime": 1707278725614,
+        "resultCode": "SUCCESS",
+        "resultMessage": "success"
+    },
+    "body": {
+        "scenarios": [
+            {
+                "scenarioId": 1,
+                "scenarioName": "Deployment Scenario"
+            }
+        ]
+    }
+}
+```
