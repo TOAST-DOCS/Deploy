@@ -1,10 +1,15 @@
-## Dev Tools > Deploy > User Guide for Plugin 
+<!-- pre-align:aligned sig=1700b4329367 -->
 
-## Jenkins Plugin Guide
+<a id="dev-tools-deploy-user-guide-for-plugin"></a>
+## Dev Tools > Deploy > User Guide for Plugin { #dev-tools-deploy-user-guide-for-plugin }
+
+<a id="jenkins-plugin-guide"></a>
+## Jenkins Plugin Guide { #jenkins-plugin-guide }
 
 With NHN Cloud Deploy Jenkins Plugin, build results of Jenkins can be uploaded to NHN Cloud Deploy servers.  
 
-## Integrating Deploy <-> Jenkins 
+<a id="integrating-deploy---jenkins"></a>
+## Integrating Deploy <-> Jenkins { #integrating-deploy---jenkins }
 
 Build Jenkins -> Upload Binary with Deploy (by plugin) -> Execute Deployment Scenario (Deploy/Close/Re-start/Prerequisites and follow-ups) 
 To this end, the deployment environment must be built in the following order: 
@@ -14,10 +19,12 @@ To this end, the deployment environment must be built in the following order:
 3. Create a server group
 4. Write deployment scenario 
 
-## Installing Jenkins  
+<a id="installing-jenkins"></a>
+## Installing Jenkins { #installing-jenkins }
 
 Find out how to install Jenkins and details on [https://jenkins.io/](https://jenkins.io/).
 
+<a id="minimum-version-requirements-for-jenkins"></a>
 #### Minimum Version Requirements for Jenkins 
 
 Requires **Jenkins 1580.1** or later versions.  
@@ -33,6 +40,12 @@ Requires **Jenkins 1580.1** or later versions.
 
     ![[Figure 3] List of Installed Plugins](http://static.toastoven.net/prod_tcdeploy/devguide/03.png)
 
+<a id="installing-jenkins-1"></a>
+#### Install Plugin
+
+<!-- TODO: translate body -->
+
+<a id="plugin-setting-for-server-type-application-uploads"></a>
 #### Plugin Setting for Server Type Application Uploads 
 
 With server-type application upload plugin, build results can be compressed in zip and uploaded to a NHN Cloud Cloud Deploy (TCD) server. 
@@ -109,6 +122,7 @@ Finished: SUCCESS
 
 Result in user input information, such as artifact ID and appkey, as well as files included in compressed files. 
 
+<a id="plugin-setting-for-client-type-application-uploads"></a>
 #### Plugin Setting for Client Type Application Uploads 
 
 User-specified binaries of successful build results from client-type application upload plugin can be uploaded to TCD server. 
@@ -157,10 +171,12 @@ Finished: SUCCESS
 
 Result in user input information, such as artifact ID and appkey, as well as binaries and metafiles to upload. 
 
-## Jenkins-CLI Build Profile
+<a id="jenkins-cli-build-profile"></a>
+## Jenkins-CLI Build Profile { #jenkins-cli-build-profile }
 
 It is the pre-defined profile supporting users to execute build commands by using Jenkins-CLI. 
 
+<a id="preparations"></a>
 #### Preparations 
 
 1. Create SSH Pubilc/Private Key Pair 
@@ -178,6 +194,7 @@ It is the pre-defined profile supporting users to execute build commands by usin
     * e.g.) If Jenkins is installed on RPM,
         * Add Dhudson.diyChunking=false to JENKINS\_JAVA\_OPTIONS of /etc/sysconfig/jenkins.
 
+<a id="setting-profile"></a>
 #### Setting Profile 
 
 ![06.png](http://static.toastoven.net/prod_tcdeploy/devguide/06.png)
