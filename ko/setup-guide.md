@@ -1,48 +1,59 @@
-## Dev Tools > Deploy > 사용 전 설정 가이드
+<!-- pre-align:aligned sig=a87ab717aea2 -->
+
+<a id="dev-tools-deploy-setup-guide-before-use"></a>
+## Dev Tools > Deploy > 사용 전 설정 가이드 { #dev-tools-deploy-setup-guide-before-use }
 
 이 문서에서는 다음과 같은 내용을 다룹니다.
 
-* [서비스 사용 전 필수 사항](/Dev%20Tools/Deploy/ko/setup-guide/#_1)
-* [NHN Cloud Agent 사용을 위한 준비](/Dev%20Tools/Deploy/ko/setup-guide/#nhn-cloud-agent)
-* [SSH 연결을 위한 준비](/Dev%20Tools/Deploy/ko/setup-guide/#ssh)
+* [서비스 사용 전 필수 사항](/Dev%20Tools/Deploy/ko/setup-guide/#pre-requisites-before-using-the-service)
+* [NHN Cloud Agent 사용을 위한 준비](/Dev%20Tools/Deploy/ko/setup-guide/#prepare-to-use-nhn-cloud-agent)
+* [SSH 연결을 위한 준비](/Dev%20Tools/Deploy/ko/setup-guide/#prepare-for-an-ssh-connection)
 
-## 서비스 사용 전 필수 사항
+<a id="pre-requisites-before-using-the-service"></a>
+## 서비스 사용 전 필수 사항 { #pre-requisites-before-using-the-service }
 
-### NHN Cloud VM 서버
+<a id="nhn-cloud-vm-server"></a>
+### NHN Cloud VM 서버 { #nhn-cloud-vm-server }
 ![SSH연결필수](https://kr1-api-object-storage.nhncloudservice.com/v1/AUTH_2acdfabf4efe4efc8a04c00b348110c9/cdn_origin/prod_tcdeploy/deploy_19_202307.png)
 
 > NHN Cloud VM 서버의 경우 SSH 연결 혹은 NHN Cloud Agent로 서버의 배포 명령을 전달합니다.
-> SSH 연결의 경우 타깃 서버의 IP, 포트, 방화벽 예외 처리와 같은 [SSH 연결을 위한 준비](/Dev%20Tools/Deploy/ko/setup-guide/#ssh)가 필요합니다.
-> NHN Cloud Agent의 경우 NHN Cloud Agent 설치, 유효성 확인과 같은 [NHN Cloud Agent 사용을 위한 준비](/Dev%20Tools/Deploy/ko/setup-guide/#nhn-cloud-agent)가 필요합니다.
+> SSH 연결의 경우 타깃 서버의 IP, 포트, 방화벽 예외 처리와 같은 [SSH 연결을 위한 준비](/Dev%20Tools/Deploy/ko/setup-guide/#prepare-for-an-ssh-connection)가 필요합니다.
+> NHN Cloud Agent의 경우 NHN Cloud Agent 설치, 유효성 확인과 같은 [NHN Cloud Agent 사용을 위한 준비](/Dev%20Tools/Deploy/ko/setup-guide/#prepare-to-use-nhn-cloud-agent)가 필요합니다.
 
-### NHN Cloud VM 이외 서버
+<a id="servers-other-than-nhn-cloud-vm"></a>
+### NHN Cloud VM 이외 서버 { #servers-other-than-nhn-cloud-vm }
 ![SSH연결필수](https://kr1-api-object-storage.nhncloudservice.com/v1/AUTH_2acdfabf4efe4efc8a04c00b348110c9/cdn_origin/prod_tcdeploy/deploy_20_202307.png)
 
 > NHN Cloud VM 이외 서버의 경우 SSH 연결로만 서버의 배포 명령을 전달할 수 있습니다.
 > 배포 전 배포 타깃 서버와 SSH로 연결해야 하므로
-> 타깃 서버의 IP, 포트, 방화벽 예외 처리와 같은 [SSH 연결을 위한 준비](/Dev%20Tools/Deploy/ko/setup-guide/#ssh)가 필요합니다.
+> 타깃 서버의 IP, 포트, 방화벽 예외 처리와 같은 [SSH 연결을 위한 준비](/Dev%20Tools/Deploy/ko/setup-guide/#prepare-for-an-ssh-connection)가 필요합니다.
 
-## NHN Cloud Agent 사용을 위한 준비
+<a id="prepare-to-use-nhn-cloud-agent"></a>
+## NHN Cloud Agent 사용을 위한 준비 { #prepare-to-use-nhn-cloud-agent }
 
-### 운영체제별 NHN Cloud Agent 설치
+<a id="install-nhn-cloud-agent-by-operating-system"></a>
+### 운영체제별 NHN Cloud Agent 설치 { #install-nhn-cloud-agent-by-operating-system }
 * NHN Cloud Agent로 배포 명령을 전달하려면 NHN Cloud Agent를 설치해야 합니다.
 * NHN Cloud Instance 서비스에서 인스턴스 생성 시 **추가 설정** > **사용자 스크립트**에 아래의 Linux, Windows 운영체제에 맞는 설치 스크립트 내용을 추가하여 설치할 수 있습니다.
   ![사용자 스크립트](https://kr1-api-object-storage.nhncloudservice.com/v1/AUTH_2acdfabf4efe4efc8a04c00b348110c9/cdn_origin/prod_tcdeploy/deploy_21_202307.png)
 * **추가 설정** > **사용자 스크립트**를 사용할 수 없는 경우에는 직접 인스턴스에 접속하여 설치 스크립트를 실행합니다.
 
+<a id="linux-installation-script"></a>
 #### Linux 설치 스크립트
 ```
 #!/bin/bash
 curl 'https://kr1-api-object-storage.nhncloudservice.com/v1/AUTH_2acdfabf4efe4efc8a04c00b348110c9/cdn_origin/prod_tcdeploy/qemu/cloud_agent_install_linux_1.0.0.sh' | sudo bash
 ```
 
+<a id="windows-installation-scripts"></a>
 #### Windows 설치 스크립트
 ```
 #ps1_sysnative
 Invoke-WebRequest -UseBasicParsing 'https://kr1-api-object-storage.nhncloudservice.com/v1/AUTH_2acdfabf4efe4efc8a04c00b348110c9/cdn_origin/prod_tcdeploy/qemu/cloud_agent_install_windows_1.0.0.ps1' | Invoke-Expression
 ```
 
-### NHN Cloud Agent 설치 확인
+<a id="check-the-installation-of-nhn-cloud-agent"></a>
+### NHN Cloud Agent 설치 확인 { #check-the-installation-of-nhn-cloud-agent }
 * NHN Cloud Deploy 서비스에서 생성한 인스턴스를 추가하여 서버 그룹을 생성합니다.
     * 서버 그룹 생성 시 **OS** 및 **Shell Type**을 반드시 확인하십시오. **Shell Type**의 기본값은 /bin/bash(Linux), powershell(Windows)입니다.
 
@@ -70,22 +81,29 @@ Invoke-WebRequest -UseBasicParsing 'https://kr1-api-object-storage.nhncloudservi
 
 NHN Cloud Agent 서비스 설치 및 유효성 확인에 성공했습니다.
 
-## SSH 연결을 위한 준비
+<a id="prepare-for-an-ssh-connection"></a>
+## SSH 연결을 위한 준비 { #prepare-for-an-ssh-connection }
 
-### OS별 요구 사항
+<a id="requirements-for-each-os"></a>
+### OS별 요구 사항 { #requirements-for-each-os }
+<a id="linux"></a>
 #### Linux
 * curl 7.19.7-43 버전 이상
 
+<a id="windows"></a>
 #### Windows
 * SSH 설치 필요
     * OpenSSH_for_Windows_8.6p1, LibreSSL 3.3.3 버전 이상
         * Windows Server 2019 사용 시 OpenSSH 별도 설치 필요
     * SSH Shell: PowerShell 지정
 
-### NHN Cloud VM 배포 요구 사항
+<a id="requirements-for-nhn-cloud-vm-deployment"></a>
+### NHN Cloud VM 배포 요구 사항 { #requirements-for-nhn-cloud-vm-deployment }
+<a id="assign-public-ip"></a>
 #### 공인 IP 부여
 * NHN Cloud의 VM 인스턴스에 배포하려면 VM 인스턴스 [플로팅 IP](https://docs.nhncloud.com/ko/Compute/Instance/ko/console-guide/#ip_1)를 생성하여 공인 IP를 부여해야 합니다.
 
+<a id="add-security-exceptions"></a>
 #### 보안 예외 추가
 * 배포할 VM 인스턴스의 [보안 그룹](https://docs.nhncloud.com/ko/Compute/Instance/ko/console-guide/#_13)에 Deploy 서비스 IP(아래)를 SSH Rule로 추가합니다.
 ```
@@ -105,10 +123,13 @@ NHN Cloud Agent 서비스 설치 및 유효성 확인에 성공했습니다.
     * 포트: 22를 입력합니다. (SSH Port)
     * 원격: CIDR에 IP를 입력합니다. 대역을 입력할 수도 있습니다. (예: 133.186.185.112/28)
 
-### NHN Cloud VM 이외 서버 배포 요구 사항
+<a id="requirements-for-server-deployment-other-than-nhn-cloud-vm"></a>
+### NHN Cloud VM 이외 서버 배포 요구 사항 { #requirements-for-server-deployment-other-than-nhn-cloud-vm }
+<a id="requirements-for-server-deployment-other-than-nhn-cloud-vm-assign-public-ip"></a>
 #### 공인 IP 부여
 * SSH 연결을 위해 공인 IP를 부여해야 합니다.
 
+<a id="configure-firewalls-and-network-acl"></a>
 #### 방화벽 및 Network ACL 설정
 * 외부에서 접근할 수 있게 아래 IP에 대해 네트워크와 방화벽 예외 설정을 추가하십시오.
 ```

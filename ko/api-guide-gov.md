@@ -7,7 +7,12 @@ Deploy에서는 바이너리 업로드, 배포 실행을 위한 API를 제공합
 - [Version 2.0 API 가이드](/Dev%20Tools/Deploy/ko/api-guide-v2.0/)
 - [Version 2.1 API 가이드](/Dev%20Tools/Deploy/ko/api-guide-v2.1/)
 
-### 공통 정보
+<a id="common-information"></a>
+
+### 공통 정보 { #common-information }
+
+<a id="how-to-check-values-by-variable"></a>
+
 #### 변수별 값 확인 방법
 
 ##### appKey 확인 방법

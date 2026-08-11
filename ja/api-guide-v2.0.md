@@ -1,12 +1,18 @@
-## Dev Tools > Deploy > API v2.0ガイド
+<!-- pre-align:aligned sig=cb53ec3bd366 -->
+
+<a id="dev-tools-deploy-api-v20-guide"></a>
+## Dev Tools > Deploy > API v2.0ガイド { #dev-tools-deploy-api-v20-guide }
 Deployでは、デプロイの実行や情報照会のためのAPIを提供しています。ユーザーがHTTPリクエストを独自に構成して使用できます。
 
-### 基本情報
+<a id="basic-information"></a>
+### 基本情報 { #basic-information }
+<a id="endpoint"></a>
 #### エンドポイント
 ```text
 https://api-tcd.nhncloudservice.com
 ```
 
+<a id="available-apis"></a>
 #### 提供するAPIの種類
 | Method | URI | 説明 |
 | ------ | --- | --- |
@@ -17,6 +23,7 @@ https://api-tcd.nhncloudservice.com
 | GET | /api/v2.0/projects/{appKey}/artifacts/{artifactId}/deploy-histories | デプロイ履歴照会API |
 | GET | /api/v2.0/projects/{appKey}/artifacts/{artifactId}/binary-groups/{binaryGroupKey}/binaries | バイナリ一覧照会API |
 
+<a id="api-request-path-variables"></a>
 #### APIリクエストパス変数
 | 値 | タイプ | 説明 |
 | --- | --- | --- |
@@ -25,12 +32,14 @@ https://api-tcd.nhncloudservice.com
 | binaryGroupKey | Number | バイナリをアップロードするバイナリグループキー |
 | serverGroupId | Number | デプロイ対象となるサーバーグループID |
 
-### デプロイ実行
+<a id="execute-deployment"></a>
+### デプロイ実行 { #execute-deployment }
 * デプロイを実行するためのAPIです。
 * アーティファクト `Command Type`がCloud Agentの場合のみデプロイ実行APIを提供します(SSHの場合は提供されません)。
 * v2.0では、Autoscaleサーバーグループにもデプロイを実行できます。
 * デプロイ実行APIはロールベースのアクセス制御(RBAC)を使用します。**Deploy ADMIN**ロールを保有するユーザーのみがデプロイ実行APIを使用できます。
 
+<a id="version-20"></a>
 #### Version 2.0
 | Http Method | POST |
 | ----------- | ---- |
@@ -110,9 +119,11 @@ curl --location 'https://api-tcd.nhncloudservice.com/api/v2.0/projects/{appKey}/
 }
 ```
 
-### アーティファクト一覧の照会
+<a id="list-artifacts"></a>
+### アーティファクト一覧の照会 { #list-artifacts }
 * プロジェクトのアーティファクト一覧を照会するAPIです。
 
+<a id="list-artifacts-version-20"></a>
 #### Version 2.0
 | Http Method | GET |
 | ----------- | ---- |
@@ -179,9 +190,11 @@ curl -X GET \
 }
 ```
 
-### サーバーグループ一覧の照会
+<a id="list-server-groups"></a>
+### サーバーグループ一覧の照会 { #list-server-groups }
 * アーティファクトに属するサーバーグループ一覧を照会するAPIです。
 
+<a id="list-server-groups-version-20"></a>
 #### Version 2.0
 | Http Method | GET |
 | ----------- | ---- |
@@ -241,9 +254,11 @@ curl -X GET \
 }
 ```
 
-### バイナリグループ一覧の照会
+<a id="list-binary-groups"></a>
+### バイナリグループ一覧の照会 { #list-binary-groups }
 * アーティファクトに属するバイナリグループ一覧を照会するAPIです。
 
+<a id="list-binary-groups-version-20"></a>
 #### Version 2.0
 | Http Method | GET |
 | ----------- | ---- |
@@ -303,10 +318,12 @@ curl -X GET \
 }
 ```
 
-### デプロイ履歴の照会
+<a id="list-deployment-history"></a>
+### デプロイ履歴の照会 { #list-deployment-history }
 * アーティファクトのデプロイ履歴を照会するAPIです。
 * 照会期間は最大1年まで指定できます。
 
+<a id="list-deployment-history-version-20"></a>
 #### Version 2.0
 | Http Method | GET |
 | ----------- | ---- |
@@ -383,9 +400,11 @@ curl -X GET \
 }
 ```
 
-### バイナリ一覧の照会
+<a id="list-binaries"></a>
+### バイナリ一覧の照会 { #list-binaries }
 * バイナリグループに属するバイナリ一覧を照会するAPIです。
 
+<a id="list-binaries-version-20"></a>
 #### Version 2.0
 | Http Method | GET |
 | ----------- | ---- |

@@ -1,17 +1,24 @@
-## Dev Tools > Deploy > API v2.1 가이드
+<!-- pre-align:aligned sig=11fb4222fcbb -->
+
+<a id="dev-tools-deploy-api-v21-guide"></a>
+## Dev Tools > Deploy > API v2.1 가이드 { #dev-tools-deploy-api-v21-guide }
 Deploy에서는 바이너리 업로드, 바이너리 다운로드, 배포 실행, 정보 조회를 위한 API를 제공합니다. 사용자가 HTTP 요청을 직접 구성하여 사용할 수 있습니다.
 
-### 기본 정보
+<a id="basic-information"></a>
+### 기본 정보 { #basic-information }
+<a id="endpoint"></a>
 #### 엔드포인트
 ```text
 https://api-tcd.nhncloudservice.com
 ```
 
+<a id="api-request-http-header"></a>
 #### API 요청 HTTP 헤더
 ```
 X-NHN-AUTHORIZATION: Bearer {발급 받은 토큰}
 ```
 
+<a id="authentication-and-authorization"></a>
 #### 인증 및 권한
 Deploy는 API 호출 시 인증/인가를 위해 User Access Key 토큰을 사용합니다.
 User Access Key 토큰은 User Access Key를 기반으로 발급되는 Bearer 타입의 일시적 액세스 토큰입니다.
@@ -20,6 +27,7 @@ User Access Key 토큰 발급 및 사용에 대한 자세한 내용은 [User Acc
 Deploy API는 역할 기반 접근 제어(RBAC)를 사용합니다.<br>
 사용자는 API 사용을 위해 **Deploy ADMIN 역할** 또는 **Deploy VIEWER 역할**을 소유해야 합니다.
 
+<a id="available-apis"></a>
 #### 제공하는 API 종류
 | Method | URI | 설명 |
 | ------ | --- | --- |
@@ -31,7 +39,9 @@ Deploy API는 역할 기반 접근 제어(RBAC)를 사용합니다.<br>
 | GET | /api/v2.1/projects/{appKey}/artifacts/{artifactId}/binary-groups | 바이너리 그룹 목록 조회 API |
 | GET | /api/v2.1/projects/{appKey}/artifacts/{artifactId}/deploy-histories | 배포 이력 조회 API |
 | GET | /api/v2.1/projects/{appKey}/artifacts/{artifactId}/binary-groups/{binaryGroupKey}/binaries | 바이너리 목록 조회 API |
+| GET | /api/v2.1/projects/{appKey}/artifacts/{artifactId}/server-groups/{serverGroupId}/scenarios | 시나리오 목록 조회 API |
 
+<a id="api-request-path-variables"></a>
 #### API 요청 경로 변수
 | 값 | 타입 | 설명 |
 | --- | --- | --- |
@@ -41,9 +51,11 @@ Deploy API는 역할 기반 접근 제어(RBAC)를 사용합니다.<br>
 | binaryKey | Number | 바이너리 키, 업로드 시 발급 |
 | serverGroupId | Number | 배포 대상이 되는 서버 그룹 아이디 |
 
-### 바이너리 업로드
+<a id="upload-binary"></a>
+### 바이너리 업로드 { #upload-binary }
+<a id="version-21"></a>
 #### Version 2.1
-| Http Method | POST |
+| HTTP Method | POST |
 | ----------- | ---- |
 | Request URL | https://api-tcd.nhncloudservice.com/api/v2.1/projects/{appKey}/artifacts/{artifactId}/binary-group/{binaryGroupKey} |
 
@@ -92,11 +104,13 @@ curl -X POST \
 }
 ```
 
-### 바이너리 다운로드
+<a id="download-binary"></a>
+### 바이너리 다운로드 { #download-binary }
 바이너리 업로드 API의 응답으로 전달받은 다운로드 경로로 바이너리 파일을 다운로드할 수 있습니다.
 
+<a id="download-binary-version-21"></a>
 #### Version 2.1
-| Http Method | GET |
+| HTTP Method | GET |
 | ----------- | ---- |
 | Request URL | https://api-tcd.nhncloudservice.com/api/v2.1/projects/{appKey}/artifacts/{artifactId}/binary-group/{binaryGroupKey}/binaries/{binaryKey} |
 
@@ -112,13 +126,15 @@ curl -X GET \
 * 바이너리 파일을 다운로드합니다.
 * Content-Type: `application/octet-stream`
 
-### 배포 실행
+<a id="execute-deployment"></a>
+### 배포 실행 { #execute-deployment }
 * 배포 실행을 위한 API입니다.
 * 아티팩트 `Command Type`이 Cloud Agent인 경우에만 배포 실행 API를 제공합니다(SSH의 경우 제공되지 않습니다.).
 * v2.1에서는 Autoscale 서버 그룹도 배포 실행 가능합니다.
 
+<a id="execute-deployment-version-21"></a>
 #### Version 2.1
-| Http Method | POST |
+| HTTP Method | POST |
 | ----------- | ---- |
 | Request URL | https://api-tcd.nhncloudservice.com/api/v2.1/projects/{appKey}/artifacts/{artifactId}/server-group/{serverGroupId}/deploy |
 
@@ -188,11 +204,13 @@ curl --location 'https://api-tcd.nhncloudservice.com/api/v2.1/projects/{appKey}/
 }
 ```
 
-### 아티팩트 목록 조회
+<a id="list-artifacts"></a>
+### 아티팩트 목록 조회 { #list-artifacts }
 * 프로젝트의 아티팩트 목록을 조회하는 API입니다.
 
+<a id="list-artifacts-version-21"></a>
 #### Version 2.1
-| Http Method | GET |
+| HTTP Method | GET |
 | ----------- | ---- |
 | Request URL | https://api-tcd.nhncloudservice.com/api/v2.1/projects/{appKey}/artifacts |
 
@@ -211,7 +229,7 @@ curl -X GET \
 ##### Response(json)
 | Name | Type | Description | Value |
 | ---- | ---- | ----------- | ----- |
-| isSuccessful | Boolean | 요청 성공 여부 | true 또는 false |
+| isSuccessful | Boolean | 요청 성공 여부 | `true` 또는 `false` |
 | resultCode | String | 요청 결과 메시지 | [오류 코드](/Dev%20Tools/Deploy/ko/error-code/) 참고 |
 | artifacts | List | 아티팩트 목록 | 아래 항목 참고 |
 
@@ -250,11 +268,13 @@ curl -X GET \
 }
 ```
 
-### 서버 그룹 목록 조회
+<a id="list-server-groups"></a>
+### 서버 그룹 목록 조회 { #list-server-groups }
 * 아티팩트에 속한 서버 그룹 목록을 조회하는 API입니다.
 
+<a id="list-server-groups-version-21"></a>
 #### Version 2.1
-| Http Method | GET |
+| HTTP Method | GET |
 | ----------- | ---- |
 | Request URL | https://api-tcd.nhncloudservice.com/api/v2.1/projects/{appKey}/artifacts/{artifactId}/server-groups |
 
@@ -268,7 +288,7 @@ curl -X GET \
 ##### Response(json)
 | Name | Type | Description | Value |
 | ---- | ---- | ----------- | ----- |
-| isSuccessful | Boolean | 요청 성공 여부 | true 또는 false |
+| isSuccessful | Boolean | 요청 성공 여부 | `true` 또는 `false` |
 | resultCode | String | 요청 결과 메시지 | [오류 코드](/Dev%20Tools/Deploy/ko/error-code/) 참고 |
 | serverGroups | List | 서버 그룹 목록 | 아래 항목 참고 |
 
@@ -305,11 +325,13 @@ curl -X GET \
 }
 ```
 
-### 바이너리 그룹 목록 조회
+<a id="list-binary-groups"></a>
+### 바이너리 그룹 목록 조회 { #list-binary-groups }
 * 아티팩트에 속한 바이너리 그룹 목록을 조회하는 API입니다.
 
+<a id="list-binary-groups-version-21"></a>
 #### Version 2.1
-| Http Method | GET |
+| HTTP Method | GET |
 | ----------- | ---- |
 | Request URL | https://api-tcd.nhncloudservice.com/api/v2.1/projects/{appKey}/artifacts/{artifactId}/binary-groups |
 
@@ -323,7 +345,7 @@ curl -X GET \
 ##### Response(json)
 | Name | Type | Description | Value |
 | ---- | ---- | ----------- | ----- |
-| isSuccessful | Boolean | 요청 성공 여부 | true 또는 false |
+| isSuccessful | Boolean | 요청 성공 여부 | `true` 또는 `false` |
 | resultCode | String | 요청 결과 메시지 | [오류 코드](/Dev%20Tools/Deploy/ko/error-code/) 참고 |
 | binaryGroups | List | 바이너리 그룹 목록 | 아래 항목 참고 |
 
@@ -360,12 +382,14 @@ curl -X GET \
 }
 ```
 
-### 배포 이력 조회
+<a id="list-deployment-history"></a>
+### 배포 이력 조회 { #list-deployment-history }
 * 아티팩트의 배포 이력을 조회하는 API입니다.
 * 조회 기간은 최대 1년을 초과할 수 없습니다.
 
+<a id="list-deployment-history-version-21"></a>
 #### Version 2.1
-| Http Method | GET |
+| HTTP Method | GET |
 | ----------- | ---- |
 | Request URL | https://api-tcd.nhncloudservice.com/api/v2.1/projects/{appKey}/artifacts/{artifactId}/deploy-histories |
 
@@ -388,7 +412,7 @@ curl -X GET \
 ##### Response(json)
 | Name | Type | Description | Value |
 | ---- | ---- | ----------- | ----- |
-| isSuccessful | Boolean | 요청 성공 여부 | true 또는 false |
+| isSuccessful | Boolean | 요청 성공 여부 | `true` 또는 `false` |
 | resultCode | String | 요청 결과 메시지 | [오류 코드](/Dev%20Tools/Deploy/ko/error-code/) 참고 |
 | totalCount | Number | 전체 건수 | - |
 | deployHistories | List | 배포 이력 목록 | 아래 항목 참고 |
@@ -433,11 +457,13 @@ curl -X GET \
 }
 ```
 
-### 바이너리 목록 조회
+<a id="list-binaries"></a>
+### 바이너리 목록 조회 { #list-binaries }
 * 바이너리 그룹에 속한 바이너리 목록을 조회하는 API입니다.
 
+<a id="list-binaries-version-21"></a>
 #### Version 2.1
-| Http Method | GET |
+| HTTP Method | GET |
 | ----------- | ---- |
 | Request URL | https://api-tcd.nhncloudservice.com/api/v2.1/projects/{appKey}/artifacts/{artifactId}/binary-groups/{binaryGroupKey}/binaries |
 
@@ -460,7 +486,7 @@ curl -X GET \
 ##### Response(json)
 | Name | Type | Description | Value |
 | ---- | ---- | ----------- | ----- |
-| isSuccessful | Boolean | 요청 성공 여부 | true 또는 false |
+| isSuccessful | Boolean | 요청 성공 여부 | `true` 또는 `false` |
 | resultCode | String | 요청 결과 메시지 | [오류 코드](/Dev%20Tools/Deploy/ko/error-code/) 참고 |
 | totalCount | Number | 전체 건수 | - |
 | binaries | List | 바이너리 목록 | 아래 항목 참고 |
@@ -497,6 +523,57 @@ curl -X GET \
                 "uploadDate": "2025-03-01T12:00:00+09:00",
                 "uploader": "user@example.com",
                 "description": "릴리즈 바이너리"
+            }
+        ]
+    }
+}
+```
+
+<a id="list-scenarios"></a>
+### 시나리오 목록 조회 { #list-scenarios }
+* 서버 그룹에 매핑된 시나리오 목록을 조회하는 API입니다.
+
+<a id="list-scenarios-version-21"></a>
+#### Version 2.1
+| HTTP Method | GET |
+| ----------- | ---- |
+| Request URL | https://api-tcd.nhncloudservice.com/api/v2.1/projects/{appKey}/artifacts/{artifactId}/server-groups/{serverGroupId}/scenarios |
+
+##### Sample Request For cURL
+``` java
+curl -X GET \
+  'https://api-tcd.nhncloudservice.com/api/v2.1/projects/{appKey}/artifacts/{artifactId}/server-groups/{serverGroupId}/scenarios' \
+  -H 'X-NHN-AUTHORIZATION: Bearer {token}'
+```
+
+##### Response(json)
+| Name | Type | Description | Value |
+| ---- | ---- | ----------- | ----- |
+| isSuccessful | Boolean | 요청 성공 여부 | `true` 또는 `false` |
+| resultCode | String | 요청 결과 메시지 | [오류 코드](/Dev%20Tools/Deploy/ko/error-code/) 참고 |
+| scenarios | List | 시나리오 목록 | 아래 항목 참고 |
+
+**scenarios**
+
+| Name | Type | Description |
+| ---- | ---- | ----------- |
+| scenarioId | Number | 시나리오 ID |
+| scenarioName | String | 시나리오 이름 |
+
+##### Response Sample
+``` json
+{
+    "header": {
+        "isSuccessful": true,
+        "serverTime": 1707278725614,
+        "resultCode": "SUCCESS",
+        "resultMessage": "success"
+    },
+    "body": {
+        "scenarios": [
+            {
+                "scenarioId": 1,
+                "scenarioName": "배포 시나리오"
             }
         ]
     }
