@@ -5,9 +5,9 @@
 
 이 문서에서는 다음과 같은 내용을 다룹니다.
 
-* [서비스 사용 전 필수 사항](/Dev%20Tools/Deploy/ko/setup-guide/#pre-requisites-before-using-the-service)
-* [NHN Cloud Agent 사용을 위한 준비](/Dev%20Tools/Deploy/ko/setup-guide/#prepare-to-use-nhn-cloud-agent)
-* [SSH 연결을 위한 준비](/Dev%20Tools/Deploy/ko/setup-guide/#prepare-for-an-ssh-connection)
+* [서비스 사용 전 필수 사항](#pre-requisites-before-using-the-service)
+* [NHN Cloud Agent 사용을 위한 준비](#prepare-to-use-nhn-cloud-agent)
+* [SSH 연결을 위한 준비](#prepare-for-an-ssh-connection)
 
 <a id="pre-requisites-before-using-the-service"></a>
 ## 서비스 사용 전 필수 사항 { #pre-requisites-before-using-the-service }
@@ -17,8 +17,8 @@
 ![SSH연결필수](https://kr1-api-object-storage.nhncloudservice.com/v1/AUTH_2acdfabf4efe4efc8a04c00b348110c9/cdn_origin/prod_tcdeploy/deploy_19_202307.png)
 
 > NHN Cloud VM 서버의 경우 SSH 연결 혹은 NHN Cloud Agent로 서버의 배포 명령을 전달합니다.
-> SSH 연결의 경우 타깃 서버의 IP, 포트, 방화벽 예외 처리와 같은 [SSH 연결을 위한 준비](/Dev%20Tools/Deploy/ko/setup-guide/#prepare-for-an-ssh-connection)가 필요합니다.
-> NHN Cloud Agent의 경우 NHN Cloud Agent 설치, 유효성 확인과 같은 [NHN Cloud Agent 사용을 위한 준비](/Dev%20Tools/Deploy/ko/setup-guide/#prepare-to-use-nhn-cloud-agent)가 필요합니다.
+> SSH 연결의 경우 타깃 서버의 IP, 포트, 방화벽 예외 처리와 같은 [SSH 연결을 위한 준비](#prepare-for-an-ssh-connection)가 필요합니다.
+> NHN Cloud Agent의 경우 NHN Cloud Agent 설치, 유효성 확인과 같은 [NHN Cloud Agent 사용을 위한 준비](#prepare-to-use-nhn-cloud-agent)가 필요합니다.
 
 <a id="servers-other-than-nhn-cloud-vm"></a>
 ### NHN Cloud VM 이외 서버 { #servers-other-than-nhn-cloud-vm }
@@ -26,7 +26,7 @@
 
 > NHN Cloud VM 이외 서버의 경우 SSH 연결로만 서버의 배포 명령을 전달할 수 있습니다.
 > 배포 전 배포 타깃 서버와 SSH로 연결해야 하므로
-> 타깃 서버의 IP, 포트, 방화벽 예외 처리와 같은 [SSH 연결을 위한 준비](/Dev%20Tools/Deploy/ko/setup-guide/#prepare-for-an-ssh-connection)가 필요합니다.
+> 타깃 서버의 IP, 포트, 방화벽 예외 처리와 같은 [SSH 연결을 위한 준비](#prepare-for-an-ssh-connection)가 필요합니다.
 
 <a id="prepare-to-use-nhn-cloud-agent"></a>
 ## NHN Cloud Agent 사용을 위한 준비 { #prepare-to-use-nhn-cloud-agent }
@@ -141,4 +141,4 @@ NHN Cloud Agent 서비스 설치 및 유효성 확인에 성공했습니다.
 - - -
 
 SSH 연결 준비 또는 NHN Cloud Agent 서비스 설치 및 유효성 확인이 완료된 경우 Deploy 서비스를 사용하여 배포할 수 있습니다.
-자세한 사항은 [Deploy > 콘솔 사용 가이드](/Dev%20Tools/Deploy/ko/console-guide/)에서 확인할 수 있습니다.
+자세한 사항은 [Deploy > 콘솔 사용 가이드](./console-guide/)에서 확인할 수 있습니다.

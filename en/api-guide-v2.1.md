@@ -84,7 +84,7 @@ curl -X POST \
 | Name | Type | Description | Value |
 | ---- | ---- | ----------- | ----- |
 | isSuccessful | boolean | Upload result | true or false |
-| resultCode | String | Upload result message | See [Error Codes](/Dev%20Tools/Deploy/en/error-code/) |
+| resultCode | String | Upload result message | See [Error Codes](./error-code/) |
 | downloadUrl | String | Download path of the uploaded binary | The binary can be downloaded via this path |
 | binaryKey | String | Key of the uploaded binary | - |
 
@@ -169,7 +169,7 @@ curl --location 'https://api-tcd.nhncloudservice.com/api/v2.1/projects/{appKey}/
 | Name | Type | Description | Value |
 | ---- | ---- | ----------- | ----- |
 | isSuccessful | Boolean | Whether the deployment execution was successful | "true" or "false" |
-| resultCode | String | Result message for deployment execution | See [Error Code](/Dev%20Tools/Deploy/en/error-code/) |
+| resultCode | String | Result message for deployment execution | See [Error Code](./error-code/) |
 | deployStatus | String | Deployment status | success, fail, or deploying (when the async option is true) |
 | deployResult | List | Deployment results by server | - hostname: Hostname of the deployment target (Instance ID)<br>- status: Deployment Result<br>- taskResult: Information on each task in the deployment scenario |
 | deployResultLocation | String | Link to the Deploy service project where deployment was run | You can access the Deploy service project console using this link. |
@@ -228,7 +228,7 @@ curl -X GET \
 | Name | Type | Description | Value |
 | ---- | ---- | ----------- | ----- |
 | isSuccessful | Boolean | Request success | `true` or `false` |
-| resultCode | String | Request result message | See [Error Code](/Dev%20Tools/Deploy/en/error-code/) |
+| resultCode | String | Request result message | See [Error Code](./error-code/) |
 | artifacts | List | Artifact list | Refer to item below |
 **artifacts**
 
@@ -284,7 +284,7 @@ curl -X GET \
 | Name | Type | Description | Value |
 | ---- | ---- | ----------- | ----- |
 | isSuccessful | Boolean | Request success | `true` or `false` |
-| resultCode | String | Request result message | See [Error Code](/Dev%20Tools/Deploy/en/error-code/) |
+| resultCode | String | Request result message | See [Error Code](./error-code/) |
 | serverGroups | List | Server Group List | See the items below |
 **serverGroups**
 
@@ -338,7 +338,7 @@ curl -X GET \
 | Name | Type | Description | Value |
 | ---- | ---- | ----------- | ----- |
 | isSuccessful | Boolean | Request success | `true` or `false` |
-| resultCode | String | Request result message | See [Error Code](/Dev%20Tools/Deploy/en/error-code/) |
+| resultCode | String | Request result message | See [Error Code](./error-code/) |
 | binaryGroups | List | Binary Group List | See the items below |
 **binaryGroups**
 
@@ -402,7 +402,7 @@ curl -X GET \
 | Name | Type | Description | Value |
 | ---- | ---- | ----------- | ----- |
 | isSuccessful | Boolean | Request success | `true` or `false` |
-| resultCode | String | Request result message | See [Error Code](/Dev%20Tools/Deploy/en/error-code/) |
+| resultCode | String | Request result message | See [Error Code](./error-code/) |
 | totalCount | Number | Total count | - |
 | deployHistories | List | Deployment history list | See the items below |
 **deployHistories**
@@ -473,7 +473,7 @@ curl -X GET \
 | Name | Type | Description | Value |
 | ---- | ---- | ----------- | ----- |
 | isSuccessful | Boolean | Request success | `true` or `false` |
-| resultCode | String | Request result message | See [Error Code](/Dev%20Tools/Deploy/en/error-code/) |
+| resultCode | String | Request result message | See [Error Code](./error-code/) |
 | totalCount | Number | Total count | - |
 | binaries | List | Binary list | See items below |
 **binaries**
@@ -534,7 +534,7 @@ curl -X GET \
 | Name | Type | Description | Value |
 | ---- | ---- | ----------- | ----- |
 | isSuccessful | Boolean | Whether the request was successful | `true` or `false` |
-| resultCode | String | Request result message | See [Error Code](/Dev%20Tools/Deploy/en/error-code/) |
+| resultCode | String | Request result message | See [Error Code](./error-code/) |
 | scenarios | List | List of scenarios | See below |
 
 **scenarios**
