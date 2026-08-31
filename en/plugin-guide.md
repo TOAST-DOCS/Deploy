@@ -43,7 +43,18 @@ Requires **Jenkins 1580.1** or later versions.
 <a id="installing-jenkins-1"></a>
 #### Install Plugin
 
-<!-- TODO: translate body -->
+1. Upload the **tcdeploy-upload-jenkins.hpi** file from **Manage Jenkins > Manage Plugins > Advanced > Upload Plugin**.
+  ([tcdeploy-upload-jenkins.hpi](https://kr1-api-object-storage.nhncloudservice.com/v1/AUTH_2acdfabf4efe4efc8a04c00b348110c9/cdn_origin/prod_tcdeploy/plugins/tcdeploy-upload-jenkins-1.1.3.hpi) download link)
+
+    ![01.png](http://static.toastoven.net/prod_tcdeploy/devguide/01.png)
+
+2. When the installation is complete, you can check the installed details in the **Installed Plugins** tab as shown below.
+
+    ![02.png](http://static.toastoven.net/prod_tcdeploy/devguide/02.png)
+
+3. Click the **Add Post-Build Action** button in the build configuration to add a server or client type application upload task.
+
+    ![03.png](http://static.toastoven.net/prod_tcdeploy/devguide/03.png)
 
 <a id="plugin-setting-for-server-type-application-uploads"></a>
 #### Plugin Setting for Server Type Application Uploads 
