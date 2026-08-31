@@ -5,8 +5,8 @@
 
 この文書では、次のような内容を扱います。
 
-* [メニュー説明](/Dev%20Tools/Deploy/ja/reference/#menu-description)
-* [機能別説明](/Dev%20Tools/Deploy/ja/reference/#functional-description)
+* [メニュー説明](#menu-description)
+* [機能別説明](#functional-description)
 
 <a id="menu-description"></a>
 ## メニュー説明 { #menu-description }
@@ -221,7 +221,7 @@ Auto Scaleサービスのインスタンス拡張に応じてデプロイ設定�
 バイナリをアップロードできる方法は2つです。
 
 * API アップロード
-    * API アップロードの詳細については、[APIガイドの Binary Upload API](/Dev%20Tools/Deploy/ja/api-guide-v2.1/#upload-binary)を参照してください。
+    * API アップロードの詳細については、[APIガイドの Binary Upload API](./api-guide-v2.1.md#upload-binary)を参照してください。
 * コンソールからアップロード
 
 ![deploy_ref_11_ja_20200527.png](https://static.toastoven.net/prod_tcdeploy/ja/deploy_ref_11_ja_20200527.png)
@@ -323,7 +323,7 @@ ClientバイナリのAll、Fixed、Recentバージョンを、希望する方式
 ##### Jenkins-CLI Build
 
 * ver. 2.46以前と/ver. 2.46以降のバージョンに区分されます。
-* Jenkinsビルド設定の詳細説明は、[プラグイン使用ガイド](/Dev%20Tools/Deploy/ja/plugin-guide/)を参照してください。
+* Jenkinsビルド設定の詳細説明は、[プラグイン使用ガイド](./plugin-guide.md)を参照してください。
 
 ![deploy_ref_15_ja_20200527.png](https://static.toastoven.net/prod_tcdeploy/ja/deploy_ref_15_ja_20200527.png)
 

@@ -84,7 +84,7 @@ curl -X POST \
 | Name | Type | Description | Value |
 | ---- | ---- | ----------- | ----- |
 | isSuccessful | boolean | 업로드 결과 | true 또는 false |
-| resultCode | String | 업로드 결과 메시지 | [오류 코드](/Dev%20Tools/Deploy/ko/error-code/) 참고 |
+| resultCode | String | 업로드 결과 메시지 | [오류 코드](./error-code.md) 참고 |
 | downloadUrl | String | 업로드 바이너리의 다운로드 경로 | 해당 경로로 다운로드 가능 |
 | binaryKey | String | 업로드한 바이너리의 키 | - |
 
@@ -170,7 +170,7 @@ curl --location 'https://api-tcd.nhncloudservice.com/api/v2.1/projects/{appKey}/
 | Name | Type | Description | Value |
 | ---- | ---- | ----------- | ----- |
 | isSuccessful | Boolean | 배포 실행 성공 여부 | true 또는 false |
-| resultCode | String | 배포 실행 결과 메시지 | [오류 코드](/Dev%20Tools/Deploy/ko/error-code/) 참고 |
+| resultCode | String | 배포 실행 결과 메시지 | [오류 코드](./error-code.md) 참고 |
 | deployStatus | String | 배포 상태 | success, fail 또는 deploying(async 옵션 true일 경우) |
 | deployResult | List | 서버별 배포 결과 | - hostname: 배포 대상 호스트명(인스턴스 ID)<br>- status: 배포 결과<br>- taskResult: 배포 시나리오 내 각 태스크별 정보 |
 | deployResultLocation | String | 배포 실행된 Deploy 서비스 프로젝트 링크 | 해당 링크로 Deploy 서비스 프로젝트 콘솔 접속 가능 |
@@ -230,7 +230,7 @@ curl -X GET \
 | Name | Type | Description | Value |
 | ---- | ---- | ----------- | ----- |
 | isSuccessful | Boolean | 요청 성공 여부 | `true` 또는 `false` |
-| resultCode | String | 요청 결과 메시지 | [오류 코드](/Dev%20Tools/Deploy/ko/error-code/) 참고 |
+| resultCode | String | 요청 결과 메시지 | [오류 코드](./error-code.md) 참고 |
 | artifacts | List | 아티팩트 목록 | 아래 항목 참고 |
 
 **artifacts**
@@ -289,7 +289,7 @@ curl -X GET \
 | Name | Type | Description | Value |
 | ---- | ---- | ----------- | ----- |
 | isSuccessful | Boolean | 요청 성공 여부 | `true` 또는 `false` |
-| resultCode | String | 요청 결과 메시지 | [오류 코드](/Dev%20Tools/Deploy/ko/error-code/) 참고 |
+| resultCode | String | 요청 결과 메시지 | [오류 코드](./error-code.md) 참고 |
 | serverGroups | List | 서버 그룹 목록 | 아래 항목 참고 |
 
 **serverGroups**
@@ -346,7 +346,7 @@ curl -X GET \
 | Name | Type | Description | Value |
 | ---- | ---- | ----------- | ----- |
 | isSuccessful | Boolean | 요청 성공 여부 | `true` 또는 `false` |
-| resultCode | String | 요청 결과 메시지 | [오류 코드](/Dev%20Tools/Deploy/ko/error-code/) 참고 |
+| resultCode | String | 요청 결과 메시지 | [오류 코드](./error-code.md) 참고 |
 | binaryGroups | List | 바이너리 그룹 목록 | 아래 항목 참고 |
 
 **binaryGroups**
@@ -413,7 +413,7 @@ curl -X GET \
 | Name | Type | Description | Value |
 | ---- | ---- | ----------- | ----- |
 | isSuccessful | Boolean | 요청 성공 여부 | `true` 또는 `false` |
-| resultCode | String | 요청 결과 메시지 | [오류 코드](/Dev%20Tools/Deploy/ko/error-code/) 참고 |
+| resultCode | String | 요청 결과 메시지 | [오류 코드](./error-code.md) 참고 |
 | totalCount | Number | 전체 건수 | - |
 | deployHistories | List | 배포 이력 목록 | 아래 항목 참고 |
 
@@ -487,7 +487,7 @@ curl -X GET \
 | Name | Type | Description | Value |
 | ---- | ---- | ----------- | ----- |
 | isSuccessful | Boolean | 요청 성공 여부 | `true` 또는 `false` |
-| resultCode | String | 요청 결과 메시지 | [오류 코드](/Dev%20Tools/Deploy/ko/error-code/) 참고 |
+| resultCode | String | 요청 결과 메시지 | [오류 코드](./error-code.md) 참고 |
 | totalCount | Number | 전체 건수 | - |
 | binaries | List | 바이너리 목록 | 아래 항목 참고 |
 
@@ -550,7 +550,7 @@ curl -X GET \
 | Name | Type | Description | Value |
 | ---- | ---- | ----------- | ----- |
 | isSuccessful | Boolean | 요청 성공 여부 | `true` 또는 `false` |
-| resultCode | String | 요청 결과 메시지 | [오류 코드](/Dev%20Tools/Deploy/ko/error-code/) 참고 |
+| resultCode | String | 요청 결과 메시지 | [오류 코드](./error-code.md) 참고 |
 | scenarios | List | 시나리오 목록 | 아래 항목 참고 |
 
 **scenarios**

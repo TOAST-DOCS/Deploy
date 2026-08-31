@@ -5,11 +5,11 @@
 
 This document contains the following: 
 
-* [Deploy Console Page](/Dev%20Tools/Deploy/en/console-guide/#deploy-console-page)
-* [Client Application](/Dev%20Tools/Deploy/en/console-guide/#client-application)
-* [Server Application](/Dev%20Tools/Deploy/en/console-guide/#server-application)
+* [Deploy Console Page](#deploy-console-page)
+* [Client Application](#client-application)
+* [Server Application](#server-application)
 
-(Any other functions are available in [Detail Functional Guide](/Dev%20Tools/Deploy/en/reference/).)
+(Any other functions are available in [Detail Functional Guide](./reference.md).)
 
 <a id="deploy-console-page"></a>
 ## Deploy Console Page { #deploy-console-page }
@@ -100,7 +100,7 @@ Deployment servers are managed by this setting.
     * Select an OS and specify a Shell Type. You can select a Shell Type from the **Shell Type** list or enter it directly.
     * Select Phase: Choose a server tool. Otherwise, select NONE.
     * Add servers
-        * There are two methods to add a server. For more information, see [Detail Functional Guide Server Group Menu](/Dev%20Tools/Deploy/en/reference/#server-group).
+        * There are two methods to add a server. For more information, see [Detail Functional Guide Server Group Menu](./reference.md#server-group).
             * Bulk Add
             * Individual Add
          * Enter the host name (required), IP address (required), and OS (optional), and click **Add**.
@@ -145,7 +145,7 @@ There are two types of tasks:
 * Normal Task: Execute while deployed
 
 You can select and use whichever type you prefer. This section covers the tasks required for basic deployment.
-For more tasks, see the [Tasks menu in the Detail Functional Guide](/Dev%20Tools/Deploy/en/reference/#tasks).
+For more tasks, see the [Tasks menu in the Detail Functional Guide](./reference.md#tasks).
 
 To test deployment, the following three tasks are added:
 
@@ -154,7 +154,7 @@ To test deployment, the following three tasks are added:
 
 * It is a user-defined command task which is executed for deployment.
 * You can use Available Variables.
-    * Available Variables: Reserved words. For more information, see [Tasks menu in the Detail Functional Guide](/Dev%20Tools/Deploy/en/reference/#tasks).
+    * Available Variables: Reserved words. For more information, see [Tasks menu in the Detail Functional Guide](./reference.md#tasks).
 
 ![deploy_09_201812](https://static.toastoven.net/prod_tcdeploy/deploy_09_201812.png)
 
@@ -194,7 +194,7 @@ Deployment for uploaded binary files can be set.
 8. Click **Select**.  
     <br/>
    * Variable As
-       * You can specify the name of variables of binary and use binary information at User Command. Find moe details at the bottom of the task menu of [Detail Functional Guide](/Dev%20Tools/Deploy/en/reference/).
+       * You can specify the name of variables of binary and use binary information at User Command. Find moe details at the bottom of the task menu of [Detail Functional Guide](./reference.md).
    * Target Directory
        * Specify a target directory to deploy binaries. 
 
@@ -236,5 +236,5 @@ Deployment for uploaded binary files can be set.
 - - -
 
 File has been deployed to the server. 
-NHN Cloud Deploy supports more functions, and find more details in [Detail Functional Guide](/Dev%20Tools/Deploy/en/reference/).
+NHN Cloud Deploy supports more functions, and find more details in [Detail Functional Guide](./reference.md).
 

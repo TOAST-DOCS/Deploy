@@ -5,11 +5,11 @@
 
 この文書では、次のような内容を扱います。
 
-* [Deploy コンソール画面](/Dev%20Tools/Deploy/ja/console-guide/#deploy-console-page)
-* [Client Application](/Dev%20Tools/Deploy/ja/console-guide/#client-application)
-* [Server Application](/Dev%20Tools/Deploy/ja/console-guide/#server-application)
+* [Deploy コンソール画面](#deploy-console-page)
+* [Client Application](#client-application)
+* [Server Application](#server-application)
 
-(ここで扱わない機能は、[機能詳細ガイド](/Dev%20Tools/Deploy/ja/reference/)で確認できます。)
+(ここで扱わない機能は、[機能詳細ガイド](./reference.md)で確認できます。)
 
 <a id="deploy-console-page"></a>
 ## Deployコンソール画面 { #deploy-console-page }
@@ -99,7 +99,7 @@
     * **[OS]** を選択し、**[Shell Type]** を指定します。**[Shell Type]** はリストから選択するか、直接入力できます。
     * **[Phase]** を選択します。サーバー機器を区分します。指定しない場合は NONE を選択します。
     * サーバーの追加
-        * サーバーを追加する方法は次の 2 つです。詳細については、[機能詳細ガイド サーバーグループメニュー](/Dev%20Tools/Deploy/ja/reference/#server-group)を参照してください。
+        * サーバーを追加する方法は次の 2 つです。詳細については、[機能詳細ガイド サーバーグループメニュー](./reference.md#server-group)を参照してください。
             * 一括追加
             * 個別追加
          * **[ホスト名]**（必須）、**[IPアドレス]**（必須）、**[OS]**（任意）を入力し、**[追加]** を選択します。
@@ -144,7 +144,7 @@
 * Normal Task: デプロイ時に実行する機能
 
 必要なものを選択して使用できます。ここでは、基本的なデプロイに必要なタスクについて説明します。
-その他のタスクは、[機能詳細ガイドのタスクメニュー](/Dev%20Tools/Deploy/ja/reference/#tasks)で確認できます。
+その他のタスクは、[機能詳細ガイドのタスクメニュー](./reference.md#tasks)で確認できます。
 
 デプロイテストのため、次の3つのタスクを追加します。
 
@@ -153,7 +153,7 @@
 
 * デプロイ時に実行されるユーザー定義の Command タスクです。
 * Available Variables を使用できます。
-    * Available Variables: 予約語。詳細については、[機能詳細ガイドのタスクメニュー](/Dev%20Tools/Deploy/ja/reference/#tasks)を参照してください。
+    * Available Variables: 予約語。詳細については、[機能詳細ガイドのタスクメニュー](./reference.md#tasks)を参照してください。
 
 ![deploy_09_ja_20200519](https://static.toastoven.net/prod_tcdeploy/ja/deploy_09_ja_20200519.png)
 
@@ -193,7 +193,7 @@
 8. **選択**ボタンをクリックします。
   <br/>
    * Variable As
-       * 該当バイナリのVariable名を指定し、User Commandでバイナリ情報を使用できます。詳細は[機能詳細ガイド](/Dev%20Tools/Deploy/ja/reference/)のタスクメニュー下段で確認できます。
+       * 該当バイナリのVariable名を指定し、User Commandでバイナリ情報を使用できます。詳細は[機能詳細ガイド](./reference.md)のタスクメニュー下段で確認できます。
    * ターゲットディレクトリ
        * バイナリをデプロイするターゲットディレクトリを指定します。
 
@@ -234,4 +234,4 @@
 
 - - -
 
-サーバーにファイルをデプロイしました！ NHN Cloud Deployは、他にも多くの機能をサポートしています。詳細は[機能詳細ガイド](/Dev%20Tools/Deploy/ja/reference/)で確認できます。
+サーバーにファイルをデプロイしました！ NHN Cloud Deployは、他にも多くの機能をサポートしています。詳細は[機能詳細ガイド](./reference.md)で確認できます。
