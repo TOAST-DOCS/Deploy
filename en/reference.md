@@ -179,7 +179,15 @@ Server information can be added or deleted from **Create (Modify) Server Group**
 <a id="server-group-1"></a>
 #### Add Autoscale Group
 
-<!-- TODO: translate body -->
+![autoscale_01.png](https://static.toastoven.net/prod_tcdeploy/reference/autoscale_01.png)
+* Click **Deploy** > **Create Server Group**, or choose **Server Group > New**.
+    * Enter name (required) and description (optional).
+    * Select the OS and then specify the Shell Type. You can select an item from the list or enter it directly.
+    * Select Phase: Choose a server tool. Otherwise, select NONE.
+    * For Group Type, select **Auto Scaling Server Group**.
+    * For Scaling Group, select the scaling group created in the Auto Scale service.
+    * From the scaling group in the Scale-out Scenario, select the scenario to run on instances during scale-out.
+    * Click the **Create** button.
 
 ##### Adding Scale-out Scenario
 
