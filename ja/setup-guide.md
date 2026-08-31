@@ -5,9 +5,9 @@
 
 この文書では、次のような内容を説明します。
 
-* [サービス使用前の必須事項](/Dev%20Tools/Deploy/ja/setup-guide/#pre-requisites-before-using-the-service)
-* [NHN Cloud Agentを使用するための準備](/Dev%20Tools/Deploy/ja/setup-guide/#prepare-to-use-nhn-cloud-agent)
-* [SSH接続のための準備](/Dev%20Tools/Deploy/ja/setup-guide/#prepare-for-an-ssh-connection)
+* [サービス使用前の必須事項](#pre-requisites-before-using-the-service)
+* [NHN Cloud Agentを使用するための準備](#prepare-to-use-nhn-cloud-agent)
+* [SSH接続のための準備](#prepare-for-an-ssh-connection)
 
 <a id="pre-requisites-before-using-the-service"></a>
 ## サービス使用前の必須事項 { #pre-requisites-before-using-the-service }
@@ -17,8 +17,8 @@
 ![SSH연결필수](https://kr1-api-object-storage.nhncloudservice.com/v1/AUTH_2acdfabf4efe4efc8a04c00b348110c9/cdn_origin/prod_tcdeploy/deploy_19_202307.png)
 
 > NHN Cloud VM サーバーの場合、SSH接続またはNHN Cloud Agentを使用してサーバーへのデプロイコマンドを送信します。
-> SSH接続の場合、ターゲットサーバーのIP、ポート、ファイアウォールの例外処理などの[SSH接続の準備](/Dev%20Tools/Deploy/ja/setup-guide/#prepare-for-an-ssh-connection)が必要です。
-> NHN Cloud Agentの場合、NHN Cloud Agentのインストールや有効性確認などの[NHN Cloud Agentを使用するための準備](/Dev%20Tools/Deploy/ja/setup-guide/#prepare-to-use-nhn-cloud-agent)が必要です。
+> SSH接続の場合、ターゲットサーバーのIP、ポート、ファイアウォールの例外処理などの[SSH接続の準備](#prepare-for-an-ssh-connection)が必要です。
+> NHN Cloud Agentの場合、NHN Cloud Agentのインストールや有効性確認などの[NHN Cloud Agentを使用するための準備](#prepare-to-use-nhn-cloud-agent)が必要です。
 
 <a id="servers-other-than-nhn-cloud-vm"></a>
 ### NHN Cloud VM 以外のサーバー { #servers-other-than-nhn-cloud-vm }
@@ -26,7 +26,7 @@
 
 > NHN Cloud VM 以外のサーバーの場合、SSH 接続でのみサーバーへのデプロイコマンドを送信できます。
 > デプロイ前にデプロイ対象サーバーと SSH で接続する必要があるため、
-> 対象サーバーの IP、ポート、ファイアウォールの例外処理などの [SSH 接続の準備](/Dev%20Tools/Deploy/ja/setup-guide/#prepare-for-an-ssh-connection) が必要です。
+> 対象サーバーの IP、ポート、ファイアウォールの例外処理などの [SSH 接続の準備](#prepare-for-an-ssh-connection) が必要です。
 
 <a id="prepare-to-use-nhn-cloud-agent"></a>
 ## NHN Cloud Agentを使用するための準備 { #prepare-to-use-nhn-cloud-agent }
@@ -101,11 +101,11 @@ NHN Cloud Agentサービスのインストール及び有効性確認に成功�
 ### NHN Cloud VMデプロイ要件 { #requirements-for-nhn-cloud-vm-deployment }
 <a id="assign-public-ip"></a>
 #### グローバルIPの付与
-* NHN CloudのVMインスタンスにデプロイするにはVMインスタンス[Floating IP](https://docs.nhncloud.com/ja/Compute/Instance/ja/console-guide/#ip_1)を作成してグローバルIPを付与する必要があります。
+* NHN CloudのVMインスタンスにデプロイするにはVMインスタンス[Floating IP](/Compute/Instance/ja/console-guide/#floating-ip)を作成してグローバルIPを付与する必要があります。
 
 <a id="add-security-exceptions"></a>
 #### セキュリティ例外追加
-* デプロイするVMインスタンスの[セキュリティグループ](https://docs.nhncloud.com/ja/Compute/Instance/ja/console-guide/#_13)にDeployサービスIP(下記)をSSH Ruleに追加します。
+* デプロイするVMインスタンスの[セキュリティグループ](/Compute/Instance/ja/console-guide/#security-group)にDeployサービスIP(下記)をSSH Ruleに追加します。
 ```
 133.186.185.112/28
 117.52.123.201/32
@@ -141,4 +141,4 @@ NHN Cloud Agentサービスのインストール及び有効性確認に成功�
 - - -
 
 SSH接続の準備またはNHN Cloud Agentサービスインストール及び有効性確認が完了した場合、Deployサービスを使用してデプロイできます。
-詳細については、[Deploy > コンソール使用ガイド](/Dev%20Tools/Deploy/ja/console-guide/)で確認できます。
+詳細については、[Deploy > コンソール使用ガイド](./console-guide/)で確認できます。

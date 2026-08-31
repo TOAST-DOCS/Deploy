@@ -5,8 +5,8 @@
 
 This document contains the following: 
 
-* [Menu Description](/Dev%20Tools/Deploy/en/reference/#menu-description)
-* [Functional Description](/Dev%20Tools/Deploy/en/reference/#functional-description)
+* [Menu Description](#menu-description)
+* [Functional Description](#functional-description)
 
 <a id="menu-description"></a>
 ## Menu Description { #menu-description }
@@ -208,7 +208,7 @@ Binaries are uploaded files that are to be deployed.
 Two methods are available to upload binaries: 
 
 * API Upload
-    * For more information about API upload, see [Binary Upload API in the API Guide](/Dev%20Tools/Deploy/en/api-guide-v2.1/#upload-binary).
+    * For more information about API upload, see [Binary Upload API in the API Guide](./api-guide-v2.1/#upload-binary).
 * Upload from the console
 
 ![deploy_ref_11_2018.png](https://static.toastoven.net/prod_tcdeploy/deploy_ref_11_2018.png)
@@ -310,7 +310,7 @@ A task is a scenario configuration element which executes individual tasks and c
 ##### Jenkins-CLI Build
 
 * Classified into earlier versions, and later versions, as of ver. 2.46.  
-* For more details on Jenkins build setting, see [Plugin User Guide](/Dev%20Tools/Deploy/en/plugin-guide/).
+* For more details on Jenkins build setting, see [Plugin User Guide](./plugin-guide/).
 
 ![deploy_ref_15_2018.png](https://static.toastoven.net/prod_tcdeploy/deploy_ref_15_2018.png)
 

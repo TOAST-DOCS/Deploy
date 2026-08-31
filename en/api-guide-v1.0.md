@@ -117,7 +117,7 @@ try {
 | Name | Type | Description | Value |
 | ---- | ---- | ----------- | ----- |
 | isSuccessful | boolean | Uploading result | True or false |
-| resultCode | String | Message for uploading result | See [Error Codes](/Dev%20Tools/Deploy/en/error-code/) |
+| resultCode | String | Message for uploading result | See [Error Codes](./error-code/) |
 | downloadUrl | String | Downloading path for uploaded binaries | Download is available in the path |
 | binaryKey | String | Key of the uploaded binary | - |
 
@@ -273,7 +273,7 @@ curl --location 'https://api-tcd.nhncloudservice.com/api/v1.0/projects/{appKey}/
 | Name | Type | Description | Value |
 | ---- | ---- | ----------- | ----- |
 | isSuccessful | Boolean | Deployment run successful or not | True or false |
-| resultCode | String | Deployment run result messages | See [Error Codes](/Dev%20Tools/Deploy/en/error-code/) |
+| resultCode | String | Deployment run result messages | See [Error Codes](./error-code/) |
 | deployStatus | String | Deployment status | success, fail, or deploying (with async option true) |
 | deployResult | List | Deployment results per server | - hostname: Deployment target hostname (instance ID)<br>- status: Deployment results<br>- taskResult: Information for each task in the deployment scenario |
 | deployResultLocation | String | Link for Deploy service project that was executed | Follow this link to access the Deploy Service project console |

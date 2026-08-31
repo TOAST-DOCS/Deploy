@@ -6,9 +6,9 @@
 Deploy provides APIs for binary upload and deployment execution. You can configure and send HTTP requests directly. 
 This documentation is organized by API version. Please refer to the links below to access the documentation for the desired version.
 
-- [Version 1.0 API Guide](/Dev%20Tools/Deploy/en/api-guide-v1.0/)
-- [Version 2.0 API Guide](/Dev%20Tools/Deploy/en/api-guide-v2.0/)
-- [Version 2.1 API Guide](/Dev%20Tools/Deploy/en/api-guide-v2.1/)
+- [Version 1.0 API Guide](./api-guide-v1.0/)
+- [Version 2.0 API Guide](./api-guide-v2.0/)
+- [Version 2.1 API Guide](./api-guide-v2.1/)
 
 <a id="common-information"></a>
 ### Common Information { #common-information }
