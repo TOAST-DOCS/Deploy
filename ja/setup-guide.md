@@ -101,11 +101,11 @@ NHN Cloud Agentサービスのインストール及び有効性確認に成功�
 ### NHN Cloud VMデプロイ要件 { #requirements-for-nhn-cloud-vm-deployment }
 <a id="assign-public-ip"></a>
 #### グローバルIPの付与
-* NHN CloudのVMインスタンスにデプロイするにはVMインスタンス[Floating IP](https://docs.nhncloud.com/ja/Compute/Instance/ja/console-guide/#ip_1)を作成してグローバルIPを付与する必要があります。
+* NHN CloudのVMインスタンスにデプロイするにはVMインスタンス[Floating IP](/Compute/Instance/ja/console-guide/#floating-ip)を作成してグローバルIPを付与する必要があります。
 
 <a id="add-security-exceptions"></a>
 #### セキュリティ例外追加
-* デプロイするVMインスタンスの[セキュリティグループ](https://docs.nhncloud.com/ja/Compute/Instance/ja/console-guide/#_13)にDeployサービスIP(下記)をSSH Ruleに追加します。
+* デプロイするVMインスタンスの[セキュリティグループ](/Compute/Instance/ja/console-guide/#security-group)にDeployサービスIP(下記)をSSH Ruleに追加します。
 ```
 133.186.185.112/28
 117.52.123.201/32

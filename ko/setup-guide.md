@@ -101,11 +101,11 @@ NHN Cloud Agent 서비스 설치 및 유효성 확인에 성공했습니다.
 ### NHN Cloud VM 배포 요구 사항 { #requirements-for-nhn-cloud-vm-deployment }
 <a id="assign-public-ip"></a>
 #### 공인 IP 부여
-* NHN Cloud의 VM 인스턴스에 배포하려면 VM 인스턴스 [플로팅 IP](https://docs.nhncloud.com/ko/Compute/Instance/ko/console-guide/#ip_1)를 생성하여 공인 IP를 부여해야 합니다.
+* NHN Cloud의 VM 인스턴스에 배포하려면 VM 인스턴스 [플로팅 IP](/Compute/Instance/ko/console-guide/#floating-ip)를 생성하여 공인 IP를 부여해야 합니다.
 
 <a id="add-security-exceptions"></a>
 #### 보안 예외 추가
-* 배포할 VM 인스턴스의 [보안 그룹](https://docs.nhncloud.com/ko/Compute/Instance/ko/console-guide/#_13)에 Deploy 서비스 IP(아래)를 SSH Rule로 추가합니다.
+* 배포할 VM 인스턴스의 [보안 그룹](/Compute/Instance/ko/console-guide/#security-group)에 Deploy 서비스 IP(아래)를 SSH Rule로 추가합니다.
 ```
 133.186.185.112/28
 117.52.123.201/32

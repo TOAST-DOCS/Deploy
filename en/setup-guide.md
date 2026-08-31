@@ -101,11 +101,11 @@ The installation and validation of the NHN Cloud Agent service was successful.
 ### Requirements for NHN Cloud VM Deployment { #requirements-for-nhn-cloud-vm-deployment }
 <a id="assign-public-ip"></a>
 #### Assign Public IP
-* To deploy to a VM instance in NHN Cloud, you need to create a VM instance [floating IP](https://docs.nhncloud.com/en/Compute/Instance/en/console-guide/#ip_1)and grant it a public IP.
+* To deploy to a VM instance in NHN Cloud, you need to create a VM instance [floating IP](/Compute/Instance/en/console-guide/#floating-ip)and grant it a public IP.
 
 <a id="add-security-exceptions"></a>
 #### Add Security Exceptions
-* Add the Deploy service IP (below) as an SSH Rule to the [security group](https://docs.nhncloud.com/en/Compute/Instance/en/console-guide/#_13)of the VM instance you want to deploy.
+* Add the Deploy service IP (below) as an SSH Rule to the [security group](/Compute/Instance/en/console-guide/#security-group)of the VM instance you want to deploy.
 ```
 133.186.185.112/28
 117.52.123.201/32
