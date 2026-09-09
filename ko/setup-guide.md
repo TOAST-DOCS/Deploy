@@ -14,7 +14,7 @@
 
 <a id="nhn-cloud-vm-server"></a>
 ### NHN Cloud VM 서버 { #nhn-cloud-vm-server }
-![SSH연결필수](https://kr1-api-object-storage.nhncloudservice.com/v1/AUTH_2acdfabf4efe4efc8a04c00b348110c9/cdn_origin/prod_tcdeploy/deploy_19_202307.png)
+![SSH연결필수](../static/images/deploy_19_202307.png)
 
 > NHN Cloud VM 서버의 경우 SSH 연결 혹은 NHN Cloud Agent로 서버의 배포 명령을 전달합니다.
 > SSH 연결의 경우 타깃 서버의 IP, 포트, 방화벽 예외 처리와 같은 [SSH 연결을 위한 준비](#prepare-for-an-ssh-connection)가 필요합니다.
@@ -22,7 +22,7 @@
 
 <a id="servers-other-than-nhn-cloud-vm"></a>
 ### NHN Cloud VM 이외 서버 { #servers-other-than-nhn-cloud-vm }
-![SSH연결필수](https://kr1-api-object-storage.nhncloudservice.com/v1/AUTH_2acdfabf4efe4efc8a04c00b348110c9/cdn_origin/prod_tcdeploy/deploy_20_202307.png)
+![SSH연결필수](../static/images/deploy_20_202307.png)
 
 > NHN Cloud VM 이외 서버의 경우 SSH 연결로만 서버의 배포 명령을 전달할 수 있습니다.
 > 배포 전 배포 타깃 서버와 SSH로 연결해야 하므로
@@ -35,7 +35,7 @@
 ### 운영체제별 NHN Cloud Agent 설치 { #install-nhn-cloud-agent-by-operating-system }
 * NHN Cloud Agent로 배포 명령을 전달하려면 NHN Cloud Agent를 설치해야 합니다.
 * NHN Cloud Instance 서비스에서 인스턴스 생성 시 **추가 설정** > **사용자 스크립트**에 아래의 Linux, Windows 운영체제에 맞는 설치 스크립트 내용을 추가하여 설치할 수 있습니다.
-  ![사용자 스크립트](https://kr1-api-object-storage.nhncloudservice.com/v1/AUTH_2acdfabf4efe4efc8a04c00b348110c9/cdn_origin/prod_tcdeploy/deploy_21_202307.png)
+  ![사용자 스크립트](../static/images/deploy_21_202307.png)
 * **추가 설정** > **사용자 스크립트**를 사용할 수 없는 경우에는 직접 인스턴스에 접속하여 설치 스크립트를 실행합니다.
 
 <a id="linux-installation-script"></a>
@@ -57,27 +57,27 @@ Invoke-WebRequest -UseBasicParsing 'https://kr1-api-object-storage.nhncloudservi
 * NHN Cloud Deploy 서비스에서 생성한 인스턴스를 추가하여 서버 그룹을 생성합니다.
     * 서버 그룹 생성 시 **OS** 및 **Shell Type**을 반드시 확인하십시오. **Shell Type**의 기본값은 /bin/bash(Linux), powershell(Windows)입니다.
 
-![deploy_14_202307](https://kr1-api-object-storage.nhncloudservice.com/v1/AUTH_2acdfabf4efe4efc8a04c00b348110c9/cdn_origin/prod_tcdeploy/deploy_14_202307.png)
-![deploy_15_202307](https://kr1-api-object-storage.nhncloudservice.com/v1/AUTH_2acdfabf4efe4efc8a04c00b348110c9/cdn_origin/prod_tcdeploy/deploy_15_202307.png)
+![deploy_14_202307](../static/images/deploy_14_202307.png)
+![deploy_15_202307](../static/images/deploy_15_202307.png)
 
 
 * **배포** 탭으로 이동한 뒤 위 과정에서 생성한 서버 그룹을 선택하고 **시나리오** 항목에서 **새로 만들기**를 클릭합니다.
 
-![deploy_16_202307](https://kr1-api-object-storage.nhncloudservice.com/v1/AUTH_2acdfabf4efe4efc8a04c00b348110c9/cdn_origin/prod_tcdeploy/deploy_16_202307.png)
+![deploy_16_202307](../static/images/deploy_16_202307.png)
 
 * 왼쪽의 입력창에 시나리오명을 입력하고, **Task 추가**를 클릭해 **Normal Task**의 **User Command**를 선택합니다.
 
-![deploy_22_202307](https://kr1-api-object-storage.nhncloudservice.com/v1/AUTH_2acdfabf4efe4efc8a04c00b348110c9/cdn_origin/prod_tcdeploy/deploy_22_202307.png)
+![deploy_22_202307](../static/images/deploy_22_202307.png)
 
 * **Command**에 `pwd`와 같이 아무런 영향을 주지 않는 명령어를 입력하고 **생성**을 클릭합니다.
 
-![deploy_23_202307](https://kr1-api-object-storage.nhncloudservice.com/v1/AUTH_2acdfabf4efe4efc8a04c00b348110c9/cdn_origin/prod_tcdeploy/deploy_23_202307.png)
+![deploy_23_202307](../static/images/deploy_23_202307.png)
 
 * **유효성 확인**을 클릭합니다.
 
-![deploy_17_202307](https://kr1-api-object-storage.nhncloudservice.com/v1/AUTH_2acdfabf4efe4efc8a04c00b348110c9/cdn_origin/prod_tcdeploy/deploy_17_202307.png)
+![deploy_17_202307](../static/images/deploy_17_202307.png)
 
-![deploy_18_202307](https://kr1-api-object-storage.nhncloudservice.com/v1/AUTH_2acdfabf4efe4efc8a04c00b348110c9/cdn_origin/prod_tcdeploy/deploy_18_202307.png)
+![deploy_18_202307](../static/images/deploy_18_202307.png)
 
 NHN Cloud Agent 서비스 설치 및 유효성 확인에 성공했습니다.
 
@@ -113,7 +113,7 @@ NHN Cloud Agent 서비스 설치 및 유효성 확인에 성공했습니다.
 ```
 ##### 참고) 보안 예외 추가 방법
 
-![deploy_01_202307](https://kr1-api-object-storage.nhncloudservice.com/v1/AUTH_2acdfabf4efe4efc8a04c00b348110c9/cdn_origin/prod_tcdeploy/deploy_01_202307.png)
+![deploy_01_202307](../static/images/deploy_01_202307.png)
 
 1. NHN Cloud 콘솔의 **Network** 서비스 중 **Security Groups**를 선택합니다.
 2. 현재 VM에 설정된 보안 그룹을 선택하거나 **+ 보안 그룹 생성**을 클릭해 신규 보안 그룹을 생성합니다.

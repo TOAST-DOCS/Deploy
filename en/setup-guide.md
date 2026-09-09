@@ -14,7 +14,7 @@ This document contains the following.
 
 <a id="nhn-cloud-vm-server"></a>
 ### NHN Cloud VM Server { #nhn-cloud-vm-server }
-![SSH Connection Required](https://kr1-api-object-storage.nhncloudservice.com/v1/AUTH_2acdfabf4efe4efc8a04c00b348110c9/cdn_origin/prod_tcdeploy/deploy_19_202307.png)
+![SSH Connection Required](../static/images/deploy_19_202307.png)
 
 > For NHN Cloud VM servers, you can use an SSH connection or NHN Cloud Agent to deliver the server's deployment command.
 > In case of SSH connection, you need to [Preparing for an SSH connection](#prepare-for-an-ssh-connection), such as IP, port, and firewall exception handling of the target server.
@@ -22,7 +22,7 @@ This document contains the following.
 
 <a id="servers-other-than-nhn-cloud-vm"></a>
 ### Servers other than NHN Cloud VM { #servers-other-than-nhn-cloud-vm }
-![SSH connection required](https://kr1-api-object-storage.nhncloudservice.com/v1/AUTH_2acdfabf4efe4efc8a04c00b348110c9/cdn_origin/prod_tcdeploy/deploy_20_202307.png)
+![SSH connection required](../static/images/deploy_20_202307.png)
 
 > For servers other than NHN Cloud VMs, you can pass the server's deployment commands only through an SSH connection.
 > You need to connect to the deployment target server via SSH before deployment.
@@ -35,7 +35,7 @@ This document contains the following.
 ### Install NHN Cloud Agent by operating system { #install-nhn-cloud-agent-by-operating-system }
 * To pass deployment commands to NHN Cloud Agent, you need to install NHN Cloud Agent.
 * When you create an instance in NHN Cloud Instance service, you can add the following installation script contents for Linux and Windows operating systems to **Additional Settings** > **User Script**to install it.
-![User script](https://kr1-api-object-storage.nhncloudservice.com/v1/AUTH_2acdfabf4efe4efc8a04c00b348110c9/cdn_origin/prod_tcdeploy/deploy_21_202307.png)
+![User script](../static/images/deploy_21_202307.png)
 * If **Additional Settings** > **User script** is not available, connect to the instance directly and run the install script.
 
 <a id="linux-installation-script"></a>
@@ -57,27 +57,27 @@ Invoke-WebRequest -UseBasicParsing 'https://kr1-api-object-storage.nhncloudservi
 * Create a server group by adding the instances created by the NHN Cloud Deploy service.
     * When creating a server group, be sure to confirm the **OS** and **Shell Type**. The default values for **Shell Type**are /bin/bash (Linux), powershell (Windows).
 
-![deploy_14_202307](https://kr1-api-object-storage.nhncloudservice.com/v1/AUTH_2acdfabf4efe4efc8a04c00b348110c9/cdn_origin/prod_tcdeploy/deploy_14_202307.png)
-![deploy_15_202307](https://kr1-api-object-storage.nhncloudservice.com/v1/AUTH_2acdfabf4efe4efc8a04c00b348110c9/cdn_origin/prod_tcdeploy/deploy_15_202307.png)
+![deploy_14_202307](../static/images/deploy_14_202307.png)
+![deploy_15_202307](../static/images/deploy_15_202307.png)
 
 
 * Go to the **Deployment** tab, select the server group you created above, and click **New**in the **Scenarios** section.
 
-![deploy_16_202307](https://kr1-api-object-storage.nhncloudservice.com/v1/AUTH_2acdfabf4efe4efc8a04c00b348110c9/cdn_origin/prod_tcdeploy/deploy_16_202307.png)
+![deploy_16_202307](../static/images/deploy_16_202307.png)
 
 * Enter a name for your scenario in the field on the left, and click **Add Task**to select **User Command**for **Normal Task**.
 
-![deploy_22_202307](https://kr1-api-object-storage.nhncloudservice.com/v1/AUTH_2acdfabf4efe4efc8a04c00b348110c9/cdn_origin/prod_tcdeploy/deploy_22_202307.png)
+![deploy_22_202307](../static/images/deploy_22_202307.png)
 
 * **In Command,**enter a command that has no effect, such as `pwd`, and click **Create**.
 
-![deploy_23_202307](https://kr1-api-object-storage.nhncloudservice.com/v1/AUTH_2acdfabf4efe4efc8a04c00b348110c9/cdn_origin/prod_tcdeploy/deploy_23_202307.png)
+![deploy_23_202307](../static/images/deploy_23_202307.png)
 
 * Click **Check Validity**.
 
-![deploy_17_202307](https://kr1-api-object-storage.nhncloudservice.com/v1/AUTH_2acdfabf4efe4efc8a04c00b348110c9/cdn_origin/prod_tcdeploy/deploy_17_202307.png)
+![deploy_17_202307](../static/images/deploy_17_202307.png)
 
-![deploy_18_202307](https://kr1-api-object-storage.nhncloudservice.com/v1/AUTH_2acdfabf4efe4efc8a04c00b348110c9/cdn_origin/prod_tcdeploy/deploy_18_202307.png)
+![deploy_18_202307](../static/images/deploy_18_202307.png)
 
 The installation and validation of the NHN Cloud Agent service was successful.
 
@@ -113,7 +113,7 @@ The installation and validation of the NHN Cloud Agent service was successful.
 ```
 ##### Note) Adding Exceptions for Security
 
-![deploy_01_202307](https://kr1-api-object-storage.nhncloudservice.com/v1/AUTH_2acdfabf4efe4efc8a04c00b348110c9/cdn_origin/prod_tcdeploy/deploy_01_202307.png)
+![deploy_01_202307](../static/images/deploy_01_202307.png)
 
 1. In the NHN Cloud console, under **Network** services, select **Security Groups**.
 2. Select a security group that is currently set on the VM or click **+ Create Security Group**to create a new security group.
