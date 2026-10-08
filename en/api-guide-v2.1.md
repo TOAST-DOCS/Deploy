@@ -137,6 +137,7 @@ curl -X GET \
 | HTTP Method | POST |
 | ----------- | ---- |
 | Request URL | https://api-tcd.nhncloudservice.com/api/v2.1/projects/{appKey}/artifacts/{artifactId}/server-group/{serverGroupId}/deploy |
+
 ##### Parameter(Body)
 
 | Name | Type | Description | Value | Required | Default Value |
@@ -147,6 +148,7 @@ curl -X GET \
 | deployNote | String | Additional information written when deploying |  | false |  |
 | async | Boolean | Receives a response without waiting for the deployment result | true/false | false | false |
 | scenarioIds | String | Scenario scenarioId to run | Scenario IDs separated by comma (,) within the Server Group (if not specified, all mapped ScenarioIDs) | false (however, true for a general Deploy - only 1) | All mapped ScenarioIDs if not specified |
+
 ##### Sample Request For cURL
 ``` java
 curl --location 'https://api-tcd.nhncloudservice.com/api/v2.1/projects/{appKey}/artifacts/{artifactId}/server-group/{serverGroupId}/deploy' \
@@ -173,6 +175,7 @@ curl --location 'https://api-tcd.nhncloudservice.com/api/v2.1/projects/{appKey}/
 | deployStatus | String | Deployment status | success, fail, or deploying (when the async option is true) |
 | deployResult | List | Deployment results by server | - hostname: Hostname of the deployment target (Instance ID)<br>- status: Deployment Result<br>- taskResult: Information on each task in the deployment scenario |
 | deployResultLocation | String | Link to the Deploy service project where deployment was run | You can access the Deploy service project console using this link. |
+
 ##### Response Sample
 ``` json
 {
@@ -211,11 +214,13 @@ curl --location 'https://api-tcd.nhncloudservice.com/api/v2.1/projects/{appKey}/
 | HTTP Method | GET |
 | ----------- | ---- |
 | Request URL | https://api-tcd.nhncloudservice.com/api/v2.1/projects/{appKey}/artifacts |
+
 ##### Parameter(Query String)
 
 | Name | Type | Description | Value | Required | Default Value |
 | --- | --- | --- | --- | --- | --- |
 | artifactName | String | Search Artifact Name | Artifact name to search for | false | - |
+
 ##### Sample Request For cURL
 ``` java
 curl -X GET \
@@ -230,6 +235,7 @@ curl -X GET \
 | isSuccessful | Boolean | Request success | `true` or `false` |
 | resultCode | String | Request result message | See [Error Code](./error-code/) |
 | artifacts | List | Artifact list | Refer to item below |
+
 **artifacts**
 
 | Name | Type | Description |
@@ -240,6 +246,7 @@ curl -X GET \
 | description | String | Description |
 | createDate | Date | Created on |
 | lastDeployDate | Date | Last deployment date |
+
 ##### Response Sample
 ``` json
 {
@@ -273,6 +280,7 @@ curl -X GET \
 | HTTP Method | GET |
 | ----------- | ---- |
 | Request URL | https://api-tcd.nhncloudservice.com/api/v2.1/projects/{appKey}/artifacts/{artifactId}/server-groups |
+
 ##### Sample Request For cURL
 ``` java
 curl -X GET \
@@ -286,6 +294,7 @@ curl -X GET \
 | isSuccessful | Boolean | Request success | `true` or `false` |
 | resultCode | String | Request result message | See [Error Code](./error-code/) |
 | serverGroups | List | Server Group List | See the items below |
+
 **serverGroups**
 
 | Name | Type | Description |
@@ -295,6 +304,7 @@ curl -X GET \
 | description | String | Description |
 | osType | String | OS type (LINUX/WINDOWS) |
 | serverCount | Number | Number of Servers |
+
 ##### Response Sample
 ``` json
 {
@@ -327,6 +337,7 @@ curl -X GET \
 | HTTP Method | GET |
 | ----------- | ---- |
 | Request URL | https://api-tcd.nhncloudservice.com/api/v2.1/projects/{appKey}/artifacts/{artifactId}/binary-groups |
+
 ##### Sample Request For cURL
 ``` java
 curl -X GET \
@@ -340,6 +351,7 @@ curl -X GET \
 | isSuccessful | Boolean | Request success | `true` or `false` |
 | resultCode | String | Request result message | See [Error Code](./error-code/) |
 | binaryGroups | List | Binary Group List | See the items below |
+
 **binaryGroups**
 
 | Name | Type | Description |
@@ -349,6 +361,7 @@ curl -X GET \
 | description | String | Description |
 | regionCode | String | Region code |
 | createDate | Date | Created on |
+
 ##### Response Sample
 ``` json
 {
@@ -382,6 +395,7 @@ curl -X GET \
 | HTTP Method | GET |
 | ----------- | ---- |
 | Request URL | https://api-tcd.nhncloudservice.com/api/v2.1/projects/{appKey}/artifacts/{artifactId}/deploy-histories |
+
 ##### Parameter(Query String)
 
 | Name | Type | Description | Value | Required | Default Value |
@@ -391,6 +405,7 @@ curl -X GET \
 | deploymentYearTo | String | Query end date | yyyy-MM-dd format | false | Current date |
 | pageNum | Number | Page No. | A value of at least 1 | false | 1 |
 | pageSize | Number | Items per page | A value of 1 or greater | false | 20 |
+
 ##### Sample Request For cURL
 ``` java
 curl -X GET \
@@ -405,6 +420,7 @@ curl -X GET \
 | resultCode | String | Request result message | See [Error Code](./error-code/) |
 | totalCount | Number | Total count | - |
 | deployHistories | List | Deployment history list | See the items below |
+
 **deployHistories**
 
 | Name | Type | Description |
@@ -417,6 +433,7 @@ curl -X GET \
 | executeDate | Date | Executed Date |
 | executeUser | String | Executed by |
 | totalResult | String | Result (SUCCESS/FAIL/RUNNING) |
+
 ##### Response Sample
 ``` json
 {
@@ -453,6 +470,7 @@ curl -X GET \
 | HTTP Method | GET |
 | ----------- | ---- |
 | Request URL | https://api-tcd.nhncloudservice.com/api/v2.1/projects/{appKey}/artifacts/{artifactId}/binary-groups/{binaryGroupKey}/binaries |
+
 ##### Parameter(Query String)
 
 | Name | Type | Description | Value | Required | Default Value |
@@ -462,6 +480,7 @@ curl -X GET \
 | sortKey | String | Sort by | VERSION, BINARY_KEY, UPLOAD_DATE | false | UPLOAD_DATE |
 | sortDirection | String | Sort order | ASC, DESC | false | DESC |
 | keyword | String | Search keyword for binary versions | Search keyword | false | - |
+
 ##### Sample Request For cURL
 ``` java
 curl -X GET \
@@ -476,6 +495,7 @@ curl -X GET \
 | resultCode | String | Request result message | See [Error Code](./error-code/) |
 | totalCount | Number | Total count | - |
 | binaries | List | Binary list | See items below |
+
 **binaries**
 
 | Name | Type | Description |
@@ -487,6 +507,7 @@ curl -X GET \
 | uploadDate | Date | Upload date |
 | uploader | String | Uploader |
 | description | String | Description |
+
 ##### Response Sample
 ``` json
 {
