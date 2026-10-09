@@ -137,6 +137,7 @@ curl -X GET \
 | HTTP Method | POST |
 | ----------- | ---- |
 | Request URL | https://api-tcd.nhncloudservice.com/api/v2.1/projects/{appKey}/artifacts/{artifactId}/server-group/{serverGroupId}/deploy |
+
 ##### Parameter(Body)
 
 | 名前 | タイプ | 説明 | 値 | 必須 | デフォルト値 |
@@ -147,6 +148,7 @@ curl -X GET \
 | deployNote | String | デプロイ時に入力する追加情報 |  | false |  |
 | async | Boolean | デプロイ結果を待たずに応答を受け取る | true/false | false | false |
 | scenarioIds | String | 実行するシナリオのscenarioId | サーバーグループ内でカンマ(,)区切りのシナリオID（指定しない場合は、マッピングされているScenarioIDすべて） | false（ただし、通常のDeployの場合はtrue - 1個のみ） | 指定しない場合は、マッピングされているScenarioIDすべて |
+
 ##### Sample Request For cURL
 ``` java
 curl --location 'https://api-tcd.nhncloudservice.com/api/v2.1/projects/{appKey}/artifacts/{artifactId}/server-group/{serverGroupId}/deploy' \
@@ -173,6 +175,7 @@ curl --location 'https://api-tcd.nhncloudservice.com/api/v2.1/projects/{appKey}/
 | deployStatus | String | デプロイ状態 | success、fail、またはdeploying（asyncオプションがtrueの場合） |
 | deployResult | List | サーバーごとのデプロイ結果 | - hostname: デプロイ対象のホスト名（インスタンスID）<br>- status: デプロイ結果<br>- taskResult: デプロイシナリオ内の各タスクの情報 |
 | deployResultLocation | String | デプロイが実行されたDeployサービスプロジェクトのリンク | このリンクからDeployサービスプロジェクトのコンソールにアクセスできます |
+
 ##### レスポンスサンプル
 ``` json
 {
@@ -211,11 +214,13 @@ curl --location 'https://api-tcd.nhncloudservice.com/api/v2.1/projects/{appKey}/
 | HTTP Method | GET |
 | ----------- | ---- |
 | Request URL | https://api-tcd.nhncloudservice.com/api/v2.1/projects/{appKey}/artifacts |
+
 ##### Parameter(Query String)
 
 | 名前 | タイプ | 説明 | 値 | 必須 | デフォルト値 |
 | --- | --- | --- | --- | --- | --- |
 | artifactName | String | アーティファクト名検索 | 検索するアーティファクト名 | false | - |
+
 ##### Sample Request For cURL
 ``` java
 curl -X GET \
@@ -230,6 +235,7 @@ curl -X GET \
 | isSuccessful | Boolean | リクエスト成否 | `true` または `false` |
 | resultCode | String | リクエスト結果メッセージ | [エラーコード](./error-code/) 参照 |
 | artifacts | List | アーティファクト一覧 | 下記の項目を参照 |
+
 **artifacts**
 
 | Name | Type | Description |
@@ -240,6 +246,7 @@ curl -X GET \
 | description | String | 説明 |
 | createDate | Date | 作成日 |
 | lastDeployDate | Date | 最終デプロイ日 |
+
 ##### Response Sample
 ``` json
 {
@@ -273,6 +280,7 @@ curl -X GET \
 | HTTP Method | GET |
 | ----------- | ---- |
 | Request URL | https://api-tcd.nhncloudservice.com/api/v2.1/projects/{appKey}/artifacts/{artifactId}/server-groups |
+
 ##### Sample Request For cURL
 ``` java
 curl -X GET \
@@ -286,6 +294,7 @@ curl -X GET \
 | isSuccessful | Boolean | リクエスト成否 | `true` または `false` |
 | resultCode | String | リクエスト結果メッセージ | [エラーコード](./error-code/) 参照 |
 | serverGroups | List | サーバーグループ一覧 | 以下の項目を参照 |
+
 **serverGroups**
 
 | Name | Type | Description |
@@ -295,6 +304,7 @@ curl -X GET \
 | description | String | 説明 |
 | osType | String | OS タイプ（LINUX/WINDOWS） |
 | serverCount | Number | サーバー数 |
+
 ##### Response Sample
 ``` json
 {
@@ -327,6 +337,7 @@ curl -X GET \
 | HTTP Method | GET |
 | ----------- | ---- |
 | Request URL | https://api-tcd.nhncloudservice.com/api/v2.1/projects/{appKey}/artifacts/{artifactId}/binary-groups |
+
 ##### Sample Request For cURL
 ``` java
 curl -X GET \
@@ -340,6 +351,7 @@ curl -X GET \
 | isSuccessful | Boolean | リクエスト成否 | `true` または `false` |
 | resultCode | String | リクエスト結果メッセージ | [エラーコード](./error-code/) 参照 |
 | binaryGroups | List | バイナリグループ一覧 | 下記の項目を参照 |
+
 **binaryGroups**
 
 | Name | Type | Description |
@@ -349,6 +361,7 @@ curl -X GET \
 | description | String | 説明 |
 | regionCode | String | リージョンコード |
 | createDate | Date | 作成日 |
+
 ##### Response Sample
 ``` json
 {
@@ -382,6 +395,7 @@ curl -X GET \
 | HTTP Method | GET |
 | ----------- | ---- |
 | Request URL | https://api-tcd.nhncloudservice.com/api/v2.1/projects/{appKey}/artifacts/{artifactId}/deploy-histories |
+
 ##### Parameter(Query String)
 
 | 名前 | タイプ | 説明 | 値 | 必須 | デフォルト値 |
@@ -391,6 +405,7 @@ curl -X GET \
 | deploymentYearTo | String | 照会終了日 | yyyy-MM-dd 形式 | false | 現在日 |
 | pageNum | Number | ページ番号 | 1以上の値 | false | 1 |
 | pageSize | Number | ページあたりの件数 | 1以上の値 | false | 20 |
+
 ##### Sample Request For cURL
 ``` java
 curl -X GET \
@@ -405,6 +420,7 @@ curl -X GET \
 | resultCode | String | リクエスト結果メッセージ | [エラーコード](./error-code/) 参照 |
 | totalCount | Number | 合計件数 | - |
 | deployHistories | List | デプロイ履歴リスト | 下記の項目を参照 |
+
 **deployHistories**
 
 | Name | Type | Description |
@@ -417,6 +433,7 @@ curl -X GET \
 | executeDate | Date | 実行日 |
 | executeUser | String | 実行者 |
 | totalResult | String | 実行結果(SUCCESS/FAIL/RUNNING) |
+
 ##### Response Sample
 ``` json
 {
@@ -453,6 +470,7 @@ curl -X GET \
 | HTTP Method | GET |
 | ----------- | ---- |
 | Request URL | https://api-tcd.nhncloudservice.com/api/v2.1/projects/{appKey}/artifacts/{artifactId}/binary-groups/{binaryGroupKey}/binaries |
+
 ##### Parameter(Query String)
 
 | 名前 | タイプ | 説明 | 値 | 必須 | デフォルト値 |
@@ -462,6 +480,7 @@ curl -X GET \
 | sortKey | String | ソート基準 | VERSION, BINARY_KEY, UPLOAD_DATE | false | UPLOAD_DATE |
 | sortDirection | String | ソート方向 | ASC, DESC | false | DESC |
 | keyword | String | バイナリバージョン検索キーワード | 検索するキーワード | false | - |
+
 ##### Sample Request For cURL
 ``` java
 curl -X GET \
@@ -476,6 +495,7 @@ curl -X GET \
 | resultCode | String | リクエスト結果メッセージ | [エラーコード](./error-code/) 参照 |
 | totalCount | Number | 合計件数 | - |
 | binaries | List | バイナリ一覧 | 下記の項目を参照 |
+
 **binaries**
 
 | Name | Type | Description |
@@ -487,6 +507,7 @@ curl -X GET \
 | uploadDate | Date | アップロード日 |
 | uploader | String | アップローダー |
 | description | String | 説明 |
+
 ##### Response Sample
 ``` json
 {
