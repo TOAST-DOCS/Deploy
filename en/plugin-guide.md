@@ -30,7 +30,7 @@ Find out how to install Jenkins and details on [https://jenkins.io/](https://jen
 Requires **Jenkins 1580.1** or later versions.  
 
 1. Go to **Manage Jenkins > Manage Plugin > Advanced > Upload Plugin** and upload **tcdeploy-upload-jenkins.hpi**. 
-     (Download from [tcdeploy-upload-jenkins.hpi](https://kr1-api-object-storage.nhncloudservice.com/v1/AUTH_2acdfabf4efe4efc8a04c00b348110c9/cdn_origin/prod_tcdeploy/plugins/tcdeploy-upload-jenkins-1.1.3.hpi))
+     (Download from [tcdeploy-upload-jenkins.hpi](../static/etc/tcdeploy-upload-jenkins-1.1.3.hpi))
 
      ![[Figure 1] Upload Plugin ](http://static.toastoven.net/prod_tcdeploy/devguide/01.png)
 
@@ -44,7 +44,7 @@ Requires **Jenkins 1580.1** or later versions.
 #### Install Plugin
 
 1. Upload the **tcdeploy-upload-jenkins.hpi** file from **Manage Jenkins > Manage Plugins > Advanced > Upload Plugin**.
-  ([tcdeploy-upload-jenkins.hpi](https://kr1-api-object-storage.nhncloudservice.com/v1/AUTH_2acdfabf4efe4efc8a04c00b348110c9/cdn_origin/prod_tcdeploy/plugins/tcdeploy-upload-jenkins-1.1.3.hpi) download link)
+  ([tcdeploy-upload-jenkins.hpi](../static/etc/tcdeploy-upload-jenkins-1.1.3.hpi) download link)
 
     ![01.png](http://static.toastoven.net/prod_tcdeploy/devguide/01.png)
 
