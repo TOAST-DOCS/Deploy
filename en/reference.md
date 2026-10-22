@@ -163,7 +163,7 @@ Server information can be added or deleted from **Create (Modify) Server Group**
 * Check **Enter in Mass**. 
 * Enter server information in the following format: 
     ```
-   test.host.name1;1.1.1.1;CentOS7.9;
+    test.host.name1;1.1.1.1;CentOS7.9;
     test.host.name2;2.2.2.2;
     ```
 
