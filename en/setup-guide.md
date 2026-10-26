@@ -1,3 +1,5 @@
+<!-- machine_translated: true -->
+
 <!-- pre-align:aligned sig=a87ab717aea2 -->
 
 <a id="dev-tools-deploy-setup-guide-before-use"></a>
@@ -107,7 +109,7 @@ The installation and validation of the NHN Cloud Agent service was successful.
 #### Add Security Exceptions
 * Add the Deploy service IP (below) as an SSH Rule to the [security group](/Compute/Instance/en/console-guide/#security-group)of the VM instance you want to deploy.
 ```
-133.186.185.112/28
+101.79.92.167/32
 117.52.123.201/32
 117.52.123.202/32
 ```
@@ -133,7 +135,7 @@ The installation and validation of the NHN Cloud Agent service was successful.
 #### Configure Firewalls and Network ACL
 * Add exceptions on network and firewall, for the following IPs, so as to allow external access.
 ```
-133.186.185.112/28
+101.79.92.167/32
 117.52.123.201/32
 117.52.123.202/32
 ```
