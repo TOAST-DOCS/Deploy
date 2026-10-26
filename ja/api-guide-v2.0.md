@@ -85,7 +85,7 @@ curl --location 'https://api-tcd.nhncloudservice.com/api/v2.0/projects/{appKey}/
 | Name | Type | Description | Value |
 | ---- | ---- | ----------- | ----- |
 | isSuccessful | Boolean | デプロイ実行成否 | trueまたはfalse |
-| resultCode | String | デプロイ実行結果メッセージ | [エラーコード](/Dev%20Tools/Deploy/ja/error-code/)参考 |
+| resultCode | String | デプロイ実行結果メッセージ | [エラーコード](./error-code/)参考 |
 | deployStatus | String | デプロイ状態 | success, failまたはdeploying(asyncオプションがtrueの場合)
 | deployResult | List | サーバー別のデプロイ結果 | - hostname:デプロイ対象ホスト名(インスタンスID)<br>- status:デプロイ結果<br>- taskResult:デプロイシナリオ内の各タスクの情報 |
 | deployResultLocation | String | デプロイが実行されたDeployサービスプロジェクトリンク | 該当リンクでDeployサービスプロジェクトのコンソールに接続可能 |
@@ -152,7 +152,7 @@ curl -X GET \
 | Name | Type | Description | Value |
 | ---- | ---- | ----------- | ----- |
 | isSuccessful | Boolean | リクエストの成否 | true または false |
-| resultCode | String | リクエスト結果のメッセージ | [エラーコード](/Dev%20Tools/Deploy/ja/error-code/) を参照 |
+| resultCode | String | リクエスト結果のメッセージ | [エラーコード](./error-code/) を参照 |
 | artifacts | List | アーティファクト一覧 | 以下の項目を参照 |
 
 **artifacts**
@@ -218,7 +218,7 @@ curl -X GET \
 | Name | Type | Description | Value |
 | ---- | ---- | ----------- | ----- |
 | isSuccessful | Boolean | リクエストの成否 | true または false |
-| resultCode | String | リクエスト結果のメッセージ | [エラーコード](/Dev%20Tools/Deploy/ja/error-code/) を参照 |
+| resultCode | String | リクエスト結果のメッセージ | [エラーコード](./error-code/) を参照 |
 | serverGroups | List | サーバーグループ一覧 | 以下の項目を参照 |
 
 **serverGroups**
@@ -282,7 +282,7 @@ curl -X GET \
 | Name | Type | Description | Value |
 | ---- | ---- | ----------- | ----- |
 | isSuccessful | Boolean | リクエストの成否 | true または false |
-| resultCode | String | リクエスト結果のメッセージ | [エラーコード](/Dev%20Tools/Deploy/ja/error-code/) を参照 |
+| resultCode | String | リクエスト結果のメッセージ | [エラーコード](./error-code/) を参照 |
 | binaryGroups | List | バイナリグループ一覧 | 以下の項目を参照 |
 
 **binaryGroups**
@@ -356,7 +356,7 @@ curl -X GET \
 | Name | Type | Description | Value |
 | ---- | ---- | ----------- | ----- |
 | isSuccessful | Boolean | リクエストの成否 | true または false |
-| resultCode | String | リクエスト結果のメッセージ | [エラーコード](/Dev%20Tools/Deploy/ja/error-code/) を参照 |
+| resultCode | String | リクエスト結果のメッセージ | [エラーコード](./error-code/) を参照 |
 | totalCount | Number | 総件数 | - |
 | deployHistories | List | デプロイ履歴一覧 | 以下の項目を参照 |
 
@@ -437,7 +437,7 @@ curl -X GET \
 | Name | Type | Description | Value |
 | ---- | ---- | ----------- | ----- |
 | isSuccessful | Boolean | リクエストの成否 | true または false |
-| resultCode | String | リクエスト結果のメッセージ | [エラーコード](/Dev%20Tools/Deploy/ja/error-code/) を参照 |
+| resultCode | String | リクエスト結果のメッセージ | [エラーコード](./error-code/) を参照 |
 | totalCount | Number | 総件数 | - |
 | binaries | List | バイナリ一覧 | 以下の項目を参照 |
 
