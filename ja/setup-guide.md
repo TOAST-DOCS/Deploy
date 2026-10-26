@@ -14,7 +14,7 @@
 
 <a id="nhn-cloud-vm-server"></a>
 ### NHN Cloud VM サーバー { #nhn-cloud-vm-server }
-![SSH연결필수](https://kr1-api-object-storage.nhncloudservice.com/v1/AUTH_2acdfabf4efe4efc8a04c00b348110c9/cdn_origin/prod_tcdeploy/deploy_19_202307.png)
+![SSH연결필수](../static/images/deploy_19_202307.png)
 
 > NHN Cloud VM サーバーの場合、SSH接続またはNHN Cloud Agentを使用してサーバーへのデプロイコマンドを送信します。
 > SSH接続の場合、ターゲットサーバーのIP、ポート、ファイアウォールの例外処理などの[SSH接続の準備](#prepare-for-an-ssh-connection)が必要です。
@@ -22,7 +22,7 @@
 
 <a id="servers-other-than-nhn-cloud-vm"></a>
 ### NHN Cloud VM 以外のサーバー { #servers-other-than-nhn-cloud-vm }
-![SSH연결필수](https://kr1-api-object-storage.nhncloudservice.com/v1/AUTH_2acdfabf4efe4efc8a04c00b348110c9/cdn_origin/prod_tcdeploy/deploy_20_202307.png)
+![SSH연결필수](../static/images/deploy_20_202307.png)
 
 > NHN Cloud VM 以外のサーバーの場合、SSH 接続でのみサーバーへのデプロイコマンドを送信できます。
 > デプロイ前にデプロイ対象サーバーと SSH で接続する必要があるため、
@@ -35,7 +35,7 @@
 ### OS別NHN Cloud Agentのインストール { #install-nhn-cloud-agent-by-operating-system }
 * NHN Cloud Agentでデプロイコマンドを伝達するにはNHN Cloud Agentをインストールする必要があります。
 * NHN Cloud Instanceサービスでインスタンスを作成する際、**追加設定** > **ユーザースクリプト**に下記のLinux、Windows OSに合ったインストールスクリプト内容を追加してインストールできます。
-  ![ユーザースクリプト](https://kr1-api-object-storage.nhncloudservice.com/v1/AUTH_2acdfabf4efe4efc8a04c00b348110c9/cdn_origin/prod_tcdeploy/deploy_21_202307.png)
+  ![ユーザースクリプト](../static/images/deploy_21_202307.png)
 * **追加設定** > **ユーザースクリプト**が使用できない場合は、直接インスタンスに接続してインストールスクリプトを実行します。
 
 <a id="linux-installation-script"></a>
@@ -57,27 +57,27 @@ Invoke-WebRequest -UseBasicParsing 'https://kr1-api-object-storage.nhncloudservi
 * NHN Cloud Deployサービスで作成したインスタンスを追加してサーバーグループを作成します。
     * サーバーグループを作成する際、**OS**及び**Shell Type**を必ずご確認ください。**Shell Type**のデフォルト値は /bin/bash(Linux), powershell(Windows)です。
 
-![deploy_14_202307](https://kr1-api-object-storage.nhncloudservice.com/v1/AUTH_2acdfabf4efe4efc8a04c00b348110c9/cdn_origin/prod_tcdeploy/deploy_14_202307.png)
-![deploy_15_202307](https://kr1-api-object-storage.nhncloudservice.com/v1/AUTH_2acdfabf4efe4efc8a04c00b348110c9/cdn_origin/prod_tcdeploy/deploy_15_202307.png)
+![deploy_14_202307](../static/images/deploy_14_202307.png)
+![deploy_15_202307](../static/images/deploy_15_202307.png)
 
 
 * **デプロイ**タブに移動した後、上記の手順で作成したサーバーグループを選択し、**シナリオ**項目で**新規作成**をクリックします。
 
-![deploy_16_202307](https://kr1-api-object-storage.nhncloudservice.com/v1/AUTH_2acdfabf4efe4efc8a04c00b348110c9/cdn_origin/prod_tcdeploy/deploy_16_202307.png)
+![deploy_16_202307](../static/images/deploy_16_202307.png)
 
 * 左側の入力欄にシナリオ名を入力し、**Taskの追加**をクリックして**Normal Task**の**User Command**を選択します。
 
-![deploy_22_202307](https://kr1-api-object-storage.nhncloudservice.com/v1/AUTH_2acdfabf4efe4efc8a04c00b348110c9/cdn_origin/prod_tcdeploy/deploy_22_202307.png)
+![deploy_22_202307](../static/images/deploy_22_202307.png)
 
 * **Command**に`pwd`などの影響を与えないコマンドを入力し、**作成**をクリックします。
 
-![deploy_23_202307](https://kr1-api-object-storage.nhncloudservice.com/v1/AUTH_2acdfabf4efe4efc8a04c00b348110c9/cdn_origin/prod_tcdeploy/deploy_23_202307.png)
+![deploy_23_202307](../static/images/deploy_23_202307.png)
 
 * **有効性の確認**をクリックします。
 
-![deploy_17_202307](https://kr1-api-object-storage.nhncloudservice.com/v1/AUTH_2acdfabf4efe4efc8a04c00b348110c9/cdn_origin/prod_tcdeploy/deploy_17_202307.png)
+![deploy_17_202307](../static/images/deploy_17_202307.png)
 
-![deploy_18_202307](https://kr1-api-object-storage.nhncloudservice.com/v1/AUTH_2acdfabf4efe4efc8a04c00b348110c9/cdn_origin/prod_tcdeploy/deploy_18_202307.png)
+![deploy_18_202307](../static/images/deploy_18_202307.png)
 
 NHN Cloud Agentサービスのインストール及び有効性確認に成功しました。
 
@@ -113,7 +113,7 @@ NHN Cloud Agentサービスのインストール及び有効性確認に成功�
 ```
 ##### 参考)セキュリティ例外を追加する方法
 
-![deploy_01_202307](https://kr1-api-object-storage.nhncloudservice.com/v1/AUTH_2acdfabf4efe4efc8a04c00b348110c9/cdn_origin/prod_tcdeploy/deploy_01_202307.png)
+![deploy_01_202307](../static/images/deploy_01_202307.png)
 
 1. NHN Cloudコンソールの**Network**サービスのうち**Security Groups**を選択します。
 2. 現在のVMに設定されているセキュリティグループを選択するか、**+ セキュリティグループを作成**をクリックして新規セキュリティグループを作成します。
