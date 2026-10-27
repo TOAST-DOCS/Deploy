@@ -6,9 +6,9 @@
 Deploy에서는 바이너리 업로드, 배포 실행을 위한 API를 제공합니다. 사용자가 HTTP 요청을 직접 구성하여 사용할 수 있습니다.  
 이 문서는 API 버전별로 분리되어 있습니다. 아래 링크에서 원하는 버전의 문서를 확인하세요.
 
-- [Version 1.0 API 가이드](/Dev%20Tools/Deploy/ko/api-guide-v1.0/)
-- [Version 2.0 API 가이드](/Dev%20Tools/Deploy/ko/api-guide-v2.0/)
-- [Version 2.1 API 가이드](/Dev%20Tools/Deploy/ko/api-guide-v2.1/)
+- [Version 1.0 API 가이드](./api-guide-v1.0/)
+- [Version 2.0 API 가이드](./api-guide-v2.0/)
+- [Version 2.1 API 가이드](./api-guide-v2.1/)
 
 <a id="common-information"></a>
 ### 공통 정보 { #common-information }

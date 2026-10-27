@@ -5,8 +5,8 @@
 
 This document contains the following: 
 
-* [Menu Description](/Dev%20Tools/Deploy/en/reference/#menu-description)
-* [Functional Description](/Dev%20Tools/Deploy/en/reference/#functional-description)
+* [Menu Description](#menu-description)
+* [Functional Description](#functional-description)
 
 <a id="menu-description"></a>
 ## Menu Description { #menu-description }
@@ -179,7 +179,15 @@ Server information can be added or deleted from **Create (Modify) Server Group**
 <a id="server-group-1"></a>
 #### Add Autoscale Group
 
-<!-- TODO: translate body -->
+![autoscale_01.png](https://static.toastoven.net/prod_tcdeploy/reference/autoscale_01.png)
+* Click **Deploy** > **Create Server Group**, or choose **Server Group > New**.
+    * Enter name (required) and description (optional).
+    * Select the OS and then specify the Shell Type. You can select an item from the list or enter it directly.
+    * Select Phase: Choose a server tool. Otherwise, select NONE.
+    * For Group Type, select **Auto Scaling Server Group**.
+    * For Scaling Group, select the scaling group created in the Auto Scale service.
+    * From the scaling group in the Scale-out Scenario, select the scenario to run on instances during scale-out.
+    * Click the **Create** button.
 
 ##### Adding Scale-out Scenario
 
@@ -208,7 +216,7 @@ Binaries are uploaded files that are to be deployed.
 Two methods are available to upload binaries: 
 
 * API Upload
-    * For more information about API upload, see [Binary Upload API in the API Guide](/Dev%20Tools/Deploy/en/api-guide-v2.1/#upload-binary).
+    * For more information about API upload, see [Binary Upload API in the API Guide](./api-guide-v2.1/#upload-binary).
 * Upload from the console
 
 ![deploy_ref_11_2018.png](https://static.toastoven.net/prod_tcdeploy/deploy_ref_11_2018.png)
@@ -310,7 +318,7 @@ A task is a scenario configuration element which executes individual tasks and c
 ##### Jenkins-CLI Build
 
 * Classified into earlier versions, and later versions, as of ver. 2.46.  
-* For more details on Jenkins build setting, see [Plugin User Guide](/Dev%20Tools/Deploy/en/plugin-guide/).
+* For more details on Jenkins build setting, see [Plugin User Guide](./plugin-guide/).
 
 ![deploy_ref_15_2018.png](https://static.toastoven.net/prod_tcdeploy/deploy_ref_15_2018.png)
 

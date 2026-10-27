@@ -6,9 +6,9 @@
 Deployでは、バイナリのアップロードやデプロイ実行のためのAPIを提供しています。ユーザー自身でHTTPリクエストを構成して利用できます。
 本ドキュメントはAPIのバージョン別に用意されています。以下のリンクから、目的のバージョンのドキュメントをご確認ください。
 
-- [Version 1.0 API ガイド](/Dev%20Tools/Deploy/ja/api-guide-v1.0/)
-- [Version 2.0 API ガイド](/Dev%20Tools/Deploy/ja/api-guide-v2.0/)
-- [Version 2.1 API ガイド](/Dev%20Tools/Deploy/ja/api-guide-v2.1/)
+- [Version 1.0 API ガイド](./api-guide-v1.0/)
+- [Version 2.0 API ガイド](./api-guide-v2.0/)
+- [Version 2.1 API ガイド](./api-guide-v2.1/)
 
 <a id="common-information"></a>
 ### 共通情報 { #common-information }
